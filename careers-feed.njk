@@ -1,0 +1,39 @@
+---json
+{
+	"permalink": "careers-feed.xml",
+	"eleventyExcludeFromCollections": true,
+	"metadata": {
+		"title": "OneQode Careers",
+		"subtitle": "The latest career openings from OneQode — on a mission to bring australia to the top 10 for internet speeds.",
+		"url": "https://oneqode.com/careers/",
+		"feedUrl": "https://oneqode.com/careers-feed.xml",
+		"author": {
+			"name": "OneQode Careers",
+			"email": "hello@oneqode.com.au"
+		}
+	}
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>{{ metadata.title }}</title>
+	<subtitle>{{ metadata.subtitle }}</subtitle>
+	<link href="{{ metadata.feedUrl }}" rel="self"/>
+	<link href="{{ metadata.url }}"/>
+	<updated>{{ collections.vacancy | rssLastUpdatedDate }}</updated>
+	<id>{{ metadata.url }}</id>
+	<author>
+		<name>{{ metadata.author.name }}</name>
+		<email>{{ metadata.author.email }}</email>
+	</author>
+	{%- for post in collections.vacancy %}
+	{% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+	<entry>
+		<title>{{ post.data.jobTitle }}</title>
+		<link href="{{ absolutePostUrl }}"/>
+		<updated>{{ post.date | rssDate }}</updated>
+		<id>{{ absolutePostUrl }}</id>
+		<content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+	</entry>
+	{%- endfor %}
+</feed>

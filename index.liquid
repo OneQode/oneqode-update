@@ -1,0 +1,189 @@
+---
+
+section: home
+metaTitle: OneQode • Telco Done Differently
+metaDescription: OneQode is a Queensland-based telecommunications carrier on a mission to bring Australia into the top 10 for internet speeds
+changefreq: monthly
+priority: 1
+includesWebp: true
+pageTitle: Lightning-fast broadband
+pageSubtitle: Australia's next-gen internet service provider.
+heroLinktext: Check Address
+heroLinkurl: /company/
+
+---
+{% include _header.liquid %}
+	<!-- Page-Specific Styles -->
+	<style>
+		/* 4K Background Image */
+		@media (min-width: 1920px) {
+			.no-webp .hero {
+				background: radial-gradient(circle at bottom,rgba(0,39,53,0.8) 0%,rgba(0,0,0,0.8) 100%), url("img/bg/home-4k.jpg") 60%;
+				background-size: cover;
+			}
+			.webp .hero {
+				background: radial-gradient(circle at bottom,rgba(0,39,53,0.8) 0%,rgba(0,0,0,0.8) 100%), url("img/bg/home-4k.webp") 60%;
+				background-size: cover;
+			}
+		}
+		/* Regular Background Image */
+		@media (max-width: 1920px) {
+			.no-webp .hero {
+				background: radial-gradient(circle at bottom,rgba(0,39,53,0.8) 0%,rgba(0,0,0,0.8) 100%), url("img/bg/home-hd.jpg") 60%;
+				background-size: cover;
+			}
+			.webp .hero {
+				background: radial-gradient(circle at bottom,rgba(0,39,53,0.8) 0%,rgba(0,0,0,0.8) 100%), url("img/bg/home-hd.webp") 60%;
+				background-size: cover;
+			}
+		}
+		.blue a {
+			color: #002735;
+		}
+		.blue a:hover {
+			color: #000;
+		}
+	</style>
+	<!-- Page Content -->
+	<section class="hero">
+		<div class="container">
+			<div class="row middle-xs text-center">
+				<div class="col-md-10 col-md-offset-1">
+					<h1>{{ pageTitle }}<mark class="dot">.</mark></h1>
+					<p class="subheading">{{ pageSubtitle }}</p>
+					<a href="{{ heroLinkurl }}" class="button ghost mt-2">{{ heroLinktext }}</a>
+				</div>
+			</div> 
+		</div>
+	</section>
+	<section class="blue">
+		<div class="container">
+			<div class="col-md-10 col-md-offset-1 text-center">Rolling out across Australia ▪ Urban, Regional and Rural 
+			<a href="#">See Roadmap<svg width="1rem" height="1rem" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+				</svg>
+			</a></div>
+		</div>
+	</section>
+	<div class="section gradient py-8">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-md-4">
+					#
+					<p>You sign up to get <strong>connected</strong></p>
+				</div>
+				<div class="col-md-4">
+					#
+					<p>We install a <strong>beacon</strong> at your location</p>
+				</div>
+				<div class="col-md-4">
+					#
+					<p>Enjoy <strong>lightning-fast</strong> internet</p>
+				</div>
+			</div>
+			<div class="row mt-8">
+				<div class="col-md-8 col-md-offset-2">
+					<h2 class="text-center">Internet done<br class="responsive"> the <mark>right</mark> way<mark class="dot">.</mark></h2>
+				</div>
+			</div>
+			<div class="row mt-4">
+				<div class="col-md-4 p-2">
+					#
+					<h3>Data without limits</h3>
+					<p>All our fixed plans come with no data restrictions. We won’t cap your use, limit downloads or shape speeds (unless you’re really pushing boundaries).</p>
+				</div>
+				<div class="col-md-4 p-2">
+					#
+					<h3>We dont' slow you down</h3>
+					<p>Unlike other networks, we don’t over-subscribe connections as we grow. This means things stay fast for you even as more people sign up.</p>
+				</div>
+				<div class="col-md-4 p-2">
+					#
+					<h3>Easy to switch</h3>
+					<p>Decisions made a long time ago shouldn’t stop you choosing something better. Let us know if you’re locked into a plan and we’ll help you cut the ties.</p>
+				</div>
+				<div class="col-md-4 p-2">
+					#
+					<h3>You're our top priority</h3>
+					<p>Our network spawned from being fed up with the status quo, so we know what it’s like to feel underserved. That’s why you will always be our number one priority.</p>
+				</div>
+				<div class="col-md-4 p-2">
+					#
+					<h3>Homegrown and local</h3>
+					<p>OneQode is built by Aussies, for Aussies. Everyone involved understands what makes us tick, so when you need a hand, you’ll have someone who understands.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section class="mid-to-black text-center py-8">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<h2>OneQode and <mark>you</mark><mark class="dot">.</mark></h2>
+					<p>Our network comes in two forms. If you’re in range of our fixed network, we’ll make sure you get on that. If not, you can still come onboard our Australia-wide 4G mobile broadband network.</p>
+				</div>
+			</div>
+			<div class="row mt-4">
+				<div class="col-md-6">
+					#
+					<h3>Fixed Broadband</h3>
+					<p class="subheading">Superfast broadband on our independent network</p>
+					<p>Lightning fast speeds, symmetrical bandwidth, No ‘speeds up to’ BS (get what you pay for), No NBN involved, Available in select areas.</p>
+					<a href="#" class="button">See plans</a>
+				</div>
+				<div class="col-md-6">
+					#
+					<h3>Mobile Broadband</h3>
+					<p class="subheading">Superfast broadband on our independent network</p>
+					<p>Lightning fast speeds, symmetrical bandwidth, No ‘speeds up to’ BS (get what you pay for), No NBN involved, Available in select areas.</p>
+					<a href="#" class="button">See plans</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="full-height black">
+		<div class="container">
+			<div class="col-md-10 col-md-offset-1 text-center">
+				<p class="superheading">Our Brands</p>
+				<h2>Retail, wholesale,<br class="responsive"> fibre, and gaming<mark class="dot">.</mark></h2>
+			</div>
+			<div class="row brands mt-8">
+				<div class="col-xs col-sm-6">
+					<a href="https://oneqode.com.au" title="OneQode - Lightning Fast Internet" target="_blank">
+						<img src="/img/logo.svg">
+						<p>Home & Business Internet</p>
+					</a>
+				</div>
+				<div class="col-xs col-sm-6">
+					<a href="https://obnco.com.au" title="OBN Co - Wholesale Telecoms for Enterprise" target="_blank">
+						<img src="/img/brand/obnco-logo.svg">
+						<p>Enterprise & Wholesale Telecoms</p>
+					</a>
+				</div>
+				<div class="col-xs col-sm-6">
+					<a href="https://metroxc.com" title="MetroXC - Data Center Cross-connects" target="_blank">
+						<img src="/img/brand/metroxc-logo.svg">
+						<p>Fibre Cross-connects</p>
+					</a>
+				</div>
+				<div class="col-xs col-sm-6">
+					<a href="https://hyperion-servers.com" title="Hyperion Servers - Low Latency Game Servers in Guam, Brisbane and Sydney" target="_blank">
+						<img src="/img/brand/hyperion-servers-logo.svg" class="hyperion">
+						<p>Gaming Servers</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="full-height black-to-footer">
+		<div class="container">
+			<div class="col-md-10 col-md-offset-1 text-center">
+				<h2>Better internet,<br class="responsive"> from the ground up<mark class="dot">.</mark></h2>
+				<p class="subheading">Building a genuine alternative<mark class="dot">.</mark></p>
+				<p>Aussie internet isn't up to scratch, so we're building a faster, more reliable alternative.</p>
+				<p>We're helping gamers, businesses, and internet lovers get incredible internet — without paying a fortune.</p>
+				<p><a href="/company/" class="button mt-2">Our company</a></p>
+			</div>
+		</div>
+	</section>
+{% include _footer.liquid %}

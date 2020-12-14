@@ -1,0 +1,23 @@
+---
+
+includesWebp: false
+pageSupertitle: This is a supertitle
+pageTitle: I am the hero text
+pageSubtitle: This is a subtitle
+ogImage: og-image.jpg
+
+---
+{% include _header.liquid %}
+		<section class="hero">
+			<div class="container">
+				<div class="row middle-xs">
+					<div class="col-md-8 col-md-offset-2 text-center">
+						<p class="superheading">{{ pageSupertitle }}</p>
+						<h1>{{ pageTitle }}<mark class="dot">.</mark></h1>
+						<p class="subheading">{{ pageSubtitle }}</p>
+					</div>
+				</div>
+			</div>
+		</section>
+{{ content }}
+{% include _footer.liquid %}

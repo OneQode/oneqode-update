@@ -1,0 +1,442 @@
+---
+layout: page.liquid
+metaTitle: OneQode • About Our Business
+metaDescription: OneQode is an Australian telecommunications carrier on a mission to bring Australia to the top 10 for internet speeds.
+includesWebp: true
+changefreq: monthly
+priority: 0.9
+pageSupertitle: About Us
+pageTitle: New tech<mark class="dot">,</mark> <br class="responsive">new ideas
+pageSubtitle: On a mission to put Australia in <br class="responsive">the top 10 for internet speeds.
+---
+<style>
+	.profile picture img {
+		border-radius: 50%;
+		display: block;
+		max-width: 60%;
+		opacity: 1;
+	}
+	.profile a {
+		text-align: center;
+		text-decoration: none;
+		opacity: 0.75;
+		display: block;
+		color: #fff;
+	}
+	.profile a:hover {
+		opacity: 1;
+	}
+	.profile span {
+		display: block;
+	}
+	.profile span:first-of-type {
+		font-weight: 600;
+		margin-top: 0.5rem;
+	}
+	.profile span:last-of-type {
+		font-size: 1rem;
+		margin-bottom: 2rem;
+	}
+	.data-use {
+		position: relative;
+		overflow: hidden;
+	}
+	.data-use svg {
+		position: relative;
+		z-index: 2;
+	}
+	.data-use ul {
+		margin-top: 0;
+		position: absolute;
+		z-index: 1;
+		list-style: none;
+		padding-left: 0;
+		font-size: 3rem;
+		background-image: linear-gradient(180deg, #333, #000 80%);
+		background-size: 100%;
+		-webkit-background-clip: text;
+		-moz-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		-moz-text-fill-color: transparent;
+	}
+
+	/* Brands */
+	.company .box {
+		padding: 1rem;
+		text-align: center;
+		border: 1px solid #333;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+		box-shadow: 0px 0px 0px 0px #002735;
+		opacity: 0.6;
+		background: #000;
+		margin-bottom: 1.2rem;
+	}
+	.company .box,
+	.company .box p,
+	.company .box h3,
+	.company .box img {
+		transition: all 0.2s;
+	}
+	.company .box img {
+		width: min(10rem, 100%);
+		height: 6rem;
+	}
+	.company .box img.hyperion {
+		width: min(11rem, 100%);
+	}
+	.company .box img.oneqode {
+		width: min(14rem, 100%);
+	}
+	.company a {
+		text-decoration: none;
+		color: #fff;
+		display: block;
+	}
+	.company .box h3 {
+		text-transform: uppercase;
+		font-size: 1.25rem;
+		color: #fff;
+	}
+	.company .box:hover {
+		background: rgba(0, 0, 0, 0.8);
+		border: 1px solid #666;
+		box-shadow: 0px 0px 25px 0px #002735;
+		opacity: 1;
+	}
+	h4 {
+		margin-top: 1rem;
+	}
+
+	/* Features -- What We're Doing */
+	.feature {
+		background: #1c1d22;
+		margin-top: 4rem;
+		padding: 4rem;
+		border-radius: 15px;
+		background: #1c1d22 no-repeat right;
+		background-size: contain;
+	}
+	.feature.guam {
+		background-position: left;
+	}
+	.feature .button {
+		font-size: 1rem;
+	}
+
+	/* Feature WebP Backgrounds */
+	.webp .feature.submarine {
+		background-image: linear-gradient(90deg, #1c1d22 50%, rgba(28,29,34,0.7) 100%), url(../img/company-submarine-sunshine-coast-landing-station.webp);
+	}
+	.no-webp .feature.submarine {
+		background-image: linear-gradient(90deg, #1c1d22 50%, rgba(28,29,34,0.7) 100%), url(../img/company-submarine-sunshine-coast-landing-station.jpg);
+	}
+	.webp .feature.guam {
+		background-image: linear-gradient(270deg, #1c1d22 50%, rgba(28,29,34,0.7) 100%), url(../img/company-guam-aerial-view.webp);
+	}
+	.no-webp .feature.guam {
+		background-image: linear-gradient(270deg, #1c1d22 50%, rgba(28,29,34,0.7) 100%), url(../img/company-guam-aerial-view.jpg);
+	}
+	.webp .feature.lastmile {
+		background-image: linear-gradient(90deg, #1c1d22 50%, rgba(28,29,34,0.7) 100%), url(../img/company-last-mile-oneqode-wireless.webp);
+	}
+	.no-webp .feature.lastmile {
+		background-image: linear-gradient(90deg, #1c1d22 50%, rgba(28,29,34,0.7) 100%), url(../img/company-last-mile-oneqode-wireless.jpg);
+	}
+
+	/* Animated Lines */
+	.push-forward {
+		position: relative;
+		z-index: 2;
+	}
+	section.lines {
+		position: relative;
+		z-index: 1;
+		min-height: 40vh;
+		margin: -8rem 0 -20rem 0;
+		background-image:
+		/* TOP TO BOTTOM */
+		url(../img/bg/network-line.svg),
+		url(../img/bg/network-line.svg),
+		url(../img/bg/network-line.svg),
+		url(../img/bg/network-line.svg),
+		url(../img/bg/network-line-reverse.svg),
+		url(../img/bg/network-line-reverse.svg),
+		url(../img/bg/network-line-reverse.svg)
+		;
+		background-repeat: no-repeat;
+		animation: bglines 5s infinite linear;
+	}
+	@keyframes bglines {
+		from {
+			background-position:
+			-600% 10%,
+			-250% 30%,
+			-800% 50%,
+			-200% 80%,
+			200% 25%,
+			450% 60%,
+			300% 85%;
+		}
+		to {
+			background-position:
+			550% 10%,
+			750% 30%,
+			410% 50%,
+			300% 80%,
+			-700% 25%,
+			-200% 60%,
+			-450% 85%;
+		}
+	}
+	section.companies {
+		background-image:
+		/* TOP TO BOTTOM */
+		url(../img/bg/network-line.svg),
+		url(../img/bg/network-line.svg),
+		url(../img/bg/network-line.svg),
+		url(../img/bg/network-line.svg),
+		url(../img/bg/network-line-reverse.svg),
+		url(../img/bg/network-line-reverse.svg),
+		url(../img/bg/network-line-reverse.svg)
+		;
+		background-repeat: no-repeat;
+		animation: bglinestwo 5s infinite linear;
+	}
+	@keyframes bglinestwo {
+		from {
+			background-position:
+			-600% 60%,
+			-250% 70%,
+			-800% 50%,
+			-200% 80%,
+			200% 30%,
+			450% 60%,
+			300% 85%;
+		}
+		to {
+			background-position:
+			550% 60%,
+			750% 70%,
+			410% 50%,
+			300% 80%,
+			-700% 30%,
+			-200% 60%,
+			-450% 85%;
+		}
+	}
+	/* Mobile Styles */
+	@media (max-width: 48em) {
+		.feature {
+			background-size: cover;
+			text-align: center;
+		}
+		.data-use ul {
+			display: none;
+		}
+		.row.profile {
+			display: flex;
+		}
+		.center-mobile {
+			text-align: center;
+		}
+		section.lines {
+			margin: -8rem 0 -17rem 0;
+		}
+		/* Animated Lines on Mobile */
+		@keyframes bglines {
+			from {
+				background-position:
+				-2600px 10%,
+				-2250px 30%,
+				-2800px 50%,
+				-2200px 80%,
+				2200px 25%,
+				2450px 60%,
+				2300px 85%;
+			}
+			to {
+				background-position:
+				2550px 10%,
+				2750px 30%,
+				2410px 50%,
+				2300px 80%,
+				-2700px 25%,
+				-2200px 60%,
+				-2450px 85%;
+			}
+		}
+		section.companies {
+			animation: bglines 5s infinite linear;
+		}
+	}
+</style>
+<section class="pt-4 push-forward">
+	<div class="container">
+		<div class="row text-center">
+			<div class="col-md-8 col-md-offset-2">
+				<h2>Engineering the network for<br> 2030 and beyond<mark class="dot">.</mark></h2>
+				<p>OneQode designs lightning-fast networks with better speeds and capacity. Founded in late 2019 and headquartered in Queensland, we’re laser-focussed on building a platform to support and accelerate the Australian economy into the future.</p>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="lines">
+	<!-- Things -->
+</section>
+<section class="push-forward">
+	<div class="container">
+		<div class="row feature submarine">
+			<div class="col-md-6">
+				<h3>Connecting Australia to the world, fast.</h3>
+				<p>The first carrier to go operational on the fastest cable to Asia from Australia's east coast.</p>
+				<a class="button ghost" href="/media/oneqode-deploys-in-sunshine-coast-landing-station/">Learn More
+					<svg width="1rem" height="1rem" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+					</svg>
+				</a>
+			</div>
+		</div>
+		<div class="row feature guam">
+			<div class="col-md-6 col-md-offset-6">
+				<h3>Creating a smoother internet for APAC</h3>
+				<p>The first to deploy infrastructure in Guam purpose-designed for smoother real-time regional internet applications.</p>
+				<a class="button ghost" href="/guam/">Guam
+					<svg width="1rem" height="1rem" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+					</svg>
+				</a>
+			</div>
+		</div>
+		<div class="row feature lastmile">
+			<div class="col-md-6">
+				<h3>Rolling out last-mile internet in Australia</h3>
+				<p>Deploying next-gen fixed wireless technology for blazing fast, low latency home and business internet connectivity.</p>
+				<a class="button ghost" href="https://oneqode.com.au" target="_blank">Last Mile
+					<svg width="1rem" height="1rem" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+					</svg>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="pt-4 companies">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2 text-center">
+				<p class="superheading">Four Brands, One Vision</p>
+				<h2>Retail, wholesale,<br class="responsive"> fibre, and gaming<mark class="dot">.</mark></h2>
+				<p>Building a world where incredible internet is the baseline.</p>
+			</div>
+		</div>
+		<div class="row company mt-4">
+			<div class="col-sm-6 col-md-5 col-md-offset-1">
+				<a href="https://oneqode.com.au" target="_blank" title="OneQode • Superfast Internet Service Provider">
+					<div class="box">
+						<img src="../img/logo.svg" title="OneQode Internet" class="oneqode">
+						<h3>Home & Business Internet</h3>
+						<p>Fast, affordable internet for Australian internet lovers</p>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-6 col-md-5">
+				<a href="https://obnco.com.au" target="_blank" title="OBN Co • Guam Telecoms Services for Business & Enterprise">
+					<div class="box">
+						<img src="../img/brand/obnco-logo.svg" title="OBN Co">
+						<h3>Business Telecoms</h3>
+						<p>Servers, colocation, and international connectivity</p>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-6 col-md-5 col-md-offset-1">
+				<a href="https://hyperion-servers.com" target="_blank" title="Hyperion Servers • Game Server Hosting in Guam">
+					<div class="box">
+						<img src="../img/brand/hyperion-servers-logo.svg" title="Hyperion Servers" class="hyperion">
+						<h3>Game Server Hosting</h3>
+						<p>Low latency, high-performance game servers</p>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-6 col-md-5">
+				<a href="https://metroxc.com" target="_blank" title="MetroXC • Data Center Cross Connects">
+					<div class="box">
+						<img src="../img/brand/metroxc-logo.svg" title="MetroXC" class="hyperion">
+						<h3>Fibre Cross-Connects</h3>
+						<p>Connecting datacenters, affordable access for enterprise</p>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="black-to-footer pb-4">
+<div class="container text-center">
+		<h2>Our team</h2>
+		<div class="row mt-4 profile">
+			<div class="col-xs-6 col-sm-4">
+				<a href="https://www.linkedin.com/in/matt-shearing/" target="_blank">
+					<picture>
+						<source srcset="/img/team/matt2.webp" type="image/webp">
+						<img src="/img/team/matt2.jpg" alt="Matt Shearing">
+					</picture>
+					<span>Matt Shearing</span>
+					<span>Chief Executive Officer</span>
+				</a>
+			</div>
+			<div class="col-xs-6 col-sm-4">
+				<a href="https://www.linkedin.com/in/dillon-firrell-1b7594111/" target="_blank">
+					<picture>
+						<source srcset="/img/team/dillon2.webp" type="image/webp">
+						<img src="/img/team/dillon2.jpg" alt="Dillon Firrell">
+					</picture>
+					<span>Dillon Firrell</span>
+					<span>Chief Technical Officer</span>
+				</a>
+			</div>
+			<div class="col-xs-6 col-sm-4">
+				<a href="https://www.linkedin.com/in/hyypperionn/" target="_blank">
+					<picture>
+						<source srcset="/img/team/ben2.webp" type="image/webp">
+						<img src="/img/team/ben2.jpg" alt="Ben Cooper">
+					</picture>
+					<span>Ben Cooper</span>
+					<span>Chief Product Officer</span>
+				</a>
+			</div>
+			<div class="col-xs-6 col-sm-4">
+				<a href="https://www.linkedin.com/in/curtisbayne/" target="_blank">
+					<picture>
+						<source srcset="/img/team/curtis2.webp" type="image/webp">
+						<img src="/img/team/curtis2.jpg" alt="Curtis Bayne">
+					</picture>
+					<span>Curtis Bayne</span>
+					<span>Head of RF</span>
+				</a>
+			</div>
+			<div class="col-xs-6 col-sm-4">
+				<a href="https://www.linkedin.com/in/daniel-mcgregor-7086b71/" target="_blank">
+					<picture>
+						<source srcset="/img/team/dan2.webp" type="image/webp">
+						<img src="/img/team/dan2.jpg" alt="Daniel McGregor">
+					</picture>
+					<span>Daniel McGregor</span>
+					<span>Chief Financial Officer</span>
+				</a>
+			</div>
+			<div class="col-xs-6 col-sm-4">
+				<a href="https://www.linkedin.com/in/beau-h-859621166/" target="_blank">
+					<picture>
+						<source srcset="/img/team/beau2.webp" type="image/webp">
+						<img src="/img/team/beau2.jpg" alt="Beau Harris">
+					</picture>
+					<span>Beau Harris</span>
+					<span>Business Development Manager</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>

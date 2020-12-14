@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Page Info -->
+	<title>{{ metaTitle }}</title>
+	<meta property="og:title" content="{{ metaTitle }}" />
+	<meta name="description" content="{{ metaDescription }}" />
+	<meta property="og:description" content="{{ metaDescription }}" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="{{ global.url }}{{ page.url }}" />
+	<meta property="og:site_name" content="OneQode" />
+	<meta property="og:image" content="{{ global.url }}/img/og/{{ ogImage }}"/>
+	<meta property="article:publisher" content="https://www.facebook.com/oneqode" />
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:description" content="{{ metaDescription }}">
+	<meta name="twitter:image" content="{{ global.url }}/img/og/{{ ogImage }}" />
+	<meta name="twitter:title" content="{{ metaTitle }}" />
+	<meta name="twitter:site" content="@oneqode" />
+	<meta name="twitter:creator" content="@oneqode" />
+	<!-- Styles -->
+	<link rel="stylesheet" href="{{ '/css/production.min.css' | url }}">
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Work+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+	<!-- Shortcut Icons -->
+	<link rel="icon" href="{{ '/favicon.svg' | url }}">
+	<link rel="apple-touch-icon" href="{{ '/favicon.png' | url }}" />
+	<meta name="msapplication-TileImage" content="{{ '/favicon.png' | url }}" />
+	<!-- Status Bar -->
+	<meta name="theme-color" content="#00b0f0">
+	<meta name="msapplication-navbutton-color" content="#00b0f0">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#00b0f0">
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-5FZ7DSW');</script>
+	<!-- End Google Tag Manager -->
+	<script>
+		// Scrolling Header
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+				document.querySelector("#header").classList.add("sticky");
+			} else {
+				document.querySelector("#header").classList.remove("sticky");
+			}
+		}
+		// Mobile Navigation Toggle
+		function toggleNav() {
+			document.querySelector("nav.main").classList.toggle("active");
+			document.querySelector("main").classList.toggle("active");
+			document.querySelector("body").classList.toggle("active");
+		}
+		// Toggle Section Switcher
+		function sectionSwitcher() {
+			var switcher = document.querySelector("#toggleSection");
+			switcher.classList.toggle("open");
+			var expanded = switcher.getAttribute("aria-expanded");
+			if (expanded == "true") {
+				expanded = "false"
+			} else {
+				expanded = "true"
+			}
+			switcher.setAttribute("aria-expanded", expanded);
+		}
+		// Close Switcher
+		function closeSwitcher() {
+			var switcher = document.getElementById("toggleSection");
+			switcher.classList.remove("open");
+			switcher.setAttribute("aria-expanded", "false");
+		}
+		// Close Menu Dropdown
+		function closeDropdown() {
+			var dropdown = document.querySelectorAll('li.has-submenu.open');
+			Array.prototype.forEach.call(dropdown, function(el, i){
+				el.classList.remove("open");
+				el.setAttribute("aria-expanded", "false");
+			});
+		}
+		// Close Switcher on click outside
+		document.addEventListener("click", function(evt) {
+			var switcher = document.getElementById('switcher'),
+				targetElement = evt.target;  // clicked element
+
+			do {
+				if (targetElement == switcher) {
+					return;
+				}
+				// Go up the DOM
+				targetElement = targetElement.parentNode;
+			} while (targetElement);
+			closeSwitcher();
+		});
+		// Close Dropdown on Click Outside
+		document.addEventListener('click', function (event) {
+		    if (event.target.closest('li.has-submenu')) return;
+		    closeDropdown();
+		}, false);
+		// Close Switcher & Dropdown on escape key
+		document.addEventListener('keydown', function (event) {
+			var press = event || window.event;
+			if (press.keyCode === 27) {
+				closeSwitcher();
+				closeDropdown();
+			}
+		});
+		window.addEventListener('load', function() {
+			
+			// Menu Dropdowns
+			var menuItems = document.querySelectorAll('li.has-submenu');
+			var timer;
+			Array.prototype.forEach.call(menuItems, function(el, i){
+				// // Mouse
+				// el.addEventListener("mouseover", function(event){
+				// 	this.className = "has-submenu open";
+				// 	clearTimeout(timer);
+				// });
+				// el.addEventListener("mouseout", function(event){
+				// 	timer = setTimeout(function(event){
+				// 		document.querySelector(".has-submenu.open").className = "has-submenu";
+				// 	}, 250);
+				// });
+
+				// Keyboard
+				el.querySelector('a').addEventListener("click",  function(event){
+					if (this.parentNode.className == "has-submenu") {
+						this.parentNode.className = "has-submenu open";
+						this.setAttribute('aria-expanded', "true");
+					} else {
+						this.parentNode.className = "has-submenu";
+						this.setAttribute('aria-expanded', "false");
+					}
+					event.preventDefault();
+					return false;
+				});
+			});
+
+			// Section Switcher - Override Parent HREF
+			document.getElementById("toggleSection").addEventListener("click", function(event){
+				event.preventDefault()
+			});
+		});
+	</script>
+	{%- if includesWebp == true %}
+	<script src="{{ '/js/modernizr.js' | url }}"></script>
+	{%- endif %}
+</head>
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FZ7DSW"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<header id="header">
+		<div class="container">
+			<a href="/" class="logo">
+				<img src="{{ '/img/logo.svg' | url }}" alt="OneQode Logo">
+			</a>
+{% case section %}
+	{% when "home" %}
+		{% include _navigation-home.liquid %}
+	{% when "business" %}
+		{% include _navigation-business.liquid %}
+	{% when "wholesale" %}
+		{% include _navigation-wholesale.liquid %}
+	{% else %}
+		{% include _navigation-home.liquid %}
+{% endcase %}
+		</div>
+	</header>
+	<main>

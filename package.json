@@ -1,0 +1,30 @@
+{
+  "name": "oneqode-parent-eleventy",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eleventy.js",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-plugin-rss": "^1.0.9",
+    "luxon": "^1.25.0"
+  },
+  "scripts": {
+    "build": "eleventy",
+    "watch": "eleventy --watch",
+    "serve": "eleventy --serve",
+    "start": "eleventy --serve",
+    "debug": "DEBUG=* eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oneqode-mkt/oneqode-parent-eleventy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oneqode-mkt/oneqode-parent-eleventy/issues"
+  },
+  "homepage": "https://github.com/oneqode-mkt/oneqode-parent-eleventy#readme",
+  "dependencies": {}
+}

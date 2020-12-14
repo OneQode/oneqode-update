@@ -1,0 +1,100 @@
+---
+
+section: wholesale
+metaTitle: OneQode for Wholesale • Wholesale Internet Provider
+metaDescription: Australian wholesale internet provider providing low-latency enterprise internet solutions including IP transit, ethernet, backhaul, dark fibre and co-location.
+changefreq: monthly
+priority: 1
+includesWebp: true
+pageTitle: Wholesale Internet Solutions
+pageSubtitle: Engineering the network for<br class="responsive"> 2030 and beyond.
+heroLinktext: About Us
+heroLinkurl: /company/
+ogImage: og-image.jpg
+
+---
+{% include _header.liquid %}
+	<!-- Page-Specific Styles -->
+	<style>
+		/* 4K Background Image */
+		@media (min-width: 1920px) {
+			.no-webp .hero {
+				background: url("/img/bg/wholesale-header-hd.jpg") bottom right;
+				background-size: cover;
+			}
+			.webp .hero {
+				background: url("/img/bg/wholesale-header-4k.webp") bottom right;
+				background-size: cover;
+			}
+		}
+		/* Regular Background Image */
+		@media (max-width: 1920px) {
+			.no-webp .hero {
+				background: url("/img/bg/wholesale-header-hd.jpg") bottom right;
+				background-size: cover;
+			}
+			.webp .hero {
+				background: url("/img/bg/wholesale-header-hd.webp") bottom right;
+				background-size: cover;
+			}
+		}
+	</style>
+
+	<!-- Page Content -->
+	<section class="hero">
+		<div class="container">
+			<div class="row middle-xs">
+				<div class="col-md-8">
+					<h1>{{ pageTitle }}<mark class="dot">.</mark></h1>
+					<p class="subheading">{{ pageSubtitle }}</p>
+					<a href="{{ heroLinkurl }}" class="button ghost mt-2">{{ heroLinktext }}</a>
+				</div>
+			</div> 
+		</div>
+	</section>
+	<section class="full-height black">
+		<div class="container">
+			<div class="col-md-10 col-md-offset-1 text-center">
+				<p class="superheading">Our Brands</p>
+				<h2>Retail, wholesale,<br class="responsive"> fibre, and gaming<mark class="dot">.</mark></h2>
+			</div>
+			<div class="row brands mt-8">
+				<div class="col-xs col-sm-6">
+					<a href="https://oneqode.com.au" title="OneQode - Lightning Fast Internet" target="_blank">
+						<img src="/img/logo.svg">
+						<p>Home & Business Internet</p>
+					</a>
+				</div>
+				<div class="col-xs col-sm-6">
+					<a href="https://obnco.com.au" title="OBN Co - Wholesale Telecoms for Enterprise" target="_blank">
+						<img src="/img/brand/obnco-logo.svg">
+						<p>Enterprise & Wholesale Telecoms</p>
+					</a>
+				</div>
+				<div class="col-xs col-sm-6">
+					<a href="https://metroxc.com" title="MetroXC - Data Center Cross-connects" target="_blank">
+						<img src="/img/brand/metroxc-logo.svg">
+						<p>Fibre Cross-connects</p>
+					</a>
+				</div>
+				<div class="col-xs col-sm-6">
+					<a href="https://hyperion-servers.com" title="Hyperion Servers - Low Latency Game Servers in Guam, Brisbane and Sydney" target="_blank">
+						<img src="/img/brand/hyperion-servers-logo.svg" class="hyperion">
+						<p>Gaming Servers</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="full-height black-to-footer">
+		<div class="container">
+			<div class="col-md-10 col-md-offset-1 text-center">
+				<h2>Better internet,<br class="responsive"> from the ground up<mark class="dot">.</mark></h2>
+				<p class="subheading">Building a genuine alternative<mark class="dot">.</mark></p>
+				<p>Aussie internet isn't up to scratch, so we're building a faster, more reliable alternative.</p>
+				<p>We're helping gamers, businesses, and internet lovers get incredible internet — without paying a fortune.</p>
+				<p><a href="/company/" class="button mt-2">Our company</a></p>
+			</div>
+		</div>
+	</section>
+{% include _footer.liquid %}

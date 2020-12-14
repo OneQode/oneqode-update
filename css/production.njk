@@ -1,0 +1,9 @@
+---
+permalink: "css/production.min.css"
+---
+{%- set css -%}
+	{% include "css/normalize.css" %}
+	{% include "css/grid.css" %}
+	{% include "css/style.css" %}
+{%- endset -%}
+{{ css | cssmin | safe }}
