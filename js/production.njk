@@ -1,0 +1,8 @@
+---
+permalink: "js/production.js"
+---
+{%- set js -%}
+	{% include "js/navigation.js" %}
+	{% include "js/modernizr.js" %}
+{%- endset -%}
+{{ js | safe }}

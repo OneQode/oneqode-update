@@ -38,115 +38,13 @@
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-5FZ7DSW');</script>
 	<!-- End Google Tag Manager -->
-	<script>
-		// Scrolling Header
-		window.onscroll = function() {scrollFunction()};
-
-		function scrollFunction() {
-			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-				document.querySelector("#header").classList.add("sticky");
-			} else {
-				document.querySelector("#header").classList.remove("sticky");
-			}
-		}
-		// Mobile Navigation Toggle
-		function toggleNav() {
-			document.querySelector("nav.main").classList.toggle("active");
-			document.querySelector("main").classList.toggle("active");
-			document.querySelector("body").classList.toggle("active");
-		}
-		// Toggle Section Switcher
-		function sectionSwitcher() {
-			var switcher = document.querySelector("#toggleSection");
-			switcher.classList.toggle("open");
-			var expanded = switcher.getAttribute("aria-expanded");
-			if (expanded == "true") {
-				expanded = "false"
-			} else {
-				expanded = "true"
-			}
-			switcher.setAttribute("aria-expanded", expanded);
-		}
-		// Close Switcher
-		function closeSwitcher() {
-			var switcher = document.getElementById("toggleSection");
-			switcher.classList.remove("open");
-			switcher.setAttribute("aria-expanded", "false");
-		}
-		// Close Menu Dropdown
-		function closeDropdown() {
-			var dropdown = document.querySelectorAll('li.has-submenu.open');
-			Array.prototype.forEach.call(dropdown, function(el, i){
-				el.classList.remove("open");
-				el.setAttribute("aria-expanded", "false");
-			});
-		}
-		// Close Switcher on click outside
-		document.addEventListener("click", function(evt) {
-			var switcher = document.getElementById('switcher'),
-				targetElement = evt.target;  // clicked element
-
-			do {
-				if (targetElement == switcher) {
-					return;
-				}
-				// Go up the DOM
-				targetElement = targetElement.parentNode;
-			} while (targetElement);
-			closeSwitcher();
-		});
-		// Close Dropdown on Click Outside
-		document.addEventListener('click', function (event) {
-		    if (event.target.closest('li.has-submenu')) return;
-		    closeDropdown();
-		}, false);
-		// Close Switcher & Dropdown on escape key
-		document.addEventListener('keydown', function (event) {
-			var press = event || window.event;
-			if (press.keyCode === 27) {
-				closeSwitcher();
-				closeDropdown();
-			}
-		});
-		window.addEventListener('load', function() {
-			
-			// Menu Dropdowns
-			var menuItems = document.querySelectorAll('li.has-submenu');
-			var timer;
-			Array.prototype.forEach.call(menuItems, function(el, i){
-				// // Mouse
-				// el.addEventListener("mouseover", function(event){
-				// 	this.className = "has-submenu open";
-				// 	clearTimeout(timer);
-				// });
-				// el.addEventListener("mouseout", function(event){
-				// 	timer = setTimeout(function(event){
-				// 		document.querySelector(".has-submenu.open").className = "has-submenu";
-				// 	}, 250);
-				// });
-
-				// Keyboard
-				el.querySelector('a').addEventListener("click",  function(event){
-					if (this.parentNode.className == "has-submenu") {
-						this.parentNode.className = "has-submenu open";
-						this.setAttribute('aria-expanded', "true");
-					} else {
-						this.parentNode.className = "has-submenu";
-						this.setAttribute('aria-expanded', "false");
-					}
-					event.preventDefault();
-					return false;
-				});
-			});
-
-			// Section Switcher - Override Parent HREF
-			document.getElementById("toggleSection").addEventListener("click", function(event){
-				event.preventDefault()
-			});
-		});
-	</script>
-	{%- if includesWebp == true %}
-	<script src="{{ '/js/modernizr.js' | url }}"></script>
+	<!-- Scripts -->
+	<script src="{{ '/js/production.js' | url }}"></script>
+	{%- if availabilityChecker == true %}
+	<!-- Availability Checker -->
+	<script defer src="{{ '/js/address-checker-conf.js' | url }}"></script>
+	<script defer src="{{ '/js/address-checker.js' | url }}"></script>
+	<link rel="stylesheet" href="/css/availability.css">
 	{%- endif %}
 </head>
 <body>

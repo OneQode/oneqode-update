@@ -55,7 +55,7 @@ footer, main {
 	margin: 0 auto;
 }
 .container {
-	max-width: 1080px;
+	max-width: 1200px;
 	padding: 2rem 1rem;
 	margin: 0 auto;
 }
@@ -103,6 +103,9 @@ footer, main {
 }
 .mb-4 {
 	margin-bottom: 4rem;
+}
+.my-1 {
+	margin: 1rem 0;
 }
 .my-2 {
 	margin: 2rem 0;
@@ -377,10 +380,11 @@ footer .container {
 }
 footer p {
 	margin: 0;
-	color: #828282;
+	color: #fff;
 }
 footer .credits {
 	font-size: 1rem;
+	color: #828282;
 }
 footer .credits a {
 	text-decoration: none;
@@ -604,6 +608,12 @@ section.hero {
 	background: #00b0f0;
 	color: #000;
 }
+.blue a {
+	color: #002735;
+}
+.blue a:hover {
+	color: #000;
+}
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - -
 CONTENT
@@ -686,6 +696,48 @@ CONTENT
 .box {
 	border-radius: 10px;
 }
+.box.glowing {
+	text-decoration: none;
+	color: #fff;
+	display: block;
+	padding: 1rem;
+	text-align: center;
+	border: 1px solid #333;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+	box-shadow: 0px 0px 0px 0px #002735;
+	opacity: 0.9;
+	background: rgba(0, 39, 53, 0.2);
+}
+.box.glowing,
+.box.glowing p,
+.box.glowing h3,
+.box.glowing img {
+	transition: all 0.2s;
+}
+.box.glowing h3 {
+	text-transform: uppercase;
+	font-size: 1.25rem;
+	color: #999;
+}
+.box.glowing:hover {
+	background: rgba(0, 39, 53, 0.6);
+	border: 1px solid #666;
+	box-shadow: 0px 0px 25px 0px #002735;
+	opacity: 1;
+}
+.box.glowing:hover img {
+	opacity: 1;
+}
+.box.glowing:hover h3 {
+	color: #fff;
+}
+.box.glowing:hover p {
+	color: #fff;
+}
 .press-info, .applicant-info {
 	background: rgba(0,0,0,0.2);
 	border: 1px solid #142a31;
@@ -719,6 +771,9 @@ RESPONSIVE OVERRIDES
 		transition: opacity 0.2s;
 	}
 	picture:hover img {
+		opacity: 1;
+	}
+	picture img.opaque {
 		opacity: 1;
 	}
 	footer > * {
@@ -861,11 +916,11 @@ RESPONSIVE OVERRIDES
 		text-align: center;
 		padding-top: 2.5rem;
 	}
-	footer, footer ul {
+	footer, footer ul, footer .credits {
 		text-align: center !important;
 	}
 	footer .container {
-		padding: 2rem 0.75rem 5rem 0.75rem;
+		padding-bottom: 8rem;
 	}
 	/* Mobile fonts */
 	p.subheading {

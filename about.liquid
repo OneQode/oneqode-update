@@ -2,14 +2,35 @@
 layout: page.liquid
 metaTitle: OneQode • About Our Business
 metaDescription: OneQode is an Australian telecommunications carrier on a mission to bring Australia to the top 10 for internet speeds.
-includesWebp: true
 changefreq: monthly
 priority: 0.9
 pageSupertitle: About Us
-pageTitle: New tech<mark class="dot">,</mark> <br class="responsive">new ideas
-pageSubtitle: On a mission to put Australia in <br class="responsive">the top 10 for internet speeds.
+pageTitle: Building Australia's <br class="responsive">future internet
+pageSubtitle: We're on a mission to put Australia in <br class="responsive">the top 10 for internet speeds.
 ---
 <style>
+	/* 4K Background Image */
+	@media (min-width: 1920px) {
+		.no-webp .hero {
+			background: radial-gradient(circle at bottom,rgba(0,39,53,0.6) 0%,rgba(0,0,0,0.6) 100%), url("/img/bg/home-4k.jpg") 60%;
+			background-size: cover;
+		}
+		.webp .hero {
+			background: radial-gradient(circle at bottom,rgba(0,39,53,0.6) 0%,rgba(0,0,0,0.6) 100%), url("/img/bg/home-4k.webp") 60%;
+			background-size: cover;
+		}
+	}
+	/* Regular Background Image */
+	@media (max-width: 1920px) {
+		.no-webp .hero {
+			background: radial-gradient(circle at bottom,rgba(0,39,53,0.6) 0%,rgba(0,0,0,0.6) 100%), url("/img/bg/home-hd.jpg") 60%;
+			background-size: cover;
+		}
+		.webp .hero {
+			background: radial-gradient(circle at bottom,rgba(0,39,53,0.6) 0%,rgba(0,0,0,0.6) 100%), url("/img/bg/home-hd.webp") 60%;
+			background-size: cover;
+		}
+	}
 	.profile picture img {
 		border-radius: 50%;
 		display: block;
