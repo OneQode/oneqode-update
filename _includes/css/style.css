@@ -86,6 +86,9 @@ footer, main {
 	}
 }
 /* Helpers */
+.mt-0 {
+	margin-top: 0;
+}
 .mt-1 {
 	margin-top: 1rem;
 }
@@ -98,6 +101,9 @@ footer, main {
 .mt-8 {
 	margin-top: 8rem;
 }
+.mb-0 {
+	margin-bottom: 0;
+}
 .mb-2 {
 	margin-bottom: 2rem;
 }
@@ -105,16 +111,20 @@ footer, main {
 	margin-bottom: 4rem;
 }
 .my-1 {
-	margin: 1rem 0;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 .my-2 {
-	margin: 2rem 0;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 }
 .my-4 {
-	margin: 4rem 0;
+	margin-top: 4rem;
+	margin-bottom: 4rem;
 }
 .my-8 {
-	margin: 8rem 0;
+	margin-top: 8rem;
+	margin-bottom: 8rem;
 }
 .p-2 {
 	padding: 2rem;
@@ -141,16 +151,20 @@ footer, main {
 	padding-bottom: 8rem;
 }
 .py-1 {
-	padding: 1rem 0;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 }
 .py-2 {
-	padding: 2rem 0;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 }
 .py-4 {
-	padding: 4rem 0;
+	padding-top: 4rem;
+	padding-bottom: 4rem;
 }
 .py-8 {
-	padding: 8rem 0;
+	padding-top: 8rem;
+	padding-bottom: 8rem;
 }
 
 /* Images */
@@ -220,7 +234,7 @@ nav a {
 	text-decoration: none;
 	transition: all 0.2s;
 }
-/* Section Switcher  */
+/* Section Switcher */
 nav#switcher {
 	margin-right: auto;
 	margin-left: 0.5rem;
@@ -418,7 +432,7 @@ body {
 }
 
 /* Headings */
-h1, h2, h3, h4, h5, h6, p.subheading, .stat span {
+h1, h2, h3, h4, h5, h6, p.subheading, .stat span, summary, p.price {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 600;
 	line-height: 1.1;
@@ -654,6 +668,7 @@ CONTENT
 	visibility: visible;
 	transform: translateY(0);
 }
+/* Big text links - careers and media */
 .linked {
 	padding-top: 0;
 }
@@ -693,6 +708,7 @@ CONTENT
 .linked a:hover p {
 	color: #999;
 }
+/* The standard linked box */
 .box {
 	border-radius: 10px;
 }
@@ -738,6 +754,7 @@ CONTENT
 .box.glowing:hover p {
 	color: #fff;
 }
+/* Press page */
 .press-info, .applicant-info {
 	background: rgba(0,0,0,0.2);
 	border: 1px solid #142a31;
@@ -749,6 +766,10 @@ CONTENT
 	text-transform: uppercase;
 	margin-bottom: 1rem;
 }
+a.rss-link svg {
+	max-width: 0.5em;
+}
+/* Statistics */
 .stat {
 	text-align: center;
 }
@@ -757,8 +778,81 @@ CONTENT
 	font-size: 4rem;
 	margin-bottom: 0;
 }
-a.rss-link svg {
-	max-width: 0.5em;
+/* FAQs */
+summary {
+	font-size: 1.5rem;
+	list-style: none;
+	margin-top: 2rem;
+	color: #fff;
+	padding: 0.5rem;
+	transition: color 0.2s;
+}
+summary::-webkit-details-marker {
+	display: none;
+}
+details summary::before { 
+	content: url("/img/ico/plus-circle-fill.svg");
+	margin-right: 0.5rem;
+}
+details[open] summary {
+	color: #00b0f0;
+}
+details[open] summary::before { 
+	content: url("/img/ico/dash-circle-fill.svg");
+}
+details[open] p:first-child {
+	margin-top: 0;
+}
+/* Ticked list */
+ul.ticks {
+	list-style: none;
+	padding: 0;
+}
+ul.ticks li:before {
+	content: '';
+	display: inline-block;
+	height: 1rem;
+	width: 1rem;
+	background-image: url("/img/ico/check2.svg");
+	margin-right: 0.5rem;
+}
+/* Pricing Tables */
+.pricing .box h3 {
+	color: #fff;
+	text-transform: none;
+	font-size: 2.25rem !important;
+}
+.pricing .subheading {
+	font-size: 1.5rem;
+	color: #e0e0e0;
+}
+.pricing .price {
+	font-size: 3.5rem;
+	margin-bottom: 0;
+}
+.pricing .discount, .box.glowing:hover .discount {
+	font-size: 1rem;
+	margin: 0;
+	color: #f00;
+	text-decoration: line-through;
+	text-decoration-color: #a50000;
+}
+.pricing .speed {
+	margin-top: 1rem;
+	margin-bottom: 0;
+	text-transform: uppercase;
+}
+.pricing .speed span {
+	font-size: 1.1rem;
+}
+.pricing img {
+	width: 1.6rem;
+	vertical-align: text-bottom;
+	display: inline;
+}
+.pricing .price span {
+	font-size: 1.5rem;
+	color: #41768b;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -914,7 +1008,6 @@ RESPONSIVE OVERRIDES
 	}
 	section.hero {
 		text-align: center;
-		padding-top: 2.5rem;
 	}
 	footer, footer ul, footer .credits {
 		text-align: center !important;
@@ -931,5 +1024,11 @@ RESPONSIVE OVERRIDES
 	}
 	.brands a img {
 		opacity: 1;
+	}
+}
+/* Padding at top on small devices */
+@media screen and (max-width: 22em) {
+	section.hero {
+		padding-top: 2.5rem;
 	}
 }

@@ -1,11 +1,11 @@
 ---
 
 section: home
-metaTitle: OneQode • Telco Done Differently
-metaDescription: OneQode is a Queensland-based telecommunications carrier on a mission to bring Australia into the top 10 for internet speeds
+metaTitle: OneQode • Lightning-Fast Australian Broadband Internet
+metaDescription: The Aussie network of the future, on a mission to bring Australia into the top 10 for internet speeds. Get lightning-fast internet today.
 changefreq: monthly
-ogImage: og-image.jpg
 priority: 1
+ogImage: og-image.jpg
 pageTitle: Lightning-fast internet
 pageSubtitle: Australia’s next-gen internet service provider.
 availabilityChecker: true
@@ -96,6 +96,41 @@ availabilityChecker: true
 		.box.glowing p {
 			margin: 0;
 		}
+		/* Stars */
+		.star-holder {
+			display: none;
+		}
+		@media screen and (min-width: 48em) {
+			section.hero {
+				background: radial-gradient(circle at bottom,rgba(0,39,53,0.6) 0,#000 100%) !important;
+			}
+			.star-holder {
+				display: block;
+				position: absolute;
+				overflow: hidden;
+				top: 0;
+				left: 0;
+				width: 100%;
+				z-index: -1;
+			}
+		}
+		/* Hide stars for those who hate motion */
+		@media (prefers-reduced-motion) {
+			.star-holder {
+				display: none;
+			}
+			.hero {
+				background-position: bottom center;
+			}
+			.no-webp .hero {
+				background: url("/img/bg/light-speed-blur.jpg") no-repeat bottom center !important;
+				background-size: cover !important;
+			}
+			.webp .hero {
+				background: url("/img/bg/light-speed-blur.webp") no-repeat bottom center !important;
+				background-size: cover !important;
+			}
+		}
 	</style>
 	<!-- Page Content -->
 	<section class="hero full-height">
@@ -107,6 +142,23 @@ availabilityChecker: true
 					{% include _address-checker-home.liquid %}
 				</div>
 			</div> 
+		</div>
+		<div class="star-holder">
+			<!--
+				Starfield Map Credit:
+				https://github.com/Ashikpaul/Starfield-effect
+
+				Copyright (c) 2020 Ashik Paul
+				
+				MIT License
+
+				Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+				The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+				THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+			-->
+			<canvas id="starfield"></canvas>
 		</div>
 	</section>
 	<section class="blue py-2">
@@ -227,4 +279,72 @@ availabilityChecker: true
 			</div>
 		</div>
 	</section>
+<script>
+	// Only run on desktop
+	if (window.matchMedia( "(min-width: 48em)" )) {
+		const canvas = document.getElementById('starfield');
+		const c = canvas.getContext('2d');
+		canvas.width = window.innerWidth; //screen width
+		canvas.height = window.outerHeight; //screen height inc download bar
+
+		class Star {
+			constructor() {
+				//initializing
+				this.x = Math.random() * canvas.width - canvas.width / 2; //random x
+				this.y = Math.random() * canvas.height - canvas.height / 2; //random y
+				this.px, this.py;
+				this.z = Math.random() * 4; //random z    
+			}
+
+			update() {
+				//stores previous x, y and z and generates new coordinates    
+				this.px = this.x;
+				this.py = this.y;
+				this.z += speed;
+				this.x += this.x * (speed * 0.2) * this.z;
+				this.y += this.y * (speed * 0.2) * this.z;
+				if (this.x > canvas.width / 2 + 50 || this.x < -canvas.width / 2 - 50 || this.y > canvas.height / 2 + 50 || this.y < -canvas.height / 2 - 50) {
+					this.x = Math.random() * canvas.width - canvas.width / 2;
+					this.y = Math.random() * canvas.height - canvas.height / 2;
+					this.px = this.x;
+					this.py = this.y;
+					this.z = 0;
+				}
+			}
+
+			//draws line from x,y to px,py
+			show() {
+				c.lineWidth = this.z;
+				c.beginPath();
+				c.moveTo(this.x, this.y);
+				c.lineTo(this.px, this.py);
+				c.stroke();
+			}
+		}
+
+		let speed = 0.04;
+		let stars = [];
+
+		//create 1500 stars (objects)
+		for (let i = 0; i < 1500; i++) stars.push(new Star());
+
+		c.fillStyle = 'rgba(0, 0, 0, 0.1)';
+		c.strokeStyle = 'rgb(0, 39, 53)';
+
+		c.translate(canvas.width / 2, canvas.height / 2);
+
+		function draw() {
+			//create rectangle
+			c.fillRect(-canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height);
+			for (let s of stars) {
+				s.update();
+				s.show();
+			}
+			//infinte call to draw
+			requestAnimationFrame(draw);
+		}
+
+		draw();
+	}
+</script>
 {% include _footer.liquid %}

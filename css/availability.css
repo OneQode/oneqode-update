@@ -39,7 +39,7 @@
   flex: 1;
   outline: none;
   border: none;
-  color: inherit;
+  color: #000;
   padding-left: 1rem;
   border-radius: 11px;
 }
@@ -186,7 +186,7 @@
   }
 
   .ccc-search-input input {
-    font-size: large;
+    font-size: 1.75rem;
     padding-left: 50px;
   }
 }
