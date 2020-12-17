@@ -811,48 +811,128 @@ ul.ticks {
 ul.ticks li:before {
 	content: '';
 	display: inline-block;
-	height: 1rem;
-	width: 1rem;
-	background-image: url("/img/ico/check2.svg");
+	position: relative;
+	height: 1.4rem;
+	width: 1.4rem;
+	background: url("/img/ico/check2.svg") center / cover no-repeat;
 	margin-right: 0.5rem;
+	top: 0.3rem;
 }
-/* Pricing Tables */
+ul.ticks.large {
+	font-size: 1.75rem;
+}
+ul.ticks.large li:before {
+	height: 1.75rem;
+	width: 1.75rem;
+	top: 0.4rem;
+}
+/* Pricing */
+.toggler {
+	background-color: rgba(255, 255, 255, .1);
+	border-radius: 9999px;
+	display: inline-flex;
+	padding: 5px;
+	font-size: 20px;
+	color: #fff;
+}
+.toggler input[type="radio"]:checked+label,
+.toggler input[type="radio"]:focus+label {
+	background-color: #00b0f0;
+	color: #fff;
+}
+.toggler input[type="radio"] {
+	opacity: 0;
+	position: fixed;
+	width: 0;
+}
+.toggler label {
+	display: inline-block;
+	border-radius: 9999px;
+	cursor: pointer;
+	padding: 10px 15px;
+}
+.pricing .box {
+	align-items: normal;
+}
+.pricing .box.featured {
+	border: 1px solid #4f94cc;
+}
+.pricing .box.featured:hover {
+	border: 1px solid #00b0f0;
+}
 .pricing .box h3 {
 	color: #fff;
 	text-transform: none;
 	font-size: 2.25rem !important;
 }
-.pricing .subheading {
+.pricing .subheading, .pricing .box.glowing:hover .subheading {
 	font-size: 1.5rem;
 	color: #e0e0e0;
+	text-align: center;
+	margin-bottom: 1.5rem;
 }
-.pricing .price {
-	font-size: 3.5rem;
-	margin-bottom: 0;
+.pricing p {
+	color: #999;
+	text-align: left;
+	margin: 0.5rem 0;
 }
-.pricing .discount, .box.glowing:hover .discount {
+.pricing .box.glowing:hover p {
+	color: #e0e0e0;
+}
+.pricing p > span {
+	float: right;
+	color: #fff;
+	font-weight: 600;
+}
+.pricing p > span > span {
 	font-size: 1rem;
-	margin: 0;
-	color: #f00;
-	text-decoration: line-through;
-	text-decoration-color: #a50000;
 }
-.pricing .speed {
-	margin-top: 1rem;
-	margin-bottom: 0;
-	text-transform: uppercase;
+.pricing .speed:before {
+	content: '';
+	position: absolute;
+	width: 1.8rem;
+	height: 1.8rem;
+	background: url("/img/ico/arrow-down-short.svg") no-repeat;
+	background-size: cover;
+	margin-left: -1.7rem;
+	margin-top: 0.1rem;
+}
+.pricing .speed.upload:before {
+	background: url("/img/ico/arrow-up-short.svg") no-repeat;
+	background-size: cover;
+}
+.pricing .data-cap:before {
+	content: '';
+	position: absolute;
+	width: 1.4rem;
+	height: 1.4rem;
+	background: url("/img/ico/sim.svg") no-repeat;
+	background-size: cover;
+	margin-left: -1.7rem;
+	margin-top: 0.3rem;
 }
 .pricing .speed span {
 	font-size: 1.1rem;
+	text-transform: uppercase;
 }
-.pricing img {
-	width: 1.6rem;
-	vertical-align: text-bottom;
-	display: inline;
+.pricing .price {
+	text-align: center;
+	color: #fff;
+	font-size: 3.5rem;
+	margin-top: 1.5rem;
+	margin-bottom: 0;
 }
 .pricing .price span {
+	float: none;
 	font-size: 1.5rem;
 	color: #41768b;
+}
+.pricing .min, .pricing .box.glowing:hover .min {
+	text-align: center;
+	font-size: 1rem;
+}
+.cis {
+	font-size: 1rem;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - -

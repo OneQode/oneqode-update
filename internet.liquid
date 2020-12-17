@@ -10,8 +10,8 @@ pageSubtitle: Fast speeds, stellar service and affordable pricing. Everything yo
 availabilityChecker: true
 ---
 {% include _header.liquid %}
-<style>
-	.hero {
+		<style>
+			.hero {
 				background-position: bottom center;
 				background-blend-mode: lighten;
 			}
@@ -30,218 +30,176 @@ availabilityChecker: true
 					background-size: contain !important;
 				}
 			}
-			/* Pricing */
-			.toggler {
-				background-color: rgba(255, 255, 255, .1);
-				border-radius: 9999px;
-				display: inline-flex;
-				padding: 5px;
-				font-size: 20px;
-				color: #fff;
-			}
-			.toggler input[type="radio"]:checked+label,
-			.toggler input[type="radio"]:focus+label {
-				background-color: #00b0f0;
-				color: #fff;
-			}
-			.toggler input[type="radio"] {
-				opacity: 0;
-				position: fixed;
-				width: 0;
-			}
-			.toggler label {
-				display: inline-block;
-				border-radius: 9999px;
-				cursor: pointer;
-				padding: 10px 15px;
-			}
 		</style>
-<script>
-	// Pricing Toggle
+		<script>
+			// Pricing Toggle
 
-		function toggler() {
-			var content12m = document.getElementById("12m-content");
-			var contentmtm = document.getElementById("mtm-content");
-			if(document.getElementById("12m").checked) {
-				content12m.style.display = "flex";
-				contentmtm.style.display = "none";
-			} else {
-				content12m.style.display = "none";
-				contentmtm.style.display = "flex";
-			}
-		}
-		</script>
-<section class="hero">
-	<div class="container">
-		<div class="row middle-xs">
-			<div class="col-md-8 col-md-offset-2 text-center">
-				<p class="superheading">{{ pageSupertitle }}</p>
-				<h1>{{ pageTitle }}<mark class="dot">.</mark></h1>
-				{% include _address-checker-home.liquid %}
+				function toggler() {
+					var content12m = document.getElementById("12m-content");
+					var contentmtm = document.getElementById("mtm-content");
+					if(document.getElementById("12m").checked) {
+						content12m.style.display = "flex";
+						contentmtm.style.display = "none";
+					} else {
+						content12m.style.display = "none";
+						contentmtm.style.display = "flex";
+					}
+				}
+				</script>
+		<section class="hero">
+			<div class="container">
+				<div class="row middle-xs">
+					<div class="col-md-8 col-md-offset-2 text-center">
+						<p class="superheading">{{ pageSupertitle }}</p>
+						<h1>{{ pageTitle }}<mark class="dot">.</mark></h1>
+						{% include _address-checker-home.liquid %}
+					</div>
+				</div>
 			</div>
-		</div>
-	</div>
-</section>
-<section class="blue py-2">
-	<div class="container">
-		<div class="col-md-10 col-md-offset-1 text-center">No surprise fees ▪ No data caps ▪ No slowing you down</div>
-	</div>
-</section>
-<section class="black-to-mid text-center py-4">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm col-md-8 col-md-offset-2">
-				<p class="superheading">Rolling out to select regions</p>
-				<h2>Fast, no-nonsense <mark>home internet plans</mark><mark class="dot">.</mark></h2>
-				<p>Our residential plans are designed for homes of all shapes and sizes. Whether it’s a share house, single unit or family home – we’ve got something to suit you. Our most popular plans are listed below, with a contract and ‘no-lock-in contract’ option.</p>
+		</section>
+		<section class="blue py-2">
+			<div class="container">
+				<div class="col-md-10 col-md-offset-1 text-center">No surprise fees ▪ No data caps ▪ No slowing you down</div>
 			</div>
-			<div class="col-sm col-md-6 col-md-offset-3">
-				<h3 class="mt-4">All plans feature:</h3>
-				<ul class="ticks larger">
-					<li>Zero data limits</li>
-					<li>Upload as fast as you download</li>
-					<li>Snappy low-latency connection</li>
-				</ul>
+		</section>
+		<section class="black-to-mid text-center py-8">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<p class="superheading">Available in select regions</p>
+						<h2>Fast, no-nonsense <mark>home internet plans</mark><mark class="dot">.</mark></h2>
+					</div>
+					<div class="col-xs-12 col-md-6 col-md-offset-3">
+						<h3 class="mt-2">All plans include:</h3>
+						<ul class="ticks large">
+							<li>Snappy low-latency connection</li>
+							<li>Zero data limits</li>
+							<li>Upload as fast as you download</li>
+						</ul>
+					</div>
+				</div>
+				<div class="row toggler mt-8">
+					<input type="radio" id="12m" name="contractlength" onchange="toggler()" checked="">
+					<label for="12m">12 Month Plans</label>
+					<input id="mtm" type="radio" name="contractlength" onchange="toggler()">
+					<label for="mtm">Month-to-Month Plans</label>
+				</div>
+				<!-- Start 12 Month Plans -->
+				<div class="row pricing mt-2" id="12m-content">
+					<div class="col-xs col-sm-6 col-lg-4 my-2">
+						<a href="#" class="box glowing">
+							<h3 class="mb-0">Fine</h3>
+							<p class="subheading">for light use</p>
+							<p>Download speed <span class="speed">10<span> Mbps</span></span></p>
+							<p>Upload speed <span class="speed upload">10<span> Mbps</span></span></p>
+							<p>Modem included <span>None</span></p>
+							<p>Installation fee <span>$150</span></p>
+							<p class="price">$40<span>/mo</span></p>
+							<p class="min">Total minimum cost: $999</p>
+						</a>
+					</div>
+					<div class="col-xs col-sm-6 col-lg-4 my-2">
+						<a href="#" class="box glowing featured">
+							<h3 class="mb-0">Good</h3>
+							<p class="subheading">for most households</p>
+							<p>Download speed <span class="speed">50<span> Mbps</span></span></p>
+							<p>Upload speed <span class="speed upload">50<span> Mbps</span></span></p>
+							<p>Modem included <span>None</span></p>
+							<p>Installation fee <span>$75</span></p>
+							<p class="price">$65<span>/mo</span></p>
+							<p class="min">Total minimum cost: $999</p>
+						</a>
+					</div>
+					<div class="col-xs col-sm-6 col-lg-4 my-2">
+						<a href="#" class="box glowing">
+							<h3 class="mb-0">Great</h3>
+							<p class="subheading">for internet lovers</p>
+							<p>Download speed <span class="speed">100<span> Mbps</span></span></p>
+							<p>Upload speed <span class="speed upload">100<span> Mbps</span></span></p>
+							<p>Modem included <span>None</span></p>
+							<p>Installation fee <span>$75</span></p>
+							<p class="price">$85<span>/mo</span></p>
+							<p class="min">Total minimum cost: $999</p>
+						</a>
+					</div>
+				</div>
+				<!-- End 12 Month Plans -->
+				<!-- Start Month to Month Plans -->
+				<div class="row pricing mt-2" id="mtm-content" style="display: none;">
+					<div class="col-xs col-sm-6 col-lg-4 my-2">
+						<a href="#" class="box glowing">
+							<h3 class="mb-0">Fine</h3>
+							<p class="subheading">for light use</p>
+							<p>Download speed <span class="speed">10<span> Mbps</span></span></p>
+							<p>Upload speed <span class="speed upload">10<span> Mbps</span></span></p>
+							<p>Modem included <span>None</span></p>
+							<p>Installation fee <span>$225</span></p>
+							<p class="price">$40<span>/mo</span></p>
+							<p class="min">Total minimum cost: $999</p>
+						</a>
+					</div>
+					<div class="col-xs col-sm-6 col-lg-4 my-2">
+						<a href="#" class="box glowing featured">
+							<h3 class="mb-0">Good</h3>
+							<p class="subheading">for most households</p>
+							<p>Download speed <span class="speed">50<span> Mbps</span></span></p>
+							<p>Upload speed <span class="speed upload">50<span> Mbps</span></span></p>
+							<p>Modem included <span>None</span></p>
+							<p>Installation fee <span>$225</span></p>
+							<p class="price">$65<span>/mo</span></p>
+							<p class="min">Total minimum cost: $999</p>
+						</a>
+					</div>
+					<div class="col-xs col-sm-6 col-lg-4 my-2">
+						<a href="#" class="box glowing">
+							<h3 class="mb-0">Great</h3>
+							<p class="subheading">for internet lovers</p>
+							<p>Download speed <span class="speed">100<span> Mbps</span></span></p>
+							<p>Upload speed <span class="speed upload">100<span> Mbps</span></span></p>
+							<p>Modem included <span>None</span></p>
+							<p>Installation fee <span>$225</span></p>
+							<p class="price">$85<span>/mo</span></p>
+							<p class="min">Total minimum cost: $999</p>
+						</a>
+					</div>
+				</div>
+				<!-- End Month to Month Plans -->
+				<p class="mt-2 cis">Have a squizz at the <a href="#">Critical Information Summary</a></p>
 			</div>
-		</div>
-		<div class="row toggler mt-4">
-			<input type="radio" id="12m" name="contractlength" onchange="toggler()" checked="">
-			<label for="12m">12 Month Plans</label>
-			<input id="mtm" type="radio" name="contractlength" onchange="toggler()">
-			<label for="mtm">Month-to-Month Plans</label>
-		</div>
-		<!-- Start 12 Month Plans -->
-		<div class="row pricing mt-2" id="12m-content">
-			<div class="col-xs col-sm-6 col-md-4 my-2">
-				<a href="#" class="box glowing">
-					<h3 class="mb-0">Basic</h3>
-					<p class="subheading">for light use</p>
-					<p class="price">$35<span>/mo</span></p>
-					<p class="discount">Normally $40.00</p>
-					<p class="speed">
-						<img src="/img/ico/arrow-down-up.svg" aria-label="Download and upload speed:"> 10 <span>Mbps</span>
-					</p>
-					<ul>
-						<li>Modem not included</li>
-						<li>12 month plan</li>
-						<li>$150 install fee</li>
-					</ul>
-				</a>
+		</section>
+		<section class="mid-to-footer pb-4">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2">
+						<h2 class="text-center">Frequently asked questions<mark class="dot">.</mark></h2>
+						<details class="mt-4">
+							<summary>Where is the network available?</summary>
+							<p>We’re currently in deploying for early access, so we’re limited to select areas of South East Queensland. Our expansion plan is aggressive and we will prioritise regions, so reach out to us if you want to get us to your place quicker.</p>
+						</details>
+						<details>
+							<summary>How are you different to the NBN?</summary>
+							<p>We use enterprise grade fibre and our own datacentre equipment as the backbone for our network, and then deliver the connection to you over our own independent network. We believe the NBN simply isn’t up to the standard we want for our customers, so we don’t use it at all. This means, from tower to home, we control the network. If you call us, you’re speaking to the people with full control over what goes on.</p>
+						</details>
+						<details>
+							<summary>What goes on my roof?</summary>
+							<p><strong>If we’re connecting you via fixed wireless</strong>, Our technicians install one or two small radios (about the size of a wine bottle) on a single pole that we securely fasten to your roof.</p>
+						</details>
+						<details>
+							<summary>Do I need to talk to the owner of my building?</summary>
+							<p>Every rental is different and this will depend on your individual situation. For a house, we’d recommend you let your real estate agent know you’ll be getting a small piece of equipment installed. If you’re in a unit or townhouse complex, particularly with body corporate, we’ll likely need to talk to them. That’s OK though – we love working with complexes and can usually sort out better internet for everyone.</p>
+						</details>
+						<details>
+							<summary>I'm on a plan. Can I still switch to OneQode?</summary>
+							<p>We get it. Until recently, you didn’t really have any other option other than traditional internet, so getting on a plan didn’t seem like a big deal. While we can’t force your other ISP to let you go for free, we can try and make things work so you can come with us soon.</p>
+							<p>Let us know if you’re currently locked into a plan and we’ll do our best to make it as simple as possible to switch.</p>
+						</details>
+						<details>
+							<summary>I live in an apartment building. How do I get online?</summary>
+							<p>Often, your apartment building has a limited set of internet options. That’s OK – apartments are actually one of the easiest places for us to install once we’ve got approval.</p>
+							<p>Usually we’ll need to chat to the manager of the apartment and arrange for an install on the roof. Feel free to get in touch with us and we can go from there.</p>
+						</details>
+					</div>
+				</div>
 			</div>
-			<div class="col-xs col-sm-6 col-md-4 my-2">
-				<a href="#" class="box glowing">
-					<h3 class="mb-0">Faster</h3>
-					<p class="subheading">for most households</p>
-					<p class="price">$50<span>/mo</span></p>
-					<p class="discount">Normally $65.00</p>
-					<p class="speed">
-						<img src="/img/ico/arrow-down-up.svg" aria-label="Download and upload speed:"> 50 <span>Mbps</span>
-					</p>
-					<ul>
-						<li>Modem not included</li>
-						<li>12 month plan</li>
-						<li>$75 install fee</li>
-					</ul>
-				</a>
-			</div>
-			<div class="col-xs col-sm-6 col-md-4 my-2">
-				<a href="#" class="box glowing">
-					<h3 class="mb-0">Fastest</h3>
-					<p class="subheading">for internet lovers</p>
-					<p class="price">$70<span>/mo</span></p>
-					<p class="discount">Normally $85.00</p>
-					<p class="speed">
-						<img src="/img/ico/arrow-down-up.svg" aria-label="Download and upload speed:"> 100 <span>Mbps</span></p>
-					<ul>
-						<li>Modem not included</li>
-						<li>12 month plan</li>
-						<li>$75 install fee</li>
-					</ul>
-				</a>
-			</div>
-		</div>
-		<!-- End 12 Month Plans -->
-		<!-- Start Month to Month Plans -->
-		<div class="row pricing mt-2" id="mtm-content" style="display: none;">
-			<div class="col-xs col-sm-6 col-md-4 my-2">
-				<a href="#" class="box glowing">
-					<h3 class="mb-0">Basic</h3>
-					<p class="subheading">for light use</p>
-					<p class="price">$35<span>/mo</span></p>
-					<p class="discount">Normally $40.00</p>
-					<ul>
-						<li>10/10 Mbps</li>
-						<li>Modem not included</li>
-						<li>No lock-in contract</li>
-						<li>$150 install fee <span class="discount">(normally $75)</span></li>
-					</ul>
-				</a>
-			</div>
-			<div class="col-xs col-sm-6 col-md-4 my-2">
-				<a href="#" class="box glowing">
-					<h3 class="mb-0">Faster</h3>
-					<p class="subheading">for most households</p>
-					<p class="price">$50<span>/mo</span></p>
-					<p class="discount">Normally $65.00</p>
-					<ul>
-						<li>50/50 Mbps</li>
-						<li>Modem not included</li>
-						<li>No lock-in contract</li>
-						<li>$75 install fee <span class="discount">(normally $225)</span></li>
-					</ul>
-				</a>
-			</div>
-			<div class="col-xs col-sm-6 col-md-4 my-2">
-				<a href="#" class="box glowing">
-					<h3 class="mb-0">Fastest</h3>
-					<p class="subheading">for internet lovers</p>
-					<p class="price">$70<span>/mo</span></p>
-					<p class="discount">Normally $85.00</p>
-					<ul>
-						<li>100/100 Mbps</li>
-						<li>Modem not included</li>
-						<li>No lock-in contract</li>
-						<li>$75 install fee <span class="discount">(normally $225)</span></li>
-					</ul>
-				</a>
-			</div>
-		</div>
-		<!-- End Month to Month Plans -->
-	</div>
-</section>
-<section class="mid-to-footer py-4">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-8 col-sm-offset-2">
-				<h2 class="text-center">Frequently asked questions<mark class="dot">.</mark></h2>
-				<details class="mt-4">
-					<summary>Where is the network available?</summary>
-					<p>We’re currently in deploying for early access, so we’re limited to select areas of South East Queensland. Our expansion plan is aggressive and we will prioritise regions, so reach out to us if you want to get us to your place quicker.</p>
-				</details>
-				<details>
-					<summary>How are you different to the NBN?</summary>
-					<p>We use enterprise grade fibre and our own datacentre equipment as the backbone for our network, and then deliver the connection to you over our own independent network. We believe the NBN simply isn’t up to the standard we want for our customers, so we don’t use it at all. This means, from tower to home, we control the network. If you call us, you’re speaking to the people with full control over what goes on.</p>
-				</details>
-				<details>
-					<summary>What goes on my roof?</summary>
-					<p><strong>If we’re connecting you via fixed wireless</strong>, Our technicians install one or two small radios (about the size of a wine bottle) on a single pole that we securely fasten to your roof.</p>
-				</details>
-				<details>
-					<summary>Do I need to talk to the owner of my building?</summary>
-					<p>Every rental is different and this will depend on your individual situation. For a house, we’d recommend you let your real estate agent know you’ll be getting a small piece of equipment installed. If you’re in a unit or townhouse complex, particularly with body corporate, we’ll likely need to talk to them. That’s OK though – we love working with complexes and can usually sort out better internet for everyone.</p>
-				</details>
-				<details>
-					<summary>I'm on a plan. Can I still switch to OneQode?</summary>
-					<p>We get it. Until recently, you didn’t really have any other option other than traditional internet, so getting on a plan didn’t seem like a big deal. While we can’t force your other ISP to let you go for free, we can try and make things work so you can come with us soon.</p>
-					<p>Let us know if you’re currently locked into a plan and we’ll do our best to make it as simple as possible to switch.</p>
-				</details>
-				<details>
-					<summary>I live in an apartment building. How do I get online?</summary>
-					<p>Often, your apartment building has a limited set of internet options. That’s OK – apartments are actually one of the easiest places for us to install once we’ve got approval.</p>
-					<p>Usually we’ll need to chat to the manager of the apartment and arrange for an install on the roof. Feel free to get in touch with us and we can go from there.</p>
-				</details>
-			</div>
-		</div>
-	</div>
-</section>
+		</section>
 {% include _footer.liquid %}

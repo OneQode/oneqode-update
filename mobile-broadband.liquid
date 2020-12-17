@@ -6,73 +6,25 @@ changefreq: yearly
 priority: 0.5
 ogImage: og-image.jpg
 pageSupertitle: Mobile Broadband
-pageTitle: <mark>4G</mark> home broadband
-pageSubtitle: Plug and play mobile broadband.
+pageTitle: <mark>4G</mark> Home Broadband
+pageSubtitle: Plug and play mobile internet.
 availabilityChecker: true
 
 ---
 {% include _header.liquid %}
 		<style>
 			.hero {
-				background-position: bottom center;
-				background-blend-mode: lighten;
+			background-position: bottom center;
 			}
 			.no-webp .hero {
-				background: radial-gradient(circle at bottom,#002735 0%,#000000 100%), url("/img/bg/oneqode-box-icons-flying.jpg") no-repeat bottom center;
-				background-size: initial;
+				background: url("/img/bg/light-speed-blur.jpg") no-repeat bottom center;
+				background-size: cover;
 			}
 			.webp .hero {
 				background: url("/img/bg/light-speed-blur.webp") no-repeat bottom center;
 				background-size: cover;
-				background: radial-gradient(circle at bottom,#002735 0%,#000000 100%), url("/img/bg/oneqode-box-icons-flying.webp") no-repeat bottom center;
-				background-size: initial;
-			}
-			@media screen and (max-width: 64em) {
-				.hero {
-					background-size: contain !important;
-				}
-			}
-			/* Pricing */
-			.toggler {
-				background-color: rgba(255, 255, 255, .1);
-				border-radius: 9999px;
-				display: inline-flex;
-				padding: 5px;
-				font-size: 20px;
-				color: #fff;
-			}
-			.toggler input[type="radio"]:checked+label,
-			.toggler input[type="radio"]:focus+label {
-				background-color: #00b0f0;
-				color: #fff;
-			}
-			.toggler input[type="radio"] {
-				opacity: 0;
-				position: fixed;
-				width: 0;
-			}
-			.toggler label {
-				display: inline-block;
-				border-radius: 9999px;
-				cursor: pointer;
-				padding: 10px 15px;
 			}
 		</style>
-		<script>
-			// Pricing Toggle
-
-		function toggler() {
-			var content12m = document.getElementById("12m-content");
-			var contentmtm = document.getElementById("mtm-content");
-			if(document.getElementById("12m").checked) {
-				content12m.style.display = "flex";
-				contentmtm.style.display = "none";
-			} else {
-				content12m.style.display = "none";
-				contentmtm.style.display = "flex";
-			}
-		}
-		</script>
 		<section class="hero">
 			<div class="container">
 				<div class="row middle-xs">
@@ -89,110 +41,53 @@ availabilityChecker: true
 				<div class="col-md-10 col-md-offset-1 text-center">No installation, no phone line – just superfast internet wherever there’s mobile reception.</div>
 			</div>
 		</section>
-		<section class="black-to-mid text-center py-4">
+		<section class="black-to-mid text-center py-8">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm col-md-8 col-md-offset-2">
-						<p class="superheading">Rolling out to select regions</p>
-						<h2>Fast, no-nonsense <mark>home internet</mark><mark class="dot">.</mark></h2>
-						<p>Our residential plans are designed for homes of all shapes and sizes. Whether it’s a share house, single unit or family home – we’ve got something to suit you. Our most popular plans are listed below, with a contract and ‘no-lock-in contract’ option.</p>
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<h2>Get connected <br class="responsive"><mark>wherever there's 4G</mark><mark class="dot">.</mark></h2>
 					</div>
-				</div>
-				<div class="row toggler mt-4">
-					<input type="radio" id="12m" name="contractlength" onchange="toggler()" checked="">
-					<label for="12m">12 Month Plans</label>
-					<input id="mtm" type="radio" name="contractlength" onchange="toggler()">
-					<label for="mtm">Month-to-Month Plans</label>
-				</div>
-				<!-- Start 12 Month Plans -->
-				<div class="row pricing mt-2" id="12m-content">
-					<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-4 p-2">
-						<h3>Basic</h3>
-						<p class="subheading">for light use</p>
-						<p class="price">$35<span>/mo</span></p>
-						<p class="discount"><strike>Normally $40.00</strike></p>
-						<ul>
-							<li>10/10 Mbps</li>
-							<li>No Data Limts - <strong>EVER</strong></li>
-							<li>Modem not included</li>
-							<li>12 month plan</li>
-							<li>$150 install fee</li>
-						</ul>
-					</div>
-					<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-4 p-2">
-						<h3>Faster</h3>
-						<p class="subheading">for most households</p>
-						<p class="price">$50<span>/mo</span></p>
-						<p class="discount"><strike>Normally $65.00</strike></p>
-						<ul>
-							<li>50/50 Mbps</li>
-							<li>No Data Limts - <strong>EVER</strong></li>
-							<li>Modem not included</li>
-							<li>12 month plan</li>
-							<li>$75 install fee</li>
-						</ul>
-					</div>
-					<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-4 p-2">
-						<h3>Fastest</h3>
-						<p class="subheading">for internet lovers</p>
-						<p class="price">$70<span>/mo</span></p>
-						<p class="discount"><strike>Normally $85.00</strike></p>
-						<ul>
-							<li>100/100 Mbps</li>
-							<li>No Data Limts - <strong>EVER</strong></li>
-							<li>Modem not included</li>
-							<li>12 month plan</li>
-							<li>$75 install fee</li>
+					<div class="col-xs-12 col-md-6 col-md-offset-3">
+						<ul class="ticks large">
+							<li>Incredible data limits</li>
+							<li>Fast 4G+ router</li>
+							<li>Australia-wide connectivity</li>
+							<li>Simple online monitoring</li>
 						</ul>
 					</div>
 				</div>
-				<!-- End 12 Month Plans -->
-				<!-- Start Month to Month Plans -->
-				<div class="row pricing mt-2" id="mtm-content" style="display: none;">
-					<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-4 p-2">
-						<h3>Basic</h3>
-						<p class="subheading">for light use</p>
-						<p class="price">$35<span>/mo</span></p>
-						<p class="discount"><strike>Normally $40.00</strike></p>
-						<ul>
-							<li>10/10 Mbps</li>
-							<li>No Data Limts - <strong>EVER</strong></li>
-							<li>Modem not included</li>
-							<li>No lock-in contract</li>
-							<li>$150 install fee <span class="discount">(normally $75)</span></li>
-						</ul>
+				<div class="row pricing mt-8">
+					<div class="col-xs col-sm-6 col-sm-offset-0 col-lg-4 col-lg-offset-2 my-2">
+						<a href="#" class="box glowing featured">
+							<h3 class="mb-0">Large</h3>
+							<p class="subheading">for standard use</p>
+							<p>Included data <span class="data-cap">200<span> GB</span></span></p>
+							<p>Speed cap <span>Zero</span></p>
+							<p>Price per extra 10GB <span>$12</span></p>
+							<p>Price per GB after 50GB <span>$12</span></p>
+							<p>Setup Cost <span>$189</span></p>
+							<p class="price">$69<span>/mo</span></p>
+							<p class="min">Total minimum cost: $258</p>
+						</a>
 					</div>
-					<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-4 p-2">
-						<h3>Faster</h3>
-						<p class="subheading">for most households</p>
-						<p class="price">$50<span>/mo</span></p>
-						<p class="discount"><strike>Normally $65.00</strike></p>
-						<ul>
-							<li>50/50 Mbps</li>
-							<li>No Data Limts - <strong>EVER</strong></li>
-							<li>Modem not included</li>
-							<li>No lock-in contract</li>
-							<li>$75 install fee <span class="discount">(normally $225)</span></li>
-						</ul>
-					</div>
-					<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-4 p-2">
-						<h3>Fastest</h3>
-						<p class="subheading">for internet lovers</p>
-						<p class="price">$70<span>/mo</span></p>
-						<p class="discount"><strike>Normally $85.00</strike></p>
-						<ul>
-							<li>100/100 Mbps</li>
-							<li>No Data Limts - <strong>EVER</strong></li>
-							<li>Modem not included</li>
-							<li>No lock-in contract</li>
-							<li>$75 install fee <span class="discount">(normally $225)</span></li>
-						</ul>
+					<div class="col-xs col-sm-6 col-lg-4 my-2">
+						<a href="#" class="box glowing">
+							<h3 class="mb-0">Huge</h3>
+							<p class="subheading">for extended use</p>
+							<p>Included data <span class="data-cap">500<span> GB</span></span></p>
+							<p>Speed cap <span>Zero</span></p>
+							<p>Price per extra 10GB <span>$12</span></p>
+							<p>Price per GB after 50GB <span>$12</span></p>
+							<p>Setup Cost <span>$189</span></p>
+							<p class="price">$89<span>/mo</span></p>
+							<p class="min">Total minimum cost: $258</p>
+						</a>
 					</div>
 				</div>
-				<!-- End Month to Month Plans -->
+				<p class="mt-2 cis">Make sure to read the <a href="#">Critical Information Summary</a></p>
 			</div>
 		</section>
-		<section class="mid-to-footer py-4">
+		<section class="mid-to-footer pb-4">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-8 col-sm-offset-2">
@@ -212,16 +107,6 @@ availabilityChecker: true
 						<details>
 							<summary>Do I need to talk to the owner of my building?</summary>
 							<p>Every rental is different and this will depend on your individual situation. For a house, we’d recommend you let your real estate agent know you’ll be getting a small piece of equipment installed. If you’re in a unit or townhouse complex, particularly with body corporate, we’ll likely need to talk to them. That’s OK though – we love working with complexes and can usually sort out better internet for everyone.</p>
-						</details>
-						<details>
-							<summary>I'm on a plan. Can I still switch to OneQode?</summary>
-							<p>We get it. Until recently, you didn’t really have any other option other than traditional internet, so getting on a plan didn’t seem like a big deal. While we can’t force your other ISP to let you go for free, we can try and make things work so you can come with us soon.</p>
-							<p>Let us know if you’re currently locked into a plan and we’ll do our best to make it as simple as possible to switch.</p>
-						</details>
-						<details>
-							<summary>I live in an apartment building. How do I get online?</summary>
-							<p>Often, your apartment building has a limited set of internet options. That’s OK – apartments are actually one of the easiest places for us to install once we’ve got approval.</p>
-							<p>Usually we’ll need to chat to the manager of the apartment and arrange for an install on the roof. Feel free to get in touch with us and we can go from there.</p>
 						</details>
 					</div>
 				</div>
