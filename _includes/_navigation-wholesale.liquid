@@ -1,5 +1,5 @@
 			<nav id="switcher" aria-label="Section Switcher">
-				<a href="/wholesale" id="toggleSection" onclick="sectionSwitcher()" aria-haspopup="true" aria-expanded="false">
+				<a href="/wholesale/" id="toggleSection" onclick="sectionSwitcher()" aria-haspopup="true" aria-expanded="false">
 					<span>for</span> Wholesale
 					<svg width="0.75rem" height="0.75rem" viewBox="0 0 16 16" fill="#fff" xmlns="http://www.w3.org/2000/svg">
 						<path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
@@ -7,7 +7,7 @@
 				</a>
 				<ul>
 					<li><a href="/"><span>for</span> Home</a></li>
-					<li><a href="/business"><span>for</span> Business</a></li>
+					<li><a href="/business/"><span>for</span> Business</a></li>
 				</ul>
 			</nav>
 			<div class="nav-open" onclick="toggleNav()">
@@ -45,7 +45,7 @@
 							</ul>
 						</div>
 					</li>
-					<li><a href="{{ global.login.wholesale }}" style="--index: 1">Log In</a></li>
+					<li><a href="{{ global.login.wholesale }}" class="login" style="--index: 1">Log In</a></li>
 				</ul>
 				<div class="nav-close" onclick="toggleNav()">
 					<img src="/img/ico/close.svg" aria-hidden="true">

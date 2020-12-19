@@ -78,6 +78,9 @@ footer, main {
 	.row {
 		display: block;
 	}
+	.row.mobile-flex {
+		display: flex;
+	}
 	br.responsive {
 		display: none;
 	}
@@ -137,6 +140,9 @@ footer, main {
 }
 .pt-4 {
 	padding-top: 4rem;
+}
+.pt-8 {
+	padding-top: 8rem;
 }
 .pb-0 {
 	padding-bottom: 0;
@@ -280,6 +286,9 @@ nav.main > ul > li {
 nav.main a {
 	padding: 1.5rem;
 }
+nav.main a.login {
+	color: #999;
+}
 nav.main a:hover, nav.main .submenu a:focus {
 	color: #00b0f0;
 }
@@ -287,7 +296,7 @@ nav.main li:last-of-type a {
 	padding-right: 0;
 }
 li.has-submenu > a {
-	padding-right: 0.5rem;
+	padding-right: 0.8rem;
 }
 li.has-submenu.open > a {
 	color: #00b0f0;
@@ -406,6 +415,19 @@ footer .credits a {
 }
 footer .credits a:hover {
 	color: #fff;
+}
+footer .credits.text-left {
+	margin-left: 2.5rem;
+}
+footer .credits.text-left:before {
+	content: '';
+	position: absolute;
+	width: 1.8rem;
+	height: 1.8rem;
+	background: url("/img/ico/kangaroo.svg") no-repeat;
+	background-size: cover;
+	margin-left: -2.5rem;
+	opacity: 0.6;
 }
 footer ul {
 	margin: 0;
@@ -528,26 +550,35 @@ a:hover {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - -
 TABLES
  - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-table {
-	border: 1px solid #00b0f0;
-	border-radius: 10px;
-	border-spacing: 0;
-	display: inline-block;
+.responsive-table {
+	width: 100%;
 	max-width: 100%;
 	overflow-x: auto;
-	padding: 0;
-	white-space: nowrap;
 }
-table td,
-table th,
-table tr {
+table {
+	border: none;
+	border-radius: 10px;
+	border-spacing: 0;
+	width: 100%;
+	overflow-x: auto;
+	padding: 0;
+}
+table td {
 	padding: 1rem 2rem;
+	border-bottom: 1px solid #999;
+	vertical-align: top;
+}
+tbody tr:last-child td {
+	border-bottom: none;
+}
+table td:first-child {
+	padding-left: 0;
+}
+table td:last-child {
+	padding-right: 0;
 }
 table thead {
-	background-color: #00b0f0;
-	border-collapse: collapse;
-	border-radius: 10px;
-	color: #000;
+	font-weight: 600;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -615,7 +646,7 @@ section.hero {
 .mid-to-footer {
 	background: linear-gradient(to bottom, #1c1d22, #0c0c0c);
 }
-.grey, .mid {
+.mid {
 	background: #1c1d22;
 }
 .blue {
@@ -806,25 +837,40 @@ details[open] p:first-child {
 /* Ticked list */
 ul.ticks {
 	list-style: none;
-	padding: 0;
+	padding: 0 0 0 2rem;
+	display: inline-block;
+	line-height: 1.3;
+}
+ul.ticks li {
+	margin-bottom: 0.5rem;
+}
+ul.ticks li:last-of-type {
+	margin-bottom: 0;
 }
 ul.ticks li:before {
 	content: '';
-	display: inline-block;
-	position: relative;
+	position: absolute;
 	height: 1.4rem;
 	width: 1.4rem;
 	background: url("/img/ico/check2.svg") center / cover no-repeat;
-	margin-right: 0.5rem;
-	top: 0.3rem;
+	margin-left: -2rem;
+	margin-top: 0.2rem;
 }
 ul.ticks.large {
 	font-size: 1.75rem;
+	padding-left: 2.5rem;
 }
 ul.ticks.large li:before {
 	height: 1.75rem;
 	width: 1.75rem;
-	top: 0.4rem;
+	margin-top: 0.3rem;
+	margin-left: -2.5rem;
+}
+/* No List*/
+ul.no-style {
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
 }
 /* Pricing */
 .toggler {
@@ -840,9 +886,14 @@ ul.ticks.large li:before {
 	background-color: #00b0f0;
 	color: #fff;
 }
+.toggler input[type=radio]:focus-visible + label {
+	outline-color: -webkit-focus-ring-color;
+	outline-style: auto;
+}
 .toggler input[type="radio"] {
 	opacity: 0;
-	position: fixed;
+	/*position: fixed; Removed because didn't work well on keyboard */
+	position: absolute;
 	width: 0;
 }
 .toggler label {

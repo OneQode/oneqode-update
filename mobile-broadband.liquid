@@ -1,17 +1,15 @@
 ---
 
+layout: page.liquid
 metaTitle: 4G Mobile Broadband for Your Home • OneQode
 metaDescription: No fibre? No worries! Get a 4G home broadband plan from OneQode, Australia's next-gen network. Superfast home wireless broadband, with generous data allowances.
 changefreq: yearly
 priority: 0.5
-ogImage: og-image.jpg
 pageSupertitle: Mobile Broadband
 pageTitle: <mark>4G</mark> Home Broadband
 pageSubtitle: Plug and play mobile internet.
-availabilityChecker: true
 
 ---
-{% include _header.liquid %}
 		<style>
 			.hero {
 			background-position: bottom center;
@@ -25,17 +23,6 @@ availabilityChecker: true
 				background-size: cover;
 			}
 		</style>
-		<section class="hero">
-			<div class="container">
-				<div class="row middle-xs">
-					<div class="col-md-8 col-md-offset-2 text-center">
-						<p class="superheading">{{ pageSupertitle }}</p>
-						<h1>{{ pageTitle }}<mark class="dot">.</mark></h1>
-						<p class="subheading">{{ pageSubtitle }}</p>
-					</div>
-				</div>
-			</div>
-		</section>
 		<section class="blue py-2">
 			<div class="container">
 				<div class="col-md-10 col-md-offset-1 text-center">No installation, no phone line – just superfast internet wherever there’s mobile reception.</div>
@@ -52,11 +39,12 @@ availabilityChecker: true
 							<li>Incredible data limits</li>
 							<li>Fast 4G+ router</li>
 							<li>Australia-wide connectivity</li>
-							<li>Simple online monitoring</li>
+							<li>No lock-in contract</li>
+							<li>Easy online monitoring</li>
 						</ul>
 					</div>
 				</div>
-				<div class="row pricing mt-8">
+				<div class="row pricing mt-8" aria-label="Our mobile 4G plans">
 					<div class="col-xs col-sm-6 col-sm-offset-0 col-lg-4 col-lg-offset-2 my-2">
 						<a href="#" class="box glowing featured">
 							<h3 class="mb-0">Large</h3>
@@ -80,7 +68,7 @@ availabilityChecker: true
 							<p>Price per GB after 50GB <span>$12</span></p>
 							<p>Setup Cost <span>$189</span></p>
 							<p class="price">$89<span>/mo</span></p>
-							<p class="min">Total minimum cost: $258</p>
+							<p class="min">Total minimum cost: $278</p>
 						</a>
 					</div>
 				</div>
@@ -93,23 +81,18 @@ availabilityChecker: true
 					<div class="col-sm-8 col-sm-offset-2">
 						<h2 class="text-center">Frequently asked questions<mark class="dot">.</mark></h2>
 						<details class="mt-4">
-							<summary>Where is the network available?</summary>
+							<summary>Is this even a question?</summary>
 							<p>We’re currently in deploying for early access, so we’re limited to select areas of South East Queensland. Our expansion plan is aggressive and we will prioritise regions, so reach out to us if you want to get us to your place quicker.</p>
 						</details>
 						<details>
-							<summary>How are you different to the NBN?</summary>
+							<summary>An African or European swallow?</summary>
 							<p>We use enterprise grade fibre and our own datacentre equipment as the backbone for our network, and then deliver the connection to you over our own independent network. We believe the NBN simply isn’t up to the standard we want for our customers, so we don’t use it at all. This means, from tower to home, we control the network. If you call us, you’re speaking to the people with full control over what goes on.</p>
 						</details>
 						<details>
-							<summary>What goes on my roof?</summary>
+							<summary>Did you just lose the game?</summary>
 							<p><strong>If we’re connecting you via fixed wireless</strong>, Our technicians install one or two small radios (about the size of a wine bottle) on a single pole that we securely fasten to your roof.</p>
-						</details>
-						<details>
-							<summary>Do I need to talk to the owner of my building?</summary>
-							<p>Every rental is different and this will depend on your individual situation. For a house, we’d recommend you let your real estate agent know you’ll be getting a small piece of equipment installed. If you’re in a unit or townhouse complex, particularly with body corporate, we’ll likely need to talk to them. That’s OK though – we love working with complexes and can usually sort out better internet for everyone.</p>
 						</details>
 					</div>
 				</div>
 			</div>
 		</section>
-{% include _footer.liquid %}

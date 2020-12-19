@@ -4,7 +4,6 @@
   justify-content: center;
   width: 100%;
   height: 4rem;
-  padding: 0 1rem;
   box-sizing: border-box;
 }
 
@@ -24,7 +23,7 @@
   justify-content: center;
   align-items: center;
   max-width: 800px;
-  background-color: #fff;
+  background-color: rgba(255,255,255,0.8);
 }
 
 .ccc-search-input {
@@ -33,15 +32,23 @@
 
 .ccc-search-input:focus-within {
   box-shadow: 1px 1px 5px 3px rgba(150, 150, 150, 0.2);
+  background-color: rgba(255,255,255,1);
 }
 
 .ccc-search-input input {
   flex: 1;
   outline: none;
   border: none;
-  color: #000;
+  color: #777;
   padding-left: 1rem;
   border-radius: 11px;
+  background: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.ccc-search-input input:focus, .ccc-search-input input:focus::placeholder {
+  color: #00b0f0;
 }
 
 .ccc-search-input input:disabled {
@@ -78,6 +85,18 @@
 
 .ccc-search-input:not(.ccc-success):not(.ccc-danger) ion-icon {
   color: #777;
+  transition: color 0.2s;
+}
+
+.ccc-search-input {
+    box-shadow: 0px 0px 0px 0px #00b0f0;
+    transition: all 0.2s;
+}
+.ccc-search-input:focus-within {
+    box-shadow: 0px 0px 25px 0px #00b0f0;
+}
+.ccc-search-input:focus-within ion-icon {
+    color: #00b0f0 !important;
 }
 
 .ccc-search-input button {
@@ -103,12 +122,13 @@
   border-color: #2c9951;
   border-width: 3px;
 }
-
+.ccc-search-input.ccc-success input, .ccc-search-input.ccc-danger input {
+  border-radius: 11px 0 0 11px;
+}
 .ccc-search-input.ccc-success button {
   cursor: pointer;
   border: none;
   width: 10%;
-  background-color: white;
   color: #2c9951;
 }
 
@@ -122,13 +142,16 @@
   border-color: #ff483b;
   border-width: 3px;
 }
-
+.ccc-search-input.ccc-danger input {
+  color: #ff483b;
+  background: #fff;
+}
 .ccc-search-input.ccc-danger button {
   cursor: pointer;
   border: none;
   width: 10%;
-  background-color: white;
   color: #ff483b;
+  background: #fff;
 }
 
 .ccc-search-input.ccc-danger button:hover {

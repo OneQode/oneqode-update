@@ -54,19 +54,49 @@
 	<!-- End Google Tag Manager (noscript) -->
 	<header id="header">
 		<div class="container">
-			<a href="/" class="logo">
+			<a href="
+				{%- if page.url == "/" or page.url == "/business/" or page.url == "/wholesale/" -%}
+					/
+				{%- else -%}
+					{%- case section -%}
+						{%- when "home" -%}
+							/
+						{%- when "business" -%}
+							/business/
+						{%- when "wholesale" -%}
+							/wholesale/
+						{%- else -%}
+							/
+					{%- endcase -%}
+				{%- endif -%}
+				" title="
+				{%- if page.url == "/" or page.url == "/business/" or page.url == "/wholesale/" -%}
+					Go to the OneQode homepage
+				{%- else -%}
+					{%- case section -%}
+						{%- when "home" -%}
+							Go to the OneQode homepage
+						{%- when "business" -%}
+							Go to the OneQode for Business homepage
+						{%- when "wholesale" -%}
+							Go to the OneQode for Wholesale homepage
+						{%- else -%}
+							Go to the OneQode homepage
+					{%- endcase -%}
+				{%- endif -%}
+				" class="logo">
 				<img src="{{ '/img/logo.svg' | url }}" alt="OneQode Logo">
 			</a>
 {% case section %}
-	{% when "home" %}
-		{% include _navigation-home.liquid %}
-	{% when "business" %}
-		{% include _navigation-business.liquid %}
-	{% when "wholesale" %}
-		{% include _navigation-wholesale.liquid %}
-	{% else %}
-		{% include _navigation-home.liquid %}
-{% endcase %}
+	{%- when "home" -%}
+		{%- include _navigation-home.liquid -%}
+	{%- when "business" -%}
+		{%- include _navigation-business.liquid -%}
+	{%- when "wholesale" -%}
+		{%- include _navigation-wholesale.liquid -%}
+	{%- else -%}
+		{%- include _navigation-home.liquid -%}
+{%- endcase -%}
 		</div>
 	</header>
 	<main>
