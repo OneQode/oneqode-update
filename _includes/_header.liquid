@@ -19,6 +19,9 @@
 	<meta name="twitter:title" content="{{ metaTitle }}" />
 	<meta name="twitter:site" content="@oneqode" />
 	<meta name="twitter:creator" content="@oneqode" />
+	{%- if canonical -%}
+	<link rel="canonical" href="{{ canonical }}">
+	{%- endif -%}
 	<!-- Styles -->
 	<link rel="stylesheet" href="{{ '/css/production.min.css' | url }}">
 	<!-- Fonts -->
