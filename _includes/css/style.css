@@ -785,6 +785,27 @@ CONTENT
 .box.glowing:hover p {
 	color: #fff;
 }
+/* Boxes with icons */
+.icons img {
+	max-width: 5rem;
+	opacity: 0.75;
+}
+.icons h3 {
+	font-size: 1.25rem;
+	text-transform: uppercase;
+	min-height: 1.5rem;
+	margin-top: 2rem;
+	margin-bottom: auto;
+}
+.icons p {
+	color: #999;
+	margin-top: 0;
+}
+@media screen and (max-width: 48em) {
+	.icons p {
+		display: none;
+	}
+}
 /* Press page */
 .press-info, .applicant-info {
 	background: rgba(0,0,0,0.2);

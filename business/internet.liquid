@@ -1,0 +1,224 @@
+---
+section: business
+metaTitle: High Speed Business Internet • OneQode
+metaDescription: Connect your premises to the world with our high speed business internet. We're an Australian internet company focussed on lightning-fast broadband speeds.
+changefreq: monthly
+priority: 0.5
+ogImage: og-image.jpg
+pageSupertitle: Business Internet
+pageTitle: <mark>Stratospheric</mark><br class="responsive"> business internet
+pageSubtitle: Blazing fast, reliable business broadband.
+availabilityChecker: true
+---
+{% include _header.liquid %}
+		<style>
+			.hero {
+				background-position: bottom center;
+				background-blend-mode: exclusion;
+			}
+			.no-webp .hero {
+				background: radial-gradient(circle at bottom,#002735 0%,#000000 100%), url("/img/bg/business-internet-superfast-waves.jpg") no-repeat bottom center;
+				background-size: initial;
+			}
+			.webp .hero {
+				background: url("/img/bg/light-speed-blur.webp") no-repeat bottom center;
+				background-size: cover;
+				background: radial-gradient(circle at bottom,#002735 0%,#000000 100%), url("/img/bg/business-internet-superfast-waves.webp") no-repeat bottom center;
+				background-size: initial;
+			}
+			@media screen and (max-width: 64em) {
+				.hero {
+					background-size: contain !important;
+				}
+			}
+		</style>
+		<script>
+			// Pricing Toggle
+
+				function toggler() {
+					var content12m = document.getElementById("12m-content");
+					var contentmtm = document.getElementById("mtm-content");
+					if(document.getElementById("12m").checked) {
+						content12m.style.display = "flex";
+						contentmtm.style.display = "none";
+					} else {
+						content12m.style.display = "none";
+						contentmtm.style.display = "flex";
+					}
+				}
+				</script>
+		<section class="hero">
+			<div class="container">
+				<div class="row middle-xs">
+					<div class="col-md-8 col-md-offset-2 text-center">
+						<p class="superheading">{{ pageSupertitle }}</p>
+						<h1>{{ pageTitle }}<mark class="dot">.</mark></h1>
+						{% include _address-checker-business.liquid %}
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="blue py-2">
+			<div class="container">
+				<div class="col-md-10 col-md-offset-1 text-center">Super-fast links ▪ Stable connections ▪ Redundancy Options Available</div>
+			</div>
+		</section>
+		<section class="black-to-mid text-center py-8">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<p class="superheading">Available in select regions</p>
+						<h2>Modern internet <br class="responsive">for <mark>modern business</mark><mark class="dot">.</mark></h2>
+						<p>Our business plans are designed for modern workloads. Whether it’s a busy office, design firm or bustling warehouse – we’ll get you the speeds you need. Our most popular plans are listed below, with a contract and ‘no-lock-in contract’ option.</p>
+						<p>Want something faster? Just let us know – we go all the way up to 10Gbps for business.</p>
+					</div>
+					<div class="col-xs-12 col-md-6 col-md-offset-3">
+						<h3 class="mt-2">All plans include:</h3>
+						<ul class="ticks large">
+							<li>Low-latency connection</li>
+							<li>Symmetrical Speeds</li>
+							<li>Unlimited data</li>
+							<li>Free modem</li>
+						</ul>
+					</div>
+				</div>
+				<div class="row toggler mt-8">
+					<input type="radio" id="12m" name="contractlength" onchange="toggler()" checked="">
+					<label for="12m">12 Month Plans</label>
+					<input id="mtm" type="radio" name="contractlength" onchange="toggler()">
+					<label for="mtm">Month-to-Month Plans</label>
+				</div>
+				<!-- Start 12 Month Plans -->
+				<div class="row pricing mt-2" id="12m-content">
+					<div class="col-xs col-lg-3 my-2">
+						<a href="#" class="box glowing">
+							<h3 class="mb-0">Fine</h3>
+							<p class="subheading">for light use</p>
+							<p>Download <span class="speed">50<span> Mbps</span></span></p>
+							<p>Upload <span class="speed upload">50<span> Mbps</span></span></p>
+							<p>Installation fee <span>$149</span></p>
+							<p class="price">$79<span>/mo</span></p>
+							<p class="min">Total minimum cost: $999</p>
+						</a>
+					</div>
+					<div class="col-xs col-lg-3 my-2">
+						<a href="#" class="box glowing">
+							<h3 class="mb-0">Good</h3>
+							<p class="subheading">for most households</p>
+							<p>Download <span class="speed">100<span> Mbps</span></span></p>
+							<p>Upload <span class="speed upload">100<span> Mbps</span></span></p>
+							<p>Installation fee <span>$149</span></p>
+							<p class="price">$109<span>/mo</span></p>
+							<p class="min">Total minimum cost: $999</p>
+						</a>
+					</div>
+					<div class="col-xs col-lg-3 my-2">
+						<a href="#" class="box glowing featured">
+							<h3 class="mb-0">Great</h3>
+							<p class="subheading">for internet lovers</p>
+							<p>Download <span class="speed">250<span> Mbps</span></span></p>
+							<p>Upload <span class="speed upload">250<span> Mbps</span></span></p>
+							<p>Installation fee <span>$149</span></p>
+							<p class="price">$249<span>/mo</span></p>
+							<p class="min">Total minimum cost: $999</p>
+						</a>
+					</div>
+					<div class="col-xs col-lg-3 my-2">
+						<a href="#" class="box glowing">
+							<h3 class="mb-0">Fantastic</h3>
+							<p class="subheading">for internet lovers</p>
+							<p>Download <span class="speed">1,000<span> Mbps</span></span></p>
+							<p>Upload <span class="speed upload">1,000<span> Mbps</span></span></p>
+							<p>Installation fee <span>$149</span></p>
+							<p class="price">$689<span>/mo</span></p>
+							<p class="min">Total minimum cost: $999</p>
+						</a>
+					</div>
+				</div>
+				<!-- End 12 Month Plans -->
+				<!-- Start Month to Month Plans -->
+				<div class="row pricing mt-2" id="mtm-content" style="display: none;">
+					<div class="col-xs col-lg-3 my-2">
+						<a href="#" class="box glowing">
+							<h3 class="mb-0">Fine</h3>
+							<p class="subheading">for light use</p>
+							<p>Download <span class="speed">50<span> Mbps</span></span></p>
+							<p>Upload <span class="speed upload">50<span> Mbps</span></span></p>
+							<p>Installation fee <span>$299</span></p>
+							<p class="price">$79<span>/mo</span></p>
+							<p class="min">Total minimum cost: $999</p>
+						</a>
+					</div>
+					<div class="col-xs col-lg-3 my-2">
+						<a href="#" class="box glowing">
+							<h3 class="mb-0">Good</h3>
+							<p class="subheading">for most households</p>
+							<p>Download <span class="speed">100<span> Mbps</span></span></p>
+							<p>Upload <span class="speed upload">100<span> Mbps</span></span></p>
+							<p>Installation fee <span>$299</span></p>
+							<p class="price">$109<span>/mo</span></p>
+							<p class="min">Total minimum cost: $999</p>
+						</a>
+					</div>
+					<div class="col-xs col-lg-3 my-2">
+						<a href="#" class="box glowing featured">
+							<h3 class="mb-0">Great</h3>
+							<p class="subheading">for internet lovers</p>
+							<p>Download <span class="speed">250<span> Mbps</span></span></p>
+							<p>Upload <span class="speed upload">250<span> Mbps</span></span></p>
+							<p>Installation fee <span>$299</span></p>
+							<p class="price">$249<span>/mo</span></p>
+							<p class="min">Total minimum cost: $999</p>
+						</a>
+					</div>
+					<div class="col-xs col-lg-3 my-2">
+						<a href="#" class="box glowing">
+							<h3 class="mb-0">Fantastic</h3>
+							<p class="subheading">for internet lovers</p>
+							<p>Download <span class="speed">1,000<span> Mbps</span></span></p>
+							<p>Upload <span class="speed upload">1,000<span> Mbps</span></span></p>
+							<p>Installation fee <span>$299</span></p>
+							<p class="price">$689<span>/mo</span></p>
+							<p class="min">Total minimum cost: $999</p>
+						</a>
+					</div>
+				</div>
+				<!-- End Month to Month Plans -->
+				<p class="mt-2 cis">Have a squizz at the <a href="#">Critical Information Summary</a></p>
+			</div>
+		</section>
+		<section class="mid-to-footer pb-4">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2">
+						<h2 class="text-center">Frequently asked questions<mark class="dot">.</mark></h2>
+						<details class="mt-4">
+							<summary>I'm leasing. Do I need to talk to the owner or property manager?</summary>
+							<p>If you’re leasing and part of a larger building or premises, we’d prefer you clear it with the owner/administrator first. If needed, we’re more than happy to talk to them. More than likely we’ll be able to get everyone in your complex set up too, at better speeds and rates than the incumbent telcos.</p>
+						</details>
+						<details>
+							<summary>Can you connect our entire workplace?</summary>
+							<p>Definitely. If you’ve got a big warehouse, office or premises, we’re more than happy to work with you to get coverage everywhere. Just let us know and we can give you an indication of how much extra it might cost.</p>
+						</details>
+						<details>
+							<summary>How are you different to the NBN?</summary>
+							<p>We use enterprise grade fibre and our own datacentre equipment as the backbone for our network, and then deliver the connection to you over our own independent network. This means we control the network from end to end — so if you call us, you’re speaking to the people with full control over what goes on.</p>
+						</details>
+						<details>
+							<summary>What goes on the roof?</summary>
+							<p><strong>If you’re going to be connected to our network via fixed wireless</strong>, our technicians install one or two small radios (about the size of a wine bottle) on a single pole that we securely fasten to your roof.</p>
+						</details>
+						<details>
+							<summary>Where is the network available?</summary>
+							<p>We’re currently deploying for early access, so we’re limited to select areas of South East Queensland. Our expansion plan is quite aggressive and we will prioritise regions, so reach out to us if you want to get us to your place quicker.</p>
+						</details>
+						<details>
+							<summary>I'm on a plan. Can I still switch to OneQode?</summary>
+							<p>We get it. Until recently, you didn’t really have any other option other than traditional internet, so getting on a plan didn’t seem like a big deal. While we can’t force your other ISP to let you go for free, we can try and make things work so you can come with us soon.</p>
+							<p>Let us know if you’re currently locked into a plan and we’ll do our best to make it as simple as possible to switch. </p>
+						</details>
+					</div>
+				</div>
+			</div>
+		</section>
+{% include _footer.liquid %}
