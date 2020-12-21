@@ -7,7 +7,7 @@
 	"hrEmail": "hello@oneqode.com.au",
 	"login": {
 		"home": "https://my.oneqode.com.au",
-		"business": "https://portal.obnco.com.au",
+		"business": "/business/login/",
 		"wholesale": "https://portal.obnco.com.au"
 	}
 }
