@@ -265,7 +265,6 @@ nav#switcher ul {
 	display: none;
 	position: absolute;
 	z-index: 2;
-	/*background: rgba(0,0,0,0.2);*/
 	background: rgba(8,16,19,0.95);
 	border: 1px solid #555;
 	border-radius: 10px;
@@ -349,7 +348,6 @@ li.has-submenu.open .submenu ul {
 	/* Menu: Tablet and Above */
 	@media (min-width: 48em) {
 		.submenu {
-			/*background: rgba(255,255,255,0.2);*/
 			background: rgba(72,72,72,0.8);
 			border: 1px solid #555;
 			backdrop-filter: blur(5px);
