@@ -19,9 +19,37 @@
 	<meta name="twitter:title" content="{{ metaTitle }}" />
 	<meta name="twitter:site" content="@oneqode" />
 	<meta name="twitter:creator" content="@oneqode" />
-	{%- if canonical -%}
-	<link rel="canonical" href="{{ canonical }}">
-	{%- endif -%}
+	{%- if canonical %}
+	<link rel="canonical" href="{{ global.url }}{{ canonical }}">
+	{%- endif %}
+	<!-- Organisation Info -->
+	<script type="application/ld+json">
+		{
+			"@context":"https://schema.org",
+			"@type":"Organization",
+			"name":"OneQode",
+			"url":"https://www.oneqode.com/",
+			"logo":"https://www.oneqode.com/img/symbol.png",
+			"address":{
+				"@type":"PostalAddress",
+				"streetAddress":"3/38 High Street",
+				"addressLocality":"Kippa Ring",
+				"addressRegion":"Queensland",
+				"postalCode":"4021",
+				"addressCountry":"Australia"
+			},
+			"contactPoint":{
+				"@type":"ContactPoint",
+				"contactType":"contact",
+				"telephone":"",
+				"email":"hello@oneqode.com.au"
+			},
+			"sameAs":[
+				"https://www.linkedin.com/company/oneqode/",
+				"https://twitter.com/oneqode"
+			]
+		}
+	</script>
 	<!-- Styles -->
 	<link rel="stylesheet" href="{{ '/css/production.min.css' | url }}">
 	<!-- Fonts -->
@@ -40,20 +68,24 @@
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-5FZ7DSW');</script>
-	<!-- End Google Tag Manager -->
 	<!-- Scripts -->
 	<script src="{{ '/js/production.js' | url }}"></script>
-	{%- if availabilityChecker == true %}
+{%- if availabilityChecker == true %}
 	<!-- Availability Checker -->
 	<script defer src="{{ '/js/address-checker-conf.js' | url }}"></script>
 	<script defer src="{{ '/js/address-checker.js' | url }}"></script>
 	<link rel="stylesheet" href="/css/availability.css">
 	{%- endif %}
+{%- if form == true %}
+{% include forms/__form-header.liquid %}
+{%- endif %}
 </head>
 <body>
 	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FZ7DSW"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FZ7DSW"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
 	<!-- End Google Tag Manager (noscript) -->
 	<header id="header">
 		<div class="container">

@@ -89,6 +89,9 @@ footer, main {
 	}
 }
 /* Helpers */
+.m-1 {
+	margin: 1rem;
+}
 .mt-0 {
 	margin-top: 0;
 }
@@ -106,6 +109,9 @@ footer, main {
 }
 .mb-0 {
 	margin-bottom: 0;
+}
+.mb-1 {
+	margin-bottom: 1rem;
 }
 .mb-2 {
 	margin-bottom: 2rem;
@@ -343,7 +349,8 @@ li.has-submenu.open .submenu ul {
 	/* Menu: Tablet and Above */
 	@media (min-width: 48em) {
 		.submenu {
-			background: rgba(255,255,255,0.2);
+			/*background: rgba(255,255,255,0.2);*/
+			background: rgba(72,72,72,0.8);
 			border: 1px solid #555;
 			backdrop-filter: blur(5px);
 			margin-top: 1rem;
@@ -1160,6 +1167,7 @@ RESPONSIVE OVERRIDES
 	}
 	section.hero {
 		text-align: center;
+		padding-top: 8rem;
 	}
 	footer, footer ul, footer .credits {
 		text-align: center !important;
@@ -1178,9 +1186,10 @@ RESPONSIVE OVERRIDES
 		opacity: 1;
 	}
 }
-/* Padding at top on small devices */
+/* Padding at top on small devices
 @media screen and (max-width: 22em) {
 	section.hero {
 		padding-top: 2.5rem;
 	}
 }
+*/

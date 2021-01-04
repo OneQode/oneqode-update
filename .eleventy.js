@@ -11,6 +11,7 @@ module.exports = function(eleventyConfig) {
 		"liquid",
 		"png",
 		"svg",
+		"pdf",
 		"njk",
 		"md",
 		"ics"

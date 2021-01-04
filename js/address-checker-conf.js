@@ -4,7 +4,7 @@ var warningContent = document.getElementById("ccc-warning-content");
 
 var ccc = {
   // Update this list to include any valid postcodes
-  validPostcodes: [4020],
+  validPostcodes: [4021],
 
   // Place your google api key here
   googleApiKey: "AIzaSyConSk2Ir_73RtmiwgjhX4vpoqj6Gqr9sM", //OneQode's api key

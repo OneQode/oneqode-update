@@ -11,16 +11,60 @@
 					<p>Who we help</p>
 					<ul>
 						<li><a href="/" title="Home internet, mobile broadband, and gaming services">Individuals</a></li>
-						<li><a href="/business" title="Internet and connectivity for business and enterprise">Organisations</a></li>
-						<li><a href="/wholesale" title="Wholesale internet services for telco, and managed service providers">Service Providers</a></li>
+						<li><a href="/business/" title="Internet and connectivity for business and enterprise">Organisations</a></li>
+						<li><a href="/wholesale/" title="Wholesale internet services for telco, and managed service providers">Service Providers</a></li>
 					</ul>
 				</div>
 				<div class="col-sm-6 col-md-3 py-1">
 					<p>Help & Support</p>
 					<ul>
 						<li><a href="#" title="Get help and assistance with your OneQode services">Get Support</a></li>
-						<li><a href="/contact/" title="Reach out directly to the OneQode team">Contact us</a></li>
-						<li><a href="/legal/" title="Legal terms, policies and important information">Terms & Policies</a></li>
+						<li><a href="
+								{%- case section -%}
+									{%- when "home" -%}
+										/contact/
+									{%- when "business" -%}
+										/business/contact/
+									{%- when "wholesale" -%}
+										/wholesale/contact/
+									{%- else -%}
+										/contact/
+								{%- endcase -%}
+							" title="
+								{%- case section -%}
+									{%- when "home" -%}
+										Reach out directly to the OneQode team
+									{%- when "business" -%}
+										Contact the OneQode business team
+									{%- when "wholesale" -%}
+										Contact the OneQode wholesale team
+									{%- else -%}
+										Reach out directly to the OneQode team
+								{%- endcase -%}
+								">Contact us</a></li>
+						<li><a href="
+								{%- case section -%}
+									{%- when "home" -%}
+										/legal/
+									{%- when "business" -%}
+										/business/legal/
+									{%- when "wholesale" -%}
+										/wholesale/legal/
+									{%- else -%}
+										/legal/
+								{%- endcase -%}
+							" title="
+								{%- case section -%}
+									{%- when "home" -%}
+										OneQode Terms & Policies
+									{%- when "business" -%}
+										OneQode Terms & Policies for Business Customers
+									{%- when "wholesale" -%}
+										OneQode Terms & Policies for Wholesale Customers
+									{%- else -%}
+										OneQode Terms & Policies
+								{%- endcase -%}
+								">Terms & Policies</a></li>
 					</ul>
 				</div>
 				<div class="col-sm-6 col-md-3 py-1">
