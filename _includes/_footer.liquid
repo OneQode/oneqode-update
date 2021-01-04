@@ -70,7 +70,17 @@
 				<div class="col-sm-6 col-md-3 py-1">
 					<p>Company</p>
 					<ul>
-						<li><a href="/about/" title="Learn more about what we do">About OneQode</a></li>
+						<li><a href="
+								{%- case section -%}
+									{%- when "home" -%}
+										/about/
+									{%- when "business" -%}
+										/business/about/
+									{%- when "wholesale" -%}
+										/wholesale/about/
+									{%- else -%}
+										/about/
+								{%- endcase -%}" title="Learn more about what we do">About OneQode</a></li>
 						<li><a href="/careers/" title="See our current vacancies">Careers</a></li>
 						<li><a href="/media/" title="Read our latest updates, and get access to press resources">Media Newsroom</a></li>
 					</ul>
