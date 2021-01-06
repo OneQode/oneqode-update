@@ -8,8 +8,7 @@
 		"url": "https://oneqode.com/careers/",
 		"feedUrl": "https://oneqode.com/careers-feed.xml",
 		"author": {
-			"name": "OneQode Careers",
-			"email": "hello@oneqode.com.au"
+			"name": "OneQode Careers"
 		}
 	}
 }
@@ -24,7 +23,7 @@
 	<id>{{ metadata.url }}</id>
 	<author>
 		<name>{{ metadata.author.name }}</name>
-		<email>{{ metadata.author.email }}</email>
+		<email>{{ global.hrEmail }}</email>
 	</author>
 	{%- for post in collections.vacancy %}
 	{% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}

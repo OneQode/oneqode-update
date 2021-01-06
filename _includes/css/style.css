@@ -804,7 +804,6 @@ CONTENT
 }
 .icons p {
 	color: #999;
-	margin-top: 0;
 }
 @media screen and (max-width: 48em) {
 	.icons p {

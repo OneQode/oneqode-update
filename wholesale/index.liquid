@@ -1,18 +1,16 @@
 ---
-
+layout: page-left.liquid
 section: wholesale
 metaTitle: OneQode for Wholesale • Wholesale Internet Provider
 metaDescription: Australian wholesale internet provider providing low-latency enterprise internet solutions including IP transit, ethernet, backhaul, dark fibre and co-location.
 changefreq: monthly
 priority: 1
-pageTitle: Wholesale Internet Solutions
+pageTitle: Wholesale internet solutions
 pageSubtitle: Australia's next-gen wholesale<br class="responsive"> internet service provider.
 heroLinktext: Learn More
 heroLinkurl: /wholesale/about/
 ogImage: og-image.jpg
-
 ---
-{% include _header.liquid %}
 	<!-- Page-Specific Styles -->
 	<style>
 		/* 4K Background Image */
@@ -37,20 +35,10 @@ ogImage: og-image.jpg
 				background-size: cover;
 			}
 		}
+		.icons p {
+			margin-top: 0;
+		}
 	</style>
-
-	<!-- Page Content -->
-	<section class="hero">
-		<div class="container">
-			<div class="row middle-xs">
-				<div class="col-md-8">
-					<h1>{{ pageTitle }}<mark class="dot">.</mark></h1>
-					<p class="subheading">{{ pageSubtitle }}</p>
-					<a href="{{ heroLinkurl }}" class="button ghost mt-2">{{ heroLinktext }}</a>
-				</div>
-			</div> 
-		</div>
-	</section>
 	<section class="black py-4">
 		<div class="container">
 			<div class="row icons mobile-flex">
@@ -98,4 +86,3 @@ ogImage: og-image.jpg
 			</div>
 		</div>
 	</section>
-{% include _footer.liquid %}

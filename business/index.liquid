@@ -1,5 +1,5 @@
 ---
-
+layout: page-left.liquid
 section: business
 metaTitle: OneQode for Business • Business Internet & Connectivity
 metaDescription: Simple, low-latency business internet, broadband and network connectivity solutions from OneQode. No-hassle connectivity for small business and enterprise.
@@ -10,9 +10,7 @@ pageSubtitle: Low-latency business internet<br class="responsive"> and connectiv
 heroLinktext: Learn More
 heroLinkurl: /business/about/
 ogImage: og-image.jpg
-
 ---
-{% include _header.liquid %}
 	<!-- Page-Specific Styles -->
 	<style>
 		/* 4K Background Image */
@@ -38,19 +36,6 @@ ogImage: og-image.jpg
 			}
 		}
 	</style>
-
-	<!-- Page Content -->
-	<section class="hero">
-		<div class="container">
-			<div class="row middle-xs">
-				<div class="col-md-8">
-					<h1>{{ pageTitle }}<mark class="dot">.</mark></h1>
-					<p class="subheading">{{ pageSubtitle }}</p>
-					<a href="{{ heroLinkurl }}" class="button ghost mt-2">{{ heroLinktext }}</a>
-				</div>
-			</div> 
-		</div>
-	</section>
 	<section class="py-4 black">
 		<div class="container">
 			<div class="row icons mobile-flex">
@@ -89,4 +74,3 @@ ogImage: og-image.jpg
 			</div>
 		</div>
 	</section>
-{% include _footer.liquid %}
