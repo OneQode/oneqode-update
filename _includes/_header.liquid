@@ -19,6 +19,9 @@
 	<meta name="twitter:title" content="{{ metaTitle }}" />
 	<meta name="twitter:site" content="@oneqode" />
 	<meta name="twitter:creator" content="@oneqode" />
+	{%- if ignore %}
+	<meta name="robots" content="noindex">
+	{%- endif %}
 	{%- if canonical %}
 	<link rel="canonical" href="{{ global.url }}{{ canonical }}">
 	{%- endif %}
@@ -70,13 +73,13 @@
 	})(window,document,'script','dataLayer','GTM-5FZ7DSW');</script>
 	<!-- Scripts -->
 	<script src="{{ '/js/production.js' | url }}"></script>
-{%- if availabilityChecker == true %}
+{%- if availabilityChecker %}
 	<!-- Availability Checker -->
 	<script defer src="{{ '/js/address-checker-conf.js' | url }}"></script>
 	<script defer src="{{ '/js/address-checker.js' | url }}"></script>
 	<link rel="stylesheet" href="/css/availability.css">
 	{%- endif %}
-{%- if form == true %}
+{%- if form %}
 {% include forms/__form-header.liquid %}
 {%- endif %}
 </head>

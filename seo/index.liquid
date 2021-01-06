@@ -1,0 +1,94 @@
+---
+ignore: true
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex" />
+	<title>SEO Preview</title>
+	<style>
+	html,
+	body {
+		height: 100%;
+		width: 100%;
+		margin: 0;
+	}
+
+	html {
+		display: grid;
+		place-items: center;
+		justify-content: center;
+	}
+	body {
+		background: #fff;
+		padding: 20px;
+		max-width: 600px;
+	}
+	.serp {
+		margin-bottom: 28px;
+	}
+	.url {
+		font-family: arial, sans-serif;
+		text-align: left;
+		font-weight: normal;
+		font-size: small;
+		line-height: 1.58;
+		-webkit-tap-highlight-color: rgba(0, 0, 0, .10);
+		color: #202124;
+		padding-bottom: 1px;
+		padding-top: 1px;
+	}
+	h2 {
+		font-family: arial, sans-serif;
+		text-align: left;
+		-webkit-tap-highlight-color: rgba(0, 0, 0, .10);
+		color: #1a0dab;
+		font-weight: normal;
+		margin: 0;
+		padding: 0;
+		margin-bottom: 3px;
+		padding-top: 4px;
+		font-size: 20px;
+		line-height: 1.3;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	h2 a {
+		text-decoration: none;
+		color: #1a0dab;
+	}
+	h2 a:hover {
+		text-decoration: underline;
+		color: #1a0dab;
+	}
+	p {
+		font-weight: normal;
+		font-family: arial, sans-serif;
+		font-size: 14px;
+		text-align: left;
+		color: #4d5156;
+		line-height: 1.58;
+		margin-top: 0;
+	}
+	</style>
+</head>
+
+<body>
+	<h1>SERP Previews</h1>
+	{%- for item in collections.all %}
+	{%- unless item.data.ignore == true %}
+	<div class="serp">
+		<div class="url">oneqode.com{{ item.url }}</div>
+		<h2><a href="{{ item.url }}">{{ item.data.metaTitle }}</a></h2>
+		<p>{{ item.data.metaDescription }}</p>
+	</div>
+	{%- endunless %}
+	{%- endfor %}
+</body>
+
+</html>

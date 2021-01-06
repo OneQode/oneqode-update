@@ -1,0 +1,37 @@
+---
+
+permalink: /wholesale/contact/
+section: wholesale
+metaTitle: OneQode for Wholesale • Contact Us
+metaDescription: Get in touch with the OneQode wholesale team to find out more about our services.
+ogImage: og-image.jpg
+changefreq: yearly
+priority: 0.5
+pageSupertitle: Get in touch
+canonical: /contact/
+pageTitle: Contact our <br class="responsive"> wholesale team
+pageSubtitle: Send us a message
+form: true
+
+---
+{% include _header.liquid %}
+		<style>
+			section.hero {
+				background: linear-gradient(to bottom, transparent 50%, #0c0c0c 100%), radial-gradient(circle at bottom,#002735 0,#000 100%);
+			}
+		</style>
+		<section class="hero full-height">
+			<div class="container">
+				<div class="row middle-xs">
+					<div class="col-sm col-md-5">
+						<p class="superheading">{{ pageSupertitle }}</p>
+						<h1>{{ pageTitle }}<mark class="dot">.</mark></h1>
+						<p class="subheading">{{ pageSubtitle }}</p>
+					</div>
+					<div class="col-sm col-md-7 my-2">
+						{% include forms/_wholesale-generic.liquid %}
+					</div>
+				</div>
+			</div>
+		</section>
+{% include _footer.liquid %}
