@@ -85,7 +85,7 @@ eleventyExcludeFromCollections: true
 	<div class="serp">
 		<div class="url">oneqode.com{{ item.url }}</div>
 		<h2><a href="{{ item.url }}">{{ item.data.metaTitle }}</a></h2>
-		<p>{{ item.data.metaDescription }}</p>
+		<p>{{ item.data.metaDescription | truncate: 165 }}</p>
 	</div>
 	{%- endunless %}
 	{%- endfor %}

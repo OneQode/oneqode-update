@@ -704,6 +704,9 @@ CONTENT
 	visibility: visible;
 	transform: translateY(0);
 }
+.sla-diagram {
+	max-width: 100%;
+}
 /* Big text links - careers and media */
 .linked {
 	padding-top: 0;
