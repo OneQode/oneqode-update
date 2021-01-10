@@ -568,7 +568,7 @@ table {
 	overflow-x: auto;
 	padding: 0;
 }
-table td {
+table td, table th {
 	padding: 1rem 2rem;
 	border-bottom: 1px solid #999;
 	vertical-align: top;
@@ -576,14 +576,15 @@ table td {
 tbody tr:last-child td {
 	border-bottom: none;
 }
-table td:first-child {
+table td:first-child, table th:first-child {
 	padding-left: 0;
 }
-table td:last-child {
+table td:last-child, table th:last-child {
 	padding-right: 0;
 }
 table thead {
 	font-weight: 600;
+	text-align: left;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - -
