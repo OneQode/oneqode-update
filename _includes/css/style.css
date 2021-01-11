@@ -573,7 +573,7 @@ table td, table th {
 	border-bottom: 1px solid #999;
 	vertical-align: top;
 }
-tbody tr:last-child td {
+tbody tr:last-child td, tbody tr:last-child th {
 	border-bottom: none;
 }
 table td:first-child, table th:first-child {
@@ -1014,7 +1014,24 @@ ul.no-style {
 .cis {
 	font-size: 1rem;
 }
-
+/* Tags */
+.tag {
+	font-size: 0.8rem;
+	padding: 0.2rem 0.4rem;
+	border-radius: 4px;
+}
+.plain {
+	background: #999;
+	color: #000;
+}
+.wet {
+	background: #00597f;
+	color: #fff;
+}
+.dry {
+	background: #4f94cc;
+	color: #000;
+}
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - -
 RESPONSIVE OVERRIDES
  - - - - - - - - - - - - - - - - - - - - - - - - - - - */
