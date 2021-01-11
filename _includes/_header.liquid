@@ -127,13 +127,13 @@
 			</a>
 {% case section %}
 	{%- when "home" -%}
-		{%- include _navigation-home.liquid -%}
+		{%- include navigation/_navigation-home.liquid -%}
 	{%- when "business" -%}
-		{%- include _navigation-business.liquid -%}
+		{%- include navigation/_navigation-business.liquid -%}
 	{%- when "wholesale" -%}
-		{%- include _navigation-wholesale.liquid -%}
+		{%- include navigation/_navigation-wholesale.liquid -%}
 	{%- else -%}
-		{%- include _navigation-home.liquid -%}
+		{%- include navigation/_navigation-home.liquid -%}
 {%- endcase -%}
 		</div>
 	</header>
