@@ -34,54 +34,6 @@ pageSubtitle: We're on a mission to put Australia in <br class="responsive">the 
 	section.hero {
 		background: linear-gradient(to bottom, transparent 70%, #000), radial-gradient(circle at bottom,rgb(0,39,53) 0%,rgb(0,0,0) 100%);
 	}
-	.profile picture img {
-		display: block;
-		max-width: 90%;
-		opacity: 1;
-	}
-	.profile a {
-		text-align: center;
-		text-decoration: none;
-		opacity: 0.75;
-		display: block;
-		color: #fff;
-	}
-	.profile a:hover {
-		opacity: 1;
-	}
-	.profile span {
-		display: block;
-	}
-	.profile span:first-of-type {
-		font-weight: 600;
-		margin-top: 0.5rem;
-	}
-	.profile span:last-of-type {
-		font-size: 1rem;
-		margin-bottom: 2rem;
-	}
-	.data-use {
-		position: relative;
-		overflow: hidden;
-	}
-	.data-use svg {
-		position: relative;
-		z-index: 2;
-	}
-	.data-use ul {
-		margin-top: 0;
-		position: absolute;
-		z-index: 1;
-		list-style: none;
-		padding-left: 0;
-		font-size: 3rem;
-		background-image: linear-gradient(180deg, #333, #000 80%);
-		background-size: 100%;
-		-webkit-background-clip: text;
-		-moz-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		-moz-text-fill-color: transparent;
-	}
 
 	/* Brands */
 	.company .box {
@@ -257,12 +209,6 @@ pageSubtitle: We're on a mission to put Australia in <br class="responsive">the 
 			background-size: cover;
 			text-align: center;
 		}
-		.data-use ul {
-			display: none;
-		}
-		.row.profile {
-			display: flex;
-		}
 		.center-mobile {
 			text-align: center;
 		}
@@ -392,89 +338,8 @@ pageSubtitle: We're on a mission to put Australia in <br class="responsive">the 
 	</div>
 </section>
 <section class="black-to-footer pb-4">
-<div class="container profile text-center">
+<div class="container text-center">
 		<h2>Our team</h2>
-		<div class="row mobile-flex mt-4">
-			<div class="col-xs-6 col-sm-4 col-md-3">
-				<a href="https://www.linkedin.com/in/matt-shearing/" target="_blank">
-					<picture>
-						<source srcset="/img/team/matt.webp" type="image/webp">
-						<img src="/img/team/matt.png" alt="Matt Shearing">
-					</picture>
-					<span>Matt Shearing</span>
-					<span>Chief Executive Officer</span>
-				</a>
-			</div>
-			<div class="col-xs-6 col-sm-4 col-md-3">
-				<a href="https://www.linkedin.com/in/dillon-firrell-1b7594111/" target="_blank">
-					<picture>
-						<source srcset="/img/team/dillon.webp" type="image/webp">
-						<img src="/img/team/dillon.png" alt="Dillon Firrell">
-					</picture>
-					<span>Dillon Firrell</span>
-					<span>Chief Technical Officer</span>
-				</a>
-			</div>
-			<div class="col-xs-6 col-sm-4 col-md-3">
-				<a href="https://www.linkedin.com/in/hyypperionn/" target="_blank">
-					<picture>
-						<source srcset="/img/team/ben.webp" type="image/webp">
-						<img src="/img/team/ben.png" alt="Ben Cooper">
-					</picture>
-					<span>Ben Cooper</span>
-					<span>Chief Product Officer</span>
-				</a>
-			</div>
-			<div class="col-xs-6 col-sm-4 col-md-3">
-				<a href="https://www.linkedin.com/in/curtisbayne/" target="_blank">
-					<picture>
-						<source srcset="/img/team/curtis.webp" type="image/webp">
-						<img src="/img/team/curtis.png" alt="Curtis Bayne">
-					</picture>
-					<span>Curtis Bayne</span>
-					<span>Head of RF</span>
-				</a>
-			</div>
-			<div class="col-xs-6 col-sm-4 col-md-3">
-				<a href="https://www.linkedin.com/in/daniel-mcgregor-7086b71/" target="_blank">
-					<picture>
-						<source srcset="/img/team/dan.webp" type="image/webp">
-						<img src="/img/team/dan.png" alt="Daniel McGregor">
-					</picture>
-					<span>Daniel McGregor</span>
-					<span>Chief Financial Officer</span>
-				</a>
-			</div>
-			<div class="col-xs-6 col-sm-4 col-md-3">
-				<a href="https://www.linkedin.com/in/beau-h-859621166/" target="_blank">
-					<picture>
-						<source srcset="/img/team/beau.webp" type="image/webp">
-						<img src="/img/team/beau.png" alt="Beau Harris">
-					</picture>
-					<span>Beau Harris</span>
-					<span>Business Development Manager</span>
-				</a>
-			</div>
-			<div class="col-xs-6 col-sm-4 col-sm-offset-2 col-md-offset-0 col-md-3">
-				<a href="https://www.linkedin.com/in/tassia-blackley" target="_blank">
-					<picture>
-						<source srcset="/img/team/tassia.webp" type="image/webp">
-						<img src="/img/team/tassia.png" alt="Tassia Blackley">
-					</picture>
-					<span>Tassia Blackley</span>
-					<span>Head of Administration</span>
-				</a>
-			</div>
-			<div class="col-xs-6 col-sm-4 col-md-3">
-				<a href="https://www.linkedin.com/in/joeswinn/" target="_blank">
-					<picture>
-						<source srcset="/img/team/joe.webp" type="image/webp">
-						<img src="/img/team/joe.png" alt="Joe Swinn">
-					</picture>
-					<span>Joe Swinn</span>
-					<span>Head of Marketing</span>
-				</a>
-			</div>
-		</div>
+		{% include _team.liquid %}
 	</div>
 </section>

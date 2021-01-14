@@ -178,6 +178,9 @@ footer, main {
 	padding-top: 8rem;
 	padding-bottom: 8rem;
 }
+.block {
+	display: block;
+}
 
 /* Images */
 figure {
@@ -586,6 +589,9 @@ table thead {
 	font-weight: 600;
 	text-align: left;
 }
+.nowrap {
+	white-space: nowrap;
+}
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - -
 FORMS
@@ -634,6 +640,10 @@ section.hero {
 	background: radial-gradient(circle at bottom,#002735 0%,#000000 100%);
 	text-align: left;
 	min-height: 80vh;
+}
+.push-forward {
+	position: relative;
+	z-index: 2;
 }
 
 /* Background colours*/
@@ -1017,10 +1027,10 @@ ul.no-style {
 /* Tags */
 .tag {
 	font-size: 0.8rem;
-	padding: 0.2rem 0.4rem;
+	padding: 0rem 0.4rem;
 	border-radius: 4px;
-}
-.plain {
+	display: inline-block;
+	vertical-align: middle;
 	background: #999;
 	color: #000;
 }
@@ -1031,6 +1041,90 @@ ul.no-style {
 .dry {
 	background: #4f94cc;
 	color: #000;
+}
+/* SLAs */
+.sla .num,
+.sla .up,
+.sla .ex {
+	font-family: Poppins, sans-serif;
+	font-weight: 600;
+}
+.sla .num {
+	font-size: 3rem;
+	line-height: 1;
+}
+.sla .up {
+	font-size: 2rem;
+	margin-bottom: 0.5rem;
+}
+.sla .ex {
+	display: block;
+	color: #999;
+	line-height: 1;
+	font-size: 1rem;
+}
+/* Team Profiles */
+.profile picture img {
+	display: block;
+	max-width: 90%;
+	opacity: 1;
+}
+.profile a {
+	text-align: center;
+	text-decoration: none;
+	opacity: 0.75;
+	display: block;
+	color: #fff;
+}
+.profile a:hover {
+	opacity: 1;
+}
+.profile span {
+	display: block;
+	font-size: 1rem;
+	margin-bottom: 2rem;
+	color: #999;
+}
+.profile h3 {
+	margin: 1.5rem 0 0.5rem 0;
+	font-size: 1.25rem;
+	transition: all 0.2s;
+}
+.profile a:hover h3 {
+	color: #00b0f0;
+}
+/* Network Map */
+#network-map {
+	position: relative;
+	display: block;
+}
+#network-map svg {
+	position: absolute;
+	z-index: 1;
+}
+#network-map img {
+	opacity: 1;
+}
+#network-map line, #network-map polyline {
+	fill-rule: evenodd;
+	clip-rule: evenodd;
+	fill: none;
+	stroke: #00B0F0;
+	stroke-width: 4;
+	stroke-dasharray: 15;
+	stroke-dashoffset: 510;
+	animation: maplines 2s linear infinite;
+}
+@keyframes maplines {
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+#network-map text {
+	font-size: 45px;
+	fill: #fff;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - -
 RESPONSIVE OVERRIDES
@@ -1185,7 +1279,7 @@ RESPONSIVE OVERRIDES
 	}
 	section.hero {
 		text-align: center;
-		padding-top: 8rem;
+		padding-top: 4rem;
 	}
 	footer, footer ul, footer .credits {
 		text-align: center !important;
@@ -1202,6 +1296,11 @@ RESPONSIVE OVERRIDES
 	}
 	.brands a img {
 		opacity: 1;
+	}
+	/* Don't animate maps */
+	#network-map line, #network-map polyline {
+		animation: none;
+		stroke-width: 8;
 	}
 }
 /* Padding at top on small devices

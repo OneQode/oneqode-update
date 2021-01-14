@@ -28,6 +28,10 @@ pageSubtitle: Rapidly deploy your next cloud<br class="responsive"> project on e
 		background: linear-gradient(to bottom, #1c1d22 0%, rgba(28, 29, 34, 0.4) 60%, rgba(12, 12, 12, 0) 70%, #0c0c0c 100%), url("/img/bg/oneqode-network-map.webp") no-repeat bottom center;
 		background-size: cover;
 	}
+	.shrink {
+		font-size: 1rem;
+		color: #999;
+	}
 	</style>
 	<section class="blue py-2">
 		<div class="container">
@@ -49,10 +53,10 @@ pageSubtitle: Rapidly deploy your next cloud<br class="responsive"> project on e
 				</div>
 				<div class="col-xs-12 col-md-6 col-md-offset-3">
 					<ul class="ticks large">
-						<li>Fast, scalable dedicated servers</li>
+						<li>Powerful dedicated servers</li>
+						<li>Fast provisioning</li>
 						<li>Use your network or ours</li>
 						<li>Simple NNI port configuration</li>
-						<li>Longline backhaul to your core</li>
 						<li>Easy online management</li>
 					</ul>
 				</div>
@@ -67,7 +71,7 @@ pageSubtitle: Rapidly deploy your next cloud<br class="responsive"> project on e
 				</div>
 				<div class="col-xs-12 col-md-5 col-md-offset-1">
 					<h4>Overview</h4>
-					<p><strong>Quickly build and scale from single server environments to multi-rack clusters.</strong></p>
+					<p><strong>Quickly build and scale from single server environments to multi-rack clusters — and connect at speed with ease.</strong></p>
 					<p>The OneQode Dedicated Private Cloud (DPC) environment is built on the low-latency OneQode network, designed to deliver APAC’s quickest connections.</p>
 					<p>We operate an array of dedicated infrastructure, made for the demands of financial services, gaming, and web hosting.</p>
 				</div>
@@ -80,9 +84,9 @@ pageSubtitle: Rapidly deploy your next cloud<br class="responsive"> project on e
 									<th class="text-left">Australia</th>
 									<td>
 										<ul class="no-style">
-											<li><span class="tag plain">AU1</span> Brisbane</li>
-											<li><span class="tag plain">AU2</span> Sydney</li>
-											<li><span class="tag plain">AU3</span> Sunshine Coast</li>
+											<li><span class="tag">AU1</span> Brisbane</li>
+											<li><span class="tag">AU2</span> Sydney</li>
+											<li><span class="tag">AU3</span> Sunshine Coast</li>
 										</ul>
 									</td>
 								</tr>
@@ -90,9 +94,9 @@ pageSubtitle: Rapidly deploy your next cloud<br class="responsive"> project on e
 									<th class="text-left">Asia-Pacific</th>
 									<td>
 										<ul class="no-style">
-											<li><span class="tag plain">APAC1</span> Guam</li>
-											<li><span class="tag plain">APAC2</span> Tokyo</li>
-											<li><span class="tag plain">APAC3</span> Hong Kong</li>
+											<li><span class="tag">APAC1</span> Guam</li>
+											<li><span class="tag">APAC2</span> Tokyo</li>
+											<li><span class="tag">APAC3</span> Hong Kong</li>
 										</ul>
 									</td>
 								</tr>
@@ -100,7 +104,7 @@ pageSubtitle: Rapidly deploy your next cloud<br class="responsive"> project on e
 									<th class="text-left">United States</th>
 									<td>
 										<ul class="no-style">
-											<li><span class="tag plain">NA1</span> Los Angeles</li>
+											<li><span class="tag">NA1</span> Los Angeles</li>
 										</ul>
 									</td>
 								</tr>
@@ -120,24 +124,21 @@ pageSubtitle: Rapidly deploy your next cloud<br class="responsive"> project on e
 								<th>Threads</th>
 								<th>RAM</th>
 								<th>SSD</th>
-								<th>Data Cap<sup>*</sup></th>
 							</thead>
 							<tbody>
 								<tr>
 									<th class="text-left">DPC A</th>
 									<td>4</td>
 									<td>8</td>
-									<td>32GB</td>
+									<td>16GB</td>
 									<td>500GB</td>
-									<td>10TB</td>
 								</tr>
 								<tr>
 									<th class="text-left">DPC B</th>
 									<td>6</td>
 									<td>12</td>
 									<td>32GB</td>
-									<td>500GB</td>
-									<td>10TB</td>
+									<td>1TB</td>
 								</tr>
 								<tr>
 									<th class="text-left">DPC C</th>
@@ -145,22 +146,21 @@ pageSubtitle: Rapidly deploy your next cloud<br class="responsive"> project on e
 									<td>12</td>
 									<td>64GB</td>
 									<td>2TB</td>
-									<td>10TB</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-					<p><sup>*</sup> Data cap can be removed. See below.</p>
 				</div>
 			</div>
 			<div class="row mt-4">
 				<div class="col-xs-12 col-md-5 col-md-offset-1">
-					<h4>Fast network connectivity</h4>
-					<p>Network connectivity is delivered via a OneQode OBNNI network-to-network interface enabling you to use our network, or build backhaul and create virtual cross-connects to your network.</p>
-					<p>DPCs can be long lined back to a NNI via any one of our wholesale or business backhaul products</p>
+					<h4>Connecting your private cloud</h4>
+					<p><strong>Your DPC will be instantly accessible over the internet with a 10TB data cap.</strong></p>
+					<p>There are a range of ways to connect your DPC directly to your network:</p>
 				</div>
 				<div class="col-xs-12 col-md-5">
-					<mark>OBNNI DIAGRAM</mark>
+					<p class="mt-0">You can connect via <a href="/business/about#obnni">OneQode OBNNI</a>, Megaport VXC, EdgeXC, or you can build backhaul and create virtual cross-connects to your network.</p>
+					<p>DPCs can be long lined back to a network-to-network interface in an alternate location via any one of our business backhaul products.</p>
 				</div>
 			</div>
 			<div class="row mt-8">
@@ -170,43 +170,50 @@ pageSubtitle: Rapidly deploy your next cloud<br class="responsive"> project on e
 						<table>
 							<thead>
 								<th>Type</th>
+								<th class="text-right">Data Cap (TB)</th>
 								<th class="text-right">Port Mbps</th>
 								<th class="text-right">MRC</th>
 								<th class="text-right">Contract</th>
 							</thead>
 							<tbody>
 								<tr>
-									<td>DPC A</td>
+									<td class="nowrap"><strong>DPC A</strong> <span class="shrink">4C/8T/16GB/500GB</span></td>
+									<td class="text-right">10</td>
 									<td class="text-right">100</td>
 									<td class="text-right">$249</td>
 									<td class="text-right">0 month</td>
 								</tr>
 								<tr>
-									<td>DPC B</td>
+									<td class="nowrap"><strong>DPC B</strong> <span class="shrink">6C/12T/32GB/1TB</span></td>
+									<td class="text-right">10</td>
 									<td class="text-right">100</td>
 									<td class="text-right">$349</td>
 									<td class="text-right">0 month</td>
 								</tr>
 								<tr>
-									<td>DPC C</td>
+									<td class="nowrap"><strong>DPC C</strong> <span class="shrink">6C/12T/64GB/2TB</span></td>
+									<td class="text-right">10</td>
 									<td class="text-right">100</td>
 									<td class="text-right">$449</td>
 									<td class="text-right">0 month</td>
 								</tr>
 								<tr>
 									<td>DPC NNI <sup>†</sup></td>
-									<td class="text-right">10,000</td>
+									<td class="text-right shrink">n/a</td>
+									<td class="text-right">1,000</td>
 									<td class="text-right">$49</td>
 									<td class="text-right">0 month</td>
 								</tr>
 								<tr>
 									<td>Data Uncapped</td>
+									<td class="text-right shrink">n/a</td>
 									<td class="text-right">100</td>
 									<td class="text-right">$199</td>
 									<td class="text-right">0 month</td>
 								</tr>
 								<tr>
 									<td>Data Uncapped</td>
+									<td class="text-right shrink">n/a</td>
 									<td class="text-right">1,000</td>
 									<td class="text-right">$499</td>
 									<td class="text-right">0 month</td>
@@ -220,16 +227,4 @@ pageSubtitle: Rapidly deploy your next cloud<br class="responsive"> project on e
 			</div>
 		</div>
 	</section>
-	<section class="full-height pt-4 pb-8 why-us">
-		<div class="container">
-			<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
-				<p class="superheading">Why OneQode?</p>
-				<h2>The <mark>low-latency</mark><br class="responsive"> business network<mark class="dot">.</mark></h2>
-				<p class="subheading">The only carrier with international<br class="responsive"> connectivity via the Sunshine Coast cable<mark class="dot">.</mark></p>
-				<p>Want to go international? OneQode provide access to international data capacity to locations around the globe.</p>
-				<p>With a range of point-to-point and point-to-multipoint services available, we provide high capacity, easy to deploy solutions.</p>
-				<p>We can deliver any service within Australia over either of the two Australian legs of the JGA South Submarine Cable</p>
-				<p><a href="/business/about/" class="button m-1 mt-2">Our Network</a><a href="#start" class="button ghost m-1 mt-2">Get started</a></p>
-			</div>
-		</div>
-	</section>
+{% include parts/_business-why-us.liquid %}
