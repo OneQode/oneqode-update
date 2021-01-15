@@ -667,7 +667,8 @@ section.hero {
 }
 .blue {
 	background: #00b0f0;
-	color: #000;
+	color: #002735;
+	font-family: "Poppins", sans-serif;
 }
 .blue a {
 	color: #002735;

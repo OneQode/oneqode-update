@@ -19,11 +19,11 @@
 	<subtitle>{{ metadata.subtitle }}</subtitle>
 	<link href="{{ metadata.feedUrl }}" rel="self"/>
 	<link href="{{ metadata.url }}"/>
-	<updated>{{ collections.vacancy | rssLastUpdatedDate }}</updated>
+	<updated>{{ collections.vacancy | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
 	<id>{{ metadata.url }}</id>
 	<author>
 		<name>{{ metadata.author.name }}</name>
-		<email>{{ global.hrEmail }}</email>
+		<email>{{ metadata.author.email }}</email>
 	</author>
 	{%- for post in collections.vacancy %}
 	{% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
