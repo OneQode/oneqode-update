@@ -1,17 +1,42 @@
 ---
 
 permalink: /contact/
-layout: page.liquid
 metaTitle: OneQode • Contact Our Company
-metaDescription: Get in touch with the OneQode corporate office and find our address, ABN, Carrier Licence details, and contact emails.
+metaDescription: Get in touch with the friendly OneQode team, or find our address, ABN, Carrier Licence details, and contact emails.
 changefreq: yearly
 priority: 0.5
+form: true
 pageSupertitle: Contact
 pageTitle: Get in touch with our team
-pageSubtitle: Contact our corporate office.
+pageSubtitle: Contact our team.
 
 ---
-		<section class="black-to-footer py-4">
+{% include _header.liquid %}
+		<style>
+			section.hero {
+				background: linear-gradient(to bottom, transparent 50%, #000 100%), radial-gradient(circle at bottom,#002735 0,#000 100%);
+			}
+			@media (max-width: 64em) {
+				.full-height {
+					padding-top: 8rem !important;
+				}
+			}
+		</style>
+		<section class="hero full-height">
+			<div class="container">
+				<div class="row middle-xs">
+					<div class="col-xs-12 col-md-5">
+						<p class="superheading">{{ pageSupertitle }}</p>
+						<h1>{{ pageTitle }}<mark class="dot">.</mark></h1>
+						<p class="subheading">{{ pageSubtitle }}</p>
+					</div>
+					<div class="col-xs-12 col-md-7 my-2">
+						{% include forms/_home-generic.liquid %}
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="black-to-footer pb-4">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4">
@@ -29,3 +54,4 @@ pageSubtitle: Contact our corporate office.
 				</div>
 			</div>
 		</section>
+{% include _footer.liquid %}

@@ -1,15 +1,15 @@
 /*
 
 
-	        .:++ooo+/:.    
-	      :oooooooooooo+-  
-	    `+ooo+-`` `.:oooo/ 
-	    /ooo/        `+ooo-
-	    oooo.  `:///: :ooo/
-	    /ooo/   .+ooo++ooo-
-	    `+ooo+-.``:oooooo/ 
-	      :ooooooo-.oooo+` 
-	        .:++ooo:`/oooo-
+			.:++ooo+/:.    
+		  :oooooooooooo+-  
+		`+ooo+-`` `.:oooo/ 
+		/ooo/        `+ooo-
+		oooo.  `:///: :ooo/
+		/ooo/   .+ooo++ooo-
+		`+ooo+-.``:oooooo/ 
+		  :ooooooo-.oooo+` 
+			.:++ooo:`/oooo-
 
 	  OneQode Parent Company Site
 
@@ -597,30 +597,132 @@ table thead {
 FORMS
  - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-.input {
-	box-sizing: border-box;
-	position: relative;
-	display: inline-block;
-	background: rgba(0,0,0,0.3);
-	border: 1px solid rgba(0,0,0,0.4);
-	border-radius: 0.4em;
-	padding: 1rem;
-	font-size: 1.5rem;
-	color: #949494;
-	transition: all 0.2s;
-	margin: 0 0 1rem 0;
+.mauticform-name {
+	font-weight: bold;
+	font-size: 1.5em;
+	margin-bottom: 3px;
+}
+.mauticform-description {
+	margin-top: 2px;
+	margin-bottom: 10px;
+}
+.mauticform-error {
+	margin-bottom: 10px;
+	color: red;
+}
+.mauticform-message {
+	margin-bottom: 10px;
+	color: green;
+}
+.mauticform-row {
+	display: block;
+	margin-bottom: 20px;
+}
+.mauticform-label {
+	font-size: 1.1em;
+	display: block;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+.mauticform-row.mauticform-required .mauticform-label:after {
+	color: #e32;
+	content: " *";
+	display: inline;
+}
+.mauticform-helpmessage {
+	display: block;
+	font-size: 0.9em;
+	margin-bottom: 3px;
+}
+.mauticform-errormsg {
+	display: block;
+	color: red;
+	margin-top: 2px;
+}
+.mauticform-selectbox,
+.mauticform-input,
+.mauticform-textarea {
 	width: 100%;
-	outline: 0;
+	box-sizing: border-box;
+}
+.mauticform-checkboxgrp-label {
+	font-weight: normal;
+}
+.mauticform-radiogrp-label {
+	font-weight: normal;
+}
+.mauticform-button-wrapper .mauticform-button.btn-default,
+.mauticform-pagebreak-wrapper .mauticform-pagebreak.btn-default {
+	color: #5d6c7c;
+	background-color: #ffffff;
+	border-color: #dddddd;
+}
+.mauticform-button-wrapper .mauticform-button,
+.mauticform-pagebreak-wrapper .mauticform-pagebreak {
+	display: inline-block;
+	margin-bottom: 0;
+	vertical-align: middle;
+	cursor: pointer;
+	background-image: none;
+	white-space: nowrap;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.mauticform-button-wrapper .mauticform-button.btn-default[disabled],
+.mauticform-pagebreak-wrapper .mauticform-pagebreak.btn-default[disabled] {
+	background-color: #ffffff;
+	border-color: #dddddd;
+	opacity: 0.75;
+	cursor: not-allowed;
+}
+.mauticform-pagebreak-wrapper .mauticform-button-wrapper {
+	display: inline;
+}
+input:not(.pac-target-input),
+select,
+textarea {
+	font-size: 20px;
+	height: 56px;
+	display: block;
+	box-sizing: border-box;
 	font-family: 'Work Sans', sans-serif;
+	width: 100%;
+	max-width: 100%;
+	padding: 6px 12px;
+	line-height: 1.428571429;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	background: rgba(0, 0, 0, 0.3);
+	color: #fff;
+	border: 1px solid #333;
+	border-radius: 10px;
+	transition: all 0.2s;
 }
-.input:focus {
-	background: #f8f8f8;
-	border: 1px solid #949494;
-	box-shadow: 0px 0px 25px 0px #7db1c3;
+input::placeholder {
+	color: #999;
+	font-weight: 400;
+}
+select {
+	color: #999;
+}
+input:focus,
+select:focus,
+textarea:focus {
+	background: #002735;
+	border: 1px solid #666;
+	box-shadow: 0px 0px 25px 0px #1b5469;
+	color: #00b0f0;
+	outline: none;
+}
+input:focus::placeholder,
+select:focus::placeholder,
+textarea:focus::placeholder {
 	color: #00b0f0;
 }
-.input:focus::placeholder {
-	color: #00b0f0;
+textarea {
+	height: initial;
+	resize: vertical;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - -
