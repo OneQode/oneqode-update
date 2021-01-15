@@ -14,30 +14,6 @@ availabilityChecker: true
 {% include _header.liquid %}
 	<!-- Page-Specific Styles -->
 	<style>
-		/*
-			Size guide:
-			<48em — xs | 48-64em — sm | 64-75 — md | >75 — lg
-		*/
-		/* City */
-		/*.hero {
-			background-position: bottom center;
-			background-blend-mode: lighten;
-		}
-		.no-webp .hero {
-			background: radial-gradient(circle at bottom,#002735 0%,#000000 100%), url("/img/bg/brisbane-building-outlines.jpg") no-repeat bottom center;
-			background-size: initial;
-		}
-		.webp .hero {
-			background: url("/img/bg/light-speed-blur.webp") no-repeat bottom center;
-			background-size: cover;
-			background: radial-gradient(circle at bottom,#002735 0%,#000000 100%), url("/img/bg/brisbane-building-outlines.webp") no-repeat bottom center;
-			background-size: initial;
-		}
-		@media screen and (max-width: 64em) {
-			.hero {
-				background-size: contain !important;
-			}
-		}*/
 		/* Light Blur */
 		.hero {
 			background-position: bottom center;
@@ -163,21 +139,26 @@ availabilityChecker: true
 	</section>
 	<section class="blue py-2">
 		<div class="container">
-			<div class="col-md-10 col-md-offset-1 text-center">Rolling out across Australia 
+			<div class="col-md-10 col-md-offset-1 text-center">Rolling out across Australia ◾ Urban, Regional and Rural
+			{% comment %}
 			<a href="#">See Roadmap<svg width="1rem" height="1rem" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 					<path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
 				</svg>
-			</a></div>
+			</a>
+			{% endcomment %}
+			</div>
 		</div>
 	</section>
 	<section class="embers py-8">
 		<div class="container text-center">
-			<div class="row">
-				<div class="col-sm col-md-8 col-md-offset-2">
-					<h2 class="text-center">Internet done<br class="responsive"> <mark>properly</mark><mark class="dot">.</mark></h2>
-				</div>
+			<div class="col-sm col-md-10 col-md-offset-1">
+				<h2>Better internet,<br class="responsive"> from the ground up<mark class="dot">.</mark></h2>
+				<p class="subheading">Building a genuine alternative<mark class="dot">.</mark></p>
+				<p>Aussie internet isn't up to scratch, so we're building a faster, more reliable alternative.</p>
+				<p>We're helping gamers, businesses, and internet lovers get incredible internet — without paying a fortune.</p>
+				<p><a href="/about/" class="button mt-2 m-1">About Us</a><a href="/internet/" class="button ghost mt-2 m-1">See Plans</a></p>
 			</div>
-			<div class="row icons features mt-4">
+			<div class="row icons features mt-8">
 				<div class="col-sm-6 col-md-4 p-2">
 					<picture>
 						<source srcset="/img/ico/unlimited-data.webp" type="image/webp">
@@ -223,6 +204,7 @@ availabilityChecker: true
 	</section>
 	<section class="mid-to-footer text-center py-8">
 		<div class="container">
+			{% comment %}
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
 					<h2>How you can <mark>connect</mark><mark class="dot">:</mark></h2>
@@ -251,7 +233,8 @@ availabilityChecker: true
 					</a>
 				</div>
 			</div>
-			<div class="row mt-8 pt-4">
+			{% endcomment %}
+			<div class="row mt-4">
 				<div class="col-xs"><h2>How it works<mark class="dot">:</mark></h2></div>
 			</div>
 			<div class="row icons">
