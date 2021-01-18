@@ -7,7 +7,7 @@ changefreq: monthly
 priority: 1
 ogImage: og-image.jpg
 pageTitle: Lightning-fast internet
-pageSubtitle: Australia’s next-gen internet service provider.
+pageSubtitle: Australia’s next-gen internet service provider
 availabilityChecker: true
 
 ---
@@ -39,20 +39,6 @@ availabilityChecker: true
 		.icons.features p {
 			font-size: 1rem;
 			color: #888;
-		}
-		.no-webp .embers {
-			background-size: contain;
-			background-position: bottom center;
-			background-blend-mode: lighten;
-			background-image: radial-gradient(circle at top,#002735 0%,#000000 100%),url("/img/bg/blue-embers.jpg");
-			background-repeat: no-repeat;
-		}
-		.webp .embers {
-			background-size: contain;
-			background-position: bottom center;
-			background-blend-mode: lighten;
-			background-image: radial-gradient(circle at top,#002735 0%,#000000 100%),url("/img/bg/blue-embers.webp");
-			background-repeat: no-repeat;
 		}
 		@media screen and (max-width: 48em) {
 			.icons img {
@@ -112,7 +98,7 @@ availabilityChecker: true
 	<section class="hero full-height">
 		<div class="container">
 			<div class="row middle-xs text-center">
-				<div class="col-xs col-md-10 col-md-offset-1">
+				<div class="col-xs-12 col-md-10 col-md-offset-1">
 					<h1>{{ pageTitle }}<mark class="dot">.</mark></h1>
 					<p class="subheading">{{ pageSubtitle }}</p>
 					{% include parts/_address-checker-home.liquid %}
@@ -149,14 +135,14 @@ availabilityChecker: true
 			</div>
 		</div>
 	</section>
-	<section class="embers py-8">
+	<section class="black-to-footer pt-8 pb-4">
 		<div class="container text-center">
-			<div class="col-sm col-md-10 col-md-offset-1">
+			<div class="col-md-10 col-md-offset-1 text-center">
 				<h2>Better internet,<br class="responsive"> from the ground up<mark class="dot">.</mark></h2>
 				<p class="subheading">Building a genuine alternative<mark class="dot">.</mark></p>
-				<p>Aussie internet isn't up to scratch, so we're building a faster, more reliable alternative.</p>
-				<p>We're helping gamers, businesses, and internet lovers get incredible internet — without paying a fortune.</p>
-				<p><a href="/about/" class="button mt-2 m-1">About Us</a><a href="/internet/" class="button ghost mt-2 m-1">See Plans</a></p>
+				<p>Aussie internet isn’t up to scratch, so we’re building a faster, more reliable alternative.</p>
+				<p>We help gamers, businesses, and internet lovers get a quality connection without paying a fortune.</p>
+				<p><a href="/about/" class="button mt-2">About Us</a></p>
 			</div>
 			<div class="row icons features mt-8">
 				<div class="col-sm-6 col-md-4 p-2">
@@ -197,14 +183,40 @@ availabilityChecker: true
 						<img class="opaque" src="/img/ico/australian-owned-and-operated.png" alt="Australia map outline">
 					</picture>
 					<h3>Homegrown and local</h3>
-					<p>OneQode is built by Aussies, for Aussies. Everyone involved understands what makes us tick, so when you need a hand, you’ll have someone who understands.</p>
+					<p>OneQode is built by Aussies, for Aussies. Everyone involved understands what makes us tick, so when you need a hand, we’ll be with you all the way.</p>
+				</div>
+			</div>
+			<div class="row mt-8">
+				<div class="col-xs"><h2>How it works<mark class="dot">:</mark></h2></div>
+			</div>
+			<div class="row icons">
+				<div class="col-sm-4 p-2">
+					<picture>
+						<source srcset="/img/ico/sign-up.webp" type="image/webp">
+						<img class="opaque" src="/img/ico/sign-up.png" alt="Clicking on a sign-up button">
+					</picture>
+					<p>You sign up to get <strong>connected</strong></p>
+				</div>
+				<div class="col-sm-4 p-2">
+					<picture>
+						<source srcset="/img/ico/beacon-installation.webp" type="image/webp">
+						<img class="opaque" src="/img/ico/beacon-installation.png" alt="Home internet Wi-Fi router">
+					</picture>
+					<p>We install a <strong>beacon</strong> at your location</p>
+				</div>
+				<div class="col-sm-4 p-2">
+					<picture>
+						<source srcset="/img/ico/fast-internet.webp" type="image/webp">
+						<img class="opaque" src="/img/ico/fast-internet.png" alt="Computer with a rocket launching from the screen">
+					</picture>
+					<p>You will enjoy <strong>blazing-fast</strong> internet</p>
 				</div>
 			</div>
 		</div>
 	</section>
+	{% comment %}
 	<section class="mid-to-footer text-center py-8">
 		<div class="container">
-			{% comment %}
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
 					<h2>How you can <mark>connect</mark><mark class="dot">:</mark></h2>
@@ -233,35 +245,9 @@ availabilityChecker: true
 					</a>
 				</div>
 			</div>
-			{% endcomment %}
-			<div class="row mt-4">
-				<div class="col-xs"><h2>How it works<mark class="dot">:</mark></h2></div>
-			</div>
-			<div class="row icons">
-				<div class="col-sm-4 p-2">
-					<picture>
-						<source srcset="/img/ico/sign-up.webp" type="image/webp">
-						<img class="opaque" src="/img/ico/sign-up.png" alt="Clicking on a sign-up button">
-					</picture>
-					<p>You sign up to get <strong>connected</strong></p>
-				</div>
-				<div class="col-sm-4 p-2">
-					<picture>
-						<source srcset="/img/ico/beacon-installation.webp" type="image/webp">
-						<img class="opaque" src="/img/ico/beacon-installation.png" alt="Home internet Wi-Fi router">
-					</picture>
-					<p>We install a <strong>beacon</strong> at your location</p>
-				</div>
-				<div class="col-sm-4 p-2">
-					<picture>
-						<source srcset="/img/ico/fast-internet.webp" type="image/webp">
-						<img class="opaque" src="/img/ico/fast-internet.png" alt="Computer with a rocket launching from the screen">
-					</picture>
-					<p>Enjoy <strong>blazing-fast</strong> internet</p>
-				</div>
-			</div>
 		</div>
 	</section>
+	{% endcomment %}
 <script>
 	// Only run on desktop
 	if (window.matchMedia( "(min-width: 48em)" )) {

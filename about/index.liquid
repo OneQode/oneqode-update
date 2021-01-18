@@ -121,88 +121,6 @@ pageSubtitle: We're on a mission to put Australia in <br class="responsive">the 
 	.no-webp .feature.lastmile {
 		background-image: linear-gradient(90deg, #1c1d22 60%, rgba(28,29,34,0.7) 100%), url(../img/company-last-mile-oneqode-wireless.jpg);
 	}
-
-	/* Animated Lines */
-	.push-forward {
-		position: relative;
-		z-index: 2;
-	}
-	section.lines {
-		position: relative;
-		z-index: 1;
-		min-height: 40vh;
-		margin: -8rem 0 -20rem 0;
-		background-image:
-		/* TOP TO BOTTOM */
-		url(../img/bg/network-line.svg),
-		url(../img/bg/network-line.svg),
-		url(../img/bg/network-line.svg),
-		url(../img/bg/network-line.svg),
-		url(../img/bg/network-line-reverse.svg),
-		url(../img/bg/network-line-reverse.svg),
-		url(../img/bg/network-line-reverse.svg)
-		;
-		background-repeat: no-repeat;
-		animation: bglines 5s infinite linear;
-	}
-	@keyframes bglines {
-		from {
-			background-position:
-			-600% 10%,
-			-250% 30%,
-			-800% 50%,
-			-200% 80%,
-			200% 25%,
-			450% 60%,
-			300% 85%;
-		}
-		to {
-			background-position:
-			550% 10%,
-			750% 30%,
-			410% 50%,
-			300% 80%,
-			-700% 25%,
-			-200% 60%,
-			-450% 85%;
-		}
-	}
-	section.companies {
-		background-image:
-		/* TOP TO BOTTOM */
-		url(../img/bg/network-line.svg),
-		url(../img/bg/network-line.svg),
-		url(../img/bg/network-line.svg),
-		url(../img/bg/network-line.svg),
-		url(../img/bg/network-line-reverse.svg),
-		url(../img/bg/network-line-reverse.svg),
-		url(../img/bg/network-line-reverse.svg)
-		;
-		background-repeat: no-repeat;
-		animation: bglinestwo 5s infinite linear;
-	}
-	@keyframes bglinestwo {
-		from {
-			background-position:
-			-600% 60%,
-			-250% 70%,
-			-800% 50%,
-			-200% 80%,
-			200% 30%,
-			450% 60%,
-			300% 85%;
-		}
-		to {
-			background-position:
-			550% 60%,
-			750% 70%,
-			410% 50%,
-			300% 80%,
-			-700% 30%,
-			-200% 60%,
-			-450% 85%;
-		}
-	}
 	/* Mobile Styles */
 	@media (max-width: 48em) {
 		.feature {
@@ -212,38 +130,9 @@ pageSubtitle: We're on a mission to put Australia in <br class="responsive">the 
 		.center-mobile {
 			text-align: center;
 		}
-		section.lines {
-			margin: -8rem 0 -17rem 0;
-		}
-		/* Animated Lines on Mobile */
-		@keyframes bglines {
-			from {
-				background-position:
-				-2600px 10%,
-				-2250px 30%,
-				-2800px 50%,
-				-2200px 80%,
-				2200px 25%,
-				2450px 60%,
-				2300px 85%;
-			}
-			to {
-				background-position:
-				2550px 10%,
-				2750px 30%,
-				2410px 50%,
-				2300px 80%,
-				-2700px 25%,
-				-2200px 60%,
-				-2450px 85%;
-			}
-		}
-		section.companies {
-			animation: bglines 5s infinite linear;
-		}
 	}
 </style>
-<section class="pt-4 push-forward">
+<section class="pt-4">
 	<div class="container">
 		<div class="row text-center">
 			<div class="col-md-8 col-md-offset-2">
@@ -254,10 +143,7 @@ pageSubtitle: We're on a mission to put Australia in <br class="responsive">the 
 		</div>
 	</div>
 </section>
-<section class="lines">
-	<!-- Things -->
-</section>
-<section class="push-forward">
+<section>
 	<div class="container">
 		<div class="row mt-8 text-center">
 			<div class="col-md-8 col-md-offset-2 text-center"><h2>How we're making Aussie internet faster<mark class="dot">:</mark></h2></div>
@@ -300,7 +186,7 @@ pageSubtitle: We're on a mission to put Australia in <br class="responsive">the 
 <section class="pt-4 companies">
 	<div class="container">
 		<div class="row">
-			<div class="col-xs col-md-8 col-md-offset-2 text-center">
+			<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
 				<p class="superheading">What we do</p>
 				<h2>Internet<mark class="dot">,</mark> connectivity<mark class="dot">,</mark> <br class="responsive">and gaming<mark class="dot">.</mark></h2>
 				<p>Building a world where incredible internet is the baseline.</p>
@@ -317,7 +203,7 @@ pageSubtitle: We're on a mission to put Australia in <br class="responsive">the 
 				</a>
 			</div>
 			<div class="col-sm-6 col-md-4">
-				<a href="https://metroxc.com" target="_blank" title="MetroXC • Data Center Cross Connects">
+				<a href="https://metroxc.com" target="_blank" rel="noopener" title="MetroXC • Data Center Cross Connects">
 					<div class="box">
 						<img src="../img/brand/metroxc-logo.svg" title="MetroXC" class="hyperion">
 						<h3>Fibre Cross-Connects</h3>
@@ -326,7 +212,7 @@ pageSubtitle: We're on a mission to put Australia in <br class="responsive">the 
 				</a>
 			</div>
 			<div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-0">
-				<a href="https://hyperion-servers.com" target="_blank" title="Hyperion Servers • Game Server Hosting in Guam">
+				<a href="https://hyperion-servers.com" target="_blank" rel="noopener" title="Hyperion Servers • Game Server Hosting in Guam">
 					<div class="box">
 						<img src="../img/brand/hyperion-servers-logo.svg" title="Hyperion Servers" class="hyperion">
 						<h3>Game Server Hosting</h3>

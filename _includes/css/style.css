@@ -579,6 +579,9 @@ table td, table th {
 	border-bottom: 1px solid #999;
 	vertical-align: top;
 }
+table tr:first-child td, table tr:first-child th {
+	padding-top: 0;
+}
 tbody tr:last-child td, tbody tr:last-child th {
 	border-bottom: none;
 }
@@ -683,7 +686,7 @@ FORMS
 .mauticform-pagebreak-wrapper .mauticform-button-wrapper {
 	display: inline;
 }
-input:not(.pac-target-input),
+input:not(.pac-target-input):not(.pac-target-input),
 select,
 textarea {
 	font-size: 20px;
@@ -709,7 +712,7 @@ input::placeholder {
 select {
 	color: #999;
 }
-input:focus,
+input:focus:not(.pac-target-input),
 select:focus,
 textarea:focus {
 	background: #002735;
@@ -926,7 +929,7 @@ CONTENT
 	color: #999;
 }
 @media screen and (max-width: 48em) {
-	.icons p {
+	p.hide-mobile {
 		display: none;
 	}
 }

@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 col-md-3 py-1 pb-2">
-					<a class="logomark" href="/" title="OneQode • Australia's 21st Century Telecommunications Provider">
+					<a class="logomark" href="/" title="OneQode • Australia’s 21st Century Telecommunications Provider">
 						<img src="/img/symbol.svg" alt="OneQode Logomark/Symbol">
 					</a>
 				</div>
@@ -18,7 +18,40 @@
 				<div class="col-sm-6 col-md-3 py-1">
 					<p>Help & Support</p>
 					<ul>
-						<li><a href="#" title="Get help and assistance with your OneQode services">Get Support</a></li>
+						<li><a href="
+							{%- case section -%}
+								{%- when "home" -%}
+									{{ global.login.home }}
+								{%- when "business" -%}
+									{{ global.login.business }}
+								{%- when "wholesale" -%}
+									{{ global.login.wholesale }}
+								{%- else -%}
+									{{ global.login.home }}
+							{%- endcase -%}
+							" title="
+							{%- case section -%}
+								{%- when "home" -%}
+									Get help and assistance with your OneQode services
+								{%- when "business" -%}
+									Get help and assistance with your OneQode for Business Services
+								{%- when "wholesale" -%}
+									Get help and assistance with your OneQode for Wholesale Services
+								{%- else -%}
+									Get help and assistance with your OneQode services
+							{%- endcase -%}
+							" target="_blank" rel="noopener">
+								{%- case section -%}
+									{%- when "home" -%}
+										Get support
+									{%- when "business" -%}
+										Business support
+									{%- when "wholesale" -%}
+										Wholesale support
+									{%- else -%}
+										Get support
+								{%- endcase -%}
+							</a></li>
 						<li><a href="
 								{%- case section -%}
 									{%- when "home" -%}
