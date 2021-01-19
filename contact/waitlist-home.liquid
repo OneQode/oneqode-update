@@ -14,6 +14,9 @@ form: true
 			section.hero {
 				background: linear-gradient(to bottom, transparent 50%, #0c0c0c 100%), radial-gradient(circle at bottom,#002735 0,#000 100%);
 			}
+			.full-height {
+				padding-top: 6rem !important;
+			}
 		</style>
 		<section class="hero full-height">
 			<div class="container">
@@ -24,7 +27,7 @@ form: true
 						<p class="subheading">{{ pageSubtitle }}</p>
 					</div>
 				</div>
-				<div class="row mt-4">
+				<div class="row">
 					<div class="col-sm col-md-8 col-md-offset-2 my-2">
 						{% include forms/_home-waitlist.liquid %}
 					</div>
