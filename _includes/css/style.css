@@ -929,7 +929,7 @@ CONTENT
 	color: #999;
 }
 @media screen and (max-width: 48em) {
-	p.hide-mobile {
+	.hide-mobile {
 		display: none;
 	}
 }
@@ -1279,7 +1279,7 @@ RESPONSIVE OVERRIDES
 	h1 {
 		font-size: 2.5rem;
 	}
-	h2 {
+	h2, .media h1 {
 		font-size: 2rem;
 	}
 	/* Mobile Menu */

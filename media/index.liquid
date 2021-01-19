@@ -12,6 +12,11 @@ pageSubtitle: Making Australia an internet leader.
 ---
 {% include _header.liquid %}
 		<style>
+			@media only screen and (max-width: 48em) {
+				section.hero {
+					padding-top: 6rem;
+				}
+			}
 			@media only screen and (min-width: 48em) {
 				.hero {
 					background-size: cover !important;
@@ -57,7 +62,7 @@ pageSubtitle: Making Australia an internet leader.
 				</h2>
 			</div>
 			<div class="container linked">
-				<div class="row">
+				<div class="row mobile-flex">
 					<div class="col-md-8">
 						{%- for post in collections.internal reversed -%}
 						<a href="{{ post.url }}">
@@ -77,7 +82,7 @@ pageSubtitle: Making Australia an internet leader.
 				<h2 class="mb-4">In the Media</h2>
 			</div>
 			<div class="container linked">
-				<div class="row">
+				<div class="row mobile-flex">
 					<div class="col-md-8">
 						{%- for item in media-mentions %}
 						<a href="{{ item.url }}" target="_blank">
