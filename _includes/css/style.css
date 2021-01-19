@@ -1387,7 +1387,7 @@ RESPONSIVE OVERRIDES
 	}
 	section.hero {
 		text-align: center;
-		padding-top: 4rem;
+		padding-top: 2rem;
 	}
 	footer, footer ul, footer .credits {
 		text-align: center !important;
@@ -1411,10 +1411,12 @@ RESPONSIVE OVERRIDES
 		stroke-width: 8;
 	}
 }
-/* Padding at top on small devices
-@media screen and (max-width: 22em) {
+/* Very small phones */
+@media screen and (max-width: 340px) {
 	section.hero {
-		padding-top: 2.5rem;
+		padding-top: 4rem;
+	}
+	h1 {
+		font-size: 2.25rem;
 	}
 }
-*/

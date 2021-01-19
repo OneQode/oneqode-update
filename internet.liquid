@@ -45,7 +45,7 @@ availabilityChecker: true
 					}
 				}
 				</script>
-		<section class="hero">
+		<section class="hero" id="check">
 			<div class="container">
 				<div class="row middle-xs">
 					<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
@@ -86,9 +86,9 @@ availabilityChecker: true
 				<!-- Start 12 Month Plans -->
 				<div class="row pricing mt-2" id="12m-content">
 					<div class="col-xs-12 col-sm-6 col-sm-offset-0 col-lg-4 col-lg-offset-2 my-2">
-						<a href="#start" class="box glowing featured">
-							<h3 class="mb-0">Good</h3>
-							<p class="subheading">for most households</p>
+						<a href="#start" class="box glowing">
+							<h3 class="mb-0">Micro</h3>
+							<p class="subheading">for small households</p>
 							<p>Download speed <span class="speed">50<span> Mbps</span></span></p>
 							<p>Upload speed <span class="speed upload">50<span> Mbps</span></span></p>
 							<p>Modem included <span>None</span></p>
@@ -98,9 +98,9 @@ availabilityChecker: true
 						</a>
 					</div>
 					<div class="col-xs-12 col-sm-6 col-lg-4 my-2">
-						<a href="#start" class="box glowing">
-							<h3 class="mb-0">Great</h3>
-							<p class="subheading">for internet lovers</p>
+						<a href="#start" class="box glowing featured">
+							<h3 class="mb-0">Standard</h3>
+							<p class="subheading">for most households</p>
 							<p>Download speed <span class="speed">100<span> Mbps</span></span></p>
 							<p>Upload speed <span class="speed upload">100<span> Mbps</span></span></p>
 							<p>Modem included <span>None</span></p>
@@ -114,9 +114,9 @@ availabilityChecker: true
 				<!-- Start Month to Month Plans -->
 				<div class="row pricing mt-2" id="mtm-content" style="display: none;">
 					<div class="col-xs-12 col-sm-6 col-sm-offset-0 col-lg-4 col-lg-offset-2 my-2">
-						<a href="#start" class="box glowing featured">
-							<h3 class="mb-0">Good</h3>
-							<p class="subheading">for most households</p>
+						<a href="#start" class="box glowing">
+							<h3 class="mb-0">Micro</h3>
+							<p class="subheading">for small households</p>
 							<p>Download speed <span class="speed">50<span> Mbps</span></span></p>
 							<p>Upload speed <span class="speed upload">50<span> Mbps</span></span></p>
 							<p>Modem included <span>None</span></p>
@@ -126,9 +126,9 @@ availabilityChecker: true
 						</a>
 					</div>
 					<div class="col-xs-12 col-sm-6 col-lg-4 my-2">
-						<a href="#start" class="box glowing">
-							<h3 class="mb-0">Great</h3>
-							<p class="subheading">for internet lovers</p>
+						<a href="#start" class="box glowing featured">
+							<h3 class="mb-0">Standard</h3>
+							<p class="subheading">for most households</p>
 							<p>Download speed <span class="speed">100<span> Mbps</span></span></p>
 							<p>Upload speed <span class="speed upload">100<span> Mbps</span></span></p>
 							<p>Modem included <span>None</span></p>
@@ -178,6 +178,7 @@ availabilityChecker: true
 				<div class="row mt-8" id="start">
 					<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
 						<h2 class="text-center">Want to get started<mark class="dot">?</mark></h2>
+						<p class="mb-2">If it's available in your area (<a href="#check">check here</a>), enter your details here:</p>
 						{% include forms/_home-internet.liquid %}
 					</div>
 				</div>
