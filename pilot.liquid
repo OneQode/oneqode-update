@@ -30,6 +30,10 @@ form: true
 					column-gap: 4rem;
 				}
 			}
+			span.smaller {
+				font-size: 1rem;
+				display: block;
+			}
 		</style>
 		<script>
 		// Pricing Toggle
@@ -55,71 +59,9 @@ form: true
 				<div class="row">
 					<div class="col-xs-12 col-md-8 col-md-offset-2">
 						<h2>Join the pilot programme<mark class="dot">.</mark></h2>
-						<div id="clockdiv">
-							<div>
-								<span class="days"></span>
-								<div class="smalltext">Days</div>
-							</div>
-							<div>
-								<span class="hours"></span>
-								<div class="smalltext">Hours</div>
-							</div>
-							<div>
-								<span class="minutes"></span>
-								<div class="smalltext">Minutes</div>
-							</div>
-							<div>
-								<span class="seconds"></span>
-								<div class="smalltext">Seconds</div>
-							</div>
-						</div>
-						<!-- Taken in a rush directly from here: https://www.sitepoint.com/build-javascript-countdown-timer-no-dependencies/ -->
-						<script>
-							function getTimeRemaining(endtime) {
-							  const total = Date.parse(endtime) - Date.parse(new Date());
-							  const seconds = Math.floor((total / 1000) % 60);
-							  const minutes = Math.floor((total / 1000 / 60) % 60);
-							  const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
-							  const days = Math.floor(total / (1000 * 60 * 60 * 24));
-							  
-							  return {
-							    total,
-							    days,
-							    hours,
-							    minutes,
-							    seconds
-							  };
-							}
-
-							function initializeClock(id, endtime) {
-							  const clock = document.getElementById(id);
-							  const daysSpan = clock.querySelector('.days');
-							  const hoursSpan = clock.querySelector('.hours');
-							  const minutesSpan = clock.querySelector('.minutes');
-							  const secondsSpan = clock.querySelector('.seconds');
-
-							  function updateClock() {
-							    const t = getTimeRemaining(endtime);
-
-							    daysSpan.innerHTML = t.days;
-							    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-							    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-							    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
-							    if (t.total <= 0) {
-							      clearInterval(timeinterval);
-							    }
-							  }
-
-							  updateClock();
-							  const timeinterval = setInterval(updateClock, 1000);
-							}
-
-							const deadline = '2021-02-28';
-							initializeClock('clockdiv', deadline);
-						</script>
+						<h3>⏰ <mark>Offer ends 28th February 2021</mark></h3>
 						<p>Enjoy high speeds, and lock in exclusive early access pricing which we’ll honour forever.</p>
-						<p>On 12 month plans, we’re offering free installation and setup.</p>
+						<p>You'll get <mark><strong>free</strong></mark> installation and setup if you choose a 12 month Micro or Standard plan.</p>
 						<p><strong>How does it work?</strong> We’ll install a small antenna on your roof, which connects you to our internet backbone via ultrafast, low power fixed wireless.</p>
 					</div>
 				</div>
@@ -148,7 +90,7 @@ form: true
 						<h3 class="mt-2">Pilot plans include:</h3>
 						<ul class="ticks large two-col">
 							<li>Unlimited data</li>
-							<li><strong>No setup fee</strong><br class="responsive"> on 12 month plans</li>
+							<li><strong>No setup fee</strong> <span class="smaller">on selected 12 month plans</span></li>
 							<li>Included modem</li>
 							<li>Local support</li>
 						</ul>
@@ -173,7 +115,7 @@ form: true
 							<p class="subheading">for light users</p>
 							<p>Download speed <span class="speed">50<span> Mbps</span></span></p>
 							<p>Upload speed <span class="speed upload">50<span> Mbps</span></span></p>
-							<p>Modem included <span>None</span></p>
+							<p>Modem included <span>No</span></p>
 							<p>Installation fee <span>$0</span></p>
 							<p class="price">$69<span>/mo</span></p>
 							<p class="min">Total minimum cost: $828</p>
@@ -185,7 +127,7 @@ form: true
 							<p class="subheading">for most businesses</p>
 							<p>Download speed <span class="speed">100<span> Mbps</span></span></p>
 							<p>Upload speed <span class="speed upload">100<span> Mbps</span></span></p>
-							<p>Modem included <span>None</span></p>
+							<p>Modem included <span>No</span></p>
 							<p>Installation fee <span>$0</span></p>
 							<p class="price">$89<span>/mo</span></p>
 							<p class="min">Total minimum cost: $1,068</p>
@@ -197,7 +139,7 @@ form: true
 							<p class="subheading">for heavy users</p>
 							<p>Download speed <span class="speed">100<span> Mbps</span></span></p>
 							<p>Upload speed <span class="speed upload">100<span> Mbps</span></span></p>
-							<p>Modem included <span>None</span></p>
+							<p>Modem included <span>No</span></p>
 							<p>Installation fee <span>$899</span></p>
 							<p class="price">$629<span>/mo</span></p>
 							<p class="min">Total minimum cost: $8,447</p>
@@ -213,7 +155,7 @@ form: true
 							<p class="subheading">for light users</p>
 							<p>Download speed <span class="speed">50<span> Mbps</span></span></p>
 							<p>Upload speed <span class="speed upload">50<span> Mbps</span></span></p>
-							<p>Modem included <span>None</span></p>
+							<p>Modem included <span>No</span></p>
 							<p>Installation fee <span>$299</span></p>
 							<p class="price">$69<span>/mo</span></p>
 							<p class="min">Total minimum cost: $368</p>
@@ -225,7 +167,7 @@ form: true
 							<p class="subheading">for most businesses</p>
 							<p>Download speed <span class="speed">100<span> Mbps</span></span></p>
 							<p>Upload speed <span class="speed upload">100<span> Mbps</span></span></p>
-							<p>Modem included <span>None</span></p>
+							<p>Modem included <span>No</span></p>
 							<p>Installation fee <span>$299</span></p>
 							<p class="price">$89<span>/mo</span></p>
 							<p class="min">Total minimum cost: $388</p>
@@ -237,7 +179,7 @@ form: true
 							<p class="subheading">for heavy users</p>
 							<p>Download speed <span class="speed">100<span> Mbps</span></span></p>
 							<p>Upload speed <span class="speed upload">100<span> Mbps</span></span></p>
-							<p>Modem included <span>None</span></p>
+							<p>Modem included <span>No</span></p>
 							<p>Installation fee <span>$1,299</span></p>
 							<p class="price">$629<span>/mo</span></p>
 							<p class="min">Total minimum cost: $1,928</p>
@@ -245,7 +187,7 @@ form: true
 					</div>
 				</div>
 				<!-- End Month to Month Plans -->
-				<p class="mt-2 cis">Check out the <a href="#" target="_blank">Critical Information Summary</a></p>
+				<p class="mt-2 cis">Check out the <a href="/legal/oneqode-critical-information-summary.pdf" target="_blank">Critical Information Summary</a></p>
 			</div>
 		</section>
 		<section class="mid-to-footer pb-4" id="start">
