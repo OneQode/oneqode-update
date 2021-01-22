@@ -1205,13 +1205,16 @@ ul.no-style {
 #network-map {
 	position: relative;
 	display: block;
+	width: 100%;
 }
 #network-map svg {
 	position: absolute;
 	z-index: 1;
+	width: 100%;
 }
 #network-map img {
 	opacity: 1;
+	width: 100%;
 }
 #network-map line, #network-map polyline {
 	fill-rule: evenodd;
