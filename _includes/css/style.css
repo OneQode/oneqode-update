@@ -362,6 +362,9 @@ li.has-submenu.open .submenu ul {
 			position: absolute;
 			padding: 1.5rem;
 		}
+		.mobile-only {
+			display: none !important;
+		}
 	}
 	/* Menu: Mobile */
 	@media (max-width: 48em) {
