@@ -506,6 +506,9 @@ mark {
 	background: none;
 	color: #00b0f0;
 }
+.faded {
+	color: #999;
+}
 /* Blue Dot */
 mark.dot {
 	font-family: Arial,'Helvetica Neue',Helvetica,sans-serif;
@@ -923,18 +926,28 @@ CONTENT
 }
 .icons h3 {
 	font-size: 1.25rem;
-	text-transform: uppercase;
 	min-height: 1.5rem;
 	margin-top: 2rem;
-	margin-bottom: auto;
+	margin-bottom: 1rem;
 }
 .icons p {
 	color: #999;
+	font-size: 1.2rem;
 }
 @media screen and (max-width: 48em) {
 	.hide-mobile {
 		display: none;
 	}
+}
+/* Standalone icons */
+.icon {
+	width: 5rem;
+	height: 5rem;
+	margin-left: auto;
+	margin-right: auto;
+	background: linear-gradient(145deg, #00b0f0, #002735);
+	-webkit-mask-size: cover !important;
+	mask-size: cover !important;
 }
 /* Press page */
 .press-info, .applicant-info {
