@@ -1253,6 +1253,10 @@ ul.no-style {
 	font-family: "Poppins", sans-serif;
 	font-weight: 600;
 }
+/* Abbreviations */
+abbr[title] {
+	cursor: help;
+}
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - -
 RESPONSIVE OVERRIDES
  - - - - - - - - - - - - - - - - - - - - - - - - - - - */
