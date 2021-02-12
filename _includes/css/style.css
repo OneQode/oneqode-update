@@ -70,14 +70,11 @@ footer, main {
 /* Tablet */
 @media (max-width: 1350px) {
 	.container {
-		width: 80%;
+		width: 90%;
 	}
 }
 /* Mobile */
 @media (max-width: 768px) {
-	.container {
-		width: 90%;
-	}
 	.row {
 		display: block;
 	}
