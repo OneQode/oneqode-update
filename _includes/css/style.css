@@ -608,88 +608,8 @@ FORMS
 input[name=gdpr] {
 	display: none !important;
 }
-.mauticform-name {
-	font-weight: bold;
-	font-size: 1.5em;
-	margin-bottom: 3px;
-}
-.mauticform-description {
-	margin-top: 2px;
-	margin-bottom: 10px;
-}
-.mauticform-error {
-	margin-bottom: 10px;
-	color: red;
-}
-.mauticform-message {
-	margin-bottom: 10px;
-	color: green;
-}
-.mauticform-row {
-	display: block;
-	margin-bottom: 20px;
-}
-.mauticform-label {
-	font-size: 1.1em;
-	display: block;
-	font-weight: bold;
-	margin-bottom: 5px;
-}
-.mauticform-row.mauticform-required .mauticform-label:after {
-	color: #e32;
-	content: " *";
-	display: inline;
-}
-.mauticform-helpmessage {
-	display: block;
-	font-size: 0.9em;
-	margin-bottom: 3px;
-}
-.mauticform-errormsg {
-	display: block;
-	color: red;
-	margin-top: 2px;
-}
-.mauticform-selectbox,
-.mauticform-input,
-.mauticform-textarea {
-	width: 100%;
-	box-sizing: border-box;
-}
-.mauticform-checkboxgrp-label {
-	font-weight: normal;
-}
-.mauticform-radiogrp-label {
-	font-weight: normal;
-}
-.mauticform-button-wrapper .mauticform-button.btn-default,
-.mauticform-pagebreak-wrapper .mauticform-pagebreak.btn-default {
-	color: #5d6c7c;
-	background-color: #ffffff;
-	border-color: #dddddd;
-}
-.mauticform-button-wrapper .mauticform-button,
-.mauticform-pagebreak-wrapper .mauticform-pagebreak {
-	display: inline-block;
-	margin-bottom: 0;
-	vertical-align: middle;
+button[type=submit] {
 	cursor: pointer;
-	background-image: none;
-	white-space: nowrap;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-}
-.mauticform-button-wrapper .mauticform-button.btn-default[disabled],
-.mauticform-pagebreak-wrapper .mauticform-pagebreak.btn-default[disabled] {
-	background-color: #ffffff;
-	border-color: #dddddd;
-	opacity: 0.75;
-	cursor: not-allowed;
-}
-.mauticform-pagebreak-wrapper .mauticform-button-wrapper {
-	display: inline;
 }
 input:not(.pac-target-input):not(.pac-target-input),
 select,
@@ -710,7 +630,7 @@ textarea {
 	border-radius: 10px;
 	transition: all 0.2s;
 }
-input::placeholder {
+input::placeholder, textarea::placeholder {
 	color: #999;
 	font-weight: 400;
 }
