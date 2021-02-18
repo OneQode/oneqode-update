@@ -87,6 +87,7 @@ window.addEventListener('load', function() {
 		// Keyboard
 		el.querySelector('a').addEventListener("click",  function(event){
 			if (this.parentNode.className == "has-submenu") {
+				closeDropdown();
 				this.parentNode.className = "has-submenu open";
 				this.setAttribute('aria-expanded', "true");
 			} else {
