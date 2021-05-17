@@ -605,9 +605,6 @@ table thead {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - -
 FORMS
  - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-input[name=gdpr] {
-	display: none !important;
-}
 button[type=submit] {
 	cursor: pointer;
 }
