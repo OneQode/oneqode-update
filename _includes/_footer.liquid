@@ -10,9 +10,9 @@
 				<div class="col-sm-6 col-md-3 py-1">
 					<p>Who we help</p>
 					<ul>
-						<li><a href="/" aria-label="OneQode for Home" title="Home internet, mobile broadband, and gaming services">Individuals</a></li>
-						<li><a href="/business/" aria-label="OneQode for Business" title="Business internet and connectivity">Organisations</a></li>
-						<li><a href="/wholesale/" aria-label="OneQode for Wholesale" title="Wholesale internet solutions">Service Providers</a></li>
+						<li><a href="/" aria-label="OneQode for Gaming" title="Services for Game Developers, Publishers and Server Providers">Game Industry</a></li>
+						<li><a href="/business/" aria-label="OneQode for Business" title="Business internet and connectivity">Businesses</a></li>
+						<li><a href="/wholesale/" aria-label="OneQode for Wholesale" title="Wholesale internet solutions">Network Operators</a></li>
 					</ul>
 				</div>
 				<div class="col-sm-6 col-md-3 py-1">
@@ -21,13 +21,13 @@
 						<li><a href="
 							{%- case section -%}
 								{%- when "home" -%}
-									{{ global.login.home }}
+									{{ global.login.business }}
 								{%- when "business" -%}
 									{{ global.login.business }}
 								{%- when "wholesale" -%}
 									{{ global.login.wholesale }}
 								{%- else -%}
-									{{ global.login.home }}
+									{{ global.login.business }}
 							{%- endcase -%}
 							" title="
 							{%- case section -%}
@@ -75,29 +75,7 @@
 										Reach out directly to the OneQode team
 								{%- endcase -%}
 								">Contact us</a></li>
-						<li><a href="
-								{%- case section -%}
-									{%- when "home" -%}
-										/legal/
-									{%- when "business" -%}
-										/business/legal/
-									{%- when "wholesale" -%}
-										/wholesale/legal/
-									{%- else -%}
-										/legal/
-								{%- endcase -%}
-							" title="
-								{%- case section -%}
-									{%- when "home" -%}
-										OneQode Terms & Policies
-									{%- when "business" -%}
-										OneQode Terms & Policies for Business Customers
-									{%- when "wholesale" -%}
-										OneQode Terms & Policies for Wholesale Customers
-									{%- else -%}
-										OneQode Terms & Policies
-								{%- endcase -%}
-								">Terms & Policies</a></li>
+						<li><a href="/legal/" title="OneQode Terms & Policies">Terms & Policies</a></li>
 					</ul>
 				</div>
 				<div class="col-sm-6 col-md-3 py-1">
