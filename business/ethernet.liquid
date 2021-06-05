@@ -1,229 +1,199 @@
 ---
-layout: page-left.liquid
 section: business
-metaTitle: Enterprise Ethernet • Metro, National & International • OneQode™
-metaDescription: High-performance point-to-point enterprise ethernet connectivity. Metro, national, and international ethernet services.
+metaTitle: Enterprise Ethernet Services • Australia & International • OneQode™
+metaDescription: Ultra low latency ethernet services across Asia-Pacific. Australian metro, nationwide, and international ethernet connectivity.
 changefreq: monthly
 priority: 0.5
 ogImage: enterprise-ethernet.jpg
-pageTitle: Enterprise <mark>ethernet</mark> services
-pageSubtitle: Point-to-Point connectivity <br class="responsive"> across Asia-Pacific
+pageTitle: Enterprise ethernet
+pageSubtitle: Secure private connectivity across<br class="responsive"> cities, states, and countries
 form: true
 ---
-	<style>
-	.no-webp .hero {
-		background: url("/img/bg/ethernet-switch.jpg") no-repeat 65% 50%;
-		background-size: cover;
-	}
-	.webp .hero {
-		background: url("/img/bg/ethernet-switch.webp") no-repeat 65% 50%;
-		background-size: cover;
-	}
-	</style>
-	<section class="blue py-2">
-		<div class="container">
-			<div class="col-md-10 col-md-offset-1 text-center">Metro, Intercapital, International ▪ Aggregated Ethernet Backbone</div>
-		</div>
-	</section>
-	<section class="mid-to-black pt-8">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
-					<h2>Why OneQode Ethernet<mark class="dot">?</mark></h2>
-				</div>
-				<div class="col-xs-12 col-md-6 col-md-offset-3">
-					<ul class="ticks large">
-						<li>Competitive pricing</li>
-						<li>Unique route to Asia and North America</li>
-						<li>First provider to operate on Queensland’s submarine cable</li>
-						<li>Fast, easy online management</li>
-						<li>24/7 network monitoring & alerts</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="black-to-mid py-4">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-md-10 col-md-offset-1">
-					<h3>About our ethernet services</h3>
-				</div>
-				<div class="col-xs-12 col-md-5 col-md-offset-1">
-					<h4>Basic Information</h4>
-					<p><strong>Most connections from Australia to Asia or the U.S. are shackled, travelling via Perth or Sydney.</strong></p>
-					<p>With OneQode, you can harness the fastest route to Asia from Australia’s east coast.</p>
-					<p>We have partnered with RTI Cable, a leading infrastructure provider, to create a truly alternative connectivity option which gives you greater redundancy, lower latency and unique opportunities to value-add.</p>
-					<p>Not only that, we are partnered with a range of domestic carriers to deliver point-to-point services to tens of thousands of commercial locations across Queensland and New South Wales.</p>
-					<p>Together, these features give you a single, scalable, easy to manage solution.</p
->				</div>
-				<div class="col-xs-12 col-md-5">
-					<h4>On-Net Facilities</h4>
-					<div class="responsive-table">
-						<table>
-							<tbody>
-								<tr>
-									<td>Queensland</td>
-									<td>
-										<ul class="no-style">
-											<li>NextDC B2</li>
-											<li>Equinix BR1</li>
-											<li>Sunshine Coast <abbr title="Cable Landing Station">CLS</abbr></li>
-										</ul>
-									</td>
-								</tr>
-								<tr>
-									<td>New South Wales</td>
-									<td>
-										<ul class="no-style">
-											<li>Equinix SY1-5</li>
-											<li>Global Switch</li>
-										</ul>
-									</td>
-								</tr>
-								<tr>
-									<td>International</td>
-									<td>
-										<ul class="no-style">
-											<li>North America - Coresite LA2</li>
-											<li>Asia Pacific – GNC Guam</li>
-											<li>Japan - @Tokyo CC2</li>
-											<li>Hong Kong - Mega-i</li>
-										</ul>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+{% include _header.liquid %}
+		<style>
+		.no-webp .hero {
+			background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/melbourne-city-australia-aerial.jpg") no-repeat 50% 20%;
+			background-size: cover;
+		}
+		.webp .hero {
+			background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/melbourne-city-australia-aerial.webp") no-repeat 50% 20%;
+			background-size: cover;
+		}
+		.no-webp #locations {
+			background: radial-gradient(circle at 50% 50%,rgba(0,0,0,0.8) 0%,transparent 100%), url("/img/bg/ethernet-world-map.jpg") no-repeat center center;
+			background-size: cover;
+		}
+		.webp #locations {
+			background: radial-gradient(circle at 50% 50%,rgba(0,0,0,0.8) 0%,transparent 100%), url("/img/bg/ethernet-world-map.webp") no-repeat center center;
+			background-size: cover;
+		}
+		h3 {
+			font-size: 1.75rem;
+		}
+		@media screen and (max-width: 64em) {
+			.full-height {
+				padding-top: 8rem !important;
+			}
+			h3 {
+				font-size: 1.5rem;
+			}
+			.mp-2 {
+				padding: 2rem;
+			}
+		}
+		</style>
+		<section class="hero">
+			<div class="container">
+				<div class="row middle-xs">
+					<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+						{%- if pageSupertitle %}
+						<p class="superheading">{{ pageSupertitle }}</p>
+						{%- endif %}
+						<h1>{{ pageTitle }}<mark class="dot">.</mark></h1>
+						<p class="subheading">{{ pageSubtitle }}</p>
+						<p><a href="#contact" class="m-1 button">Contact Us</a></p>
 					</div>
 				</div>
 			</div>
-			<div class="row mt-1">
-				<div class="col-xs-12 col-md-5 col-md-offset-1">
-					<h4>Backhaul Partners</h4>
-					<p>OneQode is partnered with RTI, AAPT, Telstra, and China Mobile International to provide you a complete ethernet offering so you can save money, reduce latency and improve uptime.</p>
-				</div>
-				<div class="col-xs-12 col-md-5">
-					<h4>Delivery</h4>
-					<p>Instant, automated provisioning over a choice of interfaces: <a href="/business/about#onni">OneQode ONNI</a>, Megaport VXC, EdgeXC or metropolitan ethernet/dark fibre.</p>
-				</div>
-			</div>
-			<div class="row mt-1">
-				<div class="col-xs-12 col-md-5 col-md-offset-1">
-					<h4>Contract & SLA</h4>
-					<p class="mb-2">Choose a 0, 12, 24 or 36-month contract — all under the <a href="/wholesale/legal/">friendly OneQode terms</a>. The service is covered under the Standard OneQode SLA</p>
-					<p class="sla">
-						<span class="num">99.95%</span> 
-						<span class="up">uptime</span> 
-						<span class="ex">excluding planned outages</span>
-					</p>
-				</div>
-				<div class="col-xs-12 col-md-5">
-					<h4>SLA Credit Scheme</h4>
-					<p class="mb-2">If there is an unplanned outage, we have an SLA credit scheme in place to give you account credit for a percentage of your monthly spend.</p>
-					{% include diagrams/_sla-service-credits.liquid %}
-				</div>
-			</div>
-			<div class="row mt-8">
-				<div class="col-xs-12 col-md-10 col-md-offset-1">
-					<h3 class="text-center">Our 2021 Business Ethernet pricing</h3>
-					<div class="responsive-table">
-						<table>
-							<thead>
-								<tr>
-									<th>Link</th>
-									<th>Speed (Mbps)</th>
-									<th class="text-right"><abbr title="Monthly Recurring Cost">MRC</abbr></th>
-									<th class="text-right"><abbr title="Non-Recurring Charge">NRC</abbr></th>
-									<th>Contract</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td class="nowrap">Australia ↔ Guam <span class="tag wet" title="This is a submarine cable-based path">Wet</span></td>
-									<td>100</td>
-									<td class="text-right">$399</td>
-									<td class="text-right">$0</td>
-									<td>0 month</td>
-								</tr>
-								<tr>
-									<td class="nowrap">Guam ↔ Japan <span class="tag wet" title="This is a submarine cable-based path">Wet</span></td>
-									<td>100</td>
-									<td class="text-right">$399</td>
-									<td class="text-right">$0</td>
-									<td>0 month</td>
-								</tr>
-								<tr>
-									<td class="nowrap">Guam ↔ Hong Kong <span class="tag wet" title="This is a submarine cable-based path">Wet</span></td>
-									<td>100</td>
-									<td class="text-right">$399</td>
-									<td class="text-right">$0</td>
-									<td>0 month</td>
-								</tr>
-								<tr>
-									<td class="nowrap">Japan ↔ Hong Kong <span class="tag wet" title="This is a submarine cable-based path">Wet</span></td>
-									<td>100</td>
-									<td class="text-right">$399</td>
-									<td class="text-right">$0</td>
-									<td>0 month</td>
-								</tr>
-								<tr>
-									<td class="nowrap">Guam ↔ North America <span class="tag wet" title="This is a submarine cable-based path">Wet</span></td>
-									<td>100</td>
-									<td class="text-right">$399</td>
-									<td class="text-right">$0</td>
-									<td>0 month</td>
-								</tr>
-								<tr>
-									<td class="nowrap">Sunshine Coast ↔ Sydney <span class="tag wet" title="This is a submarine cable-based path">Wet</span></td>
-									<td>100</td>
-									<td class="text-right">$399</td>
-									<td class="text-right">$0</td>
-									<td>0 month</td>
-								</tr>
-								<tr>
-									<td class="nowrap">Brisbane ↔ Sunshine Coast <span class="tag dry" title="This is a land-based path">Dry</span></td>
-									<td>1,000</td>
-									<td class="text-right">$399</td>
-									<td class="text-right">$0</td>
-									<td>0 month</td>
-								</tr>
-								<tr>
-									<td class="nowrap">Brisbane ↔ Sydney <span class="tag dry" title="This is a land-based path">Dry</span></td>
-									<td>1,000</td>
-									<td class="text-right">$399</td>
-									<td class="text-right">$0</td>
-									<td>0 month</td>
-								</tr>
-								<tr>
-									<td class="nowrap">Metro Ethernet</td>
-									<td>1,000</td>
-									<td class="text-right">$599</td>
-									<td class="text-right">$0</td>
-									<td>36 month</td>
-								</tr>
-								<tr>
-									<td class="nowrap">Metro Waves</td>
-									<td>10,000</td>
-									<td class="text-right">$1,499</td>
-									<td class="text-right">$0</td>
-									<td>36 month</td>
-								</tr>
-							</tbody>
-						</table>
+		</section>
+		<section class="text-center pb-8">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<h2><mark>Ultra low latency</mark> ethernet<mark class="dot">,</mark> <br class="responsive">without the price tag<mark class="dot">.</mark></h2>
+						<p class="subheading">Blazing fast ethernet links for your offices,<br class="responsive"> commercial spaces, and data centres</p>
+					</div>
+					<div class="col-xs-12 col-md-6 col-md-offset-3">
+						<p><strong>It’s easy to connect your business locations with an Ethernet Private Line service from OneQode.</strong></p>
+						<p>Served over our premium, low latency network, with all the features you’d expect, topped off with flat, transparent pricing — you’ll always get a fair deal.</p>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-	<section class="mid pt-4" id="start">
-		<div class="container">
-			<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
-				<h2>Get started<mark class="dot">:</mark></h2>
-				<p>Fill out the form below to get started with Enterprise Ethernet from OneQode.</p>
+		</section>
+		<section class="text-center pb-8">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-4 p-1 mp-2">
+						<h3>Connect two facilities,<br class="responsive"> or an entire organisation</h3>
+						<p class="faded">Whether you’re linking up two offices or building an international WAN, our flexible Point-to-Point and Point-to-Multipoint ethernet services provide easy connectivity.</p>
+					</div>
+					<div class="col-xs-12 col-sm-4 p-1 mp-2">
+						<h3>Get the best possible last-mile technology</h3>
+						<p class="faded">As a carrier-neutral telco, we will leverage whatever technology works best for your last-mile, be it fibre, fixed wireless, 5G, or satellite. You’ll get a right-sized ethernet solution.</p>
+					</div>
+					<div class="col-xs-12 col-sm-4 p-1 mp-2">
+						<h3>Measure in milliseconds, not megabits</h3>
+						<p class="faded">Less waiting, more action. We prioritise latency above all, investing heavily in hardware, transit and interconnection to ensure peak network performance.</p>
+					</div>
+				</div>
 			</div>
-			<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
-				{% include forms/_business-ethernet.liquid %}
+		</section>
+		<section class="text-center pb-8 full-height" id="locations">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<h2>Traverse Australia<mark class="dot">,</mark><br class="responsive"> or the Asia-Pacific<mark class="dot">.</mark></h2>
+						<p class="subheading">With the fastest path to Asia from Australia’s<br class="responsive"> east coast, you’ll move faster with OneQode</p>
+					</div>
+					<div class="col-xs-12 col-md-6 col-md-offset-3">
+						<p><strong>Our ethernet services are available in all major Australian CBDs, and can reach across the country or overseas.</strong></p>
+					</div>
+					<div class="col-xs-12 mt-4">
+						<p>Brisbane • Sydney • Gold Coast • Sunshine Coast • Melbourne • Guam • Hong Kong • Tokyo • Los Angeles</p>
+					</div>
+				</div>
 			</div>
-		</div>
-	</section>
-{% include parts/_business-why-us.liquid %}
+		</section>
+		<section class="text-center py-8" id="specifications">
+			<div class="container">
+				<div class="col-xs-12 col-md-8 col-md-offset-2">
+					<h2>Ethernet specifications<mark class="dot">.</mark></h2>
+					<p class="subheading">Range of speeds • Unlimited data • Symmetrical</p>
+					<div class="responsive-table text-left mt-4">
+						<table>
+							<tr>
+								<th class="nowrap">Bandwidth</th>
+								<td>100 Mbps to 10 Gbps<br>Symmetrical</td>
+							</tr>
+							<tr>
+								<th class="nowrap">Last-mile options</th>
+								<td>Fibre optic, fixed wireless, NBN, 4G, 5G, or satellite. Location and requirement-dependent.</td>
+							</tr>
+							<tr>
+								<th class="nowrap">On-site requirements</th>
+								<td>1RU + power for NTD</td>
+							</tr>
+							<tr>
+								<th class="nowrap">Supported <abbr title="Maximum Transmission Unit">MTU</abbr></th>
+								<td>Up to 9000 bytes (Jumbo frames)</td>
+							</tr>
+							<tr>
+								<th class="nowrap">VLAN Limitations</th>
+								<td>Full C-Tag support<br>We do not support S-Tags</td>
+							</tr>
+							<tr>
+								<th class="nowrap">Protocols</th>
+								<td>Full Layer 2 and Layer 3 support</td>
+							</tr>
+							<tr>
+								<th class="nowrap">QoS</th>
+								<td>QoS tags ignored but carried</td>
+							</tr>
+						</table>
+					</div>
+					<details class="text-left mt-4" id="on-net-facilities">
+						<summary>Ethernet On-Net Facilities</summary>
+						<div class="responsive-table">
+							<table>
+								<tbody>
+									<tr>
+										<td>Queensland</td>
+										<td>
+											<ul class="no-style">
+												<li>NextDC B2</li>
+												<li>Equinix BR1</li>
+												<li>Sunshine Coast <abbr title="Cable Landing Station">CLS</abbr></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>New South Wales</td>
+										<td>
+											<ul class="no-style">
+												<li>Equinix SY1-5</li>
+												<li>Global Switch</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>International</td>
+										<td>
+											<ul class="no-style">
+												<li>North America - Coresite LA2</li>
+												<li>Asia-Pacific – GNC Guam</li>
+												<li>Japan - @Tokyo CC2</li>
+												<li>Hong Kong - Mega-i</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</details>
+				</div>
+			</div>
+		</section>
+		<section class="black-to-footer py-8" id="contact">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
+						<div class="mb-2">
+							<h2>Want to get started<mark class="dot">?</mark></h2>
+							<p class="subheading">Have questions about a custom ethernet solution?<br class="responsive"> Send us your details below to get in contact with our team.</p>
+						</div>
+						{% include forms/_enterprise-ethernet.liquid %}
+					</div>
+				</div>
+			</div>
+		</section>
+{% include _footer.liquid %}

@@ -1,41 +1,36 @@
 ---
 layout: page.liquid
 section: business
-metaTitle: OneQode™ for Business • Business Internet & Connectivity
-metaDescription: Simple, low-latency business internet, broadband and network connectivity solutions from OneQode. No-hassle connectivity for small business and enterprise.
+metaTitle: OneQode™ for Business • Low-Latency Telco
+metaDescription: Low-latency internet, ethernet and high performance servers from OneQode. No-hassle connectivity for mid-market and enterprise.
 changefreq: monthly
 priority: 1
 pageSupertitle: OneQode™ for Business
-pageTitle: Business connectivity
-pageSubtitle: Low-latency business internet and connectivity
-ogImage: business.jpg
+pageTitle: The low latency telco<br class="responsive"> for enterprise
+pageSubtitle: Low-latency connect and compute for business
+ogImage: enterprise-home.jpg
 ---
 	<!-- Page-Specific Styles -->
 	<style>
-		/*
-		section.hero {
-			background: linear-gradient(to bottom, transparent 70%, #000), radial-gradient(circle at bottom,rgb(0,39,53) 0%,rgb(0,0,0) 100%);
-		}
-		*/
 		/* 4K Background Image */
 		@media (min-width: 1920px) {
 			.no-webp .hero {
-				background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/business-header-4k.jpg") 60%;
+				background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/enterprise-header-businesswoman-on-phone.jpg") 60%;
 				background-size: cover;
 			}
 			.webp .hero {
-				background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/business-header-4k.webp") 60%;
+				background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/enterprise-header-businesswoman-on-phone.webp") 60%;
 				background-size: cover;
 			}
 		}
 		/* Regular Background Image */
 		@media (max-width: 1920px) {
 			.no-webp .hero {
-				background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/business-header-hd.jpg") 60%;
+				background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/enterprise-header-businesswoman-on-phone-hd.jpg") 60%;
 				background-size: cover;
 			}
 			.webp .hero {
-				background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/business-header-hd.webp") 60%;
+				background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/enterprise-header-businesswoman-on-phone-hd.webp") 60%;
 				background-size: cover;
 			}
 		}
@@ -70,19 +65,70 @@ ogImage: business.jpg
 				margin-top: -16rem;
 			}
 		}
+		#latest-news a {
+			color: #fff;
+			text-decoration: none;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			background: rgb(79 148 204 / 16%);
+			border-radius: 10px;
+			border: 1px solid transparent;
+		}
+		#latest-news a:hover {
+			border-color: #666;	
+		}
+		#latest-news h2 {
+			font-size: 1.25rem;
+		}
+		#latest-news span {
+			display: inline-flex;
+			white-space: nowrap;
+			font-size: 1rem;
+			font-family: Poppins,sans-serif;
+			font-weight: 600;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+		}
+		#latest-news span svg {
+			display: inline-flex;
+			margin-top: 4px;
+		}
+		@media (max-width: 48em) {
+			#latest-news a {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+			#latest-news span {
+				margin-top: 1rem;
+			}
+		}
 	</style>
-	<section class="pb-8">
+	<section class="pb-4">
 		<div class="container">
 			{% include services/_business.liquid %}
 		</div>
 	</section>
+	<aside id="latest-news">
+		<div class="container">
+			<a href="/media/enterprise-network-ready-for-service/" class="col-xs-12 p-2">
+				<h2 class="mt-0 mb-0">News: OneQode’s Enterprise Network Ready for Service Across Asia-Pacific.</h2>
+				<span>
+					Read announcement
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+						<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+					</svg>
+				</span>
+			</a>
+		</div>
+	</aside>
 	<section class="black pt-4" id="about">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs col-md-8 col-md-offset-2 text-center">
 					<h2>With OneQode<mark class="dot">,</mark><br class="responsive"> nanoseconds matter<mark class="dot">.</mark></h2>
-					<p class="subheading">This is the telco for <mark>real-time</mark> internet</p>
-					<p>We build insanely fast connectivity for businesses, financial traders, gamers, and innovators. Laser-focussed on <strong>speed and capacity</strong>, we’re engineering Australia’s network of the future.</p>
+					<p class="subheading">We're the <mark>low-latency</mark> enterprise ISP</p>
+					<p>We’re an Aussie telco that builds insanely fast connectivity for businesses, large corporates, gamers, and innovators. Laser-focussed on <strong>speed and capacity</strong>, we’re engineering Australia’s network of the future.</p>
 				</div>
 			</div>
 			<div class="row icons mt-8 text-center">
@@ -122,6 +168,7 @@ ogImage: business.jpg
 	</section>
 	<section class="network">
 		{% include diagrams/_network-map.liquid %}
+		<p style="font-size: 75%">Global network rollout map <span style="color: #949494">// <a href="https://oneqode.sfo2.digitaloceanspaces.com/maps/global/oneqode-world-map.pdf" rel="noopener" target="_blank">Full map PDF</a></p>
 	</section>
 	<section class="black py-8">
 		<div class="container">
@@ -134,7 +181,7 @@ ogImage: business.jpg
 						<span class="up">uptime</span> 
 						<span class="ex">excluding planned outages</span>
 					</p>
-					<p class="mb-2">As you'd expect, high availability comes as standard. In the unlikely event of an unplanned outage, we'll get on it right away, and, as you'll see in our <a href="/business/legal/">friendly business terms</a>, if it goes for longer than 4 hours, we'll credit your account a percentage of your monthly spend.</p>
+					<p class="mb-2">As you'd expect, high availability comes as standard. In the unlikely event of an unplanned outage, we'll get on it right away, and, as you'll see in our <a href="/legal/">friendly business terms</a>, if it goes for longer than 4 hours, we'll credit your account a percentage of your monthly spend.</p>
 					{% include diagrams/_sla-service-credits.liquid %}
 				</div>
 			</div>
@@ -145,9 +192,9 @@ ogImage: business.jpg
 			<div class="row" id="onni">
 				<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
 					<h2 class="mt-1">The <mark>ONNI</mark> <div class="icon onni"></div></h2>
-					<p class="subheading">Using one of our enterprise services?<br class="responsive"> This is your gateway</p>
+					<p class="subheading">Simple connectivity between OneQode services</p>
 					<p>An <abbr title="OneQode Network to Network Interface">ONNI</abbr>, is a network-to-network interface with the OneQode ecosystem. If you're ordering an enterprise service, it can pass over an ONNI, which we provide for <strong><mark>free</mark></strong>.</p>
-					<p>An ONNI represents a physical location on one of our switches in one of our global points of presence. Once you have created a cross-connect to your ONNI, we can seamlessly deliver OneQode services to your network.</p>
+					<p>An ONNI represents a physical location on one of our switches in one of our global points of presence. With a cross-connect to your ONNI, we can seamlessly deliver services to your corporate network.</p>
 				</div>
 			</div>
 		</div>
@@ -170,7 +217,7 @@ ogImage: business.jpg
 		<div class="container">
 			<div class="row mb-1 text-center">
 				<div class="col-xs-12">
-					<h2>OneQode business services</h2>
+					<h2>Our enterprise services</h2>
 				</div>
 			</div>
 			{% include services/_business.liquid %}
@@ -180,8 +227,8 @@ ogImage: business.jpg
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
-					<h2>Ready to get started?</h2>
-					<p>Drop us a note, and we'll get the ball rolling.</p>
+					<h2>Start a conversation today<mark class="dot">.</mark></h2>
+					<p>Contact our team to discuss your enterprise challenges.</p>
 					<p><a href="/business/contact/" class="button ghost m-1 mt-2">Contact us</a></p>
 				</div>
 			</div>
