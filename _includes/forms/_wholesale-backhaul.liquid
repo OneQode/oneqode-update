@@ -21,7 +21,30 @@
 		<div class="col-xs-12">
 			<input type="hidden" name="form" value="Wholesale - Backhaul" />
 			<input type="hidden" name="_redirect" value="https://www.oneqode.com/wholesale/thanks/"/>
-			<button type="submit" class="button mt-1">Submit</button>
+			<button type="submit" class="button mt-1" id="button">Submit</button>
+			<p id="failmsg">
+				<strong>Anti-spam failed :(</strong>
+				<br>Our spam detection thinks you're a bot. If you're reading this, we're really sorry.
+				<br>Please do email us instead at:
+				<br>hello <span class="faded">[at]</span> oneqode <span class="faded">[dot]</span> com <span class="faded">[dot]</span> au
+			</p>
+			<script>
+				var form = document.getElementById("form-wholesale-backhaul");
+				var button = document.getElementById("button");
+				var failmsg = document.getElementById("failmsg");
+				form.addEventListener("botpoison-challenge-start", function () {
+					button.setAttribute("disabled", "disabled");
+				});
+				form.addEventListener("botpoison-challenge-success", function () {
+					button.removeAttribute("disabled");
+					button.classList.add("success");
+				});
+				form.addEventListener("botpoison-challenge-error", function () {
+					button.removeAttribute("disabled");
+					button.classList.add("fail");
+					failmsg.classList.add("block");
+				});
+			</script>
 		</div>
 	</div>
 </form>

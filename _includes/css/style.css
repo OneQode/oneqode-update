@@ -183,7 +183,7 @@ main {
 	padding-bottom: 8rem;
 }
 .block {
-	display: block;
+	display: block !important;
 }
 .place-content-center {
 	place-content: center;
@@ -705,6 +705,36 @@ textarea {
 	height: initial;
 	resize: vertical;
 }
+/* Botpoison Validation */
+button[type=submit]:disabled {
+	background: #333;
+	border-color: #999;
+	box-shadow: none;
+	cursor: wait;
+}
+.success,
+.success:hover,
+.success:focus {
+	background: #1f4421;
+	border-color: #4CAF50;
+	box-shadow: none;
+}
+.fail,
+.fail:hover,
+.fail:focus {
+	background: #500404;
+	border-color: #f00;
+	box-shadow: none;
+	text-align: left;
+}
+#failmsg {
+	display: none;
+	background: #1d0000;
+	border: 2px solid #500404;
+	border-radius: 10px;
+	padding: 1rem;
+	font-size: 1rem;
+}
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - -
 SECTIONS
@@ -1015,7 +1045,7 @@ ul.no-style {
 	padding-left: 0;
 	margin: 0;
 }
-/* Pricing */
+/* Toggle */
 .toggler {
 	background-color: rgba(255, 255, 255, .1);
 	border-radius: 9999px;
@@ -1045,94 +1075,6 @@ ul.no-style {
 	border-radius: 9999px;
 	cursor: pointer;
 	padding: 10px 15px;
-}
-.pricing .box {
-	align-items: normal;
-}
-.pricing .box.featured {
-	border: 1px solid #4f94cc;
-}
-.pricing .box.featured:hover,
-.pricing .box.featured:focus {
-	border: 1px solid #00b0f0;
-}
-.pricing .box h3 {
-	color: #fff;
-	text-transform: none;
-	font-size: 2.25rem !important;
-}
-.pricing .subheading,
-.pricing .box.glowing:hover .subheading,
-.pricing .box.glowing:focus .subheading {
-	font-size: 1.5rem;
-	color: #e0e0e0;
-	text-align: center;
-	margin-bottom: 1.5rem;
-}
-.pricing p {
-	color: #999;
-	text-align: left;
-	margin: 0.5rem 0;
-}
-.pricing .box.glowing:hover p,
-.pricing .box.glowing:focus p {
-	color: #e0e0e0;
-}
-.pricing p > span {
-	float: right;
-	color: #fff;
-	font-weight: 600;
-}
-.pricing p > span > span {
-	font-size: 1rem;
-}
-.pricing .speed:before {
-	content: '';
-	position: absolute;
-	width: 1.8rem;
-	height: 1.8rem;
-	background: url("/img/ico/arrow-down-short.svg") no-repeat;
-	background-size: cover;
-	margin-left: -1.7rem;
-	margin-top: 0.1rem;
-}
-.pricing .speed.upload:before {
-	background: url("/img/ico/arrow-up-short.svg") no-repeat;
-	background-size: cover;
-}
-.pricing .data-cap:before {
-	content: '';
-	position: absolute;
-	width: 1.4rem;
-	height: 1.4rem;
-	background: url("/img/ico/sim.svg") no-repeat;
-	background-size: cover;
-	margin-left: -1.7rem;
-	margin-top: 0.3rem;
-}
-.pricing .speed span {
-	font-size: 1.1rem;
-}
-.pricing .price {
-	text-align: center;
-	color: #fff;
-	font-size: 3.5rem;
-	margin-top: 1.5rem;
-	margin-bottom: 0;
-}
-.pricing .price span {
-	float: none;
-	font-size: 1.5rem;
-	color: #41768b;
-}
-.pricing .min,
-.pricing .box.glowing:hover .min,
-.pricing .box.glowing:focus .min {
-	text-align: center;
-	font-size: 1rem;
-}
-.cis {
-	font-size: 1rem;
 }
 /* Tags */
 .tag {
