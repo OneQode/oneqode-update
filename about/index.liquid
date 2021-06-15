@@ -110,18 +110,11 @@ pageSubtitle: We're on a mission to make<br class="responsive"> game latency imp
 			text-align: center;
 		}
 	}
-	/* Responsive Video */
-	.wrapper {
-		position: relative;
-		padding-bottom: 56.25%; /* 16:9 */
-		height: 0;
-	}
-	.wrapper iframe {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
+	@media (min-width: 48em) {
+		/* Move up on desktop */
+		.network {
+			margin-top: -16rem;
+		}
 	}
 </style>
 <section class="pt-4">
@@ -133,6 +126,18 @@ pageSubtitle: We're on a mission to make<br class="responsive"> game latency imp
 			</div>
 		</div>
 	</div>
+</section>
+<section class="pt-4 push-forward">
+	<div class="container">
+		<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+			<p class="superheading">Why OneQode?</p>
+			<h2>Intercontinental reach<mark class="dot">,</mark><br class="responsive"> uncompromising speed<mark class="dot">.</mark></h2>
+			<p class="subheading">Points of presence in three continents<br class="responsive"> get you to the action faster</p>
+		</div>
+	</div>
+</section>
+<section class="network">
+	{% include diagrams/_network-map.liquid %}
 </section>
 <section>
 	<div class="container">

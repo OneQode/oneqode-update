@@ -7,20 +7,23 @@ changefreq: monthly
 priority: 1
 ogImage: oneqode-home.jpg
 pageSupertitle: For Home
-pageTitle: The network built for gaming
-pageSubtitle: Gaming infrastructure for multiplayer game developers
+pageTitle: The gaming carrier network
+pageSubtitle: High performance infrastructure for game developers
 
 ---
 {% include _header.liquid %}
 	<!-- Page-Specific Styles -->
 	<style>
 		.no-webp .hero {
-			background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/female-pc-gamer-online-gaming.jpg") no-repeat center center;
+			background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/star-header.jpg") no-repeat center center;
 			background-size: cover;
 		}
 		.webp .hero {
-			background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/female-pc-gamer-online-gaming.webp") no-repeat center center;
+			background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/star-header.webp") no-repeat center center;
 			background-size: cover;
+		}
+		section.hero {
+			min-height: 90vh;
 		}
 		/* Kotaku Article Quote */
 		.kotaku-quote blockquote p {
@@ -38,46 +41,23 @@ pageSubtitle: Gaming infrastructure for multiplayer game developers
 		a.kotaku-logo:focus {
 			opacity: 1;
 		}
-		p.subnav {
-			color: #999;
-			font-size: 1.1rem;
+		.no-webp #oceanic-case-study {
+			background: url(/img/bg/oceanic-case-study-guam-tournament-tv-stream.jpg) no-repeat bottom center;
+			background-size: contain;
+			padding-bottom: 80%;
 		}
-		.icons img {
-			max-width: 35%;
+		.webp #oceanic-case-study {
+			background: url(/img/bg/oceanic-case-study-guam-tournament-tv-stream.webp) no-repeat bottom center;
+			background-size: contain;
+			padding-bottom: 80%;
 		}
-		.icons.features h3 {
-			font-size: 1.25rem;
-			min-height: 1.5rem;
-			margin-top: 2rem;
-			margin-bottom: 0;
+		.no-webp #network {
+			background: url(/img/glowing-oneqode-network-globe.jpg) no-repeat 130% 50%;
+			background-size: contain;
 		}
-		.icons.features p {
-			font-size: 1rem;
-			color: #888;
-		}
-		@media screen and (max-width: 48em) {
-			.icons img {
-				max-width: 23%;
-			}
-		}
-		.box.glowing {
-			justify-content: flex-start;
-		}
-		.box.glowing h3 {
-			margin-top: 2rem;
-		}
-		.box.glowing img {
-			max-height: 15rem;
-			opacity: 0.75;
-		}
-		.box.glowing p {
-			margin: 0;
-		}
-		@media (min-width: 48em) {
-			/* Move up on desktop */
-			.network {
-				margin-top: -16rem;
-			}
+		.webp #network {
+			background: url(/img/glowing-oneqode-network-globe.webp) no-repeat 130% 50%;
+			background-size: contain;
 		}
 	</style>
 	<section class="hero">
@@ -86,7 +66,10 @@ pageSubtitle: Gaming infrastructure for multiplayer game developers
 				<div class="col-xs-12 col-md-10 col-md-offset-1">
 					<h1>{{ pageTitle }}<mark class="dot">.</mark></h1>
 					<p class="subheading">{{ pageSubtitle }}</p>
-					<p class="subnav">Looking for our <a href="/business/">business</a> or <a href="/wholesale/">wholesale</a> services?</p>
+				</div>
+				<div class="col-xs-12 col-md-6 col-md-offset-3">
+					<p class="faded">OneQode provides the network and infrastructure that makes real-time, lag-free applications possible.</p>
+					<a href="/contact/" class="button mt-2">Contact Us</a>
 				</div>
 			</div> 
 		</div>
@@ -99,7 +82,7 @@ pageSubtitle: Gaming infrastructure for multiplayer game developers
 						<p>“It’s cool to see a Queensland-based business build something that could have massive consequences for an enormous chunk of gaming across the Asia-Pacific”</p>
 					</blockquote>
 					<a class="kotaku-logo" href="https://www.kotaku.com.au/2021/03/a-brisbane-isp-is-building-guam-into-an-online-gaming-hub/" target="_blank" rel="noopener">
-						<svg width="auto" height="auto" viewBox="0 0 960 208" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<svg width="100%" height="100%" viewBox="0 0 960 208" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 							<title>Kotaku Australia</title>
 							<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 								<g id="kot-headerlogo-01" fill="#fff">
@@ -120,30 +103,89 @@ pageSubtitle: Gaming infrastructure for multiplayer game developers
 					</a>
 				</div>
 			</div>
-			<div class="row mt-8 py-8">
-				<div class="col-md-8 col-md-offset-2 text-center">
-					<h2>Build your game on our global<br class="responsive"> low-latency infrastructure<mark class="dot">.</mark></h2>
-					<p>We operate a low-latency international carrier network and server fleet designed for the demands of competitive gaming.</p>
-					<p>With OneQode, you'll be able to reach more players at better latencies, whilst reducing game server infrastructure costs.</p>
-					<p class="text-center">
-						<a href="/about/" class="button m-1">About Us</a>
-						<a href="/business/game-servers.pdf" target="_blank" class="button ghost m-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" id="file" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0H4zm5.5 1.5v2a1 1 0 0 0 1 1h2l-3-3z"></path></svg> Game Servers</a>
-					</p>
+		</div>
+	</section>
+	<section class="mt-8 py-8">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
+					<h2>Global low-latency infrastructure <br class="responsive">to build your game on<mark class="dot">.</mark></h2>
+				</div>
+				<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+					<p>We operate a low-latency international carrier network and server fleet designed for the demands of competitive gaming. You'll reach more players at lower latency, whilst reducing infrastructure costs.</p>
 				</div>
 			</div>
 		</div>
 	</section>
-	<section class="pt-4 push-forward">
-		<div class="container">
-			<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
-				<p class="superheading">Why OneQode?</p>
-				<h2>Intercontinental reach<mark class="dot">,</mark><br class="responsive"> uncompromising speed<mark class="dot">.</mark></h2>
-				<p class="subheading">Points of presence in three continents<br class="responsive"> get you to the action faster</p>
+	<section id="network" class="py-8">
+		<div class="container mobile-text-center">
+			<div class="row">
+				<div class="col-xs-12 col-md-6">
+					<h3>Low-latency gaming network</h3>
+					<p class="subheading faded">Designed for the future of gaming</p>
+					<p>An international carrier network, built from the ground-up to eliminate lag.</p>
+					<a href="/network/" class="button mt-2">Our network</a>
+				</div>
+			</div>
+			<div class="row mt-8 pt-2">
+				<div class="col-xs-12 col-md-4 pt-2">
+					<h4>A highway for game traffic</h4>
+					<p class="faded">Our hyperfast international carrier network bypasses constricted incumbents and delivers game data as close to players as possible.</p>
+				</div>
+				<div class="col-xs-12 col-md-4 col-md-offset-2 pt-2">
+					<h4>Unrivalled latency</h4>
+					<p class="faded">The laws of physics are the only enemy. Our proprietary routing sends traffic over the shortest path, eliminating latency at every turn.</p>
+				</div>
 			</div>
 		</div>
 	</section>
-	<section class="network">
-		{% include diagrams/_network-map.liquid %}
+	<section id="servers" class="py-8">
+		<div class="container mobile-text-center">
+			<div class="row">
+				<div class="col-xs-12 col-md-6">
+					<h3>High-performance servers</h3>
+					<p class="subheading faded">Raw power, built for speed</p>
+					<p>High clockrate custom servers optimised for demanding, high tickrate game workloads.</p>
+					<a href="/game-servers/" class="button mt-2">Game servers</a>
+				</div>
+			</div>
+			<div class="row mt-8 pt-2">
+				<div class="col-xs-12 col-md-4 pt-2">
+					<h4>Market-leading CPUs</h4>
+					<p class="faded">All processors clock in at 3.7 GHz or more, giving you the capability to deliver the most demanding games.</p>
+				</div>
+				<div class="col-xs-12 col-md-4 col-md-offset-2 pt-2">
+					<h4>Completely flexible</h4>
+					<p class="faded">Whether you need a specific CPU model, or just a stock VPS, we can tailor your server fleet to your needs.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="guam" class="full-height text-center">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-8 col-md-offset-2">
+					<p class="superheading">Guam Gaming Hub</p>
+					<h2>Reach more players with our <mark>unique</mark> server region<mark class="dot">.</mark></h2>
+				</div>
+				<div class="col-xs-12 col-md-6 col-md-offset-3">
+					<p class="mt-0">Our exclusive Guam Gaming Hub connects players from across Asia-Pacific on a level playing field, unlocking new opportunities for cross-regional gaming.</p>
+					<a href="/about/guam/" class="button mt-2">About Guam</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="oceanic-case-study" class="text-center py-8">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-8 col-md-offset-2">
+					<p class="superheading">OneQode in Action</p>
+					<h2>Powering a groundbreaking interregional tournament<mark class="dot">.</mark></h2>
+					<p class="subheading">How OneQode's gaming infrastructure fuelled<br class="responsive"> a world-first for Asia-Pacific eSports</p>
+					<a href="/case-study/guam-tournament/" class="button mt-2">Case Study</a>
+				</div>
+			</div>
+		</div>
 	</section>
 	<section class="black-to-footer py-8">
 		<div class="container">
