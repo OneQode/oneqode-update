@@ -115,7 +115,7 @@
 					/
 				{%- else -%}
 					{%- case section -%}
-						{%- when "home" -%}
+						{%- when "gaming" -%}
 							/
 						{%- when "business" -%}
 							/business/
@@ -130,7 +130,7 @@
 					Go to the OneQode homepage
 				{%- else -%}
 					{%- case section -%}
-						{%- when "home" -%}
+						{%- when "gaming" -%}
 							Go to the OneQode homepage
 						{%- when "business" -%}
 							Go to the OneQode for Business homepage
@@ -144,14 +144,14 @@
 				<img src="{{ '/img/logo.svg' | url }}" alt="OneQode Logo">
 			</a>
 {% case section %}
-	{%- when "home" -%}
-		{%- include navigation/_navigation-home.liquid -%}
+	{%- when "gaming" -%}
+		{%- include navigation/_navigation-gaming.liquid -%}
 	{%- when "business" -%}
 		{%- include navigation/_navigation-business.liquid -%}
 	{%- when "wholesale" -%}
 		{%- include navigation/_navigation-wholesale.liquid -%}
 	{%- else -%}
-		{%- include navigation/_navigation-home.liquid -%}
+		{%- include navigation/_navigation-gaming.liquid -%}
 {%- endcase -%}
 		</div>
 	</header>

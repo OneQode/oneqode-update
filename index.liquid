@@ -1,6 +1,6 @@
 ---
 
-section: home
+section: gaming
 metaTitle: OneQode™ • The Network Built for Gaming
 metaDescription: The Aussie network of the future, on a mission to bring Australia into the top 10 for internet speeds. Get lightning-fast internet today.
 changefreq: monthly
@@ -41,16 +41,6 @@ pageSubtitle: High performance infrastructure for game developers
 		a.kotaku-logo:focus {
 			opacity: 1;
 		}
-		.no-webp #oceanic-case-study {
-			background: url(/img/bg/oceanic-case-study-guam-tournament-tv-stream.jpg) no-repeat bottom center;
-			background-size: contain;
-			padding-bottom: 80%;
-		}
-		.webp #oceanic-case-study {
-			background: url(/img/bg/oceanic-case-study-guam-tournament-tv-stream.webp) no-repeat bottom center;
-			background-size: contain;
-			padding-bottom: 80%;
-		}
 		.no-webp #network {
 			background: url(/img/glowing-oneqode-network-globe.jpg) no-repeat 130% 50%;
 			background-size: contain;
@@ -58,6 +48,28 @@ pageSubtitle: High performance infrastructure for game developers
 		.webp #network {
 			background: url(/img/glowing-oneqode-network-globe.webp) no-repeat 130% 50%;
 			background-size: contain;
+		}
+		#servers {
+			position: relative;
+			overflow: hidden;
+		}
+		@media (min-width: 48em) {
+			/* Move up on desktop */
+			#oceanic-case-study img {
+				margin-top: -16rem;
+			}
+		}
+		@media (max-width: 64em) {
+			#servers img {
+				margin-top: 4rem;
+			}
+		}
+		@media (min-width: 64em) {
+			#servers img {
+				position: absolute;
+				height: 400px;
+				margin-top: -50px;
+			}
 		}
 	</style>
 	<section class="hero">
@@ -69,7 +81,7 @@ pageSubtitle: High performance infrastructure for game developers
 				</div>
 				<div class="col-xs-12 col-md-6 col-md-offset-3">
 					<p class="faded">OneQode provides the network and infrastructure that makes real-time, lag-free applications possible.</p>
-					<a href="/contact/" class="button mt-2">Contact Us</a>
+					<a href="/about/" class="button mt-2">Why OneQode?</a>
 				</div>
 			</div> 
 		</div>
@@ -109,7 +121,7 @@ pageSubtitle: High performance infrastructure for game developers
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
-					<h2>Global low-latency infrastructure <br class="responsive">to build your game on<mark class="dot">.</mark></h2>
+					<h2>Global <mark>low-latency</mark> infrastructure <br class="responsive">to build your game on<mark class="dot">.</mark></h2>
 				</div>
 				<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
 					<p>We operate a low-latency international carrier network and server fleet designed for the demands of competitive gaming. You'll reach more players at lower latency, whilst reducing infrastructure costs.</p>
@@ -121,7 +133,7 @@ pageSubtitle: High performance infrastructure for game developers
 		<div class="container mobile-text-center">
 			<div class="row">
 				<div class="col-xs-12 col-md-6">
-					<h3>Low-latency gaming network</h3>
+					<h3 class="mb-1">Low-latency gaming network</h3>
 					<p class="subheading faded">Designed for the future of gaming</p>
 					<p>An international carrier network, built from the ground-up to eliminate lag.</p>
 					<a href="/network/" class="button mt-2">Our network</a>
@@ -143,10 +155,16 @@ pageSubtitle: High performance infrastructure for game developers
 		<div class="container mobile-text-center">
 			<div class="row">
 				<div class="col-xs-12 col-md-6">
-					<h3>High-performance servers</h3>
+					<h3 class="mb-1">High-performance servers</h3>
 					<p class="subheading faded">Raw power, built for speed</p>
 					<p>High clockrate custom servers optimised for demanding, high tickrate game workloads.</p>
 					<a href="/game-servers/" class="button mt-2">Game servers</a>
+				</div>
+				<div class="col-xs-12 col-md-6">
+					<picture>
+						<source srcset="/img/server-illustration-600h.webp" type="image/webp">
+						<img src="/img/server-illustration-600h.jpg" class="opaque" alt="An illustration of a OneQode game server">
+					</picture>
 				</div>
 			</div>
 			<div class="row mt-8 pt-2">
@@ -175,8 +193,8 @@ pageSubtitle: High performance infrastructure for game developers
 			</div>
 		</div>
 	</section>
-	<section id="oceanic-case-study" class="text-center py-8">
-		<div class="container">
+	<section id="oceanic-case-study" class="text-center pt-8">
+		<div class="container push-forward">
 			<div class="row">
 				<div class="col-xs-12 col-md-8 col-md-offset-2">
 					<p class="superheading">OneQode in Action</p>
@@ -186,6 +204,10 @@ pageSubtitle: High performance infrastructure for game developers
 				</div>
 			</div>
 		</div>
+		<picture>
+			<source srcset="/img/bg/oceanic-case-study-guam-tournament-tv-stream.webp" type="image/webp">
+			<img src="/img/bg/oceanic-case-study-guam-tournament-tv-stream.jpg" class="opaque" alt="A live Twitch stream of OneQode’s Guam Gaming Tournament playing on a television, with two people sitting on a couch watching">
+		</picture>
 	</section>
 	<section class="black-to-footer py-8">
 		<div class="container">
