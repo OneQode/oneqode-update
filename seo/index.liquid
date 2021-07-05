@@ -66,7 +66,7 @@ eleventyExcludeFromCollections: true
 		text-decoration: underline;
 		color: #1a0dab;
 	}
-	p {
+	p, li {
 		font-weight: normal;
 		font-family: arial, sans-serif;
 		font-size: 14px;
@@ -75,11 +75,24 @@ eleventyExcludeFromCollections: true
 		line-height: 1.58;
 		margin-top: 0;
 	}
+	.links {
+		background: #eaeaea;
+		padding: 14px;
+		margin-bottom: 28px;
+		border-radius: 7px;
+	}
 	</style>
 </head>
 
 <body>
 	<h1>SERP Previews</h1>
+	<div class="links">
+		<p>See also:</p>
+		<ul>
+			<li><a href="/seo/og/">Social Share Previews</a></li>
+			<li><a href="/seo/ignore/">Non-Indexed Pages</a></li>
+		</ul>
+	</div>
 	{%- for item in collections.all %}
 	{%- unless item.data.ignore == true %}
 	<div class="serp">

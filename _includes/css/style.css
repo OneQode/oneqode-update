@@ -188,6 +188,9 @@ main {
 .place-content-center {
 	place-content: center;
 }
+.skip-grid {
+	display: contents;
+}
 
 /* Images */
 figure {
@@ -213,6 +216,7 @@ HEADER & FOOTER
 	z-index: 999;
 	background-color: rgba(0,0,0,0);
 	transition: all 0.2s;
+	border-bottom: 1px solid rgba(28,29,34,0);
 }
 #header .container {
 	display: flex;
@@ -223,9 +227,10 @@ HEADER & FOOTER
 
 /* Header On Scroll */
 #header.sticky {
-	background: rgba(0,0,0,0.75);
+	background: rgba(0,0,0,0.8);
+	backdrop-filter: blur(10px);
 	padding: 0.5rem 0;
-	backdrop-filter: blur(5px);
+	border-bottom: 1px solid #1c1d22;
 }
 #header.sticky .logo img {
 	height: 2rem;
@@ -357,17 +362,10 @@ li.has-submenu.open .submenu ul {
 	opacity: 0;
 	transition: all 0.2s;
 }
-.submenu.two-col {
-	grid-template-columns: repeat(2, 1fr);
-	gap: 1rem;
-}
 .submenu li {
 	font-size: 1rem;
 	color: #999;
 	text-transform: uppercase;
-}
-.submenu li:not(:first-of-type) {
-	margin-top: 1rem;
 }
 .submenu li a {
 	font-size: 1.2rem;
@@ -393,7 +391,6 @@ li.has-submenu.open .submenu ul {
 		.submenu {
 			background: rgba(0,0,0,0.9);
 			border: 1px solid #333;
-			backdrop-filter: blur(5px);
 			margin-top: 1rem;
 			border-radius: 10px;
 			position: absolute;
@@ -402,6 +399,9 @@ li.has-submenu.open .submenu ul {
 		}
 		.mobile-only {
 			display: none !important;
+		}
+		.submenu li:not(:first-of-type) {
+			margin-top: 1rem;
 		}
 		/* Submenu link to section */
 		li.parent a {
@@ -428,14 +428,10 @@ li.has-submenu.open .submenu ul {
 		.submenu li a span {
 			display: none;
 		}
-		.submenu.two-col {
-			grid-template-columns: repeat( auto-fit, minmax(12rem, 1fr) );
-		}
-		.submenu.two-col-mobile {
-			grid-template-columns: repeat( auto-fit, minmax(12rem, 1fr) );
-			gap: 1rem;
-		}
 		.submenu.two-col-mobile ul {
+			display: grid;
+			grid-template-columns: repeat( auto-fit, minmax(10rem, 1fr) );
+			gap: 1rem;
 			margin-top: 0;
 		}
 	}
@@ -559,7 +555,7 @@ mark {
 	background: none;
 	color: #00b0f0;
 }
-.faded {
+.faded, figcaption {
 	color: #999;
 }
 /* Blue Dot */
@@ -1300,7 +1296,7 @@ RESPONSIVE OVERRIDES
 	}
 	/* Header On Scroll */
 	#header.sticky {
-		padding: 1rem 0;
+		padding: 1.5rem 0;
 		background-color: rgba(0,0,0,0);
 		border-bottom: none;
 		backdrop-filter: none;
@@ -1376,7 +1372,7 @@ RESPONSIVE OVERRIDES
 		font-size: 1rem;
 		letter-spacing:0.4rem;
 		z-index: 1;
-		border-top: 1px solid #333;
+		border-top: 1px solid #1c1d22;
 	}
 	.nav-open img,
 	.nav-close img {
@@ -1387,7 +1383,7 @@ RESPONSIVE OVERRIDES
 		z-index: 2;
 	}
 	.nav-open {
-		background: linear-gradient(0deg, rgb(0,0,0), rgba(0,0,0,0.9));
+		background: #000;
 	}
 	.nav-blank {
 		display: block;

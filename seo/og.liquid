@@ -1,0 +1,226 @@
+---
+ignore: true
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex" />
+	<title>Share Image Preview</title>
+	<style>
+	html,
+	body {
+		height: 100%;
+		width: 100%;
+		margin: 0;
+	}
+
+	html {
+		display: grid;
+		place-items: center;
+		justify-content: center;
+	}
+	body {
+		background: #fff;
+		padding: 20px;
+		max-width: 564px;
+	}
+	a.card {
+		display: block;
+		margin-bottom: 50px;
+		border: 1px solid rgb(196, 207, 214);
+		border-radius: 16px;
+		overflow: hidden;
+		opacity: 0.75;
+		transition: opacity 0.2s;
+	}
+	a.card:focus,
+	a.card:hover {
+		opacity: 1;
+	}
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+	a.card img {
+		max-width: 100%;
+	}
+	.meta {
+		align-items: stretch;
+		border: 0 solid black;
+		box-sizing: border-box;
+		display: flex;
+		flex-basis: auto;
+		flex-direction: column;
+		margin-bottom: 0px;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0px;
+		min-height: 0px;
+		min-width: 0px;
+		position: relative;
+		z-index: 0;
+		padding-left: 12px;
+		padding-right: 12px;
+		-webkit-box-flex: 1;
+		flex-grow: 1;
+		flex-shrink: 1;
+		-webkit-box-pack: center;
+		justify-content: center;
+		padding-top: 12px;
+		padding-bottom: 12px;
+	}
+	.url {
+		-webkit-text-size-adjust: 100%;
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+		pointer-events: auto;
+		list-style: none;
+		text-align: inherit;
+		cursor: pointer;
+		-webkit-box-direction: normal;
+		border: 0 solid black;
+		box-sizing: border-box;
+		display: inline;
+		margin-bottom: 0px;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0px;
+		padding-bottom: 0px;
+		padding-left: 0px;
+		padding-right: 0px;
+		padding-top: 0px;
+		color: inherit;
+		font: inherit;
+		white-space: inherit;
+		min-width: 0px;
+		overflow-wrap: break-word;
+		font-family: inherit;
+	}
+	h2 {
+		-webkit-text-size-adjust: 100%;
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+		pointer-events: auto;
+		list-style: none;
+		text-align: inherit;
+		cursor: pointer;
+		-webkit-box-direction: normal;
+		unicode-bidi: -webkit-isolate;
+		border: 0 solid black;
+		box-sizing: border-box;
+		display: inline;
+		font: 14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+		margin-bottom: 0px;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0px;
+		padding-bottom: 0px;
+		padding-left: 0px;
+		padding-right: 0px;
+		padding-top: 0px;
+		max-width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		min-width: 0px;
+		overflow-wrap: break-word;
+		line-height: 20px;
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+		font-size: 15px;
+		font-weight: 400;
+		color: rgb(15, 20, 25);
+	}
+	p {
+		-webkit-text-size-adjust: 100%;
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+		pointer-events: auto;
+		list-style: none;
+		text-align: inherit;
+		cursor: pointer;
+		-webkit-box-align: stretch;
+		-webkit-box-direction: normal;
+		-webkit-box-orient: vertical;
+		align-items: stretch;
+		border: 0 solid black;
+		box-sizing: border-box;
+		display: flex;
+		flex-basis: auto;
+		flex-direction: column;
+		flex-shrink: 0;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0px;
+		min-height: 0px;
+		min-width: 0px;
+		padding-bottom: 0px;
+		padding-left: 0px;
+		padding-right: 0px;
+		padding-top: 0px;
+		position: relative;
+		z-index: 0;
+		margin-bottom: 2px;
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+		font-size: 15px;
+		font-weight: 400;
+		color: rgb(91, 112, 131);
+		-webkit-line-clamp: 2;
+	}
+	.url {
+		-webkit-text-size-adjust: 100%;
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+		pointer-events: auto;
+		list-style: none;
+		text-align: inherit;
+		cursor: pointer;
+		-webkit-box-direction: normal;
+		unicode-bidi: -webkit-isolate;
+		border: 0 solid black;
+		box-sizing: border-box;
+		display: inline;
+		font: 14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+		margin-bottom: 0px;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0px;
+		padding-bottom: 0px;
+		padding-left: 0px;
+		padding-right: 0px;
+		padding-top: 0px;
+		max-width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		min-width: 0px;
+		overflow-wrap: break-word;
+		line-height: 20px;
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+		font-size: 15px;
+		font-weight: 400;
+		color: rgb(91, 112, 131);
+	}
+	.url svg {
+		width: 1em;
+		margin-bottom: -0.2em;
+	}
+	</style>
+</head>
+
+<body>
+	<h1>Share Image Previews</h1>
+	{%- for item in collections.all %}
+	<a class="card" href="{{ item.url }}" target="_blank">
+		<img src="/img/og/{{ item.data.ogImage }}">
+		<div class="meta">
+			<h2>{{ item.data.metaTitle }}</h2>
+			<p>{{ item.data.metaDescription | truncate: 200 }}</p>
+			<div class="url">
+				<svg viewBox="0 0 24 24" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-bnwqim r-1plcrui r-lrvibr"><g><path d="M11.96 14.945c-.067 0-.136-.01-.203-.027-1.13-.318-2.097-.986-2.795-1.932-.832-1.125-1.176-2.508-.968-3.893s.942-2.605 2.068-3.438l3.53-2.608c2.322-1.716 5.61-1.224 7.33 1.1.83 1.127 1.175 2.51.967 3.895s-.943 2.605-2.07 3.438l-1.48 1.094c-.333.246-.804.175-1.05-.158-.246-.334-.176-.804.158-1.05l1.48-1.095c.803-.592 1.327-1.463 1.476-2.45.148-.988-.098-1.975-.69-2.778-1.225-1.656-3.572-2.01-5.23-.784l-3.53 2.608c-.802.593-1.326 1.464-1.475 2.45-.15.99.097 1.975.69 2.778.498.675 1.187 1.15 1.992 1.377.4.114.633.528.52.928-.092.33-.394.547-.722.547z"></path><path d="M7.27 22.054c-1.61 0-3.197-.735-4.225-2.125-.832-1.127-1.176-2.51-.968-3.894s.943-2.605 2.07-3.438l1.478-1.094c.334-.245.805-.175 1.05.158s.177.804-.157 1.05l-1.48 1.095c-.803.593-1.326 1.464-1.475 2.45-.148.99.097 1.975.69 2.778 1.225 1.657 3.57 2.01 5.23.785l3.528-2.608c1.658-1.225 2.01-3.57.785-5.23-.498-.674-1.187-1.15-1.992-1.376-.4-.113-.633-.527-.52-.927.112-.4.528-.63.926-.522 1.13.318 2.096.986 2.794 1.932 1.717 2.324 1.224 5.612-1.1 7.33l-3.53 2.608c-.933.693-2.023 1.026-3.105 1.026z"></path></g></svg>
+				hyperion-servers.com</div>
+		</div>
+	</a>
+	{%- endfor %}
+</body>
+
+</html>
