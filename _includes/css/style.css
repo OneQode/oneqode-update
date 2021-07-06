@@ -194,7 +194,12 @@ main {
 
 /* Images */
 figure {
+	width: 100%;
 	margin: 2rem 0;
+}
+figcaption {
+	margin-top: 2rem;
+	font-size: 1rem;
 }
 img {
 	max-width: 100%;
@@ -1031,7 +1036,7 @@ ul.ticks li:before {
 	position: absolute;
 	height: 1.4rem;
 	width: 1.4rem;
-	background: url("/img/ico/check2.svg") center / cover no-repeat;
+	background: url("/img/ico/check.svg") center / cover no-repeat;
 	margin-left: -2rem;
 	margin-top: 0.2rem;
 }
@@ -1285,6 +1290,7 @@ RESPONSIVE OVERRIDES
 	}
 	#header {
 		position: absolute;
+		border-bottom: none;
 	}
 	nav#switcher {
 		margin-left: auto;

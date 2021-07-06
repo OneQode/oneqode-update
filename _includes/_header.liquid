@@ -90,12 +90,6 @@
 	})(window,document,'script','dataLayer','GTM-5FZ7DSW');</script>
 	<!-- Site JS -->
 	<script src="{{ '/js/production.js' | url }}"></script>
-{%- if availabilityChecker %}
-	<!-- Availability Checker -->
-	<script defer src="{{ '/js/address-checker-conf.js' | url }}"></script>
-	<script defer src="{{ '/js/address-checker.js' | url }}"></script>
-	<link rel="stylesheet" href="/css/availability.css">
-{%- endif %}
 {%- if form %}
 	<!-- Spam Protection -->
 	<script src="https://unpkg.com/@botpoison/browser"></script>
