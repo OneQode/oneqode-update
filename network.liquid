@@ -26,13 +26,21 @@ pageSubtitle: The network <mark>purpose-built</mark> for gamers
 		-webkit-text-fill-color: transparent;
 	}
 	/* Icons */
-	.icon.path {
-			mask: url(/img/ico/nodes2.svg) no-repeat center;
-			-webkit-mask: url(/img/ico/nodes2.svg) no-repeat center;
+	.icon.switch {
+		mask: url(/img/ico/switch.svg) no-repeat center;
+		-webkit-mask: url(/img/ico/switch.svg) no-repeat center;
 	}
-	.icon.asia {
-		mask: url(/img/ico/sd-wan.svg) no-repeat center;
-		-webkit-mask: url(/img/ico/sd-wan.svg) no-repeat center;
+	.icon.paths {
+		mask: url(/img/ico/latency2.svg) no-repeat center;
+		-webkit-mask: url(/img/ico/latency2.svg) no-repeat center;
+	}
+	.icon.transit {
+		mask: url(/img/ico/connection2.svg) no-repeat center;
+		-webkit-mask: url(/img/ico/connection2.svg) no-repeat center;
+	}
+	.icon.last-mile {
+		mask: url(/img/ico/last-mile.svg) no-repeat center;
+		-webkit-mask: url(/img/ico/last-mile.svg) no-repeat center;
 	}
 	/* How our DDoS compares to alternatives */
 	#compare {
@@ -62,7 +70,7 @@ pageSubtitle: The network <mark>purpose-built</mark> for gamers
 					<h2>Reach more gamers<mark class="dot">.</mark></h2>
 					<p class="subheading faded">Strategic footprint, closer to players</p>
 					<p>With a game-changing Guam facility at the core, and a presence in Asia-Pacific’s major population centres, you’ll reach hundreds of millions of gamers across the region with ultra low-latency connectivity.</p>
-					<a href="/about/guam/">Learn more about Guam ></a>
+					<a href="/about/guam/" class="chevron">Learn more about Guam</a>
 				</div>
 			</div>
 		</div>
@@ -97,91 +105,158 @@ pageSubtitle: The network <mark>purpose-built</mark> for gamers
 			</div>
 			<div class="row text-center">
 				<figure>
-					<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1379 561">
-						<g>
-							<g fill="none" stroke="#002f40" stroke-width="2" stroke-dasharray="5">
-								<path d="M334 227L614 82" />
-								<path d="M389 496L614 81" />
-								<path d="M1338 280L929 28" />
-								<path d="M334 227L239 12" />
-								<path d="M1049 280L929 28" />
-								<path d="M1106.101 549.489L1049.153 280.5" />
-								<path d="M390.008 496.176l716.093 53.313" />
-								<path d="M44.684 280.5l345.324 215.676" />
-								<path d="M389 496l353-163" />
-								<path d="M614.166 81.787l315.032-53.313" />
-								<path d="M742.602 333.813l306.551-53.313" />
+					<style>
+						#compare-routing text {
+							font-family: "Poppins", sans-serif;
+							font-weight: 600;
+						}
+						.node-label {
+							font-size: 16px;
+						}
+						.route-label {
+							text-transform: uppercase;
+							font-size:  14px;
+						}
+						.endpoint {
+							font-size: 26px;
+						}
+						#compare-routing text.telco {
+							fill: #9b0000;
+						}
+						#compare-routing text.oneqode {
+							fill: #00b0f0;
+						}
+						/* Nodes */
+						.node {
+							stroke-width: 2;
+							stroke: #002f40;
+						}
+						.node.oneqode g {
+							stroke: #00b0f0;
+						}
+						.node.telco g {
+							stroke: #9b0000;
+						}
+						/* lines */
+						.line line {
+							fill: none;
+							stroke: #002f40;
+							stroke-width: 2;
+							stroke-dasharray: 10;
+						}
+						@keyframes lines {
+							100% {
+								stroke-dashoffset: 0;
+							}
+						}
+						.line.telco line {
+							stroke: #9b0000;
+							stroke-dashoffset: 200;
+							animation: lines 4s linear infinite;
+						}
+						.line.oneqode line {
+							stroke: #00b0f0;
+							stroke-dashoffset: 200;
+							animation: lines 1s linear infinite;
+						}
+					</style>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1379 620" id="compare-routing">
+						<g transform="translate(-269 -3728)">
+							<g class="line">
+								<line y1="145" x2="280" transform="translate(603 3840)"/>
+								<line y1="415" x2="225" transform="translate(658 3839)"/>
+								<line x1="409" y1="252" transform="translate(1198 3786)"/>
+								<line x1="95" y1="215" transform="translate(508 3770)"/>
+								<line x1="120" y1="252" transform="translate(1198 3786)"/>
+								<line x1="56.948" y1="268.989" transform="translate(1318.152 4038.5)"/>
+								<line x2="716.093" y2="53.313" transform="translate(659.008 4254.176)"/>
+								<line x2="345.324" y2="215.676" transform="translate(313.684 4038.5)"/>
+								<line y1="163" x2="353" transform="translate(658 4091)"/>
+								<line y1="53.313" x2="315.032" transform="translate(883.165 3786.474)"/>
+								<line y1="53.313" x2="306.551" transform="translate(1011.602 4038.5)"/>
 							</g>
-							<g fill="none" stroke="#9b0000" stroke-width="2">
-								<path d="M1338 280l-233 269" />
-								<path d="M1105 549L742 333" />
-								<path d="M742 333L614 81" />
-								<path d="M239.762 12.722l374.404 69.065" />
-								<path d="M44.684 280.5L239.762 12.722" />
+							<g class="line telco">
+								<line y1="267.778" x2="195.078" transform="translate(313.684 3770.723)"/>
+								<line x2="374.404" y2="69.065" transform="translate(508.761 3770.723)"/>
+								<line x2="128" y2="252" transform="translate(883 3839)"/>
+								<line x2="363" y2="216" transform="translate(1011 4091)"/>
+								<line x2="233" y1="269" transform="translate(1374 4038)"/>
 							</g>
-							<g fill="none" stroke="#00b0f0" stroke-width="2">
-								<path d="M1049.153 280.5h289.587" />
-								<path d="M44.684 280.5l289.587-54.525" />
-								<path d="M334.271 225.975l714.881 54.525" />
+							<g class="line oneqode">
+								<line y1="54.525" x2="289.587" transform="translate(313.684 3983.975)"/>
+								<line x2="714.881" y2="54.525" transform="translate(603.271 3983.975)"/>
+								<line x2="289.587" transform="translate(1318.152 4038.5)"/>
 							</g>
-							<g transform="translate(32 268)" stroke="#00b0f0" stroke-width="2">
-								<circle cx="12" cy="12" r="12" stroke="none" />
-								<circle cx="12" cy="12" r="11" fill="none" />
+							<g class="node">
+								<g transform="translate(646 4241)">
+									<circle cx="12.5" cy="12.5" r="12.5"/>
+									<circle cx="12.5" cy="12.5" r="11.5"/>
+								</g>
+								<g transform="translate(1185 3774)" stroke="#002f40" stroke-width="2">
+									<ellipse cx="12.5" cy="12" rx="12.5" ry="12"/>
+									<ellipse cx="12.5" cy="12" rx="11.5" ry="11"/>
+								</g>
 							</g>
-							<g transform="translate(377 483)" stroke="#002f40" stroke-width="2">
-								<circle cx="12.5" cy="12.5" r="12.5" stroke="none" />
-								<circle cx="12.5" cy="12.5" r="11.5" fill="none" />
+							<g class="node telco">
+								<g transform="translate(496 3758)">
+									<circle cx="12" cy="12" r="12"/>
+									<circle cx="12" cy="12" r="11"/>
+								</g>
+								<g transform="translate(1362 4295)">
+									<ellipse cx="12.5" cy="12" rx="12.5" ry="12"/>
+									<ellipse cx="12.5" cy="12" rx="11.5" ry="11"/>
+								</g>
+								<g transform="translate(870 3827)">
+									<ellipse cx="12.5" cy="12" rx="12.5" ry="12"/>
+									<ellipse cx="12.5" cy="12" rx="11.5" ry="11"/>
+								</g>
+								<g transform="translate(999 4079)">
+									<circle cx="12" cy="12" r="12"/>
+									<circle cx="12" cy="12" r="11"/>
+								</g>
 							</g>
-							<g transform="translate(322 213)" stroke="#00b0f0" stroke-width="2">
-								<circle cx="12" cy="12" r="12" stroke="none" />
-								<circle cx="12" cy="12" r="11" fill="none" />
+							<g class="node oneqode">
+								<g transform="translate(301 4026)">
+									<circle cx="12" cy="12" r="12"/>
+									<circle cx="12" cy="12" r="11"/>
+								</g>
+								<g transform="translate(591 3971)">
+									<circle cx="12" cy="12" r="12"/>
+									<circle cx="12" cy="12" r="11"/>
+								</g>
+								<g transform="translate(1305 4026)">
+									<circle cx="12" cy="12" r="12"/>
+									<circle cx="12" cy="12" r="11"/>
+								</g>
+								<g transform="translate(1595 4026)">
+									<circle cx="12" cy="12" r="12"/>
+									<circle cx="12" cy="12" r="11"/>
+								</g>
 							</g>
-							<g transform="translate(1036 268)" stroke="#00b0f0" stroke-width="2">
-								<ellipse cx="12.5" cy="12" rx="12.5" ry="12" stroke="none" />
-								<ellipse cx="12.5" cy="12" rx="11.5" ry="11" fill="none" />
+							<g class="route-label">
+								<text transform="translate(457.084 4003.907) rotate(-10.5)" class="oneqode"><tspan x="-99.309" y="0">Gaming Optimised Routing</tspan></text>
+								<text transform="translate(464.273 4026.101) rotate(-10.5)" class="oneqode"><tspan x="-34.111" y="1">OneQode</tspan></text>
+								<text transform="matrix(0.588, -0.809, 0.809, 0.588, 428.364, 3908.154)" class="telco"><tspan x="-44.485" y="1">Competitor</tspan></text>
+								<text transform="matrix(0.588, -0.809, 0.809, 0.588, 407.867, 3895.144)" class="telco"><tspan x="-93.037" y="0">Standard Telco Routing</tspan></text>
 							</g>
-							<g transform="translate(916 16)" stroke="#002f40" stroke-width="2">
-								<ellipse cx="12.5" cy="12" rx="12.5" ry="12" stroke="none" />
-								<ellipse cx="12.5" cy="12" rx="11.5" ry="11" fill="none" />
+							<g class="endpoint">
+								<text transform="translate(312 4087)" fill="#fff"><tspan x="-42.51" y="0">Server</tspan></text>
+								<text transform="translate(1606 4087)" fill="#fff"><tspan x="-41.457" y="0">Player</tspan></text>
 							</g>
-							<g transform="translate(227)" stroke="#9b0000" stroke-width="2">
-								<circle cx="12" cy="12" r="12" stroke="none" />
-								<circle cx="12" cy="12" r="11" fill="none" />
+							<g class="node-label">
+								<text transform="translate(601 4019)" class="oneqode"><tspan x="-38.416" y="0">OneQode</tspan></text>
+								<text transform="translate(1317 4075)" class="oneqode"><tspan x="-38.416" y="0">OneQode</tspan></text>
+								<text transform="translate(507 3745)" class="telco"><tspan x="-26.024" y="0">Telco 1</tspan></text>
+								<text transform="translate(883 3815)" class="telco"><tspan x="-27.912" y="0">Telco 2</tspan></text>
+								<text transform="translate(1011 4128)" class="telco"><tspan x="-28.176" y="0">Telco 3</tspan></text>
+								<text transform="translate(1375 4342)" class="telco"><tspan x="-28.6" y="0">Telco 4</tspan></text>
 							</g>
-							<g transform="translate(1093 537)" stroke="#9b0000" stroke-width="2">
-								<ellipse cx="12.5" cy="12" rx="12.5" ry="12" stroke="none" />
-								<ellipse cx="12.5" cy="12" rx="11.5" ry="11" fill="none" />
-							</g>
-							<g transform="translate(601 69)" stroke="#9b0000" stroke-width="2">
-								<ellipse cx="12.5" cy="12" rx="12.5" ry="12" stroke="none" />
-								<ellipse cx="12.5" cy="12" rx="11.5" ry="11" fill="none" />
-							</g>
-							<g transform="translate(730 321)" stroke="#9b0000" stroke-width="2">
-								<circle cx="12" cy="12" r="12" stroke="none" />
-								<circle cx="12" cy="12" r="11" fill="none" />
-							</g>
-							<g transform="translate(1326 268)" stroke="#00b0f0" stroke-width="2">
-								<circle cx="12" cy="12" r="12" stroke="none" />
-								<circle cx="12" cy="12" r="11" fill="none" />
-							</g><text transform="translate(43 329)" fill="#fff" font-size="26" font-family="Poppins-SemiBold, Poppins" font-weight="600">
-								<tspan x="-42.51" y="0">Server</tspan>
-							</text><text transform="rotate(-10.5 1556.492 -928.52)" fill="#00b0f0" font-size="14" font-family="Poppins-SemiBold, Poppins" font-weight="600">
-								<tspan x="-34.111" y="0">OneQode</tspan>
-							</text><text transform="rotate(-10.5 1432.135 -900.498)" fill="#00b0f0" font-size="14" font-family="Poppins-SemiBold, Poppins" font-weight="600">
-								<tspan x="-99.309" y="0">GAMING OPTIMISED ROUTING</tspan>
-							</text><text transform="rotate(-53.98 227.042 -81.364)" fill="#9b0000" font-size="14" font-family="Poppins-SemiBold, Poppins" font-weight="600">
-								<tspan x="-44.485" y="0">COMPETITOR</tspan>
-							</text><text transform="rotate(-53.98 204.025 -67.749)" fill="#9b0000" font-size="14" font-family="Poppins-SemiBold, Poppins" font-weight="600">
-								<tspan x="-93.037" y="0">STANDARD TELCO ROUTING</tspan>
-							</text><text transform="translate(1337 329)" fill="#fff" font-size="26" font-family="Poppins-SemiBold, Poppins" font-weight="600">
-								<tspan x="-41.457" y="0">Player</tspan>
-							</text>
 						</g>
 					</svg>
 					<figcaption>Game-optimised routing: shortest distance and fewest hops</figcaption>
 				</figure>
 			</div>
-			<div class="row">
+			<div class="row mt-2">
 				<div class="col-xs-12 col-md-4 col-md-offset-2">
 					<p>Most providers use ‘least-cost routing’, sending traffic where it’s cheapest, but not fastest.</p>
 					<p>You won’t even experience the savings — it’s their margin.</p>
@@ -204,24 +279,24 @@ pageSubtitle: The network <mark>purpose-built</mark> for gamers
 			</div>
 			<div class="row icons mt-4">
 				<div class="col-xs col-md-5 col-md-offset-1 my-1 p-2">
-					<div class="icon path"></div>
+					<div class="icon switch"></div>
 					<h3>Fastest switches</h3>
 					<p class="faded">Our network is powered by Arista switches — the fastest in the world. We’ve fine-tuned them to further improve performance.</p>
 				</div>
 				<div class="col-xs col-md-5 my-1 p-2">
-					<div class="icon asia"></div>
+					<div class="icon paths"></div>
 					<h3>Shortest paths</h3>
 					<p class="faded">We use the shortest submarine cable routes across Asia-Pacific, giving game traffic access to the lowest latency fibre optic assets in the region.</p>
 				</div>
 			</div>
 			<div class="row icons mt-2">
 				<div class="col-xs col-md-5 col-md-offset-1 my-1 p-2">
-					<div class="icon path"></div>
+					<div class="icon transit"></div>
 					<h3>Premium transit</h3>
 					<p class="faded">We use premium IP Transit as a path of last resort to ensure we achieve low latency to locations where we don’t have direct connectivity.</p>
 				</div>
 				<div class="col-xs col-md-5 my-1 p-2">
-					<div class="icon asia"></div>
+					<div class="icon last-mile"></div>
 					<h3>Direct last-mile links</h3>
 					<p class="faded">We have private fast lanes to the major last-mile ISPs in Asia. This superior interconnection improves fault-tolerance and player experience.</p>
 				</div>

@@ -193,9 +193,9 @@ main {
 }
 
 /* Images */
-figure {
+figure, video {
 	width: 100%;
-	margin: 2rem 0;
+	margin: 0;
 }
 figcaption {
 	margin-top: 2rem;
@@ -479,7 +479,7 @@ footer .credits a:focus {
 footer .credits.text-left {
 	margin-left: 2.5rem;
 }
-footer .credits.text-left:before {
+footer .credits.text-left::before {
 	content: '';
 	position: absolute;
 	width: 1.8rem;
@@ -527,7 +527,7 @@ p.price {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 600;
 	line-height: 1.1;
-	margin: 0.5rem 0 2rem 0;
+	margin: 0 0 2rem 0;
 }
 h1 {
 	font-size: 4rem;
@@ -590,6 +590,24 @@ a {
 a:hover,
 a:focus {
 	color: #00597f;
+}
+a.chevron::after {
+	width: 1.2rem;
+	height: 1.2rem;
+	margin-left: 0.2rem;
+	vertical-align: middle;
+	display: inline-block;
+	content: " ";
+	background: #00b0f0;
+	mask: url(/img/ico/chevron.svg) no-repeat center;
+	-webkit-mask: url(/img/ico/chevron.svg) no-repeat center;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	transition: background 0.2s;
+}
+a.chevron:hover::after,
+a.chevron:focus::after {
+	background: #00597f;
 }
 .button {
 	background: #00b0f0;
@@ -963,7 +981,7 @@ CONTENT
 	height: 5rem;
 	margin-left: auto;
 	margin-right: auto;
-	background: linear-gradient(145deg, #00b0f0, #002735);
+	background: linear-gradient(145deg, #00b0f0, #1b5469);
 	-webkit-mask-size: cover !important;
 	mask-size: cover !important;
 }
@@ -1031,7 +1049,7 @@ ul.ticks li {
 ul.ticks li:last-of-type {
 	margin-bottom: 0;
 }
-ul.ticks li:before {
+ul.ticks li::before {
 	content: '';
 	position: absolute;
 	height: 1.4rem;
@@ -1044,7 +1062,7 @@ ul.ticks.large {
 	font-size: 1.75rem;
 	padding-left: 2.5rem;
 }
-ul.ticks.large li:before {
+ul.ticks.large li::before {
 	height: 1.75rem;
 	width: 1.75rem;
 	margin-top: 0.3rem;
@@ -1228,6 +1246,9 @@ RESPONSIVE OVERRIDES
  - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* Desktop Only */
 @media (min-width: 64em) {
+	.devices-only {
+		display: none !important;
+	}
 	picture img {
 		opacity: 0.75;
 		transition: opacity 0.2s;
