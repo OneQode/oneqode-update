@@ -13,10 +13,19 @@ pageSubtitle: The network <mark>purpose-built</mark> for gamers
 	.hero {
 		background: #000 !important;
 	}
+	/* How our DDoS compares to alternatives */
+	#compare {
+		background: #333;
+		border-radius: 15px;
+	}
 	@media (min-width: 48em) {
 		/* Move up on desktop */
 		.network {
 			margin-top: -8rem;
+		}
+		/* Compare bg */
+		#compare {
+			background: #17181C;
 		}
 	}
 	/* Stat Gradient */
@@ -42,12 +51,83 @@ pageSubtitle: The network <mark>purpose-built</mark> for gamers
 		mask: url(/img/ico/last-mile.svg) no-repeat center;
 		-webkit-mask: url(/img/ico/last-mile.svg) no-repeat center;
 	}
-	/* How our DDoS compares to alternatives */
-	#compare {
-		background: #17181C;
-		border-radius: 15px;
+	/* SVGs */
+	#compare-routing text,
+	#ddos text {
+		font-family: "Poppins", sans-serif;
+		font-weight: 600;
 	}
-	</style>
+	.node-label {
+		font-size: 16px;
+	}
+	.route-label,
+	.item-label {
+		text-transform: uppercase;
+		font-size:  14px;
+	}
+	.blue-fill {
+		fill: #00b0f0;
+	}
+	.blue-stroke {
+		stroke: #00b0f0;
+	}
+	.endpoint {
+		font-size: 26px;
+	}
+	#compare-routing text.telco {
+		fill: #9b0000;
+	}
+	#compare-routing text.oneqode {
+		fill: #00b0f0;
+	}
+	/* Nodes */
+	.node {
+		stroke-width: 2;
+		stroke: #002f40;
+	}
+	.node.oneqode g {
+		stroke: #00b0f0;
+	}
+	.node.telco g {
+		stroke: #9b0000;
+	}
+	/* lines */
+	.line line {
+		fill: none;
+		stroke: #002f40;
+		stroke-width: 2;
+		stroke-dasharray: 10;
+	}
+	@keyframes lines {
+		100% {
+			stroke-dashoffset: 0;
+		}
+	}
+	.line.telco line {
+		stroke: #9b0000;
+		stroke-dashoffset: 200;
+		animation: lines 4s linear infinite;
+	}
+	.line.oneqode line {
+		stroke: #00b0f0;
+		stroke-dashoffset: 200;
+		animation: lines 1s linear infinite;
+	}
+	.legitimate path {
+		stroke: #7fd400;
+		stroke-width: 2;
+		stroke-dasharray: 10;
+		stroke-dashoffset: 200;
+		animation: lines 1s linear infinite;
+	}
+	path.illegitimate {
+		stroke: #9b0000;
+		stroke-width: 2;
+		stroke-dasharray: 10;
+		stroke-dashoffset: 200;
+		animation: lines 1s linear infinite;
+	}
+	</style>	
 	<section class="push-forward">
 		<div class="container">
 			<div class="row place-content-center">
@@ -60,8 +140,8 @@ pageSubtitle: The network <mark>purpose-built</mark> for gamers
 		</div>
 	</section>
 	<section class="network">
-		{% include diagrams/_network-map.liquid %}
-		<p style="font-size: 75%">Global network rollout map <span style="color: #949494">// <a href="https://oneqode.sfo2.digitaloceanspaces.com/maps/global/oneqode-world-map.pdf" rel="noopener" target="_blank">Full map PDF</a></p>
+{% include diagrams/_network-map.liquid %}
+		<figcaption class="mt-0">Global network rollout map <span style="color: #949494">// <a href="https://oneqode.sfo2.digitaloceanspaces.com/maps/global/oneqode-world-map.pdf" rel="noopener" target="_blank">Full map PDF</a></figcaption>
 	</section>
 	<section class="py-8">
 		<div class="container">
@@ -105,61 +185,6 @@ pageSubtitle: The network <mark>purpose-built</mark> for gamers
 			</div>
 			<div class="row text-center">
 				<figure>
-					<style>
-						#compare-routing text {
-							font-family: "Poppins", sans-serif;
-							font-weight: 600;
-						}
-						.node-label {
-							font-size: 16px;
-						}
-						.route-label {
-							text-transform: uppercase;
-							font-size:  14px;
-						}
-						.endpoint {
-							font-size: 26px;
-						}
-						#compare-routing text.telco {
-							fill: #9b0000;
-						}
-						#compare-routing text.oneqode {
-							fill: #00b0f0;
-						}
-						/* Nodes */
-						.node {
-							stroke-width: 2;
-							stroke: #002f40;
-						}
-						.node.oneqode g {
-							stroke: #00b0f0;
-						}
-						.node.telco g {
-							stroke: #9b0000;
-						}
-						/* lines */
-						.line line {
-							fill: none;
-							stroke: #002f40;
-							stroke-width: 2;
-							stroke-dasharray: 10;
-						}
-						@keyframes lines {
-							100% {
-								stroke-dashoffset: 0;
-							}
-						}
-						.line.telco line {
-							stroke: #9b0000;
-							stroke-dashoffset: 200;
-							animation: lines 4s linear infinite;
-						}
-						.line.oneqode line {
-							stroke: #00b0f0;
-							stroke-dashoffset: 200;
-							animation: lines 1s linear infinite;
-						}
-					</style>
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1379 620" id="compare-routing">
 						<g transform="translate(-269 -3728)">
 							<g class="line">
@@ -325,7 +350,7 @@ pageSubtitle: The network <mark>purpose-built</mark> for gamers
 			</div>
 			<div class="row mt-4 text-center">
 				<figure>
-					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1088 269">
+					<svg id="ddos" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1088 269">
 						<defs>
 							<linearGradient id="a" x1=".991" y1=".5" x2="0" y2=".5" gradientUnits="objectBoundingBox">
 								<stop offset="0" />
@@ -333,53 +358,58 @@ pageSubtitle: The network <mark>purpose-built</mark> for gamers
 							</linearGradient>
 							<linearGradient id="b" x1=".024" x2="1" xlink:href="#a" />
 						</defs>
-						<g>
-							<g fill="none" stroke="#7fd400" stroke-width="2" stroke-dasharray="10">
-								<path d="M544 131.359l218.352 110.352h325.4" />
-								<path d="M543.75 131.189h543.75" />
-								<path d="M543.75 131.19L762.303 20.736h325.7" />
-							</g>
-							<path transform="translate(762)" fill="url(#a)" d="M0 0h326v262H0z" />
-							<path fill="none" stroke="#9b0000" stroke-width="2" stroke-dasharray="10" d="M0 121h494.75" />
-							<path d="M.991 146H475.34l68.626-14.641" fill="none" stroke="#7fd400" stroke-width="2" stroke-dasharray="10" /><text transform="translate(544 233)" fill="#fff" font-size="26" font-family="Poppins-SemiBold, Poppins" font-weight="600">
-								<tspan x="-54.938" y="0">Network</tspan>
-								<tspan x="-33.722" y="27">edge</tspan>
-							</text><text transform="translate(594.75 15.5)" fill="#00b0f0" font-size="14" font-family="Poppins-SemiBold, Poppins" font-weight="600">
-								<tspan x="0" y="0">DDOS</tspan>
-								<tspan x="0" y="13">APPLIANCE</tspan>
-							</text>
-							<g stroke="#00b0f0" stroke-width="2">
-								<g transform="translate(490.25 78)" fill="none" stroke-dasharray="2">
-									<circle cx="53" cy="53" r="53" stroke="none" />
-									<circle cx="53" cy="53" r="52" />
-								</g>
-								<g transform="translate(531.25 119)">
-									<circle cx="12" cy="12" r="12" stroke="none" />
-									<circle cx="12" cy="12" r="11" fill="none" />
-								</g>
-							</g><text transform="translate(594.75 65.25)" fill="#00b0f0" font-size="14" font-family="Poppins-SemiBold, Poppins" font-weight="600">
-								<tspan x="0" y="0">ROUTER</tspan>
-							</text>
-							<path fill="none" stroke="#00b0f0" d="M590.75 60.5l-41 61" />
-							<path fill="none" stroke="#00b0f0" d="M590.75 17l-41 61" /><text transform="translate(1003 129)" fill="#999" font-size="20" font-family="Poppins-SemiBold, Poppins" font-weight="600">
-								<tspan x="0" y="0">Internal</tspan>
-								<tspan x="0" y="18">services</tspan>
-							</text>
-							<path transform="translate(1)" fill="url(#b)" d="M0 0h390v262H0z" /><text transform="translate(0 129)" fill="#999" font-size="20" font-family="Poppins-SemiBold, Poppins" font-weight="600">
-								<tspan x="0" y="0">Outside</tspan>
-								<tspan x="0" y="18">network</tspan>
-							</text><text transform="translate(279 173)" fill="#7fd400" font-size="14" font-family="Poppins-SemiBold, Poppins" font-weight="600">
-								<tspan x="-68.019" y="0">LEGITIMATE TRAFFIC</tspan>
-							</text><text transform="translate(260 104)" fill="#9b0000" font-size="14" font-family="Poppins-SemiBold, Poppins" font-weight="600">
-								<tspan x="-49.161" y="0">DDOS TRAFFIC</tspan>
-							</text>
+						<g class="legitimate">
+							<path d="M544 131.359l218.352 110.352h325.4" />
+							<path d="M543.75 131.189h543.75" />
+							<path d="M543.75 131.19L762.303 20.736h325.7" />
+							<path d="M.991 146H475.34l68.626-14.641" />
 						</g>
+						<path class="illegitimate" d="M.991 121h494.75" />
+						<path transform="translate(762)" fill="url(#a)" d="M0 0h326v262H0z" />
+						<text transform="translate(544 233)" fill="#fff" font-size="26">
+							<tspan x="-54.938" y="0">Network</tspan>
+							<tspan x="-33.722" y="27">edge</tspan>
+						</text>
+						<text transform="translate(594.75 15.5)" class="item-label blue-fill">
+							<tspan x="0" y="0">DDOS</tspan>
+							<tspan x="0" y="13">APPLIANCE</tspan>
+						</text>
+						<g stroke-width="2" class="blue-stroke">
+							<g transform="translate(490.25 78)" fill="none" stroke-dasharray="2">
+								<circle cx="53" cy="53" r="53" stroke="none" />
+								<circle cx="53" cy="53" r="52" />
+							</g>
+							<g transform="translate(531.25 119)">
+								<circle cx="12" cy="12" r="12" stroke="none" />
+								<circle cx="12" cy="12" r="11" />
+							</g>
+						</g>
+						<text transform="translate(594.75 65.25)" class="item-label blue-fill">
+							<tspan x="0" y="0">ROUTER</tspan>
+						</text>
+						<path fill="none" class="blue-stroke" d="M590.75 60.5l-41 61" />
+						<path fill="none" class="blue-stroke" d="M590.75 17l-41 61" />
+						<text transform="translate(1003 129)" fill="#999" font-size="20">
+							<tspan x="0" y="0">Internal</tspan>
+							<tspan x="0" y="18">services</tspan>
+						</text>
+						<path transform="translate(1)" fill="url(#b)" d="M0 0h390v262H0z" />
+						<text transform="translate(0 129)" fill="#999" font-size="20">
+							<tspan x="0" y="0">Outside</tspan>
+							<tspan x="0" y="18">network</tspan>
+						</text>
+						<text transform="translate(279 173)" fill="#7fd400" class="item-label">
+							<tspan x="-68.019" y="0">LEGITIMATE TRAFFIC</tspan>
+						</text>
+						<text transform="translate(260 104)" fill="#9b0000" class="item-label">
+							<tspan x="-49.161" y="0">DDOS TRAFFIC</tspan>
+						</text>
 					</svg>
 					<figcaption>Edge DDoS appliances prevent attacks from affecting the network</figcaption>
 				</figure>
 			</div>
-			<div class="row my-8">
-				<div class="col-xs-12 col-md-4 col-md-offset-1">
+			<div class="row mb-8 mobile-text-center">
+				<div class="col-xs-12 col-md-4 col-md-offset-1 mt-8">
 					<h3>Block attacks at the edge</h3>
 					<p>Each entrance to our network is lined with <strong>always on</strong>, high throughput DDoS mitigation appliances.</p>
 					<p>Malicious traffic is scrubbed and filtered in real time, keeping the network free of disruption.</p>
@@ -387,7 +417,7 @@ pageSubtitle: The network <mark>purpose-built</mark> for gamers
 					<p>Players won’t notice attacks, because our architecture keeps them shielded by design.</p>
 					<p>And this is included at <strong>no charge</strong> to OneQode customers, so you’ll never experience DDoS bill shock. Ever.</p>
 				</div>
-				<div class="col-xs-12 col-md-4 col-md-offset-2 p-2" id="compare">
+				<div class="col-xs-12 col-md-4 col-md-offset-2 mt-8 p-2" id="compare">
 					<h3>How other networks deploy DDoS protection:</h3>
 					<p>Most gaming networks don’t have always-on network-wide protection and respond to attacks in one of two ways:</p>
 					<p><strong>❌ Blackhole routing</strong></p>
@@ -417,7 +447,7 @@ pageSubtitle: The network <mark>purpose-built</mark> for gamers
 	<div id="services" class="py-8">
 		<div class="container">
 			<div class="row text-center">
-				<div class="col-xs-12"><h2>Go faster with our network<mark class="dot">.</mark></h2></div>
+				<div class="col-xs-12"><h2>Go faster with OneQode<mark class="dot">.</mark></h2></div>
 			</div>
 			<div class="row mt-4 icons mobile-flex">
 				<div class="col-xs-6 col-md-5 col-md-offset-1 mb-2 mt-1">

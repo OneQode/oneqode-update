@@ -120,6 +120,9 @@ main {
 .mb-4 {
 	margin-bottom: 4rem;
 }
+.mb-8 {
+	margin-bottom: 8rem;
+}
 .my-1 {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
@@ -198,6 +201,7 @@ figure, video {
 	margin: 0;
 }
 figcaption {
+	text-align: center;
 	margin-top: 2rem;
 	font-size: 1rem;
 }
@@ -537,7 +541,7 @@ h2,
 	font-size: 3rem;
 }
 h3 {
-	font-size: 2.25rem;
+	font-size: 2rem;
 }
 h4 {
 	font-size: 1.5rem;
@@ -966,7 +970,6 @@ CONTENT
 	opacity: 0.75;
 }
 .icons h3 {
-	font-size: 1.25rem;
 	min-height: 1.5rem;
 	margin-top: 2rem;
 	margin-bottom: 1rem;
@@ -1177,39 +1180,39 @@ ul.no-style {
 	color: #00b0f0;
 }
 /* Network Map */
-#network-map {
+.map {
 	position: relative;
 	display: block;
 	width: 100%;
 }
-#network-map svg {
+.map svg {
 	position: absolute;
 	z-index: 1;
 	width: 100%;
 }
-#network-map img {
+.map img {
 	opacity: 1;
 	width: 100%;
 }
-#network-map text {
+.map text {
 	font-size: 31px;
 	font-family: "Poppins", sans-serif;
 	font-weight: 600;
 }
-#network-map text.active {
+.map text.active {
 	fill: #fff;
 }
-#network-map text.coming-soon {
+.map text.coming-soon {
 	fill: #999;
 }
-#network-map path,
-#network-map line {
+.map path,
+.map line {
 	fill: none;
 	stroke-miterlimit: 10;
 	stroke-width: 3;
 }
-#network-map .active path,
-#network-map #legend line.active {
+.map .active path,
+.map #legend line.active {
 	stroke: #00b0f0;
 	stroke-width: 4;
 	stroke-dasharray: 15;
@@ -1221,19 +1224,19 @@ ul.no-style {
 		stroke-dashoffset: 0;
 	}
 }
-#network-map .coming-soon path,
-#network-map #legend line.coming-soon,
-#network-map .transit path,
-#network-map #legend line.transit {
+.map .coming-soon path,
+.map #legend line.coming-soon,
+.map .transit path,
+.map #legend line.transit {
 	stroke: #00597f;
 	stroke-dasharray: 10 10;
 }
-#network-map .transit path,
-#network-map #legend line.transit {
+.map .transit path,
+.map #legend line.transit {
 	stroke-dashoffset: 400;
 	animation: maplines 2s linear infinite;
 }
-#network-map #legend rect {
+.map #legend rect {
 	fill: #4f94cc;
 	opacity: 0.2;
 }
@@ -1442,9 +1445,9 @@ RESPONSIVE OVERRIDES
 		opacity: 1;
 	}
 	/* Don't animate maps */
-	#network-map .active path,
-	#network-map .coming-soon path,
-	#network-map #legend line.active {
+	.map .active path,
+	.map .coming-soon path,
+	.map #legend line.active {
 		animation: none;
 		stroke-width: 6;
 	}
