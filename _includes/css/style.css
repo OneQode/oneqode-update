@@ -525,7 +525,7 @@ h4,
 h5,
 h6,
 p.subheading,
-.stat span,
+.stat,
 summary,
 p.price {
 	font-family: 'Poppins', sans-serif;

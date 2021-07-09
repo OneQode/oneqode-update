@@ -27,12 +27,19 @@ pageSubtitle: The network <mark>purpose-built</mark> for gamers
 		#compare {
 			background: #17181C;
 		}
+		.icon {
+			margin-left: 0;
+		}
 	}
 	/* Stat Gradient */
 	.stat {
 		background: -webkit-linear-gradient(258deg, #fff, #999);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
+	}
+	span.unit {
+		font-size: 2.5rem;
+		display: inline-block;
 	}
 	/* Icons */
 	.icon.switch {
@@ -127,6 +134,41 @@ pageSubtitle: The network <mark>purpose-built</mark> for gamers
 		stroke-dashoffset: 200;
 		animation: lines 1s linear infinite;
 	}
+	/*  Logo Grid  */
+	.logo-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+		grid-gap: 1rem;
+	}
+	@media (min-width: 48em) {
+		.logo-grid {
+			grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+		}
+	}
+	.logo-grid > div {
+		padding: 1rem;
+		display: grid;
+		place-items: center;
+	}
+	.logo-grid > div::before {
+		content: "";
+		display: block;
+		padding-bottom: 100%;
+		grid-area: 1/1/2/2;
+	}
+	.logo-grid > div img {
+		width: 100%;
+		grid-area: 1/1/2/2;
+		filter: brightness(0) invert(1);
+		opacity: 0.3;
+		transition: opacity 0.2s;
+	}
+	.logo-grid > div:hover img {
+		opacity: 0.8;
+	}
+	.logo-grid > div img.telstra {
+		width: 50%;
+	}
 	</style>	
 	<section class="push-forward">
 		<div class="container">
@@ -146,29 +188,29 @@ pageSubtitle: The network <mark>purpose-built</mark> for gamers
 	<section class="py-8">
 		<div class="container">
 			<div class="row place-content-center">
-				<div class="col-xs-12 col-md-6">
-					<h2>Reach more gamers<mark class="dot">.</mark></h2>
-					<p class="subheading faded">Strategic footprint, closer to players</p>
+				<div class="col-xs-12 col-md-5">
+					<h3 class="faded">Reach more gamers</h3>
+					<h3>Strategic footprint,<br class="responsive"> closer to players</h3>
 					<p>With a game-changing Guam facility at the core, and a presence in Asia-Pacific’s major population centres, you’ll reach hundreds of millions of gamers across the region with ultra low-latency connectivity.</p>
-					<a href="/about/guam/" class="chevron">Learn more about Guam</a>
+					<a href="/guam/" class="chevron">Learn more about Guam</a>
 				</div>
 			</div>
 		</div>
 	</section>
-	<section class="py-4">
+	<section>
 		<div class="container">
 			<div class="row mobile-flex">
-				<div class="col-xs-6 col-md-3">
-					<div class="stat"><span>100 GbE</span> core network</div>
+				<div class="col-xs-12 col-md-3 py-4">
+					<div class="stat"><span>100<span class="unit"> GbE</span></span> core network</div>
 				</div>
-				<div class="col-xs-6 col-md-3">
+				<div class="col-xs-12 col-md-3 py-4">
 					<div class="stat"><span>20</span> countries in reach</div>
 				</div>
-				<div class="col-xs-6 col-md-3">
+				<div class="col-xs-12 col-md-3 py-4">
 					<div class="stat"><span>9</span> points of presence</div>
 				</div>
-				<div class="col-xs-6 col-md-3">
-					<div class="stat"><span>99.95%</span> uptime</div>
+				<div class="col-xs-12 col-md-3 py-4">
+					<div class="stat"><span>99.95<span class="unit">%</span></span> uptime</div>
 				</div>
 			</div>
 		</div>
@@ -293,9 +335,9 @@ pageSubtitle: The network <mark>purpose-built</mark> for gamers
 			</div>
 		</div>
 	</section>
-	<section class="py-8 text-center">
+	<section class="py-8 mobile-text-center">
 		<div class="container">
-			<div class="row">
+			<div class="row text-center">
 				<div class="col-xs-12 col-md-6 col-md-offset-3">
 					<h2>Engineered for speed<mark class="dot">.</mark></h2>
 					<p class="subheading faded">Cutting-edge network architecture</p>
@@ -328,11 +370,34 @@ pageSubtitle: The network <mark>purpose-built</mark> for gamers
 			</div>
 		</div>
 	</section>
-	<section class="py-8 mid">
+	<section id="interconnection-partners">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12 text-center">
-					Interconnection partners go here
+				<div class="col-xs-12 logo-grid">
+					<div><img src="/img/partners/aapt.svg" alt="AAPT"></div>
+					<div><img src="/img/partners/ams-ix.svg" alt="Amsterdam Internet Exchange"></div>
+					<div><img src="/img/partners/any2exchange.png" alt="Any2 Exchange"></div>
+					<div><img src="/img/partners/att.svg" alt="ATT"></div>
+					<div><img src="/img/partners/bbix.png" alt="BBIX"></div>
+					<div><img src="/img/partners/china-mobile.svg" alt="China Mobile International"></div>
+					<div><img src="/img/partners/edgeix.png" alt="EdgeIX"></div>
+					<div><img src="/img/partners/gta.svg" alt="GTA Teleguam"></div>
+					<div><img src="/img/partners/hkix.svg" alt="Hong Kong Internet Exchange"></div>
+					<div><img src="/img/partners/ix-australia.png" alt="IX Australia"></div>
+					<div><img src="/img/partners/jpix.png" alt="Japan Internet Exchange Co"></div>
+					<div><img src="/img/partners/jpnap.svg" alt="JPNAP"></div>
+					<div><img src="/img/partners/lbnco.png" alt="LBNCO"></div>
+					<div><img src="/img/partners/megaport.svg" alt="Megaport"></div>
+					<div><img src="/img/partners/ntt.svg" alt="NTT"></div>
+					<div><img src="/img/partners/optus.svg" alt="Optus"></div>
+					<div><img src="/img/partners/spectrum.svg" alt="Spectrum"></div>
+					<div><img src="/img/partners/telia.svg" alt="Telia"></div>
+					<div><img src="/img/partners/telstra.svg" alt="Telstra" class="telstra"></div>
+					<div><img src="/img/partners/tpg.svg" alt="TPG"></div>
+					<div><img src="/img/partners/voxility.png" alt="Voxility"></div>
+				</div>
+				<div class="col-xs-12">
+					<figcaption>Direct interconnection partners</figcaption>
 				</div>
 			</div>
 		</div>
@@ -409,7 +474,7 @@ pageSubtitle: The network <mark>purpose-built</mark> for gamers
 				</figure>
 			</div>
 			<div class="row mb-8 mobile-text-center">
-				<div class="col-xs-12 col-md-4 col-md-offset-1 mt-8">
+				<div class="col-xs-12 col-md-4 col-md-offset-1 mt-8 pt-2">
 					<h3>Block attacks at the edge</h3>
 					<p>Each entrance to our network is lined with <strong>always on</strong>, high throughput DDoS mitigation appliances.</p>
 					<p>Malicious traffic is scrubbed and filtered in real time, keeping the network free of disruption.</p>
@@ -418,14 +483,14 @@ pageSubtitle: The network <mark>purpose-built</mark> for gamers
 					<p>And this is included at <strong>no charge</strong> to OneQode customers, so you’ll never experience DDoS bill shock. Ever.</p>
 				</div>
 				<div class="col-xs-12 col-md-4 col-md-offset-2 mt-8 p-2" id="compare">
-					<h3>How other networks deploy DDoS protection:</h3>
+					<h4>How other networks deploy DDoS protection:</h4>
 					<p>Most gaming networks don’t have always-on network-wide protection and respond to attacks in one of two ways:</p>
 					<p><strong>❌ Blackhole routing</strong></p>
 					<p>Dropping all traffic (however legitimate) during an attack. All players lose connectivity.</p>
 					<p><strong>❌ Scrubbing facility redirection</strong></p>
 					<p>Diverting all traffic to separate scrubbing locations, negatively impacting player latency and experience.</p>
 					<p>These methods are cheaper to deploy, but gamers suffer — and you’ll get angry tweets.</p>
-					<p>The real kicker? You’ll often have to <strong>pay per megabyte</strong> whenever you get attacked. Seriously.</p>
+					<p class="mb-0">The real kicker? You’ll often have to <strong>pay per megabyte</strong> whenever you get attacked. Seriously.</p>
 				</div>
 			</div>
 		</div>
@@ -434,12 +499,13 @@ pageSubtitle: The network <mark>purpose-built</mark> for gamers
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-md-5 col-md-offset-1">
-					<h2><span class="subheading faded">Traffic management</span><br>Optimise player routes</h2>
+					<h3 class="faded mb-1">Traffic management</h3>
+					<h3>Optimise player routes</h3>
 				</div>
 				<div class="col-xs-12 col-md-5 col-md-offset-1">
-					<p>Having specific users with latency issues? We can fine-tune that, too.</p>
+					<p class="mt-0">Having specific users with latency issues? We can fine-tune that, too.</p>
 					<p>As a carrier, we can apply custom traffic management policies at the network level in real-time.</p>
-					<p>This prompts their network to direct that user’s data via a specific route, optimising the journey for latency.</p>
+					<p>This prompts the player’s network to direct game data via a specific route, optimising the journey for latency.</p>
 				</div>
 			</div>
 		</div>
