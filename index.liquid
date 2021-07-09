@@ -24,35 +24,6 @@ pageTitle: Low-latency multiplayer
 			padding-top: 6rem !important;
 			height: 100%;
 		}
-		/* Particles JS */
-		canvas {
-			position: absolute;
-			z-index: 0;
-			height:  80vh !important;
-		}
-		section.hero::after {
-			position: absolute;
-			width: 100%;
-			height: 80vh;
-			content: " ";
-			background: linear-gradient(to bottom, transparent 70%, #000);
-		}
-		/* Kotaku Article Quote */
-		.kotaku-quote blockquote p {
-			font-family: "Poppins", sans-serif;
-			font-weight: 600;
-			font-size: 1.5rem;
-		}
-		a.kotaku-logo {
-			display: block;
-			width: min(20rem, 60%);
-			margin: 0 auto;
-			opacity: 0.8;
-		}
-		a.kotaku-logo:hover,
-		a.kotaku-logo:focus {
-			opacity: 1;
-		}
 		.no-webp #network {
 			background: url(/img/glowing-oneqode-network-globe.jpg) no-repeat 130% 50%;
 			background-size: contain;
@@ -77,7 +48,7 @@ pageTitle: Low-latency multiplayer
 				margin-top: -50px;
 			}
 		}
-		/* Typer.js - Credit - https://github.com/qodesmith/typer */
+		/* Typer.js */
 		.typer {
 			display: inline-block;
 		}
@@ -151,38 +122,7 @@ pageTitle: Low-latency multiplayer
 			</div> 
 		</div>
 	</section>
-	<section class="pb-4">
-		<div class="container text-center">
-			<div class="row">
-				<div class="col-xs-12 col-md-8 col-md-offset-2 kotaku-quote">
-					<blockquote cite="https://www.kotaku.com.au/2021/03/a-brisbane-isp-is-building-guam-into-an-online-gaming-hub/">
-						<p>“...could have massive consequences for an enormous chunk of gaming across the Asia-Pacific”</p>
-					</blockquote>
-					<a class="kotaku-logo" href="https://www.kotaku.com.au/2021/03/a-brisbane-isp-is-building-guam-into-an-online-gaming-hub/" target="_blank" rel="noopener">
-						<svg width="100%" height="100%" viewBox="0 0 960 208" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-							<title>Kotaku Australia</title>
-							<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-								<g id="kot-headerlogo-01" fill="#fff">
-									<g id="au" transform="translate(857.714800, 53.465500)" font-family="Helvetica" font-size="73.4217" font-weight="normal">
-										<text id="A">
-											<tspan x="0" y="72">A</tspan>
-										</text>
-										<text id="U">
-											<tspan x="47.7" y="72">U</tspan>
-										</text>
-									</g>
-									<g id="kotaku">
-										<path d="M733.8,60.4 L739.3,135.4 C740.1,146.1 734,155.1 725.5,155.4 L677.9,157.2 C668.8,157.6 660.9,148.6 660.4,137.3 L657,58.2 L680.9,58.9 L684.6,128 L716,127.4 L711.6,59.8 L733.8,60.4 Z M758.8,62 C758,52.2 751,44 743.2,43.7 L736,43.4 L738.6,79.8 L760.2,80.1 L758.8,62 Z M782.6,62.6 C781.7,52.9 774.9,44.9 767.3,44.6 L760.4,44.3 L763.3,80 L784.1,80.3 L782.6,62.6 Z M562.3,55.6 L563,161.7 L572.3,161.3 C582.6,160.9 590.8,150.9 590.6,139.1 L589.3,56.4 L562.3,55.6 M617.8,121.7 L619.2,121.7 L620.8,121.7 L639.3,162.8 C648.2,183 669.8,185.2 673.7,180.1 L638.8,104.6 C635.3,97.9 631,93.6 621.5,93.6 L592.6,93.5 C592.4,112.3 607.8,121.8 617.8,121.7 M607.8,91.3 L646.4,59.9 C657.4,50.3 657.2,33.1 647.8,22.8 L607.9,55.1 C599.3,62.7 599.6,81 607.8,91.3 M535.1,54.8 L490.1,53.5 C468.7,52.9 463.1,71.9 466.5,84.2 L525.3,84.7 L524.9,130.8 L484.4,131.6 L484.6,123.5 L496.5,123.3 C517.8,123 522.9,105.1 519.4,93 L519.3,93 L519.4,93 L475.1,92.8 C463.6,92.8 453.8,102.8 453.4,115.3 L453.3,119.3 L452.5,142.4 C452,155.3 461.4,165.5 473.2,165 L534.7,162.6 C545.5,162.2 554.2,151.9 554.100854,139.8 L553.9,75.8 C553.8,64.5 545.4,55.1 535.1,54.8 M388.7,144.1 C387.9,157.5 397.7,168.1 410.4,167.6 L421.8,167.2 L425.5,88.8 L392,88.6 L388.7,144.1 Z M438.5,84 C460.9,84.2 466.6,65 463.2,52.8 L387.3,50.7 C363.1,50 358.6,70.2 362,83.3 L438.5,84 Z M333.2,49.1 L262,47.1 C234.3,46.3 225,67.9 228.3,82 L318.1,82.9 L313.5,135 L261.7,136 L267,87.7 L227.1,87.4 L219.5,148.3 C217.7,163 228.8,174.6 244.1,174 L323.1,171 C336.9,170.5 348.8,158.8 349.9,145.1 L355.3,73 C356.1,60.1 346.4,49.5 333.2,49.1 M74.5,41.9 L48.5,181.5 L64.8,180.9 C82.8,180.2 99.3,166.8 101.9,151.2 L120.3,43.2 L74.5,41.9 M152.7,128.2 L155.1,128.2 L157.9,128.2 L179.3,181.9 C189.5,208.4 225.4,210.7 233,204 L192.3,106 C187.9,97.3 181.8,91.8 165.9,91.7 L116.9,91.5 C111.7,116 135.8,128.4 152.7,128.2 M143.2,88.6 L215.3,48.3 C235.7,36.2 236.4,14.2 223.2,0.9 L152.1,41.8 C135.7,51.5 131.8,75.3 143.2,88.6 M59.9,80.5 L67,41.7 L42.2,41 C7.6,40 -2,64.2 0.9,79.9 L59.9,80.5 Z"></path>
-									</g>
-								</g>
-							</g>
-						</svg>
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section id="overview" class="mt-8 py-8">
+	<section id="overview" class="py-8">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
@@ -292,38 +232,5 @@ pageTitle: Low-latency multiplayer
 				.pause(1000)
 				.back('all')
 				.repeat(Infinity, true)
-		</script>
-		<!--
-			Particles JS
-			Credit: Vincent Garreau
-			https://vincentgarreau.com/particles.js/
-			License: MIT
-		-->
-		<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-		<script>
-		particlesJS("stars", {
-			"particles": {
-				number: { value: 160, density: { enable: true, value_area: 800 } },
-				color: {value: "#ffffff"},
-				shape: { type: "circle", stroke: { width: 0, color: "#000000" }, polygon: { nb_sides: 5 }, image: { src: "img/github.svg", width: 100, height: 100 } },
-				opacity: { value: 0.6, random: true, anim: { enable: true, speed: 1, opacity_min: 0, sync: false } },
-				size: { value: 1, random: false, anim: { enable: false, speed: 4, size_min: 0.3, sync: false } },
-				line_linked: { enable: false, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
-				move: { enable: true, speed: 1, direction: "none", random: true, straight: false, out_mode: "out", bounce: false, attract: { enable: false, rotateX: 600, rotateY: 600 }
-				}
-			},
-			interactivity: {
-				detect_on: "canvas",
-				events: { onhover: { enable: true, mode: "bubble" }, onclick: { enable: false, mode: "repulse"}, resize: true },
-				modes: {
-					grab: { distance: 100, line_linked: { opacity: 0 } },
-					bubble: { distance: 73.08694910712106, size: 2, duration: 2, opacity: 0, speed: 3 },
-					repulse: { distance: 87.91208791208791, duration: 0.4 },
-					push: { particles_nb: 4 },
-					remove: { particles_nb: 2 }
-				}
-			},
-			retina_detect: true,
-		});
 		</script>
 {% include _footer.liquid %}
