@@ -557,7 +557,7 @@ p.superheading {
 	color: #4f94cc;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	margin: 0;
+	margin-bottom: 1rem;
 }
 /* Highlight */
 mark {
