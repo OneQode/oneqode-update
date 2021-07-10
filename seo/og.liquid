@@ -17,7 +17,6 @@ eleventyExcludeFromCollections: true
 		width: 100%;
 		margin: 0;
 	}
-
 	html {
 		display: grid;
 		place-items: center;
@@ -27,6 +26,10 @@ eleventyExcludeFromCollections: true
 		background: #fff;
 		padding: 20px;
 		max-width: 564px;
+	}
+	h1 {
+		font-family: Arial, sans-serif;
+		font-weight: normal;
 	}
 	a.card {
 		display: block;
@@ -182,7 +185,7 @@ eleventyExcludeFromCollections: true
 		font: 14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 		margin-bottom: 0px;
 		margin-left: 0px;
-		margin-right: 0px;
+		margin-right: 0px;wa
 		margin-top: 0px;
 		padding-bottom: 0px;
 		padding-left: 0px;
@@ -204,11 +207,35 @@ eleventyExcludeFromCollections: true
 		width: 1em;
 		margin-bottom: -0.2em;
 	}
+	.links {
+		background: #eaeaea;
+		padding: 14px;
+		margin-bottom: 28px;
+		border-radius: 7px;
+	}
+	.links a,
+	.links p {
+		font-weight: normal;
+		font-family: arial, sans-serif;
+		font-size: 14px;
+		text-align: left;
+		text-decoration: revert;
+		color: revert;
+		line-height: 1.58;
+		margin-top: 0;
+	}
 	</style>
 </head>
 
 <body>
 	<h1>Share Image Previews</h1>
+	<div class="links">
+		<p>See also:</p>
+		<ul>
+			<li><a href="/seo/">SERP Previews</a></li>
+			<li><a href="/seo/ignore/">Non-Indexed Pages</a></li>
+		</ul>
+	</div>
 	{%- for item in collections.all %}
 	<a class="card" href="{{ item.url }}" target="_blank">
 		<img src="/img/og/{{ item.data.ogImage }}">

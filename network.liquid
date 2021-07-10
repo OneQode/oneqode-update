@@ -10,165 +10,165 @@ pageTitle: Low-latency<br class="responsive"> gaming backbone
 pageSubtitle: The network <mark>purpose-built</mark> for gamers
 ---
 	<style>
-	.hero {
-		background: #000 !important;
-	}
-	/* How our DDoS compares to alternatives */
-	#compare {
-		background: #333;
-		border-radius: 15px;
-	}
-	@media (min-width: 48em) {
-		/* Move up on desktop */
-		.network {
-			margin-top: -8rem;
+		.hero {
+			background: #000 !important;
 		}
-		/* Compare bg */
+		/* How our DDoS compares to alternatives */
 		#compare {
-			background: #17181C;
+			background: #333;
+			border-radius: 15px;
 		}
-		.icon {
-			margin-left: 0;
+		@media (min-width: 48em) {
+			/* Move up on desktop */
+			.network {
+				margin-top: -8rem;
+			}
+			/* Compare bg */
+			#compare {
+				background: #17181C;
+			}
+			.icon {
+				margin-left: 0;
+			}
 		}
-	}
-	/* Stat Gradient */
-	.stat {
-		background: -webkit-linear-gradient(258deg, #fff, #999);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-	}
-	span.unit {
-		font-size: 2.5rem;
-		display: inline-block;
-	}
-	/* Icons */
-	.icon.switch {
-		mask: url(/img/ico/switch.svg) no-repeat center;
-		-webkit-mask: url(/img/ico/switch.svg) no-repeat center;
-	}
-	.icon.paths {
-		mask: url(/img/ico/latency2.svg) no-repeat center;
-		-webkit-mask: url(/img/ico/latency2.svg) no-repeat center;
-	}
-	.icon.transit {
-		mask: url(/img/ico/connection2.svg) no-repeat center;
-		-webkit-mask: url(/img/ico/connection2.svg) no-repeat center;
-	}
-	.icon.last-mile {
-		mask: url(/img/ico/last-mile.svg) no-repeat center;
-		-webkit-mask: url(/img/ico/last-mile.svg) no-repeat center;
-	}
-	/* SVGs */
-	#compare-routing text,
-	#ddos text {
-		font-family: "Poppins", sans-serif;
-		font-weight: 600;
-	}
-	.node-label {
-		font-size: 16px;
-	}
-	.route-label,
-	.item-label {
-		text-transform: uppercase;
-		font-size:  14px;
-	}
-	.blue-fill {
-		fill: #00b0f0;
-	}
-	.blue-stroke {
-		stroke: #00b0f0;
-	}
-	.endpoint {
-		font-size: 26px;
-	}
-	#compare-routing text.telco {
-		fill: #9b0000;
-	}
-	#compare-routing text.oneqode {
-		fill: #00b0f0;
-	}
-	/* Nodes */
-	.node {
-		stroke-width: 2;
-		stroke: #002f40;
-	}
-	.node.oneqode g {
-		stroke: #00b0f0;
-	}
-	.node.telco g {
-		stroke: #9b0000;
-	}
-	/* lines */
-	.line line {
-		fill: none;
-		stroke: #002f40;
-		stroke-width: 2;
-		stroke-dasharray: 10;
-	}
-	@keyframes lines {
-		100% {
-			stroke-dashoffset: 0;
+		/* Stat Gradient */
+		.stat {
+			background: -webkit-linear-gradient(258deg, #fff, #999);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
 		}
-	}
-	.line.telco line {
-		stroke: #9b0000;
-		stroke-dashoffset: 200;
-		animation: lines 4s linear infinite;
-	}
-	.line.oneqode line {
-		stroke: #00b0f0;
-		stroke-dashoffset: 200;
-		animation: lines 1s linear infinite;
-	}
-	.legitimate path {
-		stroke: #7fd400;
-		stroke-width: 2;
-		stroke-dasharray: 10;
-		stroke-dashoffset: 200;
-		animation: lines 1s linear infinite;
-	}
-	path.illegitimate {
-		stroke: #9b0000;
-		stroke-width: 2;
-		stroke-dasharray: 10;
-		stroke-dashoffset: 200;
-		animation: lines 1s linear infinite;
-	}
-	/*  Logo Grid  */
-	.logo-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-		grid-gap: 1rem;
-	}
-	@media (min-width: 48em) {
+		span.unit {
+			font-size: 2.5rem;
+			display: inline-block;
+		}
+		/* Icons */
+		.icon.switch {
+			mask: url(/img/ico/switch.svg) no-repeat center;
+			-webkit-mask: url(/img/ico/switch.svg) no-repeat center;
+		}
+		.icon.paths {
+			mask: url(/img/ico/latency2.svg) no-repeat center;
+			-webkit-mask: url(/img/ico/latency2.svg) no-repeat center;
+		}
+		.icon.transit {
+			mask: url(/img/ico/connection2.svg) no-repeat center;
+			-webkit-mask: url(/img/ico/connection2.svg) no-repeat center;
+		}
+		.icon.last-mile {
+			mask: url(/img/ico/last-mile.svg) no-repeat center;
+			-webkit-mask: url(/img/ico/last-mile.svg) no-repeat center;
+		}
+		/* SVGs */
+		#compare-routing text,
+		#ddos text {
+			font-family: "Poppins", sans-serif;
+			font-weight: 600;
+		}
+		.node-label {
+			font-size: 16px;
+		}
+		.route-label,
+		.item-label {
+			text-transform: uppercase;
+			font-size:  14px;
+		}
+		.blue-fill {
+			fill: #00b0f0;
+		}
+		.blue-stroke {
+			stroke: #00b0f0;
+		}
+		.endpoint {
+			font-size: 26px;
+		}
+		#compare-routing text.telco {
+			fill: #9b0000;
+		}
+		#compare-routing text.oneqode {
+			fill: #00b0f0;
+		}
+		/* Nodes */
+		.node {
+			stroke-width: 2;
+			stroke: #002f40;
+		}
+		.node.oneqode g {
+			stroke: #00b0f0;
+		}
+		.node.telco g {
+			stroke: #9b0000;
+		}
+		/* lines */
+		.line line {
+			fill: none;
+			stroke: #002f40;
+			stroke-width: 2;
+			stroke-dasharray: 10;
+		}
+		@keyframes lines {
+			100% {
+				stroke-dashoffset: 0;
+			}
+		}
+		.line.telco line {
+			stroke: #9b0000;
+			stroke-dashoffset: 200;
+			animation: lines 4s linear infinite;
+		}
+		.line.oneqode line {
+			stroke: #00b0f0;
+			stroke-dashoffset: 200;
+			animation: lines 1s linear infinite;
+		}
+		.legitimate path {
+			stroke: #7fd400;
+			stroke-width: 2;
+			stroke-dasharray: 10;
+			stroke-dashoffset: 200;
+			animation: lines 1s linear infinite;
+		}
+		path.illegitimate {
+			stroke: #9b0000;
+			stroke-width: 2;
+			stroke-dasharray: 10;
+			stroke-dashoffset: 200;
+			animation: lines 1s linear infinite;
+		}
+		/*  Logo Grid  */
 		.logo-grid {
-			grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+			grid-gap: 1rem;
 		}
-	}
-	.logo-grid > div {
-		padding: 1rem;
-		display: grid;
-		place-items: center;
-	}
-	.logo-grid > div::before {
-		content: "";
-		display: block;
-		padding-bottom: 100%;
-		grid-area: 1/1/2/2;
-	}
-	.logo-grid > div img {
-		width: 100%;
-		grid-area: 1/1/2/2;
-		filter: brightness(0) invert(1);
-		opacity: 0.3;
-		transition: opacity 0.2s;
-	}
-	.logo-grid > div:hover img {
-		opacity: 0.8;
-	}
-	.logo-grid > div img.telstra {
-		width: 50%;
-	}
+		@media (min-width: 48em) {
+			.logo-grid {
+				grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+			}
+		}
+		.logo-grid > div {
+			padding: 1rem;
+			display: grid;
+			place-items: center;
+		}
+		.logo-grid > div::before {
+			content: "";
+			display: block;
+			padding-bottom: 100%;
+			grid-area: 1/1/2/2;
+		}
+		.logo-grid > div img {
+			width: 100%;
+			grid-area: 1/1/2/2;
+			filter: brightness(0) invert(1);
+			opacity: 0.3;
+			transition: opacity 0.2s;
+		}
+		.logo-grid > div:hover img {
+			opacity: 0.8;
+		}
+		.logo-grid > div img.telstra {
+			width: 50%;
+		}
 	</style>	
 	<section class="push-forward">
 		<div class="container">
