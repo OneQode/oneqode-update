@@ -1,79 +1,81 @@
 		<style>
-		/* Pulses */
-		span.pulse {
-			/* Credit to Florin Pop - https://www.florin-pop.com/blog/2019/03/css-pulse-effect/ */
-			border-radius: 50%;
-			height: 1rem;
-			width: 1rem;
-			background: rgba(0, 176, 240, 1);
-			box-shadow: 0 0 0 0 rgba(0, 176, 240, 1);
-			animation: pulse 2s infinite;
-			display: inline-block;
-			position: absolute;
-			z-index: 3;
-		}
-		@keyframes pulse {
-			0% {
-				transform:
-					scale(0.95)
-					translate(-50%, -50%);
-				box-shadow: 0 0 0 0 rgba(0, 176, 240, 0.7);
-			}
-			70% {
-				transform:
-					scale(1)
-					translate(-50%, -50%);
-				box-shadow: 0 0 0 10px rgba(0, 176, 240, 0);
-			}
-			
-			100% {
-				transform:
-					scale(0.95)
-					translate(-50%, -50%);
-				box-shadow: 0 0 0 0 rgba(0, 176, 240, 0);
-			}
-		}
-		span.pulse.sunshine-coast {
-			left: 44.94%;
-			top: 77.70%;
-		}
-		span.pulse.brisbane {
-			left: 44.87%;
-			top: 78.38%;
-		}
-		span.pulse.sydney {
-			left: 44.21%;
-			top: 83.10%;
-		}
-		span.pulse.guam {
-			left: 41.51%;
-			top: 49.31%;
-		}
-		span.pulse.tokyo {
-			left: 40.07%;
-			top: 33.34%;
-		}
-		span.pulse.hong-kong {
-			left: 29.58%;
-			top: 42.86%;
-		}
-		span.pulse.los-angeles {
-			left: 79.14%;
-			top: 34.39%;
-		}
-		#pops-map text {
-			font-size: 38px;
-		}
-		/* Mobile Overrides */
-		@media screen and (max-width: 64em) {
-			#pops-map text {
-				display: none;
-			}
+			/*
+				Pulses
+				Credit to Florin Pop - https://www.florin-pop.com/blog/2019/03/css-pulse-effect/
+			*/
 			span.pulse {
-				height: 0.75rem;
-				width: 0.75rem;
+				border-radius: 50%;
+				height: 1rem;
+				width: 1rem;
+				background: rgba(0, 176, 240, 1);
+				box-shadow: 0 0 0 0 rgba(0, 176, 240, 1);
+				animation: pulse 2s infinite;
+				display: inline-block;
+				position: absolute;
+				z-index: 3;
 			}
-		}
+			@keyframes pulse {
+				0% {
+					transform:
+						scale(0.95)
+						translate(-50%, -50%);
+					box-shadow: 0 0 0 0 rgba(0, 176, 240, 0.7);
+				}
+				70% {
+					transform:
+						scale(1)
+						translate(-50%, -50%);
+					box-shadow: 0 0 0 10px rgba(0, 176, 240, 0);
+				}
+				
+				100% {
+					transform:
+						scale(0.95)
+						translate(-50%, -50%);
+					box-shadow: 0 0 0 0 rgba(0, 176, 240, 0);
+				}
+			}
+			span.pulse.sunshine-coast {
+				left: 44.94%;
+				top: 77.70%;
+			}
+			span.pulse.brisbane {
+				left: 44.87%;
+				top: 78.38%;
+			}
+			span.pulse.sydney {
+				left: 44.21%;
+				top: 83.10%;
+			}
+			span.pulse.guam {
+				left: 41.51%;
+				top: 49.31%;
+			}
+			span.pulse.tokyo {
+				left: 40.07%;
+				top: 33.34%;
+			}
+			span.pulse.hong-kong {
+				left: 29.58%;
+				top: 42.86%;
+			}
+			span.pulse.los-angeles {
+				left: 79.14%;
+				top: 34.39%;
+			}
+			#pops-map text {
+				font-size: 38px;
+			}
+			/* Mobile Overrides */
+			@media screen and (max-width: 64em) {
+				#pops-map text {
+					display: none;
+				}
+				span.pulse {
+					height: 0.75rem;
+					width: 0.75rem;
+				}
+			}
 		</style>
 		<div id="pops-map" class="map">
 			<div id="pops">
@@ -187,10 +189,10 @@
 					<text class="active" transform="translate(1721 2103)">Sydney</text>
 					<text class="active" transform="translate(1789 1965)">Brisbane</text>
 					<text class="active" transform="translate(1791 1912)">Sunshine Coast</text>
-					<text class="active" transform="translate(965 1038)">Hong Kong</text>
+					<text class="active" transform="translate(965 1018)">Hong Kong</text>
 					<text class="active" transform="translate(1642 1255)">Guam</text>
 					<text class="active" transform="translate(2875 919)">Los Angeles</text>
-					<text class="active" transform="translate(1562 859)">Tokyo</text>
+					<text class="active" transform="translate(1572 859)">Tokyo</text>
 				</g>
 			</svg>
 			<picture>

@@ -51,7 +51,15 @@ ogImage: guam-tournament.jpg
 				background: url("/img/case-study/guam-csgo-tournament-liquipedia-bracket.webp") center right no-repeat;
 				background-size: contain;	
 			}
-
+		}
+		/* The Outcome BG */
+		.webp #outcome {
+			background: url("/img/case-study/guam-csgo-tournament-screenshot-bg.webp") center center;
+			background-size: cover;
+		}
+		.no-webp #outcome {
+			background: url("/img/case-study/guam-csgo-tournament-screenshot-bg.jpg") center center;
+			background-size: cover;
 		}
 	</style>
 		<section class="hero">
@@ -191,7 +199,7 @@ ogImage: guam-tournament.jpg
 				</div>
 			</div>
 		</section>
-		<section class="py-4 full-height text-center">
+		<section class="my-4 full-height text-center" id="outcome">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-md-10 col-md-offset-1">
@@ -211,17 +219,17 @@ ogImage: guam-tournament.jpg
 				<div class="row mobile-flex icons">
 					<div class="col-xs col-md-4 my-2 p-2">
 						<div class="icon path"></div>
-						<h3>Low latency experience</h3>
+						<h4 class="mt-2">Low latency experience</h4>
 						<p class="faded">Players from Mongolia and Australia could all reach the Guam servers at less than 100ms of latency, with numbers continuing to drop with time.</p>
 					</div>
 					<div class="col-xs col-md-4 my-2 p-2">
 						<div class="icon asia"></div>
-						<h3>Supported in real-time</h3>
+						<h4 class="mt-2">Supported in real-time</h4>
 						<p class="faded">We worked in real time at the carrier level to apply traffic management, optimising routing and reducing ping spikes for players.</p>
 					</div>
 					<div class="col-xs col-md-4 my-2 p-2">
 						<div class="icon gauge"></div>
-						<h3>Safe from attack</h3>
+						<h4 class="mt-2">Safe from attack</h4>
 						<p class="faded">Network level <a href="/network/#ddos-protection">DDoS scrubbing</a> and filtering protects servers from disruptive attacks, without kicking existing players from games.</p>
 					</div>
 				</div>

@@ -10,215 +10,271 @@ pageTitle: Low-latency multiplayer
 
 ---
 {% include _header.liquid %}
-	<!-- Page-Specific Styles -->
-	<style>
-		.no-webp .hero {
-			background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/star-header.jpg") no-repeat center center;
-			background-size: cover;
-		}
-		.webp .hero {
-			background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/star-header.webp") no-repeat center center;
-			background-size: cover;
-		}
-		section.hero {
-			padding-top: 6rem !important;
-			height: 100%;
-		}
-		.no-webp #network {
-			background: url(/img/glowing-oneqode-network-globe.jpg) no-repeat 130% 50%;
-			background-size: contain;
-		}
-		.webp #network {
-			background: url(/img/glowing-oneqode-network-globe.webp) no-repeat 130% 50%;
-			background-size: contain;
-		}
-		#servers {
-			position: relative;
-			overflow: hidden;
-		}
-		@media (max-width: 64em) {
-			#servers img {
-				margin-top: 4rem;
+		<!-- Page-Specific Styles -->
+		<style>
+			.no-webp .hero {
+				background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/star-header.jpg") no-repeat center center;
+				background-size: cover;
 			}
-		}
-		@media (min-width: 64em) {
-			#servers img {
-				position: absolute;
-				height: 400px;
-				margin-top: -50px;
+			.webp .hero {
+				background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/star-header.webp") no-repeat center center;
+				background-size: cover;
 			}
-		}
-		/* Typer.js */
-		.typer {
-			display: inline-block;
-		}
-		.typer::after {
-		  content: '';
-		  display: inline-block;
-		  vertical-align: sub;
-		  width: 0.1em;
-		  height: 1.2em;
-		  background-color: currentColor;
-		  margin-left: 0.1em;
-		}
+			section.hero {
+				padding-top: 6rem !important;
+				height: 100%;
+			}
+			.no-webp #network {
+				background: url(/img/glowing-oneqode-network-globe.jpg) no-repeat 130% 50%;
+				background-size: contain;
+			}
+			.webp #network {
+				background: url(/img/glowing-oneqode-network-globe.webp) no-repeat 130% 50%;
+				background-size: contain;
+			}
+			#servers {
+				position: relative;
+				overflow: hidden;
+			}
+			@media (max-width: 64em) {
+				#servers img {
+					margin-top: 4rem;
+				}
+			}
+			@media (min-width: 64em) {
+				#servers img {
+					position: absolute;
+					height: 400px;
+					margin-top: -50px;
+				}
+			}
+			/* Typer.js */
+			.typer {
+				display: inline-block;
+			}
+			.typer::after {
+			  content: '';
+			  display: inline-block;
+			  vertical-align: sub;
+			  width: 0.1em;
+			  height: 1.2em;
+			  background-color: currentColor;
+			  margin-left: 0.1em;
+			}
 
-		.cursor-block::after {
-		  width: 0.5em;
-		}
+			.cursor-block::after {
+			  width: 0.5em;
+			}
 
-		.cursor-soft::after {
-		  animation: softblink 0.7s infinite;
-		}
+			.cursor-soft::after {
+			  animation: softblink 0.7s infinite;
+			}
 
-		.cursor-hard::after {
-		  animation: hardblink 0.7s infinite;
-		}
+			.cursor-hard::after {
+			  animation: hardblink 0.7s infinite;
+			}
 
-		.no-cursor::after {
-		  content: none;
-		}
+			.no-cursor::after {
+			  content: none;
+			}
 
-		.white-space {
-		  white-space: pre-wrap;
-		}
+			.white-space {
+			  white-space: pre-wrap;
+			}
 
-		@keyframes softblink {
-		  0% {
-		    opacity: 1;
-		  }
-		  50% {
-		    opacity: 0;
-		  }
-		  100% {
-		    opacity: 1;
-		  }
-		}
+			@keyframes softblink {
+			  0% {
+			    opacity: 1;
+			  }
+			  50% {
+			    opacity: 0;
+			  }
+			  100% {
+			    opacity: 1;
+			  }
+			}
 
-		@keyframes hardblink {
-		  50%,
-		  100% {
-		    visibility: hidden;
-		  }
-		}
-		/* Hide Typed Content */
-		span[class^="typed-content-"] {
-			display: none;
-		}
-	</style>
-	<section class="hero" id="stars">
-		<div class="container push-forward">
-			<div class="row middle-xs text-center">
-				<div class="col-xs-12 col-md-10 col-md-offset-1">
-					<h1>{{ pageTitle }}<mark class="dot">.</mark></h1>
-					<p class="subheading">Network and server infrastructure<br class="mobile-only"> for <mark>game <span class="typed"></span></mark>
-						<span class="typed-content-1">studios</span>
-						<span class="typed-content-2">developers</span>
-						<span class="typed-content-3">publishers</span>
-						<span class="typed-content-4">server providers</span>
-						<span class="typed-content-5">communities</span>
-						<span class="typed-content-6">clans</span>
-					</p>
-					<p class="faded">Reach more gamers across Asia-Pacific at low latency with OneQode. <br class="responsive"> Performance servers, strategic locations, DDoS-protected.</p>
-					<p><a href="#overview" class="button ghost mt-2 m-1">Learn More</a><br class="mobile-only"> <span class="faded">or</span> <a href="/contact/" class="m-1">contact sales</a></p>
-				</div>
-			</div> 
-		</div>
-	</section>
-	<section id="overview" class="pt-4 pb-8">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
-					<h2>Global <mark>low-latency</mark> infrastructure <br class="responsive">to build your game on<mark class="dot">.</mark></h2>
-				</div>
-				<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
-					<p>We operate a low-latency international carrier network and server fleet designed for the demands of competitive gaming. You'll reach more players at lower latency, whilst reducing infrastructure costs.</p>
+			@keyframes hardblink {
+			  50%,
+			  100% {
+			    visibility: hidden;
+			  }
+			}
+			/* Hide Typed Content */
+			span[class^="typed-content-"] {
+				display: none;
+			}
+		</style>
+		<section class="hero" id="stars">
+			<div class="container push-forward">
+				<div class="row middle-xs text-center">
+					<div class="col-xs-12 col-md-10 col-md-offset-1">
+						<h1>{{ pageTitle }}<mark class="dot">.</mark></h1>
+						<p class="subheading">Network and server infrastructure<br class="mobile-only"> for <mark>game <span class="typed"></span></mark>
+							<span class="typed-content-1">studios</span>
+							<span class="typed-content-2">developers</span>
+							<span class="typed-content-3">publishers</span>
+							<span class="typed-content-4">server providers</span>
+							<span class="typed-content-5">communities</span>
+							<span class="typed-content-6">clans</span>
+						</p>
+						<p class="faded">Reach more gamers across Asia-Pacific at low latency with OneQode. <br class="responsive"> Performance servers, strategic locations, DDoS-protected.</p>
+						<p><a href="#overview" class="button ghost mt-2 m-1">Learn More</a><br class="mobile-only"> <span class="faded">or</span> <a href="/contact/" class="m-1">contact sales</a></p>
+					</div>
+				</div> 
+			</div>
+		</section>
+		<section id="overview" class="pt-4 pb-8">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
+						<h2>Global <mark>low-latency</mark> infrastructure <br class="responsive">to build your game on<mark class="dot">.</mark></h2>
+					</div>
+					<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+						<p>We operate a low-latency international carrier network and server fleet designed for the demands of competitive gaming. You'll reach more players at lower latency, whilst reducing infrastructure costs.</p>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-	<section id="network" class="py-8">
-		<div class="container mobile-text-center">
-			<div class="row">
-				<div class="col-xs-12 col-md-6">
-					<h3 class="mb-1">Low-latency gaming network</h3>
-					<p class="subheading faded">Designed for the future of gaming</p>
-					<p>An international carrier network, built from the ground-up to eliminate lag.</p>
-					<a href="/network/" class="button mt-2">Our network</a>
+		</section>
+		<section id="network" class="py-8">
+			<div class="container mobile-text-center">
+				<div class="row">
+					<div class="col-xs-12 col-md-6">
+						<h3 class="mb-1">Low-latency gaming network</h3>
+						<p class="subheading faded">Designed for the future of gaming</p>
+						<p>An international carrier network, built from the ground-up to eliminate lag.</p>
+						<a href="/network/" class="button mt-2">Our network</a>
+					</div>
+				</div>
+				<div class="row mt-8 pt-2">
+					<div class="col-xs-12 col-md-4 pt-2">
+						<h4>A highway for game traffic</h4>
+						<p class="faded">Our hyperfast international carrier network bypasses constricted incumbents and delivers game data as close to players as possible.</p>
+					</div>
+					<div class="col-xs-12 col-md-4 col-md-offset-2 pt-2">
+						<h4>Unrivalled latency</h4>
+						<p class="faded">The laws of physics are the only enemy. Our proprietary routing sends traffic over the shortest path, eliminating latency at every turn.</p>
+					</div>
 				</div>
 			</div>
-			<div class="row mt-8 pt-2">
-				<div class="col-xs-12 col-md-4 pt-2">
-					<h4>A highway for game traffic</h4>
-					<p class="faded">Our hyperfast international carrier network bypasses constricted incumbents and delivers game data as close to players as possible.</p>
+		</section>
+		<section id="servers" class="py-8">
+			<div class="container mobile-text-center">
+				<div class="row">
+					<div class="col-xs-12 col-md-6">
+						<h3 class="mb-1">High-performance servers</h3>
+						<p class="subheading faded">Raw power, built for speed</p>
+						<p>High clockrate custom servers optimised for demanding, high tickrate game workloads.</p>
+						<a href="/game-servers/" class="button mt-2">Game servers</a>
+					</div>
+					<div class="col-xs-12 col-md-6">
+						<picture>
+							<source srcset="/img/server-illustration-600h.webp" type="image/webp">
+							<img src="/img/server-illustration-600h.jpg" class="opaque" alt="An illustration of a OneQode game server">
+						</picture>
+					</div>
 				</div>
-				<div class="col-xs-12 col-md-4 col-md-offset-2 pt-2">
-					<h4>Unrivalled latency</h4>
-					<p class="faded">The laws of physics are the only enemy. Our proprietary routing sends traffic over the shortest path, eliminating latency at every turn.</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section id="servers" class="py-8">
-		<div class="container mobile-text-center">
-			<div class="row">
-				<div class="col-xs-12 col-md-6">
-					<h3 class="mb-1">High-performance servers</h3>
-					<p class="subheading faded">Raw power, built for speed</p>
-					<p>High clockrate custom servers optimised for demanding, high tickrate game workloads.</p>
-					<a href="/game-servers/" class="button mt-2">Game servers</a>
-				</div>
-				<div class="col-xs-12 col-md-6">
-					<picture>
-						<source srcset="/img/server-illustration-600h.webp" type="image/webp">
-						<img src="/img/server-illustration-600h.jpg" class="opaque" alt="An illustration of a OneQode game server">
-					</picture>
-				</div>
-			</div>
-			<div class="row mt-8 pt-2">
-				<div class="col-xs-12 col-md-4 pt-2">
-					<h4>Market-leading CPUs</h4>
-					<p class="faded">All processors clock in at 3.7 GHz or more, giving you the capability to deliver the most demanding games.</p>
-				</div>
-				<div class="col-xs-12 col-md-4 col-md-offset-2 pt-2">
-					<h4>Completely flexible</h4>
-					<p class="faded">Whether you need a specific CPU model, or just a stock VPS, we can tailor your server fleet to your needs.</p>
+				<div class="row mt-8 pt-2">
+					<div class="col-xs-12 col-md-4 pt-2">
+						<h4>Market-leading CPUs</h4>
+						<p class="faded">All processors clock in at 3.7 GHz or more, giving you the capability to deliver the most demanding games.</p>
+					</div>
+					<div class="col-xs-12 col-md-4 col-md-offset-2 pt-2">
+						<h4>Completely flexible</h4>
+						<p class="faded">Whether you need a specific CPU model, or just a stock VPS, we can tailor your server fleet to your needs.</p>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-	<section id="guam" class="full-height text-center">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-md-8 col-md-offset-2">
-					<p class="superheading">Guam Gaming Hub</p>
-					<h2>Reach <mark>billions</mark> with our <br class="responsive">unique server region<mark class="dot">.</mark></h2>
-				</div>
-				<div class="col-xs-12 col-md-6 col-md-offset-3">
-					<p class="mt-0">Our exclusive Guam Gaming Hub connects players from across Asia-Pacific on a level playing field, unlocking new opportunities for cross-regional gaming.</p>
-					<a href="/guam/" class="button mt-2">About Guam</a>
+		</section>
+		<section id="guam" class="full-height text-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-10 col-md-offset-1">
+						<p class="superheading">Guam Gaming Hub</p>
+						<h2>Reach <mark>billions</mark> with Asia-Pacific’s<br class="responsive"> newest server region<mark class="dot">.</mark></h2>
+					</div>
+					<div class="col-xs-12 col-md-6 col-md-offset-3">
+						<p class="mt-0">Our exclusive Guam Gaming Hub connects players from across Asia-Pacific on a level playing field, unlocking a new world of cross-regional gaming.</p>
+						<a href="/guam/" class="button mt-2">About Guam</a>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+			<style>
+				#guam {
+					position: relative;
+				}
+				/* SVG Styles */
+				#cable-map {
+					position: absolute;
+					z-index: -1;
+					width: 100%;
+					overflow: hidden;
+					/*margin: -4rem 0 -16rem 0;*/
+					margin:  -4rem 0 -10rem 0;
+				}
+				#cable-map::after {
+					content: "";
+					display: block;
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					background: radial-gradient(closest-side, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.4) 80%, #000);
+					top: 0;
+					left: 0;
+					z-index: 2;
+				}			
+				.cable {
+					fill-rule: evenodd;
+					clip-rule: evenodd;
+					fill: none;
+					stroke: #00B0F0;
+					stroke-width: 4;
+					stroke-dasharray: 15;
+					stroke-dashoffset: 510;
+					animation: lines 2s linear infinite;
+				}
+				@keyframes lines {
+					100% {
+						stroke-dashoffset: 0;
+					}
+				}
+				#guam-island {
+					fill-rule: evenodd;
+					clip-rule: evenodd;
+					fill: #004B66;
+					stroke: #00B0F0;
+				}
+			</style>
+			<div id="cable-map">
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 3840 2160" xml:space="preserve">
+					<path class="cable" d="M1752.6,0c14.2,266.6,117,984.3,117,984.3S1827,248.8,1822.4,0" />
+					<path class="cable" d="M3840,473c-742.3,186.7-1684.3,333.3-1822.4,358.7c-138.1,25.3-148,152.6-148,152.6s-1.1-17.6-13.8-19.1
+				C1843.1,963.7,1035.7,601,0,455.2" />
+					<path class="cable" d="M0,728.6C774.1,778,1843.1,963.3,1855.8,965.1c12.7,1.9,13.8,19.1,13.8,19.1" />
+					<path class="cable" d="M1869.6,985c0,0,0.4-16.7-13.8-19.9c-14.2-3.1-65.2-2.1-60.3,49.5c2.9,30,79.2,258.3,114.6,1145.3" />
+					<path id="guam-island" d="M1873.7,1115.4l8.9-8.9c0,0,0-3.5,1.5-4.5s7.5-4.5,7.5-4.5s2.6-2.2,3-4.5 c0.4-2.2,1.3-2.7,4.5-6c3.2-3.3,4.7-11.6,3-11.9c-1.7-0.3-1.5-10.4-1.5-10.4s-1.5-4.3-6-3c-4.5,1.4,8.1-3.5,7.5-6 c-0.6-2.5-1.5-8.9-1.5-8.9s-3.4-1.6-1.5-3c1.9-1.4,3-8.9,3-8.9s-0.4-4.3,3-7.5c3.4-3.2,3-7.5,3-7.5l1.5-3c0,0,2.1-3,0-3 c-2.1,0-1.7-4.3,4.5-6c6.2-1.7,6,1.5,6,1.5l3-4.5c0,0,7-4.3,8.9-6c2-1.7,8.7-9.2,13.4-10.4c4.7-1.3,15.7-19,22.4-16.4 c2,0.4,3-4.5,3-4.5s-3.8-8.7,13.4-10.4c7.5-1,10.4-13.4,10.4-13.4s3.6-6,3-14.9c4.5-7.5,4.6-0.2,8.9-14.9c-0.1,0.9,6.6-6.9-3-6 c-9.5,0.9-22.6,3.9-26.8-8.9c-4.2-8.3-16.5-18.3-19.4-19.4s-5.2-3.1-10.4,3c-1.9,4.2-5.4,9-7.5,10.4c-2.1,1.5-1.2,11,0,14.9 s1.2,5.2-1.5,8.9s-5,5.9-4.5,6s-4.3,5.7-4.5,6c-0.2,0.3-1.8,5.6-4.5,6c-2.7,0.3-0.7,8-6,8.9c-2.4,1.3,0.2,11.1,1.5,11.9 c0.6,1.1-3.6,10.3-8.9,7.5c-5.4-2.8-12.6,3.1-10.4,6c2.2,2.8,1.9,11.4-6,10.4c-7.9-1-3,0-3,0s-3.2-4.2-7.5,0 c-4.3,4.2-6.9-2.3-7.5-1.5c-0.5,0.8-6.2,3.8-7.5,4.5c-1.3,0.7-11-4.2-13.4,3c-0.9,2.4-1.3,3.4-3,1.5c-1.6-1.9-7.8,0-8.9,1.5 c-1.2,1.5-2.8,0.7-3-1.5c-0.6,0-19.4,0-19.4,0s-7.7,6.3-7.5,7.5c1.5,0.5,5.2-3.3,7.5-4.5c2.3-1.2,14.9-2.2,17.9,1.5 c0.4,1.6-3.6,4-3,4.5c0.6,0.5,3.5,0,6-1.5c2.5-1.5,5.1-1.2,6,1.5s-3.2,6.2-4.5,4.5c-1.2-1.7-6.7,2.4-3,4.5c2.2-0.2,4.2,0.8,3,4.5 c-1.2,3.7-4.8,3.9-6,1.5c-1.2-2.4,1.3-10.6-1.5-10.4c-2.8,0.1-10.4,2-14.9,0c-4.5-2-6.5-4.6-8.9-3c-2.5,1.6-0.3,6.5,4.5,7.5 c3.3,1.6,7.1,3.9,6,8.9c-0.2,4.5,4.5,1.5,4.5,1.5s-0.8,3.9,3,3s7.2,7,6,8.9c-1.2,1.9-4.8,7-6,10.4c-1.2,3.4-2.6,15.2-6,17.9 c-3.4,2.7-2.5,5,3,7.5c2.6,4.5,2.9,6.9,3,7.5c0.1,0.6,1.1,2.4,1.5,3c0.4,0.6,0.6,2.7,0,4.5c-0.6,1.8,1.8,4.9,1.5,7.5 c-0.3,2.6,1.4,7.1,3,8.9s0,7.5,0,7.5s8.3,8.7,10.4,8.9c2.1,0.3,8.7-0.1,10.4,3C1859.1,1117,1873.7,1115.4,1873.7,1115.4z" />
+				</svg>
+			</div>
+		</section>
 {% include parts/case-study-oceanic.liquid %}
-	<section class="black-to-footer py-8">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
-					<h2>Start a conversation today<mark class="dot">.</mark></h2>
-					<p>Drop us a note to get the ball rolling.</p>
-					<p><a href="/business/contact/" class="button ghost m-1 mt-2">Contact us</a></p>
+		<section class="black-to-footer py-8">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
+						<h2>Start a conversation today<mark class="dot">.</mark></h2>
+						<p>Drop us a note to get the ball rolling.</p>
+						<p><a href="/business/contact/" class="button ghost m-1 mt-2">Contact us</a></p>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-	<!--
-		Typer JS
-		Credit: The Qodesmith
-		https://github.com/qodesmith/typer
-		License: MIT
-	-->
-	<script>function e(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function t(e){return(t="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e})(e)}!function(e,n){"object"===("undefined"==typeof exports?"undefined":t(exports))&&"undefined"!=typeof module?module.exports=n():"function"==typeof define&&define.amd?define(n):(e="undefined"!=typeof globalThis?globalThis:e||self).typer=n()}(this,(function(){"use strict";var t=function e(t){return t?(t^16*Math.random()>>t/4).toString(16):([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,e)},n=["typer","cursor-block","cursor-soft","cursor-hard","no-cursor"],r="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@$^*()";return function(i,o){var u=[],a=document.body,l={},c=0;if("String"===d(i)&&(i=document.querySelector(i)),i.getAttribute("data-typer"))throw new Error("You've already called Typer on this element.");o=p(o),u.speedSet=!0,u.voids=["AREA","BASE","BR","COL","COMMAND","EMBED","HR","IMG","INPUT","KEYGEN","LINK","META","PARAM","SOURCE","TRACK","WBR"],u.classNames=n,u.id=t(),i.setAttribute("data-typer",u.id);var s={cursor:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(u.cursorRan)return this;if(u.cursorRan=!0,!1===e)return u.cursor="no-cursor",this;var t=e.color,n=e.blink,r=e.block,i=[];return t&&y('[data-typer="'.concat(u.id,'"] .typer::after'),"background-color:".concat(t)),i.push("hard"===n?"cursor-hard":"cursor-soft"),!0===r&&i.push("cursor-block"),u.cursor=i.join(" "),this},line:function(e,t){return g("line",e,t),u.typing||(u.typing=!0,w()),this},continue:function(e,t){return g("continue",e,t),this},military:function(e,t){return g("military",e,t),u.typing||(u.typing=!0,w()),this},pause:function(e){return u.push({pause:+e||500}),this},emit:function(e,t){return t?"String"===d(t)&&(t=document.querySelector(t)):t=a,u.push({emit:e,el:t}),this},listen:function(e,t){return t?"String"===d(t)&&(t=document.querySelector(t)):t=a,u.push({listen:e,el:t}),this},back:function(e,t){return u.push({back:e,speed:t}),this},empty:function(){return u.push({empty:!0}),this},run:function(e){return u.push({run:e}),this},end:function(e,t){return u.push({end:!0}),u.cb=function(){return v(e,t)},L("end")},halt:function(){if(!u.typing)return this;u.halt=!0},resume:function(){if(!u.typing)return this;u.complete||(u.halt=!1,u.resume(),u.resume=null)},repeat:function(e,t){return u.push({repeat:!0,num:e,shouldEmpty:t,id:c++}),this},kill:E};function f(e){return{}.toString.call(e).slice(8,-1)}function d(e){var t=f(e);if("html"!==t.slice(0,4).toLowerCase()&&"String"!==t)throw"You need to provide a string selector, such as '.some-class', or an html element.";return t}function p(e){var t=f(e);if(void 0===e)return u.speedSet?o:70;if("Number"===t&&!isNaN(e))return e;if("Object"===t){var n=e.hasOwnProperty("min"),r=e.hasOwnProperty("max"),i=e.hasOwnProperty("speed");if(i&&!isNaN(e.speed))return e.speed;if(n&&r&&e.min<e.max)return e;if(!Object.keys(e).length&&u.speedSet)return o;if(!n&&!r&&!i)return o}throw new Error("You have provided an invalid value for speed.")}function m(e){if(!e)return null;if(+e)return{speed:+e,chars:3};if("Object"===f(e))return{speed:+e.speed||50,chars:+e.chars||3};throw new Error("You have provided an invalid value for military.")}function v(e,t){u.style&&u.style.remove(),u.newDiv&&h(),i.removeAttribute("data-typer"),a.removeEventListener("killTyper",E),u.newDiv&&u.newDiv.classList.add("white-space"),u.newDiv="","function"==typeof e?e(i):"function"==typeof t&&t(i),!0!==e&&!0!==t||a.dispatchEvent(new Event("typerFinished"))}function h(){n.forEach((function(e){return u.newDiv.classList.remove(e)}))}function y(e,t){u.style=document.createElement("style"),u.style.appendChild(document.createTextNode("")),document.head.appendChild(u.style);var n=document.styleSheets[document.styleSheets.length-1];"insertRule"in n?n.insertRule("".concat(e,"{").concat(t,"}"),0):n.addRule(e,t)}function g(t,n,r){var i="line"===t,o="continue"===t;if(n||r)if("Object"===f(n))(i||o&&n.container)&&u.push(l(n));else if(isNaN(r))u.push(l(r,n));else{var a;u.push((e(a={},t,n),e(a,"speed",p(r)),e(a,"html",!0),a))}else i&&u.push({line:1});function l(){var n,r=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},o=arguments.length>1?arguments[1]:void 0,u=r.container,a=r.totalTime,l=r.military,c=!o&&("String"===f(u)?document.querySelector(u).textContent:u.textContent);return e(n={},t,o||c),e(n,"speed",p(r)),e(n,"html",!1!==r.html),e(n,"element",i?r.element:null),e(n,"military",m(l)),e(n,"totalTime",a),n}}function w(){if(u.item>=0||(u.item=0),u.item===u.length)return u.complete=!0,a.removeEventListener("killTyper",E);u.ks||(u.ks=!0,a.addEventListener("killTyper",E)),u.cursor||(u.cursor="cursor-soft"),u.type=setInterval((function(){if(!u.length)return clearInterval(u.type);var e,t=u[u.item];t.line?T(t):t.continue?function(e){clearInterval(u.type),N(e)}(t):t.pause?function(e){clearInterval(u.type),u.pause=setTimeout((function(){u.pause=null,u.item++,w()}),e.pause)}(t):t.emit?function(e){clearInterval(u.type),e.el.dispatchEvent(new Event(e.emit)),u.item++,w()}(t):t.listen?function(e){var t=e.el,n=e.listen;function r(e){u.listening=!1,t.removeEventListener(e.type,r),u.killed||(u.item++,w())}clearInterval(u.type),u.listening=!0,t.addEventListener(n,r),l={el:t,type:n,fxn:r}}(t):t.back?function(e){var t=e.back,n=e.speed;if(clearInterval(u.type),!u.newDiv||!u.newDiv.textContent)return u.item++,w();var r=function e(t){var n=0;return Array.from(t.childNodes).forEach((function(t){u.voids.includes(t.nodeName)&&n++,t.childNodes.length&&(n+=e(t))})),n}(u.newDiv),i=u.newDiv.textContent.length;if("empty"===t){if(!n||n>=i)u.newDiv.innerHTML="";else{var a=u.newDiv.cloneNode(!0),l=s(a);n<0&&(n+=i);for(var c=0;c<n;c++)l();d(a),u.newDiv.innerHTML=a.innerHTML}return u.item++,w()}function s(e){var r=0,i=f(e||u.newDiv).reverse();return function a(){if(u.halt)return u.resume=function(){return u.goBack=setInterval(a,n||o)},clearInterval(u.goBack);var l=i[0];u.voids.includes(l.nodeName)?(l.remove(),i.shift()):(l.textContent=l.textContent.slice(0,-1),l.length||i.shift()),e||++r===t&&(clearInterval(u.goBack),d(u.newDiv),u.item++,w())}}function f(e){var t=[],n=Array.from(e.childNodes);return n.length?(n.forEach((function(e){e.childNodes.length?t=t.concat(f(e)):t.push(e)})),t):t}function d(e){Array.from(e.childNodes).forEach((function(e){u.voids.includes(e.nodeName)||(e.childNodes.length&&d(e),"#text"===e.nodeName||e.innerHTML.length||e.remove(),"#text"!==e.nodeName||e.length||e.remove())}))}t>i+r&&(t="all"),"all"===t&&(t=i+r),t<0&&(t=i+r- -1*t),u.goBack=setInterval(s(),n||o)}(t):t.empty?(i.innerHTML="",T({line:1})):t.run?(e=t.run,clearInterval(u.type),e(i),u.item++,w()):t.repeat?function(e){if(clearInterval(u.type),e.shouldEmpty&&(i.innerHTML=""),e.num){e.num--;var t=u.findIndex((function(t){var n=t.repeat,r=t.id;return n&&r===e.id-1}))+1;u.item=t}else u.item++;w()}(t):t.end&&(clearInterval(u.type),u.cb())}),0)}function T(e){clearInterval(u.type),u.newDiv&&(h(),u.newDiv.classList.add("white-space"),u.newDiv.innerHTML||(u.newDiv.innerHTML=" "));var t=document.createElement(e.element||"div");if(t.setAttribute("data-typer-child",u.id),t.className="".concat(u.cursor," typer white-space"),i.appendChild(t),u.newDiv=t,1===e.line)return u.item++,w();N(e)}function b(e,t){var n,r,i="Object"===f(e)?(n=e.min,r=e.max,Math.floor(Math.random()*(r-n+1)+n)):e;u.halt?u.resume=function(){return u.iterator=setTimeout(t,i)}:u.iterator=setTimeout(t,i)}function N(e){var t,n,i=e.line||e.continue,o=document.createElement("div");if(Array.isArray(i))return t=0,void b(n=e.totalTime?e.totalTime/i.length:e.speed,(function r(){var a=i[t++];o.textContent=a,u.newDiv.innerHTML+=e.html?a:o.innerHTML,t===i.length?s():b(n,r)}));function a(e,t){var n=[];e=Array.from(e);for(var r=0;r<e.length;r++){var i=e[r],o=i.nodeName;"#text"===o?n.push({parent:t,content:i.textContent}):i.childNodes.length?function(){var e=document.createElement(o);Array.from(i.attributes).forEach((function(t){e.setAttribute(t.name,t.value)})),n.push({parent:t,newNode:e}),n=n.concat(a(i.childNodes,e))}():u.voids.includes(o)&&n.push({parent:t,voidNode:i})}return n}function l(){return r[Math.floor(Math.random()*r.length)]}function c(t,n,r){var i=0,o=e.military,a=o.speed,c=o.chars;t.innerHTML+=l(),u.military=setInterval((function(){if(i===c)return t.innerHTML=t.innerHTML.slice(0,-1)+n,clearInterval(u.military),r();t.innerHTML=t.innerHTML.slice(0,-1)+l(),i++}),a)}function s(){return clearInterval(u.iterator),u.item++,w()}o.innerHTML=i,e.html?function(){var t=a(o.childNodes,u.newDiv),n=0,r=0,i=t[n++],l=e.totalTime?e.totalTime/i.content.length:e.speed;b(l,(function o(){if(i.content&&r===i.content.length&&(r=0,i=t[n++]),!i)return s();if(i.content){if(e.military)return c(i.parent,i.content[r++],(function(){b(l,o)}));i.parent.innerHTML+=i.content[r++]}else i.parent.appendChild(i.voidNode||i.newNode),i=t[n++];b(l,o)}))}():function(){var t=0,n=e.totalTime?e.totalTime/i.length:e.speed;b(n,(function r(){if(t===i.length)return s();var a=i[t];if(e.military)return c(u.newDiv,a,(function(){t++,b(n,r)}));"String"!==f(i)&&(o.textContent=a,a=o.innerHTML),u.newDiv.innerHTML+=a,t++,b(n,r)}))}()}function E(){return u.typing?(l.el&&l.el.removeEventListener(l.type,l.fxn),clearInterval(u.type),clearInterval(u.iterator),clearInterval(u.goBack),clearInterval(u.military),clearTimeout(u.pause),v(),L("kill")):s}function L(e){var t=function(){return s};return Object.keys(s).forEach((function(n){"end"===e&&"kill"===n||(s[n]=t)})),"kill"===e&&(u.killed=!0),s}return s}}));</script>
+		</section>
+		<!--
+			Typer JS
+			Credit: The Qodesmith
+			https://github.com/qodesmith/typer
+			License: MIT
+		-->
+		<script>function e(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function t(e){return(t="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e})(e)}!function(e,n){"object"===("undefined"==typeof exports?"undefined":t(exports))&&"undefined"!=typeof module?module.exports=n():"function"==typeof define&&define.amd?define(n):(e="undefined"!=typeof globalThis?globalThis:e||self).typer=n()}(this,(function(){"use strict";var t=function e(t){return t?(t^16*Math.random()>>t/4).toString(16):([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,e)},n=["typer","cursor-block","cursor-soft","cursor-hard","no-cursor"],r="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@$^*()";return function(i,o){var u=[],a=document.body,l={},c=0;if("String"===d(i)&&(i=document.querySelector(i)),i.getAttribute("data-typer"))throw new Error("You've already called Typer on this element.");o=p(o),u.speedSet=!0,u.voids=["AREA","BASE","BR","COL","COMMAND","EMBED","HR","IMG","INPUT","KEYGEN","LINK","META","PARAM","SOURCE","TRACK","WBR"],u.classNames=n,u.id=t(),i.setAttribute("data-typer",u.id);var s={cursor:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(u.cursorRan)return this;if(u.cursorRan=!0,!1===e)return u.cursor="no-cursor",this;var t=e.color,n=e.blink,r=e.block,i=[];return t&&y('[data-typer="'.concat(u.id,'"] .typer::after'),"background-color:".concat(t)),i.push("hard"===n?"cursor-hard":"cursor-soft"),!0===r&&i.push("cursor-block"),u.cursor=i.join(" "),this},line:function(e,t){return g("line",e,t),u.typing||(u.typing=!0,w()),this},continue:function(e,t){return g("continue",e,t),this},military:function(e,t){return g("military",e,t),u.typing||(u.typing=!0,w()),this},pause:function(e){return u.push({pause:+e||500}),this},emit:function(e,t){return t?"String"===d(t)&&(t=document.querySelector(t)):t=a,u.push({emit:e,el:t}),this},listen:function(e,t){return t?"String"===d(t)&&(t=document.querySelector(t)):t=a,u.push({listen:e,el:t}),this},back:function(e,t){return u.push({back:e,speed:t}),this},empty:function(){return u.push({empty:!0}),this},run:function(e){return u.push({run:e}),this},end:function(e,t){return u.push({end:!0}),u.cb=function(){return v(e,t)},L("end")},halt:function(){if(!u.typing)return this;u.halt=!0},resume:function(){if(!u.typing)return this;u.complete||(u.halt=!1,u.resume(),u.resume=null)},repeat:function(e,t){return u.push({repeat:!0,num:e,shouldEmpty:t,id:c++}),this},kill:E};function f(e){return{}.toString.call(e).slice(8,-1)}function d(e){var t=f(e);if("html"!==t.slice(0,4).toLowerCase()&&"String"!==t)throw"You need to provide a string selector, such as '.some-class', or an html element.";return t}function p(e){var t=f(e);if(void 0===e)return u.speedSet?o:70;if("Number"===t&&!isNaN(e))return e;if("Object"===t){var n=e.hasOwnProperty("min"),r=e.hasOwnProperty("max"),i=e.hasOwnProperty("speed");if(i&&!isNaN(e.speed))return e.speed;if(n&&r&&e.min<e.max)return e;if(!Object.keys(e).length&&u.speedSet)return o;if(!n&&!r&&!i)return o}throw new Error("You have provided an invalid value for speed.")}function m(e){if(!e)return null;if(+e)return{speed:+e,chars:3};if("Object"===f(e))return{speed:+e.speed||50,chars:+e.chars||3};throw new Error("You have provided an invalid value for military.")}function v(e,t){u.style&&u.style.remove(),u.newDiv&&h(),i.removeAttribute("data-typer"),a.removeEventListener("killTyper",E),u.newDiv&&u.newDiv.classList.add("white-space"),u.newDiv="","function"==typeof e?e(i):"function"==typeof t&&t(i),!0!==e&&!0!==t||a.dispatchEvent(new Event("typerFinished"))}function h(){n.forEach((function(e){return u.newDiv.classList.remove(e)}))}function y(e,t){u.style=document.createElement("style"),u.style.appendChild(document.createTextNode("")),document.head.appendChild(u.style);var n=document.styleSheets[document.styleSheets.length-1];"insertRule"in n?n.insertRule("".concat(e,"{").concat(t,"}"),0):n.addRule(e,t)}function g(t,n,r){var i="line"===t,o="continue"===t;if(n||r)if("Object"===f(n))(i||o&&n.container)&&u.push(l(n));else if(isNaN(r))u.push(l(r,n));else{var a;u.push((e(a={},t,n),e(a,"speed",p(r)),e(a,"html",!0),a))}else i&&u.push({line:1});function l(){var n,r=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},o=arguments.length>1?arguments[1]:void 0,u=r.container,a=r.totalTime,l=r.military,c=!o&&("String"===f(u)?document.querySelector(u).textContent:u.textContent);return e(n={},t,o||c),e(n,"speed",p(r)),e(n,"html",!1!==r.html),e(n,"element",i?r.element:null),e(n,"military",m(l)),e(n,"totalTime",a),n}}function w(){if(u.item>=0||(u.item=0),u.item===u.length)return u.complete=!0,a.removeEventListener("killTyper",E);u.ks||(u.ks=!0,a.addEventListener("killTyper",E)),u.cursor||(u.cursor="cursor-soft"),u.type=setInterval((function(){if(!u.length)return clearInterval(u.type);var e,t=u[u.item];t.line?T(t):t.continue?function(e){clearInterval(u.type),N(e)}(t):t.pause?function(e){clearInterval(u.type),u.pause=setTimeout((function(){u.pause=null,u.item++,w()}),e.pause)}(t):t.emit?function(e){clearInterval(u.type),e.el.dispatchEvent(new Event(e.emit)),u.item++,w()}(t):t.listen?function(e){var t=e.el,n=e.listen;function r(e){u.listening=!1,t.removeEventListener(e.type,r),u.killed||(u.item++,w())}clearInterval(u.type),u.listening=!0,t.addEventListener(n,r),l={el:t,type:n,fxn:r}}(t):t.back?function(e){var t=e.back,n=e.speed;if(clearInterval(u.type),!u.newDiv||!u.newDiv.textContent)return u.item++,w();var r=function e(t){var n=0;return Array.from(t.childNodes).forEach((function(t){u.voids.includes(t.nodeName)&&n++,t.childNodes.length&&(n+=e(t))})),n}(u.newDiv),i=u.newDiv.textContent.length;if("empty"===t){if(!n||n>=i)u.newDiv.innerHTML="";else{var a=u.newDiv.cloneNode(!0),l=s(a);n<0&&(n+=i);for(var c=0;c<n;c++)l();d(a),u.newDiv.innerHTML=a.innerHTML}return u.item++,w()}function s(e){var r=0,i=f(e||u.newDiv).reverse();return function a(){if(u.halt)return u.resume=function(){return u.goBack=setInterval(a,n||o)},clearInterval(u.goBack);var l=i[0];u.voids.includes(l.nodeName)?(l.remove(),i.shift()):(l.textContent=l.textContent.slice(0,-1),l.length||i.shift()),e||++r===t&&(clearInterval(u.goBack),d(u.newDiv),u.item++,w())}}function f(e){var t=[],n=Array.from(e.childNodes);return n.length?(n.forEach((function(e){e.childNodes.length?t=t.concat(f(e)):t.push(e)})),t):t}function d(e){Array.from(e.childNodes).forEach((function(e){u.voids.includes(e.nodeName)||(e.childNodes.length&&d(e),"#text"===e.nodeName||e.innerHTML.length||e.remove(),"#text"!==e.nodeName||e.length||e.remove())}))}t>i+r&&(t="all"),"all"===t&&(t=i+r),t<0&&(t=i+r- -1*t),u.goBack=setInterval(s(),n||o)}(t):t.empty?(i.innerHTML="",T({line:1})):t.run?(e=t.run,clearInterval(u.type),e(i),u.item++,w()):t.repeat?function(e){if(clearInterval(u.type),e.shouldEmpty&&(i.innerHTML=""),e.num){e.num--;var t=u.findIndex((function(t){var n=t.repeat,r=t.id;return n&&r===e.id-1}))+1;u.item=t}else u.item++;w()}(t):t.end&&(clearInterval(u.type),u.cb())}),0)}function T(e){clearInterval(u.type),u.newDiv&&(h(),u.newDiv.classList.add("white-space"),u.newDiv.innerHTML||(u.newDiv.innerHTML=" "));var t=document.createElement(e.element||"div");if(t.setAttribute("data-typer-child",u.id),t.className="".concat(u.cursor," typer white-space"),i.appendChild(t),u.newDiv=t,1===e.line)return u.item++,w();N(e)}function b(e,t){var n,r,i="Object"===f(e)?(n=e.min,r=e.max,Math.floor(Math.random()*(r-n+1)+n)):e;u.halt?u.resume=function(){return u.iterator=setTimeout(t,i)}:u.iterator=setTimeout(t,i)}function N(e){var t,n,i=e.line||e.continue,o=document.createElement("div");if(Array.isArray(i))return t=0,void b(n=e.totalTime?e.totalTime/i.length:e.speed,(function r(){var a=i[t++];o.textContent=a,u.newDiv.innerHTML+=e.html?a:o.innerHTML,t===i.length?s():b(n,r)}));function a(e,t){var n=[];e=Array.from(e);for(var r=0;r<e.length;r++){var i=e[r],o=i.nodeName;"#text"===o?n.push({parent:t,content:i.textContent}):i.childNodes.length?function(){var e=document.createElement(o);Array.from(i.attributes).forEach((function(t){e.setAttribute(t.name,t.value)})),n.push({parent:t,newNode:e}),n=n.concat(a(i.childNodes,e))}():u.voids.includes(o)&&n.push({parent:t,voidNode:i})}return n}function l(){return r[Math.floor(Math.random()*r.length)]}function c(t,n,r){var i=0,o=e.military,a=o.speed,c=o.chars;t.innerHTML+=l(),u.military=setInterval((function(){if(i===c)return t.innerHTML=t.innerHTML.slice(0,-1)+n,clearInterval(u.military),r();t.innerHTML=t.innerHTML.slice(0,-1)+l(),i++}),a)}function s(){return clearInterval(u.iterator),u.item++,w()}o.innerHTML=i,e.html?function(){var t=a(o.childNodes,u.newDiv),n=0,r=0,i=t[n++],l=e.totalTime?e.totalTime/i.content.length:e.speed;b(l,(function o(){if(i.content&&r===i.content.length&&(r=0,i=t[n++]),!i)return s();if(i.content){if(e.military)return c(i.parent,i.content[r++],(function(){b(l,o)}));i.parent.innerHTML+=i.content[r++]}else i.parent.appendChild(i.voidNode||i.newNode),i=t[n++];b(l,o)}))}():function(){var t=0,n=e.totalTime?e.totalTime/i.length:e.speed;b(n,(function r(){if(t===i.length)return s();var a=i[t];if(e.military)return c(u.newDiv,a,(function(){t++,b(n,r)}));"String"!==f(i)&&(o.textContent=a,a=o.innerHTML),u.newDiv.innerHTML+=a,t++,b(n,r)}))}()}function E(){return u.typing?(l.el&&l.el.removeEventListener(l.type,l.fxn),clearInterval(u.type),clearInterval(u.iterator),clearInterval(u.goBack),clearInterval(u.military),clearTimeout(u.pause),v(),L("kill")):s}function L(e){var t=function(){return s};return Object.keys(s).forEach((function(n){"end"===e&&"kill"===n||(s[n]=t)})),"kill"===e&&(u.killed=!0),s}return s}}));</script>
 		<script>
 			typer('.typed')
 				.line({ container: document.querySelector('.typed-content-1') })
