@@ -12,6 +12,7 @@ pageTitle: Low-latency multiplayer
 {% include _header.liquid %}
 		<!-- Page-Specific Styles -->
 		<style>
+			/* Hero */
 			.no-webp .hero {
 				background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/star-header.jpg") no-repeat center center;
 				background-size: cover;
@@ -24,6 +25,20 @@ pageTitle: Low-latency multiplayer
 				padding-top: 6rem !important;
 				height: 100%;
 			}
+			/* Particles JS */
+			canvas {
+				position: absolute;
+				z-index: 0;
+				height:  80vh !important;
+			}
+			section.hero::after {
+				position: absolute;
+				width: 100%;
+				height: 80vh;
+				content: " ";
+				background: linear-gradient(to bottom, transparent 70%, #000);
+			}
+			/* Network & Servers */
 			.no-webp #network {
 				background: url(/img/glowing-oneqode-network-globe.jpg) no-repeat 130% 50%;
 				background-size: contain;
@@ -298,5 +313,38 @@ pageTitle: Low-latency multiplayer
 				.pause(2000)
 				.back('all')
 				.repeat(Infinity, true)
+		</script>
+		<!--
+			Particles JS
+			Credit: Vincent Garreau
+			https://vincentgarreau.com/particles.js/
+			License: MIT
+		-->
+		<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+		<script>
+		particlesJS("stars", {
+			"particles": {
+				number: { value: 160, density: { enable: true, value_area: 800 } },
+				color: {value: "#ffffff"},
+				shape: { type: "circle", stroke: { width: 0, color: "#000000" }, polygon: { nb_sides: 5 }, image: { src: "img/github.svg", width: 100, height: 100 } },
+				opacity: { value: 0.6, random: true, anim: { enable: true, speed: 1, opacity_min: 0, sync: false } },
+				size: { value: 1, random: false, anim: { enable: false, speed: 4, size_min: 0.3, sync: false } },
+				line_linked: { enable: false, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
+				move: { enable: true, speed: 1, direction: "none", random: true, straight: false, out_mode: "out", bounce: false, attract: { enable: false, rotateX: 600, rotateY: 600 }
+				}
+			},
+			interactivity: {
+				detect_on: "canvas",
+				events: { onhover: { enable: true, mode: "bubble" }, onclick: { enable: false, mode: "repulse"}, resize: true },
+				modes: {
+					grab: { distance: 100, line_linked: { opacity: 0 } },
+					bubble: { distance: 73.08694910712106, size: 2, duration: 2, opacity: 0, speed: 3 },
+					repulse: { distance: 87.91208791208791, duration: 0.4 },
+					push: { particles_nb: 4 },
+					remove: { particles_nb: 2 }
+				}
+			},
+			retina_detect: true,
+		});
 		</script>
 {% include _footer.liquid %}
