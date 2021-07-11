@@ -29,6 +29,7 @@ pageSubtitle: Asia-Pacific’s newest game server region
 				font-family: "Poppins", sans-serif;
 				font-weight: 600;
 				font-size: 1.5rem;
+				line-height: 1.3;
 			}
 			a.kotaku-logo {
 				display: block;
@@ -94,31 +95,6 @@ pageSubtitle: Asia-Pacific’s newest game server region
 				font-size: 30px;
 				fill: #4F94CC;
 			}
-			/* Mobile-Specific Styles */
-			@media (max-width: 48em) {
-				#cable-map {
-					margin: 0;
-				}
-				#cable-map::after {
-					content: none;
-					display: none;
-				}
-				#cable-map svg {
-					display: none;
-				}
-				#cable-map picture {
-					display: block;
-				}
-				.stat-holder {
-					text-align: center;
-				}
-				.stat-holder .col-sm-5:last-child {
-					margin-top: 2rem;
-				}
-				.company .col-xs-12 {
-					margin-bottom: 2rem;
-				}
-			}
 			/* Statistics */
 			.stat,
 			.unit,
@@ -135,6 +111,44 @@ pageSubtitle: Asia-Pacific’s newest game server region
 			}
 			.description {
 				display: inline-block;
+			}
+			/* Mobile-Specific Styles */
+			@media (max-width: 48em) {
+				h1 {
+					font-size: 3rem;
+				}
+				.kotaku-quote blockquote p {
+					font-size: 1.2rem;
+				}
+				#cable-map {
+					margin: 0;
+				}
+				#cable-map::after {
+					content: none;
+					display: none;
+				}
+				#cable-map svg {
+					display: none;
+				}
+				#cable-map picture {
+					display: block;
+				}
+				.stat-holder {
+					text-align: center;
+					font-size: 1rem;
+				}
+				.stat-holder .col-sm-5:last-child {
+					margin-top: 2rem;
+				}
+				.stat {
+				font-size: 3rem;
+				}
+				.unit {
+					font-size: 2rem;
+				}
+				.company .col-xs-12 {
+					margin-bottom: 2rem;
+				}
 			}
 			/* Star Field */
 			.star-holder {

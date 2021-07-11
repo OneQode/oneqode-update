@@ -514,7 +514,7 @@ TYPOGRAPHY
 /* Standard */
 body {
 	font-size: 1.3rem;
-	line-height: 1.6;
+	line-height: 1.5;
 }
 
 /* Headings */
@@ -693,10 +693,10 @@ FORMS
 button[type=submit] {
 	cursor: pointer;
 }
-input:not(.pac-target-input):not(.pac-target-input),
+input,
 select,
 textarea {
-	font-size: 20px;
+	font-size: 1.3rem;
 	height: 56px;
 	display: block;
 	box-sizing: border-box;
@@ -874,8 +874,6 @@ CONTENT
 	flex-direction: column;
 	color: #999;
 	text-decoration: none;
-	margin: 2rem 0;
-	padding: 1rem 0;
 }
 .linked a:first-of-type {
 	margin-top: 0;
@@ -976,7 +974,6 @@ CONTENT
 }
 .icons p {
 	color: #999;
-	font-size: 1.2rem;
 }
 /* Standalone icons */
 .icon {
@@ -1296,17 +1293,6 @@ RESPONSIVE OVERRIDES
 	.mobile-text-center {
 		text-align: center;
 	}
-	h1 {
-		font-size: 2.5rem;
-		word-break: break-word;
-		-webkit-hyphens: auto;
-		-moz-hyphens: auto;
-		hyphens: auto;
-	}
-	h2,
-	.media h1 {
-		font-size: 2rem;
-	}
 	/* Mobile Menu */
 	#header .container {
 		justify-content: center;
@@ -1433,16 +1419,53 @@ RESPONSIVE OVERRIDES
 		padding-bottom: 8rem;
 	}
 	/* Mobile fonts */
-	p.subheading {
-		font-size: 1.5rem;
+	h1 {
+		font-size: 2rem;
 	}
+	h2,
+	.media h1 {
+		font-size: 1.6rem;
+	}
+	h3 {
+		font-size:  1.3rem;
+	}
+	.linked h3 {
+		font-size: 1.3rem;
+	}
+	h4 {
+		font-size:  1.1rem;
+	}
+	p.subheading {
+		font-size: 1.2rem;
+	}
+	body,
 	p,
 	li,
-	.button {
+	a {
+		font-size: 1rem;
+	}
+	input,
+	select,
+	textarea {
 		font-size: 1.2rem;
+	}
+	figcaption {
+		font-size: 0.8rem;
+	}
+	.stat span {
+		font-size: 3rem;
+	}
+	/* Links */
+	.button {
+		font-size: 0.9rem;
+		padding: 0.65rem 1.4rem;
 	}
 	.brands a img {
 		opacity: 1;
+	}
+	a.chevron::after {
+		width: 0.9rem;
+		height: 0.9rem;
 	}
 	/* Don't animate maps */
 	.map .active path,
@@ -1454,13 +1477,14 @@ RESPONSIVE OVERRIDES
 	/* Glowing boxes */
 	.box.glowing img {
 		opacity: 1 !important;
+		max-width: 3rem;
 	}
 	.box.glowing h2,
 	.box.glowing h3 {
 		color: #fff;
 	}
 	.box.glowing h2 {
-		font-size: 1.5rem;
+		font-size: 1.3rem;
 		margin-bottom: 2rem;
 	}
 }
