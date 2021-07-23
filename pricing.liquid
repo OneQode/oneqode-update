@@ -1,0 +1,152 @@
+---
+layout: page.liquid
+section: gaming
+metaTitle: Pricing • Bare Metal & Cloud Game Servers • OneQode™
+metaDescription: Choose your region and hardware specifications below to see the monthly cost for a game server from OneQode.
+changefreq: monthly
+priority: 0.5
+pageTitle: Pricing
+pageSubtitle: Choose your configuration below to<br class="responsive"> calculate pricing for a game server
+---
+		<style>
+			section.hero {
+				background: linear-gradient(to bottom, transparent 50%, #000 100%), radial-gradient(circle at bottom,#002735 0,#000 100%);
+			}
+			/* Inputs */
+			input[type=radio] + label {
+				box-sizing: border-box;
+				width: 100%;
+				max-width: 100%;
+				padding: 1rem;
+				color: #999;
+				border: 2px solid #999;
+				border-radius: 10px;
+				transition: all 0.2s;
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			input[type=radio] + label:hover {
+				border: 2px solid #fff;
+				color: #fff;
+			}
+			.radio-parent {
+				display: grid;
+				grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+				grid-auto-rows: minmax(70px, 1fr);
+				grid-gap: 1rem;
+			}
+			input[type=radio] {
+				display: none;
+			}
+			input[type=radio]:checked + label {
+				border: 2px solid #00b0f0;
+				color: #00b0f0;
+				outline: none;
+			}
+			/* Price box */
+			#price {
+				background: #333;
+				border-radius: 15px;
+			}
+			@media (min-width: 48em) {
+				/* Price bg */
+				#price {
+					background: #17181C;
+				}
+			}
+		</style>	
+		<section>
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<h2>Bare Metal Server Pricing<mark class="dot">.</mark></h2>
+						<p class="subheading faded">Uninterrupted, network-wide DDoS protection</p>
+					</div>
+					<div class="col-xs-12 col-md-6 col-md-offset-3">
+						<p>By neutralising attacks at the edge, we keep gamers online without compromising on latency, cost, or performance.</p>
+					</div>
+				</div>
+				<div class="row mb-8 mobile-text-center">
+					<div class="col-xs-12 col-md-7 mt-8 pt-2">
+						<h3>Region</h3>
+						<div class="radio-parent">
+							<input type="radio" name="region" id="asia" value="Asia">
+							<label for="asia">Asia</label>
+							<input type="radio" name="region" id="australia" value="Australia">
+							<label for="australia">Australia</label>
+							<input type="radio" name="region" id="north-america" value="North America">
+							<label for="north-america">North America</label>
+							<input type="radio" name="region" id="guam" value="Guam">
+							<label for="guam">Guam</label>
+						</div>
+						<h3 class="mt-2">Processor</h3>
+						<div class="radio-parent">
+							<input type="radio" name="cpu" id="e-2288g" value="E-2288G">
+							<label for="e-2288g">E-2288G</label>
+							<input type="radio" name="cpu" id="e-2174g" value="E-2174G">
+							<label for="e-2174g">E-2174G</label>
+							<input type="radio" name="cpu" id="e-2286g" value="E-2286G">
+							<label for="e-2286g">E-2286G</label>
+							<input type="radio" name="cpu" id="e-2176g" value="E-2176G">
+							<label for="e-2176g">E-2176G</label>
+							<input type="radio" name="cpu" id="i9-9900k" value="i9-9900K">
+							<label for="i9-9900k">i9-9900K</label>
+						</div>
+						<h3 class="mt-2">Memory</h3>
+						<div class="radio-parent">
+							<input type="radio" name="ram" id="16gb" value="16GB">
+							<label for="16gb">16GB</label>
+							<input type="radio" name="ram" id="32gb" value="32GB">
+							<label for="32gb">32GB</label>
+							<input type="radio" name="ram" id="64gb" value="64GB">
+							<label for="64gb">64GB</label>
+							<input type="radio" name="ram" id="128gb" value="128GB">
+							<label for="128gb">128GB</label>
+						</div>
+						<h3 class="mt-2">Solid State Hard Drive</h3>
+						<div class="radio-parent">
+							<input type="radio" name="ssd" id="2x500gb" value="2 x 500GB">
+							<label for="2x500gb">2 x 500GB</label>
+							<input type="radio" name="ssd" id="2x1tb" value="2 x 1TB">
+							<label for="2x1tb">2 x 1TB</label>
+							<input type="radio" name="ssd" id="2x2tb" value="2 x 2TB">
+							<label for="2x2tb">2 x 2TB</label>
+						</div>
+						<h3 class="mt-2">Bandwidth</h3>
+						<div class="radio-parent">
+							<input type="radio" name="bandwidth" id="100mbps-10tb" value="100 Mbps - 10TB data">
+							<label for="100mbps-10tb">100 Mbps (10TB data)</label>
+							<input type="radio" name="bandwidth" id="100mbps-unlimited" value="100 Mbps - Unlimited data">
+							<label for="100mbps-unlimited">100 Mbps (Unlimited data)</label>
+							<input type="radio" name="bandwidth" id="1gbps-10tb" value="1 Gbps - 10TB data">
+							<label for="1gbps-10tb">1 Gbps (10TB data)</label>
+							<input type="radio" name="bandwidth" id="1gbps-unlimited" value="1 Gbps - Unlimited data">
+							<label for="1gbps-unlimited">1 Gbps (Unlimited data)</label>
+							<input type="radio" name="bandwidth" id="10gbps" value="10 Gbps">
+							<label for="10gbps">10 Gbps</label>
+							<input type="radio" name="bandwidth" id="40gbps" value="40 Gbps">
+							<label for="40gbps">40 Gbps</label>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-4 col-md-offset-1 mt-8">
+						<div id="price" class="p-2">
+							<h4>Price for configuration</h4>
+							<p class="sla"><span class="num">$<span id="price-here">138</span></span><span class="up">/mo</span></p>
+							<p class="sla"><span class="ex">Pricing in USD. Exclusive of Tax</span></p>
+							<p class="mt-2 mb-0"><a href="#" class="button">Start Order</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="pb-8 black-to-footer">
+			<div class="container">
+				<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
+					<h2>Start a conversation today<mark class="dot">.</mark></h2>
+					<p class="subheading">Get in touch with our team to discuss your toughest infrastructure challenges.</p>
+					<a href="/contact/" class="button ghost mt-2">Contact Us</a></p>
+				</div>
+			</div>
+		</section>
