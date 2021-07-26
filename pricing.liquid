@@ -12,7 +12,16 @@ pageSubtitle: Choose your configuration below to<br class="responsive"> calculat
 			section.hero {
 				background: linear-gradient(to bottom, transparent 50%, #000 100%), radial-gradient(circle at bottom,#002735 0,#000 100%);
 			}
-			/* Inputs */
+			/* Form */
+			.radio-parent {
+				display: grid;
+				grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+				grid-auto-rows: minmax(70px, 1fr);
+				grid-gap: 1rem;
+			}
+			input[type=radio] {
+				display: none;
+			}
 			input[type=radio] + label {
 				box-sizing: border-box;
 				width: 100%;
@@ -24,26 +33,24 @@ pageSubtitle: Choose your configuration below to<br class="responsive"> calculat
 				transition: all 0.2s;
 				cursor: pointer;
 				display: flex;
-				align-items: center;
+				flex-direction: column;
+				align-items: flex-start;
 				justify-content: center;
+				font-family: Poppins, sans-serif;
+				font-weight: 600;
 			}
 			input[type=radio] + label:hover {
 				border: 2px solid #fff;
 				color: #fff;
 			}
-			.radio-parent {
-				display: grid;
-				grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
-				grid-auto-rows: minmax(70px, 1fr);
-				grid-gap: 1rem;
-			}
-			input[type=radio] {
-				display: none;
-			}
 			input[type=radio]:checked + label {
 				border: 2px solid #00b0f0;
 				color: #00b0f0;
 				outline: none;
+			}
+			.details {
+				font-size: 0.8rem;
+				opacity: 0.8;
 			}
 			/* Price box */
 			#price {
@@ -54,6 +61,8 @@ pageSubtitle: Choose your configuration below to<br class="responsive"> calculat
 				/* Price bg */
 				#price {
 					background: #17181C;
+					position: sticky;
+					top: 6rem;
 				}
 			}
 		</style>	
@@ -66,70 +75,72 @@ pageSubtitle: Choose your configuration below to<br class="responsive"> calculat
 				</div>
 				<div class="row mb-8 mobile-text-center">
 					<div class="col-xs-12 col-md-7 mt-4 pt-2">
-						<h3>Region</h3>
-						<div class="radio-parent">
-							<input type="radio" name="region" id="asia" value="Asia">
-							<label for="asia">Asia</label>
-							<input type="radio" name="region" id="australia" value="Australia">
-							<label for="australia">Australia</label>
-							<input type="radio" name="region" id="north-america" value="North America">
-							<label for="north-america">North America</label>
-							<input type="radio" name="region" id="guam" value="Guam">
-							<label for="guam">Guam</label>
-						</div>
-						<h3 class="mt-2">Processor</h3>
-						<div class="radio-parent">
-							<input type="radio" name="cpu" id="e-2288g" value="E-2288G">
-							<label for="e-2288g">E-2288G</label>
-							<input type="radio" name="cpu" id="e-2174g" value="E-2174G">
-							<label for="e-2174g">E-2174G</label>
-							<input type="radio" name="cpu" id="e-2286g" value="E-2286G">
-							<label for="e-2286g">E-2286G</label>
-							<input type="radio" name="cpu" id="e-2176g" value="E-2176G">
-							<label for="e-2176g">E-2176G</label>
-							<input type="radio" name="cpu" id="i9-9900k" value="i9-9900K">
-							<label for="i9-9900k">i9-9900K</label>
-						</div>
-						<h3 class="mt-2">Memory</h3>
-						<div class="radio-parent">
-							<input type="radio" name="ram" id="16gb" value="16GB">
-							<label for="16gb">16GB</label>
-							<input type="radio" name="ram" id="32gb" value="32GB">
-							<label for="32gb">32GB</label>
-							<input type="radio" name="ram" id="64gb" value="64GB">
-							<label for="64gb">64GB</label>
-							<input type="radio" name="ram" id="128gb" value="128GB">
-							<label for="128gb">128GB</label>
-						</div>
-						<h3 class="mt-2">Solid State Hard Drive</h3>
-						<div class="radio-parent">
-							<input type="radio" name="ssd" id="2x500gb" value="2 x 500GB">
-							<label for="2x500gb">2 x 500GB</label>
-							<input type="radio" name="ssd" id="2x1tb" value="2 x 1TB">
-							<label for="2x1tb">2 x 1TB</label>
-							<input type="radio" name="ssd" id="2x2tb" value="2 x 2TB">
-							<label for="2x2tb">2 x 2TB</label>
-						</div>
-						<h3 class="mt-2">Bandwidth</h3>
-						<div class="radio-parent">
-							<input type="radio" name="bandwidth" id="100mbps-10tb" value="100 Mbps - 10TB data">
-							<label for="100mbps-10tb">100 Mbps (10TB data)</label>
-							<input type="radio" name="bandwidth" id="100mbps-unlimited" value="100 Mbps - Unlimited data">
-							<label for="100mbps-unlimited">100 Mbps (Unlimited data)</label>
-							<input type="radio" name="bandwidth" id="1gbps-10tb" value="1 Gbps - 10TB data">
-							<label for="1gbps-10tb">1 Gbps (10TB data)</label>
-							<input type="radio" name="bandwidth" id="1gbps-unlimited" value="1 Gbps - Unlimited data">
-							<label for="1gbps-unlimited">1 Gbps (Unlimited data)</label>
-							<input type="radio" name="bandwidth" id="10gbps" value="10 Gbps">
-							<label for="10gbps">10 Gbps</label>
-							<input type="radio" name="bandwidth" id="40gbps" value="40 Gbps">
-							<label for="40gbps">40 Gbps</label>
-						</div>
+						<form id="form">
+							<h3>Region</h3>
+							<div class="radio-parent">
+								<input type="radio" name="region" id="asia" value="asia" checked>
+								<label for="asia">Asia</label>
+								<input type="radio" name="region" id="australia" value="australia">
+								<label for="australia">Australia</label>
+								<input type="radio" name="region" id="north-america" value="north-america">
+								<label for="north-america">North America</label>
+								<input type="radio" name="region" id="guam" value="guam">
+								<label for="guam">Guam</label>
+							</div>
+							<h3 class="mt-2">Processor</h3>
+							<div class="radio-parent">
+								<input type="radio" name="cpu" id="e-2288g" value="E-2288G" checked>
+								<label for="e-2288g">E-2288G <span class="details">3.7 GHz, 8 cores, 16 threads</span></label>
+								<input type="radio" name="cpu" id="e-2174g" value="E-2174G">
+								<label for="e-2174g">E-2174G <span class="details">3.8 GHz, 4 cores, 8 threads</span></label>
+								<input type="radio" name="cpu" id="e-2286g" value="E-2286G">
+								<label for="e-2286g">E-2286G <span class="details">4.0 GHz, 6 cores, 12 threads</span></label>
+								<input type="radio" name="cpu" id="e-2176g" value="E-2176G">
+								<label for="e-2176g">E-2176G <span class="details">3.7 GHz, 6 cores, 12 threads</span></label>
+								<input type="radio" name="cpu" id="i9-9900k" value="i9-9900K">
+								<label for="i9-9900k">i9-9900K <span class="details">3.6 GHz, 8 cores, 16 threads</span></label>
+							</div>
+							<h3 class="mt-2">Memory</h3>
+							<div class="radio-parent">
+								<input type="radio" name="ram" id="16gb" value="16GB" checked>
+								<label for="16gb">16GB</label>
+								<input type="radio" name="ram" id="32gb" value="32GB">
+								<label for="32gb">32GB</label>
+								<input type="radio" name="ram" id="64gb" value="64GB">
+								<label for="64gb">64GB</label>
+								<input type="radio" name="ram" id="128gb" value="128GB">
+								<label for="128gb">128GB</label>
+							</div>
+							<h3 class="mt-2">Solid State Hard Drive</h3>
+							<div class="radio-parent">
+								<input type="radio" name="ssd" id="2x500gb" value="2 x 500GB" checked>
+								<label for="2x500gb">2 x 500GB</label>
+								<input type="radio" name="ssd" id="2x1tb" value="2 x 1TB">
+								<label for="2x1tb">2 x 1TB</label>
+								<input type="radio" name="ssd" id="2x2tb" value="2 x 2TB">
+								<label for="2x2tb">2 x 2TB</label>
+							</div>
+							<h3 class="mt-2">Bandwidth</h3>
+							<div class="radio-parent">
+								<input type="radio" name="bandwidth" id="100mbps-10tb" value="100 Mbps - 10TB data" checked>
+								<label for="100mbps-10tb">100 Mbps <span class="details">10TB data</span></label>
+								<input type="radio" name="bandwidth" id="100mbps-unlimited" value="100 Mbps - Unlimited data">
+								<label for="100mbps-unlimited">100 Mbps <span class="details">Unlimited data</span></label>
+								<input type="radio" name="bandwidth" id="1gbps-10tb" value="1 Gbps - 10TB data">
+								<label for="1gbps-10tb">1 Gbps <span class="details">10TB data</span></label>
+								<input type="radio" name="bandwidth" id="1gbps-unlimited" value="1 Gbps - Unlimited data">
+								<label for="1gbps-unlimited">1 Gbps <span class="details">Unlimited data</span></label>
+								<input type="radio" name="bandwidth" id="10gbps" value="10 Gbps">
+								<label for="10gbps">10 Gbps</label>
+								<input type="radio" name="bandwidth" id="40gbps" value="40 Gbps">
+								<label for="40gbps">40 Gbps</label>
+							</div>
+						</form>
 					</div>
 					<div class="col-xs-12 col-md-4 col-md-offset-1 mt-4">
 						<div id="price" class="p-2">
 							<h4>Price for configuration</h4>
-							<p class="sla"><span class="num">$138</span><span class="up">/mo</span></p>
+							<p class="sla"><output id="result"></output></p>
 							<p class="sla"><span class="ex">Pricing in USD. Exclusive of Tax</span></p>
 							<p class="mt-2 mb-0"><a href="#" class="button">Start Order</a></p>
 						</div>
@@ -146,3 +157,186 @@ pageSubtitle: Choose your configuration below to<br class="responsive"> calculat
 				</div>
 			</div>
 		</section>
+		<script>
+		// data Object
+		const data = {
+			asia: {
+				cpu: {
+					'E-2288G': 440,
+					'E-2174G': 270,
+					'E-2286G': 410,
+					'E-2176G': 290,
+					'i9-9900K': 285,
+				},
+				ram: {
+					'16GB': 20,
+					'32GB': 40,
+					'64GB': 80,
+					'128GB': 160,
+				},
+				ssd: {
+					'2 x 500GB': 0,
+					'2 x 1TB': 65,
+					'2 x 2TB': 120,
+				},
+				bandwidth: {
+					'100 Mbps - 10TB data': 0,
+					'1 Gbps - 10TB data': 150,
+					'100 Mbps - Unlimited data': 350,
+					'1 Gbps - Unlimited data': 500,
+					'10 Gbps': 'Contact Us',
+					'40 Gbps': 'Contact Us',
+				},
+			},
+			australia: {
+				cpu: {
+					'E-2288G': 520,
+					'E-2174G': 345,
+					'E-2286G': 490,
+					'E-2176G': 365,
+					'i9-9900K': 350,
+				},
+				ram: {
+					'16GB': 20,
+					'32GB': 40,
+					'64GB': 80,
+					'128GB': 160,
+				},
+				ssd: {
+					'2 x 500GB': 0,
+					'2 x 1TB': 65,
+					'2 x 2TB': 120,
+				},
+				bandwidth: {
+					'100 Mbps - 10TB data': 0,
+					'1 Gbps - 10TB data': 250,
+					'100 Mbps - Unlimited data': 500,
+					'1 Gbps - Unlimited data': 1000,
+					'10 Gbps': 'Contact Us',
+					'40 Gbps': 'Contact Us',
+				},
+			},
+			'north-america': {
+				cpu: {
+					'E-2288G': 307,
+					'E-2174G': 270,
+					'E-2286G': 277,
+					'E-2176G': 290,
+					'i9-9900K': 350,
+				},
+				ram: {
+					'16GB': 20,
+					'32GB': 40,
+					'64GB': 80,
+					'128GB': 160,
+				},
+				ssd: {
+					'2 x 500GB': 0,
+					'2 x 1TB': 65,
+					'2 x 2TB': 120,
+				},
+				bandwidth: {
+					'100 Mbps - 10TB data': 0,
+					'1 Gbps - 10TB data': 250,
+					'100 Mbps - Unlimited data': 500,
+					'1 Gbps - Unlimited data': 1000,
+					'10 Gbps': 'Contact Us',
+					'40 Gbps': 'Contact Us',
+				},
+			},
+			guam: {
+				cpu: {
+					'E-2288G': 520,
+					'E-2174G': 300,
+					'E-2286G': 490,
+					'E-2176G': 320,
+					'i9-9900K': 300,
+				},
+				ram: {
+					'16GB': 20,
+					'32GB': 40,
+					'64GB': 80,
+					'128GB': 160,
+				},
+				ssd: {
+					'2 x 500GB': 0,
+					'2 x 1TB': 65,
+					'2 x 2TB': 120,
+				},
+				bandwidth: {
+					'100 Mbps - 10TB data': 0,
+					'1 Gbps - 10TB data': 75,
+					'100 Mbps - Unlimited data)': 150,
+					'1 Gbps - Unlimited data': 300,
+					'10 Gbps': 'Contact Us',
+					'40 Gbps': 'Contact Us',
+				},
+			},
+		};
+
+		// getting from element by id
+		const form = document.getElementById('form');
+		// getting result paragraph
+		const result = document.getElementById('result');
+
+		// adding event listener on form value change
+		form.addEventListener('input', calculate);
+
+		// defining prototype function to getting value from object if exists
+		Object.prototype.getValue = function(key) {
+			if (this.hasOwnProperty(key)) return this[key];
+			else return null;
+		};
+
+		// initial value
+		calculate.call(form);
+
+		// calculate function
+		function calculate() {
+			// getting form values
+			const {
+				cpu: {
+					value: cpuValue
+				},
+				ram: {
+					value: ramValue
+				},
+				ssd: {
+					value: ssdValue
+				},
+				bandwidth: {
+					value: bandwidthValue
+				},
+				region: {
+					value: regionValue
+				},
+			} = this;
+
+			// total Price
+			let total;
+			// getting selected region Object
+			const region = data.getValue(regionValue);
+			if (region) {
+				// getting values of (cpu,ram,ssd,bandwidth) from specific region
+				const cpu = region.cpu.getValue(cpuValue) ?? 0;
+				const ram = region.ram.getValue(ramValue) ?? 0;
+				const ssd = region.ssd.getValue(ssdValue) ?? 0;
+				const bandwidth = region.bandwidth.getValue(bandwidthValue) ?? 0;
+				// adding all value in total
+				total = cpu + ram + ssd;
+
+				// checking if bandwidth has string type then print contactus otherwise also add its value in total
+				if (typeof bandwidth === 'string') {
+					total = '<span class="num">' + bandwidth + '</span>';
+				} else {
+					total += bandwidth;
+					total = '<span class="num">' + `\$${total}` + '</span><span class="up">/mo</span>';
+				}
+				// printing the result
+				result.innerHTML = total;
+			} else {
+				// empty the result if region is not selected
+				result.innerText = '';
+			}
+		}
+		</script>
