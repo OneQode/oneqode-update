@@ -20,9 +20,14 @@ pageSubtitle: Choose your configuration below to<br class="responsive"> calculat
 				grid-gap: 1rem;
 			}
 			input[type=radio] {
-				display: none;
+				/*display: none;*/
+				width: 0;
+				height: 0;
 			}
-			input[type=radio] + label {
+			.radio-parent label {
+				display: flex;
+			}
+			.radio-parent label > span {
 				box-sizing: border-box;
 				width: 100%;
 				max-width: 100%;
@@ -39,14 +44,19 @@ pageSubtitle: Choose your configuration below to<br class="responsive"> calculat
 				font-family: Poppins, sans-serif;
 				font-weight: 600;
 			}
-			input[type=radio] + label:hover {
+			.radio-parent label:hover > span {
 				border: 2px solid #fff;
 				color: #fff;
 			}
-			input[type=radio]:checked + label {
+			input[type=radio]:checked + span {
 				border: 2px solid #00b0f0;
 				color: #00b0f0;
 				outline: none;
+			}
+			input[type=radio]:focus-visible + span {
+				outline-color: -webkit-focus-ring-color;
+				outline-style: auto;
+				outline-offset: 2px;
 			}
 			.details {
 				font-size: 0.8rem;
@@ -65,7 +75,7 @@ pageSubtitle: Choose your configuration below to<br class="responsive"> calculat
 					top: 6rem;
 				}
 			}
-		</style>	
+		</style>
 		<section>
 			<div class="container">
 				<div class="row text-center">
@@ -78,62 +88,150 @@ pageSubtitle: Choose your configuration below to<br class="responsive"> calculat
 						<form id="form">
 							<h3>Region</h3>
 							<div class="radio-parent">
-								<input type="radio" name="region" id="asia" value="asia" checked>
-								<label for="asia">Asia</label>
-								<input type="radio" name="region" id="australia" value="australia">
-								<label for="australia">Australia</label>
-								<input type="radio" name="region" id="north-america" value="north-america">
-								<label for="north-america">North America</label>
-								<input type="radio" name="region" id="guam" value="guam">
-								<label for="guam">Guam</label>
+								<label for="asia">
+									<input type="radio" name="region" id="asia" value="asia" checked>
+									<span>
+										Asia
+									</span>
+								</label>
+								<label for="australia">
+									<input type="radio" name="region" id="australia" value="australia">
+									<span>
+										Australia
+									</span>
+								</label>
+								<label for="north-america">
+									<input type="radio" name="region" id="north-america" value="north-america">
+									<span>
+										North America
+									</span>
+								</label>
+								<label for="guam">
+									<input type="radio" name="region" id="guam" value="guam">
+									<span>
+										Guam
+									</span>
+								</label>
 							</div>
 							<h3 class="mt-2">Processor</h3>
 							<div class="radio-parent">
-								<input type="radio" name="cpu" id="e-2288g" value="E-2288G" checked>
-								<label for="e-2288g">E-2288G <span class="details">3.7 GHz, 8 cores, 16 threads</span></label>
-								<input type="radio" name="cpu" id="e-2174g" value="E-2174G">
-								<label for="e-2174g">E-2174G <span class="details">3.8 GHz, 4 cores, 8 threads</span></label>
-								<input type="radio" name="cpu" id="e-2286g" value="E-2286G">
-								<label for="e-2286g">E-2286G <span class="details">4.0 GHz, 6 cores, 12 threads</span></label>
-								<input type="radio" name="cpu" id="e-2176g" value="E-2176G">
-								<label for="e-2176g">E-2176G <span class="details">3.7 GHz, 6 cores, 12 threads</span></label>
-								<input type="radio" name="cpu" id="i9-9900k" value="i9-9900K">
-								<label for="i9-9900k">i9-9900K <span class="details">3.6 GHz, 8 cores, 16 threads</span></label>
+								<label for="e-2288g">
+									<input type="radio" name="cpu" id="e-2288g" value="E-2288G" checked>
+									<span>
+										E-2288G <span class="details">3.7 GHz, 8 cores, 16 threads</span>
+									</span>
+								</label>
+								<label for="e-2174g">
+									<input type="radio" name="cpu" id="e-2174g" value="E-2174G">
+									<span>
+										E-2174G <span class="details">3.8 GHz, 4 cores, 8 threads</span>
+									</span>
+								</label>
+								<label for="e-2286g">
+									<input type="radio" name="cpu" id="e-2286g" value="E-2286G">
+									<span>
+										E-2286G <span class="details">4.0 GHz, 6 cores, 12 threads</span>
+									</span>
+								</label>
+								<label for="e-2176g">
+									<input type="radio" name="cpu" id="e-2176g" value="E-2176G">
+									<span>
+										E-2176G <span class="details">3.7 GHz, 6 cores, 12 threads</span>
+									</span>
+								</label>
+								<label for="i9-9900k">
+									<input type="radio" name="cpu" id="i9-9900k" value="i9-9900K">
+									<span>
+										i9-9900K <span class="details">3.6 GHz, 8 cores, 16 threads</span>
+									</span>
+								</label>
 							</div>
 							<h3 class="mt-2">Memory</h3>
 							<div class="radio-parent">
-								<input type="radio" name="ram" id="16gb" value="16GB" checked>
-								<label for="16gb">16GB</label>
-								<input type="radio" name="ram" id="32gb" value="32GB">
-								<label for="32gb">32GB</label>
-								<input type="radio" name="ram" id="64gb" value="64GB">
-								<label for="64gb">64GB</label>
-								<input type="radio" name="ram" id="128gb" value="128GB">
-								<label for="128gb">128GB</label>
+								<label for="16gb">
+									<input type="radio" name="ram" id="16gb" value="16GB" checked>
+									<span>
+										16GB <span class="details">+$0</span>
+									</span>
+								</label>
+								<label for="32gb">
+									<input type="radio" name="ram" id="32gb" value="32GB">
+									<span>
+										32GB <span class="details">+$20</span>
+									</span>
+								</label>
+								<label for="64gb">
+									<input type="radio" name="ram" id="64gb" value="64GB">
+									<span>
+										64GB <span class="details">+$60</span>
+									</span>
+								</label>
+								<label for="128gb">
+									<input type="radio" name="ram" id="128gb" value="128GB">
+									<span>
+										128GB <span class="details">+$140</span>
+									</span>
+								</label>
 							</div>
 							<h3 class="mt-2">Solid State Hard Drive</h3>
 							<div class="radio-parent">
-								<input type="radio" name="ssd" id="2x500gb" value="2 x 500GB" checked>
-								<label for="2x500gb">2 x 500GB</label>
-								<input type="radio" name="ssd" id="2x1tb" value="2 x 1TB">
-								<label for="2x1tb">2 x 1TB</label>
-								<input type="radio" name="ssd" id="2x2tb" value="2 x 2TB">
-								<label for="2x2tb">2 x 2TB</label>
+								<label for="2x500gb">
+									<input type="radio" name="ssd" id="2x500gb" value="2 x 500GB" checked>
+									<span>
+										2 x 500GB
+									</span>
+								</label>
+								<label for="2x1tb">
+									<input type="radio" name="ssd" id="2x1tb" value="2 x 1TB">
+									<span>
+										2 x 1TB
+									</span>
+								</label>
+								<label for="2x2tb">
+									<input type="radio" name="ssd" id="2x2tb" value="2 x 2TB">
+									<span>
+										2 x 2TB
+									</span>
+								</label>
 							</div>
 							<h3 class="mt-2">Bandwidth</h3>
 							<div class="radio-parent">
-								<input type="radio" name="bandwidth" id="100mbps-10tb" value="100 Mbps - 10TB data" checked>
-								<label for="100mbps-10tb">100 Mbps <span class="details">10TB data</span></label>
-								<input type="radio" name="bandwidth" id="100mbps-unlimited" value="100 Mbps - Unlimited data">
-								<label for="100mbps-unlimited">100 Mbps <span class="details">Unlimited data</span></label>
-								<input type="radio" name="bandwidth" id="1gbps-10tb" value="1 Gbps - 10TB data">
-								<label for="1gbps-10tb">1 Gbps <span class="details">10TB data</span></label>
-								<input type="radio" name="bandwidth" id="1gbps-unlimited" value="1 Gbps - Unlimited data">
-								<label for="1gbps-unlimited">1 Gbps <span class="details">Unlimited data</span></label>
-								<input type="radio" name="bandwidth" id="10gbps" value="10 Gbps">
-								<label for="10gbps">10 Gbps</label>
-								<input type="radio" name="bandwidth" id="40gbps" value="40 Gbps">
-								<label for="40gbps">40 Gbps</label>
+								<label for="100mbps-10tb">
+									<input type="radio" name="bandwidth" id="100mbps-10tb" value="100 Mbps - 10TB data" checked>
+									<span>
+										100 Mbps <span class="details">10TB data</span>
+									</span>
+								</label>
+								<label for="100mbps-unlimited">
+									<input type="radio" name="bandwidth" id="100mbps-unlimited" value="100 Mbps - Unlimited data">
+									<span>
+										100 Mbps <span class="details">Unlimited data</span>
+									</span>
+								</label>
+								<label for="1gbps-10tb">
+									<input type="radio" name="bandwidth" id="1gbps-10tb" value="1 Gbps - 10TB data">
+									<span>
+										1 Gbps <span class="details">10TB data</span>
+									</span>
+								</label>
+								<label for="1gbps-unlimited">
+									<input type="radio" name="bandwidth" id="1gbps-unlimited" value="1 Gbps - Unlimited data">
+									<span>
+										1 Gbps <span class="details">Unlimited data</span>
+									</span>
+								</label>
+								<label for="10gbps">
+									<input type="radio" name="bandwidth" id="10gbps" value="10 Gbps">
+									<span>
+										10 Gbps
+									</span>
+								</label>
+								<label for="40gbps">
+									<input type="radio" name="bandwidth" id="40gbps" value="40 Gbps">
+									<span>
+										40 Gbps
+									</span>
+								</label>
 							</div>
 						</form>
 					</div>
