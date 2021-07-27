@@ -7,6 +7,7 @@ changefreq: monthly
 priority: 0.5
 pageTitle: Pricing
 pageSubtitle: Choose your configuration below to<br class="responsive"> calculate pricing for a game server
+form: true
 ---
 		<style>
 			section.hero {
@@ -61,6 +62,7 @@ pageSubtitle: Choose your configuration below to<br class="responsive"> calculat
 			.details {
 				font-size: 0.8rem;
 				opacity: 0.8;
+				text-align: left;
 			}
 			/* Price box */
 			#price {
@@ -76,7 +78,7 @@ pageSubtitle: Choose your configuration below to<br class="responsive"> calculat
 				}
 			}
 		</style>
-		<section>
+		<section class="black-to-footer">
 			<div class="container">
 				<div class="row text-center">
 					<div class="col-xs-12 col-md-8 col-md-offset-2">
@@ -85,7 +87,7 @@ pageSubtitle: Choose your configuration below to<br class="responsive"> calculat
 				</div>
 				<div class="row mb-8 mobile-text-center">
 					<div class="col-xs-12 col-md-7 mt-4 pt-2">
-						<form id="form">
+						<form id="calculator">
 							<h3>Region</h3>
 							<div class="radio-parent">
 								<label for="asia">
@@ -240,18 +242,15 @@ pageSubtitle: Choose your configuration below to<br class="responsive"> calculat
 							<h4>Price for configuration</h4>
 							<p class="sla"><output id="result"></output></p>
 							<p class="sla"><span class="ex">Pricing in USD. Exclusive of Tax</span></p>
-							<p class="mt-2 mb-0"><a href="#" class="button">Start Order</a></p>
+							<p class="mt-2 mb-0"><a href="#order" class="button">Start Order</a></p>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-		<section class="pb-8 black-to-footer">
-			<div class="container">
-				<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
-					<h2>Start a conversation today<mark class="dot">.</mark></h2>
-					<p class="subheading">Get in touch with our team to discuss your toughest infrastructure challenges.</p>
-					<a href="/contact/" class="button ghost mt-2">Contact Us</a></p>
+				<div class="row mobile-text-center pb-8" id="order">
+					<div class="col-xs-12 col-md-7 mt-4 pt-2">
+						<h2>Want to order this configuration<mark class="dot">?</mark></h2>
+{% include forms/_pricing.liquid %}
+					</div>
 				</div>
 			</div>
 		</section>
@@ -373,12 +372,12 @@ pageSubtitle: Choose your configuration below to<br class="responsive"> calculat
 		};
 
 		// getting from element by id
-		const form = document.getElementById('form');
+		const calculator = document.getElementById('calculator');
 		// getting result paragraph
 		const result = document.getElementById('result');
 
 		// adding event listener on form value change
-		form.addEventListener('input', calculate);
+		calculator.addEventListener('input', calculate);
 
 		// defining prototype function to getting value from object if exists
 		Object.prototype.getValue = function(key) {
@@ -387,7 +386,7 @@ pageSubtitle: Choose your configuration below to<br class="responsive"> calculat
 		};
 
 		// initial value
-		calculate.call(form);
+		calculate.call(calculator);
 
 		// calculate function
 		function calculate() {
