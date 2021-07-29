@@ -745,6 +745,13 @@ textarea {
 	resize: vertical;
 }
 /* Botpoison Validation */
+#sending {
+	display: none;
+}
+#sending.in-progress {
+	display: inline-block;
+	margin-left: 1rem;
+}
 button[type=submit]:disabled {
 	background: #333;
 	border-color: #999;
@@ -1486,6 +1493,11 @@ RESPONSIVE OVERRIDES
 	.box.glowing h2 {
 		font-size: 1.3rem;
 		margin-bottom: 2rem;
+	}
+	/* Contact form: sending prompt */
+	#sending.in-progress {
+		display: block;
+		margin-left: 0;
 	}
 }
 /* Very small phones */

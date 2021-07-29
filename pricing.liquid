@@ -80,14 +80,14 @@ form: true
 		</style>
 		<section class="black-to-footer">
 			<div class="container">
-				<div class="row text-center">
-					<div class="col-xs-12 col-md-8 col-md-offset-2">
+				<div class="row mobile-text-center">
+					<div class="col-xs-12">
 						<h2>Bare Metal Server Pricing<mark class="dot">.</mark></h2>
 					</div>
 				</div>
-				<div class="row mb-8 mobile-text-center">
-					<div class="col-xs-12 col-md-7 mt-4 pt-2">
-						<form id="calculator">
+				<form action="https://submit-form.com/gbT479Nu" data-botpoison-public-key="pk_11d034c7-a37c-4479-a7fc-eabfb1185635" id="pricing-dedicated-servers">
+					<div class="row mt-2 mb-8 mobile-text-center">
+						<div class="col-xs-12 col-md-7 py-2">
 							<h3>Region</h3>
 							<div class="radio-parent">
 								<label for="asia">
@@ -235,26 +235,66 @@ form: true
 									</span>
 								</label>
 							</div>
-						</form>
-					</div>
-					<div class="col-xs-12 col-md-4 col-md-offset-1 mt-4">
-						<div id="price" class="p-2">
-							<h4>Price for configuration</h4>
-							<p class="sla"><output id="result"></output></p>
-							<p class="sla"><span class="ex">Pricing in USD. Exclusive of Tax</span></p>
-							<p class="mt-2 mb-0"><a href="#order" class="button">Start Order</a></p>
+						</div>
+						<div class="col-xs-12 col-md-4 col-md-offset-1">
+							<div id="price" class="p-2">
+								<h4>Price for configuration</h4>
+								<p class="sla"><output id="result"></output></p>
+								<p class="sla"><span class="ex">Pricing in USD. Exclusive of Tax</span></p>
+								<p class="mt-2 mb-0"><a href="#order" class="button">Start Order</a></p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="row mobile-text-center pb-8" id="order">
-					<div class="col-xs-12 col-md-7 mt-4 pt-2">
-						<h2>Want to order this configuration<mark class="dot">?</mark></h2>
-{% include forms/_pricing.liquid %}
+					<div class="row mobile-text-center mb-8" id="order">
+						<div class="col-xs-12 col-md-7">
+							<h2>Want to order this configuration<mark class="dot">?</mark></h2>
+							<p>Enter your details below, along with any questions or comments. One of our team will get your order started and reach out.</p>
+							<div class="row mobile-flex">
+								<div class="col-xs-12 col-sm-6 mb-1">
+									<input type="text" name="first_name" placeholder="First Name" autocapitalize="words" required>
+								</div>
+								<div class="col-xs-12 col-sm-6 mb-1">
+									<input type="text" name="last_name" placeholder="Last Name" autocapitalize="words" required>
+								</div>
+								<div class="col-xs-12 col-sm-6 mb-1">
+									<input type="text" name="company" placeholder="Company" autocapitalize="words" required>
+								</div>
+								<div class="col-xs-12 col-sm-6 mb-1">
+									<input type="email" name="email" placeholder="Work Email" required>
+								</div>
+								<div class="col-xs-12 mb-1">
+									<textarea name="message" placeholder="Questions or comments? Add them here." autocapitalize="sentences" rows="4" required></textarea>
+								</div>
+								<div class="col-xs-12">
+									<input type="hidden" name="form" value="Pricing - Dedicated Servers" />
+									<input type="hidden" name="_redirect" value="https://www.oneqode.com/pricing/thanks/"/>
+									<button type="submit" class="button mt-1" id="button">Submit</button>
+									<p id="sending">Please wait...</p>
+									<p id="failmsg">
+										<strong>Anti-spam failed :(</strong>
+										<br>Our spam detection thinks you're a bot. If you're reading this, we're really sorry.
+										<br>Please do email us instead at:
+										<br>hello <span class="faded">[at]</span> oneqode <span class="faded">[dot]</span> com <span class="faded">[dot]</span> au
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+				<div class="row mobile-text-center">
+					<div class="col-xs-12">
+						<h2>Gaming VPS Pricing<mark class="dot">.</mark></h2>
 					</div>
 				</div>
 			</div>
 		</section>
 		<script>
+
+		/**
+		*	Pricing Calculator: Dedicated Servers
+		*	Takes our regional pricing and calculates whenever radio inputs change
+		*/
+
 		// data Object
 		const data = {
 			asia: {
@@ -372,7 +412,7 @@ form: true
 		};
 
 		// getting from element by id
-		const calculator = document.getElementById('calculator');
+		const calculator = document.getElementById('pricing-dedicated-servers');
 		// getting result paragraph
 		const result = document.getElementById('result');
 
@@ -436,4 +476,29 @@ form: true
 				result.innerText = '';
 			}
 		}
+
+		/**
+		* Botpoison form validation
+		* Prevents form submissions from bots... I hope
+		*/
+
+		var form = document.getElementById("pricing-dedicated-servers");
+		var button = document.getElementById("button");
+		var sending = document.getElementById("sending");
+		var failmsg = document.getElementById("failmsg");
+		form.addEventListener("botpoison-challenge-start", function () {
+			button.setAttribute("disabled", "disabled");
+			sending.classList.add("in-progress");
+		});
+		form.addEventListener("botpoison-challenge-success", function () {
+			button.removeAttribute("disabled");
+			sending.classList.remove("in-progress");
+			button.classList.add("success");
+		});
+		form.addEventListener("botpoison-challenge-error", function () {
+			button.removeAttribute("disabled");
+			button.classList.add("fail");
+			sending.classList.remove("in-progress");
+			failmsg.classList.add("block");
+		});
 		</script>
