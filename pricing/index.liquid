@@ -5,13 +5,52 @@ metaTitle: Pricing • Bare Metal Game Servers • OneQode™
 metaDescription: Choose your region and hardware specifications below to see the monthly cost for a game server from OneQode.
 changefreq: monthly
 priority: 0.5
-pageTitle: Pricing
+pageTitle: Bare metal<br class="responsive"> server pricing
 pageSubtitle: Choose your configuration below to<br class="responsive"> calculate pricing for a game server
 form: true
 ---
 		<style>
 			section.hero {
 				background: linear-gradient(to bottom, transparent 50%, #000 100%), radial-gradient(circle at bottom,#002735 0,#000 100%);
+			}
+			/* Contact CTA for other pricing */
+			#pricing-contact a {
+				color: #fff;
+				text-decoration: none;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				background: rgb(79 148 204 / 16%);
+				border-radius: 10px;
+				border: 1px solid transparent;
+			}
+			#pricing-contact a:hover {
+				border-color: #666;	
+			}
+			#pricing-contact h2 {
+				font-size: 1.25rem;
+			}
+			#pricing-contact span {
+				display: inline-flex;
+				white-space: nowrap;
+				font-size: 1rem;
+				font-family: Poppins,sans-serif;
+				font-weight: 600;
+				letter-spacing: 2px;
+				text-transform: uppercase;
+			}
+			#pricing-contact span svg {
+				display: inline-flex;
+				margin-top: 4px;
+			}
+			@media (max-width: 48em) {
+				#pricing-contact a {
+					flex-direction: column;
+					align-items: flex-start;
+				}
+				#pricing-contact span {
+					margin-top: 1rem;
+				}
 			}
 			/* Form */
 			.radio-parent {
@@ -97,212 +136,217 @@ form: true
 				align-items: flex-end;
 			}
 		</style>
+		<aside id="pricing-contact">
+			<div class="container">
+				<a href="/contact/" class="col-xs-12 p-2">
+					<h2 class="mt-0 mb-0">Need pricing for transit, colocation or cloud services?</h2>
+					<span>
+						Contact Us
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+							<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+						</svg>
+					</span>
+				</a>
+			</div>
+		</aside>
 		<section class="black-to-footer pb-8">
 			<div class="container">
-				<div class="col-xs-12">
-					<h2>Bare Metal Server Pricing</h2>
-					<form action="https://submit-form.com/gbT479Nu" data-botpoison-public-key="pk_11d034c7-a37c-4479-a7fc-eabfb1185635" id="pricing-dedicated-servers">
-						<div class="row mb-8 mobile-text-center">
-							<div class="col-xs-12 col-md-7 py-2">
-								<h3>Region</h3>
-								<div class="radio-parent">
-									<label for="asia">
-										<input type="radio" name="region" id="asia" value="asia" checked>
-										<span>
-											Asia
-										</span>
-									</label>
-									<label for="australia">
-										<input type="radio" name="region" id="australia" value="australia">
-										<span>
-											Australia
-										</span>
-									</label>
-									<label for="north-america">
-										<input type="radio" name="region" id="north-america" value="north-america">
-										<span>
-											North America
-										</span>
-									</label>
-									<label for="guam">
-										<input type="radio" name="region" id="guam" value="guam">
-										<span>
-											Guam
-										</span>
-									</label>
-								</div>
-								<h3 class="mt-2">Processor</h3>
-								<div class="radio-parent">
-									<label for="e-2288g">
-										<input type="radio" name="cpu" id="e-2288g" value="E-2288G" checked>
-										<span>
-											E-2288G <span class="details">3.7 GHz, 8 cores, 16 threads</span>
-										</span>
-									</label>
-									<label for="e-2174g">
-										<input type="radio" name="cpu" id="e-2174g" value="E-2174G">
-										<span>
-											E-2174G <span class="details">3.8 GHz, 4 cores, 8 threads</span>
-										</span>
-									</label>
-									<label for="e-2286g">
-										<input type="radio" name="cpu" id="e-2286g" value="E-2286G">
-										<span>
-											E-2286G <span class="details">4.0 GHz, 6 cores, 12 threads</span>
-										</span>
-									</label>
-									<label for="e-2176g">
-										<input type="radio" name="cpu" id="e-2176g" value="E-2176G">
-										<span>
-											E-2176G <span class="details">3.7 GHz, 6 cores, 12 threads</span>
-										</span>
-									</label>
-									<label for="i9-9900k">
-										<input type="radio" name="cpu" id="i9-9900k" value="i9-9900K">
-										<span>
-											i9-9900K <span class="details">3.6 GHz, 8 cores, 16 threads</span>
-										</span>
-									</label>
-								</div>
-								<h3 class="mt-2">Memory</h3>
-								<div class="radio-parent">
-									<label for="16gb">
-										<input type="radio" name="ram" id="16gb" value="16GB" checked>
-										<span>
-											16GB <span class="details">+$0</span>
-										</span>
-									</label>
-									<label for="32gb">
-										<input type="radio" name="ram" id="32gb" value="32GB">
-										<span>
-											32GB <span class="details">+$20</span>
-										</span>
-									</label>
-									<label for="64gb">
-										<input type="radio" name="ram" id="64gb" value="64GB">
-										<span>
-											64GB <span class="details">+$60</span>
-										</span>
-									</label>
-									<label for="128gb">
-										<input type="radio" name="ram" id="128gb" value="128GB">
-										<span>
-											128GB <span class="details">+$140</span>
-										</span>
-									</label>
-								</div>
-								<h3 class="mt-2">Solid State Hard Drive</h3>
-								<div class="radio-parent">
-									<label for="2x500gb">
-										<input type="radio" name="ssd" id="2x500gb" value="2 x 500GB" checked>
-										<span>
-											2 x 500GB
-										</span>
-									</label>
-									<label for="2x1tb">
-										<input type="radio" name="ssd" id="2x1tb" value="2 x 1TB">
-										<span>
-											2 x 1TB
-										</span>
-									</label>
-									<label for="2x2tb">
-										<input type="radio" name="ssd" id="2x2tb" value="2 x 2TB">
-										<span>
-											2 x 2TB
-										</span>
-									</label>
-								</div>
-								<h3 class="mt-2">Bandwidth</h3>
-								<div class="radio-parent">
-									<label for="100mbps-10tb">
-										<input type="radio" name="bandwidth" id="100mbps-10tb" value="100 Mbps - 10TB data" checked>
-										<span>
-											100 Mbps <span class="details">10TB data</span>
-										</span>
-									</label>
-									<label for="100mbps-unlimited">
-										<input type="radio" name="bandwidth" id="100mbps-unlimited" value="100 Mbps - Unlimited data">
-										<span>
-											100 Mbps <span class="details">Unlimited data</span>
-										</span>
-									</label>
-									<label for="1gbps-10tb">
-										<input type="radio" name="bandwidth" id="1gbps-10tb" value="1 Gbps - 10TB data">
-										<span>
-											1 Gbps <span class="details">10TB data</span>
-										</span>
-									</label>
-									<label for="1gbps-unlimited">
-										<input type="radio" name="bandwidth" id="1gbps-unlimited" value="1 Gbps - Unlimited data">
-										<span>
-											1 Gbps <span class="details">Unlimited data</span>
-										</span>
-									</label>
-									<label for="10gbps">
-										<input type="radio" name="bandwidth" id="10gbps" value="10 Gbps">
-										<span>
-											10 Gbps
-										</span>
-									</label>
-									<label for="40gbps">
-										<input type="radio" name="bandwidth" id="40gbps" value="40 Gbps">
-										<span>
-											40 Gbps
-										</span>
-									</label>
-								</div>
+				<form action="https://submit-form.com/gbT479Nu" data-botpoison-public-key="pk_11d034c7-a37c-4479-a7fc-eabfb1185635" id="pricing-dedicated-servers">
+					<div class="row mb-8 mobile-text-center">
+						<div class="col-xs-12 col-md-7 py-2">
+							<h3>Region</h3>
+							<div class="radio-parent">
+								<label for="asia">
+									<input type="radio" name="region" id="asia" value="asia" checked>
+									<span>
+										Asia
+									</span>
+								</label>
+								<label for="australia">
+									<input type="radio" name="region" id="australia" value="australia">
+									<span>
+										Australia
+									</span>
+								</label>
+								<label for="north-america">
+									<input type="radio" name="region" id="north-america" value="north-america">
+									<span>
+										North America
+									</span>
+								</label>
+								<label for="guam">
+									<input type="radio" name="region" id="guam" value="guam">
+									<span>
+										Guam
+									</span>
+								</label>
 							</div>
-							<div class="col-xs-12 col-md-4 col-md-offset-1">
-								<div id="price" class="p-2">
-									<h4>Price for configuration</h4>
-									<p class="sla"><output id="result"></output></p>
-									<p class="sla"><span class="ex">Pricing in USD. Exclusive of Tax</span></p>
-									<p class="mt-2 mb-0"><a href="#order" class="button">Start Order</a></p>
+							<h3 class="mt-2">Processor</h3>
+							<div class="radio-parent">
+								<label for="e-2288g">
+									<input type="radio" name="cpu" id="e-2288g" value="E-2288G" checked>
+									<span>
+										E-2288G <span class="details">3.7 GHz, 8 cores, 16 threads</span>
+									</span>
+								</label>
+								<label for="e-2174g">
+									<input type="radio" name="cpu" id="e-2174g" value="E-2174G">
+									<span>
+										E-2174G <span class="details">3.8 GHz, 4 cores, 8 threads</span>
+									</span>
+								</label>
+								<label for="e-2286g">
+									<input type="radio" name="cpu" id="e-2286g" value="E-2286G">
+									<span>
+										E-2286G <span class="details">4.0 GHz, 6 cores, 12 threads</span>
+									</span>
+								</label>
+								<label for="e-2176g">
+									<input type="radio" name="cpu" id="e-2176g" value="E-2176G">
+									<span>
+										E-2176G <span class="details">3.7 GHz, 6 cores, 12 threads</span>
+									</span>
+								</label>
+								<label for="i9-9900k">
+									<input type="radio" name="cpu" id="i9-9900k" value="i9-9900K">
+									<span>
+										i9-9900K <span class="details">3.6 GHz, 8 cores, 16 threads</span>
+									</span>
+								</label>
+							</div>
+							<h3 class="mt-2">Memory</h3>
+							<div class="radio-parent">
+								<label for="16gb">
+									<input type="radio" name="ram" id="16gb" value="16GB" checked>
+									<span>
+										16GB <span class="details">+$0</span>
+									</span>
+								</label>
+								<label for="32gb">
+									<input type="radio" name="ram" id="32gb" value="32GB">
+									<span>
+										32GB <span class="details">+$20</span>
+									</span>
+								</label>
+								<label for="64gb">
+									<input type="radio" name="ram" id="64gb" value="64GB">
+									<span>
+										64GB <span class="details">+$60</span>
+									</span>
+								</label>
+								<label for="128gb">
+									<input type="radio" name="ram" id="128gb" value="128GB">
+									<span>
+										128GB <span class="details">+$140</span>
+									</span>
+								</label>
+							</div>
+							<h3 class="mt-2">Solid State Hard Drive</h3>
+							<div class="radio-parent">
+								<label for="2x500gb">
+									<input type="radio" name="ssd" id="2x500gb" value="2 x 500GB" checked>
+									<span>
+										2 x 500GB
+									</span>
+								</label>
+								<label for="2x1tb">
+									<input type="radio" name="ssd" id="2x1tb" value="2 x 1TB">
+									<span>
+										2 x 1TB
+									</span>
+								</label>
+								<label for="2x2tb">
+									<input type="radio" name="ssd" id="2x2tb" value="2 x 2TB">
+									<span>
+										2 x 2TB
+									</span>
+								</label>
+							</div>
+							<h3 class="mt-2">Bandwidth</h3>
+							<div class="radio-parent">
+								<label for="100mbps-10tb">
+									<input type="radio" name="bandwidth" id="100mbps-10tb" value="100 Mbps - 10TB data" checked>
+									<span>
+										100 Mbps <span class="details">10TB data</span>
+									</span>
+								</label>
+								<label for="100mbps-unlimited">
+									<input type="radio" name="bandwidth" id="100mbps-unlimited" value="100 Mbps - Unlimited data">
+									<span>
+										100 Mbps <span class="details">Unlimited data</span>
+									</span>
+								</label>
+								<label for="1gbps-10tb">
+									<input type="radio" name="bandwidth" id="1gbps-10tb" value="1 Gbps - 10TB data">
+									<span>
+										1 Gbps <span class="details">10TB data</span>
+									</span>
+								</label>
+								<label for="1gbps-unlimited">
+									<input type="radio" name="bandwidth" id="1gbps-unlimited" value="1 Gbps - Unlimited data">
+									<span>
+										1 Gbps <span class="details">Unlimited data</span>
+									</span>
+								</label>
+								<label for="10gbps">
+									<input type="radio" name="bandwidth" id="10gbps" value="10 Gbps">
+									<span>
+										10 Gbps
+									</span>
+								</label>
+								<label for="40gbps">
+									<input type="radio" name="bandwidth" id="40gbps" value="40 Gbps">
+									<span>
+										40 Gbps
+									</span>
+								</label>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-4 col-md-offset-1">
+							<div id="price" class="p-2">
+								<h4>Price for configuration</h4>
+								<p class="sla"><output id="result"></output></p>
+								<p class="sla"><span class="ex">Pricing in USD. Exclusive of Tax</span></p>
+								<p class="mt-2 mb-0"><a href="#order" class="button">Start Order</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="row mobile-text-center" id="order">
+						<div class="col-xs-12 col-md-7">
+							<h2>Want to order this configuration<mark class="dot">?</mark></h2>
+							<p>Enter your details below, along with any questions or comments. One of our team will get your order started and reach out.</p>
+							<div class="row mobile-flex">
+								<div class="col-xs-12 col-sm-6 mb-1">
+									<input type="text" name="first_name" placeholder="First Name" autocapitalize="words" required>
+								</div>
+								<div class="col-xs-12 col-sm-6 mb-1">
+									<input type="text" name="last_name" placeholder="Last Name" autocapitalize="words" required>
+								</div>
+								<div class="col-xs-12 col-sm-6 mb-1">
+									<input type="text" name="company" placeholder="Company" autocapitalize="words" required>
+								</div>
+								<div class="col-xs-12 col-sm-6 mb-1">
+									<input type="email" name="email" placeholder="Work Email" required>
+								</div>
+								<div class="col-xs-12 mb-1">
+									<textarea name="message" placeholder="Questions or comments? Add them here." autocapitalize="sentences" rows="4" required></textarea>
+								</div>
+								<div class="col-xs-12">
+									<input type="hidden" name="form" value="Pricing - Dedicated Servers" />
+									<input type="hidden" name="_redirect" value="https://www.oneqode.com/pricing/thanks/"/>
+									<button type="submit" class="button mt-1" id="button">Submit</button>
+									<p id="sending">Please wait...</p>
+									<p id="failmsg">
+										<strong>Anti-spam failed :(</strong>
+										<br>Our spam detection thinks you're a bot. If you're reading this, we're really sorry.
+										<br>Please do email us instead at:
+										<br>hello <span class="faded">[at]</span> oneqode <span class="faded">[dot]</span> com <span class="faded">[dot]</span> au
+									</p>
 								</div>
 							</div>
 						</div>
-						<div class="row mobile-text-center" id="order">
-							<div class="col-xs-12 col-md-7">
-								<h2>Want to order this configuration<mark class="dot">?</mark></h2>
-								<p>Enter your details below, along with any questions or comments. One of our team will get your order started and reach out.</p>
-								<div class="row mobile-flex">
-									<div class="col-xs-12 col-sm-6 mb-1">
-										<input type="text" name="first_name" placeholder="First Name" autocapitalize="words" required>
-									</div>
-									<div class="col-xs-12 col-sm-6 mb-1">
-										<input type="text" name="last_name" placeholder="Last Name" autocapitalize="words" required>
-									</div>
-									<div class="col-xs-12 col-sm-6 mb-1">
-										<input type="text" name="company" placeholder="Company" autocapitalize="words" required>
-									</div>
-									<div class="col-xs-12 col-sm-6 mb-1">
-										<input type="email" name="email" placeholder="Work Email" required>
-									</div>
-									<div class="col-xs-12 mb-1">
-										<textarea name="message" placeholder="Questions or comments? Add them here." autocapitalize="sentences" rows="4" required></textarea>
-									</div>
-									<div class="col-xs-12">
-										<input type="hidden" name="form" value="Pricing - Dedicated Servers" />
-										<input type="hidden" name="_redirect" value="https://www.oneqode.com/pricing/thanks/"/>
-										<button type="submit" class="button mt-1" id="button">Submit</button>
-										<p id="sending">Please wait...</p>
-										<p id="failmsg">
-											<strong>Anti-spam failed :(</strong>
-											<br>Our spam detection thinks you're a bot. If you're reading this, we're really sorry.
-											<br>Please do email us instead at:
-											<br>hello <span class="faded">[at]</span> oneqode <span class="faded">[dot]</span> com <span class="faded">[dot]</span> au
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</form>
-				</div>
-				<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center mt-8 pt-4">
-					<h2>Looking for cloud or<br class="responsive"> colocation pricing<mark class="dot">?</mark></h2>
-					<p class="subheading">Reach out to our team for pricing for other services</p>
-					<a href="/contact/" class="button ghost mt-2">Contact Us</a></p>
-				</div>
+					</div>
+				</form>
 			</div>
 		</section>
 		<script>
@@ -376,7 +420,7 @@ form: true
 						'E-2174G': 270,
 						'E-2286G': 277,
 						'E-2176G': 290,
-						'i9-9900K': 350,
+						'i9-9900K': 280,
 					},
 					ram: {
 						'16GB': 20,
