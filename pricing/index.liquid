@@ -116,25 +116,6 @@ form: true
 					top: 6rem;
 				}
 			}
-			/* Gaming VPS Pricing */
-			#gaming-vps .radio-parent {
-				grid-template-columns: 1fr;
-			}
-			#gaming-vps .radio-parent label > span {
-				display: grid;
-				grid-gap: 0.5rem;
-				grid-template-columns: 5fr 1fr;
-			}
-			#gaming-vps .radio-parent label > span > span {
-				display: flex;
-				flex-direction: column;
-			}
-			#gaming-vps .radio-parent label > span > span:first-child {
-				align-items: flex-start;
-			}
-			#gaming-vps .radio-parent label > span > span:last-child {
-				align-items: flex-end;
-			}
 		</style>
 		<aside id="pricing-contact">
 			<div class="container">
@@ -149,35 +130,53 @@ form: true
 				</a>
 			</div>
 		</aside>
-		<section class="black-to-footer pb-8">
+		<section class="pb-8">
 			<div class="container">
 				<form action="https://submit-form.com/gbT479Nu" data-botpoison-public-key="pk_11d034c7-a37c-4479-a7fc-eabfb1185635" id="pricing-dedicated-servers">
 					<div class="row mb-8 mobile-text-center">
 						<div class="col-xs-12 col-md-7 py-2">
-							<h3>Region</h3>
+							<h3>City</h3>
 							<div class="radio-parent">
-								<label for="asia">
-									<input type="radio" name="region" id="asia" value="asia" checked>
+								<label for="hong-kong">
+									<input type="radio" name="region" id="hong-kong" value="hong-kong" checked>
 									<span>
-										Asia
+										Hong Kong
 									</span>
 								</label>
-								<label for="australia">
-									<input type="radio" name="region" id="australia" value="australia">
+								<label for="tokyo">
+									<input type="radio" name="region" id="tokyo" value="tokyo" checked>
 									<span>
-										Australia
-									</span>
-								</label>
-								<label for="north-america">
-									<input type="radio" name="region" id="north-america" value="north-america">
-									<span>
-										North America
+										Tokyo
 									</span>
 								</label>
 								<label for="guam">
 									<input type="radio" name="region" id="guam" value="guam">
 									<span>
 										Guam
+									</span>
+								</label>
+								<label for="sunshine-coast">
+									<input type="radio" name="region" id="sunshine-coast" value="sunshine-coast">
+									<span>
+										Sunshine Coast
+									</span>
+								</label>
+								<label for="brisbane">
+									<input type="radio" name="region" id="brisbane" value="brisbane">
+									<span>
+										Brisbane
+									</span>
+								</label>
+								<label for="sydney">
+									<input type="radio" name="region" id="sydney" value="sydney">
+									<span>
+										Sydney
+									</span>
+								</label>
+								<label for="los-angeles">
+									<input type="radio" name="region" id="los-angeles" value="los-angeles">
+									<span>
+										Los Angeles
 									</span>
 								</label>
 							</div>
@@ -349,6 +348,15 @@ form: true
 				</form>
 			</div>
 		</section>
+		<section class="pb-8 black-to-footer">
+			<div class="container">
+				<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
+					<h2>Can’t see what<br class="responsive"> you're looking for<mark class="dot">?</mark></h2>
+					<p class="subheading">Need a custom solution or a bulk order?</p>
+					<a href="/contact/" class="button ghost mt-2">Contact Us</a></p>
+				</div>
+			</div>
+		</section>
 		<script>
 
 			/**
@@ -358,7 +366,7 @@ form: true
 
 			// data Object
 			const data = {
-				asia: {
+				'hong-kong': {
 					cpu: {
 						'E-2288G': 440,
 						'E-2174G': 270,
@@ -386,7 +394,35 @@ form: true
 						'40 Gbps': 'Contact Us',
 					},
 				},
-				australia: {
+				tokyo: {
+					cpu: {
+						'E-2288G': 440,
+						'E-2174G': 270,
+						'E-2286G': 410,
+						'E-2176G': 290,
+						'i9-9900K': 285,
+					},
+					ram: {
+						'16GB': 20,
+						'32GB': 40,
+						'64GB': 80,
+						'128GB': 160,
+					},
+					ssd: {
+						'2 x 500GB': 0,
+						'2 x 1TB': 65,
+						'2 x 2TB': 120,
+					},
+					bandwidth: {
+						'100 Mbps - 10TB data': 0,
+						'1 Gbps - 10TB data': 150,
+						'100 Mbps - Unlimited data': 350,
+						'1 Gbps - Unlimited data': 500,
+						'10 Gbps': 'Contact Us',
+						'40 Gbps': 'Contact Us',
+					},
+				},
+				'sunshine-coast': {
 					cpu: {
 						'E-2288G': 520,
 						'E-2174G': 345,
@@ -414,7 +450,63 @@ form: true
 						'40 Gbps': 'Contact Us',
 					},
 				},
-				'north-america': {
+				brisbane: {
+					cpu: {
+						'E-2288G': 520,
+						'E-2174G': 345,
+						'E-2286G': 490,
+						'E-2176G': 365,
+						'i9-9900K': 350,
+					},
+					ram: {
+						'16GB': 20,
+						'32GB': 40,
+						'64GB': 80,
+						'128GB': 160,
+					},
+					ssd: {
+						'2 x 500GB': 0,
+						'2 x 1TB': 65,
+						'2 x 2TB': 120,
+					},
+					bandwidth: {
+						'100 Mbps - 10TB data': 0,
+						'1 Gbps - 10TB data': 250,
+						'100 Mbps - Unlimited data': 500,
+						'1 Gbps - Unlimited data': 1000,
+						'10 Gbps': 'Contact Us',
+						'40 Gbps': 'Contact Us',
+					},
+				},
+				sydney: {
+					cpu: {
+						'E-2288G': 520,
+						'E-2174G': 345,
+						'E-2286G': 490,
+						'E-2176G': 365,
+						'i9-9900K': 350,
+					},
+					ram: {
+						'16GB': 20,
+						'32GB': 40,
+						'64GB': 80,
+						'128GB': 160,
+					},
+					ssd: {
+						'2 x 500GB': 0,
+						'2 x 1TB': 65,
+						'2 x 2TB': 120,
+					},
+					bandwidth: {
+						'100 Mbps - 10TB data': 0,
+						'1 Gbps - 10TB data': 250,
+						'100 Mbps - Unlimited data': 500,
+						'1 Gbps - Unlimited data': 1000,
+						'10 Gbps': 'Contact Us',
+						'40 Gbps': 'Contact Us',
+					},
+				},
+				'los-angeles': {
 					cpu: {
 						'E-2288G': 307,
 						'E-2174G': 270,
