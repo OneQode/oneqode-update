@@ -642,6 +642,35 @@ a.chevron:focus::after {
 	color: #fff;
 	background: rgba(0,89,127,0.5);
 }
+.callout a {
+	color: #fff;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: rgb(79 148 204 / 16%);
+	border-radius: 10px;
+	border: 1px solid transparent;
+}
+.callout a:hover {
+	border-color: #666;	
+}
+.callout h2 {
+	font-size: 1.25rem;
+}
+.callout span {
+	display: inline-flex;
+	white-space: nowrap;
+	font-size: 1rem;
+	font-family: Poppins,sans-serif;
+	font-weight: 600;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+.callout span svg {
+	display: inline-flex;
+	margin-top: 4px;
+}
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - -
 TABLES
@@ -1473,6 +1502,13 @@ RESPONSIVE OVERRIDES
 	a.chevron::after {
 		width: 0.9rem;
 		height: 0.9rem;
+	}
+	.callout a {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.callout span {
+		margin-top: 1rem;
 	}
 	/* Don't animate maps */
 	.map .active path,

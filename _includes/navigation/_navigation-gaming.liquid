@@ -39,18 +39,25 @@
 								</li>
 							</ul>
 							<style>
-								/* Submenu pricing button */
-								.submenu li a.pricing {
+								/* Submenu trial button */
+								.submenu li a.trial {
 									margin: 1.5rem -1.5rem -1.5rem;
 									padding: 1.5rem !important;
 									background: #1c1d22;
 									border-radius: 0 0 10px 10px;
 								}
+								@media (max-width: 48em) {
+									.submenu li a.trial {
+										margin: 1rem auto auto auto;
+										padding: .2rem 0 !important;
+										background: none;
+									}
+								}
 							</style>
 							<ul>
 								<li>
-									<a href="/pricing/" class="pricing">
-										 Pricing
+									<a href="/request-trial/" class="trial">
+										 Request trial
 									</a>
 								</li>
 							</ul>

@@ -13,45 +13,6 @@ form: true
 			section.hero {
 				background: linear-gradient(to bottom, transparent 50%, #000 100%), radial-gradient(circle at bottom,#002735 0,#000 100%);
 			}
-			/* Contact CTA for other pricing */
-			#pricing-contact a {
-				color: #fff;
-				text-decoration: none;
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-				background: rgb(79 148 204 / 16%);
-				border-radius: 10px;
-				border: 1px solid transparent;
-			}
-			#pricing-contact a:hover {
-				border-color: #666;	
-			}
-			#pricing-contact h2 {
-				font-size: 1.25rem;
-			}
-			#pricing-contact span {
-				display: inline-flex;
-				white-space: nowrap;
-				font-size: 1rem;
-				font-family: Poppins,sans-serif;
-				font-weight: 600;
-				letter-spacing: 2px;
-				text-transform: uppercase;
-			}
-			#pricing-contact span svg {
-				display: inline-flex;
-				margin-top: 4px;
-			}
-			@media (max-width: 48em) {
-				#pricing-contact a {
-					flex-direction: column;
-					align-items: flex-start;
-				}
-				#pricing-contact span {
-					margin-top: 1rem;
-				}
-			}
 			/* Form */
 			.radio-parent {
 				display: grid;
@@ -117,7 +78,7 @@ form: true
 				}
 			}
 		</style>
-		<aside id="pricing-contact">
+		<aside class="callout">
 			<div class="container">
 				<a href="/contact/" class="col-xs-12 p-2">
 					<h2 class="mt-0 mb-0">Need pricing for transit, colocation or cloud services?</h2>
@@ -328,7 +289,7 @@ form: true
 									<input type="email" name="email" placeholder="Work Email" required>
 								</div>
 								<div class="col-xs-12 mb-1">
-									<textarea name="message" placeholder="Questions or comments? Add them here." autocapitalize="sentences" rows="4" required></textarea>
+									<textarea name="message" placeholder="Questions or comments? Add them here." autocapitalize="sentences" rows="4"></textarea>
 								</div>
 								<div class="col-xs-12">
 									<input type="hidden" name="form" value="Pricing - Dedicated Servers" />
@@ -353,7 +314,7 @@ form: true
 				<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
 					<h2>Can’t see what<br class="responsive"> you're looking for<mark class="dot">?</mark></h2>
 					<p class="subheading">Need a custom solution or a bulk order?</p>
-					<a href="/contact/" class="button ghost mt-2">Contact Us</a></p>
+					<p><a href="/contact/" class="button ghost mt-2">Contact Us</a></p>
 				</div>
 			</div>
 		</section>
