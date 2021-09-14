@@ -242,7 +242,7 @@ HEADER & FOOTER
 	border-bottom: 1px solid #1c1d22;
 }
 #header.sticky .logo img {
-	height: 2rem;
+	height: 2.25rem;
 	transition: all 0.2s;
 }
 
@@ -252,7 +252,7 @@ HEADER & FOOTER
 	margin: 0 auto;
 }
 .logo img {
-	height: 2.5rem;
+	height: 2.75rem;
 	transition: all 0.2s;
 }
 
@@ -273,12 +273,13 @@ nav a {
 /* Section Switcher */
 nav#switcher {
 	margin-right: auto;
-	margin-left: 0.5rem;
+	margin-left: 0.25rem;
+	margin-top: 0.25rem;
 }
 nav#switcher > a {
 	padding: 0.5rem;
 	border-radius: 10px;
-	/*opacity: 0.7;*/
+	opacity: 0.7;
 	white-space: nowrap;
 }
 nav#switcher a:hover,
@@ -1311,8 +1312,8 @@ RESPONSIVE OVERRIDES
 	h1 {
 		font-size: 3rem;
 	}
-	.logo img {
-		height: 2rem;
+	.logo img, #header.sticky .logo img {
+		height: 2.5rem;
 	}
 	.sm-mt-4 {
 		margin-top: 4rem;
