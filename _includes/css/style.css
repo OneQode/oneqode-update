@@ -350,9 +350,15 @@ li.has-submenu.open > a svg {
 li.has-submenu.open .submenu {
 	visibility: visible;
 	opacity: 1;
+	animation: moveup 0.2s ease-out forwards;
 }
-li.has-submenu.open .submenu ul {
-	animation: moveup 0.2s ease-out;
+li.has-submenu .submenu li a {
+	opacity: 0;
+	visibility: hidden;
+}
+li.has-submenu.open .submenu li a {
+	animation: moveup 0.2s ease-out forwards;
+	animation-delay: calc(0.1s * var(--order));
 }
 @keyframes moveup {
 	from {
