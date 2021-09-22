@@ -108,18 +108,21 @@ ogImage: og-image.jpg
 					radial-gradient(circle at 100% 35%,#002735 0%,transparent 25%),
 					radial-gradient(circle at 0% 65%,#002735 0%,transparent 25%);
 			}
+			#management {
+				overflow: hidden;
+			}
 			/* ↓ Responsive Styles ↓ */
-			@media screen and (min-width: 1920px) {
+			@media (min-width: 1920px) {
 				.webp .cpu-bg, .no-webp .cpu-bg {
 					background-size: contain;
 				}
 			}
-			@media screen and (max-width: 1920px) {
+			@media (max-width: 1920px) {
 				.webp .cpu-bg, .no-webp .cpu-bg {
 					background-size: 75%;
 				}
 			}
-			@media screen and (min-width: 64em) {
+			@media (min-width: 64em) {
 				#network {
 					padding-top: 16rem;
 				}
@@ -130,7 +133,7 @@ ogImage: og-image.jpg
 					border-radius: 50%;
 				}
 			}
-			@media screen and (max-width: 64em) {
+			@media (max-width: 64em) {
 				.webp .cpu-bg {
 					background: radial-gradient(circle at 40% 50%,transparent 0%, rgba(0,0,0,0.3) 50%, #000 100%) no-repeat, url("/img/bg/ryzen-cpu.webp") no-repeat 0% 18%;
 				}
@@ -150,21 +153,35 @@ ogImage: og-image.jpg
 					margin-top: 4rem;
 					margin-bottom: -8rem;
 				}
+				#ddos-protection div:first-child, #api img {
+					margin-bottom: 4rem;
+				}
 			}
-			@media screen and (min-width: 48em) {
+			@media (min-width: 48em) {
 				/* Map */
 				.pull-bottom {
 					margin-bottom: -16rem;
 					z-index: 2;
 					position: relative;
 				}
-				/* Management Dashboard  */
+				/* Management Background */
 				.no-webp #management {
 					background: url("/img/bg/monitor-with-cloud-dashboard-open.jpg") no-repeat center right;
 					background-size: contain;
 				}
 				.webp #management {
 					background: url("/img/bg/monitor-with-cloud-dashboard-open.webp") no-repeat center right;
+					background-size: contain;
+				}
+			}
+			@media (min-width: 48em) and (max-width: 64em) {
+				/* Management Background */
+				.no-webp #management {
+					background: radial-gradient(at top left, #000, rgba(0,0,0,0.4)), url("/img/bg/monitor-with-cloud-dashboard-open.jpg") no-repeat center right;
+					background-size: contain;
+				}
+				.webp #management {
+					background: radial-gradient(at top left, #000, rgba(0,0,0,0.4)), url("/img/bg/monitor-with-cloud-dashboard-open.webp") no-repeat center right;
 					background-size: contain;
 				}
 			}
@@ -240,7 +257,7 @@ ogImage: og-image.jpg
 		<section class="py-8 mobile-text-center bg-blobs">
 			<div class="container">
 				<div class="row py-8" id="ddos-protection">
-					<div class="col-xs-12 col-md-5 pb-2">
+					<div class="col-xs-12 col-md-5">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 674 440" aria-labelledby="ddostitle ddosdescription" role="img">
 							<title id="ddostitle">DDoS analytics chart</title>
 							<desc id="ddosdescription">An illustrative analytics chart showing DDoS attacks being mitigated in real time by our DDoS protection infrastructure.</desc>
@@ -351,9 +368,9 @@ ogImage: og-image.jpg
 					</div>
 				</div>
 				<div class="row pt-8" id="api">
-					<div class="col-xs-12 col-md-5 pb-2">
+					<div class="col-xs-12 col-md-5">
 						<picture>
-							<!-- <source srcset="/img/cloud-api.png" type="image/webp"> -->
+							<!-- <source srcset="/img/cloud-api.webp" type="image/webp"> -->
 							<img src="/img/cloud-api.png" class="opaque" alt="An example set of API commands showing developers how easy it is to use the OneQode Cloud API">
 						</picture>
 					</div>
@@ -369,12 +386,11 @@ ogImage: og-image.jpg
 		<section class="py-8" id="management">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-12 col-md-5">
+					<div class="col-xs-12 col-md-5 mobile-text-center">
 						<h3 class="mb-1">Easy management<mark class="dot">.</mark></h3>
 						<p class="subheading faded">Simple, functional, do what you need to do</p>
 						<p>As you’d expect, there’s a straightforward online dashboard for managing your services, users and billing.</p>
 						<p>You can upload and manage images, change network settings, monitor usage or get support from our team.</p>
-						<a href="/network/#ddos-protection" class="chevron">Complete DDoS protection</a>
 					</div>
 				</div>
 			</div>
@@ -393,7 +409,7 @@ ogImage: og-image.jpg
 						PARTNER IMAGERY
 					</div>
 					<div class="col-xs-12 col-md-5 col-md-offset-1">
-						<h3 class="mb-1">Plays nicely with your tech stack.<mark class="dot">.</mark></h3>
+						<h3 class="mb-1">Plays nicely with your tech stack<mark class="dot">.</mark></h3>
 						<p class="subheading faded">After all, no-one likes lock-in</p>
 						<p>Our cloud platform is built on OpenStack, the open source cloud infrastructure platform.</p>
 						<p>Use Terraform? Too easy. Love Ansible? No problem.</p>
@@ -402,7 +418,7 @@ ogImage: og-image.jpg
 				</div>
 			</div>
 		</section>
-		<section class="pb-8 black-to-footer">
+		<section class="py-8 black-to-footer">
 			<div class="container">
 				<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
 					<h2>Get started today<mark class="dot">.</mark></h2>

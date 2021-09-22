@@ -76,12 +76,6 @@ main {
 }
 /* Mobile */
 @media (max-width: 768px) {
-	.row {
-		display: block;
-	}
-	.row.mobile-flex {
-		display: flex;
-	}
 	br.responsive {
 		display: none;
 	}
@@ -435,6 +429,12 @@ li.has-submenu.open .submenu li a {
 			padding: 0 1rem;
 			display: none;
 			background: none;
+			border: none;
+			position: initial;
+			margin: 0;
+		}
+		.submenu li:not(:first-of-type) {
+			margin-top: 0;
 		}
 		li.has-submenu.open .submenu {
 			display: grid;
@@ -451,6 +451,12 @@ li.has-submenu.open .submenu li a {
 			grid-template-columns: repeat( auto-fit, minmax(10rem, 1fr) );
 			gap: 1rem;
 			margin-top: 0;
+		}
+		li.parent a {
+			background: none;
+			margin: initial;
+			border-bottom: initial;
+			padding: initial;
 		}
 	}
 
@@ -509,6 +515,11 @@ footer ul {
 }
 footer ul a {
 	text-decoration: none;
+	display: block;
+	padding: 0.25rem 0;
+}
+footer ul li:first-child > a {
+    margin-top: 0.25rem;
 }
 .logomark img {
 	margin-left: 0;
@@ -1455,10 +1466,8 @@ RESPONSIVE OVERRIDES
 		text-align: center;
 		padding-top: 2rem;
 	}
-	footer,
-	footer ul,
 	footer .credits {
-		text-align: center !important;
+		text-align: center;
 	}
 	footer .container {
 		padding-bottom: 8rem;
