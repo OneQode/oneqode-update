@@ -294,10 +294,12 @@ nav#switcher ul {
 	z-index: 2;
 	background: rgba(8,16,19,0.95);
 	border: 1px solid #555;
+	margin-top: 0.4rem;
 	border-radius: 10px;
 }
 nav#switcher a.open + ul {
 	display: block;
+	animation: moveup 0.2s ease-out forwards;
 }
 nav#switcher a.open svg {
 	transform: rotateX(180deg);
@@ -358,7 +360,7 @@ li.has-submenu .submenu li a {
 }
 li.has-submenu.open .submenu li a {
 	animation: moveup 0.2s ease-out forwards;
-	animation-delay: calc(0.1s * var(--order));
+	animation-delay: calc(0.075s * var(--order));
 }
 @keyframes moveup {
 	from {

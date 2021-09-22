@@ -85,13 +85,13 @@ ogImage: og-image.jpg
 				background: radial-gradient(circle at 40% 50%,transparent 0%, rgba(0,0,0,0.3) 50%, #000 100%) no-repeat, url("/img/bg/ryzen-cpu.webp") no-repeat 0% 33%;
 			}
 			/* CPU text */
-			#cpu h3 {
+			#cpu .subheading {
 				line-height: 1;
 			}
-			#cpu h3 .num {
+			#cpu .subheading .num {
 				font-size:  8rem;
 			}
-			#cpu h3 .unit {
+			#cpu .subheading .unit {
 				font-size:  6rem;
 			}
 			/* Network Earth Image */
@@ -108,6 +108,7 @@ ogImage: og-image.jpg
 					radial-gradient(circle at 100% 35%,#002735 0%,transparent 25%),
 					radial-gradient(circle at 0% 65%,#002735 0%,transparent 25%);
 			}
+			/* ↓ Responsive Styles ↓ */
 			@media screen and (min-width: 1920px) {
 				.webp .cpu-bg, .no-webp .cpu-bg {
 					background-size: contain;
@@ -147,6 +148,7 @@ ogImage: og-image.jpg
 				}
 				#network img {
 					margin-top: 4rem;
+					margin-bottom: -8rem;
 				}
 			}
 			@media screen and (min-width: 48em) {
@@ -155,6 +157,15 @@ ogImage: og-image.jpg
 					margin-bottom: -16rem;
 					z-index: 2;
 					position: relative;
+				}
+				/* Management Dashboard  */
+				.no-webp #management {
+					background: url("/img/bg/monitor-with-cloud-dashboard-open.jpg") no-repeat center right;
+					background-size: contain;
+				}
+				.webp #management {
+					background: url("/img/bg/monitor-with-cloud-dashboard-open.webp") no-repeat center right;
+					background-size: contain;
 				}
 			}
 		</style>
@@ -185,7 +196,7 @@ ogImage: og-image.jpg
 			</div>
 		</section>
 {% include diagrams/_pops-map.liquid %}
-		<section class="cpu-bg mb-4">
+		<section class="cpu-bg mb-4 mobile-text-center">
 			<div class="container">
 				<div class="row pt-4 pb-8" id="fast">
 					<div class="col-xs-12 col-md-5 col-md-offset-1 fast-text pb-2">
@@ -201,10 +212,10 @@ ogImage: og-image.jpg
 				<div class="row py-8" id="cpu">
 					<div class="col-xs-12 col-md-5 col-md-offset-6">
 						<p class="superheading mt-0">All cores are</p>
-						<h3 class="mb-1">
+						<p class="subheading">
 							<span class="num">3.7</span> 
 							<span class="unit">GHz+</span>
-						</h3>
+						</p>
 						<h3 class="mb-1">Built on blazing-fast bare metal servers<mark class="dot">.</mark></h3>
 						<p>High clock speeds give you the best game performance — so we’ve built our cloud platform around them.</p>
 						<a href="/game-servers/" class="chevron">Underlying game servers</a>
@@ -228,8 +239,8 @@ ogImage: og-image.jpg
 		</section>
 		<section class="py-8 mobile-text-center bg-blobs">
 			<div class="container">
-				<div class="row middle-xs py-8" id="ddos-protection">
-					<div class="col-xs-12 col-md-5">
+				<div class="row py-8" id="ddos-protection">
+					<div class="col-xs-12 col-md-5 pb-2">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 674 440" aria-labelledby="ddostitle ddosdescription" role="img">
 							<title id="ddostitle">DDoS analytics chart</title>
 							<desc id="ddosdescription">An illustrative analytics chart showing DDoS attacks being mitigated in real time by our DDoS protection infrastructure.</desc>
@@ -339,8 +350,8 @@ ogImage: og-image.jpg
 						<p>Spin up a fleet of cross-regional Kubernetes clusters — or a single cloud instance. We provide the infrastructure and get out of your way.</p>
 					</div>
 				</div>
-				<div class="row py-8" id="api">
-					<div class="col-xs-12 col-md-5">
+				<div class="row pt-8" id="api">
+					<div class="col-xs-12 col-md-5 pb-2">
 						<picture>
 							<!-- <source srcset="/img/cloud-api.png" type="image/webp"> -->
 							<img src="/img/cloud-api.png" class="opaque" alt="An example set of API commands showing developers how easy it is to use the OneQode Cloud API">
@@ -355,9 +366,9 @@ ogImage: og-image.jpg
 				</div>
 			</div>
 		</section>
-		<section>
+		<section class="py-8" id="management">
 			<div class="container">
-				<div class="row py-8" id="management">
+				<div class="row">
 					<div class="col-xs-12 col-md-5">
 						<h3 class="mb-1">Easy management<mark class="dot">.</mark></h3>
 						<p class="subheading faded">Simple, functional, do what you need to do</p>
@@ -366,8 +377,19 @@ ogImage: og-image.jpg
 						<a href="/network/#ddos-protection" class="chevron">Complete DDoS protection</a>
 					</div>
 				</div>
-				<div class="row py-8" id="integrations">
-					<div class="col-xs-12 col-md-5">
+			</div>
+			<!-- Full width image on mobile -->
+			<div class="row mb-2 mobile-only">
+				<picture>
+					<source srcset="/img/bg/monitor-with-cloud-dashboard-open.webp" type="image/webp">
+					<img class="opaque" src="/img/bg/monitor-with-cloud-dashboard-open.png" alt="An iMac monitor with the OneQode Cloud dashboard open">
+				</picture>
+			</div>
+		</section>
+		<section class="py-8" id="integrations">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-5 pb-2">
 						PARTNER IMAGERY
 					</div>
 					<div class="col-xs-12 col-md-5 col-md-offset-1">
