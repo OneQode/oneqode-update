@@ -766,6 +766,9 @@ textarea::placeholder {
 select {
 	color: #999;
 }
+select option {
+	background: #333;
+}
 input:hover,
 select:hover,
 textarea:hover {
