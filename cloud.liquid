@@ -7,7 +7,7 @@ priority: 0.9
 pageSupertitle: Cloud Game Servers
 pageTitle: The performance<br> gaming cloud
 pageSubtitle: A cloud platform exclusively
-ogImage: og-image.jpg
+ogImage: oneqode-cloud.jpg
 ---
 {% include _header.liquid %}
 		<style>
@@ -17,7 +17,7 @@ ogImage: og-image.jpg
 				height: 100%;
 			}
 			.hero img {
-				box-shadow: 0px 0px 75px 0px #00597f;
+				box-shadow: 0px 0px 120px -20px #00b0f0;
 				border-radius: 10px;
 			}
 			/* Typer.js */
@@ -69,6 +69,35 @@ ogImage: og-image.jpg
 			span[class^="typed-content-"] {
 				display: none;
 			}
+			/* Locations Marquee */
+			.marquee {
+				width: 100%;
+				margin: 0 auto;
+				overflow: hidden;
+				box-sizing: border-box;
+			}
+			.marquee span {
+				display: inline-block;
+				width: max-content;
+				padding-left: 100%;
+				will-change: transform;
+				animation: marquee 15s linear infinite;
+			}
+			.marquee span:hover {
+				animation-play-state: paused
+			}
+			@keyframes marquee {
+				0% { transform: translate(0, 0); }
+				100% { transform: translate(-100%, 0); }
+			}
+			@media (prefers-reduced-motion: reduce) {
+				.marquee span {
+					animation-iteration-count: 1;
+					animation-duration: 0.01; 
+					width: auto;
+					padding-left: 0;
+				}
+			}
 			/* Fast text */
 			.fast-text h2 {
 				font-size: 7.4vw;
@@ -85,6 +114,9 @@ ogImage: og-image.jpg
 				background: radial-gradient(circle at 40% 50%,transparent 0%, rgba(0,0,0,0.3) 50%, #000 100%) no-repeat, url("/img/bg/ryzen-cpu.webp") no-repeat 0% 33%;
 			}
 			/* CPU text */
+			#cpu .superheading {
+				margin-bottom: 0;
+			}
 			#cpu .subheading {
 				line-height: 1;
 			}
@@ -193,8 +225,11 @@ ogImage: og-image.jpg
 				.hero img {
 					margin-top: 4rem;
 				}
-				.fast-text h2 {
+				.fast-text h2, #cpu .subheading .num {
 					font-size: 16vw;
+				}
+				#cpu .subheading .unit {
+					font-size: 14vw;
 				}
 				#network img {
 					margin-top: 4rem;
@@ -235,6 +270,9 @@ ogImage: og-image.jpg
 					background-size: contain;
 				}
 			}
+			@media (max-width: 48em) {
+				
+			}
 		</style>
 		<section class="hero pull-bottom">
 			<div class="container">
@@ -255,14 +293,15 @@ ogImage: og-image.jpg
 					</div>
 					<div class="col-xs-12 col-sm-5 col-md-6">
 						<picture>
-							<!-- <source srcset="/img/cloud-platform.png" type="image/webp"> -->
-							<img src="/img/cloud-platform.png" class="opaque" alt="A screenshot of the OneQode cloud dashboard">
+							<source srcset="/img/cloud-platform-screenshot.webp" type="image/webp">
+							<img src="/img/cloud-platform-screenshot.jpg" class="opaque" alt="A screenshot of the OneQode cloud dashboard">
 						</picture>
 					</div>
 				</div>
 			</div>
 		</section>
 {% include diagrams/_pops-map.liquid %}
+		<p class="marquee mobile-only"><span>Tokyo • Guam • Hong Kong • Singapore • Sunshine Coast • Brisbane • Sydney • Melbourne • Los Angeles</span></p>
 		<section class="cpu-bg mb-4 mobile-text-center">
 			<div class="container">
 				<div class="row pt-4 pb-8" id="fast">
@@ -271,8 +310,7 @@ ogImage: og-image.jpg
 						<p class="subheading">it’s our default speed</p>
 					</div>
 					<div class="col-xs-12 col-md-5">
-						<p class="mt-0">Gaming infrastructure matters.</p>
-						<p>That’s why we’ve built a gaming infrastructure cloud built for latency and performance.</p>
+						<p class="mt-0">We’ve built a gaming infrastructure cloud built for the things players care about: latency and performance.</p>
 						<p>Exclusively available to the game industry, this is the blazing-fast experience your users deserve.</p>
 					</div>
 				</div>

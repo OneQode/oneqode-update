@@ -52,6 +52,18 @@ form: true
 				font-size: 1rem;
 				margin-bottom: 0;
 			}
+			.checkbox {
+				display: grid;
+				font-size: 1rem;
+				grid-gap: 1rem;
+				grid-template-columns: min-content auto;
+				align-items: center;
+				text-align: left;
+			}
+			.checkbox input {
+				width: 1.75rem;
+				height: 1.75rem;
+			}
 		</style>
 		<section class="black-to-footer pb-8">
 			<div class="container">
@@ -62,7 +74,7 @@ form: true
 								<div class="row">
 									<aside class="col-xs-12 p-2 mb-2 text-left">
 										<h4>Account Approval Times</h4>
-										<p>All new accounts are manually vetted before activation, to keep our network quality high. This can take up to 2 business days.</p>
+										<p>All new accounts are manually vetted before activation, to keep our network quality high. We'll aim to get this done as quick as possible, but it can take up to 2 business days.</p>
 									</aside>
 									<div class="col-xs-12">
 										<h3>Your details:</h3>
@@ -105,6 +117,12 @@ form: true
 									</div>
 									<div class="col-xs-12 mb-1">
 										<textarea name="5_message" placeholder="(Optional) Tell us what you’re hoping to achieve so we can tailor your experience." autocapitalize="sentences" rows="4"></textarea>
+									</div>
+									<div class="col-xs-12 my-1">
+										<div class="checkbox">
+											<input type="checkbox" name="6_accepted-terms" id="legal-terms" required />
+											<label for="legal-terms"><strong>I have read, understood and accept the <a href="/legal/oneqode-business-master-terms.pdf" target="_blank">MSA</a> and <a href="/legal/oneqode-gaming-server-deployment-terms.pdf" target="_blank">server deployment terms</a> on behalf of my company, who I have the authority to bind.</strong></label>
+										</div>
 									</div>
 									<div class="col-xs-12">
 										<input type="hidden" name="form" value="Cloud Signup" />
