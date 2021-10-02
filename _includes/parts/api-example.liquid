@@ -1,0 +1,51 @@
+							<pre>
+								<code><span class="code1 italic">#!/usr/bin/env ruby/v3/</span></code>
+								<code><span class="code1 italic"># api example:</span></code>
+								<code><span class="code1 italic"># connects to your api endpoint</span></code>
+								<code><span class="code1 italic"># lists all available images, flavors</span></code>
+								<code><span class="code1 italic"># starts a server, runs a remote command via ssh and then shuts down</span></code>
+								<code><span class="code2">require</span> <span class="code3">&#39;fog/openstack&#39;</span></code>
+								<code><span class="code5">@connection_params</span> <span class="code4">=</span> {</code>
+								<code>&nbsp;openstack_auth_url: <span class="code3">&#39;&lt;oneqode-api-endpoint&gt;&#39;</span>,</code>
+								<code>&nbsp;openstack_username: <span class="code3">&#39;&lt;username&gt;&#39;</span>,</code>
+								<code>&nbsp;openstack_api_key: <span class="code3">&#39;&lt;apikey&gt;&#39;</span>,</code>
+								<code>&nbsp;openstack_project_name: <span class="code3">&#39;&lt;projectname&gt;&#39;</span>,</code>
+								<code>&nbsp;openstack_domain_id: <span class="code3">&#39;default&#39;</span></code>
+								<code>}</code>
+								<code>new_line <span class="code4">=</span> <span class="code3">&quot;</span><span class="code6 bold">\n\n</span><span class="code3">&quot;</span></code>
+								<code>compute <span class="code4">=</span> <span class="code7">Fog</span><span class="code4">::</span><span class="code7">OpenStack</span><span class="code4">::</span><span class="code7">Compute</span><span class="code4">.</span>new(<span class="code5">@connection_params</span>)</code>
+								<code>neutron <span class="code4">=</span> <span class="code7">Fog</span><span class="code4">::</span><span class="code7">OpenStack</span><span class="code4">::</span><span class="code7">Network</span><span class="code4">.</span>new(<span class="code5">@connection_params</span>)</code>
+								<code>images <span class="code4">=</span> compute<span class="code4">.</span>images</code>
+								<code>flavors <span class="code4">=</span> compute<span class="code4">.</span>flavors</code>
+								<code></code>
+								<code><span class="code1 italic"># list all available images</span></code>
+								<code><span class="code2">puts</span> <span class="code3">&#39;listing all available images:&#39;</span></code>
+								<code><span class="code2 bold">for</span> image <span class="code2 bold">in</span> images <span class="code2 bold">do</span></code>
+								<code>&nbsp;<span class="code2">puts</span> image<span class="code4">.</span>name</code>
+								<code><span class="code2 bold">end</span></code>
+								<code></code>
+								<code><span class="code2">puts</span> new_line</code>
+								<code></code>
+								<code><span class="code2">puts</span> <span class="code3">&#39;list all instance flavors:&#39;</span></code>
+								<code><span class="code2 bold">for</span> flavor <span class="code2 bold">in</span> flavors <span class="code2 bold">do</span></code>
+								<code>&nbsp;<span class="code2">puts</span> <span class="code3">&quot;name: </span><span class="code8 bold">#{</span>flavor<span class="code4">.</span>name<span class="code8 bold">}</span><span class="code3">&quot;</span></code>
+								<code>&nbsp;<span class="code2">puts</span> <span class="code3">&quot;RAM: </span><span class="code8 bold">#{</span>flavor<span class="code4">.</span>ram<span class="code8 bold">}</span><span class="code3">&quot;</span></code>
+								<code>&nbsp;<span class="code2">puts</span> <span class="code3">&quot;VCPUS: </span><span class="code8 bold">#{</span>flavor<span class="code4">.</span>vcpus<span class="code8 bold">}</span><span class="code3">&quot;</span></code>
+								<code><span class="code2 bold">end</span></code>
+								<code>flavor <span class="code4">=</span> flavors<span class="code4">.</span>first</code>
+								<code>image <span class="code4">=</span> images<span class="code4">.</span>first</code>
+								<code></code>
+								<code><span class="code2">puts</span> <span class="code3">&quot;creating an instance of </span><span class="code8 bold">#{</span>image<span class="code4">.</span>name<span class="code8 bold">}</span><span class="code3"> on a </span><span class="code8 bold">#{</span>flavor<span class="code4">.</span>name<span class="code8 bold">}</span><span class="code3">&quot;</span></code>
+								<code>instance <span class="code4">=</span> compute<span class="code4">.</span>servers<span class="code4">.</span>create <span class="code2">name</span>: <span class="code3">&#39;example server&#39;</span>,</code>
+								<code>&nbsp;image_ref: image<span class="code4">.</span>id,</code>
+								<code>&nbsp;flavor_ref: flavor<span class="code4">.</span>id,</code>
+								<code>&nbsp;<span class="code5">nics</span>: <span class="code4">[</span>{ <span class="code5">:net_id</span> <span class="code4">=&gt;</span> neutron<span class="code4">.</span>networks<span class="code4">.</span>first<span class="code4">.</span>id }<span class="code4">]</span></code>
+								<code>instance<span class="code4">.</span>wait_for { ready? }</code>
+								<code></code>
+								<code><span class="code2">puts</span> <span class="code3">&#39;running a remote command:&#39;</span></code>
+								<code>result <span class="code4">=</span> instance<span class="code4">.</span>ssh <span class="code4">[</span><span class="code3">&#39;uname -a&#39;</span><span class="code4">]</span></code>
+								<code><span class="code2">puts</span> result<span class="code4">.</span>stdout</code>
+								<code></code>
+								<code><span class="code2">puts</span> <span class="code3">&#39;destroying the server:&#39;</span></code>
+								<code><span class="code2">puts</span> instance<span class="code4">.</span>destroy</code>
+							</pre>

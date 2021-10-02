@@ -140,10 +140,75 @@ ogImage: oneqode-cloud.jpg
 					radial-gradient(circle at 100% 35%,#002735 0%,transparent 25%),
 					radial-gradient(circle at 0% 65%,#002735 0%,transparent 25%);
 			}
+			.code-container {
+				background: #333;
+				padding: 1rem;
+				border-radius: 10px;
+				height: 300px;
+				overflow-y: scroll;
+			}
+			/* Scrollbars credit: https://codepen.io/devstreak/pen/dMYgeO?editors=0100 */
+			.code-container::-webkit-scrollbar-track {
+				-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+				border-radius: 10px;
+				background-color: none;
+			}
+			.code-container::-webkit-scrollbar {
+				width: 12px;
+				background-color: none;
+			}
+			.code-container::-webkit-scrollbar-thumb {
+				border-radius: 10px;
+				-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+				background-color: #555;
+			}
+			#api pre {
+				display: grid;
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+			#api code {
+				font-size: 0.75rem;
+				margin-bottom: 0.5rem;
+				margin-top: 0;
+			}
+			#api code:last-of-type {
+				margin-bottom: 0;
+			}
+			.bold {
+				 font-weight: bold;
+			}
+			.italic {
+				font-style: italic;
+			}
+			.code1 {
+				color: #ababab;
+			}
+			.code2 {
+				color: #00b0f0;
+			}
+			.code3 {
+				color: #ff8c8c;
+			}
+			.code4 {
+				color: #999;
+			}
+			.code5 {
+				color: #ff7100;
+			}
+			.code6 {
+				color: #ffb9b9;
+			}
+			.code7 {
+				color: #35ff7c;
+			}
+			.code8 {
+				color: #BB6688;
+			}
 			#management {
 				overflow: hidden;
 			}
-						/*  Logo Grid  */
+			/*  Logo Grid  */
 			.logo-grid {
 				display: grid;
 				grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
@@ -458,16 +523,15 @@ ogImage: oneqode-cloud.jpg
 				</div>
 				<div class="row middle-md pt-8" id="api">
 					<div class="col-xs-12 col-md-5">
-						<picture>
-							<!-- <source srcset="/img/cloud-api.webp" type="image/webp"> -->
-							<img src="/img/cloud-api.png" class="opaque" alt="An example set of API commands showing developers how easy it is to use the OneQode Cloud API">
-						</picture>
+						<figure class="code-container hide-mobile">
+{% include parts/api-example.liquid %}
+						</figure>
 					</div>
 					<div class="col-xs-12 col-md-5 col-md-offset-1">
 						<h3 class="mb-1">API accessible<mark class="dot">.</mark></h3>
 						<p class="subheading faded">Because why wouldn’t it be?</p>
 						<p>Launch and manage your cloud environment programatically through a friendly RESTful API — or via the command line.</p>
-						<p>You’ll have complete control, and a powerful automation layer to manage your gaming infrastructure.</p>
+						<p class="mb-0">You’ll have complete control, and a powerful automation layer to manage your gaming infrastructure.</p>
 					</div>
 				</div>
 			</div>
@@ -548,9 +612,6 @@ ogImage: oneqode-cloud.jpg
 				.pause(2000)
 				.back('all')
 				.continue({ container: document.querySelector('.typed-content-5') })
-				.pause(2000)
-				.back('all')
-				.continue({ container: document.querySelector('.typed-content-6') })
 				.pause(2000)
 				.back('all')
 				.repeat(Infinity, true)
