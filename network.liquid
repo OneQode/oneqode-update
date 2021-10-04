@@ -143,6 +143,13 @@ pageSubtitle: The network <mark>purpose-built</mark> for gamers
 			@media (min-width: 48em) {
 				.logo-grid {
 					grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+					grid-gap: 1rem;
+				}
+			}
+			@media (max-width: 340px) {
+				.logo-grid {
+					grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+					grid-gap: 0.2rem;
 				}
 			}
 			.logo-grid > div {
@@ -170,7 +177,7 @@ pageSubtitle: The network <mark>purpose-built</mark> for gamers
 				width: 50%;
 			}
 		</style>	
-		<section class="push-forward">
+		<section class="push-forward mobile-text-center">
 			<div class="container">
 				<div class="row place-content-center">
 					<div class="col-xs-12 col-md-5">
@@ -185,7 +192,7 @@ pageSubtitle: The network <mark>purpose-built</mark> for gamers
 {% include diagrams/_network-map.liquid %}
 			<figcaption class="mt-0">Global network rollout map <span style="color: #949494">// <a href="https://oneqode.sfo2.digitaloceanspaces.com/maps/global/oneqode-world-map.pdf" rel="noopener" target="_blank">Full map PDF</a></figcaption>
 		</section>
-		<section class="py-8">
+		<section class="py-8 mobile-text-center">
 			<div class="container">
 				<div class="row place-content-center">
 					<div class="col-xs-12 col-md-5">
@@ -199,7 +206,7 @@ pageSubtitle: The network <mark>purpose-built</mark> for gamers
 		</section>
 		<section>
 			<div class="container">
-				<div class="row mobile-flex">
+				<div class="row">
 					<div class="col-xs-12 col-md-3 py-4">
 						<div class="stat"><span>100<span class="unit"> GbE</span></span> core network</div>
 					</div>
@@ -326,11 +333,11 @@ pageSubtitle: The network <mark>purpose-built</mark> for gamers
 					</div>
 				</div>
 				<div class="row mt-2">
-					<div class="col-xs-12 col-md-4 col-md-offset-2">
+					<div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-2">
 						<p>Most providers use ‘least-cost routing’, sending traffic where it’s cheapest, but not fastest.</p>
 						<p>You won’t even experience the savings — it’s their margin.</p>
 					</div>
-					<div class="col-xs-12 col-md-4">
+					<div class="col-xs-10 col-xs-offset-1 col-md-4">
 						<p>Instead, we use shortest path routing, which sends traffic via the most direct path to the player.</p>
 						<p>This maximises performance, eliminating hops and lag.</p>
 					</div>
@@ -341,7 +348,7 @@ pageSubtitle: The network <mark>purpose-built</mark> for gamers
 			<div class="container">
 				<div class="row text-center">
 					<div class="col-xs-12 col-md-6 col-md-offset-3">
-						<h2>Engineered for speed<mark class="dot">.</mark></h2>
+						<h2 class="mb-0">Engineered for speed<mark class="dot">.</mark></h2>
 						<p class="subheading faded">Cutting-edge network architecture</p>
 						<p>From the switches we use to the cables we operate, every part of our network eliminates lag.</p>
 					</div>
@@ -477,8 +484,8 @@ pageSubtitle: The network <mark>purpose-built</mark> for gamers
 						</figure>
 					</div>
 				</div>
-				<div class="row mb-8 mobile-text-center">
-					<div class="col-xs-12 col-md-4 col-md-offset-1 mt-8 pt-2">
+				<div class="row mb-8">
+					<div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-1 mt-8 pt-2">
 						<h3>Block attacks at the edge</h3>
 						<p>Each entrance to our network is lined with <strong>always on</strong>, high throughput DDoS mitigation appliances.</p>
 						<p>Malicious traffic is scrubbed and filtered in real time, keeping the network free of disruption.</p>
@@ -502,11 +509,11 @@ pageSubtitle: The network <mark>purpose-built</mark> for gamers
 		<section class="py-8 mid">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-12 col-md-5 col-md-offset-1">
+					<div class="col-xs-10 col-xs-offset-1 col-md-5 col-md-offset-1">
 						<h3 class="faded mb-1">Traffic management</h3>
 						<h3>Optimise player routes</h3>
 					</div>
-					<div class="col-xs-12 col-md-5 col-md-offset-1">
+					<div class="col-xs-10 col-xs-offset-1 col-md-5 col-md-offset-1">
 						<p class="mt-0">Having specific users with latency issues? We can fine-tune that, too.</p>
 						<p>As a carrier, we can apply custom traffic management policies at the network level in real-time.</p>
 						<p>This prompts the player’s network to direct game data via a specific route, optimising the journey for latency.</p>
@@ -520,14 +527,21 @@ pageSubtitle: The network <mark>purpose-built</mark> for gamers
 					<div class="col-xs-12"><h2>Go faster with OneQode<mark class="dot">.</mark></h2></div>
 				</div>
 				<div class="row mt-4 icons mobile-flex">
-					<div class="col-xs-6 col-md-5 col-md-offset-1 mb-2 mt-1">
+					<div class="col-xs-6 col-md-4 mb-2 mt-1">
 						<a href="/game-servers/" class="box glowing">
 							<img class="mt-2" src="/img/ico/server.svg" alt="">
 							<h2 class="mt-2">Game Servers</h2>
 							<p class="hide-mobile">Compute, storage and colocation</p>
 						</a>
 					</div>
-					<div class="col-xs-6 col-md-5 mb-2 mt-1">
+					<div class="col-xs-6 col-md-4 mb-2 mt-1">
+						<a href="/cloud/" class="box glowing">
+							<img class="mt-2" src="/img/ico/cloud.svg" alt="">
+							<h2 class="mt-2">Cloud Platform</h2>
+							<p class="hide-mobile">The high performance cloud</p>
+						</a>
+					</div>
+					<div class="col-xs-6 col-md-4 mb-2 mt-1">
 						<a href="/wholesale/ip-transit/" class="box glowing">
 							<img class="mt-2" src="/img/ico/connection2.svg" alt="">
 							<h2 class="mt-2">IP Transit</h2>

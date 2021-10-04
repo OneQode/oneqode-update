@@ -76,12 +76,6 @@ main {
 }
 /* Mobile */
 @media (max-width: 768px) {
-	.row {
-		display: block;
-	}
-	.row.mobile-flex {
-		display: flex;
-	}
 	br.responsive {
 		display: none;
 	}
@@ -294,10 +288,12 @@ nav#switcher ul {
 	z-index: 2;
 	background: rgba(8,16,19,0.95);
 	border: 1px solid #555;
+	margin-top: 0.4rem;
 	border-radius: 10px;
 }
 nav#switcher a.open + ul {
 	display: block;
+	animation: moveup 0.2s ease-out forwards;
 }
 nav#switcher a.open svg {
 	transform: rotateX(180deg);
@@ -350,9 +346,15 @@ li.has-submenu.open > a svg {
 li.has-submenu.open .submenu {
 	visibility: visible;
 	opacity: 1;
+	animation: moveup 0.2s ease-out forwards;
 }
-li.has-submenu.open .submenu ul {
-	animation: moveup 0.2s ease-out;
+li.has-submenu .submenu li a {
+	opacity: 0;
+	visibility: hidden;
+}
+li.has-submenu.open .submenu li a {
+	animation: moveup 0.2s ease-out forwards;
+	animation-delay: calc(0.075s * var(--order));
 }
 @keyframes moveup {
 	from {
@@ -427,6 +429,12 @@ li.has-submenu.open .submenu ul {
 			padding: 0 1rem;
 			display: none;
 			background: none;
+			border: none;
+			position: initial;
+			margin: 0;
+		}
+		.submenu li:not(:first-of-type) {
+			margin-top: 0;
 		}
 		li.has-submenu.open .submenu {
 			display: grid;
@@ -443,6 +451,12 @@ li.has-submenu.open .submenu ul {
 			grid-template-columns: repeat( auto-fit, minmax(10rem, 1fr) );
 			gap: 1rem;
 			margin-top: 0;
+		}
+		li.parent a {
+			background: none;
+			margin: initial;
+			border-bottom: initial;
+			padding: initial;
 		}
 	}
 
@@ -501,6 +515,11 @@ footer ul {
 }
 footer ul a {
 	text-decoration: none;
+	display: block;
+	padding: 0.25rem 0;
+}
+footer ul li:first-child > a {
+    margin-top: 0.25rem;
 }
 .logomark img {
 	margin-left: 0;
@@ -746,6 +765,9 @@ textarea::placeholder {
 }
 select {
 	color: #999;
+}
+select option {
+	background: #333;
 }
 input:hover,
 select:hover,
@@ -1112,37 +1134,6 @@ ul.no-style {
 	padding-left: 0;
 	margin: 0;
 }
-/* Toggle */
-.toggler {
-	background-color: rgba(255, 255, 255, .1);
-	border-radius: 9999px;
-	display: inline-flex;
-	justify-content: center;
-	padding: 5px;
-	font-size: 20px;
-	color: #fff;
-}
-.toggler input[type="radio"]:checked+label,
-.toggler input[type="radio"]:focus+label {
-	background-color: #00b0f0;
-	color: #fff;
-}
-.toggler input[type=radio]:focus-visible + label {
-	outline-color: -webkit-focus-ring-color;
-	outline-style: auto;
-}
-.toggler input[type="radio"] {
-	opacity: 0;
-	/*position: fixed; Removed because didn't work well on keyboard */
-	position: absolute;
-	width: 0;
-}
-.toggler label {
-	display: inline-block;
-	border-radius: 9999px;
-	cursor: pointer;
-	padding: 10px 15px;
-}
 /* Tags */
 .tag {
 	font-size: 0.8rem;
@@ -1447,10 +1438,8 @@ RESPONSIVE OVERRIDES
 		text-align: center;
 		padding-top: 2rem;
 	}
-	footer,
-	footer ul,
 	footer .credits {
-		text-align: center !important;
+		text-align: center;
 	}
 	footer .container {
 		padding-bottom: 8rem;
@@ -1543,6 +1532,6 @@ RESPONSIVE OVERRIDES
 		padding-top: 4rem;
 	}
 	h1 {
-		font-size: 2.25rem;
+		font-size: 1.8rem;
 	}
 }
