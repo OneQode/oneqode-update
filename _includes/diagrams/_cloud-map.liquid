@@ -1,0 +1,289 @@
+		<style>
+			/*
+				Pulses
+				Credit to Florin Pop - https://www.florin-pop.com/blog/2019/03/css-pulse-effect/
+			*/
+			span.pulse {
+				border-radius: 50%;
+				height: 1rem;
+				width: 1rem;
+				background: rgba(0, 176, 240, 1);
+				box-shadow: 0 0 0 0 rgba(0, 176, 240, 1);
+				animation: pulse 2s infinite;
+				display: inline-block;
+				position: absolute;
+				z-index: 3;
+			}
+			@keyframes pulse {
+				0% {
+					transform:
+						scale(0.95)
+						translate(-50%, -50%);
+					box-shadow: 0 0 0 0 rgba(0, 176, 240, 0.7);
+				}
+				70% {
+					transform:
+						scale(1)
+						translate(-50%, -50%);
+					box-shadow: 0 0 0 10px rgba(0, 176, 240, 0);
+				}
+				
+				100% {
+					transform:
+						scale(0.95)
+						translate(-50%, -50%);
+					box-shadow: 0 0 0 0 rgba(0, 176, 240, 0);
+				}
+			}
+			span.pulse.coming-soon {
+				background: #999;
+				box-shadow: none !important;
+				animation: none !important;
+				transform:
+						scale(0.8)
+						translate(-60%, -50%);
+			}
+			span.pulse.sunshine-coast {
+				left: 44.94%;
+				top: 77.70%;
+			}
+			span.pulse.brisbane {
+				left: 44.87%;
+				top: 78.38%;
+			}
+			span.pulse.sydney {
+				left: 44.21%;
+				top: 83.10%;
+			}
+			span.pulse.melbourne {
+				left: 42.08%;
+				top: 85.96%;
+			}
+			span.pulse.guam {
+				left: 41.51%;
+				top: 49.31%;
+			}
+			span.pulse.tokyo {
+				left: 40.07%;
+				top: 33.34%;
+			}
+			span.pulse.hong-kong {
+				left: 29.58%;
+				top: 42.86%;
+			}
+			span.pulse.singapore {
+				left: 24.94%;
+				top: 57.74%;
+			}
+			span.pulse.los-angeles {
+				left: 79.14%;
+				top: 34.39%;
+			}
+			span.pulse.seattle {
+				left: 75.81%;
+				top: 25.28%;
+			}
+			span.pulse.legend1 {
+				left: 87.60%;
+				top: 83.65%;
+			}
+			span.pulse.legend2 {
+				left: 91%;
+				top: 85.9%;
+			}
+			#cloud-map text {
+				font-size: 38px;
+			}
+			/* Locations Marquee */
+			@media (min-width: 64em) {
+				.marquee {
+					display: none;
+				}
+			}
+			.marquee {
+				width: 100%;
+				margin: 0 auto;
+				overflow: hidden;
+				box-sizing: border-box;
+			}
+			.marquee span {
+				display: inline-block;
+				width: max-content;
+				padding-left: 100%;
+				will-change: transform;
+				animation: marquee 15s linear infinite;
+			}
+			.marquee span:hover {
+				animation-play-state: paused
+			}
+			@keyframes marquee {
+				0% { transform: translate(0, 0); }
+				100% { transform: translate(-100%, 0); }
+			}
+			@media (prefers-reduced-motion: reduce) {
+				.marquee span {
+					animation-iteration-count: 1;
+					animation-duration: 0.01; 
+					width: auto;
+					padding-left: 0;
+				}
+			}
+			/* Mobile Overrides */
+			@media (max-width: 64em) {
+				#cloud-map text, #legend, .legend1, .legend2 {
+					display: none !important;
+				}
+				span.pulse {
+					height: 0.75rem;
+					width: 0.75rem;
+				}
+			}
+		</style>
+		<div id="cloud-map" class="map">
+			<div id="pops">
+				<span class="pulse coming-soon sunshine-coast"></span>
+				<span class="pulse coming-soon brisbane"></span>
+				<span class="pulse coming-soon sydney"></span>
+				<span class="pulse coming-soon melbourne"></span>
+				<span class="pulse guam"></span>
+				<span class="pulse coming-soon tokyo"></span>
+				<span class="pulse coming-soon hong-kong"></span>
+				<span class="pulse coming-soon singapore"></span>
+				<span class="pulse coming-soon los-angeles"></span>
+				<span class="pulse coming-soon seattle"></span>
+				<span class="pulse legend1"></span>
+				<span class="pulse coming-soon legend2"></span>
+			</div>
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2480" aria-labelledby="maptitle mapdescription" role="img">
+				<title id="maptitle">OneQode Cloud Regions</title>
+				<desc id="mapdescription">A world map centred on Asia-Pacific showing OneQode Cloud Regions live in Guam, and coming soon to Sydney, Brisbane, Sunshine Coast, Guam, Tokyo, Hong Kong, Seattle & Los Angeles</desc>
+				<g id="cables">
+					<g class="transit" id="sunshine_coast_guam">
+						<path d="M1725.1,1926.5s38.4-3.4,48.4,0" />
+					</g>
+					<g class="transit" id="melbourne_syd">
+						<path d="M1616.5,2132.7a46.9,46.9,0,0,1,2.1-4.5" />
+						<path d="M1623,2120.2c18.9-31,50-47.6,65.2-54.2" />
+						<path d="M1692.4,2064.3c3-1.2,4.7-1.7,4.7-1.7" />
+					</g>
+					<g class="transit" id="guam_sydney">
+						<path d="M1697.1,2061.3c123-19.4,64.1-310.4,64.1-310.4s-24.5-104-26.1-227.7S1593,1223.3,1593,1223.3" />
+					</g>
+					<g class="transit" id="adelaide_syd">
+						<path d="M1517.4,2078.9l4.8-1.2" />
+						<path d="M1532,2075.4c24.5-5.1,78.6-14.3,155.1-14.1" />
+						<path d="M1692.1,2061.3h5" />
+					</g>
+					<g class="transit" id="singapore_perth">
+						<path d="M1175.7,2040.9l-4.4-2.3" />
+						<path d="M1162.4,2033.6c-55.7-32.5-265.7-174.6-200.3-440,6.2-23.2,37.9-31.7,41.3-51s11.4-44.9-41.6-102.5" />
+						<path d="M958.3,1436.4l-3.4-3.6" />
+					</g>
+					<g class="transit" id="perth_syd">
+						<path d="M1697.1,2061.3l-4.5-2.2" />
+						<path d="M1683.4,2054.8c-143.9-63.2-439.8-23.9-497.8-15.4" />
+						<path d="M1180.6,2040.1l-4.9.8" />
+					</g>
+					<g class="transit" id="darwin_sydney">
+						<path d="M1380.7,1680.7l4.2,2.8" />
+						<path d="M1393,1689.3c41.1,30.4,178.7,142.5,299.3,363.3" />
+						<path d="M1694.7,2056.9l2.4,4.4" />
+					</g>
+					<g class="transit" id="darwin_brisbane">
+						<path d="M1722.1,1943.6l-2.8-4.1" />
+						<path d="M1713.3,1931.7c-25.3-31.7-110.4-124-323.9-246.1" />
+						<path d="M1385.1,1683.1l-4.4-2.4" />
+					</g>
+					<g class="transit" id="darwin_adelaide">
+						<path d="M1380.7,1680.7l3.2,3.8" />
+						<path d="M1389.9,1692.2c31.7,41.7,134.3,191.7,127.9,376.8" />
+						<path d="M1517.6,2073.9c-.1,1.7-.2,3.3-.2,5" />
+					</g>
+					<g class="transit" id="singapore_hong_kong">
+						<path d="M1135.1,1062.5s-.3,1.7-1.1,4.9" />
+						<path d="M1131.6,1077c-12.3,47.8-59.3,205.8-170.5,348" />
+						<path d="M958,1428.9l-3.1,3.9" />
+					</g>
+					<g class="transit" id="hong_kong_tokyo">
+						<path d="M1538.3,826.9s-9.7,317.6-403.2,235.6" />
+					</g>
+					<g class="transit" id="vladivostok_tokyo">
+						<path d="M1437.3,697.4l4.2,2.6" />
+						<path d="M1450.2,706c22.6,16.4,68.5,55.3,85.5,111" />
+						<path d="M1537.1,822.1a42.1,42.1,0,0,1,1.2,4.8" />
+					</g>
+					<g class="transit" id="tokyo_guam">
+						<path d="M1538.3,826.9s-32.4,232.1,54.7,396.4" />
+					</g>
+					<g class="transit" id="hong_kong_guam">
+						<path d="M1135.1,1062.5l3.8,3.2" />
+						<path d="M1146.7,1071.7c36.3,26.9,162.4,105.9,436.5,150.1" />
+						<path d="M1588.1,1222.5l4.9.8" />
+					</g>
+					<g class="transit" id="chennai_singapore">
+						<path d="M590.3,1235.5l4.2,2.7" />
+						<path d="M603.1,1243.6c42.3,26.5,179.1,108.9,251.2,114.8,38.4,2,53.1,78.3,90.7,76.5" />
+						<path d="M950.1,1434.2a35.9,35.9,0,0,0,4.8-1.4l3,4" />
+					</g>
+					<g class="transit" id="philippines_guam">
+						<path d="M1294.2,1335.4l5,.4" />
+						<path d="M1309.5,1336.3c43.9,1,173.7-5.3,276.4-105.8" />
+						<path d="M1589.5,1226.9l3.5-3.6" />
+					</g>
+					<g class="transit" id="singapore_guam">
+						<path d="M954.9,1432.8s.9-1.4,2.9-4" />
+						<path d="M964,1420.9c41.9-51.2,230.2-247.7,619.1-198.9" />
+						<path d="M1588.1,1222.7l4.9.6" />
+					</g>
+					<g class="transit" id="guam_los_angeles">
+						<path d="M1593,1223.3s681.8-313.7,1445.4-370.2" />
+					</g>
+					<g class="transit" id="seattle_portland_bay_area_la">
+						<path d="M3038.4,853.1c0,0-1.7-0.2-4.8-1.3"/>
+						<path d="M3024.8,847.8c-12.5-6.7-32.4-21.9-55.1-55.8c-31.3-49.3-42.5-100.3-45.8-119.5c-2.1-12-6.5-27-9.4-36.5"/>
+						<path d="M2912.9,631.5c-1-3-1.6-4.7-1.6-4.7"/>
+					</g>
+					<g class="transit" id="guam_hawaii">
+						<path d="M1593,1223.3l4.9-1.1" />
+						<path d="M1607.7,1220c82.9-18.7,503.8-108.8,868.6-103.1" />
+						<path d="M2481.3,1117h5" />
+					</g>
+					<g class="transit" id="sydney_hawaii">
+						<path d="M2486.3,1117.1s-.4,1.6-1.3,4.8" />
+						<path d="M2482.2,1131.5c-33.4,114.7-273.7,876.1-775.1,928.9" />
+						<path d="M1702.1,2060.9l-5,.4" />
+					</g>
+					<g class="transit" id="hawaii_los_angeles">
+						<path d="M2486.3,1117.1s.6-1.7,1.9-4.7" />
+						<path d="M2492.5,1103.5c24.6-46.7,134.8-200.6,536-249.2" />
+						<path d="M3033.4,853.7l5-.6" />
+					</g>
+					<g class="transit">
+						<path id="perth_sydney" class="cls-33" d="M1175.7,2040.9s-28.3-4.3-25,48.3c7.2,115.3,486.6,128.7,546.4,43.9,28.9-40.9,0-71.8,0-71.8" />
+					</g>
+				</g>
+				<g id="labels">
+					<text class="coming-soon" transform="translate(1721 2103)">Sydney</text>
+					<text class="coming-soon" transform="translate(1789 1965)">Brisbane</text>
+					<text class="coming-soon" transform="translate(1791 1912)">Sunshine Coast</text>
+					<text class="coming-soon" transform="translate(965 1018)">Hong Kong</text>
+					<text class="active" transform="translate(1642 1255)">Guam</text>
+					<text class="coming-soon" transform="translate(2875 919)">Los Angeles</text><text class="coming-soon" transform="translate(2747 642)">Seattle</text>
+					<text class="coming-soon" transform="translate(1572 859)">Tokyo</text>
+					<text class="coming-soon" transform="translate(1400 2180)">Melbourne</text>
+					<text class="coming-soon" transform="translate(740 1489)">Singapore</text>
+				</g>
+				<g id="legend">
+					<rect class="cls-1" x="3155" y="2010" width="398" height="190" rx="6" />
+					<text class="active" transform="translate(3201 2087)">Active</text>
+					<text class="coming-soon" transform="translate(3201 2144)">Coming Soon</text>
+					
+				</g>
+			</svg>
+			<picture>
+				<source srcset="/img/world-map-asia-pacific-hd.webp" type="image/webp" media="(max-width: 1920px)">
+				<source srcset="/img/world-map-asia-pacific-4k.webp" type="image/webp" media="(min-width: 1920px)">
+				<img src="/img/world-map-asia-pacific-hd.jpg" alt="OneQode Global Network Rollout Map">
+			</picture>
+		</div>
+		<p class="marquee"><span>Available now in Guam • Coming soon to Hong Kong,  Singapore, Sunshine Coast, Brisbane, Sydney, Melbourne, Los Angeles & Seattle</span></p>
