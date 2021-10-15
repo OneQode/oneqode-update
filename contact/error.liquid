@@ -1,0 +1,60 @@
+---
+permalink: /error/
+section: gaming
+ignore: true
+metaTitle: ❌ Something went wrong • OneQode™
+metaDescription: Your message to OneQode has been sent 👏
+ogImage: og-image.jpg
+pageSupertitle: Submission Error
+pageTitle: Something went wrong
+pageSubtitle: The spam test failed, or there was an error 
+---
+{% include _header.liquid %}
+		<style>
+			section.hero {
+				background: linear-gradient(to bottom, transparent 50%, #0c0c0c 100%), radial-gradient(circle at bottom,#500404 0,#1d0000 100%);
+			}
+			.button svg {
+				display: inline-block;
+				margin-bottom: -0.5rem;
+				margin-left: -0.5rem;
+			}
+			mark {
+				white-space: nowrap;
+			}
+		</style>
+		<section class="hero full-height">
+			<div class="container">
+				<div class="row middle-xs">
+					<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+						<p class="superheading">{{ pageSupertitle }}</p>
+						<h1>{{ pageTitle }}<mark class="dot">.</mark></h1>
+						<p class="subheading">{{ pageSubtitle }}</p>
+						<p class="mt-2">We’re sorry — the form did not submit :(</p>
+						<p>To contact us, please use live chat or email <a href="mailto:hello@oneqode.com.au">hello@oneqode.com.au</a> instead.</p>
+						<p class="mt-4">
+							<a href="javascript:history.back();" class="button ghost">
+								<svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" viewBox="0 0 16 16">
+									<path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"></path>
+								</svg> Back
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+{% comment %}
+		<script>
+			let queryString = new URLSearchParams(window.location.search);
+			// for (const [key, value] of queryString) {
+			// 	document.getElementById("here").value += `${key}: ${value}` + '\n';
+			// }
+			for (const [key, value] of queryString) {
+				var i = document.createElement("INPUT");
+				i.setAttribute("type", "text");
+  				i.setAttribute("value", `${value}`);
+  				document.getElementById("here").appendChild(i);
+			}
+		</script>
+{% endcomment %}
+{% include _footer.liquid %}
