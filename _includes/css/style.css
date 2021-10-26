@@ -557,7 +557,8 @@ h1 {
 	font-size: 4rem;
 }
 h2,
-.media h1 {
+.media h1,
+.career h1 {
 	font-size: 3rem;
 }
 h3 {
@@ -1449,7 +1450,8 @@ RESPONSIVE OVERRIDES
 		font-size: 2rem;
 	}
 	h2,
-	.media h1 {
+	.media h1,
+	.career h1 {
 		font-size: 1.6rem;
 	}
 	h3 {
