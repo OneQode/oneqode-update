@@ -19,8 +19,7 @@ mediaContact: Matthew Shearing, Chief Executive Officer
 	blockquote {
 		margin: 2rem 0 2rem 0;
 		padding: 2rem;
-		background: #17181C;
-		border-radius: 15px;
+		border-left: 6px solid #cecece;
 	}
 	blockquote > :first-child {
 		margin-top: 0;
@@ -76,7 +75,7 @@ mediaContact: Matthew Shearing, Chief Executive Officer
 						<p>How are you going to accomplish that mission? What different steps will you take to get there year over year?</p>
 						</blockquote>
 						<p>By dictating this, we can know what we’re doing, why we’re doing it and how we’re going to achieve it.</p>
-						<h2 class="mt-4">Vision: the why</h2>
+						<h2 class="mt-4" id="vision">Vision: the why</h2>
 						<h3 class="mt-2">The evolving digital economy</h3>
 						<p>We are increasingly living online. This sounds obvious, but it’s easy to underestimate just how much our lives have changed in a relatively short period of time.</p>
 						<p>Twenty years ago the thought of physical storefronts shuttering while online stores thrive, face-to-face meetings going extinct and moving online, or entertainment being accessible on-demand to anyone with an internet connection would have seemed almost impossible, but they are now norms in our daily lives.</p>
@@ -114,7 +113,7 @@ mediaContact: Matthew Shearing, Chief Executive Officer
 							</ul>
 							<p><strong>Figure narration 2</strong></p>
 						</blockquote>
-						<h3>So why is this?</h3>
+						<h3 class="mt-2"So why is this?</h3>
 						<p>Put simply, the internet isn’t built the way it needs to be. There are some key ingredients holding us back from realising our real-time connected future:</p>
 						<ul>
 							<li class="mb-1"><strong>Latency optimisation</strong><br>Current carriers do not optimise for latency, they optimise for cost. Their philosophy is to take a connection and to hand it off to someone else’s network as cheaply and quickly as possible — regardless of where that is or how long it takes to get there. That’s OK for your Netflix — but not if you’re trying to have a shared experience from thousands of kilometres apart!</li>
@@ -138,18 +137,18 @@ mediaContact: Matthew Shearing, Chief Executive Officer
 						<ul>
 							<li class="mb-1">a game studio can build a game like <em>Freelancer</em> and expect it to just work</li>
 							<li class="mb-1">young gamers anywhere in the world can start global organisations and not feel like they’re fighting with the technology</li>
-							<li class="mb-1">the infrastructure enables virtual connections which are imperceptible in difference to the physical connections</li>
+							<li class="mb-1">infrastructure enables virtual connections that are indistinguishable from physical connections</li>
 							<li>borders mean nothing and people connect like never before</li>
 						</ul>
 						<p>And that’s a world worth building.</p>
-						<h2 class="mt-4">Mission: the what</h2>
+						<h2 class="mt-4" id="mission">Mission: the what</h2>
 						<p>If our vision is for billions of people to connect together in high-fidelity on digital applications, how do we achieve this vision? This is our <strong>mission</strong> — what we’re trying to achieve in the world and how we can help bring this about.</p>
 						<p>This went through a number of iterations, but ultimately settled on this:</p>
 						<p class="shout-out">Our mission is to build the foundation for the next decade of connected experiences.</p>
 						<p>This captures the essence of what we’re trying to do as a company. We are building <strong>foundational infrastructure</strong>.</p>
 						<p>Everything we’ve built so far, network and servers, are all focused on getting data where it needs to go as quickly as possible. We’ve unlocked low-latency gaming for millions of players across three continents, and are providing high-performance-by-default servers for cutting-edge workloads.</p>
 						<p>Our first use case, gaming, will clearly benefit from this design philosophy. But <strong>gaming is just one of a myriad of future technologies</strong> that will harness real-time virtual experiences, and our infrastructure will be uniquely positioned to enable these kinds of emergent applications.</p>
-						<p>That is our mission — to build the foundation for those businesses, and those experiences. If we achieve this mission, we’ll our vision become reality.</p>
+						<p>That is our mission — to build the foundation for those businesses, and those experiences. If we achieve this mission, we’ll make our vision become reality.</p>
 						<h3 class="mt-2">Serving billions</h3>
 						<p>When can we say we’ve achieved this mission? For us, that will be when OneQode’s infrastructure has connected at least one billion end-users, through all the various businesses that build on our platform.</p>
 						<p>The biggest limiting factor in meaningful online experiences is the amount of people that can share those experiences.</p>
@@ -166,21 +165,21 @@ mediaContact: Matthew Shearing, Chief Executive Officer
 						<p>From virtual, global offices to VR shopping malls and many, many other usecases, <strong>we’re creating an open foundation for online experiences which connect not millions, but billions.</strong></p>
 						<p>If we can do that in a manner that promotes entrepreneurial innovation, open commerce and value exchange, the benefits will be revolutionary.</p>
 						<p>We’ll explore the potential implications for developing economies in a later post, but this increase in opportunity is central to everything we’re doing.</p>
-						<h2 class="mt-4">Strategy: the how</h2>
+						<h2 class="mt-4" id="strategy">Strategy: the how</h2>
 						<p>We’ve dealt with why we’re building OneQode and what’s driving us. Now we turn to the fun part — <strong>how</strong> we’re going to get this done.</p>
 						<h3 class="mt-2">1. Build a high-performance IaaS framework</h3>
 						<p>The first step is to build a high performance Infrastructure as a Service (IaaS) framework. We’ve already been working at this for the last 18 months, and while we’ve completed what we’re calling ‘stage 1’, expanding this framework is critical for the long-term achievement of our mission.</p>
 						<p>So what is this framework?</p>
 						<blockquote>Diagram: private carrier network > regional hubs > local PoPs > performance servers</blockquote>
-						<p>It starts with our private international carrier network, which is designed to pick up data as close as possible to the user and deliver it quickly, optimising for reduced latency by default (unlike existing carriers, who optimise for cost).</p>
+						<p>It starts with our <strong>private international carrier network</strong>, which is designed to pick up data as close as possible to the user and deliver it quickly, optimising for reduced latency by default (unlike existing carriers, who optimise for cost).</p>
 						<p>Our regional backbone uses <strong>network hubs</strong> we locate at ‘crossroads’, where sub-sea cables meet and we can serve the maximum number of people with acceptable latency. Our <a href="/guam/">first connectivity hub is located in Guam</a>.</p>
-						<p>From there, we establish local Points of Presence (PoPs) in other key locations, designed to up user data and serve more latency sensitive applications.</p>
-						<p>Once those are established, we install high-performance servers at each location and put them behind our premium DDoS protection, which shields our network and servers from malicious denial-of-service attacks known to target gaming and other real-time applications.</p>
-						<p>Finally, we integrate it all into our cloud platform, providing our portal and API layer for on-demand access. This allows developers to access all the benefits of our network, hubs and compute in one place.</p>
+						<p>From there, we establish local <strong>Points of Presence</strong> (PoPs) in other key locations, designed to pick up user data and serve more latency sensitive applications.</p>
+						<p>Once those are established, we install <strong>high-performance servers</strong> at each location and put them behind our premium DDoS protection, which shields our network and servers from malicious denial-of-service attacks known to target gaming and other real-time applications.</p>
+						<p>Finally, we integrate it all into our <strong>cloud platform</strong>, providing a portal and API layer for on-demand access. This allows developers to access all the benefits of our network, hubs and servers in one place.</p>
 						<p>So what do we need to do from here to achieve our mission?</p>
 						<ol>
 						<li class="mb-1"><strong>Expand our framework</strong> by deploying regional backbone locations in the Americas, India and the sub-continent, Europe, Africa and the Middle-East.</li>
-						<li class="mb-1"><strong>Bolster our cloud presence</strong> to complement each PoP, and grow to meet increasing demand.</li>
+						<li class="mb-1"><strong>Bolster our cloud presence</strong> to complement each location and grow to meet increasing demand.</li>
 						<li><strong>Continue to build strong relationships</strong> with last-mile network providers, orchestrators, publishers, studios and vendors.</li>
 
 						</ol>
@@ -210,9 +209,10 @@ mediaContact: Matthew Shearing, Chief Executive Officer
 						<li>never feel like their infrastructure is letting them, or their players, down.</li>
 
 						</ul>
-						<p>Overall, gamers should be feeling like they’re queuing faster, waiting less time for a game, playing against a more varied range of opponents and <em>playing more expansive games</em>. Our eventual vision for this is that studios will use our infrastructure to build games which are unparralleled in immersion and player reach.</p>
+						<p>Overall, gamers should be feeling like they’re queuing faster, waiting less time for a game, playing against a more varied range of opponents and <strong>playing more expansive games</strong>. Our eventual vision for this is that studios will use our infrastructure to build games which are unparralleled in immersion and player reach.</p>
 						<h3 class="mt-2">3. Become the leading on-demand platform for connected experiences</h3>
-						<p>To make sure we can meet our customers’ evolving needs, a key part of our strategy will be iterating heavily on both on infrastructure (network, compute, data centres) and our products (cloud portal, security, compute etc). Just like any solid foundation, we’ll be looking to both build horizontally on that foundation and also add features vertically which can help serve our customers better, increase the depth and utility of our products, and cement our position in market.</p>
+						<p>To make sure we can meet our customers’ evolving needs, a key part of our strategy will be iterating heavily on both on infrastructure (network, compute, data centres) and our products (cloud portal, security, compute).</p>
+						<p>Just like any solid foundation, we’ll be looking to both build horizontally on that foundation and also add features vertically which can help serve our customers better, increase the depth and utility of our products, and cement our position in the market.</p>
 						<p>Some key aspects we’ll be focused on as part of this strategy:</p>
 						<ul>
 						<li class="mb-1"><strong>Enterprise solutions</strong><br>
@@ -227,19 +227,21 @@ mediaContact: Matthew Shearing, Chief Executive Officer
 						We work with anyone and everyone and this won’t change anytime soon. We’ll continue to be hyper-focused on forming partnerships which improve our products and incentivise win-win outcomes.</li>
 
 						</ul>
-						<h2 class="mt-4">In summary</h2>
-						<p>OneQode is not only focused on improving connected experiences but <em>enabling</em> new types of real-time applications. This starts for us with gaming, but the foundation we’re building has far greater potential. As OneQode stretches its metaphorical legs, we’ll focus on serving businesses in complementary verticals, particularly those which can benefit from the unique network and infrastructure that we’ve built.</p>
-						<p>Gaming is the harbinger of what’s coming and it needs high-performance connectivity and compute across the board. We’re building the foundation for this now, so people everywhere can benefit in the future.</p>
+						<h2 class="mt-4" id="summary">In summary</h2>
+						<p>OneQode is not only focused on improving connected experiences but <strong>enabling new types of real-time applications</strong>.This starts for us with gaming, but the foundation we’re building has far greater potential.</p>
+						<p>As OneQode stretches its metaphorical legs, we’ll focus on serving businesses in complementary verticals, particularly those which can benefit from the unique network and infrastructure that we’ve built.</p>
+						<p>Gaming is the harbinger of what’s coming and it needs high-performance connectivity and compute across the board.</p>
+						<p>We’re building the foundation for this now, so people everywhere can benefit in the future.</p>
 						<p>We hope you join us on this journey, we couldn’t be more excited to see where it takes us.</p>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="pb-8 black-to-footer">
+		<section class="py-8 black-to-footer">
 			<div class="container">
 				<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
 					<h2>Start a conversation today<mark class="dot">.</mark></h2>
-					<p class="subheading">Thinking of taking on the world? Trying to connect people across the globe?.</p>
+					<p class="subheading">Thinking of taking on the world? Trying to connect people across the globe?</p>
 					<p><a href="/contact/" class="button ghost mt-2">Contact Us</a></p>
 				</div>
 			</div>
