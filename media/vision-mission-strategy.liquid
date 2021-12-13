@@ -13,8 +13,17 @@ mediaContact: Matthew Shearing, Chief Executive Officer
 ---
 {% include _header.liquid %}
 <style>
-	section.hero {
-	    background:linear-gradient(to bottom, transparent 70%, #000),radial-gradient(at 75% 25%, #333 0%, #1c1d22 30%,#000 100%);
+	.no-webp section.hero {
+		background:	linear-gradient(to bottom, rgba(0,0,0,0.2), #000),
+					url(/img/bg/oq-globe.jpg) top center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	.webp section.hero {
+		background:	linear-gradient(to bottom, rgba(0,0,0,0.2), #000),
+					url(/img/bg/oq-globe.webp) top center;
+		background-size: cover;
+		background-repeat: no-repeat;
 	}
 	blockquote {
 		margin: 2rem 0 2rem 0;
@@ -39,12 +48,20 @@ mediaContact: Matthew Shearing, Chief Executive Officer
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}
+	.signature {
+		margin-left: 0;
+		max-width: 360px;
+	}
 	@media (max-width: 64em) {
 		blockquote {
 			background: #333;
 		}
 		p.shout-out {
 			margin-left: 1.5rem;
+		}
+		.signature {
+			margin-left: 0;
+			max-width: 300px;
 		}
 	}
 </style>
@@ -99,6 +116,12 @@ mediaContact: Matthew Shearing, Chief Executive Officer
 						<h3 class="mt-2">The problem: the infrastructure isn’t ready!</h3>
 						<p>The genesis of these coming challenges is not new.</p>
 						<p>I experienced this personally more than 15 years ago, running an international gaming organisation which started in <em>Freelancer</em> — a multiplayer space sim made by Chris Roberts. Boasting a massive star system brimming with human and AI pilots, <em>Freelancer</em> servers were self-hosted and drew players from all over the world. Different organisations had virtual wars, trade routes, treaties and events with each other, and we participated in this heavily. Or at least, we did our best to participate.</p>
+						<figure>
+							<video class="lazy" poster="/img/media/vision-mission-strategy/freelancer-screen-cap.jpg" autoplay muted loop playsinline width="800" height="450">
+								<source data-src="https://oneqode.sfo2.digitaloceanspaces.com/videos/freelancer-battle-gif.mp4" type="video/mp4">
+							</video>
+							<figcaption class="mt-0 text-left">An epic battle in Freelancer // <a href="https://www.youtube.com/watch?v=1DSbwFJil5g" target="_blank" rel="noopener">Video by Chronicron</a></figcaption>	
+						</figure>
 						<p>Most of the player base on our servers were from North America, Australia and Asia. With the servers hosted in the US, this brought big challenges for those in other places — <strong>huge pings, rubber banding and server capacity issues</strong>.</p>
 						<p><em>Freelancer</em> had ’twitch based’ combat — meaning milliseconds mattered — and battles could be happening in flashpoints across many star systems. Add to this hundreds of players and NPCs going about their daily tasks across a huge universe, and the servers themselves struggled to keep up.</p>
 						<p>This cocktail of demanding requirements meant players were generally fighting the servers/latency as much as they were fighting each other.</p>
@@ -113,7 +136,7 @@ mediaContact: Matthew Shearing, Chief Executive Officer
 							</ul>
 							<p><strong>Figure narration 2</strong></p>
 						</blockquote>
-						<h3 class="mt-2"So why is this?</h3>
+						<h3 class="mt-2">So why is this?</h3>
 						<p>Put simply, the internet isn’t built the way it needs to be. There are some key ingredients holding us back from realising our real-time connected future:</p>
 						<ul>
 							<li class="mb-1"><strong>Latency optimisation</strong><br>Current carriers do not optimise for latency, they optimise for cost. Their philosophy is to take a connection and to hand it off to someone else’s network as cheaply and quickly as possible — regardless of where that is or how long it takes to get there. That’s OK for your Netflix — but not if you’re trying to have a shared experience from thousands of kilometres apart!</li>
@@ -122,11 +145,11 @@ mediaContact: Matthew Shearing, Chief Executive Officer
 							<li class="mb-1"><strong>High-performance</strong><br>The kinds of applications we envision for our future (and the many thousands that are still yet to be thought of) will have a consistent thread — the trend towards more detail, more fidelity and more demanding operational requirements. It will require fit-for-purpose infrastructure built for high-performance.</li>
 						</ul>
 						<p>So that begs the question — where do we want things to go and what are we doing about it? This is the backdrop for which our Vision, Mission and Strategy form the manifesto for us to address what we believe is one of the greatest needs of our time.</p>
-						<h3 class="mt-2">Our three core ’imagine’ themes:</h3>
-						<p>We’ve developed three ’imagine’ themes as a thought exercise to communicate how we want things to change with our connectivity infrastructure.</p>
+						<h3 class="mt-2">Our three core ‘imagine’ themes:</h3>
+						<p>We’ve developed three ‘imagine’ themes as a thought exercise to communicate how we want things to change with our connectivity infrastructure.</p>
 						<ol>
-							<li>Imagine if people could have meaningful connections with each other, anywhere in the world, without needing to worry about distance or latency</li>
-							<li>Imagine if the cloud infrastructure creators used to build high-fidelity connected experiences was fast, accessible and made sure connections got where they needed to go as quickly as possible.</li>
+							<li class="mb-1">Imagine if people could have meaningful connections with each other, anywhere in the world, without needing to worry about distance or latency</li>
+							<li class="mb-1">Imagine if cloud infrastructure was powerful, accessible and made sure connections got where they needed to go as quickly as possible.</li>
 							<li>Imagine if innovators, creators and studios could provide billions of people from many different nations with the ability to connect with each other on the same platform, on-demand.</li>
 						</ol>
 						<h3 class="mt-2">Our vision statement</h3>
@@ -146,7 +169,7 @@ mediaContact: Matthew Shearing, Chief Executive Officer
 						<p>This went through a number of iterations, but ultimately settled on this:</p>
 						<p class="shout-out">Our mission is to build the foundation for the next decade of connected experiences.</p>
 						<p>This captures the essence of what we’re trying to do as a company. We are building <strong>foundational infrastructure</strong>.</p>
-						<p>Everything we’ve built so far, network and servers, are all focused on getting data where it needs to go as quickly as possible. We’ve unlocked low-latency gaming for millions of players across three continents, and are providing high-performance-by-default servers for cutting-edge workloads.</p>
+						<p>Everything we’ve built so far, network, servers and cloud, are all focused on getting data where it needs to go as quickly as possible. We’ve unlocked low-latency gaming for millions of players across three continents, and are providing high-performance-by-default servers for cutting-edge workloads.</p>
 						<p>Our first use case, gaming, will clearly benefit from this design philosophy. But <strong>gaming is just one of a myriad of future technologies</strong> that will harness real-time virtual experiences, and our infrastructure will be uniquely positioned to enable these kinds of emergent applications.</p>
 						<p>That is our mission — to build the foundation for those businesses, and those experiences. If we achieve this mission, we’ll make our vision become reality.</p>
 						<h3 class="mt-2">Serving billions</h3>
@@ -211,7 +234,7 @@ mediaContact: Matthew Shearing, Chief Executive Officer
 						</ul>
 						<p>Overall, gamers should be feeling like they’re queuing faster, waiting less time for a game, playing against a more varied range of opponents and <strong>playing more expansive games</strong>. Our eventual vision for this is that studios will use our infrastructure to build games which are unparralleled in immersion and player reach.</p>
 						<h3 class="mt-2">3. Become the leading on-demand platform for connected experiences</h3>
-						<p>To make sure we can meet our customers’ evolving needs, a key part of our strategy will be iterating heavily on both on infrastructure (network, compute, data centres) and our products (cloud portal, security, compute).</p>
+						<p>To make sure we can meet our customers’ evolving needs, a key part of our strategy will be iterating heavily on both infrastructure and product.</p>
 						<p>Just like any solid foundation, we’ll be looking to both build horizontally on that foundation and also add features vertically which can help serve our customers better, increase the depth and utility of our products, and cement our position in the market.</p>
 						<p>Some key aspects we’ll be focused on as part of this strategy:</p>
 						<ul>
@@ -233,17 +256,72 @@ mediaContact: Matthew Shearing, Chief Executive Officer
 						<p>Gaming is the harbinger of what’s coming and it needs high-performance connectivity and compute across the board.</p>
 						<p>We’re building the foundation for this now, so people everywhere can benefit in the future.</p>
 						<p>We hope you join us on this journey, we couldn’t be more excited to see where it takes us.</p>
+						<img class="signature block mt-4" src="/img/media/vision-mission-strategy/matt-signature.png" alt="Matt Shearing" class="signature">
+						<p class="superheading">Matt Shearing, CEO</p>
 					</div>
 				</div>
 			</div>
 		</section>
 		<section class="py-8 black-to-footer">
 			<div class="container">
-				<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
-					<h2>Start a conversation today<mark class="dot">.</mark></h2>
-					<p class="subheading">Thinking of taking on the world? Trying to connect people across the globe?</p>
-					<p><a href="/contact/" class="button ghost mt-2">Contact Us</a></p>
+				<div class="row">
+					<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
+						<h2>That’s it<mark class="dot">.</mark> That’s the article<mark class="dot">.</mark></h2>
+						<p class="subheading">Thinking of taking on the world? We’d love to help.</p>
+					</div>
+				</div>
+				<div class="row mt-4 icons">
+					<div class="col-xs-6 col-md-4 mb-2 mt-1">
+						<a href="/network/" class="box glowing">
+							<img class="mt-2" src="/img/ico/connection2.svg" alt="">
+							<h2 class="mt-2">Network</h2>
+							<p class="hide-mobile">Latency-optimised connectivity</p>
+						</a>
+					</div>
+					<div class="col-xs-6 col-md-4 mb-2 mt-1">
+						<a href="/game-servers/" class="box glowing">
+							<img class="mt-2" src="/img/ico/server.svg" alt="">
+							<h2 class="mt-2">Game Servers</h2>
+							<p class="hide-mobile">Compute, storage and colocation</p>
+						</a>
+					</div>
+					<div class="col-xs-6 col-md-4 mb-2 mt-1">
+						<a href="/cloud/" class="box glowing">
+							<img class="mt-2" src="/img/ico/cloud.svg" alt="">
+							<h2 class="mt-2">Cloud Platform</h2>
+							<p class="hide-mobile">The high performance cloud</p>
+						</a>
+					</div>
 				</div>
 			</div>
 		</section>
+<script>
+// Source: https://web.dev/lazy-loading-video/
+document.addEventListener("DOMContentLoaded", function() {
+	var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+
+	if ("IntersectionObserver" in window) {
+		var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
+			entries.forEach(function(video) {
+				if (video.isIntersecting) {
+					for (var source in video.target.children) {
+						var videoSource = video.target.children[source];
+						if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+							videoSource.src = videoSource.dataset.src;
+						}
+					}
+
+					video.target.load();
+					video.target.classList.remove("lazy");
+					lazyVideoObserver.unobserve(video.target);
+				}
+			});
+		});
+
+		lazyVideos.forEach(function(lazyVideo) {
+			lazyVideoObserver.observe(lazyVideo);
+		});
+	}
+});
+</script>
 {% include _footer.liquid %}
