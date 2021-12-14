@@ -53,6 +53,28 @@ mediaContact: Matthew Shearing, Chief Executive Officer
 		margin-left: 0;
 		max-width: 360px;
 	}
+	#network-reach picture::after {
+		content: "";
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background-size: cover;
+		mix-blend-mode: screen;
+	}
+	.no-webp #network-reach picture::after {
+		background-image: url(/img/map-reach-overlay.jpg);
+	}
+	.webp #network-reach picture::after {
+		background-image: url(/img/map-reach-overlay.webp);
+	}
+	@media (min-width: 48em) {
+		/* Move up on desktop */
+		#network-reach {
+			margin-top: -8rem;
+		}
+	}
 	@media (max-width: 64em) {
 		p.shout-out {
 			margin-left: 1.5rem;
@@ -74,7 +96,7 @@ mediaContact: Matthew Shearing, Chief Executive Officer
 				</div>
 			</div>
 		</section>
-		<section class="py-4">
+		<section class="py-4 push-forward">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-md-8 col-md-offset-2">
@@ -179,9 +201,18 @@ mediaContact: Matthew Shearing, Chief Executive Officer
 						<p>The biggest limiting factor in meaningful online experiences is the amount of people that can share those experiences.</p>
 						<p>Currently the design of the internet is, ironically, limited by locality. Carriers and providers, even those with an international presence, only make an effort to serve their local area well. A complex web of incentives has assured this, but our goal is to disrupt that ingrained thinking.</p>
 						<p>As our reliance on deeply connected technology grows, the underlying design of the internet itself must change to support it. Without changing that structure, truly mass-scale, intercontinental experiences will remain out of reach.</p>
-						<blockquote>
-							<p>Image showing OneQode’s reach with the heatmap</p>
-						</blockquote>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="network-reach">
+{% include diagrams/_network-map.liquid %}
+			<figcaption class="mt-0">Global reach <span style="color: #949494">// <a href="/network/">About the network</a></figcaption>
+		</section>
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
 						<p>Our model was built to enable this. Even now, we have the framework in place for people to build applications connecting billions, at high fidelity. This in turn makes it possible for people anywhere — particularly developing economies — to access opportunities they never would have had prior. It will also allow those same people to <strong>genuinely participate</strong> in new emergent ecosystems as they mature.</p>
 						<h3 class="mt-2">Gaming first</h3>
 						<p>Short term, we are focusing on gaming. Our technology will enable people to interact and play with a far larger player base than they are used to.</p>
