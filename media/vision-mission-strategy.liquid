@@ -69,6 +69,14 @@ mediaContact: Matthew Shearing, Chief Executive Officer
 	.webp #network-reach picture::after {
 		background-image: url(/img/map-reach-overlay.webp);
 	}
+	#pop-architecture {
+		max-width: 100%;
+	}
+	.stat {
+		background: -webkit-linear-gradient(258deg, #fff, #999);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
 	@media (min-width: 48em) {
 		/* Move up on desktop */
 		#network-reach {
@@ -100,9 +108,9 @@ mediaContact: Matthew Shearing, Chief Executive Officer
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-md-8 col-md-offset-2">
-						<p>As OneQode heads into 2022 with a successful funding round completed (and oversubscribed!) with the goal of taking our products to the market and expanding the company, it’s important that we clearly dictate where we’re going, and why we’re going there.</p>
+						<p>As OneQode heads into 2022 with the goal of network expansion and taking our products to the market (and a successful funding round!), I feel that it’s of utmost importance to clearly dictate where we’re going, and why we’re going there.</p>
 						<p>We’re a team of 20 people right now, but we’ll soon be a lot larger — so having a clear vision, mission and strategy is important.</p>
-						<p>The great thing about authoring a piece like this in 2021 is that a lot of founders that have walked this path before. I’ve taken significant inspiration for this framework from Brian Armstrong, founder and CEO of Coinbase, and <a href="https://blog.coinbase.com/the-vision-mission-and-strategy-for-coinbase-944b79a64a7c" target="_blank" rel="nofollow noopener">his regular pieces</a> on this topic.</p>
+						<p>The great thing about authoring a piece like this in 2021 is that a lot of founders have walked this path before. As such, I’ve taken significant inspiration for this framework from Brian Armstrong, founder and CEO of Coinbase, and <a href="https://blog.coinbase.com/the-vision-mission-and-strategy-for-coinbase-944b79a64a7c" target="_blank" rel="nofollow noopener">his regular pieces</a> on this topic.</p>
 						<p>His framework is as follows:</p>
 						<blockquote cite="https://blog.coinbase.com/the-vision-mission-and-strategy-for-coinbase-944b79a64a7c"><p><strong>Vision: the why</strong></p>
 						<p>Why are you doing what you’re doing? How do you want the world to be different in ten years?</p>
@@ -126,7 +134,7 @@ mediaContact: Matthew Shearing, Chief Executive Officer
 						<p>But even non-gamers (a declining population) are benefiting as the technological advancements bleed through to video conferencing, virtual events and collaborative experiences.</p>
 						<p>Soon, we’ll see this in a whole new tranche of applications, including augmented and virtual reality workplace solutions.</p>
 					</div>
-					<div class="col-xs-12 col-md-10 col-md-offset-1" id="remote-work-stats">
+					<div class="col-xs-12 col-md-10 col-md-offset-1" id="remote-work-stats-1">
 						<img class="my-4 opaque" src="/img/media/vision-mission-strategy/statistic-1-work-remotely-some-of-the-time-rest-of-career-buffer.png" alt="Illustrated statistic from Buffer showing 97.6% of people would like to remotely (at least some of the time) for the rest of their career.">
 					</div>
 					<div class="col-xs-12 col-md-8 col-md-offset-2">
@@ -150,7 +158,7 @@ mediaContact: Matthew Shearing, Chief Executive Officer
 						<p><strong>The experience like I had above is not rare.</strong> Nor has it improved markedly with time.</p>
 						<p>Sure, there have been incremental improvements (Discord, chat applications, last-mile connectivity), but the larger issue — cross-continental, real-time interactions — has not been solved.</p>
 					</div>
-					<div class="col-xs-12 col-md-10 col-md-offset-1" id="remote-work-stats">
+					<div class="col-xs-12 col-md-10 col-md-offset-1" id="remote-work-stats-2">
 						{% comment %}
 						<img class="my-4 opaque" src="/img/media/vision-mission-strategy/statistic-2-people-on-your-team-different-time-zones-buffer.png" alt="A horizontal bar chart showing that 74% of teams are in multiple time zones">
 						{% endcomment %}
@@ -207,7 +215,7 @@ mediaContact: Matthew Shearing, Chief Executive Officer
 		</section>
 		<section id="network-reach">
 {% include diagrams/_network-map.liquid %}
-			<figcaption class="mt-0">Global reach <span style="color: #949494">// <a href="/network/">About the network</a></figcaption>
+			<figcaption class="mt-0">OneQode’s current reach <span style="color: #949494">// <a href="/network/">About the network</a></figcaption>
 		</section>
 		<section>
 			<div class="container">
@@ -226,18 +234,24 @@ mediaContact: Matthew Shearing, Chief Executive Officer
 						<h3 class="mt-2">1. Build a high-performance IaaS framework</h3>
 						<p>The first step is to build a high performance Infrastructure as a Service (IaaS) framework. We’ve already been working at this for the last 18 months, and while we’ve completed what we’re calling ‘stage 1’, expanding this framework is critical for the long-term achievement of our mission.</p>
 						<p>So what is this framework?</p>
-						<blockquote>Diagram: private carrier network > regional hubs > local PoPs > performance servers</blockquote>
 						<p>It starts with our <strong>private international carrier network</strong>, which is designed to pick up data as close as possible to the user and deliver it quickly, optimising for reduced latency by default (unlike existing carriers, who optimise for cost).</p>
 						<p>Our regional backbone uses <strong>network hubs</strong> we locate at ‘crossroads’, where sub-sea cables meet and we can serve the maximum number of people with acceptable latency. Our <a href="/guam/">first connectivity hub is located in Guam</a>.</p>
 						<p>From there, we establish local <strong>Points of Presence</strong> (PoPs) in other key locations, designed to pick up user data and serve more latency sensitive applications.</p>
 						<p>Once those are established, we install <strong>high-performance servers</strong> at each location and put them behind our premium DDoS protection, which shields our network and servers from malicious denial-of-service attacks known to target gaming and other real-time applications.</p>
 						<p>Finally, we integrate it all into our <strong>cloud platform</strong>, providing a portal and API layer for on-demand access. This allows developers to access all the benefits of our network, hubs and servers in one place.</p>
+					</div>
+					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
+						<figure>
+{% include diagrams/_pop-architecture.liquid %}
+							<figcaption>How our points of presence are architected</figcaption>
+						</figure>
+					</div>
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
 						<p>So what do we need to do from here to achieve our mission?</p>
 						<ol>
-						<li class="mb-1"><strong>Expand our framework</strong> by deploying regional backbone locations in the Americas, India and the sub-continent, Europe, Africa and the Middle-East.</li>
-						<li class="mb-1"><strong>Bolster our cloud presence</strong> to complement each location and grow to meet increasing demand.</li>
-						<li><strong>Continue to build strong relationships</strong> with last-mile network providers, orchestrators, publishers, studios and vendors.</li>
-
+							<li class="mb-1"><strong>Expand our framework</strong> by deploying regional backbone locations in the Americas, India and the sub-continent, Europe, Africa and the Middle-East.</li>
+							<li class="mb-1"><strong>Bolster our cloud presence</strong> to complement each location and grow to meet increasing demand.</li>
+							<li><strong>Continue to build strong relationships</strong> with last-mile network providers, orchestrators, publishers, studios and vendors.</li>
 						</ol>
 						<p>If we’re achieving the above, OneQode’s footprint will grow from Asia-Pacific to global, with increasing capacity on our cloud and more last-mile carriers interconnecting with us at our various locations.</p>
 						<h3 class="mt-2">2. Become the leading gaming IaaS provider</h3>
@@ -245,11 +259,26 @@ mediaContact: Matthew Shearing, Chief Executive Officer
 						<p>Gaming is one of, if not the most, performance-sensitive application verticals on the internet.</p>
 						<p>This market is massive with a direct need. Right now, game servers (in Asia-Pacific particularly) are hyper-localised. It’s difficult for gamers to play across regions and the infrastructure is far behind North America and Europe.</p>
 						<p>Despite that, it is the largest region by gaming revenue in the world — and this is only growing.</p>
-						<blockquote>
-							<p>20% YoY growth</p>
-							<p>1.5B gamers</p>
-							<p>$80B revenue (maybe show slide)</p>
-						</blockquote>
+					</div>
+					<div class="col-xs-12 col-md-10 col-md-offset-1">
+						<figure>
+							<img class="mt-4 opaque" src="/img/media/vision-mission-strategy/apac-gaming-revenue-newzoo.png" alt="A pie chart showing 48% of global gaming revenue originating from Asia-Pacific — at $84.3 billion">
+						</figure>
+					</div>
+				</div>
+				<div class="row place-content-center my-4">
+					<div class="col-xs-6 col-md-4 py-4">
+						<div class="stat"><span>+17.5%</span> year on year spend growth</div>
+					</div>
+					<div class="col-xs-6 col-md-4 py-4">
+						<div class="stat"><span>1.5 bn</span> gamers in the region</div>
+					</div>
+					<div class="col-xs-6 col-md-4 py-4">
+						<div class="stat"><span>+4.9%</span> annual player growth</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
 						<p>Our most immediate goal is to address this. If we are to lay it out in mission form, it is:</p>
 						<p class="shout-out">To be the pre-eminent gaming Infrastructure as a Service Provider for Asia Pacific</p>
 						<p>And on a slightly longer timeframe:</p>
@@ -282,8 +311,8 @@ mediaContact: Matthew Shearing, Chief Executive Officer
 							We work with anyone and everyone and this won’t change anytime soon. We’ll continue to be hyper-focused on forming partnerships which improve our products and incentivise win-win outcomes.</li>
 						</ul>
 						<h2 class="mt-4" id="summary">In summary</h2>
-						<p>OneQode is not only focused on improving connected experiences but <strong>enabling new types of real-time applications</strong>.This starts for us with gaming, but the foundation we’re building has far greater potential.</p>
-						<p>As OneQode stretches its metaphorical legs, we’ll focus on serving businesses in complementary verticals, particularly those which can benefit from the unique network and infrastructure that we’ve built.</p>
+						<p>OneQode is not only focused on improving connected experiences but <strong>enabling new types of real-time applications</strong>. This starts for us with gaming, but the foundation we’re building has far greater potential.</p>
+						<p>As OneQode begins its global expansion and rollout, we’ll focus on serving businesses in complementary verticals, particularly those which can benefit from the unique network and infrastructure that we’ve built.</p>
 						<p>Gaming is the harbinger of what’s coming and it needs high-performance connectivity and compute across the board.</p>
 						<p>We’re building the foundation for this now, so people everywhere can benefit in the future.</p>
 						<p>We hope you join us on this journey, we couldn’t be more excited to see where it takes us.</p>
