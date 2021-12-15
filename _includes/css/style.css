@@ -197,7 +197,7 @@ figure, video {
 figcaption {
 	text-align: center;
 	margin-top: 2rem;
-	font-size: 1rem;
+	font-size: 1rem !important;
 }
 img {
 	max-width: 100%;
