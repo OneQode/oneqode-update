@@ -1,0 +1,356 @@
+---
+section: gaming
+permalink: /story/
+metaTitle: The Origin Story of OneQode™ • Austin Gallagher
+metaDescription: We started as a last-mile internet provider, then we decided to go upstream.
+ogImage: vision-mission-strategy.jpg
+changefreq: never
+priority: 0.4
+tags: internal
+postType: Blog Post
+postTitle: The Origin Story of OneQode
+date: 2022-02-01
+mediaContact: Austin Gallagher, Brand Journalist
+lazyLoad: true
+---
+{% comment %}
+	<!--
+		* * * * * * * * * * * * * * * * 
+		 * * * * * * * * * * * * * * *  
+		* * * * * * * * * * * * * * * * 
+		 * * * * * * * * * * * * * * *  
+		IMPORTANT: OG IMAGE NEEDS UPDATE
+		* * * * * * * * * * * * * * * * 
+		 * * * * * * * * * * * * * * *  
+		* * * * * * * * * * * * * * * * 
+		 * * * * * * * * * * * * * * *  
+	-->
+{% endcomment %}
+{% include _header.liquid %}
+<style>
+	.no-webp section.hero {
+		background:	linear-gradient(to bottom, rgba(0,0,0,0.2), #000),
+					url(/img/bg/oq-globe.jpg) top center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	.webp section.hero {
+		background:	linear-gradient(to bottom, rgba(0,0,0,0.2), #000),
+					url(/img/bg/oq-globe.webp) top center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	blockquote {
+		margin: 2rem 0 2rem 0;
+		padding: 2rem;
+		border-left: 6px solid #333;
+	}
+	blockquote > :first-child {
+		margin-top: 0;
+	}
+	blockquote > :last-child {
+		margin-bottom: 0;
+	}
+	blockquote > * {
+		color: #cecece;
+	}
+	p.shout-out {
+		font-family: "Poppins", sans-serif;
+		font-weight: 600;
+		font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
+		margin: 2rem 0 2rem 2rem;
+		background: -webkit-linear-gradient(0deg, #00b0f0, #00597f);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	@media (max-width: 64em) {
+		p.shout-out {
+			margin-left: 1.5rem;
+		}
+	}
+	video.full-width {
+		height: auto;
+	}
+</style>
+		<section class="hero media">
+			<div class="container">
+				<div class="row middle-xs">
+					<div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
+						<p class="superheading">{{ postType }}</p>
+						<h1>{{ postTitle }}<mark class="dot">.</mark></h1>
+						<p>{{ mediaContact }} <span class="faded">• {{ date | readableDate }}</span></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-4 push-forward">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<p>Latency. Lag. Rubberbanding.</p>
+						<p>Call it what you like, there isn’t a gamer on the planet who hasn’t experienced it.</p>
+						<p>For anyone lucky enough to not have experienced it: it sucks - a lot.</p>
+						<p>Your in-game senses become unreliable. Your react speed delayed.</p>
+						<p>It becomes a huge roadblock, to being competitive, or even just enjoying the game.</p>
+						<p>Imagine trying to catch a ball, but your reaction speed is twice as long.</p>
+						<figure class="my-4">
+							<video class="lazy" poster="/img/content/story/star-trek-ball-catch-miss.jpg" autoplay muted loop playsinline width="448" height="352">
+								<source data-src="https://oneqode.sfo2.digitaloceanspaces.com/videos/star-trek-ball-catch-miss.mp4" type="video/mp4">
+							</video>
+						</figure>
+						<p>Your focus? On your network and not the game.</p>
+						<p>For gamers, this is the difference between virtual life and death.</p>
+						<p>And it sucks.</p>
+						<p><strong>It seemed like the only people who could fix gamers’ internet, were gamers.</strong></p>
+						<p><strong>So we started OneQode.</strong></p>
+						<p>A <strong>wireless last-mile internet provider for gamers.</strong> Well, that’s what we thought we were starting.</p>
+						<p>The important part was the mission: better internet for gamers.</p>
+						<p>So when we found ourselves launching an international carrier network, with reach far beyond our borders, we knew we were simply completing that mission.</p>
+						<p>But before we get to that, we need to go back to the beginning.</p>
+						<h2 class="mt-4">The Elephant in the Network</h2>
+						<p>Look: Australian internet sucked.</p>
+						<p>Our internet speeds ranked 67th globally — and providers weren’t getting any better. They prioritise cost over everything, which means a bad connection for all of us.</p>
+						<p>The worst thing? None of them care about latency.</p>
+						<p>Once upon a time, there was hope for Australia, the national broadband network (NBN). The biggest infrastructure commitment in Australia’s history. A fibre to the premises promise. A huge vision.</p>
+						<p>But as it rolled out, it failed in scope and speed.</p>
+						<p>Gamers were left out in the cold. We were on our own.</p>
+						<figure class="my-4">
+							<video class="lazy full-width" poster="/img/content/story/thanos-fine-ill-do-it-myself.jpg" autoplay muted loop playsinline width="498" height="216">
+								<source data-src="https://oneqode.sfo2.digitaloceanspaces.com/videos/thanos-fine-ill-do-it-myself.mp4" type="video/mp4">
+							</video>
+						</figure>
+						<p>It was clear if we wanted help, we had to help ourselves.</p>
+						<p>We wanted to create another option that would offer better connectivity than traditional last-mile internet — and eliminate latency for gamers.</p>
+						<h2 class="mt-4">Last Mile, the gift that never gives</h2>
+						<p><strong>For most people, last-mile is “the internet”.</strong></p>
+						<p>This has always been the pain-point. The final portion of the network that connects your home, where the resources to ensure speed are spread the thinnest.</p>
+						<p>To welcome gamers in from the cold, you just need to fix last-mile.</p>
+						<p>Or so we thought.</p>
+						<p>Traditional last-mile uses three key resources in spades.</p>
+						<ol>
+						    <li>Money</li>
+						    <li>Time</li>
+						    <li>Effort</li>
+						</ol>
+						<p>A typical last-mile setup involves laying underground cables to each individual premises. At scale, it’s a massive operation.</p>
+						<p>As a small start-up, the cost to compete on their terms would be huge.</p>
+						<p>So we didn’t.</p>
+						<p>Wireless last-mile technology quietly improving, so we threw some dishes on roofs, and took our first steps as a provider.</p>
+						<p>How hard could it be?</p>
+						<figure class="my-4">
+							<video class="lazy full-width" poster="/img/content/story/breaking-bad-pizza-roof-throw.jpg" autoplay muted loop playsinline width="500" height="282">
+								<source data-src="https://oneqode.sfo2.digitaloceanspaces.com/videos/breaking-bad-pizza-roof-throw.mp4" type="video/mp4">
+							</video>
+						</figure>
+						<p>As soon as the data left our hands the quality plummeted (just like that pizza). We couldn’t guarantee quality, especially when gamers connected abroad.</p>
+						<p>So we ventured upstream.</p>
+						<h2 class="mt-4">Going upstream: the network problem</h2>
+					</div>
+					<div class="col-xs-12 col-md-10 col-md-offset-1 mt-2">
+						<figure>
+							<video class="lazy full-width" poster="/img/content/story/ogres-have-layers-shrek.jpg" autoplay muted loop playsinline width="960" height="540">
+								<source data-src="https://oneqode.sfo2.digitaloceanspaces.com/videos/ogres-have-layers-shrek.mp4" type="video/mp4">
+							</video>
+						</figure>
+					</div>
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<figure>
+							<blockquote>
+						    	<p>“It was like an onion. The more we peeled back (to improve internet for gamers), the deeper we had to go into carrier land to deliver the service for last mile”</p>
+						    	<p>— Matt Shearing, OneQode CEO</p>
+							</blockquote>
+						</figure>
+						<p><img src="https://t6904812.p.clickup-attachments.com/t6904812/b6e3e33a-4026-428f-bddc-b7d16aa0b15d/image.png" referrerpolicy="no-referrer"></p>
+						<blockquote>
+						    <p>A OneQode version of this image</p>
+						</blockquote>
+						<p>Internet infrastructure is like a river. The widest portion of the river carries the most data, splitting into smaller streams closer to its destination.</p>
+						<p>We knew the ocean of gamers was being polluted by something upstream.</p>
+						<p>We started wireless last-mile to clean up the streams, but for a start-up this was a lot of ground to cover. Worse? The river was still polluted.</p>
+						<p>When we went upstream, we realised that the pollution was worse than we thought.</p>
+						<p>You see, internet providers have to connect to the wider internet, too. To do this, they buy connectivity from larger “carriers” upstream, who have massive global networks.</p>
+						<p>But a familiar problem appeared reared its ugly head. Carriers weren’t bothered about quality either. They:</p>
+						<ul>
+						    <li>Didn’t prioritise low latency</li>
+						    <li>Weren’t focused on speed</li>
+						    <li>Have over congested networks</li>
+						    <li>Were expensive for what you got</li>
+						</ul>
+						<p>All our efforts downstream would be pointless unless this was fixed. It was out of our control.</p>
+						<p>To deliver great internet for gamers, we needed end-to-end control of the infrastructure.</p>
+						<p>And if you want something done right, you’ve got to do it yourself.</p>
+						<p>This all felt a bit like this scene from Malcolm in the Middle:</p>
+					</div>
+					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
+						<div class="wrapper">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/AbSehcT19u0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<p>Then, our future partner RTI Cables landed right in our backyard.</p>
+						<h2 class="mt-4"><strong>The Sunny Coast Cable: A New Hope</strong></h2>
+						<p>What do a giant pineapple and the <strong>fastest cable</strong> from to Asia from Australia’s east coast have in common?</p>
+						<p>As of 2020, you’ll find both on the Sunshine Coast.</p>
+					</div>
+					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
+						<picture>
+							<source srcset="/img/content/story/sunshine-coast-pineapple-sunshine-coast-jga-s-cable.webp" type="image/webp">
+							<img class="opaque" src="/img/content/story/sunshine-coast-pineapple-sunshine-coast-jga-s-cable.jpg" alt="A two part image: on the left, the Big Pineapple tourist attraction, on the right, the Sunshine Coast Cable Landing Station">
+						</picture>
+					</div>
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<p>Before RTI landed the Sunshine Coast cable, most international bound Australian data travelled through Sydney.</p>
+						<p>See, the internet isn’t magic. To travel from continent to continent, your data joins billions of other bits and bytes on a vast network of subsea cables.</p>
+						<p>When we decided we had to connect internationally, it looked like we had to go through Sydney.</p>
+						<p>But thanks to RTI, we could connect to the cable that was gave us the fastest pathway overseas. The best part? <a href="https://www.oneqode.com/media/oneqode-deploys-in-sunshine-coast-landing-station/">We were the first</a> to connect to it.</p>
+						<blockquote>
+						    <p><strong>IMAGE</strong> map of cables to east coast + “we were here” tag</p>
+						</blockquote>
+						<p>We still needed the data to be handled with care throughout the entire journey. Sadly you can’t label data “this side up”... yet.</p>
+						<p>The Sunshine Coast landing station connected us with the United States, Tokyo, Hong Kong, and Singapore. With one pit stop between us and them. But without presences on all sides, we would have to hand off our data.</p>
+						<p>Once again we ran into a familiar problem.</p>
+						<p>Quality control.</p>
+						<p>That one stop for all our data? Guam.</p>
+						<p>I think you can see where this is going.</p>
+						<h2 class="mt-4"><strong>Enter: Mr. Guam</strong></h2>
+						<p>Moving upstream meant we needed someone with experience in “carrier land”.</p>
+						<p>Meet Ben Cooper.</p>
+						<p>Ben’s spent his career building carrier networks — the fundamental layer the internet is built on. Carrier network architects are a rare breed in the industry with only X of them in Australia.</p>
+						<p>These days he’s Chief of Product at OneQode.</p>
+						<blockquote>
+						    <p>Photo of Ben?</p>
+						</blockquote>
+						<p>Ben’s a scientist at heart, and scientists love to experiment. Following a whim, Ben had tested the latency between Guam and APAC regions. In two years he’d receive the results via email. You know, the kind of thing we all do on our lunch breaks.</p>
+						<p><strong>He promptly forgot about the whole thing</strong>.</p>
+						<p>In 2018, he struck gold.</p>
+						<p>Google Taiwan held a 15ms ping to the University of Guam for two months.</p>
+						<p>Guam had been an interchange. But if it could become a meeting point, the possibilities were massive.</p>
+						<figure class="my-4">
+							<video class="lazy full-width" poster="/img/content/story/math-thinking.jpg" autoplay muted loop playsinline width="460" height="196">
+								<source data-src="https://oneqode.sfo2.digitaloceanspaces.com/videos/math-thinking.mp4" type="video/mp4">
+							</video>
+						</figure>
+						<p>Ben realised that with Guam as the backbone of an international network, you could create a latency neutral location to serve billions of gamers.</p>
+						<p>Matt still refers to Ben as “Mr. Guam” sometimes, he knew the island like the back of his hand. Once RTI connected us to Guam, the opportunity was clear.</p>
+						<p>Guam could be APAC Central.</p>
+						<p>A server in Guam, however, was still <a href="https://www.linkedin.com/pulse/installing-game-server-pacific-island-how-hard-could-oneqode/">easier said than done</a>. To take full advantage of Guam, we would need presences on the other ends.</p>
+						<p>By setting up in Guam, we’d begun a global network. The next steps would allow us full control of our data.</p>
+						<p>End-to-End.</p>
+						<p>Across the whole region.</p>
+						<p>...Just to handle game traffic.</p>
+						<h2 class="mt-4">If you love something, let it go.</h2>
+						<p>We were at a crossroads.</p>
+						<p>Ultimately we wanted better internet for gamers.</p>
+						<p>But by trying to root out the problem at its source, we’d moved away from last-mile.</p>
+						<p>Two OneQode’s existed. Which was going to serve gamers better?</p>
+						<figure class="my-4">
+							<video class="lazy full-width" poster="/img/content/story/bender-fighting-himself.jpg" autoplay muted loop playsinline controls width="720" height="480">
+								<source data-src="https://oneqode.sfo2.digitaloceanspaces.com/videos/blender-fighting-himself.mp4" type="video/mp4">
+							</video>
+						</figure>
+						<p>So we took stock.</p>
+						<p>While we’d gone upstream, bigger players entered last-mile. Giants of telecommunications.</p>
+						<p>The landscape changed around us. Despite years of neglect, last-mile was now a focus for national plans and international providers.</p>
+						<p>The communications landscape had changed. Providers had begun work on last-mile, and when Covid-19 hit, it heightened the need for high quality connections from the home.</p>
+						<p>So what had we done in that time?</p>
+						<ul>
+						    <li>Set up points of presence in four countries</li>
+						    <li>Began to grow the company (entirely remotely)</li>
+						    <li>Built a high performance international network</li>
+						</ul>
+						<blockquote>
+						    <p><strong>IMAGE</strong> ↑ stats</p>
+						</blockquote>
+						<p>During Covid, all without “squillions” of dollars (as Matt puts it)</p>
+						<p>So instead of going toe-to-toe with giants, we stood on their shoulders.</p>
+					    <p>“Its best to sail with the wind” says Daniel McGregor, OneQode’s Chief Financial Officer, on our move away from last-mile connectivity.</p>
+						<p>What we had built had the potential to be huge for not only Australian gamers, but the entire APAC region.</p>
+						<blockquote>
+						    <p>Venn diagram</p>
+						    <ul>
+						        <li>Gamers who think internet sucks</li>
+						        <li>A carrier architect with experience and expertise</li>
+						        <li>a hardworking and committed team</li>
+						    </ul>
+						</blockquote>
+						<p>So we ditched last-mile to focus on what we had built: a high-performance, latency-optimised, international carrier network. That meant that other providers, and their gamers, could benefit from our work.</p>
+						<p>None of this made it easy to leave last-mile behind, it was the relatable issue.</p>
+						<p>But we’d built a kickass international network. And we were <strong>doing things nobody had done</strong> before.</p>
+						<p>For game developers, it would reach more people, quicker. Maintaining a healthy population of players, especially during non-peak hours.</p>
+						<p>For gamers this would mean better connections, quicker matches, and most importantly a fairer game.</p>
+						<p>Decision time. Increasingly, that decision was looking like this:</p>
+					</div>
+					<div class="col-xs-12 col-md-10 col-md-offset-1">
+						<img class="my-4 opaque" src="/img/content/story/oneqode-trolley-problem-loop-da-loop.png" alt="An illustrated meme of the trolley problem — demonstrating the difficulty of the decision we were looking to make.">
+					</div>
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<p>To best serve gamers, it was time to play to our strengths. Connecting more people through Guam.</p>
+						<p>We’d found a way to help gamers across the world — far beyond our own backyard.</p>
+						<p>Now we had to make it happen.</p>
+						<h2 class="mt-4">Launching the rocket (going global)</h2>
+						<p>Guam was deployed, so we took the lessons we learnt and expanded our points of presence.</p>
+						<p>To Singapore. And Hong Kong. And Los Angeles. All by [Time].</p>
+						<p>With these locations deployed, we’d honed our skills and perfected the recipe.</p>
+					</div>
+					<div class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4">
+						<figure class="my-2">
+							<video class="lazy full-width" poster="/img/content/story/inglourious-basterds-getting-pretty-good.jpg" autoplay muted loop playsinline width="244" height="220">
+								<source data-src="https://oneqode.sfo2.digitaloceanspaces.com/videos/inglourious-basterds-getting-pretty-good.mp4" type="video/mp4">
+							</video>
+						</figure>
+					</div>
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<p>Deploying any point of presence is a massive undertaking.</p>
+						<p>Logistics range from legal jurisdictions to hiring on location, communications to shipping and receiving.</p>
+						<p>Our team was ready for the challenge though, and successfully deployed international points of presence during the pandemic.</p>
+						<p>Then, we needed gamers. Not just any gamers, but the kind of gamers who would recognise the difference we were making.</p>
+						<p>So we hosted a $17,000 CS:GO tournament in Guam: It was kind of a <a href="https://www.oneqode.com/case-study/guam-csgo/">big deal</a>.</p>
+						<p>96 players. 9 countries. Matches that were impossible before Guam. All live-streamed globally.</p>
+						<h2 class="mt-4">To Bravely Go</h2>
+						<p>Pioneering isn’t easy. You have to forge your own path.</p>
+						<p>Prakash V, founding investor and our chief of operations, always reminds us to “stay curious”.</p>
+						<p><strong>We always knew the destination: better internet for gamers across the region.</strong> The route we took wasn’t the one we expected, but now that we’ve carved our way forward we wouldn’t have it any other way.</p>
+						<p>The freedom to adapt was central to this journey.</p>
+						<p>Our new mission?</p>
+						<p><a href="https://www.oneqode.com/vision-mission-strategy/">Make latency imperceptible</a>, and break down barriers to the virtual worlds that are being created.</p>
+						<p>It’ll mean expanding. More people. More points of presence. More servers. More everything.</p>
+						<p>Most importantly, it’ll mean uniting gamers across the world.</p>
+						<p>We hope you’ll join us on the road ahead.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-8 black-to-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
+						<h2>This is just the start<mark class="dot">.</mark></h2>
+						<p class="subheading">Thinking of taking on the world? We’d love to help.</p>
+					</div>
+				</div>
+				<div class="row mt-4 icons">
+					<div class="col-xs-6 col-md-4 mb-2 mt-1">
+						<a href="/network/" class="box glowing">
+							<img class="mt-2" src="/img/ico/connection2.svg" alt="">
+							<h2 class="mt-2">Network</h2>
+							<p class="hide-mobile">Latency-optimised connectivity</p>
+						</a>
+					</div>
+					<div class="col-xs-6 col-md-4 mb-2 mt-1">
+						<a href="/game-servers/" class="box glowing">
+							<img class="mt-2" src="/img/ico/server.svg" alt="">
+							<h2 class="mt-2">Game Servers</h2>
+							<p class="hide-mobile">Compute, storage and colocation</p>
+						</a>
+					</div>
+					<div class="col-xs-6 col-md-4 mb-2 mt-1">
+						<a href="/cloud/" class="box glowing">
+							<img class="mt-2" src="/img/ico/cloud.svg" alt="">
+							<h2 class="mt-2">Cloud Platform</h2>
+							<p class="hide-mobile">The high performance cloud</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+{% include _footer.liquid %}
