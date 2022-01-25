@@ -47,8 +47,6 @@ LAYOUT
 
 body {
 	background: #000;
-	font-family: 'Work Sans', sans-serif;
-	font-weight: 400;
 	color: #fff;
 	margin: 0;
 	width: 100%;
@@ -545,10 +543,14 @@ TYPOGRAPHY
 
 /* Standard */
 body {
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 400;
 	font-size: 1.3rem;
 	line-height: 1.5;
 }
-
+strong {
+	font-weight: 700;
+}
 /* Headings */
 h1,
 h2,
