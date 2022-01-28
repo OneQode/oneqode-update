@@ -70,8 +70,29 @@
 			]
 		}
 	</script>
+{% comment %}
+	<!--
+
+		* * * * * * * * * * * * * * * * * * * * * *
+		 * * * * * * * * * * * * * * * * * * * * * 
+
+		Tighten up preconnect rules
+		when fonts are integrated!
+
+		* * * * * * * * * * * * * * * * * * * * * *
+		 * * * * * * * * * * * * * * * * * * * * * 
+
+	-->
+{% endcomment %}
+{%- if slider or form %}
+	<!-- Performance -->
+	<link rel="preconnect" href="https://unpkg.com">
+{%- endif %}
 	<!-- Styles -->
 	<link rel="stylesheet" href="{{ '/css/production.min.css' | url }}">
+{%- if slider %}
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+{%- endif %}
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Work+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 	<!-- Shortcut Icons -->
