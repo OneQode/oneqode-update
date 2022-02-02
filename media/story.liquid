@@ -31,14 +31,14 @@ lazyLoadVideo: true
 {% include _header.liquid %}
 <style>
 	.no-webp section.hero {
-		background:	linear-gradient(to bottom, rgba(0,0,0,0.2), #000),
-					url(/img/bg/oq-globe.jpg) top center;
+		background:	linear-gradient(to bottom, rgba(0,0,0,0.2) 50%, #000),
+					url(/img/bg/roof-wireless-dish-brisbane.jpg) bottom center;
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
 	.webp section.hero {
-		background:	linear-gradient(to bottom, rgba(0,0,0,0.2), #000),
-					url(/img/bg/oq-globe.webp) top center;
+		background:	linear-gradient(to bottom, rgba(0,0,0,0.2) 50%, #000),
+					url(/img/bg/roof-wireless-dish-brisbane.webp) bottom center;
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
@@ -58,6 +58,16 @@ lazyLoadVideo: true
 	}
 	video.full-width {
 		height: auto;
+	}
+	/* Stat Gradient */
+	.stat {
+		background: -webkit-linear-gradient(258deg, #fff, #999);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	span.unit {
+		font-size: 2.5rem;
+		display: inline-block;
 	}
 	@media (min-width: 48em) {
 		/* Move up on desktop */
@@ -507,9 +517,29 @@ lazyLoadVideo: true
 							<li>Began to grow the company (entirely remotely)</li>
 							<li>Built a high-performance international network</li>
 						</ul>
-						<blockquote>
-							<p><strong style="color:#f00">COMING SOON: </strong> ↑ stats image</p>
-						</blockquote>
+					</div>
+					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
+						<div class="row">
+							<div class="col-xs-6 col-md-3">
+								<div class="stat"><span>4</span> countries</div>
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<div class="stat"><span>6</span> points of presence</div>
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<div class="stat"><span>10</span> staff employed</div>
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<div class="stat"><span>100<span class="unit">GbE</span></span> core network</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								<figcaption><span style="color:#f00">CHECK THESE FIGURES</span></figcaption>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
 						<p>During Covid, all without “squillions” of dollars (as Matt puts it)</p>
 						<p>So instead of going toe-to-toe with giants, we stood on their shoulders.</p>
 						<p>There was no one else upstream addressing the issue at its core.</p>
