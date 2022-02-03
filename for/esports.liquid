@@ -27,12 +27,15 @@ slider: true
 {% endcomment %}
 {% include _header.liquid %}
 		<style>
+		section.hero {
+			min-height: 85vh;
+		}
 		.no-webp .hero {
-			background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/melbourne-city-australia-aerial.jpg") no-repeat 50% 20%;
+			background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/space-star-field-warp-speed.jpg") no-repeat center center;
 			background-size: cover;
 		}
 		.webp .hero {
-			background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/melbourne-city-australia-aerial.webp") no-repeat 50% 20%;
+			background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/space-star-field-warp-speed.webp") no-repeat center center;
 			background-size: cover;
 		}
 		.no-webp #locations {
@@ -65,13 +68,23 @@ slider: true
 			opacity: 0.4;
 		}
 		@media screen and (max-width: 64em) {
-			.full-height {
-				padding-top: 8rem !important;
-			}
 			.swiper-slide {
-				padding: 1rem;
+				padding: 2rem 1rem;
 				background: #333;
 			}
+		}
+		/* Icons */
+		.icon.play-fast {
+			mask: url(/img/ico/play-fast.svg) no-repeat center;
+			-webkit-mask: url(/img/ico/play-fast.svg) no-repeat center;
+		}
+		.icon.guam {
+			mask: url(/img/ico/guam2.svg) no-repeat center;
+			-webkit-mask: url(/img/ico/guam2.svg) no-repeat center;
+		}
+		.icon.support {
+			mask: url(/img/ico/support.svg) no-repeat center;
+			-webkit-mask: url(/img/ico/support.svg) no-repeat center;
 		}
 		</style>
 		<section class="hero">
@@ -123,28 +136,34 @@ slider: true
 			<div class="swiper benefits mt-2 mb-8">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide col-xs-10 col-md-8 col-lg-6">
+						<div class="icon guam"></div>
 						<p class="superheading">APAC Central</p>
-						<h3 class="mb-0">Unlock truly cross-regional events.</h3>
-						<p class="subheading faded">With APAC Central™, the world’s newest server region</p>
-						<p>Tread where no-one has gone before.</p>
-						<p>The laws of physics are the only enemy. Our performance routing sends traffic over the shortest path, eliminating latency at every turn.</p>
-						<p><a href="/guam/" class="chevron">APAC Central server region</a></p>
+						<h3 class="mb-0 mt-2">Unlock truly cross-regional events</h3>
+						<p class="subheading faded">With Asia-Pacific’s central gaming hub</p>
+						<div class="col-xs-12 col-md-8 col-md-offset-2">
+							<p class="mt-2">Access <strong>the world’s newest server region</strong>, a central location that reaches gamers in three continents with a single server.</p>
+						</div>
+						<p class="mt-2"><a href="/guam/" class="chevron m-1">APAC Central</a></p>
 					</div>
 					<div class="swiper-slide col-xs-10 col-md-8 col-lg-6">
-						<p class="superheading">Elite Esports Infrastructure</p>
-						<h3 class="mb-0">Second thingy.</h3>
-						<p class="subheading faded">With APAC Central™, the world’s newest server region</p>
-						<p>Tread where no-one has gone before.</p>
-						<p>The laws of physics are the only enemy. Our performance routing sends traffic over the shortest path, eliminating latency at every turn.</p>
-						<p><a href="/guam/" class="chevron">Game servers</a></p>
+						<div class="icon play-fast"></div>
+						<p class="superheading">Elite Esports Servers</p>
+						<h3 class="mb-0 mt-2">Enable high tickrate competition</h3>
+						<p class="subheading faded">Blazing-fast, latency-optimised servers</p>
+						<div class="col-xs-12 col-md-8 col-md-offset-2">
+							<p class="mt-2">Take the world’s fastest processors, put them in a kickass server, and connect via our hyperfast network. Buttery-smooth games.</p>
+						</div>
+						<p class="mt-2"><a href="/network/" class="chevron m-1">Network</a> <br class="mobile-only"><a href="/game-servers/" class="chevron m-1">Game servers</a></p>
 					</div>
 					<div class="swiper-slide col-xs-10 col-md-8 col-lg-6">
+						<div class="icon support"></div>
 						<p class="superheading">Live event support</p>
-						<h3 class="mb-0">Thing 3</h3>
-						<p class="subheading faded">With APAC Central™, the world’s newest server region</p>
-						<p>Tread where no-one has gone before.</p>
-						<p>The laws of physics are the only enemy. Our performance routing sends traffic over the shortest path, eliminating latency at every turn.</p>
-						<p><a href="/guam/" class="chevron">Live support</a></p>
+						<h3 class="mb-0 mt-2">Get backup when it really matters</h3>
+						<p class="subheading faded">Live tech support for big events</p>
+						<div class="col-xs-12 col-md-8 col-md-offset-2">
+							<p class="mt-2">Achieve <strong>stress level zero</strong> and book us in for live technical support during critical tournaments and events — so you can stay focussed.</p>
+						</div>
+						<p class="mt-2"><a href="#" class="chevron m-1">Plan an event</a></p>
 					</div>
 				</div>
 				<div class="container">
@@ -191,7 +210,7 @@ slider: true
 					rotate: 50,
 					stretch: 0,
 					depth: 100,
-					modifier: 1,
+					modifier: 0.8,
 					slideShadows: true,
 				},
 				loop: true,
