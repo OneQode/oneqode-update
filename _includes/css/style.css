@@ -616,6 +616,9 @@ a:hover,
 a:focus {
 	color: #00597f;
 }
+a.chevron {
+	white-space: nowrap;
+}
 a.chevron::after {
 	width: 1.2rem;
 	height: 1.2rem;
