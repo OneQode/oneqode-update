@@ -2,7 +2,7 @@
 ignore: true
 layout: page.liquid
 metaTitle: Brand • OneQode™
-metaDescription: OneQode provides the network and infrastructure for real-time, lag-free gaming. We operate a low-latency carrier network and a high-performance cloud platform.
+metaDescription: OneQode’s brand principles, voice guidelines, colours, logos, typography and design system resources.
 changefreq: monthly
 priority: 0.9
 pageSupertitle: Brand Guidelines
@@ -191,113 +191,122 @@ pageSubtitle: How we look and talk
 			</div>
 		</section>
 		<section class="py-8" id="colours">
-			<div class="container text-center">
+			<div class="container">
 				<div class="row">
-					<div class="col-xs-12 col-md-8 col-md-offset-2">
+					<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
 						<h2>Colours<mark class="dot">.</mark></h2>
 						<p class="subheading">Dark and blue.</p>
 					</div>
 				</div>
 				<style>
 					#colours .holder {
-						border-radius: 15px;
-						background: var(--color);
+						border-radius: 10px;
+						overflow: hidden;
+						background: #fff;
 						margin: 0.5rem;
+						display: flex;
+						flex-direction: column;
 					}
-					#colours figcaption,
+					#colours .holder > span {
+						margin: -1rem -1rem 0 -1rem;
+						padding-bottom: 100%;
+						display: block;
+						position: relative;
+						background: var(--color);
+						border-bottom: 1px solid #ccc;
+					}
 					#colours p {
-						color: #fff;
-						text-shadow: 2px 2px #000;
+						color: #000;
+						margin: 0;
+					}
+					#colours p:first-of-type {
+						margin: 1rem 0 0.5rem 0;
+						font-family: 'Poppins', sans-serif;
+						font-weight: 600;
+					}
+					#colours p:nth-child(3) {
+						margin-top: auto;
+					}
+					#colours p:last-of-type {
+						margin-bottom: 0;
 					}
 				</style>
 				<div class="row mt-4 place-content-center">
-					<div
-						class="col-xs holder p-2"
-						style="--color:#00b0f0"
-					>
+					<div class="col-xs-4 col-sm holder p-1">
+						<span style="--color:#00b0f0"></span>
+						<p>Primary blue</p>
 						<p>#00b0f0</p>
-						<figcaption>Primary blue</figcaption>
+						<p>rgb(255,255,255)</p>
 					</div>
-					<div
-						class="col-xs holder p-2"
-						style="--color:#00597f"
-					>
+					<div class="col-xs-4 col-sm holder p-1">
+						<span style="--color:#00597f"></span>
+						<p>Hover blue <span class="tag wet">interaction only</span></p>
 						<p>#00597f</p>
-						<figcaption>Hover blue (interaction only)</figcaption>
+						<p>rgb(255,255,255)</p>
 					</div>
-					<div
-						class="col-xs holder p-2"
-						style="--color:#4f94cc"
-					>
+					<div class="col-xs-4 col-sm holder p-1">
+						<span style="--color:#4f94cc"></span>
+						<p>Superheading blue</p>
 						<p>#4f94cc</p>
-						<figcaption>Superheading blue</figcaption>
+						<p>rgb(255,255,255)</p>
 					</div>
-					<div
-						class="col-xs holder p-2"
-						style="--color:#002735"
-					>
+					<div class="col-xs-4 col-sm holder p-1">
+						<span style="--color:#002735"></span>
+						<p>Deep blue</p>
 						<p>#002735</p>
-						<figcaption>Deep blue</figcaption>
+						<p>rgb(255,255,255)</p>
 					</div>
 				</div>
 				<div class="row place-content-center">
-					<div
-						class="col-xs holder p-2"
-						style="--color:#ffffff"
-					>
+					<div class="col-xs-4 col-sm holder p-1">
+						<span style="--color:#ffffff"></span>
+						<p>White</p>
 						<p>#ffffff</p>
-						<figcaption>White</figcaption>
+						<p>rgb(255,255,255)</p>
 					</div>
-					<div
-						class="col-xs holder p-2"
-						style="--color:#e0e0e0"
-					>
+					<div class="col-xs-4 col-sm holder p-1">
+						<span style="--color:#e0e0e0"></span>
+						<p>Off White</p>
 						<p>#e0e0e0</p>
-						<figcaption>Off White</figcaption>
+						<p>rgb(255,255,255)</p>
 					</div>
-					<div
-						class="col-xs holder p-2"
-						style="--color:#999999"
-					>
+					<div class="col-xs-4 col-sm holder p-1">
+						<span style="--color:#999999"></span>
+						<p>Light Grey</p>
 						<p>#999999</p>
-						<figcaption>Light Grey</figcaption>
+						<p>rgb(255,255,255)</p>
 					</div>
-					<div
-						class="col-xs holder p-2"
-						style="--color:#666666"
-					>
+					<div class="col-xs-4 col-sm holder p-1">
+						<span style="--color:#666666"></span>
+						<p>Mid Grey</p>
 						<p>#666666</p>
-						<figcaption>Mid Grey</figcaption>
+						<p>rgb(255,255,255)</p>
 					</div>
 				</div>
-				<div class="row">
-					<div
-						class="col-xs holder p-2"
-						style="--color:#666666"
-					>
+				<div class="row place-content-center">
+					<div class="col-xs-4 col-sm holder p-1">
+						<span style="--color:#666666"></span>
+						<p>Mid Grey</p>
 						<p>#666666</p>
-						<figcaption>Mid Grey</figcaption>
+						<p>rgb(255,255,255)</p>
 					</div>
-					<div
-						class="col-xs holder p-2"
-						style="--color:#333333"
-					>
+					<div class="col-xs-4 col-sm holder p-1">
+						<span style="--color:#333333"></span>
+						<p>Deep Grey</p>
 						<p>#333333</p>
-						<figcaption>Deep Grey</figcaption>
+						<p>rgb(255,255,255)</p>
 					</div>
-					<div
-						class="col-xs holder p-2"
-						style="--color:#1c1d22"
-					>
+					<div class="col-xs-4 col-sm holder p-1">
+						<span style="--color:#1c1d22"></span>
+						<p>Night Grey</p>
 						<p>#1c1d22</p>
-						<figcaption>Night Grey</figcaption>
+						<p>rgb(255,255,255)</p>
 					</div>
-					<div
-						class="col-xs holder p-2"
-						style="--color:#000000; border: 1px solid #1c1d22;"
-					>
+					<div class="col-xs-4 col-sm holder p-1">
+						<span style="--color:#000000"></span>
+						<p>Black</p>
 						<p>#000000</p>
-						<figcaption>Black</figcaption>
+						<p>rgb(255,255,255)</p>
 					</div>
 				</div>
 			</div>
