@@ -1,0 +1,61 @@
+---
+title: This is the title
+author: Author McAuthorface
+authorRole: Genius
+ctaTitle: That’s it<mark class="dot">.</mark> That’s the article
+ctaSubtitle: Thinking of taking on the world? We’d love to help.
+---
+{% include _header.liquid %}
+		<section class="hero media">
+			<div class="container">
+				<div class="row middle-xs">
+					<div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
+						<h1>{{ title }}<mark class="dot">.</mark></h1>
+						<p><span class="faded">by</span> {{ author }}, {{ authorRole }} <span class="faded">• {{ date | readableDate }}</span></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-4 push-forward">
+			<div class="container">
+				<div class="row">
+					{{ content }}
+				</div>
+			</div>
+		</section>
+{%- if cta %}
+		<section class="py-8 black-to-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
+						<h2>{{ ctaTitle }}<mark class="dot">.</mark></h2>
+						<p class="subheading">{{ ctaSubtitle }}</p>
+					</div>
+				</div>
+				<div class="row mt-4 icons">
+					<div class="col-xs-6 col-md-4 mb-2 mt-1">
+						<a href="/network/" class="box glowing">
+							<img class="mt-2" src="/img/ico/connection2.svg" alt="">
+							<h2 class="mt-2">Network</h2>
+							<p class="hide-mobile">Latency-optimised connectivity</p>
+						</a>
+					</div>
+					<div class="col-xs-6 col-md-4 mb-2 mt-1">
+						<a href="/game-servers/" class="box glowing">
+							<img class="mt-2" src="/img/ico/server.svg" alt="">
+							<h2 class="mt-2">Game Servers</h2>
+							<p class="hide-mobile">Compute, storage and colocation</p>
+						</a>
+					</div>
+					<div class="col-xs-6 col-md-4 mb-2 mt-1">
+						<a href="/cloud/" class="box glowing">
+							<img class="mt-2" src="/img/ico/cloud.svg" alt="">
+							<h2 class="mt-2">Cloud Platform</h2>
+							<p class="hide-mobile">The high performance cloud</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+{%- endif %}
+{% include _footer.liquid %}

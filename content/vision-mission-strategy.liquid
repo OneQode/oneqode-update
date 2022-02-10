@@ -1,112 +1,101 @@
 ---
+layout: post.liquid
 section: gaming
 permalink: /vision-mission-strategy/
 metaTitle: The Vision, Mission & Strategy of OneQode™ • Matt Shearing
 metaDescription: Building the foundation for the next decade of connected experiences.
 ogImage: vision-mission-strategy.jpg
+heroImage: oq-globe
 changefreq: never
 priority: 0.4
 title: The Vision, Mission & Strategy of OneQode
-date: 2021-12-15
 author: Matt Shearing
 authorRole: Chief Executive Officer
+date: 2021-12-15
 tags: ['qode', 'oneqode', 'cloud', 'network', 'asia-pacific', 'servers']
+cta: true
 lazyLoadVideo: true
 ---
-{% include _header.liquid %}
-<style>
-	.no-webp section.hero {
-		background:	linear-gradient(to bottom, rgba(0,0,0,0.2), #000),
-					url(/img/bg/oq-globe.jpg) top center;
-		background-size: cover;
-		background-repeat: no-repeat;
-	}
-	.webp section.hero {
-		background:	linear-gradient(to bottom, rgba(0,0,0,0.2), #000),
-					url(/img/bg/oq-globe.webp) top center;
-		background-size: cover;
-		background-repeat: no-repeat;
-	}
-	blockquote {
-		margin: 2rem 0 2rem 0;
-		padding: 2rem;
-		border-left: 6px solid #333;
-	}
-	blockquote > :first-child {
-		margin-top: 0;
-	}
-	blockquote > :last-child {
-		margin-bottom: 0;
-	}
-	blockquote > * {
-		color: #cecece;
-	}
-	p.shout-out {
-		font-family: "Poppins", sans-serif;
-		font-weight: 600;
-		font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
-		margin: 2rem 0 2rem 2rem;
-		background: -webkit-linear-gradient(0deg, #00b0f0, #00597f);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-	}
-	.signature {
-		margin-left: 0;
-		max-width: 360px;
-	}
-	#network-reach picture::after {
-		content: "";
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		top: 0;
-		left: 0;
-		background-size: cover;
-		mix-blend-mode: screen;
-	}
-	.no-webp #network-reach picture::after {
-		background-image: url(/img/map-reach-overlay.jpg);
-	}
-	.webp #network-reach picture::after {
-		background-image: url(/img/map-reach-overlay.webp);
-	}
-	#pop-architecture {
-		max-width: 100%;
-	}
-	.stat {
-		background: -webkit-linear-gradient(258deg, #fff, #999);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-	}
-	@media (min-width: 48em) {
-		/* Move up on desktop */
-		#network-reach {
-			margin-top: -8rem;
-		}
-	}
-	@media (max-width: 64em) {
-		p.shout-out {
-			margin-left: 1.5rem;
-		}
-		.signature {
-			margin-left: 0;
-			max-width: 300px;
-		}
-	}
-</style>
-		<section class="hero media">
-			<div class="container">
-				<div class="row middle-xs">
-					<div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
-						<h1>{{ title }}<mark class="dot">.</mark></h1>
-						<p><span class="faded">by</span> {{ author }}, {{ authorRole }} <span class="faded">• {{ date | readableDate }}</span></p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="py-4 push-forward">
-			<div class="container">
-				<div class="row">
+						<style>
+							.no-webp section.hero {
+								background:	linear-gradient(to bottom, rgba(0,0,0,0.2), #000),
+											url(/img/bg/{{ heroImage }}.jpg) top center;
+								background-size: cover;
+								background-repeat: no-repeat;
+							}
+							.webp section.hero {
+								background:	linear-gradient(to bottom, rgba(0,0,0,0.2), #000),
+											url(/img/bg/{{ heroImage }}.webp) top center;
+								background-size: cover;
+								background-repeat: no-repeat;
+							}
+							blockquote {
+								margin: 2rem 0 2rem 0;
+								padding: 2rem;
+								border-left: 6px solid #333;
+							}
+							blockquote > :first-child {
+								margin-top: 0;
+							}
+							blockquote > :last-child {
+								margin-bottom: 0;
+							}
+							blockquote > * {
+								color: #cecece;
+							}
+							p.shout-out {
+								font-family: "Poppins", sans-serif;
+								font-weight: 600;
+								font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
+								margin: 2rem 0 2rem 2rem;
+								background: -webkit-linear-gradient(0deg, #00b0f0, #00597f);
+								-webkit-background-clip: text;
+								-webkit-text-fill-color: transparent;
+							}
+							.signature {
+								margin-left: 0;
+								max-width: 360px;
+							}
+							#network-reach picture::after {
+								content: "";
+								position: absolute;
+								height: 100%;
+								width: 100%;
+								top: 0;
+								left: 0;
+								background-size: cover;
+								mix-blend-mode: screen;
+							}
+							.no-webp #network-reach picture::after {
+								background-image: url(/img/map-reach-overlay.jpg);
+							}
+							.webp #network-reach picture::after {
+								background-image: url(/img/map-reach-overlay.webp);
+							}
+							#pop-architecture {
+								max-width: 100%;
+							}
+							.stat {
+								background: -webkit-linear-gradient(258deg, #fff, #999);
+								-webkit-background-clip: text;
+								-webkit-text-fill-color: transparent;
+							}
+							@media (min-width: 48em) {
+								/* Move up on desktop */
+								#network-reach {
+									margin-top: -8rem;
+								}
+							}
+							@media (max-width: 64em) {
+								p.shout-out {
+									margin-left: 1.5rem;
+								}
+								.signature {
+									margin-left: 0;
+									max-width: 300px;
+								}
+							}
+						</style>
 					<div class="col-xs-12 col-md-8 col-md-offset-2">
 						<p>As OneQode heads into 2022 with the goal of network expansion and taking our products to the market (and a successful funding round!), I feel that it’s of utmost importance to clearly dictate where we’re going, and why we’re going there.</p>
 						<p>We’re a team of 20 people right now, but we’ll soon be a lot larger — so having a clear vision, mission and strategy is important.</p>
@@ -322,37 +311,3 @@ lazyLoadVideo: true
 				</div>
 			</div>
 		</section>
-		<section class="py-8 black-to-footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
-						<h2>That’s it<mark class="dot">.</mark> That’s the article<mark class="dot">.</mark></h2>
-						<p class="subheading">Thinking of taking on the world? We’d love to help.</p>
-					</div>
-				</div>
-				<div class="row mt-4 icons">
-					<div class="col-xs-6 col-md-4 mb-2 mt-1">
-						<a href="/network/" class="box glowing">
-							<img class="mt-2" src="/img/ico/connection2.svg" alt="">
-							<h2 class="mt-2">Network</h2>
-							<p class="hide-mobile">Latency-optimised connectivity</p>
-						</a>
-					</div>
-					<div class="col-xs-6 col-md-4 mb-2 mt-1">
-						<a href="/game-servers/" class="box glowing">
-							<img class="mt-2" src="/img/ico/server.svg" alt="">
-							<h2 class="mt-2">Game Servers</h2>
-							<p class="hide-mobile">Compute, storage and colocation</p>
-						</a>
-					</div>
-					<div class="col-xs-6 col-md-4 mb-2 mt-1">
-						<a href="/cloud/" class="box glowing">
-							<img class="mt-2" src="/img/ico/cloud.svg" alt="">
-							<h2 class="mt-2">Cloud Platform</h2>
-							<p class="hide-mobile">The high performance cloud</p>
-						</a>
-					</div>
-				</div>
-			</div>
-		</section>
-{% include _footer.liquid %}

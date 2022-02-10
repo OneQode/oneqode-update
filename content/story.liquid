@@ -1,16 +1,21 @@
 ---
+layout: post.liquid
 section: gaming
 permalink: /story/
 metaTitle: The Origin Story of OneQode™ • Austin Gallagher
 metaDescription: We started as a last-mile internet provider, then we decided to go upstream.
 ogImage: story.jpg
+heroImage: roof-wireless-dish-brisbane
 changefreq: never
 priority: 0.4
 title: The Origin Story of OneQode
-tags: ['qode', 'oneqode', 'guam', 'asia-pacific']
-date: 2022-02-01
 author: Austin Gallagher
 authorRole: Brand Journalist
+date: 2022-02-22
+tags: ['qode', 'oneqode', 'guam', 'asia-pacific']
+cta: true
+ctaTitle: This is just the start
+ctaSubtitle: Thinking of taking on the world? We’d love to help.
 lazyLoadVideo: true
 ---
 {% comment %}
@@ -27,67 +32,53 @@ lazyLoadVideo: true
 		 * * * * * * * * * * * * * * *  
 	-->
 {% endcomment %}
-{% include _header.liquid %}
-<style>
-	.no-webp section.hero {
-		background:	linear-gradient(to bottom, rgba(0,0,0,0.2) 50%, #000),
-					url(/img/bg/roof-wireless-dish-brisbane.jpg) bottom center;
-		background-size: cover;
-		background-repeat: no-repeat;
-	}
-	.webp section.hero {
-		background:	linear-gradient(to bottom, rgba(0,0,0,0.2) 50%, #000),
-					url(/img/bg/roof-wireless-dish-brisbane.webp) bottom center;
-		background-size: cover;
-		background-repeat: no-repeat;
-	}
-	blockquote {
-		margin: 2rem 0 2rem 0;
-		padding: 2rem;
-		border-left: 6px solid #333;
-	}
-	blockquote > :first-child {
-		margin-top: 0;
-	}
-	blockquote > :last-child {
-		margin-bottom: 0;
-	}
-	blockquote > * {
-		color: #cecece;
-	}
-	video.full-width {
-		height: auto;
-	}
-	/* Stat Gradient */
-	.stat {
-		background: -webkit-linear-gradient(258deg, #fff, #999);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-	}
-	span.unit {
-		font-size: 2.5rem;
-		display: inline-block;
-	}
-	@media (min-width: 48em) {
-		/* Move up on desktop */
-		.map {
-			margin-top: -16rem;
-		}
-	}
-</style>
-		<section class="hero media">
-			<div class="container">
-				<div class="row middle-xs">
-					<div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
-						<h1>{{ title }}<mark class="dot">.</mark></h1>
-						<p><span class="faded">by</span> {{ author }}, {{ authorRole }} <span class="faded">• {{ date | readableDate }}</span></p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="py-4 push-forward">
-			<div class="container">
-				<div class="row">
+						<style>
+							.no-webp section.hero {
+								background:	linear-gradient(to bottom, rgba(0,0,0,0.2) 50%, #000),
+											url(/img/bg/{{ heroImage }}.jpg) bottom center;
+								background-size: cover;
+								background-repeat: no-repeat;
+							}
+							.webp section.hero {
+								background:	linear-gradient(to bottom, rgba(0,0,0,0.2) 50%, #000),
+											url(/img/bg/{{ heroImage }}.webp) bottom center;
+								background-size: cover;
+								background-repeat: no-repeat;
+							}
+							blockquote {
+								margin: 2rem 0 2rem 0;
+								padding: 2rem;
+								border-left: 6px solid #333;
+							}
+							blockquote > :first-child {
+								margin-top: 0;
+							}
+							blockquote > :last-child {
+								margin-bottom: 0;
+							}
+							blockquote > * {
+								color: #cecece;
+							}
+							video.full-width {
+								height: auto;
+							}
+							/* Stat Gradient */
+							.stat {
+								background: -webkit-linear-gradient(258deg, #fff, #999);
+								-webkit-background-clip: text;
+								-webkit-text-fill-color: transparent;
+							}
+							span.unit {
+								font-size: 2.5rem;
+								display: inline-block;
+							}
+							@media (min-width: 48em) {
+								/* Move up on desktop */
+								.map {
+									margin-top: -16rem;
+								}
+							}
+						</style>
 					<div class="col-xs-12 col-md-8 col-md-offset-2">
 						<h2>Latency. Lag. Rubberbanding.</h2>
 						<p>Call it what you like, there isn’t a gamer on the planet who hasn’t experienced it.</p>
@@ -644,7 +635,7 @@ lazyLoadVideo: true
 								autoplay muted loop playsinline disableRemotePlayback
 							>
 								<source
-									data-src="https://oneqode.sfo2.digitaloceanspaces.com/videos/inglourious-basterds-getting-pretty-good.mp4"\
+									data-src="https://oneqode.sfo2.digitaloceanspaces.com/videos/inglourious-basterds-getting-pretty-good.mp4"
 									type="video/mp4"
 								>
 							</video>
@@ -678,37 +669,3 @@ lazyLoadVideo: true
 				</div>
 			</div>
 		</section>
-		<section class="py-8 black-to-footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
-						<h2>This is just the start<mark class="dot">.</mark></h2>
-						<p class="subheading">Thinking of taking on the world? We’d love to help.</p>
-					</div>
-				</div>
-				<div class="row mt-4 icons">
-					<div class="col-xs-6 col-md-4 mb-2 mt-1">
-						<a href="/network/" class="box glowing">
-							<img class="mt-2" src="/img/ico/connection2.svg" alt="">
-							<h2 class="mt-2">Network</h2>
-							<p class="hide-mobile">Latency-optimised connectivity</p>
-						</a>
-					</div>
-					<div class="col-xs-6 col-md-4 mb-2 mt-1">
-						<a href="/game-servers/" class="box glowing">
-							<img class="mt-2" src="/img/ico/server.svg" alt="">
-							<h2 class="mt-2">Game Servers</h2>
-							<p class="hide-mobile">Compute, storage and colocation</p>
-						</a>
-					</div>
-					<div class="col-xs-6 col-md-4 mb-2 mt-1">
-						<a href="/cloud/" class="box glowing">
-							<img class="mt-2" src="/img/ico/cloud.svg" alt="">
-							<h2 class="mt-2">Cloud Platform</h2>
-							<p class="hide-mobile">The high performance cloud</p>
-						</a>
-					</div>
-				</div>
-			</div>
-		</section>
-{% include _footer.liquid %}
