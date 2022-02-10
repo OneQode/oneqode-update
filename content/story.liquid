@@ -6,11 +6,11 @@ metaDescription: We started as a last-mile internet provider, then we decided to
 ogImage: story.jpg
 changefreq: never
 priority: 0.4
-tags: internal
-postType: Blog Post
-postTitle: The Origin Story of OneQode
+title: The Origin Story of OneQode
+tags: ['qode', 'oneqode', 'guam', 'asia-pacific']
 date: 2022-02-01
-mediaContact: Austin Gallagher, Brand Journalist
+author: Austin Gallagher
+authorRole: Brand Journalist
 lazyLoadVideo: true
 ---
 {% comment %}
@@ -20,7 +20,6 @@ lazyLoadVideo: true
 		* * * * * * * * * * * * * * * * 
 		 * * * * * * * * * * * * * * *  
 		IMPORTANT:
-			- Hero image
 			- Other illustrations
 		* * * * * * * * * * * * * * * * 
 		 * * * * * * * * * * * * * * *  
@@ -80,9 +79,8 @@ lazyLoadVideo: true
 			<div class="container">
 				<div class="row middle-xs">
 					<div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
-						<p class="superheading">{{ postType }}</p>
-						<h1>{{ postTitle }}<mark class="dot">.</mark></h1>
-						<p>{{ mediaContact }} <span class="faded">• {{ date | readableDate }}</span></p>
+						<h1>{{ title }}<mark class="dot">.</mark></h1>
+						<p><span class="faded">by</span> {{ author }}, {{ authorRole }} <span class="faded">• {{ date | readableDate }}</span></p>
 					</div>
 				</div>
 			</div>
