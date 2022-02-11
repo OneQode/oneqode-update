@@ -16,86 +16,89 @@ tags: ['qode', 'oneqode', 'cloud', 'network', 'asia-pacific', 'servers']
 cta: true
 lazyLoadVideo: true
 ---
-						<style>
-							.no-webp section.hero {
-								background:	linear-gradient(to bottom, rgba(0,0,0,0.2), #000),
-											url(/img/bg/{{ heroImage }}.jpg) top center;
-								background-size: cover;
-								background-repeat: no-repeat;
-							}
-							.webp section.hero {
-								background:	linear-gradient(to bottom, rgba(0,0,0,0.2), #000),
-											url(/img/bg/{{ heroImage }}.webp) top center;
-								background-size: cover;
-								background-repeat: no-repeat;
-							}
-							blockquote {
-								margin: 2rem 0 2rem 0;
-								padding: 2rem;
-								border-left: 6px solid #333;
-							}
-							blockquote > :first-child {
-								margin-top: 0;
-							}
-							blockquote > :last-child {
-								margin-bottom: 0;
-							}
-							blockquote > * {
-								color: #cecece;
-							}
-							p.shout-out {
-								font-family: "Poppins", sans-serif;
-								font-weight: 600;
-								font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
-								margin: 2rem 0 2rem 2rem;
-								background: -webkit-linear-gradient(0deg, #00b0f0, #00597f);
-								-webkit-background-clip: text;
-								-webkit-text-fill-color: transparent;
-							}
-							.signature {
-								margin-left: 0;
-								max-width: 360px;
-							}
-							#network-reach picture::after {
-								content: "";
-								position: absolute;
-								height: 100%;
-								width: 100%;
-								top: 0;
-								left: 0;
-								background-size: cover;
-								mix-blend-mode: screen;
-							}
-							.no-webp #network-reach picture::after {
-								background-image: url(/img/map-reach-overlay.jpg);
-							}
-							.webp #network-reach picture::after {
-								background-image: url(/img/map-reach-overlay.webp);
-							}
-							#pop-architecture {
-								max-width: 100%;
-							}
-							.stat {
-								background: -webkit-linear-gradient(258deg, #fff, #999);
-								-webkit-background-clip: text;
-								-webkit-text-fill-color: transparent;
-							}
-							@media (min-width: 48em) {
-								/* Move up on desktop */
-								#network-reach {
-									margin-top: -8rem;
-								}
-							}
-							@media (max-width: 64em) {
-								p.shout-out {
-									margin-left: 1.5rem;
-								}
-								.signature {
-									margin-left: 0;
-									max-width: 300px;
-								}
-							}
-						</style>
+		<style>
+			.no-webp section.hero {
+				background:	linear-gradient(to bottom, rgba(0,0,0,0.2), #000),
+							url(/img/bg/{{ heroImage }}.jpg) top center;
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+			.webp section.hero {
+				background:	linear-gradient(to bottom, rgba(0,0,0,0.2), #000),
+							url(/img/bg/{{ heroImage }}.webp) top center;
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+			blockquote {
+				margin: 2rem 0 2rem 0;
+				padding: 2rem;
+				border-left: 6px solid #333;
+			}
+			blockquote > :first-child {
+				margin-top: 0;
+			}
+			blockquote > :last-child {
+				margin-bottom: 0;
+			}
+			blockquote > * {
+				color: #cecece;
+			}
+			p.shout-out {
+				font-family: "Poppins", sans-serif;
+				font-weight: 600;
+				font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
+				margin: 2rem 0 2rem 2rem;
+				background: -webkit-linear-gradient(0deg, #00b0f0, #00597f);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+			.signature {
+				margin-left: 0;
+				max-width: 360px;
+			}
+			#network-reach picture::after {
+				content: "";
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				top: 0;
+				left: 0;
+				background-size: cover;
+				mix-blend-mode: screen;
+			}
+			.no-webp #network-reach picture::after {
+				background-image: url(/img/map-reach-overlay.jpg);
+			}
+			.webp #network-reach picture::after {
+				background-image: url(/img/map-reach-overlay.webp);
+			}
+			#pop-architecture {
+				max-width: 100%;
+			}
+			.stat {
+				background: -webkit-linear-gradient(258deg, #fff, #999);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+			@media (min-width: 48em) {
+				/* Move up on desktop */
+				#network-reach {
+					margin-top: -8rem;
+				}
+			}
+			@media (max-width: 64em) {
+				p.shout-out {
+					margin-left: 1.5rem;
+				}
+				.signature {
+					margin-left: 0;
+					max-width: 300px;
+				}
+			}
+		</style>
+		<section class="py-4 push-forward">
+			<div class="container">
+				<div class="row">
 					<div class="col-xs-12 col-md-8 col-md-offset-2">
 						<p>As OneQode heads into 2022 with the goal of network expansion and taking our products to the market (and a successful funding round!), I feel that it’s of utmost importance to clearly dictate where we’re going, and why we’re going there.</p>
 						<p>We’re a team of 20 people right now, but we’ll soon be a lot larger — so having a clear vision, mission and strategy is important.</p>
@@ -204,7 +207,7 @@ lazyLoadVideo: true
 		</section>
 		<section id="network-reach">
 {% include diagrams/_network-map.liquid %}
-			<figcaption class="mt-0">OneQode’s current reach <span style="color: #949494">// <a href="/network/">About the network</a></figcaption>
+			<figcaption class="mt-0">OneQode’s current reach // <a href="/network/">About the network</a></figcaption>
 		</section>
 		<section>
 			<div class="container">
@@ -305,7 +308,7 @@ lazyLoadVideo: true
 						<p>Gaming is the harbinger of what’s coming and it needs high-performance connectivity and compute across the board.</p>
 						<p>We’re building the foundation for this now, so people everywhere can benefit in the future.</p>
 						<p>We hope you join us on this journey, we couldn’t be more excited to see where it takes us.</p>
-						<img class="signature block mt-4" src="/img/content/vision-mission-strategy/matt-signature.png" alt="Matt Shearing’s signature" class="signature">
+						<img class="signature block mt-4" src="/img/content/vision-mission-strategy/matt-signature.png" alt="Matt Shearing’s signature">
 						<p class="superheading">Matt Shearing, CEO</p>
 					</div>
 				</div>

@@ -32,53 +32,56 @@ lazyLoadVideo: true
 		 * * * * * * * * * * * * * * *  
 	-->
 {% endcomment %}
-						<style>
-							.no-webp section.hero {
-								background:	linear-gradient(to bottom, rgba(0,0,0,0.2) 50%, #000),
-											url(/img/bg/{{ heroImage }}.jpg) bottom center;
-								background-size: cover;
-								background-repeat: no-repeat;
-							}
-							.webp section.hero {
-								background:	linear-gradient(to bottom, rgba(0,0,0,0.2) 50%, #000),
-											url(/img/bg/{{ heroImage }}.webp) bottom center;
-								background-size: cover;
-								background-repeat: no-repeat;
-							}
-							blockquote {
-								margin: 2rem 0 2rem 0;
-								padding: 2rem;
-								border-left: 6px solid #333;
-							}
-							blockquote > :first-child {
-								margin-top: 0;
-							}
-							blockquote > :last-child {
-								margin-bottom: 0;
-							}
-							blockquote > * {
-								color: #cecece;
-							}
-							video.full-width {
-								height: auto;
-							}
-							/* Stat Gradient */
-							.stat {
-								background: -webkit-linear-gradient(258deg, #fff, #999);
-								-webkit-background-clip: text;
-								-webkit-text-fill-color: transparent;
-							}
-							span.unit {
-								font-size: 2.5rem;
-								display: inline-block;
-							}
-							@media (min-width: 48em) {
-								/* Move up on desktop */
-								.map {
-									margin-top: -16rem;
-								}
-							}
-						</style>
+		<style>
+			.no-webp section.hero {
+				background:	linear-gradient(to bottom, rgba(0,0,0,0.2) 50%, #000),
+							url(/img/bg/{{ heroImage }}.jpg) bottom center;
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+			.webp section.hero {
+				background:	linear-gradient(to bottom, rgba(0,0,0,0.2) 50%, #000),
+							url(/img/bg/{{ heroImage }}.webp) bottom center;
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+			blockquote {
+				margin: 2rem 0 2rem 0;
+				padding: 2rem;
+				border-left: 6px solid #333;
+			}
+			blockquote > :first-child {
+				margin-top: 0;
+			}
+			blockquote > :last-child {
+				margin-bottom: 0;
+			}
+			blockquote > * {
+				color: #cecece;
+			}
+			video.full-width {
+				height: auto;
+			}
+			/* Stat Gradient */
+			.stat {
+				background: -webkit-linear-gradient(258deg, #fff, #999);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+			span.unit {
+				font-size: 2.5rem;
+				display: inline-block;
+			}
+			@media (min-width: 48em) {
+				/* Move up on desktop */
+				.map {
+					margin-top: -16rem;
+				}
+			}
+		</style>
+		<section class="py-4 push-forward">
+			<div class="container">
+				<div class="row">
 					<div class="col-xs-12 col-md-8 col-md-offset-2">
 						<h2>Latency. Lag. Rubberbanding.</h2>
 						<p>Call it what you like, there isn’t a gamer on the planet who hasn’t experienced it.</p>
@@ -538,7 +541,7 @@ lazyLoadVideo: true
 					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1122 950" aria-labelledby="venntitle venndescription" id="venn-diagram">
 							<title id="venntitle">The OneQode Venn venn</title>
-							<desc id="diagramdescription">A diagram showing how OneQode is the convergence of three things: gamers who think internet sucks, an experienced carrier architect, and a full support team.</desc>
+							<desc id="venndescription">A diagram showing how OneQode is the convergence of three things: gamers who think internet sucks, an experienced carrier architect, and a full support team.</desc>
 							<style>
 							.poppins {
 								font-family: "Poppins", sans-serif;
