@@ -45,7 +45,8 @@ pageSubtitle: Stories, articles and resources<br class="responsive"> from the On
 				border: 1px solid #666;
 				background-blend-mode: normal;
 			}
-			#articles a div > :last-child {
+			#articles a div > :last-child,
+			#articles div a > :last-child {
 				margin-bottom: 0;
 			}
 			.no-webp .story-of-oneqode {
@@ -57,12 +58,21 @@ pageSubtitle: Stories, articles and resources<br class="responsive"> from the On
 				background-size: cover;
 			}
 			/* Match heights for half-width links */
-			.col-xs-12.col-md-6.my-1 > a {
+			#articles .col-md-6 > a {
 				justify-content: center;
 				align-items: center;
-				padding: 4rem 2rem;
+				padding: 2rem;
+				height: 100%;
 			}
-
+			/* Headings for half-width links */
+			@media (min-width: 48em) {
+				#articles .col-md-6 h2 {
+					font-size: 2rem;
+				}
+				#articles .col-md-6 p.subheading {
+					font-size: 1.4rem;
+				}
+			}
 		</style>
 		<section id="featured" class="py-8 vision-mission-strategy">
 			<div class="container">
@@ -80,7 +90,7 @@ pageSubtitle: Stories, articles and resources<br class="responsive"> from the On
 		<section id="articles" class="mt-4 text-center">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-12">
+					<div class="col-xs-12 mb-1">
 						<a href="/story/" class="story-of-oneqode">
 							<div class="col-xs-12 col-md-8 col-md-offset-2 py-8">
 								<h2>The Origin Story of OneQode</h2>
@@ -91,17 +101,17 @@ pageSubtitle: Stories, articles and resources<br class="responsive"> from the On
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-xs-12 col-md-6 my-1">
+					<div class="col-xs-12 col-md-6 mb-1">
 						<a href="#" class="meet-austin">
 							<h2>Meet Austin Guidry<mark class="dot">.</mark></h2>
 							<p class="subheading">An interview with OneQode's growth officer, retired StarCraft pro, Austin Guidry</p>
 							<p class="author">by Austin Gallagher <span class="date">• 15 Feb 2022</span></p>
 						</a>
 					</div>
-					<div class="col-xs-12 col-md-6 my-1">
+					<div class="col-xs-12 col-md-6 mb-1">
 						<a href="#" class="tailspin">
-							<h2>Tailspin<mark class="dot">.</mark></h2>
-							<p class="subheading">An interview with OneQode's growth officer, retired StarCraft pro, Austin Guidry</p>
+							<h2>Tailspin: How Multiplayer Game Populations Decline</h2>
+							<p class="subheading">Unpacking the the kiss of death for multiplayer games</p>
 							<p class="author">by Austin Gallagher <span class="date">• 15 Feb 2022</span></p>
 						</a>
 					</div>

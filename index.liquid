@@ -21,7 +21,7 @@ pageTitle: Multiplayer infrastructure<mark class="dot">,</mark> built for gaming
 			}
 			section.hero {
 				padding-top: 6rem !important;
-				min-height: 85vh;
+				min-height: 75vh;
 				height: 100%;
 			}
 			.ml-1 {
@@ -31,12 +31,12 @@ pageTitle: Multiplayer infrastructure<mark class="dot">,</mark> built for gaming
 			canvas {
 				position: absolute;
 				z-index: 0;
-				height:  80vh !important;
+				height:  75vh !important;
 			}
 			section.hero::after {
 				position: absolute;
 				width: 100%;
-				height: 80vh;
+				height: 75vh;
 				content: " ";
 				background: linear-gradient(to bottom, transparent 70%, #000);
 			}
@@ -185,11 +185,14 @@ pageTitle: Multiplayer infrastructure<mark class="dot">,</mark> built for gaming
 							<span class="typed-content-5">server providers</span>
 						</p>
 						<p class="faded">Reach more gamers across Asia-Pacific at low latency with OneQode. <br class="responsive"> Performance servers, strategic locations, DDoS-protected.</p>
-						<p class="mt-2"><a href="#overview" class="button ghost">Learn More</a> <span class="hide-mobile"><span class="faded ml-1">or</span> <a href="/request-trial/" class="m-1">request trial</a></span></p>
+						{%- comment %}
+						<p class="mt-2"><a href="#overview" class="button ghost">Learn More</a> <span class="hide-mobile"><span class="faded ml-1">or</span> <a href="/contact/" class="m-1 chevron">contact us</a></span></p>
+						{%- endcomment %}
 					</div>
 				</div> 
 			</div>
 		</section>
+		{%- comment %}
 		<section id="overview" class="pt-4 pb-8">
 			<div class="container">
 				<div class="row">
@@ -202,6 +205,7 @@ pageTitle: Multiplayer infrastructure<mark class="dot">,</mark> built for gaming
 				</div>
 			</div>
 		</section>
+		{%- endcomment %}
 		<section id="network" class="py-8">
 			<div class="container mobile-text-center">
 				<div class="row">

@@ -437,13 +437,6 @@ li.has-submenu.open .submenu li a {
 			border-bottom: none;
 			border-top: 1px solid #333;
 		}
-		/* Submenu standout button */
-		.submenu li a.standout {
-			margin: 1.5rem -1.5rem -1.5rem;
-			padding: 1.5rem !important;
-			background: #1c1d22;
-			border-radius: 0 0 10px 10px;
-		}
 	}
 	/* Menu: Mobile */
 	@media (max-width: 48em) {
@@ -479,11 +472,6 @@ li.has-submenu.open .submenu li a {
 			margin: initial;
 			border: initial;
 			padding: initial;
-		}
-		.submenu li a.standout {
-			margin: 1rem auto auto auto;
-			padding: .2rem 0 !important;
-			background: none;
 		}
 	}
 
