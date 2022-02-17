@@ -332,7 +332,7 @@ nav.main a:focus,
 nav.main .submenu a:focus {
 	color: #00b0f0;
 }
-nav.main li:last-of-type a {
+nav.main > ul > li:last-of-type a {
 	padding-right: 0;
 }
 li.has-submenu > a {
@@ -432,6 +432,18 @@ li.has-submenu.open .submenu li a {
 			border-bottom: 1px solid #333;
 			padding: 1.2rem 1.5rem;
 		}
+		li:last-child.parent a {
+			margin: 1.5rem -1.5rem -1.5rem -1.5rem;
+			border-bottom: none;
+			border-top: 1px solid #333;
+		}
+		/* Submenu standout button */
+		.submenu li a.standout {
+			margin: 1.5rem -1.5rem -1.5rem;
+			padding: 1.5rem !important;
+			background: #1c1d22;
+			border-radius: 0 0 10px 10px;
+		}
 	}
 	/* Menu: Mobile */
 	@media (max-width: 48em) {
@@ -465,8 +477,13 @@ li.has-submenu.open .submenu li a {
 		li.parent a {
 			background: none;
 			margin: initial;
-			border-bottom: initial;
+			border: initial;
 			padding: initial;
+		}
+		.submenu li a.standout {
+			margin: 1rem auto auto auto;
+			padding: .2rem 0 !important;
+			background: none;
 		}
 	}
 
@@ -989,7 +1006,6 @@ CONTENT
 .box.glowing {
 	text-decoration: none;
 	color: #fff;
-	display: block;
 	padding: 1rem;
 	text-align: center;
 	border: 1px solid #333;
@@ -1402,7 +1418,7 @@ RESPONSIVE OVERRIDES
 		opacity: 0;
 		transition: none;
 	}
-	nav.main li:last-of-type a {
+	nav.main > ul > li:last-of-type a {
 		padding-right: 1rem; /* Overwrites desktop rightmost alignment*/
 	}
 	nav.main.active a {
