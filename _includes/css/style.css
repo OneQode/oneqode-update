@@ -1081,7 +1081,7 @@ CONTENT
 .press-info :last-child {
 	margin-bottom: 0;
 }
-a.rss-link svg {
+.rss-link svg {
 	max-width: 0.5em;
 }
 /* Statistics */
@@ -1522,6 +1522,9 @@ RESPONSIVE OVERRIDES
 	}
 	.callout span {
 		margin-top: 1rem;
+	}
+	.rss-link svg {
+		max-width: 1em;
 	}
 	/* Don't animate maps */
 	.map .active path,

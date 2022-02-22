@@ -1,14 +1,14 @@
 ---json
 {
-	"permalink": "media-feed.xml",
+	"permalink": "content-feed.xml",
 	"eleventyExcludeFromCollections": true,
 	"metadata": {
-		"title": "OneQode™ Newsroom",
-		"subtitle": "The latest press releases and product updates from OneQode.",
-		"url": "https://oneqode.com/media/",
-		"feedUrl": "https://oneqode.com/media-feed.xml",
+		"title": "The Qode • Stories & Resources from OneQode™",
+		"subtitle": "The latest stories, articles and resources from the OneQode team.",
+		"url": "https://oneqode.com/content/",
+		"feedUrl": "https://oneqode.com/content-feed.xml",
 		"author": {
-			"name": "OneQode Media"
+			"name": "OneQode™"
 		}
 	}
 }
@@ -19,13 +19,13 @@
 	<subtitle>{{ metadata.subtitle }}</subtitle>
 	<link href="{{ metadata.feedUrl }}" rel="self"/>
 	<link href="{{ metadata.url }}"/>
-	<updated>{{ collections.internal | rssLastUpdatedDate }}</updated>
+	<updated>{{ collections.qode | rssLastUpdatedDate }}</updated>
 	<id>{{ metadata.url }}</id>
 	<author>
 		<name>{{ metadata.author.name }}</name>
 		<email>{{ global.mediaEmail }}</email>
 	</author>
-	{%- for post in collections.internal %}
+	{%- for post in collections.qode %}
 	{% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
 	<entry>
 		<title>{{ post.data.postTitle }}</title>

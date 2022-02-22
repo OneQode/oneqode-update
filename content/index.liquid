@@ -1,13 +1,14 @@
 ---
-layout: page.liquid
 metaTitle: The Qode • Stories & Resources from OneQode™
-metaDescription: OneQode has deployed server and datacentre capacity in Guam to radically improve real-time internet applications in Asia Pacific.
-changefreq: monthly
+metaDescription: Stories, articles and resources from the OneQode team.
+ogImage: qode.jpg
+changefreq: weekly
 priority: 0.8
-ogImage: og-image.jpg
+contentRSS: true
 pageTitle: The Qode
 pageSubtitle: Stories, articles and resources<br class="responsive"> from the OneQode team
 ---
+{% include _header.liquid %}
 		<style>
 			section.hero {
 				/*
@@ -74,6 +75,27 @@ pageSubtitle: Stories, articles and resources<br class="responsive"> from the On
 				}
 			}
 		</style>
+		<section class="hero">
+			<div class="container">
+				<div class="row middle-xs">
+					<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+						{%- if pageSupertitle %}
+						<p class="superheading">{{ pageSupertitle }}</p>
+						{%- endif %}
+						<h1>{{ pageTitle }}<mark class="dot">.</mark>
+							<a href="/content-feed.xml" class="rss-link" title="Subscribe to the Qode RSS feed" target="_blank">
+								<svg viewBox="0 0 16 16" class="bi bi-rss" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+									<path d="M5.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+									<path fill-rule="evenodd" d="M2.5 3.5a1 1 0 0 1 1-1c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1-1-1zm0 4a1 1 0 0 1 1-1 6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1-1-1z" />
+								</svg>
+							</a>
+						</h1>
+						<p class="subheading">{{ pageSubtitle }}</p>
+					</div>
+				</div>
+			</div>
+		</section>
 		<section id="featured" class="py-8 vision-mission-strategy">
 			<div class="container">
 				<div class="row middle-xs text-center py-4">
@@ -95,11 +117,12 @@ pageSubtitle: Stories, articles and resources<br class="responsive"> from the On
 							<div class="col-xs-12 col-md-8 col-md-offset-2 py-8">
 								<h2>The Origin Story of OneQode</h2>
 								<p class="subheading">We started as a last-mile internet provider, then we decided to go upstream.</p>
-								<p class="author">by Austin Gallagher <span class="date">• 15 Feb 2022</span></p>
+								<p class="author">by Austin Gallagher <span class="date">• 22 Feb 2022</span></p>
 							</div>
 						</a>
 					</div>
 				</div>
+				{%- comment %}
 				<div class="row">
 					<div class="col-xs-12 col-md-6 mb-1">
 						<a href="#" class="meet-austin">
@@ -116,16 +139,18 @@ pageSubtitle: Stories, articles and resources<br class="responsive"> from the On
 						</a>
 					</div>
 				</div>
+				{%- endcomment %}
 			</div>
 		</section>
-		<section class="black-to-footer py-8">
+		<section class="black-to-footer py-8 mt-8">
 			<div class="container">
 				<div class="row middle-xs text-center push-forward">
 					<div class="col-md-8 col-md-offset-2">
-						<h2>We are building the network for the digital worlds of the future<mark class="dot">.</mark></h2>
-						<p class="subheading">This text should probably be changed</p>
-						<p class="mt-2"><a href="/about/" class="button">Learn more</a></p>
+						<h2>Multiplayer infrastructure<mark class="dot">,</mark><br class="responsive"> built for gaming<mark class="dot">.</mark></h2>
+						<p class="subheading">We’re laying the foundation for the next decade of connected experiences.</p>
+						<p class="mt-2"><a href="/about/" class="button">About OneQode</a></p>
 					</div>
 				</div>
 			</div>
 		</section>
+{% include _footer.liquid %}

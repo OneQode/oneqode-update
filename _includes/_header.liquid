@@ -42,6 +42,15 @@
 	{%- if canonical %}
 	<link rel="canonical" href="{{ global.url }}{{ canonical }}">
 	{%- endif %}
+	{%- if mediaRSS %}
+	<link rel="alternate" type="application/rss+xml" title="RSS Feed for OneQode Newsroom" href="/media-feed.xml" />
+	{%- endif %}
+	{%- if careersRSS %}
+	<link rel="alternate" type="application/rss+xml" title="RSS Feed for OneQode Careers" href="/careers-feed.xml" />
+	{%- endif %}
+	{%- if contentRSS %}
+	<link rel="alternate" type="application/rss+xml" title="RSS Feed for The Qode" href="/content-feed.xml" />
+	{%- endif %}
 	<!-- Organisation Info -->
 	<script type="application/ld+json">
 		{
