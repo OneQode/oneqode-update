@@ -580,7 +580,8 @@ h2,
 .career h1 {
 	font-size: 3rem;
 }
-h3 {
+h3,
+.h3 {
 	font-size: 2rem;
 }
 h4 {
@@ -1474,7 +1475,8 @@ RESPONSIVE OVERRIDES
 	.career h1 {
 		font-size: 1.6rem;
 	}
-	h3 {
+	h3,
+	.h3 {
 		font-size:  1.3rem;
 	}
 	.linked h3 {

@@ -12,74 +12,85 @@ pageSubtitle: With the region’s furthest-reaching<br class="responsive"> game 
 slider: true
 ---
 {% include _header.liquid %}
+{%- comment %}
+<!--
+* * * * * * * * * * * * * * * 
+
+!TODO:
+- Contact form
+- Plan event form
+
+* * * * * * * * * * * * * * * 
+-->
+{%- endcomment %}
 		<style>
-		section.hero {
-			min-height: 85vh;
-		}
-		.no-webp .hero {
-			background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/space-star-field-warp-speed.jpg") no-repeat center center;
-			background-size: cover;
-		}
-		.webp .hero {
-			background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/space-star-field-warp-speed.webp") no-repeat center center;
-			background-size: cover;
-		}
-		/* Swiper */
-		:root {
-			--swiper-theme-color: #00b0f0;
-			--swiper-pagination-bullet-inactive-color: #999;
-		}
-		.swiper {
-			width: 100%;
-			height: 100%;
-			padding-top: 1rem;
-			padding-bottom: 1rem;
-		}
-		.swiper-slide {
-			text-align: center;
-			transition: opacity 0.2s;
-			background: #17181C;
-			border-radius: 15px;
-			padding: 4rem;
-		}
-		.swiper-slide:not(.swiper-slide-active) {
-			opacity: 0.4;
-		}
-		@media screen and (max-width: 64em) {
-			.swiper-slide {
-				padding: 2rem 1rem;
-				background: #333;
+			section.hero {
+				min-height: 85vh;
 			}
-		}
-		/* Icons */
-		.icon.play-fast {
-			mask: url(/img/ico/play-fast.svg) no-repeat center;
-			-webkit-mask: url(/img/ico/play-fast.svg) no-repeat center;
-		}
-		.icon.guam {
-			mask: url(/img/ico/guam2.svg) no-repeat center;
-			-webkit-mask: url(/img/ico/guam2.svg) no-repeat center;
-		}
-		.icon.support {
-			mask: url(/img/ico/support.svg) no-repeat center;
-			-webkit-mask: url(/img/ico/support.svg) no-repeat center;
-		}
-		/* Org Type Selector */
-		select#organisation-type {
-			display: inline;
-			width: auto;
-		}
-		/* Utilities */
-		.ml-0 {
-			margin-left: 0;
-		}
-		/* Austin Picture -- Temp */
-		.guidry {
-			mix-blend-mode: exclusion;
-			position: relative;
-			mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
-			-webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
-		}
+			.no-webp .hero {
+				background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/space-star-field-warp-speed.jpg") no-repeat center center;
+				background-size: cover;
+			}
+			.webp .hero {
+				background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/space-star-field-warp-speed.webp") no-repeat center center;
+				background-size: cover;
+			}
+			/* Swiper */
+			:root {
+				--swiper-theme-color: #00b0f0;
+				--swiper-pagination-bullet-inactive-color: #999;
+			}
+			.swiper {
+				width: 100%;
+				height: 100%;
+				padding-top: 1rem;
+				padding-bottom: 1rem;
+			}
+			.swiper-slide {
+				text-align: center;
+				transition: opacity 0.2s;
+				background: #17181C;
+				border-radius: 15px;
+				padding: 4rem;
+			}
+			.swiper-slide:not(.swiper-slide-active) {
+				opacity: 0.4;
+			}
+			@media screen and (max-width: 64em) {
+				.swiper-slide {
+					padding: 2rem 1rem;
+					background: #333;
+				}
+			}
+			/* Icons */
+			.icon.play-fast {
+				mask: url(/img/ico/play-fast.svg) no-repeat center;
+				-webkit-mask: url(/img/ico/play-fast.svg) no-repeat center;
+			}
+			.icon.guam {
+				mask: url(/img/ico/guam2.svg) no-repeat center;
+				-webkit-mask: url(/img/ico/guam2.svg) no-repeat center;
+			}
+			.icon.support {
+				mask: url(/img/ico/support.svg) no-repeat center;
+				-webkit-mask: url(/img/ico/support.svg) no-repeat center;
+			}
+			/* Org Type Selector */
+			select#organisation-type {
+				display: inline;
+				width: auto;
+			}
+			/* Utilities */
+			.ml-0 {
+				margin-left: 0;
+			}
+			/* Austin Picture -- Temp */
+			.guidry {
+				mix-blend-mode: exclusion;
+				position: relative;
+				mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+				-webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+			}
 		</style>
 		<section class="hero">
 			<div class="container">
@@ -268,7 +279,7 @@ slider: true
 						<h2>Put a face to our name<mark class="dot">:</mark><br class="responsive"> Meet Austin Guidry<mark class="dot">.</mark></h2>
 						<p class="subheading faded">A former StarCraft pro, here to help you grow</p>
 						<p>With more than 8 years of experience in top-tier esports, Austin knows what it takes to produce quality events.</p>
-						<p class="mt-2"><a href="#" class="button m-1 ml-0">Set up a chat</a> or <a class="chevron m-1" href="#">More about Austin</a></p>
+						<p class="mt-2"><a href="#" class="button m-1 ml-0">Set up a chat</a> or <a class="chevron m-1" href="/meet-austin-guidry/">More about Austin</a></p>
 					</div>
 					<div class="col-xs-10 col-xs-offset-1 col-md-5 col-md-offset-0 guidry">
 						<picture>
