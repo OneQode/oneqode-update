@@ -1,6 +1,7 @@
 ---
 postType: Vacancy
 ogImage: og-image.jpg
+careersRSS: true
 ---
 {% include _header.liquid %}
 		<section class="hero career">
@@ -13,8 +14,11 @@ ogImage: og-image.jpg
 					</div>
 					<div class="col-md-4 col-md-offset-2">
 						<div class="applicant-info box p-2 text-center sm-mt-4">
+							{%- if hrLink %}
+							<p><a href="{{ hrLink }}" class="button mb-2" target="_blank">Apply Now</a></p>
+							{%- endif %}
 							<h2>Hiring Contact</h2>
-							<p><a href="mailto:{{ global.hrEmail }}">{{ global.hrEmail }}</a></p>
+							<p>{{ hrContact }}</p>
 						</div>
 					</div>
 				</div>
@@ -25,6 +29,9 @@ ogImage: og-image.jpg
 				<div class="row">
 					<div class="col-md-8">
 						{{ content }}
+						{%- if hrLink %}
+						<p class="mt-4"><a href="{{ hrLink }}" class="button mb-2" target="_blank">Apply Now</a></p>
+						{%- endif %}
 						<div class="applicant-info box p-2">
 							<h2>Hiring Contact</h2>
 							<p>{{ hrContact }}<br><a href="mailto:{{ global.hrEmail }}">{{ global.hrEmail }}</a></p>

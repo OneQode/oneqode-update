@@ -8,7 +8,7 @@ To get started,
 
 then
 
-```npx eleventy --serve --quiet```
+```npx @11ty/eleventy --serve --quiet```
 
 This will launch a local version of the site at https://localhost:8080/.
 
@@ -17,3 +17,12 @@ If you change and save a file, the build process will instantly rerun, and your 
 Once you’re happy with your changes, update the main branch and push to Github. Netlify will then rebuild the live site and it will be updated within 1 minute.
 
 Any questions, ask me (Joe).
+
+# Bash Alias Recommendations
+
+```nano ~/.bashrc```
+
+```
+alias 11ty='npx @11ty/eleventy'
+alias 11tyserve='npx @11ty/eleventy --serve --quiet'
+```

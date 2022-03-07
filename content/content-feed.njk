@@ -1,0 +1,38 @@
+---json
+{
+	"permalink": "content-feed.xml",
+	"eleventyExcludeFromCollections": true,
+	"metadata": {
+		"title": "The Qode • Stories & Resources from OneQode™",
+		"subtitle": "The latest stories, articles and resources from the OneQode team.",
+		"url": "https://oneqode.com/content/",
+		"feedUrl": "https://oneqode.com/content-feed.xml",
+		"author": {
+			"name": "OneQode™"
+		}
+	}
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>{{ metadata.title }}</title>
+	<subtitle>{{ metadata.subtitle }}</subtitle>
+	<link href="{{ metadata.feedUrl }}" rel="self"/>
+	<link href="{{ metadata.url }}"/>
+	<updated>{{ collections.qode | rssLastUpdatedDate }}</updated>
+	<id>{{ metadata.url }}</id>
+	<author>
+		<name>{{ metadata.author.name }}</name>
+		<email>{{ global.mediaEmail }}</email>
+	</author>
+	{%- for post in collections.qode %}
+	{% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+	<entry>
+		<title>{{ post.data.postTitle }}</title>
+		<link href="{{ absolutePostUrl }}"/>
+		<updated>{{ post.date | rssDate }}</updated>
+		<id>{{ absolutePostUrl }}</id>
+		<content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+	</entry>
+	{%- endfor %}
+</feed>

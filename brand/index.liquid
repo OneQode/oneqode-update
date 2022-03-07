@@ -1,0 +1,408 @@
+---
+ignore: true
+layout: page.liquid
+metaTitle: Brand Guidelines & Design System • OneQode™
+metaDescription: OneQode’s brand principles, voice guidelines, colours, logos, typography and design system resources.
+changefreq: monthly
+priority: 0.9
+pageSupertitle: Brand Guidelines
+pageTitle: Our brand system
+pageSubtitle: How we look and talk
+---
+{% comment %}
+<!-- 
+	TODO:
+	- Downloadable Photoshop colours
+	- Gradients
+	- Illustrations
+	- Photo styles
+	- Video styles
+	- Inspiration / link to Pinterest board
+-->
+{% endcomment %}
+		<style>
+			section.hero {
+				background: linear-gradient(to bottom, transparent 70%, #000), radial-gradient(circle at bottom,rgb(0,39,53) 0%,rgb(0,0,0) 100%);
+				min-height: 100vh;
+			}
+			#logo .holder {
+				border-radius: 15px;
+			}
+			#logo .holder.regular {
+				background: #fff;
+			}
+			#logo .holder.negative {
+				background: #1c1d22;
+			}
+			#logo .holder {
+				margin: 0.5rem 1rem;
+				padding-top: 6rem;
+				padding-bottom: 6rem;
+			}
+			#colours .holder {
+				border-radius: 10px;
+				overflow: hidden;
+				background: #fff;
+				margin: 0.5rem;
+				display: flex;
+				flex-direction: column;
+			}
+			#colours .holder > span {
+				margin: -1rem -1rem 0 -1rem;
+				padding-bottom: 100%;
+				display: block;
+				position: relative;
+				background: var(--color);
+				border-bottom: 1px solid #ccc;
+			}
+			#colours .holder p {
+				color: #000;
+				margin: 0;
+			}
+			#colours .holder p:first-of-type {
+				margin: 1rem 0 0.5rem 0;
+				font-family: "Poppins", sans-serif;
+				font-weight: 600;
+			}
+			#colours .holder p:nth-child(3) {
+				margin-top: auto;
+			}
+			#colours .holder p:last-of-type {
+				margin-bottom: 0;
+			}
+		</style>
+		<section class="py-4 full-height">
+			<div class="container">
+				<div class="row text-center linked">
+					<a class="col-xs-12 col-md-6 p-2" href="#brand">
+						<h3>Our brand</h3>
+					</a>
+					<a class="col-xs-12 col-md-6 p-2" href="#words">
+						<h3>Our words</h3>
+					</a>
+					<a class="col-xs-12 col-md-6 p-2" href="#design">
+						<h3>Design principles</h3>
+					</a>
+					<a class="col-xs-12 col-md-6 p-2" href="#logo">
+						<h3>Logo</h3>
+					</a>
+					<a class="col-xs-12 col-md-6 p-2" href="#colours">
+						<h3>Colours</h3>
+					</a>
+					<a class="col-xs-12 col-md-6 p-2" href="#typography">
+						<h3>Typography</h3>
+					</a>
+					<a class="col-xs-12 col-md-6 p-2" href="#icons">
+						<h3>Icons</h3>
+					</a>
+					<a class="col-xs-12 col-md-6 p-2" href="#illustrations">
+						<h3>Illustrations</h3>
+					</a>
+					<a class="col-xs-12 col-md-6 p-2" href="#photography">
+						<h3>Photography</h3>
+					</a>
+				</div>
+			</div>
+		</section>
+		<section class="py-8" id="brand">
+			<div class="container text-center">
+				<div class="row">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<p class="superheading">Our Brand</p>
+						<h2>Who we are<mark class="dot">.</mark></h2>
+						<p class="subheading">OneQode is on a mission to build the foundation for the next decade of connected experiences.</p>
+					</div>
+					<div class="col-xs-12 col-md-6 col-md-offset-3">
+						<p><a href="/vision-mission-strategy/" class="button mt-2">Our vision</a></p>
+					</div>
+				</div>
+				<div class="row mt-4">
+					<div class="col-xs-12 col-md-5 col-md-offset-1 p-2">
+						<h4>Friendly & genuine</h4>
+						<p>We don’t take ourselves too seriously.</p>
+					</div>
+					<div class="col-xs-12 col-md-5 col-md-offset-1 p-2">
+						<h4>Curious</h4>
+						<p>We ask questions and pull threads.</p>
+					</div>
+					<div class="col-xs-12 col-md-5 col-md-offset-1 p-2">
+						<h4>Switched on</h4>
+						<p>We’re a team of individual experts.</p>
+					</div>
+					<div class="col-xs-12 col-md-5 col-md-offset-1 p-2">
+						<h4>Quietly confident</h4>
+						<p>We know our capabilities and limits.</p>
+					</div>
+					<div class="col-xs-12 col-md-5 col-md-offset-1 p-2">
+						<h4>Dead serious</h4>
+						<p>We have incredibly high standards for the work we do and the way we do it.</p>
+					</div>
+					<div class="col-xs-12 col-md-5 col-md-offset-1 p-2">
+						<h4>No-nonsense</h4>
+						<p>We don’t fuck around, leave people waiting, or settle for average.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-8" id="words">
+			<div class="container text-center">
+				<div class="row">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<p class="superheading">How we write</p>
+						<h2>Clear<mark class="dot">,</mark> direct words<mark class="dot">,</mark> <br class="responsive">made for the reader<mark class="dot">.</mark></h2>
+						<p class="subheading">We take the time to write words that work</p>
+					</div>
+				</div>
+				<div class="row mt-4">
+					<div class="col-xs-12 col-md-5 col-md-offset-1 p-2">
+						<h4>Think of the reader</h4>
+						<p>Who are they, and what do they want?</p>
+					</div>
+					<div class="col-xs-12 col-md-5 col-md-offset-1 p-2">
+						<h4>Write how you speak</h4>
+						<p>It’s the easiest way to connect.</p>
+					</div>
+					<div class="col-xs-12 col-md-5 col-md-offset-1 p-2">
+						<h4>First things first</h4>
+						<p>Start with the most important point.</p>
+					</div>
+					<div class="col-xs-12 col-md-5 col-md-offset-1 p-2">
+						<h4>Write when you’re happy</h4>
+						<p>Your mood is infectious.</p>
+					</div>
+					<div class="col-xs-12 col-md-5 col-md-offset-1 p-2">
+						<h4>Make it simple</h4>
+						<p>Short sentences take time.</p>
+					</div>
+					<div class="col-xs-12 col-md-5 col-md-offset-1 p-2">
+						<h4><strike class="faded">Make it simpler</strike></h4>
+						<p><strike class="faded">Eliminate unnecessary stuff.</strike></p>
+					</div>
+					<div class="col-xs-12 col-md-5 col-md-offset-1 p-2">
+						<h4>Keep it organised</h4>
+						<p>Clear writing is clear thinking.</p>
+					</div>
+					<div class="col-xs-12 col-md-5 col-md-offset-1 p-2">
+						<h4>Be direct</h4>
+						<p>If there’s bad news, say it straight up.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-8" id="design">
+			<div class="container text-center">
+				<div class="row">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<p class="superheading">How we look</p>
+						<h2>Clean<mark class="dot">,</mark> simple<mark class="dot">,</mark> spacious<mark class="dot">.</mark></h2>
+						<p class="subheading">Add everything, then eliminate what’s unnecessary.</p>
+					</div>
+				</div>
+				<div class="row mt-4">
+					<div class="col-xs-12 col-md-5 col-md-offset-1 p-2">
+						<h4>Be consistent</h4>
+						<p>(as consistent as you can)</p>
+					</div>
+					<div class="col-xs-12 col-md-5 col-md-offset-1 p-2">
+						<h4>Add whitespace</h4>
+						<p>(if you’re in doubt)</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-8" id="logo">
+			<div class="container text-center">
+				<div class="row">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<h2>Logo<mark class="dot">.</mark></h2>
+						<p class="subheading">Our logo was designed in 2021 by UK-based logo designer Graham Smith.</p>
+					</div>
+				</div>
+				<div class="row mt-4 place-content-center">
+					<div class="col-xs-12 col-md-5 holder negative p-4">
+						<img src="/img/logo.svg" alt="OneQode Negative Logo (for dark backgrounds)">
+						<figcaption>Negative logo for dark backgrounds</figcaption>
+					</div>
+					<div class="col-xs-12 col-md-5 holder regular p-4">
+						<img src="/img/logo-regular.svg" alt="OneQode Logo (for light backgrounds)">
+						<figcaption style="color: #333">Standard logo for white backgrounds</figcaption>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-8" id="colours">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+						<h2>Colours<mark class="dot">.</mark></h2>
+						<p class="subheading">Use blue sparingly, for highlights and call to actions. Use dark for everything else.</p>
+					</div>
+				</div>
+				<div class="row mt-4 place-content-center">
+					<div class="col-xs-4 col-sm holder p-1">
+						<span style="--color:#00b0f0"></span>
+						<p>Primary blue</p>
+						<p>#00b0f0</p>
+						<p>rgb(0,176,240)</p>
+					</div>
+					<div class="col-xs-4 col-sm holder p-1">
+						<span style="--color:#00597f"></span>
+						<p>Hover blue <span class="tag wet">interaction only</span></p>
+						<p>#00597f</p>
+						<p>rgb(79,148,204)</p>
+					</div>
+					<div class="col-xs-4 col-sm holder p-1">
+						<span style="--color:#4f94cc"></span>
+						<p>Superheading blue</p>
+						<p>#4f94cc</p>
+						<p>rgb(79,148,204)</p>
+					</div>
+					<div class="col-xs-4 col-sm holder p-1">
+						<span style="--color:#002735"></span>
+						<p>Deep blue</p>
+						<p>#002735</p>
+						<p>rgb(0,39,53)</p>
+					</div>
+				</div>
+				<div class="row place-content-center">
+					<div class="col-xs-4 col-sm holder p-1">
+						<span style="--color:#9b0000"></span>
+						<p>Deep Red <span class="tag wet">competitors only</span></p>
+						<p>#9b0000</p>
+						<p>rgb(155,0,0)</p>
+					</div>
+					<div class="col-xs-4 col-sm holder p-1">
+						<span style="--color:#ffffff"></span>
+						<p>White</p>
+						<p>#ffffff</p>
+						<p>rgb(255,255,255)</p>
+					</div>
+					<div class="col-xs-4 col-sm holder p-1">
+						<span style="--color:#e0e0e0"></span>
+						<p>Off White</p>
+						<p>#e0e0e0</p>
+						<p>rgb(224,224,224)</p>
+					</div>
+					<div class="col-xs-4 col-sm holder p-1">
+						<span style="--color:#999999"></span>
+						<p>Light Grey</p>
+						<p>#999999</p>
+						<p>rgb(153,153,153)</p>
+					</div>
+				</div>
+				<div class="row place-content-center">
+					<div class="col-xs-4 col-sm holder p-1">
+						<span style="--color:#666666"></span>
+						<p>Mid Grey</p>
+						<p>#666666</p>
+						<p>rgb(102,102,102)</p>
+					</div>
+					<div class="col-xs-4 col-sm holder p-1">
+						<span style="--color:#333333"></span>
+						<p>Deep Grey</p>
+						<p>#333333</p>
+						<p>rgb(51,51,51)</p>
+					</div>
+					<div class="col-xs-4 col-sm holder p-1">
+						<span style="--color:#1c1d22"></span>
+						<p>Night Grey</p>
+						<p>#1c1d22</p>
+						<p>rgb(28,29,34)</p>
+					</div>
+					<div class="col-xs-4 col-sm holder p-1">
+						<span style="--color:#000000"></span>
+						<p>Black</p>
+						<p>#000000</p>
+						<p>rgb(0,0,0)</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="text-center py-8" id="typography">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<h2>Typography<mark class="dot">.</mark></h2>
+						<p class="subheading">Use these exact font weights to ensure consistency.</p>
+					</div>
+					<div class="col-xs-12 col-md-6 col-md-offset-3">
+						<p><a href="https://fonts.google.com/share?selection.family=Poppins:wght@600%7CWork%20Sans:ital,wght@0,400;0,700;1,400;1,700" target="_blank" class="button mt-2">Get fonts</a></p>
+					</div>
+				</div>
+				<div class="row mt-4">
+					<div class="col-xs-12 col-md-6 p-2">
+						<h3>Poppins Semi-bold 600</h3>
+						<p>For headings and subheadings</p>
+					</div>
+					<div class="col-xs-12 col-md-6 p-2">
+						<h3 style="font-family: 'Work Sans', sans-serif; font-weight: 400;">Work Sans Regular 400</h3>
+						<p>For body copy</p>
+					</div>
+				</div>
+				<div class="row mt-8">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<h3>Special cases</h3>
+					</div>
+					<div class="col-xs-12 col-md-6 col-md-offset-3">
+						<p class="subheading faded">Other uses of font styles</p>
+					</div>
+				</div>
+				<div class="row mt-4 bottom-md">
+					<div class="col-xs-12 col-md-6 p-2">
+						<h3><a href="#" class="button" style="font-size: 1.5rem">Poppins Semi-bold 600</a></h3>
+						<p>For buttons</p>
+						<p class="faded">Uppercase, with letter-spacing 0.16em<br>(Photoshop tracking: 160)</p>
+					</div>
+					<div class="col-xs-12 col-md-6 p-2">
+						<h3 style="font-size: 1.5rem; font-family: 'Work Sans', sans-serif; font-weight: 400; text-transform: uppercase; letter-spacing: 0.04em; color:#4f94cc;">Work Sans Regular 400</h3>
+						<p>For superheadings</p>
+						<p class="faded">Uppercase, with letter-spacing 0.04em<br>(Photoshop tracking: 40)</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="text-center py-8" id="icons">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<h2>Icons<mark class="dot">.</mark></h2>
+						<p class="subheading">Simple, outlined icons</p>
+					</div>
+					<div class="col-xs-12 col-md-6 col-md-offset-3">
+						<p><a href="/img/ico/" class="button mt-2 m-1">See icons</a> or <a href="https://www.flaticon.com/" target="_blank" class="chevron m-1">Get more icons</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="black-to-footer py-8">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-xs-12">
+						<h2>Learn more<mark class="dot">:</mark></h2>
+					</div>
+				</div>
+				<div class="row mt-4 icons">
+					<div class="col-xs-6 col-md-4 mb-2 mt-1">
+						<a href="/network/" class="box glowing">
+							<img class="mt-2" src="/img/ico/connection2.svg" alt="">
+							<h2 class="mt-2">Network</h2>
+							<p class="hide-mobile">Latency-optimised connectivity</p>
+						</a>
+					</div>
+					<div class="col-xs-6 col-md-4 mb-2 mt-1">
+						<a href="/game-servers/" class="box glowing">
+							<img class="mt-2" src="/img/ico/server.svg" alt="">
+							<h2 class="mt-2">Game Servers</h2>
+							<p class="hide-mobile">Compute, storage and colocation</p>
+						</a>
+					</div>
+					<div class="col-xs-6 col-md-4 mb-2 mt-1">
+						<a href="/cloud/" class="box glowing">
+							<img class="mt-2" src="/img/ico/cloud.svg" alt="">
+							<h2 class="mt-2">Cloud Platform</h2>
+							<p class="hide-mobile">The high performance cloud</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>

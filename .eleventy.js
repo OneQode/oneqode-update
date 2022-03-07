@@ -9,13 +9,13 @@ module.exports = function(eleventyConfig) {
 	// Set template types
 	eleventyConfig.setTemplateFormats([
 		"liquid",
-		"png",
-		"svg",
 		"pdf",
 		"njk",
-		"md",
-		"ics"
+		"md"
 	]);
+	eleventyConfig.setLiquidOptions({
+		dynamicPartials: false
+	});
 	// Set data format
 	eleventyConfig.addFilter("readableDate", dateObj => {
 		return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");

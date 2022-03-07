@@ -42,6 +42,15 @@
 	{%- if canonical %}
 	<link rel="canonical" href="{{ global.url }}{{ canonical }}">
 	{%- endif %}
+	{%- if mediaRSS %}
+	<link rel="alternate" type="application/rss+xml" title="RSS Feed for OneQode Newsroom" href="/media-feed.xml" />
+	{%- endif %}
+	{%- if careersRSS %}
+	<link rel="alternate" type="application/rss+xml" title="RSS Feed for OneQode Careers" href="/careers-feed.xml" />
+	{%- endif %}
+	{%- if contentRSS %}
+	<link rel="alternate" type="application/rss+xml" title="RSS Feed for The Qode" href="/content-feed.xml" />
+	{%- endif %}
 	<!-- Organisation Info -->
 	<script type="application/ld+json">
 		{
@@ -70,35 +79,16 @@
 			]
 		}
 	</script>
-{% comment %}
-	<!--
-
-		* * * * * * * * * * * * * * * * * * * * * *
-		 * * * * * * * * * * * * * * * * * * * * * 
-
-		Tighten up preconnect rules
-		when fonts are integrated!
-
-		* * * * * * * * * * * * * * * * * * * * * *
-		 * * * * * * * * * * * * * * * * * * * * * 
-
-	-->
-{% endcomment %}
-{%- if slider or form %}
-	<!-- Performance -->
-	<link rel="preconnect" href="https://unpkg.com">
-{%- endif %}
 	<!-- Styles -->
-	<link rel="stylesheet" href="{{ '/css/production.min.css' | url }}">
-{%- if slider %}
-	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-{%- endif %}
+	<link rel="stylesheet" href="/css/production.min.css">
 	<!-- Fonts -->
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Work+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Work+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 	<!-- Shortcut Icons -->
-	<link rel="icon" href="{{ '/favicon.svg' | url }}">
-	<link rel="apple-touch-icon" href="{{ '/favicon.png' | url }}" />
-	<meta name="msapplication-TileImage" content="{{ '/favicon.png' | url }}" />
+	<link rel="icon" href="/img/favicon.svg">
+	<link rel="apple-touch-icon" href="/img/favicon.png" />
+	<meta name="msapplication-TileImage" content="/img/favicon.png" />
 	<!-- Status Bar -->
 	<meta name="theme-color" content="#00b0f0">
 	<meta name="msapplication-navbutton-color" content="#00b0f0">
@@ -110,13 +100,10 @@
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-5FZ7DSW');</script>
 	<!-- Site JS -->
-	<script src="{{ '/js/production.js' | url }}"></script>
+	<script src="/js/production.js"></script>
 {%- if form %}
 	<!-- Spam Protection -->
 	<script src="https://unpkg.com/@botpoison/browser"></script>
-{%- endif %}
-{%- if slider %}
-	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 {%- endif %}
 </head>
 <body>
@@ -159,7 +146,7 @@
 					{%- endcase -%}
 				{%- endif -%}
 				" class="logo">
-				<img src="{{ '/img/logo.svg' | url }}" alt="OneQode Logo">
+				<img src="/img/logo.svg" alt="OneQode Logo">
 			</a>
 {% case section %}
 	{%- when "gaming" -%}
