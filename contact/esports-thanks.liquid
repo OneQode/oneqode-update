@@ -1,0 +1,41 @@
+---
+permalink: /esports/thanks/
+section: gaming
+ignore: true
+metaTitle: ✔ Message Sent • OneQode™
+metaDescription: Your message to Austin has been sent 👏
+ogImage: og-image.jpg
+pageSupertitle: Message Sent
+pageTitle: Your message is <br class="responsive"> on its way
+pageSubtitle: Austin will reach out to to you soon.
+---
+{% include _header.liquid %}
+		<style>
+			section.hero {
+				background: linear-gradient(to bottom, transparent 50%, #0c0c0c 100%), radial-gradient(circle at bottom,#002735 0,#000 100%);
+			}
+			.button svg {
+				display: inline-block;
+				margin-bottom: -0.5rem;
+				margin-left: -0.5rem;
+			}
+		</style>
+		<section class="hero full-height">
+			<div class="container">
+				<div class="row middle-xs">
+					<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+						<p class="superheading">{{ pageSupertitle }}</p>
+						<h1>{{ pageTitle }}<mark class="dot">!</mark></h1>
+						<p class="subheading">{{ pageSubtitle }}</p>
+						<p class="mt-4">
+							<a href="javascript:history.back();" class="button ghost">
+								<svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" viewBox="0 0 16 16">
+									<path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"></path>
+								</svg> Back
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+{% include _footer.liquid %}
