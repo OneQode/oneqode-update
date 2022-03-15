@@ -1,19 +1,16 @@
 ---
 layout: page.liquid
-metaTitle: Guam&#58; Asia-Pacific’s Newest Server Region • OneQode™
-metaDescription: OneQode has deployed server and datacentre capacity in Guam to radically improve real-time internet applications in Asia Pacific.
+metaTitle: APAC Central (Guam)&#58; Asia-Pacific’s Central Server Region
+metaDescription: OneQode™ has built Asia-Pacific’s newest server region in Guam, a central location providing complete reach across the entire region.
 changefreq: monthly
 priority: 0.8
 ogImage: guam.jpg
 pageSupertitle: APAC Central
-pageTitle: Guam
-pageSubtitle: Asia-Pacific’s newest server region
+pageTitle: Asia-Pacific’s central server region
+pageSubtitle: Complete reach across the world’s<br class="responsive"> largest region of gamers
 ---
 		<!-- Page-Specific Styles -->
 		<style>
-			h1 {
-				font-size: 5rem;
-			}
 			.hero {
 				background-size: cover !important;
 				background-position: bottom center;
@@ -82,7 +79,8 @@ pageSubtitle: Asia-Pacific’s newest server region
 			/* Statistics */
 			.stat,
 			.unit,
-			.connected-country {
+			.connected-country,
+			.description {
 				font-family: Poppins, sans-serif;
 				font-weight: 600;
 				line-height: 1;
@@ -94,7 +92,11 @@ pageSubtitle: Asia-Pacific’s newest server region
 				font-size: 2.5rem;
 			}
 			.description {
-				display: inline-block;
+				display: block;
+			}
+			.icon.path {
+				mask: url(/img/ico/nodes2.svg) no-repeat center;
+				-webkit-mask: url(/img/ico/nodes2.svg) no-repeat center;
 			}
 			/* Kotaku Article Quote */
 			.kotaku-quote blockquote p {
@@ -113,22 +115,53 @@ pageSubtitle: Asia-Pacific’s newest server region
 			a.kotaku-logo:focus {
 				opacity: 1;
 			}
+			/* Related Media */
+			.callout a {
+				display: grid;
+				grid-template-columns: 1fr min-content;
+				grid-gap: 2rem;
+				align-items: center;
+			}
+			.callout h2 {
+				margin-bottom: 1rem;
+			}
+			.callout .tag {
+				margin-bottom: 1rem;
+			}
+			.callout .tag.case-study {
+				color: #fff;
+				background: #00b0f0;
+			}
+			.callout .tag.blog-post {
+				background: #f1c800;
+			}
+			.callout .outlet {
+				margin-top: 0;
+				font-weight: 700;
+				color: #999;
+				line-height: 1;
+			}
+			.callout .details :last-child {
+				margin-bottom: 0;
+			}
+			/* Tablet and above */
 			@media (min-width: 48em) {
-				/* Move up on desktop */
-				#guam-article img {
-					margin-top: -16rem;
+				#stats .col-md-5 {
+					display: grid;
+					grid-template-columns: 1fr 3fr;
+					grid-gap: 1rem;
 				}
-				#kotaku {
-					margin-top: -16rem;
+				.callout a {
+					grid-gap: 8rem;
 				}
 			}
 			/* Mobile-Specific Styles */
 			@media (max-width: 48em) {
+				.icon {
+					margin-bottom: 1rem;
+				}
 				h1 {
 					font-size: 3rem;
-				}
-				.kotaku-quote blockquote p {
-					font-size: 1.2rem;
 				}
 				#cable-map {
 					margin: 0;
@@ -143,109 +176,35 @@ pageSubtitle: Asia-Pacific’s newest server region
 				#cable-map picture {
 					display: block;
 				}
-				.stat-holder {
-					text-align: center;
-					font-size: 1rem;
-				}
-				.stat-holder .col-sm-5:last-child {
-					margin-top: 2rem;
-				}
 				.stat {
 				font-size: 3rem;
 				}
 				.unit {
 					font-size: 2rem;
 				}
-				.company .col-xs-12 {
-					margin-bottom: 2rem;
+				.kotaku-quote blockquote p {
+					font-size: 1.2rem;
 				}
-			}
-			/* Star Field */
-			.star-holder {
-				position: relative;
-				z-index: 1;
-				width: 100%;
-				overflow: hidden;
-				margin: -12rem 0 -20rem 0;
-			}
-			.star-holder::after {
-				content: "";
-				display: block;
-				width: 100%;
-				height: 100%;
-				position: absolute;
-				background: radial-gradient(closest-side, transparent 60%, #000);
-				top: 0;
-				left: 0;
-				z-index: 2;
-			}
-			/* Potential Applications */
-			.applications div[class^="col-"] {
-				display: flex;
-				margin-bottom: 1rem;
-			}
-			.applications .box {
-				color: #e0e0e0;
-				border: 1px solid #002735;
-				background: rgba(0, 39, 53, var(--opacity));
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				min-height: 6rem;
-				width: 100%;
-				opacity: 0.75;
-				transition: all 0.2s;
-			}
-			.applications .box:hover {
-				color: #fff;
-				border: 1px solid #4f94cc;
-				opacity: 1;
-			}
-			@media (max-width: 768px) {
-				.row {
-					display: flex;
+				.callout a {
+					grid-template-columns: 1fr;
+    				grid-gap: 1rem;
+    				justify-items: center;
 				}
-			}
-			/* CTAs */
-			.company .box img {
-				width: min(10rem, 100%);
-				/*max-width: 10rem;*/
-				height: 6rem;
-				opacity: 0.75;
-			}
-			.company .box img.hyperion {
-				/*max-width: 11rem;*/
-				width: min(11rem, 100%);
-			}
-			.company .box img.oneqode {
-				/*max-width: 14rem;*/
-				width: min(14rem, 100%);
-			}
-			.company a {
-				text-decoration: none;
-				color: #999;
-				display: block;
+				.callout .details {
+					text-align: center;
+					flex-direction: column;
+				}
 			}
 		</style>
-		<aside class="callout">
-			<div class="container">
-				<a href="/case-study/guam-csgo/" class="col-xs-12 p-2">
-					<h2 class="mt-0 mb-0">APAC Central hosts $17,000 cross-regional CS:GO tournament</h2>
-					<span>
-						Read case study
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-							<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-						</svg>
-					</span>
-				</a>
-			</div>
-		</aside>
 		<section class="black pt-8 pb-4">
 			<div class="container push-forward">
 				<div class="row middle-xs text-center">
-					<div class="col-md-8 col-md-offset-2">
-						<h2>Guam was an internet interchange<mark class="dot">.</mark> We’ve made it a meeting point<mark class="dot">.</mark></h2>
-						<p>OneQode, in a regional first, has deployed server and datacentre capacity in Guam to level the playing field and radically improve real-time internet applications in Asia Pacific.</p>
+					<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
+						<h2>Get total coverage<br class="responsive"> of the Asia-Pacific<mark class="dot">.</mark></h2>
+						<p class="subheading faded">With a level playing field for 1.45 billion gamers</p>
+					</div>
+					<div class="col-xs-12 col-md-6 col-md-offset-3">
+						<p>In a regional first, we built a central server region for APAC on the island of Guam. The neutral location levels the playing field for gamers across Asia Pacific, whether they're from Melbourne or Mongolia.</p>
 					</div>
 				</div>
 			</div>
@@ -257,158 +216,84 @@ pageSubtitle: Asia-Pacific’s newest server region
 					<path class="cable" d="M0,728.6C774.1,778,1843.1,963.3,1855.8,965.1c12.7,1.9,13.8,19.1,13.8,19.1" />
 					<path class="cable" d="M1869.6,985c0,0,0.4-16.7-13.8-19.9c-14.2-3.1-65.2-2.1-60.3,49.5c2.9,30,79.2,258.3,114.6,1145.3" />
 					<path id="guam-island" d="M1873.7,1115.4l8.9-8.9c0,0,0-3.5,1.5-4.5s7.5-4.5,7.5-4.5s2.6-2.2,3-4.5 c0.4-2.2,1.3-2.7,4.5-6c3.2-3.3,4.7-11.6,3-11.9c-1.7-0.3-1.5-10.4-1.5-10.4s-1.5-4.3-6-3c-4.5,1.4,8.1-3.5,7.5-6 c-0.6-2.5-1.5-8.9-1.5-8.9s-3.4-1.6-1.5-3c1.9-1.4,3-8.9,3-8.9s-0.4-4.3,3-7.5c3.4-3.2,3-7.5,3-7.5l1.5-3c0,0,2.1-3,0-3 c-2.1,0-1.7-4.3,4.5-6c6.2-1.7,6,1.5,6,1.5l3-4.5c0,0,7-4.3,8.9-6c2-1.7,8.7-9.2,13.4-10.4c4.7-1.3,15.7-19,22.4-16.4 c2,0.4,3-4.5,3-4.5s-3.8-8.7,13.4-10.4c7.5-1,10.4-13.4,10.4-13.4s3.6-6,3-14.9c4.5-7.5,4.6-0.2,8.9-14.9c-0.1,0.9,6.6-6.9-3-6 c-9.5,0.9-22.6,3.9-26.8-8.9c-4.2-8.3-16.5-18.3-19.4-19.4s-5.2-3.1-10.4,3c-1.9,4.2-5.4,9-7.5,10.4c-2.1,1.5-1.2,11,0,14.9 s1.2,5.2-1.5,8.9s-5,5.9-4.5,6s-4.3,5.7-4.5,6c-0.2,0.3-1.8,5.6-4.5,6c-2.7,0.3-0.7,8-6,8.9c-2.4,1.3,0.2,11.1,1.5,11.9 c0.6,1.1-3.6,10.3-8.9,7.5c-5.4-2.8-12.6,3.1-10.4,6c2.2,2.8,1.9,11.4-6,10.4c-7.9-1-3,0-3,0s-3.2-4.2-7.5,0 c-4.3,4.2-6.9-2.3-7.5-1.5c-0.5,0.8-6.2,3.8-7.5,4.5c-1.3,0.7-11-4.2-13.4,3c-0.9,2.4-1.3,3.4-3,1.5c-1.6-1.9-7.8,0-8.9,1.5 c-1.2,1.5-2.8,0.7-3-1.5c-0.6,0-19.4,0-19.4,0s-7.7,6.3-7.5,7.5c1.5,0.5,5.2-3.3,7.5-4.5c2.3-1.2,14.9-2.2,17.9,1.5 c0.4,1.6-3.6,4-3,4.5c0.6,0.5,3.5,0,6-1.5c2.5-1.5,5.1-1.2,6,1.5s-3.2,6.2-4.5,4.5c-1.2-1.7-6.7,2.4-3,4.5c2.2-0.2,4.2,0.8,3,4.5 c-1.2,3.7-4.8,3.9-6,1.5c-1.2-2.4,1.3-10.6-1.5-10.4c-2.8,0.1-10.4,2-14.9,0c-4.5-2-6.5-4.6-8.9-3c-2.5,1.6-0.3,6.5,4.5,7.5 c3.3,1.6,7.1,3.9,6,8.9c-0.2,4.5,4.5,1.5,4.5,1.5s-0.8,3.9,3,3s7.2,7,6,8.9c-1.2,1.9-4.8,7-6,10.4c-1.2,3.4-2.6,15.2-6,17.9 c-3.4,2.7-2.5,5,3,7.5c2.6,4.5,2.9,6.9,3,7.5c0.1,0.6,1.1,2.4,1.5,3c0.4,0.6,0.6,2.7,0,4.5c-0.6,1.8,1.8,4.9,1.5,7.5 c-0.3,2.6,1.4,7.1,3,8.9s0,7.5,0,7.5s8.3,8.7,10.4,8.9c2.1,0.3,8.7-0.1,10.4,3C1859.1,1117,1873.7,1115.4,1873.7,1115.4z" />
-					<text transform="matrix(1 0 0 1 1873.0905 268.165)">
+					<text transform="matrix(1 0 0 1 1873 268)">
 						<tspan x="0" y="0" class="connected-country">Russia</tspan>
 						<tspan x="0" y="36" class="latency-to-guam">65 milliseconds</tspan>
 					</text>
-					<text transform="matrix(1 0 0 1 1878.9808 416.4228)">
+					<text transform="matrix(1 0 0 1 1878 416)">
 						<tspan x="0" y="0" class="connected-country">South Korea</tspan>
 						<tspan x="0" y="36" class="latency-to-guam">60 milliseconds</tspan>
 					</text>
-					<text transform="matrix(1 0 0 1 1884.1235 564.6804)">
+					<text transform="matrix(1 0 0 1 1884 564)">
 						<tspan x="0" y="0" class="connected-country">Japan </tspan>
 						<tspan x="0" y="36" class="latency-to-guam">40 milliseconds</tspan>
 					</text>
-					<text transform="matrix(1 0 0 1 2395.6277 841.653)">
+					<text transform="matrix(1 0 0 1 1960 1060)">
+						<tspan x="0" y="0" class="connected-country">APAC Central</tspan>
+					</text>
+					<text transform="matrix(1 0 0 1 2395 841)">
 						<tspan x="0" y="0" class="connected-country">USA </tspan>
 						<tspan x="0" y="36" class="latency-to-guam">118 milliseconds</tspan>
 					</text>
-					<text transform="matrix(1 0 0 1 1899.8555 1499.6669)">
+					<text transform="matrix(1 0 0 1 1899 1499)">
 						<tspan x="0" y="0" class="connected-country">Australia </tspan>
 						<tspan x="0" y="36" class="latency-to-guam">63 milliseconds</tspan>
 					</text>
-					<text transform="matrix(1 0 0 1 833.8146 916.5144)">
+					<text transform="matrix(1 0 0 1 833 916)">
 						<tspan x="0" y="0" class="connected-country">Singapore </tspan>
 						<tspan x="0" y="36" class="latency-to-guam">65 milliseconds</tspan>
 					</text>
-					<text transform="matrix(1 0 0 1 1200.5845 983.0886)">
+					<text transform="matrix(1 0 0 1 1200 983)">
 						<tspan x="0" y="0" class="connected-country">Philippines </tspan>
 						<tspan x="0" y="36" class="latency-to-guam">60 milliseconds</tspan>
 					</text>
-					<text transform="matrix(1 0 0 1 906.4137 553.4537)">
+					<text transform="matrix(1 0 0 1 906 553)">
 						<tspan x="0" y="0" class="connected-country">China </tspan>
 						<tspan x="0" y="36" class="latency-to-guam">50 milliseconds</tspan>
 					</text>
-					<text transform="matrix(1 0 0 1 1269.4343 677.8799)">
+					<text transform="matrix(1 0 0 1 1269 677)">
 						<tspan x="0" y="0" class="connected-country">Hong Kong </tspan>
 						<tspan x="0" y="36" class="latency-to-guam">40 milliseconds</tspan>
 					</text>
 				</svg>
 				<picture>
 					<source srcset="/img/guam-cables-mobile.webp" type="image/webp">
-					<img src="/img/guam-cables-mobile.jpg" alt="A stylised map showing Guam, with subsea cables and latencies to nearby countries">
+					<img src="/img/guam-cables-mobile.jpg" alt="A stylised map showing APAC Central (Guam), with subsea cables and latencies to nearby countries">
 				</picture>
 			</div>
-			<div class="container stat-holder push-forward pb-8">
-				<div class="row">
-					<div class="col-sm-5 col-sm-offset-1"><span class="stat">4.98</span> <span class="unit">billion</span> <span class="description">people in connected countries.</span></div>
-					<div class="col-sm-5 col-sm-offset-1"><span class="stat">53</span> <span class="unit">milliseconds</span> <span class="description">average latency to Guam</span></div>
-				</div>
+			<div class="container push-forward pb-8">
 				<div class="row text-center">
 					<div class="col-xs-12 mt-4">
-						<figcaption>Map of latency to Guam <span style="color: #949494">// <a href="https://oneqode.sfo2.digitaloceanspaces.com/maps/global/oneqode-latency-map.pdf" rel="noopener" target="_blank">Full global latency map PDF</a></figcaption>
+						<p><a class="button" href="https://oneqode.sfo2.digitaloceanspaces.com/maps/global/oneqode-latency-map.pdf" rel="noopener" target="_blank">Latency Map</a></p>
 					</div>
 				</div>
 			</div>
+			<div class="container mobile-text-center" id="stats">
+				<div class="row">
+					<div class="col-xs-6 col-md-5 col-md-offset-1">
+						<div class="icon path"></div>
+						<div class="stat-holder"><span class="stat">55%</span><span class="description">of the world’s gamers</span></div>
+					</div>
+					<div class="col-xs-6 col-md-5">
+						<div class="icon path"></div>
+						<div class="stat-holder"><span class="stat">48%</span><span class="description">of the world’s gaming revenue</span></div>
+					</div>
+				</div>
+				<div class="row mt-4">
+					<div class="col-xs-6 col-md-5 col-md-offset-1">
+						<div class="icon path"></div>
+						<div class="stat-holder"><span class="stat">3</span> <span class="unit">continents</span><span class="description">from one server region</span></div>
+					</div>
+					<div class="col-xs-6 col-md-5">
+						<div class="icon path"></div>
+						<div class="stat-holder"><span class="stat">53</span> <span class="unit">ms</span><span class="description">average latency to APAC Central</span></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-8">
 			<div class="container">
 				<div class="row middle-xs text-center push-forward">
-					<div class="col-md-8 col-md-offset-2">
-						<h2>A game-changer for<br class="responsive"> real-time applications<mark class="dot">.</mark></h2>
-						<p class="subheading">Videoconferencing, voice calls, messaging, live streaming, eSports, financial trading, advertising, IoT</p>
-						<p>As internet consumption explodes, and internet applications demand more, Guam represents a sea-change for smooth real-time connectivity.</p>
-					</div>
-				</div>
-			</div>
-			<!--
-				Starfield Map Credit:
-				https://github.com/Ashikpaul/Starfield-effect
-
-				Copyright (c) 2020 Ashik Paul
-				
-				MIT License
-
-				Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-				The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-				THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-			-->
-			<div class="star-holder">
-				<canvas id="starfield"></canvas>
-			</div>
-		</section>
-		<section class="py-4">
-			<div class="container">
-				<div class="row middle-xs text-center push-forward">
-					<div class="col-md-8 col-md-offset-2">
-						<h2>Less latency, more opportunity<mark class="dot">.</mark></h2>
-						<p>We’re making our infrastructure commercially available.</p>
-						<p>This unlocks opportunities for smoother international communications, regional low-latency multiplayer gaming and improved data reliability.</p>
-					</div>
-				</div>
-				<div class="row text-center push-forward mt-2">
-					<div class="col-md-12">
-						<div class="row applications">
-							<div class="col-xs-6 col-md-3">
-								<div class="box" style="--opacity: 0.2">Financial Trading</div>
-							</div>
-							<div class="col-xs-6 col-md-3">
-								<div class="box" style="--opacity: 0.4">Live Streaming</div>
-							</div>
-							<div class="col-xs-6 col-md-3">
-								<div class="box" style="--opacity: 0.3">eSports Tournaments</div>
-							</div>
-							<div class="col-xs-6 col-md-3">
-								<div class="box" style="--opacity: 0.24">Data Processing</div>
-							</div>
-							<div class="col-xs-6 col-md-3">
-								<div class="box" style="--opacity: 0.25">Game Hosting</div>
-							</div>
-							<div class="col-xs-6 col-md-3">
-								<div class="box" style="--opacity: 0.1">Programmatic Ads</div>
-							</div>
-							<div class="col-xs-6 col-md-3">
-								<div class="box" style="--opacity: 0.14">Conference Hosting</div>
-							</div>
-							<div class="col-xs-6 col-md-3">
-								<div class="box" style="--opacity: 0.28">Voice & Audio Transmission</div>
-							</div>
-							<div class="col-xs-6 col-md-3">
-								<div class="box" style="--opacity: 0.18">Chat & Messaging</div>
-							</div>
-							<div class="col-xs-6 col-md-3">
-								<div class="box" style="--opacity: 0.22">Collaboration Software</div>
-							</div>
-							<div class="col-xs-6 col-md-3">
-								<div class="box" style="--opacity: 0.14">Off-Site Backup</div>
-							</div>
-							<div class="col-xs-6 col-md-3">
-								<div class="box" style="--opacity: 0.36">Enterprise Networking</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section id="guam-article" class="mt-4">
-			<div class="container push-forward text-center">
-				<div class="row">
-					<div class="col-xs-12 col-sm-10 col-sm-offset-1">
-						<p class="superheading">Behind the scenes</p>
-						<h2>Putting servers on a Pacific Island<mark class="dot">...</mark> <br class="responsive">How hard could it be<mark class="dot">?</mark></h2>
-						<p class="subheading">That's what we asked when we <br class="responsive">started. Here's what we learned.</p>
-						<a href="/server-pacific-island/" class="button mt-2">Read Article</a>
-					</div>
-				</div>
-			</div>
-			<picture>
-				<source srcset="/img/bg/server-rack-on-a-beach-in-guam.webp" type="image/webp">
-				<img src="/img/bg/server-rack-on-a-beach-in-guam.jpg" class="opaque" alt="A OneQode-branded server rack on a beach on a Pacific island">
-			</picture>
-		</section>
-		<section id="kotaku" class="push-forward">
-			<div class="container text-center">
-				<div class="row">
 					<div class="col-xs-12 col-md-8 col-md-offset-2 kotaku-quote">
 						<blockquote cite="https://www.kotaku.com.au/2021/03/a-brisbane-isp-is-building-guam-into-an-online-gaming-hub/">
 							<p>“...could have massive consequences for an enormous chunk of gaming across the Asia-Pacific”</p>
@@ -437,81 +322,94 @@ pageSubtitle: Asia-Pacific’s newest server region
 				</div>
 			</div>
 		</section>
-		<section class="black-to-footer py-8 mt-8">
+		<section class="py-8">
 			<div class="container">
 				<div class="row middle-xs text-center push-forward">
-					<div class="col-md-8 col-md-offset-2">
-						<h2>Take advantage today<mark class="dot">.</mark></h2>
-						<p class="subheading">Guam servers are now available for game studios, publishers and server providers.</p>
-						<p>
-							<a href="/game-servers/" class="button m-1 mt-2">Servers</a>
-							<a href="/cloud/" class="button m-1 mt-2">Cloud</a>
-						</p>
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<h2>Harness APAC Central now<mark class="dot">.</mark></h2>
+						<p class="subheading faded">Here’s what’s available today on Guam.</p>
+					</div>
+				</div>
+				<div class="row mt-4 icons place-content-center">
+					<div class="col-xs-6 col-md-4 mb-2 mt-1">
+						<a href="/cloud/" class="box glowing">
+							<img class="mt-2" src="/img/ico/cloud.svg" alt="">
+							<h2 class="mt-2">Cloud Platform</h2>
+							<p class="hide-mobile">The high performance cloud</p>
+						</a>
+					</div>
+					<div class="col-xs-6 col-md-4 mb-2 mt-1">
+						<a href="/game-servers/" class="box glowing">
+							<img class="mt-2" src="/img/ico/server.svg" alt="">
+							<h2 class="mt-2">Game Servers</h2>
+							<p class="hide-mobile">With reach across Asia-Pacific</p>
+						</a>
+					</div>
+					<div class="col-xs-6 col-md-4 mb-2 mt-1">
+						<a href="/network/" class="box glowing">
+							<img class="mt-2" src="/img/ico/connection2.svg" alt="">
+							<h2 class="mt-2">Gaming Network</h2>
+							<p class="hide-mobile">Low-latency backbone</p>
+						</a>
 					</div>
 				</div>
 			</div>
 		</section>
-		<script>
-			const canvas = document.getElementById('starfield');
-			const c = canvas.getContext('2d');
-			canvas.width = window.innerWidth; //screen width
-			canvas.height = window.innerHeight * 0.8; //screem height
-
-			class Star {
-				constructor() {
-					//initializing
-					this.x = Math.random() * canvas.width - canvas.width / 2; //random x
-					this.y = Math.random() * canvas.height - canvas.height / 2; //random y
-					this.px, this.py;
-					this.z = Math.random() * 4; //random z    
-				}
-				update() {
-					//stores previous x, y and z and generates new coordinates    
-					this.px = this.x;
-					this.py = this.y;
-					this.z += speed;
-					this.x += this.x * (speed * 0.2) * this.z;
-					this.y += this.y * (speed * 0.2) * this.z;
-					if (this.x > canvas.width / 2 + 50 || this.x < -canvas.width / 2 - 50 || this.y > canvas.height / 2 + 50 || this.y < -canvas.height / 2 - 50) {
-						this.x = Math.random() * canvas.width - canvas.width / 2;
-						this.y = Math.random() * canvas.height - canvas.height / 2;
-						this.px = this.x;
-						this.py = this.y;
-						this.z = 0;
-					}
-				}
-
-				//draws line from x,y to px,py
-				show() {
-					c.lineWidth = this.z;
-					c.beginPath();
-					c.moveTo(this.x, this.y);
-					c.lineTo(this.px, this.py);
-					c.stroke();
-				}
-			}
-
-			let speed = 0.04;
-			let stars = [];
-
-			//create 1500 stars (objects)
-			for (let i = 0; i < 1500; i++) stars.push(new Star());
-
-			c.fillStyle = 'rgba(0, 0, 0, 0.1)';
-			c.strokeStyle = 'rgb(0, 39, 53)';
-
-			c.translate(canvas.width / 2, canvas.height / 2);
-
-			function draw() {
-				//create rectangle
-				c.fillRect(-canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height);
-				for (let s of stars) {
-					s.update();
-					s.show();
-				}
-				//infinte call to draw
-				requestAnimationFrame(draw);
-			}
-
-			draw();
-		</script>
+		<section class="black-to-footer py-8" id="related-media">
+			<div class="container">
+				<div class="row middle-xs text-center push-forward">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<h2>Extra, extra, read all about it<mark class="dot">.</mark></h2>
+						<p class="subheading faded">More coverage from and about OneQode</p>
+					</div>
+				</div>
+				<div class="row mt-4">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<div class="callout">
+							<a href="https://snowballesports.com/2021/06/30/oneqodes-plan-to-connect-oceanic-esports-to-the-world-starts-in-csgo/" target="_blank" class="col-xs-12 p-2">
+								<div class="details">
+									<span class="tag">In the media</span>
+									<h2>OneQode’s plan to connect Oceanic esports to the world starts in CS:GO</h2>
+									<p class="outlet">Snowball Esports</p>
+								</div>
+								<span>
+									Read more
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+										<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+									</svg>
+								</span>
+							</a>
+						</div>
+						<div class="callout mt-1">
+							<a href="/case-study/guam-csgo/" class="col-xs-12 p-2">
+								<div class="details">
+									<span class="tag case-study">Case Study</span>
+									<h2>Powering a groundbreaking interregional tournament — CS:GO on APAC Central</h2>
+								</div>
+								<span>
+									Read more
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+										<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+									</svg>
+								</span>
+							</a>
+						</div>
+						<div class="callout mt-1">
+							<a href="/server-pacific-island/" class="col-xs-12 p-2">
+								<div class="details">
+									<span class="tag blog-post">Blog Post</span>
+									<h2>Installing a Game Server on a Pacific island... How hard could it be?</h2>
+									<p class="outlet">The Qode</p>
+								</div>
+								<span>
+									Read more
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+										<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+									</svg>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
