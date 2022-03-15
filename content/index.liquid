@@ -50,12 +50,28 @@ pageSubtitle: Stories, articles and resources<br class="responsive"> from the On
 			#articles div a > :last-child {
 				margin-bottom: 0;
 			}
+			.no-webp .meet-austin-guidry {
+				background-image: url(/img/bg/meet-austin-guidry.jpg);
+				background-size: cover;
+			}
+			.webp .meet-austin-guidry {
+				background-image: url(/img/bg/meet-austin-guidry.webp);
+				background-size: cover;
+			}
 			.no-webp .story-of-oneqode {
 				background-image: url(/img/bg/roof-wireless-dish-brisbane.jpg);
 				background-size: cover;
 			}
 			.webp .story-of-oneqode {
 				background-image: url(/img/bg/roof-wireless-dish-brisbane.webp);
+				background-size: cover;
+			}
+			.no-webp .server-pacific-island {
+				background-image: url(/img/bg/server-rack-beach-hero.jpg);
+				background-size: cover;
+			}
+			.webp .server-pacific-island {
+				background-image: url(/img/bg/server-rack-beach-hero.webp);
 				background-size: cover;
 			}
 			/* Match heights for half-width links */
@@ -113,6 +129,17 @@ pageSubtitle: Stories, articles and resources<br class="responsive"> from the On
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 mb-1">
+						<a href="/meet-austin-guidry/" class="meet-austin-guidry">
+							<div class="col-xs-12 col-md-8 col-md-offset-2 py-8">
+								<h2>Meet Austin Guidry.</h2>
+								<p class="subheading">An interview with OneQode's growth officer, retired StarCraft pro, Austin Guidry</p>
+								<p class="author">by Austin Gallagher <span class="date">• 15 Mar 2022</span></p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 mb-1">
 						<a href="/story/" class="story-of-oneqode">
 							<div class="col-xs-12 col-md-8 col-md-offset-2 py-8">
 								<h2>The Origin Story of OneQode</h2>
@@ -122,14 +149,22 @@ pageSubtitle: Stories, articles and resources<br class="responsive"> from the On
 						</a>
 					</div>
 				</div>
+				<div class="row">
+					<div class="col-xs-12 mb-1">
+						<a href="/server-pacific-island/" class="server-pacific-island">
+							<div class="col-xs-12 col-md-8 col-md-offset-2 py-8">
+								<h2>Installing a Game Server on a Pacific island... How hard could it be?</h2>
+								<p class="subheading">As it turns out, it’s not easy.</p>
+								<p class="author">by Joe Swinn <span class="date">• 22 Nov 2021</span></p>
+							</div>
+						</a>
+					</div>
+				</div>
 				{%- comment %}
-				<!-- 
-					Server on a Pacific Island Link
-				 -->
 				<div class="row">
 					<div class="col-xs-12 col-md-6 mb-1">
-						<a href="#" class="meet-austin">
-							<h2>Meet Austin Guidry<mark class="dot">.</mark></h2>
+						<a href="/meet-austin-guidry/" class="meet-austin">
+							<h2>Meet Austin Guidry.</h2>
 							<p class="subheading">An interview with OneQode's growth officer, retired StarCraft pro, Austin Guidry</p>
 							<p class="author">by Austin Gallagher <span class="date">• 15 Feb 2022</span></p>
 						</a>
@@ -141,8 +176,8 @@ pageSubtitle: Stories, articles and resources<br class="responsive"> from the On
 							<p class="author">by Austin Gallagher <span class="date">• 15 Feb 2022</span></p>
 						</a>
 					</div>
-				</div>
 				{%- endcomment %}
+				</div>
 			</div>
 		</section>
 		<section class="black-to-footer py-8 mt-8">

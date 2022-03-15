@@ -580,7 +580,8 @@ h2,
 .career h1 {
 	font-size: 3rem;
 }
-h3 {
+h3,
+.h3 {
 	font-size: 2rem;
 }
 h4 {
@@ -634,6 +635,9 @@ a {
 a:hover,
 a:focus {
 	color: #00597f;
+}
+a.chevron {
+	white-space: nowrap;
 }
 a.chevron::after {
 	width: 1.2rem;
@@ -1471,7 +1475,8 @@ RESPONSIVE OVERRIDES
 	.career h1 {
 		font-size: 1.6rem;
 	}
-	h3 {
+	h3,
+	.h3 {
 		font-size:  1.3rem;
 	}
 	.linked h3 {

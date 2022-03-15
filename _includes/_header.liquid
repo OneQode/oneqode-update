@@ -36,21 +36,21 @@
 	<meta name="twitter:title" content="{{ metaTitle }}" />
 	<meta name="twitter:site" content="@oneqode" />
 	<meta name="twitter:creator" content="@oneqode" />
-	{%- if ignore %}
+{%- if ignore %}
 	<meta name="robots" content="noindex">
-	{%- endif %}
-	{%- if canonical %}
-	<link rel="canonical" href="{{ global.url }}{{ canonical }}">
-	{%- endif %}
-	{%- if mediaRSS %}
+{%- endif %}
+{%- if canonical %}
+	<link rel="canonical" href="{{ canonical }}">
+{%- endif %}
+{%- if mediaRSS %}
 	<link rel="alternate" type="application/rss+xml" title="RSS Feed for OneQode Newsroom" href="/media-feed.xml" />
-	{%- endif %}
-	{%- if careersRSS %}
+{%- endif %}
+{%- if careersRSS %}
 	<link rel="alternate" type="application/rss+xml" title="RSS Feed for OneQode Careers" href="/careers-feed.xml" />
-	{%- endif %}
-	{%- if contentRSS %}
+{%- endif %}
+{%- if contentRSS %}
 	<link rel="alternate" type="application/rss+xml" title="RSS Feed for The Qode" href="/content-feed.xml" />
-	{%- endif %}
+{%- endif %}
 	<!-- Organisation Info -->
 	<script type="application/ld+json">
 		{
@@ -79,11 +79,18 @@
 			]
 		}
 	</script>
-	<!-- Styles -->
-	<link rel="stylesheet" href="/css/production.min.css">
-	<!-- Fonts -->
+	<!-- Performance -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{%- if slider or form %}
+	<link rel="preconnect" href="https://unpkg.com">
+{%- endif %}
+	<!-- Styles -->
+	<link rel="stylesheet" href="/css/production.min.css">
+{%- if slider %}
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+{%- endif %}
+	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Work+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 	<!-- Shortcut Icons -->
 	<link rel="icon" href="/img/favicon.svg">
@@ -101,6 +108,9 @@
 	})(window,document,'script','dataLayer','GTM-5FZ7DSW');</script>
 	<!-- Site JS -->
 	<script src="/js/production.js"></script>
+{%- if slider %}
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+{%- endif %}
 {%- if form %}
 	<!-- Spam Protection -->
 	<script src="https://unpkg.com/@botpoison/browser"></script>
