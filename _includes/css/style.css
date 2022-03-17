@@ -570,6 +570,7 @@ p.price {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 600;
 	line-height: 1.1;
+	letter-spacing: -0.02em;
 	margin: 0 0 2rem 0;
 }
 h1 {
