@@ -1296,6 +1296,22 @@ ul.no-style {
 abbr[title] {
 	cursor: help;
 }
+/* Key Facts & Takeaways */
+#key-facts,
+#key-takeaways {
+	background: #333;
+	border-radius: 15px;
+}
+#key-facts li,
+#key-takeaways li {
+	margin-bottom: 1rem;
+}
+#key-facts :last-child,
+#key-facts li:last-child,
+#key-takeaways :last-child,
+#key-takeaways li:last-child {
+	margin-bottom: 0;
+}
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - -
 RESPONSIVE OVERRIDES
  - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -1321,6 +1337,11 @@ RESPONSIVE OVERRIDES
 	}
 	footer:hover > * {
 		opacity: 1;
+	}
+	/* Key Facts & Takeaways */
+	#key-facts,
+	#key-takeaways {
+		background: #17181C;
 	}
 }
 
