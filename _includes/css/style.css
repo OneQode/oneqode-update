@@ -791,8 +791,15 @@ textarea::placeholder {
 select {
 	color: #999;
 }
-select option {
+select option,
+select optgroup {
 	background: #333;
+}
+select optgroup[label] {
+	color: #999;
+}
+select option {
+	color: #00b0f0;
 }
 input:hover,
 select:hover,
