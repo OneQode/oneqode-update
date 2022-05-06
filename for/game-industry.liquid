@@ -11,6 +11,17 @@ pageSubtitle: With Asia-Pacific’s high performance <br class="responsive"> gam
 slider: true
 ---
 {% include _header.liquid %}
+{% comment %}
+<!-- 
+	more immersive gaming experiences
+	high fidelity
+	connecting people from as far apart as Mongolia and Australia on a fast, level playing-field.
+	first class
+	gold standard
+	luxury
+	give your players the red carpet treatment	
+ -->
+{% endcomment %}
 		<style>
 			section.hero {
 				min-height: 85vh;
@@ -59,9 +70,13 @@ slider: true
 				mask: url(/img/ico/guam2.svg) no-repeat center;
 				-webkit-mask: url(/img/ico/guam2.svg) no-repeat center;
 			}
-			.icon.support {
-				mask: url(/img/ico/support.svg) no-repeat center;
-				-webkit-mask: url(/img/ico/support.svg) no-repeat center;
+			.icon.network {
+				mask: url(/img/ico/connection2.svg) no-repeat center;
+				-webkit-mask: url(/img/ico/connection2.svg) no-repeat center;
+			}
+			.icon.shield {
+				mask: url(/img/ico/ddos.svg) no-repeat center;
+				-webkit-mask: url(/img/ico/ddos.svg) no-repeat center;
 			}
 			/* Org Type Selector */
 			select#organisation-type {
@@ -98,66 +113,57 @@ slider: true
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-md-8 col-md-offset-2">
-						<h2>PvE or PvP<mark class="dot">?</mark><br class="responsive"> Either way make sure it isn’t players versus </h2>
-						<h1>Servers<mark class="dot">.</mark></h1>
+						<h2>Game hosting that gives your players the red carpet treatment<mark class="dot">.</mark></h2>
 					</div>
 					<div class="col-xs-12 col-md-6 col-md-offset-3">
-						<p class="subheading faded">Make your game’s servers a talking point for all the right reasons.</p>
-						<p>Stand out with a network that puts you on the map. A unique cross regional hub brings together your players faster than ever before.</p>
+						<p class="subheading faded">We'll make your infrastructure a talking point for all the right reasons</p>
+						<p>Stand out with a latency-optimised gaming network, a unique cross-regional hub that reaches millions of players, and servers built for high-fidelity experiences.</p>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="text-center mt-8">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12 col-md-8 col-md-offset-2">
-						<h2>Get all the bells and whistles<mark class="dot">.</mark></h2>
-						<p class="subheading faded">Blazing-fast game servers and network<br class="responsive"> infrastructure for your mutliplayer game</p>
-					</div>
-				</div>
-			</div>
-			<div class="swiper benefits mt-2 mb-8">
+		<section class="text-center">
+			<div class="swiper benefits mb-8">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide col-xs-10 col-md-8 col-lg-6">
 						<div class="icon guam"></div>
 						<p class="superheading">APAC Central</p>
-						<h3 class="mb-0 mt-2">Unlock revolutionary cross-regional play</h3>
+						<h3 class="mb-0 mt-2">Unlock groundbreaking cross-regional play</h3>
 						<p class="subheading faded">With Asia-Pacific’s first central gaming hub</p>
 						<div class="col-xs-12 col-md-8 col-md-offset-2">
-							<p class="mt-2">Level the playing field for gamers across Asia Pacific, whether they’re from Melbourne or Mongolia.</p>
+							<p class="mt-2">Connect millions of players across the region on a level playing field — whether they’re from Melbourne or Mongolia.</p>
 						</div>
 						<p class="mt-2"><a href="/guam/" class="chevron m-1">APAC Central</a></p>
 					</div>
 					<div class="swiper-slide col-xs-10 col-md-8 col-lg-6">
+						<div class="icon network"></div>
+						<p class="superheading">Latency-optimised network</p>
+						<h3 class="mb-0 mt-2">Lightning-fast gaming connectivity</h3>
+						<p class="subheading faded">An unmatched, low-latency carrier network</p>
+						<div class="col-xs-12 col-md-8 col-md-offset-2">
+							<p class="mt-2">Your game traffic will take the most direct path to players across a carrier network built for latency, reach and speed.</p>
+						</div>
+						<p class="mt-2"><a href="/network/" class="chevron m-1">Gaming network</a></p>
+					</div>
+					<div class="swiper-slide col-xs-10 col-md-8 col-lg-6">
 						<div class="icon play-fast"></div>
-						<p class="superheading">Blazing fast cloud</p>
-						<h3 class="mb-0 mt-2">Flexibility and power</h3>
-						<p class="subheading faded">On the world’s fastest game servers</p>
+						<p class="superheading">Blazing fast game servers</p>
+						<h3 class="mb-0 mt-2">Powerful servers for immersive gaming</h3>
+						<p class="subheading faded">Built with the world’s fastest CPUs</p>
 						<div class="col-xs-12 col-md-8 col-md-offset-2">
 							<p class="mt-2">The world’s fastest processors, API accessibility, and Kubernetes integration gives you a true-to-life experience.</p>
 						</div>
-						<p class="mt-2"><a href="/network/" class="chevron m-1">Network</a> <br class="mobile-only"><a href="/game-servers/" class="chevron m-1">Game servers</a></p>
+						<p class="mt-2"><a href="/cloud/" class="chevron m-1">Cloud platform</a> <br class="mobile-only"><a href="/game-servers/" class="chevron m-1">Dedicated servers</a></p>
 					</div>
 					<div class="swiper-slide col-xs-10 col-md-8 col-lg-6">
-						<div class="icon support"></div>
-						<p class="superheading">Latency-optimised network</p>
-						<h3 class="mb-0 mt-2">Speed above everything else</h3>
-						<p class="subheading faded">No other provider has built a network like it</p>
-						<div class="col-xs-12 col-md-8 col-md-offset-2">
-							<p class="mt-2">Access top of the line bare metal infrastructure, designed with speed and powered with <strong> custom routing and our powerful network. </strong></p>
-						</div>
-						<p class="mt-2"><a href="/esports/contact/?message=Hey%20Austin%2C%20I%20have%20an%20event%20coming%20up%20in..." class="chevron m-1">Our network</a></p>
-					</div>
-					<div class="swiper-slide col-xs-10 col-md-8 col-lg-6">
-						<div class="icon guam"></div>
+						<div class="icon shield"></div>
 						<p class="superheading">DDoS Protection</p>
 						<h3 class="mb-0 mt-2">Protection by default</h3>
 						<p class="subheading faded">Keep your servers safe and your players in game.</p>
 						<div class="col-xs-12 col-md-8 col-md-offset-2">
 							<p class="mt-2">More attacks are happening than ever — with OneQode, you’re always portected. No extra charge.</p>
 						</div>
-						<p class="mt-2"><a href="/guam/" class="chevron m-1">Our security</a></p>
+						<p class="mt-2"><a href="/network/#ddos-protection" class="chevron m-1">DDoS protection</a></p>
 					</div>
 				</div>
 				<div class="container">
