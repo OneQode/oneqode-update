@@ -3,15 +3,15 @@ layout: post.liquid
 section: gaming
 permalink: /tailspin/
 metaTitle: "Tailspin: The Kiss of Death for Multiplayer Games • OneQode™"
-metaDescription: Reflecting on tailspin for multiplayer games. A phenomenon where a loss of players causes a game to tailspin. What causes it, and how can you avoid it?
-ogImage: story.jpg
-heroImage: roof-wireless-dish-brisbane
+metaDescription: This self-reinforcing loop is the kiss of death for a multiplayer game. What causes tailspin, and how can you avoid it?
+ogImage: tailspin.jpg
+heroImage: tailspin
 changefreq: never
 priority: 0.4
 title: 'Tailspin: The Kiss of Death<br class="responsive"> for Multiplayer Games<mark class="dot">.</mark>'
 author: Austin Gallagher
 authorRole: Brand Journalist
-date: 2022-04-11
+date: 2022-05-16
 tags: ['qode', 'game development', 'game servers', 'retention', 'network']
 cta: true
 ctaTitle: Hosting that won’t cause tailspin
@@ -33,20 +33,8 @@ lazyLoadVideo: true
 	- Other TODOs in content ↓
 
 - Austin
-	- Meta description — review
-		- If skill gap in title, mention in text (describe axes)
-	- Review → read through on dev site. What would you bold/highlight/change?
-	- What causes Tailspin in the first place?
-		- → How do you avoid tailspin in the first place?
-	- Link
-		- Steam Charts for Disintegration
-
-			https://steamcharts.com/search/?q=disintegration
-			- Actual steam chart appears to not exist anymore
-
-		- Tweet (V1 Interactive) — also embed instead?
-
-			https://twitter.com/V1Interactive/status/1368984876486070272
+	- Headings for "How can you avoid key causes of tailspin"
+		- More action-focussed e.g. "marketing your game without" → "market your game without"
 
 * * * * * * * * * * * * * * * 
 -->
@@ -54,13 +42,13 @@ lazyLoadVideo: true
 		<style>
 			.no-webp section.hero {
 				background:	linear-gradient(to bottom, rgba(0,0,0,0.2) 50%, #000),
-							url(/img/bg/{{ heroImage }}.jpg) bottom center;
+							url(/img/bg/{{ heroImage }}.jpg) top center;
 				background-size: cover;
 				background-repeat: no-repeat;
 			}
 			.webp section.hero {
 				background:	linear-gradient(to bottom, rgba(0,0,0,0.2) 50%, #000),
-							url(/img/bg/{{ heroImage }}.webp) bottom center;
+							url(/img/bg/{{ heroImage }}.webp) top center;
 				background-size: cover;
 				background-repeat: no-repeat;
 			}
@@ -78,22 +66,8 @@ lazyLoadVideo: true
 			blockquote > * {
 				color: #cecece;
 			}
-			p.shout-out {
-				font-family: "Poppins", sans-serif;
-				font-weight: 600;
-				font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
-				margin: 2rem 0 2rem 2rem;
-				background: -webkit-linear-gradient(0deg, #00b0f0, #00597f);
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-			}
-			@media (max-width: 64em) {
-				p.shout-out {
-					margin-left: 1.5rem;
-				}
-			}
 		</style>
-		<section class="py-4 push-forward">
+		<section class="pb-4 push-forward">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-md-8 col-md-offset-2">
@@ -105,7 +79,7 @@ lazyLoadVideo: true
 								<li>Various games have experienced this tailspin, resulting in catastrophic outcomes for the development studio.</li>
 								<li>Post-launch strategies that focus on monetization, post launch content, community management, network stability and other aspects are key to retaining players.</li>
 								<li>Modern multiplayer games are reliant on much more than just gameplay.</li>
-								<li>Retaining players is easier than drawing old players back, and retaining players is very hard.</li>
+								<li>Retaining players is easier than drawing old players back, and retaining players is hard.</li>
 							</ul>
 						</div>
 						<!-- End Key Takeaways -->
@@ -130,10 +104,6 @@ lazyLoadVideo: true
 						<p><strong>But, I don’t play Titanfall 2 anymore.</strong> Not many people do.</p>
 						<h2 class="mt-4">Circling the (player) drain</h2>
 						<p>One of the reasons I stopped playing was, ironically, a lack of players.</p>
-						<blockquote class="fail">
-							<!-- TODO -->
-							<p>Chart of player count over time</p>
-						</blockquote>
 						<p>But then I realised, I was part of the problem.</p>
 						<p>This isn’t unique to Titanfall 2.</p>
 						<p>We’ve all played a game we love, only to see it die as players return to heavy-hitting industry giants.</p>
@@ -144,7 +114,8 @@ lazyLoadVideo: true
 							<p>“You are not stuck in traffic. You are traffic.”</p>
 							<p>— TomTom SatNav Advertisement</p>
 						</blockquote>
-						<p class="shout-out">Multiplayer tailspin is a phenomenon where a declining player count in a game causes a feedback loop where additional players abandon the title due to a declining population.</p>
+						<h3>What is Tailspin?</h3>
+						<p><strong>Tailspin is a phenomenon where a declining player count in a multiplayer game causes a feedback loop where additional players abandon the title due to a declining population.</strong></p>
 						<p>We’ve all been part of it, whether we know it or not. We’ve all been partly responsible for killing our favourite games.</p>
 						<p>Tailspin happens when the declining population of a game in terms fuels a further loss of players, worsening as more people stop playing.</p>
 						<p>Tailspin affects both players and developers.</p>
@@ -156,9 +127,14 @@ lazyLoadVideo: true
 								<source srcset="/img/content/tailspin/feedback-loop.webp" type="image/webp">
 								<img class="opaque" src="/img/content/tailspin/feedback-loop.jpg" alt="Image shows three elements of a cycle, the loss of players, the loss of resources, and the loss of support.">
 							</picture>
+							<!-- <picture>
+								<source srcset="/img/content/tailspin/multiplayer-tailspin-feedback-loop-diagram.webp" type="image/webp">
+								<img class="opaque" src="/img/content/tailspin/multiplayer-tailspin-feedback-loop-diagram.jpg" alt="Image shows three elements of a cycle, the loss of players, the loss of resources, and the loss of support.">
+							</picture> -->
 							<figcaption>The feedback loop of losing players, resources, and support for a game</figcaption>
 						</figure>
 					</div>
+
 					<div class="col-xs-12 col-md-8 col-md-offset-2">
 						<!-- End Wide Image — With Caption -->
 						<h3>For developers, fewer players mean less income</h3>
@@ -171,7 +147,7 @@ lazyLoadVideo: true
 						<p>Those newer players are likely to then move on to less punishing games.</p>
 						<p>Players may decide to leave due to a lack of content or a lack of other players, but both fuel the loop.</p>
 						<p>Players consolidate to fewer, more popular titles.</p>
-						<h2 id="causes" class="mt-4">How to avoid key causes of tailspin</h2>
+						<h2 id="causes" class="mt-4">How can you avoid key causes of tailspin?</h2>
 						<p>While acknowledging that I am not a game developer, from researching titles that suffer from this drastic decrease in players, I’ve seen a few key themes that can kickstart the feedback loop. This is by no means an exhaustive list, and there are countless other elements to take into account.</p>
 						<h3 class="mt-4">Marketing your game without misleading players</h3>
 						<p>Marketing a new game is difficult. Setting reasonable expectations for what the gameplay, monetization, and content schedule will be and enticing players.</p>
