@@ -1,5 +1,6 @@
 ---
 layout: page.liquid
+heroSmall: true
 section: gaming
 metaTitle: Pricing • Cloud Platform • OneQode™
 metaDescription: Pick a region to see cloud instance pricing and costs with OneQode.
@@ -8,6 +9,17 @@ priority: 0.5
 pageTitle: Cloud <br class="responsive"> platform pricing
 pageSubtitle: Pick a region below to see pricing
 ---
+{% comment %}
+<!-- 
+
+	!TODO:
+
+	* Page title
+	* Meta Description
+	* Jump to [cloud instances | storage | data transfer]
+
+ -->
+{% endcomment %}
 		<style>
 			section.hero {
 				background: linear-gradient(to bottom, transparent 50%, #000 100%), radial-gradient(circle at bottom,#002735 0,#000 100%);
@@ -15,19 +27,6 @@ pageSubtitle: Pick a region below to see pricing
 			/* Form */
 			.text-small {
 				font-size: 1rem;
-			}
-			/* Price box */
-			#region {
-				background: #333;
-				border-radius: 15px;
-			}
-			@media (min-width: 48em) {
-				/* Region bg */
-				#region {
-					background: #17181C;
-					position: sticky;
-					top: 6rem;
-				}
 			}
 		</style>
 		<aside class="callout">
@@ -46,101 +45,127 @@ pageSubtitle: Pick a region below to see pricing
 		<section class="pb-8">
 			<div class="container">
 				<div class="row mb-8">
-					<div class="col-xs-12 col-md-7 py-2">
+					<div class="col-xs-12 py-2">
 						<h3 class="mobile-text-center">Cloud Instances</h3>
 						<div class="responsive-table">
 							<table>
 								<thead>
 									<tr>
 										<th>Name</th>
+										<th>Clock Speed</th>
 										<th>vCPUs</th>
 										<th>RAM</th>
+										<th>SSD</th>
 										<th class="text-right">Hourly</th>
 										<th class="text-right">Monthly <span class="text-small">(Est.)</span></th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
-										<td class="nowrap">xe.tiny</td>
+										<td class="nowrap">xe.tiny <span class="tag">Xeon</span></td>
+										<td class="nowrap">3.7 GHz</td>
 										<td>1</td>
 										<td class="nowrap">0.5 GB</td>
+										<td class="nowrap">XX GB</td>
 										<td class="text-right">$0.017</td>
 										<td class="text-right">$12.99</td>
 									</tr>
 									<tr>
-										<td class="nowrap">xe.small</td>
+										<td class="nowrap">xe.small <span class="tag">Xeon</span></td>
+										<td class="nowrap">3.7 GHz</td>
 										<td>1</td>
 										<td class="nowrap">1 GB</td>
+										<td class="nowrap">XX GB</td>
 										<td class="text-right">$0.022</td>
 										<td class="text-right">$16.43</td>
 									</tr>
 									<tr>
-										<td class="nowrap">xer.small</td>
+										<td class="nowrap">xer.small <span class="tag">Xeon</span></td>
+										<td class="nowrap">3.7 GHz</td>
 										<td>1</td>
 										<td class="nowrap">2 GB</td>
+										<td class="nowrap">XX GB</td>
 										<td class="text-right">$0.024</td>
 										<td class="text-right">$18.03</td>
 									</tr>
 									<tr>
-										<td class="nowrap">xe.medium</td>
+										<td class="nowrap">xe.medium <span class="tag">Xeon</span></td>
+										<td class="nowrap">3.7 GHz</td>
 										<td>2</td>
 										<td class="nowrap">2 GB</td>
+										<td class="nowrap">XX GB</td>
 										<td class="text-right">$0.032</td>
 										<td class="text-right">$24.02</td>
 									</tr>
 									<tr>
-										<td class="nowrap">xer.medium</td>
+										<td class="nowrap">xer.medium <span class="tag">Xeon</span></td>
+										<td class="nowrap">3.7 GHz</td>
 										<td>2</td>
 										<td class="nowrap">4 GB</td>
+										<td class="nowrap">XX GB</td>
 										<td class="text-right">$0.046</td>
 										<td class="text-right">$34.02</td>
 									</tr>
 									<tr>
-										<td class="nowrap">xemr.small</td>
+										<td class="nowrap">xemr.small <span class="tag">Xeon</span></td>
+										<td class="nowrap">3.7 GHz</td>
 										<td>1</td>
 										<td class="nowrap">8 GB</td>
+										<td class="nowrap">XX GB</td>
 										<td class="text-right">$0.058</td>
 										<td class="text-right">$42.49</td>
 									</tr>
 									<tr>
-										<td class="nowrap">xe.large</td>
+										<td class="nowrap">xe.large <span class="tag">Xeon</span></td>
+										<td class="nowrap">3.7 GHz</td>
 										<td>4</td>
 										<td class="nowrap">16 GB</td>
+										<td class="nowrap">XX GB</td>
 										<td class="text-right">$0.157</td>
 										<td class="text-right">$114.98</td>
 									</tr>
 									<tr>
-										<td class="nowrap">xemr.medium</td>
+										<td class="nowrap">xemr.medium <span class="tag">Xeon</span></td>
+										<td class="nowrap">3.7 GHz</td>
 										<td>2</td>
 										<td class="nowrap">16 GB</td>
+										<td class="nowrap">XX GB</td>
 										<td class="text-right">$0.116</td>
 										<td class="text-right">$84.97</td>
 									</tr>
 									<tr>
-										<td class="nowrap">xer.large</td>
+										<td class="nowrap">xer.large <span class="tag">Xeon</span></td>
+										<td class="nowrap">3.7 GHz</td>
 										<td>4</td>
 										<td class="nowrap">32 GB</td>
+										<td class="nowrap">XX GB</td>
 										<td class="text-right">$0.226</td>
 										<td class="text-right">$164.98</td>
 									</tr>
 									<tr>
-										<td class="nowrap">xer.2xlarge</td>
+										<td class="nowrap">xer.2xlarge <span class="tag">Xeon</span></td>
+										<td class="nowrap">3.7 GHz</td>
 										<td>8</td>
 										<td class="nowrap">64 GB</td>
+										<td class="nowrap">XX GB</td>
 										<td class="text-right">$0.452</td>
 										<td class="text-right">$330.03</td>
 									</tr>
 									<tr>
-										<td class="nowrap">xe.2xlarge</td>
+										<td class="nowrap">xe.2xlarge <span class="tag">Xeon</span></td>
+										<td class="nowrap">3.7 GHz</td>
 										<td>8</td>
 										<td class="nowrap">64 GB</td>
+										<td class="nowrap">XX GB</td>
 										<td class="text-right">$0.335</td>
 										<td class="text-right">$244.99</td>
 									</tr>
 									<tr>
-										<td class="nowrap">xer.3xlarge</td>
+										<td class="nowrap">xer.3xlarge <span class="tag">Xeon</span></td>
+										<td class="nowrap">3.7 GHz</td>
 										<td>16</td>
 										<td class="nowrap">120 GB</td>
+										<td class="nowrap">XX GB</td>
 										<td class="text-right">$0.952</td>
 										<td class="text-right">$695.03</td>
 									</tr>
@@ -148,37 +173,12 @@ pageSubtitle: Pick a region below to see pricing
 							</table>
 						</div>
 						<p class="faded">xe = Intel® Xeon® processor operating at 3.7 GHz+</p>
-						<h3 class="mobile-text-center mt-2">Block Storage</h3>
+						<p class="faded">*r = RAM</p>
+						<p class="faded">*mr = More RAM</p>
 						<h3 class="mobile-text-center mt-2">Image Storage</h3>
+						<h3 class="mobile-text-center mt-2">Block Storage</h3>
 						<h3 class="mobile-text-center mt-2">Bandwidth</h3>
 						<h3 class="mobile-text-center mt-2">Data Transfer</h3>
-					</div>
-					<div class="col-xs-12 col-md-4 col-md-offset-1 first-xs last-md">
-						<div id="region" class="p-2">
-							<h4>Pick a region</h4>
-							<select name="region-select" id="region">
-								<optgroup label="APAC Central">
-									<option value="Guam" selected>Guam</option>
-								</optgroup>
-								<optgroup label="Asia — North">
-									<option value="Seoul">Seoul</option>
-									<option value="Tokyo">Tokyo</option>
-									<option value="Hong Kong">Hong Kong</option>
-								</optgroup>
-								<optgroup label="Asia — West">
-									<option value="Singapore">Singapore</option>
-								</optgroup>
-								<optgroup label="Australia">
-									<option value="Brisbane">Brisbane</option>
-									<option value="Sydney">Sydney</option>
-									<option value="Melbourne">Melbourne</option>
-								</optgroup>
-								<optgroup label="North America">
-									<option value="Los Angeles">Los Angeles</option>
-								</optgroup>
-							</select>
-							<p class="sla mb-0"><span class="ex">Pricing in USD. Exclusive of Tax</span></p>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -195,274 +195,8 @@ pageSubtitle: Pick a region below to see pricing
 		<script>
 
 			/**
-			*	Pricing Calculator: Dedicated Servers
-			*	Takes our regional pricing and calculates whenever radio inputs change
+			*	Pricing Calculators: Cloud
+			*	Takes our pricing and calculates when inputs change
 			*/
-
-			// data Object
-			const data = {
-				'hong-kong': {
-					cpu: {
-						'E-2288G': 440,
-						'E-2174G': 270,
-						'E-2286G': 410,
-						'E-2176G': 290,
-						'i9-9900K': 285,
-					},
-					ram: {
-						'16GB': 20,
-						'32GB': 40,
-						'64GB': 80,
-						'128GB': 160,
-					},
-					ssd: {
-						'2 x 500GB': 0,
-						'2 x 1TB': 65,
-						'2 x 2TB': 120,
-					},
-					bandwidth: {
-						'100 Mbps - 10TB data': 0,
-						'1 Gbps - 10TB data': 150,
-						'100 Mbps - Unlimited data': 350,
-						'1 Gbps - Unlimited data': 500,
-						'10 Gbps': 'Contact Us',
-						'40 Gbps': 'Contact Us',
-					},
-				},
-				tokyo: {
-					cpu: {
-						'E-2288G': 440,
-						'E-2174G': 270,
-						'E-2286G': 410,
-						'E-2176G': 290,
-						'i9-9900K': 285,
-					},
-					ram: {
-						'16GB': 20,
-						'32GB': 40,
-						'64GB': 80,
-						'128GB': 160,
-					},
-					ssd: {
-						'2 x 500GB': 0,
-						'2 x 1TB': 65,
-						'2 x 2TB': 120,
-					},
-					bandwidth: {
-						'100 Mbps - 10TB data': 0,
-						'1 Gbps - 10TB data': 150,
-						'100 Mbps - Unlimited data': 350,
-						'1 Gbps - Unlimited data': 500,
-						'10 Gbps': 'Contact Us',
-						'40 Gbps': 'Contact Us',
-					},
-				},
-				'sunshine-coast': {
-					cpu: {
-						'E-2288G': 520,
-						'E-2174G': 345,
-						'E-2286G': 490,
-						'E-2176G': 365,
-						'i9-9900K': 350,
-					},
-					ram: {
-						'16GB': 20,
-						'32GB': 40,
-						'64GB': 80,
-						'128GB': 160,
-					},
-					ssd: {
-						'2 x 500GB': 0,
-						'2 x 1TB': 65,
-						'2 x 2TB': 120,
-					},
-					bandwidth: {
-						'100 Mbps - 10TB data': 0,
-						'1 Gbps - 10TB data': 250,
-						'100 Mbps - Unlimited data': 500,
-						'1 Gbps - Unlimited data': 1000,
-						'10 Gbps': 'Contact Us',
-						'40 Gbps': 'Contact Us',
-					},
-				},
-				brisbane: {
-					cpu: {
-						'E-2288G': 520,
-						'E-2174G': 345,
-						'E-2286G': 490,
-						'E-2176G': 365,
-						'i9-9900K': 350,
-					},
-					ram: {
-						'16GB': 20,
-						'32GB': 40,
-						'64GB': 80,
-						'128GB': 160,
-					},
-					ssd: {
-						'2 x 500GB': 0,
-						'2 x 1TB': 65,
-						'2 x 2TB': 120,
-					},
-					bandwidth: {
-						'100 Mbps - 10TB data': 0,
-						'1 Gbps - 10TB data': 250,
-						'100 Mbps - Unlimited data': 500,
-						'1 Gbps - Unlimited data': 1000,
-						'10 Gbps': 'Contact Us',
-						'40 Gbps': 'Contact Us',
-					},
-				},
-				sydney: {
-					cpu: {
-						'E-2288G': 520,
-						'E-2174G': 345,
-						'E-2286G': 490,
-						'E-2176G': 365,
-						'i9-9900K': 350,
-					},
-					ram: {
-						'16GB': 20,
-						'32GB': 40,
-						'64GB': 80,
-						'128GB': 160,
-					},
-					ssd: {
-						'2 x 500GB': 0,
-						'2 x 1TB': 65,
-						'2 x 2TB': 120,
-					},
-					bandwidth: {
-						'100 Mbps - 10TB data': 0,
-						'1 Gbps - 10TB data': 250,
-						'100 Mbps - Unlimited data': 500,
-						'1 Gbps - Unlimited data': 1000,
-						'10 Gbps': 'Contact Us',
-						'40 Gbps': 'Contact Us',
-					},
-				},
-				'los-angeles': {
-					cpu: {
-						'E-2288G': 307,
-						'E-2174G': 270,
-						'E-2286G': 277,
-						'E-2176G': 290,
-						'i9-9900K': 280,
-					},
-					ram: {
-						'16GB': 20,
-						'32GB': 40,
-						'64GB': 80,
-						'128GB': 160,
-					},
-					ssd: {
-						'2 x 500GB': 0,
-						'2 x 1TB': 65,
-						'2 x 2TB': 120,
-					},
-					bandwidth: {
-						'100 Mbps - 10TB data': 0,
-						'1 Gbps - 10TB data': 250,
-						'100 Mbps - Unlimited data': 500,
-						'1 Gbps - Unlimited data': 1000,
-						'10 Gbps': 'Contact Us',
-						'40 Gbps': 'Contact Us',
-					},
-				},
-				guam: {
-					cpu: {
-						'E-2288G': 520,
-						'E-2174G': 350,
-						'E-2286G': 490,
-						'E-2176G': 320,
-						'i9-9900K': 300,
-					},
-					ram: {
-						'16GB': 20,
-						'32GB': 40,
-						'64GB': 80,
-						'128GB': 160,
-					},
-					ssd: {
-						'2 x 500GB': 0,
-						'2 x 1TB': 65,
-						'2 x 2TB': 120,
-					},
-					bandwidth: {
-						'100 Mbps - 10TB data': 0,
-						'1 Gbps - 10TB data': 75,
-						'100 Mbps - Unlimited data)': 150,
-						'1 Gbps - Unlimited data': 300,
-						'10 Gbps': 'Contact Us',
-						'40 Gbps': 'Contact Us',
-					},
-				},
-			};
-
-			// getting form element by id
-			const calculator = document.getElementById('pricing-dedicated-servers');
-			// getting result paragraph
-			const result = document.getElementById('result');
-
-			// adding event listener on form value change
-			calculator.addEventListener('input', calculate);
-
-			// defining prototype function to getting value from object if exists
-			Object.prototype.getValue = function(key) {
-				if (this.hasOwnProperty(key)) return this[key];
-				else return null;
-			};
-
-			// initial value
-			calculate.call(calculator);
-
-			// calculate function
-			function calculate() {
-				// getting form values
-				const {
-					cpu: {
-						value: cpuValue
-					},
-					ram: {
-						value: ramValue
-					},
-					ssd: {
-						value: ssdValue
-					},
-					bandwidth: {
-						value: bandwidthValue
-					},
-					region: {
-						value: regionValue
-					},
-				} = this;
-
-				// total Price
-				let total;
-				// getting selected region Object
-				const region = data.getValue(regionValue);
-				if (region) {
-					// getting values of (cpu,ram,ssd,bandwidth) from specific region
-					const cpu = region.cpu.getValue(cpuValue) ?? 0;
-					const ram = region.ram.getValue(ramValue) ?? 0;
-					const ssd = region.ssd.getValue(ssdValue) ?? 0;
-					const bandwidth = region.bandwidth.getValue(bandwidthValue) ?? 0;
-					// adding all value in total
-					total = cpu + ram + ssd;
-
-					// checking if bandwidth has string type then print contactus otherwise also add its value in total
-					if (typeof bandwidth === 'string') {
-						total = '<span class="num">' + bandwidth + '</span>';
-					} else {
-						total += bandwidth;
-						total = '<span class="num">' + `\$${total}` + '</span><span class="up">/mo</span>';
-					}
-					// printing the result
-					result.innerHTML = total;
-				} else {
-					// empty the result if region is not selected
-					result.innerText = '';
-				}
-			}
 
 		</script>

@@ -881,6 +881,10 @@ section.hero {
 	text-align: left;
 	min-height: 80vh;
 }
+section.hero.condensed {
+	min-height: 50vh;
+	padding-top: 4rem;
+}
 .push-forward {
 	position: relative;
 	z-index: 2;
@@ -1563,7 +1567,8 @@ RESPONSIVE OVERRIDES
 }
 /* Very small phones */
 @media screen and (max-width: 340px) {
-	section.hero {
+	section.hero,
+	section.hero.condensed {
 		padding-top: 4rem;
 	}
 	h1 {
