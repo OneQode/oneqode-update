@@ -736,7 +736,7 @@ table {
 table td,
 table th {
 	padding: 1rem 2rem;
-	border-bottom: 1px solid #999;
+	border-bottom: 1px solid #666;
 	vertical-align: top;
 }
 tbody tr:last-child td,
