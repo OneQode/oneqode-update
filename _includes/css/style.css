@@ -1525,6 +1525,13 @@ RESPONSIVE OVERRIDES
 	.stat span {
 		font-size: 3rem;
 	}
+	ul.ticks li::before,
+	ul.ticks.large li::before {
+		height: 1.4rem;
+		width: 1.4rem;
+		margin-top: 0rem;
+		margin-left: -2rem;
+	}
 	/* Links */
 	.button {
 		font-size: 0.9rem;
