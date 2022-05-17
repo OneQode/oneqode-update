@@ -13,14 +13,7 @@ pageSubtitle: Straightforward pricing, next-level performance
 <!-- 
 
 	!TODO:
-
-	* Page title
-	* Meta Description
 	* Jump to [cloud instances | storage | data transfer]
-	* Ticks - features in pricing
-		- flat pricing
-		- free DDoS protection
-		- first 10TB data free
 
  -->
 {% endcomment %}
@@ -65,12 +58,17 @@ pageSubtitle: Straightforward pricing, next-level performance
 					grid-gap: 1.5rem 2rem;
 				}
 			}
+			@media (max-width: 64em) {
+				.xs\:pt-1 {
+					padding-top: 1rem;
+				}
+			}
 		</style>
 		<aside class="callout">
 			<div class="container">
 				<div class="row md:p-1">
 					<a href="/contact/" class="col-xs-12 p-2">
-						<h2 class="mt-0 mb-0">Need lots of cloud? Volume discounts available.</h2>
+						<h2 class="my-0">Need lots of cloud? Volume discounts available.</h2>
 						<span>
 							Contact Us
 							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -232,25 +230,31 @@ pageSubtitle: Straightforward pricing, next-level performance
 				</div>
 				<div class="row">
 					<div class="col-xs-12 md:p-1">
-						<h3 class="mobile-text-center mt-4">Data Transfer</h3>
+						<h3 class="mobile-text-center mt-4 mb-0">Data Transfer</h3>
 					</div>
 					<div class="col-xs-12 col-sm-6 md:p-1">
-						<p class="mobile-text-center mt-0">Estimate your monthly data costs:</p>
+						<p class="mobile-text-center mt-0 xs:pt-1">Estimate your monthly data costs:</p>
 						<div class="col-xs-12 p-2 bg-dark">
 							<div class="row middle-xs">
 								<div class="col-xs-5 col-sm-6 col-md-4">
 									<div class="input-group">
-										<input type="number" id="#data-transfer-value" value="10"><span class="input-group-text">TB</span>
+										<input type="number" id="#data-transfer-value" value="11"><span class="input-group-text">TB</span>
 									</div>
 								</div>
 								<div class="col-xs-6 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-7 col-md-offset-1">
-									<p class="mt-0 mb-0">Free</p>
+									<!-- <p class="pricing my-0">
+										<span class="price">Free</span>
+									</p> -->
+									<p class="pricing my-0">
+										<span class="price">$1.00</span>
+										<span class="time faded">/mo</span>
+									</p>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="col-xs-12 col-sm-6 md:p-1">
-						<p class="mobile-text-center mt-0">Data pricing follows a simple, affordable model:</p>
+						<p class="mobile-text-center mt-0 xs:pt-1">Data pricing follows a tiered model:</p>
 						<div class="responsive-table">
 							<table>
 								<thead>
@@ -262,15 +266,15 @@ pageSubtitle: Straightforward pricing, next-level performance
 								<tbody>
 									<tr>
 										<td>First 10 TB</td>
-										<td class="nowrap text-right"><strong>Free</strong> — $0.00<span class="faded">/GB</span></td>
+										<td class="nowrap text-right"><strong>Free</strong> — $0.00<span class="faded">/TB</span></td>
 									</tr>
 									<tr>
 										<td>Next 10 TB</td>
-										<td class="nowrap text-right">$1.00<span class="faded">/GB</span></td>
+										<td class="nowrap text-right">$1.00<span class="faded">/TB</span></td>
 									</tr>
 									<tr>
 										<td>Above 20 TB</td>
-										<td class="nowrap text-right">$5.00<span class="faded">/GB</span></td>
+										<td class="nowrap text-right">$5.00<span class="faded">/TB</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -285,15 +289,18 @@ pageSubtitle: Straightforward pricing, next-level performance
 							<div class="row middle-xs">
 								<div class="col-xs-5 col-sm-6 col-md-4">
 									<div class="input-group">
-										<input type="number" id="#image-storage-value" value="10"><span class="input-group-text">GB</span>
+										<input type="number" id="#image-storage-value" value="1"><span class="input-group-text">GB</span>
 									</div>
 								</div>
 								<div class="col-xs-6 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-7 col-md-offset-1">
-									<p class="mt-0 mb-0">$1.40<span class="faded">/hr</span><br>$219.03<span class="faded">/mo<span class="text-small"> (est)</span></span></p>
+									<p class="pricing my-0">
+										<span class="price">$0.20</span>
+										<span class="time faded">/mo</span>
+									</p>
 								</div>
 							</div>
 						</div>
-						<p class="note text-small">Image storage is charged at $X/GB/hr</p>
+						<p class="note text-small">Image storage is charged at $0.20/GB/mo</p>
 					</div>
 					<div class="col-xs-12 col-sm-6 md:p-1">
 						<h3 class="mobile-text-center mt-4">Volume Storage</h3>
@@ -306,11 +313,14 @@ pageSubtitle: Straightforward pricing, next-level performance
 									</div>
 								</div>
 								<div class="col-xs-6 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-7 col-md-offset-1">
-									<p class="mt-0 mb-0">$1.40<span class="faded">/hr</span><br>$219.03<span class="faded">/mo<span class="text-small"> (est)</span></span></p>
+									<p class="pricing my-0">
+										<span class="price">$3.00</span>
+										<span class="time faded">/mo</span>
+									</p>
 								</div>
 							</div>
 						</div>
-						<p class="note text-small">Volume storage is charged at $X/GB/hr</p>
+						<p class="note text-small">Volume storage is charged at $0.30/GB/mo</p>
 						<p class="note text-small">All data is replicated 3 times across 3 locations</p>
 					</div>
 					<div class="col-xs-12 col-sm-6 md:p-1">
@@ -324,11 +334,14 @@ pageSubtitle: Straightforward pricing, next-level performance
 									</div>
 								</div>
 								<div class="col-xs-6 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-7 col-md-offset-1">
-									<p class="mt-0 mb-0">$1.40<span class="faded">/hr</span><br>$219.03<span class="faded">/mo<span class="text-small"> (est)</span></span></p>
+									<p class="pricing my-0">
+										<span class="price">$4.00</span>
+										<span class="time faded">/mo</span>
+									</p>
 								</div>
 							</div>
 						</div>
-						<p class="note text-small">Object storage is charged at $X/GB/hr</p>
+						<p class="note text-small">Object storage is charged at $0.40/GB/mo</p>
 					</div>
 					<div class="col-xs-12 col-sm-6 md:p-1">
 						<h3 class="mobile-text-center mt-4">IP Addresses</h3>
@@ -406,8 +419,8 @@ pageSubtitle: Straightforward pricing, next-level performance
 		<section class="pb-8 black-to-footer">
 			<div class="container">
 				<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
-					<h2>Can’t see what<br class="responsive"> you’re looking for<mark class="dot">?</mark></h2>
-					<p class="subheading">Need a custom solution or a bulk order?</p>
+					<h2>Need a custom solution<br class="responsive"> or a bulk order?</h2>
+					<p class="subheading">Get in touch with our team<br class="responsive"> and let us know your needs</p>
 					<p><a href="/contact/" class="button ghost mt-2">Contact Us</a></p>
 				</div>
 			</div>
@@ -416,7 +429,9 @@ pageSubtitle: Straightforward pricing, next-level performance
 
 			/**
 			*	Pricing Calculators: Cloud
-			*	Takes our pricing and calculates when inputs change
+			*	Takes our pricing and updates when inputs change
 			*/
+
+
 
 		</script>

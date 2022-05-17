@@ -1194,18 +1194,19 @@ ul.no-style {
 	background: #4f94cc;
 	color: #000;
 }
-/* SLAs */
-.sla .num,
-.sla .up,
-.sla .ex {
+/* SLAs & Pricing */
+.sla,
+.pricing {
 	font-family: Poppins, sans-serif;
 	font-weight: 600;
 }
-.sla .num {
+.sla .num,
+.pricing .price {
 	font-size: 3rem;
 	line-height: 1;
 }
-.sla .up {
+.sla .up,
+.pricing .time {
 	font-size: 2rem;
 	margin-bottom: 0.5rem;
 }
