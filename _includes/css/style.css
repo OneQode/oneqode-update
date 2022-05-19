@@ -115,6 +115,10 @@ main {
 .mb-8 {
 	margin-bottom: 8rem;
 }
+.my-0 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
 .my-1 {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
@@ -160,6 +164,10 @@ main {
 }
 .pb-8 {
 	padding-bottom: 8rem;
+}
+.py-0 {
+	padding-top: 0;
+	padding-bottom: 0;
 }
 .py-1 {
 	padding-top: 1rem;
@@ -694,7 +702,7 @@ table {
 table td,
 table th {
 	padding: 1rem 2rem;
-	border-bottom: 1px solid #999;
+	border-bottom: 1px solid #666;
 	vertical-align: top;
 }
 tbody tr:last-child td,
@@ -749,8 +757,15 @@ textarea::placeholder {
 select {
 	color: #999;
 }
-select option {
+select option,
+select optgroup {
 	background: #333;
+}
+select optgroup[label] {
+	color: #999;
+}
+select option {
+	color: #00b0f0;
 }
 input:hover,
 select:hover,
@@ -831,6 +846,10 @@ section.hero {
 	background: radial-gradient(circle at bottom,#002735 0%,#000000 100%);
 	text-align: left;
 	min-height: 80vh;
+}
+section.hero.condensed {
+	min-height: 50vh;
+	padding-top: 4rem;
 }
 .push-forward {
 	position: relative;
@@ -1133,18 +1152,19 @@ ul.no-style {
 	background: #4f94cc;
 	color: #000;
 }
-/* SLAs */
-.sla .num,
-.sla .up,
-.sla .ex {
+/* SLAs & Pricing */
+.sla,
+.pricing {
 	font-family: Poppins, sans-serif;
 	font-weight: 600;
 }
-.sla .num {
+.sla .num,
+.pricing .price {
 	font-size: 3rem;
 	line-height: 1;
 }
-.sla .up {
+.sla .up,
+.pricing .time {
 	font-size: 2rem;
 	margin-bottom: 0.5rem;
 }
@@ -1464,6 +1484,13 @@ RESPONSIVE OVERRIDES
 	.stat span {
 		font-size: 3rem;
 	}
+	ul.ticks li::before,
+	ul.ticks.large li::before {
+		height: 1.4rem;
+		width: 1.4rem;
+		margin-top: 0rem;
+		margin-left: -2rem;
+	}
 	/* Links */
 	.button {
 		font-size: 0.9rem;
@@ -1514,7 +1541,8 @@ RESPONSIVE OVERRIDES
 }
 /* Very small phones */
 @media screen and (max-width: 340px) {
-	section.hero {
+	section.hero,
+	section.hero.condensed {
 		padding-top: 4rem;
 	}
 	h1 {
