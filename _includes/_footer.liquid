@@ -3,78 +3,24 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-3 col-md-3 py-1 pb-2 mobile-text-center">
-					<a class="logomark" href="/" title="OneQode • Australia’s 21st Century Telecommunications Provider">
+					<a class="logomark" href="/" title="Go to the OneQode homepage">
 						<img src="/img/symbol.svg" alt="OneQode Logomark/Symbol">
 					</a>
 				</div>
 				<div class="col-xs-6 col-sm-3 col-md-3 py-1">
 					<p>Who we help</p>
 					<ul>
-						<li><a href="/" aria-label="OneQode for Gaming" title="Services for Game Developers, Publishers and Server Providers">Game Industry</a></li>
-						<li><a href="/business/" aria-label="OneQode for Business" title="Business internet and connectivity">Businesses</a></li>
-						<li><a href="/wholesale/" aria-label="OneQode for Wholesale" title="Wholesale internet solutions">Network Operators</a></li>
+						<li><a href="/for/business-enterprise/">Business & Enterprise</a></li>
+						<li><a href="/for/game-industry/">Game Industry</a></li>
+						<li><a href="/for/server-providers/">Server Providers</a></li>
+						<li><a href="/for/esports/">Esports</a></li>
 					</ul>
 				</div>
 				<div class="col-xs-6 col-sm-3 col-md-3 py-1">
 					<p>Help & Support</p>
 					<ul>
-						<li><a href="
-							{%- case section -%}
-								{%- when "home" -%}
-									{{ global.login.business }}
-								{%- when "business" -%}
-									{{ global.login.business }}
-								{%- when "wholesale" -%}
-									{{ global.login.wholesale }}
-								{%- else -%}
-									{{ global.login.business }}
-							{%- endcase -%}
-							" title="
-							{%- case section -%}
-								{%- when "home" -%}
-									Get help and assistance with your OneQode services
-								{%- when "business" -%}
-									Get help and assistance with your OneQode for Business Services
-								{%- when "wholesale" -%}
-									Get help and assistance with your OneQode for Wholesale Services
-								{%- else -%}
-									Get help and assistance with your OneQode services
-							{%- endcase -%}
-							" target="_blank" rel="noopener">
-								{%- case section -%}
-									{%- when "home" -%}
-										Get support
-									{%- when "business" -%}
-										Business support
-									{%- when "wholesale" -%}
-										Wholesale support
-									{%- else -%}
-										Get support
-								{%- endcase -%}
-							</a></li>
-						<li><a href="
-								{%- case section -%}
-									{%- when "home" -%}
-										/contact/
-									{%- when "business" -%}
-										/business/contact/
-									{%- when "wholesale" -%}
-										/wholesale/contact/
-									{%- else -%}
-										/contact/
-								{%- endcase -%}
-							" title="
-								{%- case section -%}
-									{%- when "home" -%}
-										Reach out directly to the OneQode team
-									{%- when "business" -%}
-										Contact the OneQode business team
-									{%- when "wholesale" -%}
-										Contact the OneQode wholesale team
-									{%- else -%}
-										Reach out directly to the OneQode team
-								{%- endcase -%}
-								">Contact us</a></li>
+						<li><a href="{{ global.support }}" title="Get help and assistance with your OneQode services" target="_blank" rel="noopener">Get support</a></li>
+						<li><a href="/contact/" title="Reach out directly to the OneQode team">Contact us</a></li>
 						<li><a href="/legal/" title="OneQode Terms & Policies">Terms & Policies</a></li>
 					</ul>
 				</div>

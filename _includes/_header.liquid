@@ -125,49 +125,137 @@
 	<!-- End Google Tag Manager (noscript) -->
 	<header id="header">
 		<div class="container">
-			<a href="
-				{%- if page.url == "/" or page.url == "/business/" or page.url == "/wholesale/" -%}
-					/
-				{%- else -%}
-					{%- case section -%}
-						{%- when "gaming" -%}
-							/
-						{%- when "business" -%}
-							/business/
-						{%- when "wholesale" -%}
-							/wholesale/
-						{%- else -%}
-							/
-					{%- endcase -%}
-				{%- endif -%}
-				" title="
-				{%- if page.url == "/" or page.url == "/business/" or page.url == "/wholesale/" -%}
-					Go to the OneQode homepage
-				{%- else -%}
-					{%- case section -%}
-						{%- when "gaming" -%}
-							Go to the OneQode homepage
-						{%- when "business" -%}
-							Go to the OneQode for Business homepage
-						{%- when "wholesale" -%}
-							Go to the OneQode for Wholesale homepage
-						{%- else -%}
-							Go to the OneQode homepage
-					{%- endcase -%}
-				{%- endif -%}
-				" class="logo">
+			<a href="/" title="Go to the OneQode homepage" class="logo">
 				<img src="/img/logo.svg" alt="OneQode Logo">
 			</a>
-{% case section %}
-	{%- when "gaming" -%}
-		{%- include navigation/_navigation-gaming.liquid -%}
-	{%- when "business" -%}
-		{%- include navigation/_navigation-business.liquid -%}
-	{%- when "wholesale" -%}
-		{%- include navigation/_navigation-wholesale.liquid -%}
-	{%- else -%}
-		{%- include navigation/_navigation-gaming.liquid -%}
-{%- endcase %}
+			<div class="nav-open" onclick="toggleNav()">
+				<img src="/img/ico/open.svg" alt="" aria-hidden="true">
+				&nbsp;Menu
+			</div>
+			<nav class="main" aria-label="Main Navigation">
+				<div class="nav-blank" onclick="toggleNav()"></div>
+				<ul>
+					<li class="has-submenu">
+						<a href="#" style="--index: 4" aria-haspopup="true" aria-expanded="false">Solutions 
+							<svg xmlns="http://www.w3.org/2000/svg" width="0.65rem" height="0.65rem" fill="#fff" viewBox="0 0 24 24">
+								<path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/>
+							</svg>
+						</a>
+						<div class="submenu two-col-mobile">
+							<ul>
+								<li>
+									<a href="/for/business-enterprise/" style="--order:1">
+										Business & Enterprise
+										<span>Infrastructure for organisations</span>
+									</a>
+								</li>
+								<li>
+									<a href="/for/game-industry/" style="--order:2">
+										Game Industry
+										<span>Developers, studios & publishers</span>
+									</a>
+								</li>
+								<li>
+									<a href="/for/server-providers/" style="--order:3">
+										Server Providers
+										<span>Resellers & middleware</span>
+									</a>
+								</li>
+								<li>
+									<a href="/for/esports/" style="--order:4">
+										Esports
+										<span>Tournament orgs, & players</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="has-submenu">
+						<a href="#" style="--index: 3" aria-haspopup="true" aria-expanded="false">Platform 
+							<svg xmlns="http://www.w3.org/2000/svg" width="0.65rem" height="0.65rem" fill="#fff" viewBox="0 0 24 24">
+								<path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/>
+							</svg>
+						</a>
+						<div class="submenu two-col-mobile">
+							<ul>
+								<li>
+									<a href="/cloud/" style="--order:1">
+										Cloud Platform
+										<span>The world's fastest cloud, designed <br>for gaming & real-time applications</span>
+									</a>
+								</li>
+								<li>
+									<a href="/network/" style="--order:2">
+										International Network
+										<span>Latency-optimised network that <br>reaches 1.45 billion people</span>
+									</a>
+								</li>
+								<li>
+									<a href="/game-servers/" style="--order:3">
+										Dedicated Servers
+										<span>High performance servers, built on <br>the quickest CPUs on the market</span>
+									</a>
+								</li>
+								<li style="--order: 4">
+									<a href="/ip-transit/">IP Transit</a>
+								</li>
+								<li style="--order: 5">
+									<a href="/ethernet/">Ethernet</a>
+								</li>
+								<li style="--order: 6">
+									<a href="/backhaul/">Backhaul</a>
+								</li>
+								<li style="--order: 7">
+									<a href="/backhaul/"><strong><mark>Features</mark></strong></a>
+								</li>
+								<li class="parent">
+									<a href="/guam/" style="--order:4">
+										APAC Central
+										<span>Asia-Pacific’s newest server region</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="has-submenu">
+						<a href="/about/" style="--index: 2" aria-haspopup="true" aria-expanded="false">
+							About 
+							<svg xmlns="http://www.w3.org/2000/svg" width="0.65rem" height="0.65rem" fill="#fff" viewBox="0 0 24 24">
+								<path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/>
+							</svg>
+						</a>
+						<div class="submenu two-col-mobile">
+							<ul>
+								<li>
+									<a href="/about/" style="--order:1">About OneQode</a>
+								</li>
+								<li>
+									<a href="/case-study/guam-csgo/" style="--order:2">Case Study</a>
+								</li>
+								<li>
+									<a href="/media/" style="--order:3">Newsroom</a>
+								</li>
+								<li>
+									<a href="/careers/" style="--order:4">Careers</a>
+								</li>
+								<li class="parent">
+									<a href="/content/" style="--order:5">
+										The Qode
+										<span>Stories, articles & resources</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="/contact/" style="--index: 1;">Contact</a></li>
+					<li><a href="/contact/" style="--index: 1;">Login</a></li>
+					<li><a href="/contact/" style="--index: 1;">Sign Up</a></li>
+				</ul>
+				<div class="nav-close" onclick="toggleNav()">
+					<img src="/img/ico/close.svg" alt="" aria-hidden="true">
+					&nbsp;Close
+				</div>
+			</nav>
 		</div>
 	</header>
 	<main>

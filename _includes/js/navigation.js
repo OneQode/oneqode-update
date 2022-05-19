@@ -14,24 +14,6 @@ function toggleNav() {
 	document.querySelector("main").classList.toggle("active");
 	document.querySelector("body").classList.toggle("active");
 }
-// Toggle Section Switcher
-function sectionSwitcher() {
-	var switcher = document.querySelector("#toggleSection");
-	switcher.classList.toggle("open");
-	var expanded = switcher.getAttribute("aria-expanded");
-	if (expanded == "true") {
-		expanded = "false"
-	} else {
-		expanded = "true"
-	}
-	switcher.setAttribute("aria-expanded", expanded);
-}
-// Close Switcher
-function closeSwitcher() {
-	var switcher = document.getElementById("toggleSection");
-	switcher.classList.remove("open");
-	switcher.setAttribute("aria-expanded", "false");
-}
 // Close Menu Dropdown
 function closeDropdown() {
 	var dropdown = document.querySelectorAll('li.has-submenu.open');
@@ -40,20 +22,6 @@ function closeDropdown() {
 		el.setAttribute("aria-expanded", "false");
 	});
 }
-// Close Switcher on click outside
-document.addEventListener("click", function(evt) {
-	var switcher = document.getElementById('switcher'),
-		targetElement = evt.target;  // clicked element
-
-	do {
-		if (targetElement == switcher) {
-			return;
-		}
-		// Go up the DOM
-		targetElement = targetElement.parentNode;
-	} while (targetElement);
-	closeSwitcher();
-});
 // Close Dropdown on Click Outside
 document.addEventListener('click', function (event) {
     if (event.target.closest('li.has-submenu')) return;
@@ -63,7 +31,6 @@ document.addEventListener('click', function (event) {
 document.addEventListener('keydown', function (event) {
 	var press = event || window.event;
 	if (press.keyCode === 27) {
-		closeSwitcher();
 		closeDropdown();
 	}
 });
@@ -97,10 +64,5 @@ window.addEventListener('load', function() {
 			event.preventDefault();
 			return false;
 		});
-	});
-
-	// Section Switcher - Override Parent HREF
-	document.getElementById("toggleSection").addEventListener("click", function(event){
-		event.preventDefault()
 	});
 });
