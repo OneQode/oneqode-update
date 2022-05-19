@@ -1,37 +1,23 @@
 ---
-permalink: /esports/contact/
+permalink: /contact/game-industry/
 layout: page.liquid
-metaTitle: Contact Austin • OneQode™
-metaDescription: Contact OneQode’s Growth Officer, Austin Guidry, here to help you take your esports organisation to the next level.
+metaTitle: Contact • Game Industry • OneQode™
+metaDescription: Start a conversation with our team to talk about how we can work with your game studio or game publishing organisation to change the world.
 priority: 0.6
+canonical: "https://www.oneqode.com/contact/"
 pageSupertitle: Set up a Chat
-pageTitle: Start a conversation<br class="responsive"> with Austin
-pageSubtitle: To get started, enter your details below
+pageTitle: Let’s get the<br class="responsive"> party started
+pageSubtitle: Enter your details below to start the conversation
 ogImage: og-image.jpg
 form: true
 ---
 		<style>
-			.no-webp section.hero {
-				background:	linear-gradient(to bottom, rgba(0,0,0,0.2) 50%, #000),
-							url(/img/bg/meet-austin-guidry.jpg) 70% 0%;
-				background-size: cover;
-				background-repeat: no-repeat;
-			}
-			.webp section.hero {
-				background:	linear-gradient(to bottom, rgba(0,0,0,0.2) 50%, #000),
-							url(/img/bg/meet-austin-guidry.webp) 70% 0%;
-				background-size: cover;
-				background-repeat: no-repeat;
+			section.hero {
+				background: linear-gradient(to bottom, transparent 50%, #000 100%), radial-gradient(circle at bottom,#002735 0,#000 100%);
 			}
 			/* Form */
-			#please-note {
-				display: none;
-			}
-			#please-note p {
-				font-size: 1rem;
-			}
 			@media (min-width: 48em) {
-				#esports-contact > div {
+				#game-industry-contact > div {
 					background: #17181C;
 					position: sticky;
 					border-radius: 15px;
@@ -45,7 +31,7 @@ form: true
 		</style>
 		<section class="black-to-footer pb-8">
 			<div class="container">
-				<form action="https://submit-form.com/yWD6D18h" data-botpoison-public-key="pk_11d034c7-a37c-4479-a7fc-eabfb1185635" id="esports-contact">
+				<form action="https://submit-form.com/9RDPxwcd" data-botpoison-public-key="pk_11d034c7-a37c-4479-a7fc-eabfb1185635" id="game-industry-contact">
 					<div class="col-xs-12 col-md-10 col-md-offset-1">
 						<div class="row">
 							<div class="col-xs-12 col-md-8 col-md-offset-2 mobile-text-center">
@@ -60,13 +46,23 @@ form: true
 										<input type="text" name="2_last_name" placeholder="Last name" autocapitalize="words" required>
 									</div>
 									<div class="col-xs-12 col-sm-6 mb-1">
-										<input type="text" name="3_esports_organisation" placeholder="Esports organisation" autocapitalize="words" required>
+										<input type="text" name="3_organisation" placeholder="Organisation" autocapitalize="words" required>
 									</div>
 									<div class="col-xs-12 col-sm-6 mb-1">
 										<input type="email" name="4_email" placeholder="Best email" required>
 									</div>
-									<div class="col-xs-12 col-sm-6 mb-1">
-										<input type="text" name="5_discord" placeholder="Discord ID (Optional)">
+								</div>
+								<div class="row mt-2">
+									<div class="col-xs-12">
+										<h3>Company type:</h3>
+									</div>
+									<div class="col-xs-12">
+										<select name="6_company-type" id="company-type">
+											<option value="Game studio / developer">Game studio / developer</option>
+											<option value="Game publisher">Game publisher</option>
+											<option value="Esports organisation">Esports organisation</option>
+											<option value="Other">Other</option>
+										</select>
 									</div>
 								</div>
 								<div class="row mt-2">
@@ -74,7 +70,7 @@ form: true
 										<h3>Time Zone:</h3>
 									</div>
 									<div class="col-xs-12">
-										<select name="6_time-zone" required>
+										<select name="5_time-zone" required>
 											<option value="-12:00">(GMT -12:00) Eniwetok, Kwajalein</option>
 											<option value="-11:00">(GMT -11:00) Midway Island, Samoa</option>
 											<option value="-10:00">(GMT -10:00) Hawaii</option>
@@ -120,14 +116,14 @@ form: true
 								</div>
 								<div class="row mt-2">
 									<div class="col-xs-12">
-										<h3>How can Austin help you?</h3>
+										<h3>How can we help you?</h3>
 									</div>
 									<div class="col-xs-12 mb-1">
-										<textarea id="message-here" name="7_message" placeholder="Tell Austin a bit about yourself, and what you’d like to chat about." autocapitalize="sentences" rows="4" required></textarea>
+										<textarea id="message-here" name="6_message" placeholder="Tell us a bit about yourself, and what you’d like to chat about." autocapitalize="sentences" rows="4" required></textarea>
 									</div>
 									<div class="col-xs-12">
-										<input type="hidden" name="form" value="Esports Contact" />
-										<input type="hidden" name="_redirect" value="https://www.oneqode.com/esports/thanks/"/>
+										<input type="hidden" name="form" value="Game developer contact" />
+										<input type="hidden" name="_redirect" value="https://www.oneqode.com/thanks/"/>
 										<input type="hidden" name="_error" value="https://www.oneqode.com/error/"/>
 										<button type="submit" class="button mt-1" id="button">Let’s go</button>
 										<p id="sending">Please wait...</p>
@@ -147,25 +143,11 @@ form: true
 		</section>
 		<script>
 			/**
-			* Get Querystring data
-			* Credit: https://stackoverflow.com/questions/32109475/javascript-form-field-population-from-variable-in-url-query-string
-			*/
-			function getParameterByName(name) {
-				name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-				var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-					results = regex.exec(location.search);
-				return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-			}
-			document.addEventListener('DOMContentLoaded', function() {
-				document.getElementById('message-here').value = getParameterByName('message');
-			}, false);
-
-			/**
 			* Botpoison form validation
 			* Prevents form submissions from bots... I hope
 			*/
 
-			var form = document.getElementById("esports-contact");
+			var form = document.getElementById("game-industry-contact");
 			var button = document.getElementById("button");
 			var sending = document.getElementById("sending");
 			var failmsg = document.getElementById("failmsg");
