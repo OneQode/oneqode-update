@@ -374,6 +374,18 @@ li.has-submenu.open .submenu li a {
 .submenu li a:focus span {
 	color: #00b0f0;
 }
+/* Submenu Icons */
+.submenu a.linked-icon {
+    display: flex;
+}
+.submenu a.linked-icon svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-top: 0.25rem;
+}
+.submenu a.linked-icon div {
+	margin-left: 1.2rem;
+}
 	/* Menu: Tablet and Above */
 	@media (min-width: 48em) {
 		.submenu {
@@ -426,6 +438,12 @@ li.has-submenu.open .submenu li a {
 		}
 		.submenu li a span {
 			display: none;
+		}
+		.submenu a.linked-icon svg {
+			margin-top: 0;
+		}
+		.submenu a.linked-icon div {
+			margin-left: 0.6rem;
 		}
 		.submenu.two-col-mobile ul {
 			display: grid;
@@ -605,15 +623,21 @@ a:focus {
 }
 a.chevron {
 	white-space: nowrap;
+	text-decoration-color: transparent;
+}
+a.chevron:hover,
+a.chevron:focus {
+	text-decoration-color: #004460;
 }
 a.chevron::after {
 	width: 1.2rem;
 	height: 1.2rem;
 	margin-left: 0.2rem;
+	margin-bottom: 0.2rem;
 	vertical-align: middle;
 	display: inline-block;
 	content: " ";
-	background: #00b0f0;
+	background: currentColor;
 	mask: url(/img/ico/chevron.svg) no-repeat center;
 	-webkit-mask: url(/img/ico/chevron.svg) no-repeat center;
 	-webkit-mask-size: cover;
@@ -621,8 +645,24 @@ a.chevron::after {
 	transition: background 0.2s;
 }
 a.chevron:hover::after,
-a.chevron:focus::after {
-	background: #00597f;
+a.chevron:focus::after,
+a.external:hover::after,
+a.external:focus::after {
+	background: currentColor;
+}
+a.external::after {
+	width: 0.75rem;
+	height: 0.75rem;
+	margin-left: 0.5rem;
+	vertical-align: baseline;
+	display: inline-block;
+	content: " ";
+	background: currentColor;
+	mask: url(/img/ico/external.svg) no-repeat center;
+	-webkit-mask: url(/img/ico/external.svg) no-repeat center;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	transition: background 0.2s;
 }
 .button {
 	background: #00b0f0;
@@ -1019,7 +1059,7 @@ CONTENT
 .box.glowing:focus p {
 	color: #fff;
 }
-/* Boxes with icons */
+/* Row with icons */
 .icons img {
 	max-width: 5rem;
 	opacity: 0.75;
@@ -1312,6 +1352,7 @@ RESPONSIVE OVERRIDES
 	}
 	nav.main a {
 		padding: 0.5rem;
+		font-size: 1rem;
 	}
 }
 
@@ -1376,6 +1417,9 @@ RESPONSIVE OVERRIDES
 	}
 	nav.main > ul {
 		margin-top: auto;
+		margin-bottom: 0.75rem;
+		display: flex;
+		flex-direction: column-reverse;
 	}
 	nav.main a {
 		font-size: 1.5rem;
@@ -1396,6 +1440,9 @@ RESPONSIVE OVERRIDES
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+	}
+	nav.main.active a.linked-icon {
+		justify-content: revert;
 	}
 	nav.main.center.active a {
 		justify-content: center;
