@@ -1334,7 +1334,8 @@ RESPONSIVE OVERRIDES
 		opacity: 0.75;
 		transition: all 0.2s;
 	}
-	footer:hover > * {
+	footer:hover > *,
+	footer:focus-within > * {
 		opacity: 1;
 	}
 }
