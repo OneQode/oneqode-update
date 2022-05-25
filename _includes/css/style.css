@@ -295,7 +295,9 @@ nav.main a.login {
 }
 nav.main a:hover,
 nav.main a:focus,
-nav.main .submenu a:focus {
+nav.main .submenu a:focus,
+footer ul a:hover,
+footer ul a:focus {
 	color: #00b0f0;
 }
 nav.main > ul > li:last-of-type a {
@@ -480,11 +482,15 @@ footer .container {
 }
 footer p {
 	margin: 0;
-	color: #fff;
+	color: #999;
+	text-transform: uppercase;
+	letter-spacing: 0.12rem;
+	font-size: 1rem;
 }
 footer .credits {
-	font-size: 1rem;
 	color: #828282;
+	text-transform: unset;
+	letter-spacing: normal;
 }
 footer .credits a {
 	text-decoration: none;
@@ -516,9 +522,10 @@ footer ul a {
 	text-decoration: none;
 	display: block;
 	padding: 0.25rem 0;
+	color: #fff;
 }
 footer ul li:first-child > a {
-    margin-top: 0.25rem;
+    margin-top: 0.5rem;
 }
 .logomark img {
 	margin-left: 0;
@@ -534,7 +541,7 @@ TYPOGRAPHY
 body {
 	font-family: 'Work Sans', sans-serif;
 	font-weight: 400;
-	font-size: 1.3rem;
+	font-size: 1.25rem;
 	line-height: 1.5;
 }
 strong {
@@ -582,7 +589,7 @@ p.subheading {
 p.superheading {
 	color: #4f94cc;
 	text-transform: uppercase;
-	letter-spacing: 2px;
+	letter-spacing: 0.12rem;
 	margin-bottom: 1rem;
 }
 /* Highlight */
@@ -673,7 +680,7 @@ a.external::after {
 	padding: 0.75rem 2rem;
 	font-family: 'Poppins', sans-serif;
 	font-weight: 600;
-	letter-spacing: 4px;
+	letter-spacing: 0.25rem;
 	text-decoration: none;
 	text-transform: uppercase;
 	transition: all 0.2s;
@@ -715,12 +722,12 @@ a.external::after {
 	font-size: 1rem;
 	font-family: Poppins,sans-serif;
 	font-weight: 600;
-	letter-spacing: 2px;
+	letter-spacing: 0.12rem;
 	text-transform: uppercase;
 }
 .callout span svg {
 	display: inline-flex;
-	margin-top: 4px;
+	margin-top: 0.15rem;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -915,57 +922,10 @@ section.hero.condensed {
 .mid {
 	background: #1c1d22;
 }
-.blue {
-	background: #00b0f0;
-	color: #002735;
-	font-family: "Poppins", sans-serif;
-}
-.blue a {
-	color: #002735;
-}
-.blue a:hover {
-	color: #000;
-}
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - -
 CONTENT
  - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-.brands div {
-	display: flex;
-	align-items: center;
-}
-.brands a img {
-	max-height: 40px;
-	opacity: 0.4;
-	transition: all 0.2s;
-}
-.brands a img.hyperion {
-	max-height: 70px;
-}
-.brands a {
-	margin: 0.5rem;
-	padding: 2rem;
-	flex: 1;
-	text-align: center;
-	text-decoration: none;
-	color: #fff;
-}
-.brands a:hover img {
-	opacity: 1;
-}
-.brands a p {
-	font-size: 1rem;
-	color: #949494;
-	opacity: 0;
-	visibility: hidden;
-	transition: all 0.2s;
-	transform: translateY(10px);
-}
-.brands a:hover p {
-	opacity: 1;
-	visibility: visible;
-	transform: translateY(0);
-}
 .sla-diagram {
 	max-width: 100%;
 }
