@@ -143,42 +143,7 @@ form: true
 					</div>
 					<details class="text-left mt-4" id="on-net-facilities">
 						<summary>Ethernet On-Net Facilities</summary>
-						<div class="responsive-table">
-							<table>
-								<tbody>
-									<tr>
-										<td>Queensland</td>
-										<td>
-											<ul class="no-style">
-												<li>NextDC B2</li>
-												<li>Equinix BR1</li>
-												<li>Sunshine Coast <abbr title="Cable Landing Station">CLS</abbr></li>
-											</ul>
-										</td>
-									</tr>
-									<tr>
-										<td>New South Wales</td>
-										<td>
-											<ul class="no-style">
-												<li>Equinix SY1-5</li>
-												<li>Global Switch</li>
-											</ul>
-										</td>
-									</tr>
-									<tr>
-										<td>International</td>
-										<td>
-											<ul class="no-style">
-												<li>North America - Coresite LA2</li>
-												<li>Asia-Pacific – GNC Guam</li>
-												<li>Japan - @Tokyo CC2</li>
-												<li>Hong Kong - Mega-i</li>
-											</ul>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
+						{% include parts/_pops.liquid %}
 					</details>
 				</div>
 			</div>
