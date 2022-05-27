@@ -547,6 +547,9 @@ body {
 strong {
 	font-weight: 700;
 }
+.monospace {
+	font-family: Hack, monospace;
+}
 /* Headings */
 h1,
 h2,

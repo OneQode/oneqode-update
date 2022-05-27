@@ -8,6 +8,7 @@ changefreq: monthly
 priority: 0.5
 pageTitle: Cloud <br class="responsive"> platform pricing
 pageSubtitle: Straightforward pricing, next-level performance
+font: hack
 ---
 {% comment %}
 <!-- 
@@ -54,6 +55,13 @@ pageSubtitle: Straightforward pricing, next-level performance
 				}
 				ul.ticks {
 					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					grid-gap: 1.5rem 2rem;
+				}
+			}
+			@media (min-width: 64em) {
+				ul.ticks {
+					display: grid;
 					grid-template-columns: repeat(3, 1fr);
 					grid-gap: 1.5rem 2rem;
 				}
@@ -61,6 +69,11 @@ pageSubtitle: Straightforward pricing, next-level performance
 			@media (max-width: 64em) {
 				.xs\:pt-1 {
 					padding-top: 1rem;
+				}
+			}
+			@media (max-width: 48em) {
+				ul.ticks li {
+					margin-bottom: 1rem;
 				}
 			}
 		</style>
@@ -82,7 +95,7 @@ pageSubtitle: Straightforward pricing, next-level performance
 		<section class="pb-8" id="pricing-content">
 			<form class="container" id="form">
 				<div class="row md:p-1">
-					<div class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0">
+					<div class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0 mobile-text-center">
 						<ul class="ticks my-0">
 							<li>Flat pricing</li>
 							<li>Same price in every location</li>
@@ -113,15 +126,15 @@ pageSubtitle: Straightforward pricing, next-level performance
 										<th class="text-right">Monthly <span class="text-small">(Est.)</span></th>
 									</tr>
 								</thead>
-								<tbody>
+								<tbody class="monospace">
 									<tr>
 										<td class="nowrap">xe.tiny</td>
 										<td class="text-right">1</td>
 										<td class="text-right nowrap">0.5 <span class="faded">GB</span></td>
 										<td class="text-right nowrap">32 <span class="faded">GB</span></td>
 										<td class="text-right nowrap">1 <span class="faded">Gbps</span></td>
-										<td class="text-right">$0.017</td>
-										<td class="text-right">$12.99</td>
+										<td class="text-right">$0.021</td>
+										<td class="text-right">$15.00</td>
 									</tr>
 									<tr>
 										<td class="nowrap">xe.small</td>
@@ -129,8 +142,8 @@ pageSubtitle: Straightforward pricing, next-level performance
 										<td class="text-right nowrap">1 <span class="faded">GB</span></td>
 										<td class="text-right nowrap">32 <span class="faded">GB</span></td>
 										<td class="text-right nowrap">1 <span class="faded">Gbps</span></td>
-										<td class="text-right">$0.022</td>
-										<td class="text-right">$16.43</td>
+										<td class="text-right">$0.023</td>
+										<td class="text-right">$17.00</td>
 									</tr>
 									<tr>
 										<td class="nowrap">xer.small</td>
@@ -138,8 +151,8 @@ pageSubtitle: Straightforward pricing, next-level performance
 										<td class="text-right nowrap">2 <span class="faded">GB</span></td>
 										<td class="text-right nowrap">32 <span class="faded">GB</span></td>
 										<td class="text-right nowrap">1 <span class="faded">Gbps</span></td>
-										<td class="text-right">$0.024</td>
-										<td class="text-right">$18.03</td>
+										<td class="text-right">$0.027</td>
+										<td class="text-right">$20.00</td>
 									</tr>
 									<tr>
 										<td class="nowrap">xemr.small</td>
@@ -147,8 +160,8 @@ pageSubtitle: Straightforward pricing, next-level performance
 										<td class="text-right nowrap">8 <span class="faded">GB</span></td>
 										<td class="text-right nowrap">128 <span class="faded">GB</span></td>
 										<td class="text-right nowrap">1 <span class="faded">Gbps</span></td>
-										<td class="text-right">$0.058</td>
-										<td class="text-right">$42.49</td>
+										<td class="text-right">$0.067</td>
+										<td class="text-right">$49.00</td>
 									</tr>
 									<tr>
 										<td class="nowrap">xe.medium</td>
@@ -156,8 +169,8 @@ pageSubtitle: Straightforward pricing, next-level performance
 										<td class="text-right nowrap">2 <span class="faded">GB</span></td>
 										<td class="text-right nowrap">64 <span class="faded">GB</span></td>
 										<td class="text-right nowrap">1 <span class="faded">Gbps</span></td>
-										<td class="text-right">$0.032</td>
-										<td class="text-right">$24.02</td>
+										<td class="text-right">$0.038</td>
+										<td class="text-right">$27.50</td>
 									</tr>
 									<tr>
 										<td class="nowrap">xer.medium</td>
@@ -165,8 +178,8 @@ pageSubtitle: Straightforward pricing, next-level performance
 										<td class="text-right nowrap">4 <span class="faded">GB</span></td>
 										<td class="text-right nowrap">76 <span class="faded">GB</span></td>
 										<td class="text-right nowrap">1 <span class="faded">Gbps</span></td>
-										<td class="text-right">$0.046</td>
-										<td class="text-right">$34.02</td>
+										<td class="text-right">$0.053</td>
+										<td class="text-right">$39.00</td>
 									</tr>
 									<tr>
 										<td class="nowrap">xemr.medium</td>
@@ -174,8 +187,8 @@ pageSubtitle: Straightforward pricing, next-level performance
 										<td class="text-right nowrap">16 <span class="faded">GB</span></td>
 										<td class="text-right nowrap">96 <span class="faded">GB</span></td>
 										<td class="text-right nowrap">1 <span class="faded">Gbps</span></td>
-										<td class="text-right">$0.116</td>
-										<td class="text-right">$84.97</td>
+										<td class="text-right">$0.134</td>
+										<td class="text-right">$98.00</td>
 									</tr>
 									<tr>
 										<td class="nowrap">xe.large</td>
@@ -183,8 +196,8 @@ pageSubtitle: Straightforward pricing, next-level performance
 										<td class="text-right nowrap">16 <span class="faded">GB</span></td>
 										<td class="text-right nowrap">128 <span class="faded">GB</span></td>
 										<td class="text-right nowrap">1 <span class="faded">Gbps</span></td>
-										<td class="text-right">$0.157</td>
-										<td class="text-right">$114.98</td>
+										<td class="text-right">$0.181</td>
+										<td class="text-right">$132.00</td>
 									</tr>
 									<tr>
 										<td class="nowrap">xer.large</td>
@@ -192,8 +205,8 @@ pageSubtitle: Straightforward pricing, next-level performance
 										<td class="text-right nowrap">32 <span class="faded">GB</span></td>
 										<td class="text-right nowrap">128 <span class="faded">GB</span></td>
 										<td class="text-right nowrap">1 <span class="faded">Gbps</span></td>
-										<td class="text-right">$0.226</td>
-										<td class="text-right">$164.98</td>
+										<td class="text-right">$0.260</td>
+										<td class="text-right">$190.00</td>
 									</tr>
 									<tr>
 										<td class="nowrap">xe.2xlarge</td>
@@ -201,8 +214,8 @@ pageSubtitle: Straightforward pricing, next-level performance
 										<td class="text-right nowrap">32 <span class="faded">GB</span></td>
 										<td class="text-right nowrap">256 <span class="faded">GB</span></td>
 										<td class="text-right nowrap">1 <span class="faded">Gbps</span></td>
-										<td class="text-right">$0.335</td>
-										<td class="text-right">$244.99</td>
+										<td class="text-right">$0.386</td>
+										<td class="text-right">$282.00</td>
 									</tr>
 									<tr>
 										<td class="nowrap">xer.2xlarge</td>
@@ -210,8 +223,8 @@ pageSubtitle: Straightforward pricing, next-level performance
 										<td class="text-right nowrap">64 <span class="faded">GB</span></td>
 										<td class="text-right nowrap">256 <span class="faded">GB</span></td>
 										<td class="text-right nowrap">1 <span class="faded">Gbps</span></td>
-										<td class="text-right">$0.452</td>
-										<td class="text-right">$330.03</td>
+										<td class="text-right">$0.520</td>
+										<td class="text-right">$379.50</td>
 									</tr>
 									<tr>
 										<td class="nowrap">xer.3xlarge</td>
@@ -219,8 +232,8 @@ pageSubtitle: Straightforward pricing, next-level performance
 										<td class="text-right nowrap">120 <span class="faded">GB</span></td>
 										<td class="text-right nowrap">512 <span class="faded">GB</span></td>
 										<td class="text-right nowrap">1 <span class="faded">Gbps</span></td>
-										<td class="text-right">$0.952</td>
-										<td class="text-right">$695.03</td>
+										<td class="text-right">$1.095</td>
+										<td class="text-right">$799.00</td>
 									</tr>
 								</tbody>
 							</table>
@@ -261,10 +274,10 @@ pageSubtitle: Straightforward pricing, next-level performance
 										<th class="text-right">Price per GB</th>
 									</tr>
 								</thead>
-								<tbody>
+								<tbody class="monospace">
 									<tr>
 										<td>First 10 TB</td>
-										<td class="nowrap text-right"><strong>Free</strong> — $0.00<span class="faded">/TB</span></td>
+										<td class="nowrap text-right">Free</td>
 									</tr>
 									<tr>
 										<td>Next 10 TB</td>
@@ -352,7 +365,7 @@ pageSubtitle: Straightforward pricing, next-level performance
 										<th class="text-right">Monthly <span class="text-small">(Est)</span></th>
 									</tr>
 								</thead>
-								<tbody>
+								<tbody class="monospace">
 									<tr>
 										<td>Ephemeral IP address*</td>
 										<td class="text-right">Free</td>
@@ -371,44 +384,52 @@ pageSubtitle: Straightforward pricing, next-level performance
 				</div>
 			</form>
 		</section>
+		<section class="pb-8" id="get-started">
+			<div class="container">
+				<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
+					<h2>Ready to get started?</h2>
+					<p class="subheading">Sign up for a cloud account today</p>
+					<p><a href="/cloud/signup/" class="button mt-2">Get started</a></p>
+				</div>
+			</div>
+		</section>
 		<section id="faq" class="pb-8">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
 						<h2>Frequently Asked Questions</h2>
 					</div>
-					<div class="col-xs-12 col-md-10 col-md-offset-1">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
 						<details>
-							<summary>Is OneQode pre-paid or post-paid?</summary>
+							<summary>Is OneQode Cloud pre-paid or post-paid?</summary>
+							<p>OneQode’s cloud platform is <strong>a pre-paid service</strong> by default — which means you’ll need credit in your account to be able to create cloud instances or resources.</p>
+							<p>Post-paid services are available to select organisations on a case-by-case basis.</p>
+						</details>
+{%- comment %}
+						<!-- <details>
+							<summary>Is a minimum amount of credit required?</summary>
 							<p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.</p>
+						</details> -->
+{%- endcomment %}
+						<details>
+							<summary>How does hourly billing work?</summary>
+							<p>You will be billed for a minimum of 1 hour when you create a service that has hourly pricing (e.g. instance, image, object store). Billing is rounded up to the nearest hour, so if you have a service active for 1 hour and 20 minutes, you’ll be charged for 2 hours.</p>
 						</details>
 						<details>
-							<summary>How does hourly billing work? (minimum 1 hr charge)</summary>
-							<p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.</p>
+							<summary>Am I billed for powered-off instances?</summary>
+							<p>Yes — you will be billed for the image storage for of the powered-off instance. If you delete the powered-off instance, you will no longer be billed.</p>
 						</details>
 						<details>
 							<summary>How is tax charged?</summary>
-							<p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.</p>
+							<p>Tax is charged according to the country the service is delivered in (i.e. where the region the service is located). The tax rate for services delivered in APAC Central (Guam) region is 0%.</p>
 						</details>
 						<details>
 							<summary>Can I get port speeds faster than 1 Gbps?</summary>
-							<p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.</p>
-						</details>
-						<details>
-							<summary>Am I billed for powered off instances?</summary>
-							<p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.</p>
+							<p>Not at the moment. If this is something you’re interested in, <a href="/contact/">contact our team</a>. A dedicated server from OneQode may be a better alternative, with port speeds of up to 20 Gbps available.</p>
 						</details>
 						<details>
 							<summary>Which payment methods do we accept?</summary>
-							<p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.</p>
-						</details>
-						<details>
-							<summary>What happens when I exceed 10 TB of data usage?</summary>
-							<p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.</p>
-						</details>
-						<details>
-							<summary>How does tax work?</summary>
-							<p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.</p>
+							<p>We accept Visa, Mastercard, American Express and Diners Club</p>
 						</details>
 					</div>
 				</div>
