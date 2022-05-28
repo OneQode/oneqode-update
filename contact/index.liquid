@@ -53,4 +53,19 @@ form: true
 				</div>
 			</div>
 		</section>
+		<script>
+			/**
+			* Get Querystring data
+			* Credit: https://stackoverflow.com/questions/32109475/javascript-form-field-population-from-variable-in-url-query-string
+			*/
+			function getParameterByName(name) {
+				name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+				var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+					results = regex.exec(location.search);
+				return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+			}
+			document.addEventListener('DOMContentLoaded', function() {
+				document.getElementById('message-here').value = getParameterByName('message');
+			}, false);
+		</script>
 {% include _footer.liquid %}
