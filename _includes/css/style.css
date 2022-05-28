@@ -115,6 +115,12 @@ main {
 .mb-8 {
 	margin-bottom: 8rem;
 }
+.ml-0 {
+	margin-left: 0;
+}
+.ml-1 {
+	margin-left: 1rem;
+}
 .my-0 {
 	margin-top: 0;
 	margin-bottom: 0;
