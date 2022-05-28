@@ -121,6 +121,9 @@
 	<!-- Spam Protection -->
 	<script src="https://unpkg.com/@botpoison/browser"></script>
 {%- endif %}
+{%- if fittext %}
+	<script src="/js/fittext.js"></script>
+{%- endif %}
 </head>
 <body>
 	<!-- Google Tag Manager (noscript) -->
@@ -233,7 +236,7 @@
 					</li>
 					<li><a href="/pricing/" style="--index: 3;">Pricing</a></li>
 					<li><a href="/about/" style="--index: 4;">About</a></li>
-					<li><a href="{{ global.login }}" class="faded" target="_blank" style="--index: 5;">Login</a></li>
+					<li><a href="{{ global.login }}" class="faded" rel="noopener" style="--index: 5;">Login</a></li>
 				</ul>
 				<div class="nav-close" onclick="toggleNav()">
 					<img src="/img/ico/close.svg" alt="" aria-hidden="true">
