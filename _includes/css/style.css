@@ -1341,7 +1341,7 @@ RESPONSIVE OVERRIDES
 	}
 	#header {
 		position: absolute;
-		border-bottom: none;
+		border-bottom: rgba(0,0,0,0);
 	}
 	nav#switcher {
 		margin-left: auto;
@@ -1355,7 +1355,7 @@ RESPONSIVE OVERRIDES
 	#header.sticky {
 		padding: 1.5rem 0;
 		background-color: rgba(0,0,0,0);
-		border-bottom: none;
+		border-bottom: rgba(0,0,0,0);
 		backdrop-filter: none;
 	}
 	nav.main li {
