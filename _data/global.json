@@ -8,7 +8,7 @@
 	"complaintsEmail": "complaints@oneqode.com.au",
 	"mediaEmail": "media@oneqode.com.au",
 	"mediaPackLink": "https://drive.google.com/drive/folders/1Akg86vDIEf1eKA-Of7j1TLCYtJThRAn3?usp=sharing",
-	"login": "https://ocs.oneqode.com",
+	"login": "/login/",
 	"signup": "/cloud/signup/",
 	"support": "https://portal.oneqode.com",
 	"countries-in-reach": "20",

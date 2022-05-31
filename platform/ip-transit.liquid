@@ -23,11 +23,11 @@ form: true
 			background-size: cover;
 		}
 		.no-webp .why-us {
-			background: linear-gradient(to bottom, #000 0%, rgba(28, 29, 34, 0.4) 60%, rgba(12, 12, 12, 0) 70%, #0c0c0c 100%), url("/img/bg/oneqode-network-map.jpg") no-repeat bottom center;
+			background: linear-gradient(to bottom, #000 0%, rgba(0,0,0,0.4) 50%, #0c0c0c 100%), url("/img/bg/oneqode-network-map.jpg") no-repeat bottom center;
 			background-size: cover;
 		}
 		.webp .why-us {
-			background: linear-gradient(to bottom, #000 0%, rgba(28, 29, 34, 0.4) 60%, rgba(12, 12, 12, 0) 70%, #0c0c0c 100%), url("/img/bg/oneqode-network-map.webp") no-repeat bottom center;
+			background: linear-gradient(to bottom, #000 0%, rgba(0,0,0,0.4) 50%, #0c0c0c 100%), url("/img/bg/oneqode-network-map.webp") no-repeat bottom center;
 			background-size: cover;
 		}
 		.edgeix {
@@ -55,40 +55,111 @@ form: true
 			</div>
 		</div>
 	</section>
-	<section class="py-4">
+	<section class="py-4" id="on-net-facilities">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12 col-md-10 col-md-offset-1">
-					<h3>Our internet transit service</h3>
-				</div>
-				<div class="col-xs-12 col-md-5 col-md-offset-1">
-					<h4>Overview</h4>
-					<p><strong>Our IP Transit service connects you to the internet via the  hyperfast OneQode network.</strong></p>
-					<p>You’ll get a 21st century IP transit experience, delivered across our blazing fast Arista-powered network.</p>
-					<h4 class="mt-2">Upstream Providers</h4>
-					<p>We have direct partnerships in place with the world’s leading transit providers: Telstra, NTT, TPG, AT&T, China Mobile International, GTA, and Voxility.</p>
-					<h4 class="mt-2">Delivery</h4>
-					<p>Instant, automated provisioning over a choice of interfaces: OneQode ONNI, Megaport VXC, EdgeXC or metropolitan ethernet/dark fibre.</p>
-				</div>
-				<div class="col-xs-12 col-md-5">
-					<h4>Delivery Facilities</h4>
+				<div class="col-xs-12 col-md-8 col-md-offset-2">
+					<h2 class="text-center">Transit delivery facilities</h2>
 					{% include parts/_pops.liquid %}
 				</div>
 			</div>
-			<div class="row mt-2">
-				<div class="col-xs-12 col-md-5 col-md-offset-1">
-					<h4>Contract & SLA</h4>
-					<p class="mb-2">Choose a 0, 12, 24 or 36-month contract — all under the <a href="/legal/">friendly OneQode terms</a>. The service is covered under the Standard OneQode SLA</p>
-					<p class="sla">
-						<span class="num">99.95%</span> 
-						<span class="up">uptime</span> 
-						<span class="ex">excluding planned outages</span>
-					</p>
+		</div>
+	</section>
+	<section class="py-4">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-5 col-md-offset-1 my-1 p-2">
+					<h4>Overview</h4>
+					<p><strong>Our IP Transit service connects you to the internet via the  hyperfast OneQode network.</strong></p>
+					<p>You’ll get a 21st century IP transit experience, delivered across our blazing fast Arista-powered network.</p>
 				</div>
-				<div class="col-xs-12 col-md-5">
-					<h4>SLA Credit Scheme</h4>
-					<p class="mb-2">If there is an unplanned outage, we have an SLA credit scheme in place to give you account credit for a percentage of your monthly spend.</p>
-					{% include diagrams/_sla-service-credits.liquid %}
+				<div class="col-xs-12 col-md-5 my-1 p-2">
+					<h4>Upstream Providers</h4>
+					<p>We have direct partnerships in place with the world’s leading transit providers: Telstra, NTT, TPG, AT&T, China Mobile International, GTA, and Voxility.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="text-center py-8" id="specifications">
+		<div class="container">
+			<div class="col-xs-12 col-md-8 col-md-offset-2">
+				<h2>IP Transit specifications<mark class="dot">.</mark></h2>
+				<div class="responsive-table text-left mt-4">
+					<table>
+						<tr>
+							<th class="nowrap">Speeds</th>
+							<td>From Mbps to Gbps</td>
+						</tr>
+						<tr>
+							<th class="nowrap">Burst Speeds</th>
+							<td>
+								<ul class="no-style">
+									<li>95th Percentile Bursting</li>
+									<li>1:2 ratio only</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th class="nowrap">Redundancy</th>
+							<td><a href="#start">Contact Sales</a></td>
+						</tr>
+						<tr>
+							<th class="nowrap">Port Speeds</th>
+							<td>
+								<ul class="no-style">
+									<li>1G-LX</li>
+									<li>10G-LR</li>
+									<li>40G-LR4</li>
+									<li>100G-LR4</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th class="nowrap"><abbr title="Link Aggregation Control Protocol">LACP</abbr></th>
+							<td>Supported</td>
+						</tr>
+						<tr>
+							<th class="nowrap">Service Handoff</th>
+							<td>
+								<ul class="no-style">
+									<li>Single mode fibre (data centre cross-connect)</li>
+									<li><abbr title="Network Termination Unit">NTU</abbr> (Multi-Service Accesss)</li>
+									<li>Megaport VXC / ConsoleConnect / IX Australia</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th class="nowrap">IP Addressing</th>
+							<td>
+								<ul class="no-style">
+									<li>Customer supplied IP addresses</li>
+									<li>Static or BGP Routing</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th class="nowrap">IPv6</th>
+							<td>Supported</td>
+						</tr>
+						<tr>
+							<th class="nowrap">BGP Support</th>
+							<td>
+								<ul class="no-style">
+									<li>Default route</li>
+									<li>Full table</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th class="nowrap">DDoS Protection</th>
+							<td>
+								<ul class="no-style">
+									<li>Best-effort service</li>
+									<li>Platinum DDoS protection — <a href="#start">Contact Sales</a></li>
+								</ul>
+							</td>
+						</tr>
+					</table>
 				</div>
 			</div>
 		</div>
@@ -104,15 +175,13 @@ form: true
 			</div>
 		</div>
 	</section>
-	<section class="full-height pt-4 pb-8 why-us">
+	<section class="full-height pb-8 why-us">
 		<div class="container">
 			<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
 				<p class="superheading">Why OneQode?</p>
 				<h2>Intercontinental reach<mark class="dot">,</mark><br class="responsive"> uncompromising speed<mark class="dot">.</mark></h2>
 				<p class="subheading">As the world moves forward,<br class="responsive"> you won’t be held back</p>
-				<p>As the first carrier to go operational on the Sunshine Coast Cable,<br class="responsive"> we’re no stranger to moving fast.</p>
 				<p>OneQode provide access to international data capacity to locations around the globe. With a range of point-to-point and point-to-multipoint services available, we provide high capacity, easy to deploy solutions.</p>
-				<p>We can deliver any service within Australia over either of the two Australian legs of the JGA South Submarine Cable</p>
 				<p><a href="/about/" class="button m-1 mt-2">Learn More</a><a href="#start" class="button ghost m-1 mt-2">Get started</a></p>
 			</div>
 		</div>
