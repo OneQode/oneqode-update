@@ -9,17 +9,13 @@ pageTitle: If you hate lag,<br> you’re in the right place
 pageSubtitle: 👇
 fittext: true
 lazyLoadVideo: true
+font: hack
 ---
 {%- comment %}
 <!--
 
 	!TODO
 
-	- Fittext on mobile
-		
-		https://github.com/adactio/FitText.js
-
-	- Info about network, cloud, servers, apac central
 	- Timeline
 	- Link to press page
 	- Link to careers page
@@ -45,6 +41,10 @@ lazyLoadVideo: true
 			section.hero {
 				min-height: 100vh;
 			}
+			/* Linked Box Overwrites */
+			.box.glowing h2 {
+				font-size: 1.75rem;
+			}
 			/* Kotaku Article Quote */
 			.kotaku-quote blockquote p {
 				font-family: "Poppins", sans-serif;
@@ -62,7 +62,7 @@ lazyLoadVideo: true
 			a.kotaku-logo:focus {
 				opacity: 1;
 			}
-			/* Horrific Fittext */
+			/* Fittext Style */
 			.fittext {
 				font-family: 'Poppins', sans-serif;
 				font-weight: 600;
@@ -115,6 +115,9 @@ lazyLoadVideo: true
 			@media (max-width: 48em) {
 				h1 {
 					font-size: 1.6rem;
+				}
+				.box.glowing h2 {
+					font-size: 1.3rem;
 				}
 				.kotaku-quote blockquote p {
 					font-size: 1.2rem;
@@ -226,26 +229,26 @@ lazyLoadVideo: true
 						<h2>What we offer:</h2>
 					</div>
 				</div>
-				<div class="row mt-2 icons">
-					<div class="col-xs-6 col-md-4 mb-2 mt-1">
+				<div class="row mt-2 icons place-content-center">
+					<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-4 my-2">
 						<a href="/network/" class="box glowing">
 							<img class="mt-2" src="/img/ico/connection2.svg" alt="">
 							<h2 class="mt-2">Lag-free network</h2>
-							<p class="hide-mobile">That reaches billions across APAC</p>
+							<p class="hide-mobile">That reaches billions <br class="responsive">of people across APAC</p>
 						</a>
 					</div>
-					<div class="col-xs-6 col-md-4 mb-2 mt-1">
+					<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-4 my-2">
 						<a href="/cloud/" class="box glowing">
 							<img class="mt-2" src="/img/ico/cloud.svg" alt="">
 							<h2 class="mt-2">High-performance cloud</h2>
-							<p class="hide-mobile">That wipes the floor with everyone else</p>
+							<p class="hide-mobile">That wipes the floor <br class="responsive">with everything else</p>
 						</a>
 					</div>
-					<div class="col-xs-6 col-md-4 mb-2 mt-1">
+					<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-4 my-2">
 						<a href="/dedicated-servers/" class="box glowing">
 							<img class="mt-2" src="/img/ico/server.svg" alt="">
 							<h2 class="mt-2">Freaking fast servers</h2>
-							<p class="hide-mobile">Built with the world’s fastest processors</p>
+							<p class="hide-mobile">Built with the world’s <br class="responsive">fastest processors</p>
 						</a>
 					</div>
 				</div>
