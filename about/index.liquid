@@ -1,16 +1,49 @@
 ---
 layout: page.liquid
-metaTitle: OneQode™ • About Us
-metaDescription: OneQode provides the network and infrastructure for real-time, lag-free gaming. We operate a low-latency carrier network and a high-performance cloud platform.
+metaTitle: About Us • OneQode™
+metaDescription: If you hate lag, you’re in the right place. We’re building the foundation for tomorrow’s killer apps with a lightning-fast cloud and low latency network.
 changefreq: monthly
 priority: 0.9
-pageSupertitle: By Gamers, For Gamers
-pageTitle: Enhanced multiplayer
-pageSubtitle: OneQode provides the <mark>network and infrastructure</mark> that makes real-time, lag-free applications possible
+pageSupertitle: About Us
+pageTitle: If you hate lag,<br> you’re in the right place
+pageSubtitle: 👇
+fittext: true
+lazyLoadVideo: true
+font: hack
 ---
+{%- comment %}
+<!--
+
+	!TODO
+
+	- Timeline
+	- Link to press page
+	- Link to careers page
+
+-->
+{%- endcomment %}
 		<style>
+			.no-webp .hero {
+				background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/light-speed-blur.jpg") no-repeat bottom center;
+				background-size: cover;
+			}
+			.webp .hero {
+				background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/light-speed-blur.webp") no-repeat bottom center;
+				background-size: cover;
+			}
+			.hero .superheading {
+				margin-bottom: 2rem;
+			}
+			.hero .subheading {
+				font-size: 4rem;
+				margin-top: 4rem;
+			}
 			section.hero {
-				background: linear-gradient(to bottom, transparent 70%, #000), radial-gradient(circle at bottom,rgb(0,39,53) 0%,rgb(0,0,0) 100%);
+				min-height: 100vh;
+			}
+			/* Linked Box Overwrites */
+			.box.glowing h2 {
+				font-size: 1.75rem;
 			}
 			/* Kotaku Article Quote */
 			.kotaku-quote blockquote p {
@@ -29,50 +62,68 @@ pageSubtitle: OneQode provides the <mark>network and infrastructure</mark> that 
 			a.kotaku-logo:focus {
 				opacity: 1;
 			}
-
-			/* Features -- What We’re Doing */
-			.feature {
-				background: #1c1d22;
-				margin-top: 4rem;
-				padding: 4rem;
+			/* Fittext Style */
+			.fittext {
+				font-family: 'Poppins', sans-serif;
+				font-weight: 600;
+				line-height: 1.1;
+			}
+			.fittext span:not(#virtualreality, #voicechat) {
+				display: block;
+			}
+			#gamesvr {
+				opacity: 1;
+			}
+			#virtualreality {
+				opacity: 0.9;
+			}
+			#livesv {
+				opacity: 0.8;
+			}
+			#voicechat {
+				opacity: 0.7;
+			}
+			#realtimes {
+				opacity: 0.65;
+			}
+			#memestock {
+				opacity: 0.6;
+			}
+			#ecommerce {
+				opacity: 0.5;
+			}
+			#whatever {
+				opacity: 0.4;
+			}
+			#whocares {
+				line-height: 0.9;
+				opacity: 0.3;
+			}
+			#wecanhost {
+			}
+			/* Stat Gradient */
+			.stat {
+				background: -webkit-linear-gradient(258deg, #fff, #999);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+			span.unit {
+				font-size: 2.5rem;
+				display: inline-block;
+			}
+			video {
 				border-radius: 15px;
-				background: #1c1d22 no-repeat right;
-				background-size: contain;
-			}
-			.feature.guam {
-				background-position: left;
-			}
-			.feature .button {
-				font-size: 1rem;
-			}
-
-			/* Feature WebP Backgrounds */
-			.webp .feature.submarine {
-				background-image: linear-gradient(90deg, #1c1d22 60%, rgba(28,29,34,0.7) 100%), url(../img/company-submarine-sunshine-coast-landing-station.webp);
-			}
-			.no-webp .feature.submarine {
-				background-image: linear-gradient(90deg, #1c1d22 60%, rgba(28,29,34,0.7) 100%), url(../img/company-submarine-sunshine-coast-landing-station.jpg);
-			}
-			.webp .feature.guam {
-				background-image: linear-gradient(270deg, #1c1d22 60%, rgba(28,29,34,0.7) 100%), url(../img/company-guam-aerial-view.webp);
-			}
-			.no-webp .feature.guam {
-				background-image: linear-gradient(270deg, #1c1d22 60%, rgba(28,29,34,0.7) 100%), url(../img/company-guam-aerial-view.jpg);
-			}
-			.webp .feature.lastmile {
-				background-image: linear-gradient(90deg, #1c1d22 60%, rgba(28,29,34,0.7) 100%), url(../img/company-last-mile-oneqode-wireless.webp);
-			}
-			.no-webp .feature.lastmile {
-				background-image: linear-gradient(90deg, #1c1d22 60%, rgba(28,29,34,0.7) 100%), url(../img/company-last-mile-oneqode-wireless.jpg);
 			}
 			/* Mobile Styles */
 			@media (max-width: 48em) {
+				h1 {
+					font-size: 1.6rem;
+				}
+				.box.glowing h2 {
+					font-size: 1.3rem;
+				}
 				.kotaku-quote blockquote p {
 					font-size: 1.2rem;
-				}
-				.feature {
-					background-size: cover;
-					text-align: center;
 				}
 				.center-mobile {
 					text-align: center;
@@ -81,11 +132,254 @@ pageSubtitle: OneQode provides the <mark>network and infrastructure</mark> that 
 			@media (min-width: 48em) {
 				/* Move up on desktop */
 				.network {
-					margin-top: -16rem;
+					margin-top: -12rem;
 				}
 			}
+			@media (max-width: 64em) {
+				.xs\:py-8 {
+					padding-top: 8rem;
+					padding-bottom: 8rem;
+				}
+			}
+			@media (max-width: 64em) {
+				/* Hide Guam background */
+				#cable-map,
+				#cable-map::after {
+					display: none !important;
+				}
+				#guam {
+					min-height: 0 !important;
+				}
+			}
+			/* Guam Map BG */
+			#guam {
+				position: relative;
+			}
+			/* SVG Styles */
+			#cable-map {
+				position: absolute;
+				z-index: -1;
+				width: 100%;
+				overflow: hidden;
+				/*margin: -4rem 0 -16rem 0;*/
+				margin:  -4rem 0 -10rem 0;
+			}
+			#cable-map::after {
+				content: "";
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				background: radial-gradient(closest-side, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.4) 80%, #000);
+				top: 0;
+				left: 0;
+				z-index: 2;
+			}			
+			.cable {
+				fill-rule: evenodd;
+				clip-rule: evenodd;
+				fill: none;
+				stroke: #00B0F0;
+				stroke-width: 4;
+				stroke-dasharray: 15;
+				stroke-dashoffset: 510;
+				animation: lines 2s linear infinite;
+			}
+			@keyframes lines {
+				100% {
+					stroke-dashoffset: 0;
+				}
+			}
+			#guam-island {
+				fill-rule: evenodd;
+				clip-rule: evenodd;
+				fill: #004B66;
+				stroke: #00B0F0;
+			}
 		</style>
-		<section class="pb-4">
+		<section class="full-height pb-8">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-xs-12 col-md-10 col-md-offset-1 fittext">
+						<div id="building">We’re building</div>
+						<div id="foundation"><mark>the foundation</mark></div>
+						<div id="tomorrows">for tomorrow’s</div>
+						<div id="killerapps">killer apps<mark class="dot">.</mark></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="pb-8">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-xs-12 col-md-10 col-md-offset-1 fittext">
+						<div id="gamesvr">Games. <span id="virtualreality">Virtual Reality.</span></div>
+						<div id="livesv">Live streaming. <span id="voicechat">Voice chat.</span></div>
+						<div id="realtimes">Real-time software.</div>
+						<div id="memestock">Meme stock trading tools.</div>
+						<div id="ecommerce">Ecommerce sites.</div>
+						<div id="whatever">Whatever all the kids do.</div>
+						<div id="whocares">Who cares.</div>
+						<div id="wecanhost">We can host it<mark class="dot">.</mark></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="my-8">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<h2>What we offer:</h2>
+					</div>
+				</div>
+				<div class="row mt-2 icons place-content-center">
+					<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-4 my-2">
+						<a href="/cloud/" class="box glowing">
+							<img class="mt-2" src="/img/ico/cloud.svg" alt="">
+							<h2 class="mt-2">High-performance cloud</h2>
+							<p class="hide-mobile">That wipes the floor <br class="responsive">with everything else</p>
+						</a>
+					</div>
+					<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-4 my-2">
+						<a href="/dedicated-servers/" class="box glowing">
+							<img class="mt-2" src="/img/ico/server.svg" alt="">
+							<h2 class="mt-2">Freaking fast servers</h2>
+							<p class="hide-mobile">Built with the world’s <br class="responsive">fastest processors</p>
+						</a>
+					</div>
+					<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-4 my-2">
+						<a href="/network/" class="box glowing">
+							<img class="mt-2" src="/img/ico/connection2.svg" alt="">
+							<h2 class="mt-2">Lag-free network</h2>
+							<p class="hide-mobile">That reaches billions <br class="responsive">of people across APAC</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="pt-4 push-forward text-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<h2>None of Asia-Pacific’s<br class="responsive"> networks were fast enough<mark class="dot">.</mark></h2>
+						<p class="subheading faded">So we built our own.</p>
+					</div>
+					<div class="col-xs-12 col-md-6 col-md-offset-3">
+						<p>Our global carrier network is built<br class="repsonsive"> from the ground up to eliminate lag.</p>
+						<p>We shoot lasers down submarine cables<br class="responsive"> to make games and apps go faster.</p>
+						<p class="mt-2"><a href="/network/" class="chevron">Our network</a> <a href="/story/" class="chevron ml-1">Our story</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="network">
+{% include diagrams/_network-map.liquid %}
+		</section>
+		<section class="pt-8">
+			<div class="container text-center">
+				<div class="row">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<h2>Now we’re building the<br class="responsive"> world’s fastest cloud<mark class="dot">.</mark></h2>
+						<p class="subheading faded">Take the fastest CPUs, add always-on DDoS protection and fuse them into our low-latency network</p>
+					</div>
+					<div class="col-xs-12 col-md-6 col-md-offset-3">
+						<p>Having a great network is just the beginning.</p>
+						<p>Insanely-fast servers on our network deliver <span class="nowrap">performance-sensitive</span> apps at lightning speed.</p>
+						<p class="mt-2"><a href="/cloud/" class="chevron">Cloud platform</a> <a href="/dedicated-servers/" class="chevron ml-1">Dedicated servers</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="guam" class="full-height xs:py-8 text-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-10 col-sm-offset-1">
+						<p class="superheading">APAC Central</p>
+						<h2>Oh, we also built Asia-Pacific’s <br class="responsive">only central server region<mark class="dot">.</mark></h2>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-sm-offset-3">
+						<p class="mt-0">We put servers in the middle of the ocean on the Pacific island of Guam — so 1.45 billion gamers can play on a level playing field</p>
+						<p class="mt-2"><a href="/guam/" class="chevron">APAC Central</a></p>
+					</div>
+				</div>
+			</div>
+			<div id="cable-map">
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 3840 2160" xml:space="preserve">
+					<path class="cable" d="M1752.6,0c14.2,266.6,117,984.3,117,984.3S1827,248.8,1822.4,0" />
+					<path class="cable" d="M3840,473c-742.3,186.7-1684.3,333.3-1822.4,358.7c-138.1,25.3-148,152.6-148,152.6s-1.1-17.6-13.8-19.1
+				C1843.1,963.7,1035.7,601,0,455.2" />
+					<path class="cable" d="M0,728.6C774.1,778,1843.1,963.3,1855.8,965.1c12.7,1.9,13.8,19.1,13.8,19.1" />
+					<path class="cable" d="M1869.6,985c0,0,0.4-16.7-13.8-19.9c-14.2-3.1-65.2-2.1-60.3,49.5c2.9,30,79.2,258.3,114.6,1145.3" />
+					<path id="guam-island" d="M1873.7,1115.4l8.9-8.9c0,0,0-3.5,1.5-4.5s7.5-4.5,7.5-4.5s2.6-2.2,3-4.5 c0.4-2.2,1.3-2.7,4.5-6c3.2-3.3,4.7-11.6,3-11.9c-1.7-0.3-1.5-10.4-1.5-10.4s-1.5-4.3-6-3c-4.5,1.4,8.1-3.5,7.5-6 c-0.6-2.5-1.5-8.9-1.5-8.9s-3.4-1.6-1.5-3c1.9-1.4,3-8.9,3-8.9s-0.4-4.3,3-7.5c3.4-3.2,3-7.5,3-7.5l1.5-3c0,0,2.1-3,0-3 c-2.1,0-1.7-4.3,4.5-6c6.2-1.7,6,1.5,6,1.5l3-4.5c0,0,7-4.3,8.9-6c2-1.7,8.7-9.2,13.4-10.4c4.7-1.3,15.7-19,22.4-16.4 c2,0.4,3-4.5,3-4.5s-3.8-8.7,13.4-10.4c7.5-1,10.4-13.4,10.4-13.4s3.6-6,3-14.9c4.5-7.5,4.6-0.2,8.9-14.9c-0.1,0.9,6.6-6.9-3-6 c-9.5,0.9-22.6,3.9-26.8-8.9c-4.2-8.3-16.5-18.3-19.4-19.4s-5.2-3.1-10.4,3c-1.9,4.2-5.4,9-7.5,10.4c-2.1,1.5-1.2,11,0,14.9 s1.2,5.2-1.5,8.9s-5,5.9-4.5,6s-4.3,5.7-4.5,6c-0.2,0.3-1.8,5.6-4.5,6c-2.7,0.3-0.7,8-6,8.9c-2.4,1.3,0.2,11.1,1.5,11.9 c0.6,1.1-3.6,10.3-8.9,7.5c-5.4-2.8-12.6,3.1-10.4,6c2.2,2.8,1.9,11.4-6,10.4c-7.9-1-3,0-3,0s-3.2-4.2-7.5,0 c-4.3,4.2-6.9-2.3-7.5-1.5c-0.5,0.8-6.2,3.8-7.5,4.5c-1.3,0.7-11-4.2-13.4,3c-0.9,2.4-1.3,3.4-3,1.5c-1.6-1.9-7.8,0-8.9,1.5 c-1.2,1.5-2.8,0.7-3-1.5c-0.6,0-19.4,0-19.4,0s-7.7,6.3-7.5,7.5c1.5,0.5,5.2-3.3,7.5-4.5c2.3-1.2,14.9-2.2,17.9,1.5 c0.4,1.6-3.6,4-3,4.5c0.6,0.5,3.5,0,6-1.5c2.5-1.5,5.1-1.2,6,1.5s-3.2,6.2-4.5,4.5c-1.2-1.7-6.7,2.4-3,4.5c2.2-0.2,4.2,0.8,3,4.5 c-1.2,3.7-4.8,3.9-6,1.5c-1.2-2.4,1.3-10.6-1.5-10.4c-2.8,0.1-10.4,2-14.9,0c-4.5-2-6.5-4.6-8.9-3c-2.5,1.6-0.3,6.5,4.5,7.5 c3.3,1.6,7.1,3.9,6,8.9c-0.2,4.5,4.5,1.5,4.5,1.5s-0.8,3.9,3,3s7.2,7,6,8.9c-1.2,1.9-4.8,7-6,10.4c-1.2,3.4-2.6,15.2-6,17.9 c-3.4,2.7-2.5,5,3,7.5c2.6,4.5,2.9,6.9,3,7.5c0.1,0.6,1.1,2.4,1.5,3c0.4,0.6,0.6,2.7,0,4.5c-0.6,1.8,1.8,4.9,1.5,7.5 c-0.3,2.6,1.4,7.1,3,8.9s0,7.5,0,7.5s8.3,8.7,10.4,8.9c2.1,0.3,8.7-0.1,10.4,3C1859.1,1117,1873.7,1115.4,1873.7,1115.4z" />
+				</svg>
+			</div>
+		</section>
+		<section class="py-8">
+			<div class="container text-center">
+				<div class="row">
+					<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+						<p class="superheading">The big picture</p>
+						<h2>We’re building a world where latency is invisible<mark class="dot">.</mark></h2>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-sm-offset-3">
+						<p class="mt-0">Laying the foundation for the next decade of connected experiences isn’t easy. Here’s the big picture behind what we’re doing.</p>
+						<p class="mt-2"><a class="chevron" href="/vision-mission-strategy/">Our vision</a></p>
+					</div>
+				</div>
+				<div class="row mt-8">
+					<div class="col-xs-12 col-md-3 py-4">
+						<div class="stat"><span>100<span class="unit"> GbE</span></span> core network</div>
+					</div>
+					<div class="col-xs-12 col-md-3 py-4">
+						<div class="stat"><span>{{ global.countries-in-reach }}</span> countries in reach</div>
+					</div>
+					<div class="col-xs-12 col-md-3 py-4">
+						<div class="stat"><span>{{ global.points-of-presence }}</span> points of presence</div>
+					</div>
+					<div class="col-xs-12 col-md-3 py-4">
+						<div class="stat"><span>99.95<span class="unit">%</span></span> uptime</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-md-3 col-md-offset-3 py-4">
+						<div class="stat"><span>2019</span> founding year</div>
+					</div>
+					<div class="col-xs-12 col-md-3 py-4">
+						<div class="stat"><span>{{ global.staff }}</span> staff</div>
+					</div>
+				</div>
+			</div>
+		</section>
+{%- comment %}
+		<section class="py-4">
+			<div class="container text-center">
+				<h2>Our team<mark class="dot">.</mark></h2>
+{% include parts/_team.liquid %}
+			</div>
+		</section>
+{%- endcomment %}
+		<section class="mb-8">
+			<div class="container text-center">
+				<div class="col-xs-12">
+					<figure>
+						<video
+							class="lazy full-width"
+							poster="/img/buckle-your-seatbelt.jpg"
+							aria-label="&#39;It means buckle your seatbelt Dorothy, cos Kansas is going bye-bye!&#39;"
+							width="1280"
+							height="530"
+							autoplay muted loop playsinline disableRemotePlayback
+						>
+							<source
+								data-src="https://oneqode.sfo2.digitaloceanspaces.com/videos/buckle-your-seatbelt.mp4"
+								type="video/mp4"
+							>
+						</video>
+					</figure>
+				</div>
+			</div>
+		</section>
+		<section class="black-to-footer pb-8">
 			<div class="container text-center">
 				<div class="row">
 					<div class="col-xs-12 col-md-8 col-md-offset-2 kotaku-quote">
@@ -116,113 +410,22 @@ pageSubtitle: OneQode provides the <mark>network and infrastructure</mark> that 
 				</div>
 			</div>
 		</section>
-		<section class="py-8">
-			<div class="container">
-				<div class="row text-center">
-					<div class="col-md-8 col-md-offset-2">
-						<h2>Low<mark class="dot">.</mark> Latency<mark class="dot">.</mark> Gaming<mark class="dot">.</mark></h2>
-						<p>Founded in 2019 and headquartered in Australia, OneQode is a privately-funded telecommunications carrier. We operate a low-latency international carrier network and a high-performance cloud platform.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="pt-4 push-forward">
-			<div class="container">
-				<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
-					<p class="superheading">Why OneQode?</p>
-					<h2>Intercontinental reach<mark class="dot">,</mark><br class="responsive"> uncompromising speed<mark class="dot">.</mark></h2>
-					<p class="subheading">Strategic locations across <mark>three continents</mark> reach<br class="responsive"> hundreds of millions of gamers at low latency</p>
-				</div>
-			</div>
-		</section>
-		<section class="network">
-{% include diagrams/_network-map.liquid %}
-		</section>
-		<section>
-			<div class="container">
-				<div class="row mt-8 feature submarine">
-					<div class="col-md-6">
-						<h3>Connecting Australia to<br class="responsive"> the world, fast.</h3>
-						<p>The first carrier to go operational on the fastest cable to Asia from Australia’s east coast.</p>
-						<a class="button ghost" href="/media/oneqode-deploys-in-sunshine-coast-landing-station/">Learn More
-							<svg width="1rem" height="1rem" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-							</svg>
-						</a>
-					</div>
-				</div>
-				<div class="row feature guam">
-					<div class="col-md-6 col-md-offset-6">
-						<h3>Creating a central server region for Asia-Pacific</h3>
-						<p>The first to deploy infrastructure in Guam purpose-designed for real-time, cross-regional gaming.</p>
-						<a class="button ghost" href="/guam/">APAC Central
-							<svg width="1rem" height="1rem" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-							</svg>
-						</a>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="py-4">
-			<div class="container text-center">
-				<div class="row">
-					<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
-						<p class="superheading">What we’re doing</p>
-						<h2>The big picture<mark class="dot">:</mark></h2>
-						<p>Listen to Matt, our CEO, as he gives an overview of what we’re doing and why it matters.</p>
-					</div>
-				</div>
-				<div class="row mt-2">
-					<div class="col-xs-12">
-						<div class="wrapper">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/FPCNX77AyAA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						</div>
-					</div>
-				</div>
-				<div class="row mt-2">
-					<div class="col-xs-12 col-md-6 col-md-offset-3 text-center">
-						<p class="mt-4">We’re building a world where the difference between physical and digital connectivity are imperceptible.</p>
-						<a class="button ghost mt-1" href="/vision-mission-strategy/">Our vision</a>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="py-4">
-			<div class="container text-center">
-				<h2>Our team<mark class="dot">.</mark></h2>
-{% include parts/_team.liquid %}
-			</div>
-		</section>
-		<section class="black-to-footer py-8">
-			<div class="container">
-				<div class="row text-center">
-					<div class="col-xs-12">
-						<h2>Learn more<mark class="dot">:</mark></h2>
-					</div>
-				</div>
-				<div class="row mt-4 icons">
-					<div class="col-xs-6 col-md-4 mb-2 mt-1">
-						<a href="/network/" class="box glowing">
-							<img class="mt-2" src="/img/ico/connection2.svg" alt="">
-							<h2 class="mt-2">Network</h2>
-							<p class="hide-mobile">Latency-optimised connectivity</p>
-						</a>
-					</div>
-					<div class="col-xs-6 col-md-4 mb-2 mt-1">
-						<a href="/game-servers/" class="box glowing">
-							<img class="mt-2" src="/img/ico/server.svg" alt="">
-							<h2 class="mt-2">Game Servers</h2>
-							<p class="hide-mobile">Compute, storage and colocation</p>
-						</a>
-					</div>
-					<div class="col-xs-6 col-md-4 mb-2 mt-1">
-						<a href="/cloud/" class="box glowing">
-							<img class="mt-2" src="/img/ico/cloud.svg" alt="">
-							<h2 class="mt-2">Cloud Platform</h2>
-							<p class="hide-mobile">The high performance cloud</p>
-						</a>
-					</div>
-				</div>
-			</div>
-		</section>
+<script>
+	/**
+	* FitText.js — https://github.com/adactio/FitText.js
+	* A vanilla js script to inflate web type
+	* Used under WTFPL license 💪
+	*/
+	window.fitText( document.getElementById("building") );
+	window.fitText( document.getElementById("foundation") );
+	window.fitText( document.getElementById("tomorrows") );
+	window.fitText( document.getElementById("killerapps"), 0.73 );
+	window.fitText( document.getElementById("gamesvr"), 1.55 );
+	window.fitText( document.getElementById("livesv"), 1.83 );
+	window.fitText( document.getElementById("realtimes"), 1.34 );
+	window.fitText( document.getElementById("memestock"), 1.75 );
+	window.fitText( document.getElementById("ecommerce"), 1.185 );
+	window.fitText( document.getElementById("whatever"), 1.66 );
+	window.fitText( document.getElementById("whocares"), 0.75 );
+	window.fitText( document.getElementById("wecanhost"), 0.99 );
+</script>

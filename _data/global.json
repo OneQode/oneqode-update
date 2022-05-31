@@ -8,8 +8,10 @@
 	"complaintsEmail": "complaints@oneqode.com.au",
 	"mediaEmail": "media@oneqode.com.au",
 	"mediaPackLink": "https://drive.google.com/drive/folders/1Akg86vDIEf1eKA-Of7j1TLCYtJThRAn3?usp=sharing",
-	"login": {
-		"business": "https://portal.oneqode.com",
-		"wholesale": "https://portal.oneqode.com"
-	}
+	"login": "/login/",
+	"signup": "/cloud/signup/",
+	"support": "https://portal.oneqode.com",
+	"countries-in-reach": "20",
+	"points-of-presence": "9",
+	"staff": "24"
 }

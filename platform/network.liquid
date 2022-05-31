@@ -1,0 +1,569 @@
+---
+permalink: /network/
+layout: page.liquid
+metaTitle: Asia-Pacific’s Low Latency Network • OneQode™
+metaDescription: Traffic moves faster on our low-latency network. Built for gaming and real-time applications, our network has private fast-lanes to Asia-Pacific’s last-mile ISPs.
+changefreq: monthly
+priority: 0.8
+pageSupertitle: Our Network
+pageTitle: Low-latency<br class="responsive"> global network
+pageSubtitle: The network purpose-built for real-time
+---
+		<style>
+			.hero {
+				background: #000 !important;
+			}
+			/* How our DDoS compares to alternatives */
+			#compare {
+				background: #333;
+				border-radius: 15px;
+			}
+			@media (min-width: 48em) {
+				/* Move up on desktop */
+				.network {
+					margin-top: -8rem;
+				}
+				/* Compare bg */
+				#compare {
+					background: #17181C;
+				}
+				.icon {
+					margin-left: 0;
+				}
+			}
+			/* Stat Gradient */
+			.stat {
+				background: -webkit-linear-gradient(258deg, #fff, #999);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+			span.unit {
+				font-size: 2.5rem;
+				display: inline-block;
+			}
+			/* Icons */
+			.icon.switch {
+				mask: url(/img/ico/switch.svg) no-repeat center;
+				-webkit-mask: url(/img/ico/switch.svg) no-repeat center;
+			}
+			.icon.paths {
+				mask: url(/img/ico/latency2.svg) no-repeat center;
+				-webkit-mask: url(/img/ico/latency2.svg) no-repeat center;
+			}
+			.icon.transit {
+				mask: url(/img/ico/connection2.svg) no-repeat center;
+				-webkit-mask: url(/img/ico/connection2.svg) no-repeat center;
+			}
+			.icon.last-mile {
+				mask: url(/img/ico/last-mile.svg) no-repeat center;
+				-webkit-mask: url(/img/ico/last-mile.svg) no-repeat center;
+			}
+			/* SVGs */
+			#compare-routing text,
+			#ddos text {
+				font-family: "Poppins", sans-serif;
+				font-weight: 600;
+			}
+			.node-label {
+				font-size: 16px;
+			}
+			.route-label,
+			.item-label {
+				text-transform: uppercase;
+				font-size:  14px;
+			}
+			.blue-fill {
+				fill: #00b0f0;
+			}
+			.blue-stroke {
+				stroke: #00b0f0;
+			}
+			.endpoint {
+				font-size: 26px;
+			}
+			#compare-routing text.telco {
+				fill: #9b0000;
+			}
+			#compare-routing text.oneqode {
+				fill: #00b0f0;
+			}
+			/* Nodes */
+			.node {
+				stroke-width: 2;
+				stroke: #002f40;
+			}
+			.node.oneqode g {
+				stroke: #00b0f0;
+			}
+			.node.telco g {
+				stroke: #9b0000;
+			}
+			/* lines */
+			.line line {
+				fill: none;
+				stroke: #002f40;
+				stroke-width: 2;
+				stroke-dasharray: 10;
+			}
+			@keyframes lines {
+				100% {
+					stroke-dashoffset: 0;
+				}
+			}
+			.line.telco line {
+				stroke: #9b0000;
+				stroke-dashoffset: 200;
+				animation: lines 4s linear infinite;
+			}
+			.line.oneqode line {
+				stroke: #00b0f0;
+				stroke-dashoffset: 200;
+				animation: lines 1s linear infinite;
+			}
+			.legitimate path {
+				stroke: #7fd400;
+				stroke-width: 2;
+				stroke-dasharray: 10;
+				stroke-dashoffset: 200;
+				animation: lines 1s linear infinite;
+			}
+			path.illegitimate {
+				stroke: #9b0000;
+				stroke-width: 2;
+				stroke-dasharray: 10;
+				stroke-dashoffset: 200;
+				animation: lines 1s linear infinite;
+			}
+			/*  Logo Grid  */
+			.logo-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+				grid-gap: 1rem;
+			}
+			@media (min-width: 48em) {
+				.logo-grid {
+					grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+					grid-gap: 1rem;
+				}
+			}
+			@media (max-width: 340px) {
+				.logo-grid {
+					grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+					grid-gap: 0.2rem;
+				}
+			}
+			.logo-grid > div {
+				padding: 1rem;
+				display: grid;
+				place-items: center;
+			}
+			.logo-grid > div::before {
+				content: "";
+				display: block;
+				padding-bottom: 100%;
+				grid-area: 1/1/2/2;
+			}
+			.logo-grid > div img {
+				width: 100%;
+				grid-area: 1/1/2/2;
+				filter: brightness(0) invert(1);
+				opacity: 0.3;
+				transition: opacity 0.2s;
+			}
+			.logo-grid > div:hover img {
+				opacity: 0.8;
+			}
+			.logo-grid > div img.w50 {
+				width: 50%;
+			}
+			.logo-grid > div img.w80 {
+				width: 80%;
+			}
+		</style>	
+		<section class="push-forward mobile-text-center">
+			<div class="container">
+				<div class="row place-content-center">
+					<div class="col-xs-12 col-md-5">
+						<h2>Lightning fast<mark class="dot">.</mark></h2>
+						<p>Our carrier network spans 3 continents, reaching people throughout Asia-Pacific.</p>
+						<p>Designed for spectacular real-time experiences, this is where milliseconds matter.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="network">
+{% include diagrams/_network-map.liquid %}
+			<figcaption class="mt-0">Global network rollout map <span style="color: #949494">// <a href="https://oneqode.sfo2.digitaloceanspaces.com/maps/global/oneqode-world-map.pdf" rel="noopener" target="_blank">Full map PDF</a></figcaption>
+		</section>
+		<section class="py-8 mobile-text-center">
+			<div class="container">
+				<div class="row place-content-center">
+					<div class="col-xs-12 col-md-5">
+						<h3 class="faded">Reach more users</h3>
+						<h3>Strategic footprint</h3>
+						<p>With a game-changing APAC Central (Guam) facility at the core, and a presence in Asia-Pacific’s major population centres, you’ll reach hundreds of millions of people across the region with ultra low-latency connectivity.</p>
+						<a href="/guam/" class="chevron">Learn more about APAC Central</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-3 py-4">
+						<div class="stat"><span>100<span class="unit"> GbE</span></span> core network</div>
+					</div>
+					<div class="col-xs-12 col-md-3 py-4">
+						<div class="stat"><span>{{ global.countries-in-reach }}</span> countries in reach</div>
+					</div>
+					<div class="col-xs-12 col-md-3 py-4">
+						<div class="stat"><span>{{ global.points-of-presence }}</span> points of presence</div>
+					</div>
+					<div class="col-xs-12 col-md-3 py-4">
+						<div class="stat"><span>99.95<span class="unit">%</span></span> uptime</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-8">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-xs-12 col-md-8 col-md-offset-2 mb-0">
+						<h2>Your traffic<mark class="dot">.</mark> Delivered <mark>faster</mark><mark class="dot">.</mark></h2>
+					</div>
+					<div class="col-xs-12 col-md-6 col-md-offset-3">
+						<p class="mt-0">We carry your data over the most direct path, connecting to last-mile ISPs as close to end-users as possible.</p>
+					</div>
+				</div>
+				<div class="row text-center">
+					<div class="col-xs-12">
+						<figure>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1379 620" id="compare-routing">
+								<g transform="translate(-269 -3728)">
+									<g class="line">
+										<line y1="145" x2="280" transform="translate(603 3840)"/>
+										<line y1="415" x2="225" transform="translate(658 3839)"/>
+										<line x1="409" y1="252" transform="translate(1198 3786)"/>
+										<line x1="95" y1="215" transform="translate(508 3770)"/>
+										<line x1="120" y1="252" transform="translate(1198 3786)"/>
+										<line x1="56.948" y1="268.989" transform="translate(1318.152 4038.5)"/>
+										<line x2="716.093" y2="53.313" transform="translate(659.008 4254.176)"/>
+										<line x2="345.324" y2="215.676" transform="translate(313.684 4038.5)"/>
+										<line y1="163" x2="353" transform="translate(658 4091)"/>
+										<line y1="53.313" x2="315.032" transform="translate(883.165 3786.474)"/>
+										<line y1="53.313" x2="306.551" transform="translate(1011.602 4038.5)"/>
+									</g>
+									<g class="line telco">
+										<line y1="267.778" x2="195.078" transform="translate(313.684 3770.723)"/>
+										<line x2="374.404" y2="69.065" transform="translate(508.761 3770.723)"/>
+										<line x2="128" y2="252" transform="translate(883 3839)"/>
+										<line x2="363" y2="216" transform="translate(1011 4091)"/>
+										<line x2="233" y1="269" transform="translate(1374 4038)"/>
+									</g>
+									<g class="line oneqode">
+										<line y1="54.525" x2="289.587" transform="translate(313.684 3983.975)"/>
+										<line x2="714.881" y2="54.525" transform="translate(603.271 3983.975)"/>
+										<line x2="289.587" transform="translate(1318.152 4038.5)"/>
+									</g>
+									<g class="node">
+										<g transform="translate(646 4241)">
+											<circle cx="12.5" cy="12.5" r="12.5"/>
+											<circle cx="12.5" cy="12.5" r="11.5"/>
+										</g>
+										<g transform="translate(1185 3774)" stroke="#002f40" stroke-width="2">
+											<ellipse cx="12.5" cy="12" rx="12.5" ry="12"/>
+											<ellipse cx="12.5" cy="12" rx="11.5" ry="11"/>
+										</g>
+									</g>
+									<g class="node telco">
+										<g transform="translate(496 3758)">
+											<circle cx="12" cy="12" r="12"/>
+											<circle cx="12" cy="12" r="11"/>
+										</g>
+										<g transform="translate(1362 4295)">
+											<ellipse cx="12.5" cy="12" rx="12.5" ry="12"/>
+											<ellipse cx="12.5" cy="12" rx="11.5" ry="11"/>
+										</g>
+										<g transform="translate(870 3827)">
+											<ellipse cx="12.5" cy="12" rx="12.5" ry="12"/>
+											<ellipse cx="12.5" cy="12" rx="11.5" ry="11"/>
+										</g>
+										<g transform="translate(999 4079)">
+											<circle cx="12" cy="12" r="12"/>
+											<circle cx="12" cy="12" r="11"/>
+										</g>
+									</g>
+									<g class="node oneqode">
+										<g transform="translate(301 4026)">
+											<circle cx="12" cy="12" r="12"/>
+											<circle cx="12" cy="12" r="11"/>
+										</g>
+										<g transform="translate(591 3971)">
+											<circle cx="12" cy="12" r="12"/>
+											<circle cx="12" cy="12" r="11"/>
+										</g>
+										<g transform="translate(1305 4026)">
+											<circle cx="12" cy="12" r="12"/>
+											<circle cx="12" cy="12" r="11"/>
+										</g>
+										<g transform="translate(1595 4026)">
+											<circle cx="12" cy="12" r="12"/>
+											<circle cx="12" cy="12" r="11"/>
+										</g>
+									</g>
+									<g class="route-label">
+										<text transform="translate(457.084 4003.907) rotate(-10.5)" class="oneqode"><tspan x="-99.309" y="0">Gaming Optimised Routing</tspan></text>
+										<text transform="translate(464.273 4026.101) rotate(-10.5)" class="oneqode"><tspan x="-34.111" y="1">OneQode</tspan></text>
+										<text transform="matrix(0.588, -0.809, 0.809, 0.588, 428.364, 3908.154)" class="telco"><tspan x="-44.485" y="1">Competitor</tspan></text>
+										<text transform="matrix(0.588, -0.809, 0.809, 0.588, 407.867, 3895.144)" class="telco"><tspan x="-93.037" y="0">Standard Telco Routing</tspan></text>
+									</g>
+									<g class="endpoint">
+										<text transform="translate(312 4087)" fill="#fff"><tspan x="-42" y="0">Server</tspan></text>
+										<text transform="translate(1606 4087)" fill="#fff"><tspan x="-28" y="0">User</tspan></text>
+									</g>
+									<g class="node-label">
+										<text transform="translate(601 4019)" class="oneqode"><tspan x="-38.416" y="0">OneQode</tspan></text>
+										<text transform="translate(1317 4075)" class="oneqode"><tspan x="-38.416" y="0">OneQode</tspan></text>
+										<text transform="translate(507 3745)" class="telco"><tspan x="-26.024" y="0">Telco 1</tspan></text>
+										<text transform="translate(883 3815)" class="telco"><tspan x="-27.912" y="0">Telco 2</tspan></text>
+										<text transform="translate(1011 4128)" class="telco"><tspan x="-28.176" y="0">Telco 3</tspan></text>
+										<text transform="translate(1375 4342)" class="telco"><tspan x="-28.6" y="0">Telco 4</tspan></text>
+									</g>
+								</g>
+							</svg>
+							<figcaption>Optimised routing: shortest distance and fewest hops</figcaption>
+						</figure>
+					</div>
+				</div>
+				<div class="row mt-2">
+					<div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-2">
+						<p>Most providers use ‘least-cost routing’, sending traffic where it’s cheapest, but not fastest.</p>
+						<p>You won’t even experience the savings — it’s their margin.</p>
+					</div>
+					<div class="col-xs-10 col-xs-offset-1 col-md-4">
+						<p>Instead, we use shortest path routing, which sends traffic via the most direct path to the user.</p>
+						<p>This maximises performance, eliminating hops and lag.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-8 mobile-text-center">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-xs-12 col-md-6 col-md-offset-3">
+						<h2 class="mb-0">Engineered for speed<mark class="dot">.</mark></h2>
+						<p class="subheading faded">Cutting-edge network architecture</p>
+						<p>From the switches we use to the cables we operate, every part of our network eliminates lag.</p>
+					</div>
+				</div>
+				<div class="row icons mt-4">
+					<div class="col-xs col-md-5 col-md-offset-1 my-1 p-2">
+						<div class="icon switch"></div>
+						<h3>Fastest switches</h3>
+						<p class="faded">Our network is powered by Arista switches — the fastest in the world. We’ve fine-tuned them to further improve performance.</p>
+					</div>
+					<div class="col-xs col-md-5 my-1 p-2">
+						<div class="icon paths"></div>
+						<h3>Shortest paths</h3>
+						<p class="faded">We use the shortest submarine cable routes across Asia-Pacific, giving your traffic access to the lowest latency fibre optic assets in the region.</p>
+					</div>
+				</div>
+				<div class="row icons mt-2">
+					<div class="col-xs col-md-5 col-md-offset-1 my-1 p-2">
+						<div class="icon transit"></div>
+						<h3>Premium transit</h3>
+						<p class="faded">We use premium IP Transit as a path of last resort to ensure we achieve low latency to locations where we don’t have direct connectivity.</p>
+					</div>
+					<div class="col-xs col-md-5 my-1 p-2">
+						<div class="icon last-mile"></div>
+						<h3>Direct last-mile links</h3>
+						<p class="faded">We have private fast lanes to the major last-mile ISPs in Asia. This superior interconnection improves fault-tolerance and user experience.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="interconnection-partners">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 logo-grid">
+						<div><img src="/img/partners/aapt.svg" alt="AAPT"></div>
+						<div><img src="/img/partners/ams-ix.svg" alt="Amsterdam Internet Exchange"></div>
+						<div><img src="/img/partners/any2exchange.png" alt="Any2 Exchange"></div>
+						<div><img src="/img/partners/att.svg" alt="ATT"></div>
+						<div><img src="/img/partners/bbix.png" alt="BBIX"></div>
+						<div><img src="/img/partners/cmi.png" alt="Chnia Mobile International"></div>
+						<div><img src="/img/partners/china-telecom.png" alt="China Telecom"></div>
+						<div><img src="/img/partners/edgeix.png" alt="EdgeIX"></div>
+						<div><img src="/img/partners/hkix.svg" alt="Hong Kong Internet Exchange"></div>
+						<div><img src="/img/partners/iaa-internet-association-of-australia.svg" alt="Internet Association of Australia"></div>
+						<div><img src="/img/partners/ite-guam.svg" alt="IT&E Guam" class="w80"></div>
+						<div><img src="/img/partners/jpix.png" alt="Japan Internet Exchange Co"></div>
+						<div><img src="/img/partners/jpnap.svg" alt="JPNAP"></div>
+						<div><img src="/img/partners/lbnco.png" alt="LBNCO"></div>
+						<div><img src="/img/partners/megaport.svg" alt="Megaport"></div>
+						<div><img src="/img/partners/ntt.svg" alt="NTT"></div>
+						<div><img src="/img/partners/ntt-docomo.svg" alt="NTT"></div>
+						<div><img src="/img/partners/optus.svg" alt="Optus"></div>
+						<div><img src="/img/partners/spectrum.svg" alt="Spectrum"></div>
+						<div><img src="/img/partners/sgix-singapore-internet-exchange.png" alt="SGIX - Singapore Internet Exchange"></div>
+						<div><img src="/img/partners/telia.svg" alt="Telia"></div>
+						<div><img src="/img/partners/telstra-mono.svg" alt="Telstra" class="w50"></div>
+						<div><img src="/img/partners/tencent.svg" alt="Tencent"></div>
+						<div><img src="/img/partners/tpg.svg" alt="TPG"></div>
+						<div><img src="/img/partners/voxility.png" alt="Voxility"></div>
+					</div>
+					<div class="col-xs-12">
+						<figcaption>Some of our direct interconnection partners</figcaption>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="ddos-protection" class="mt-8">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<h2>Premium DDoS protection<mark class="dot">.</mark></h2>
+						<p class="subheading faded">Uninterrupted, network-wide DDoS protection</p>
+					</div>
+					<div class="col-xs-12 col-md-6 col-md-offset-3">
+						<p>By neutralising attacks at the edge, we keep users online without compromising on latency, cost, or performance.</p>
+					</div>
+				</div>
+				<div class="row mt-4 text-center">
+					<div class="col-xs-12">
+						<figure>
+							<svg id="ddos" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1088 269">
+								<defs>
+									<linearGradient id="a" x1=".991" y1=".5" x2="0" y2=".5" gradientUnits="objectBoundingBox">
+										<stop offset="0" />
+										<stop offset="1" stop-opacity="0" />
+									</linearGradient>
+									<linearGradient id="b" x1=".024" x2="1" xlink:href="#a" />
+								</defs>
+								<g class="legitimate">
+									<path d="M544 131.359l218.352 110.352h325.4" />
+									<path d="M543.75 131.189h543.75" />
+									<path d="M543.75 131.19L762.303 20.736h325.7" />
+									<path d="M.991 146H475.34l68.626-14.641" />
+								</g>
+								<path class="illegitimate" d="M.991 121h494.75" />
+								<path transform="translate(762)" fill="url(#a)" d="M0 0h326v262H0z" />
+								<text transform="translate(544 233)" fill="#fff" font-size="26">
+									<tspan x="-54.938" y="0">Network</tspan>
+									<tspan x="-33.722" y="27">edge</tspan>
+								</text>
+								<text transform="translate(594.75 15.5)" class="item-label blue-fill">
+									<tspan x="0" y="0">DDOS</tspan>
+									<tspan x="0" y="13">APPLIANCE</tspan>
+								</text>
+								<g stroke-width="2" class="blue-stroke">
+									<g transform="translate(490.25 78)" fill="none" stroke-dasharray="2">
+										<circle cx="53" cy="53" r="53" stroke="none" />
+										<circle cx="53" cy="53" r="52" />
+									</g>
+									<g transform="translate(531.25 119)">
+										<circle cx="12" cy="12" r="12" stroke="none" />
+										<circle cx="12" cy="12" r="11" />
+									</g>
+								</g>
+								<text transform="translate(594.75 65.25)" class="item-label blue-fill">
+									<tspan x="0" y="0">ROUTER</tspan>
+								</text>
+								<path fill="none" class="blue-stroke" d="M590.75 60.5l-41 61" />
+								<path fill="none" class="blue-stroke" d="M590.75 17l-41 61" />
+								<text transform="translate(1003 129)" fill="#999" font-size="20">
+									<tspan x="0" y="0">Internal</tspan>
+									<tspan x="0" y="18">services</tspan>
+								</text>
+								<path transform="translate(1)" fill="url(#b)" d="M0 0h390v262H0z" />
+								<text transform="translate(0 129)" fill="#999" font-size="20">
+									<tspan x="0" y="0">Outside</tspan>
+									<tspan x="0" y="18">network</tspan>
+								</text>
+								<text transform="translate(279 173)" fill="#7fd400" class="item-label">
+									<tspan x="-68.019" y="0">LEGITIMATE TRAFFIC</tspan>
+								</text>
+								<text transform="translate(260 104)" fill="#9b0000" class="item-label">
+									<tspan x="-49.161" y="0">DDOS TRAFFIC</tspan>
+								</text>
+							</svg>
+							<figcaption>Edge DDoS appliances prevent attacks from affecting the network</figcaption>
+						</figure>
+					</div>
+				</div>
+				<div class="row mb-8">
+					<div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-1 mt-8 pt-2">
+						<h3>Block attacks at the edge</h3>
+						<p>Each entrance to our network is lined with <strong>always on</strong>, high throughput DDoS mitigation appliances.</p>
+						<p>Malicious traffic is scrubbed and filtered in real time, keeping the network free of disruption.</p>
+						<h3 class="mt-8">Zero impact, zero cost</h3>
+						<p>Users won’t notice attacks, because our architecture keeps them shielded by design.</p>
+						<p>And this is included at <strong>no charge</strong> to OneQode customers, so you’ll never experience DDoS bill shock. Ever.</p>
+					</div>
+					<div class="col-xs-12 col-md-4 col-md-offset-2 mt-8 p-2" id="compare">
+						<h4>How other networks deploy DDoS protection:</h4>
+						<p>Most networks don’t have always-on network-wide protection and respond to attacks in one of two ways:</p>
+						<p><strong>❌ Blackhole routing</strong></p>
+						<p>Dropping all traffic (however legitimate) during an attack. All users lose connectivity.</p>
+						<p><strong>❌ Scrubbing facility redirection</strong></p>
+						<p>Diverting all traffic to separate scrubbing locations, negatively impacting latency and experience.</p>
+						<p>These methods are cheaper to deploy, but users suffer — and you’ll get angry tweets.</p>
+						<p class="mb-0">The real kicker? You’ll often have to <strong>pay per megabyte</strong> whenever you get attacked. Seriously.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-4">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-10 col-xs-offset-1 col-md-5 col-md-offset-1">
+						<h3 class="faded mb-1">Traffic management</h3>
+						<h3>Optimise user routes</h3>
+					</div>
+					<div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-1">
+						<p class="mt-0">Having specific users with latency issues? We can fine-tune that, too.</p>
+						<p>As a carrier, we can apply custom traffic management policies at the network level in real-time.</p>
+						<p>This prompts the users network to direct data via a specific route, optimising the journey for latency.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div id="services" class="py-8">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-xs-12"><h2>Go faster with OneQode<mark class="dot">.</mark></h2></div>
+				</div>
+				<div class="row mt-4 icons mobile-flex">
+					<div class="col-xs-6 col-md-4 mb-2 mt-1">
+						<a href="/cloud/" class="box glowing">
+							<img class="mt-2" src="/img/ico/cloud.svg" alt="">
+							<h2 class="mt-2">Cloud Platform</h2>
+							<p class="hide-mobile">The high performance cloud</p>
+						</a>
+					</div>
+					<div class="col-xs-6 col-md-4 mb-2 mt-1">
+						<a href="/dedicated-servers/" class="box glowing">
+							<img class="mt-2" src="/img/ico/server.svg" alt="">
+							<h2 class="mt-2">Dedicated Servers</h2>
+							<p class="hide-mobile">Compute, storage and colocation</p>
+						</a>
+					</div>
+					<div class="col-xs-6 col-md-4 mb-2 mt-1">
+						<a href="/ip-transit/" class="box glowing">
+							<img class="mt-2" src="/img/ico/connection2.svg" alt="">
+							<h2 class="mt-2">IP Transit</h2>
+							<p class="hide-mobile">Internet access for enterprise</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<section class="pb-8 black-to-footer">
+			<div class="container">
+				<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
+					<h2>Start a conversation today<mark class="dot">.</mark></h2>
+					<p class="subheading">Get in touch with our team to discuss your toughest infrastructure challenges.</p>
+					<p><a href="/contact/" class="button ghost mt-2">Contact Us</a></p>
+				</div>
+			</div>
+		</section>

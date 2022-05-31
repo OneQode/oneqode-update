@@ -1,0 +1,353 @@
+---
+metaTitle: Solutions for Game Studios, Developer & Publishers • OneQode™
+metaDescription: Blazing-fast game server hosting and network infrastructure for game developers and publishers. Built by gamers, for the game industry.
+changefreq: monthly
+priority: 0.5
+ogImage: esports-services.jpg
+pageSupertitle: Studios & Publishers
+pageTitle: Supercharge your games
+pageSubtitle: With Asia-Pacific’s high performance <br class="responsive"> game infrastructure provider
+slider: true
+---
+{% include _header.liquid %}
+		<style>
+			section.hero {
+				min-height: 85vh;
+			}
+			.no-webp .hero {
+				background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/gamers-celebrating-win.jpg") no-repeat center center;
+				background-size: cover;
+			}
+			.webp .hero {
+				background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/gamers-celebrating-win.webp") no-repeat center center;
+				background-size: cover;
+			}
+			/* Swiper */
+			:root {
+				--swiper-theme-color: #00b0f0;
+				--swiper-pagination-bullet-inactive-color: #999;
+			}
+			.swiper {
+				width: 100%;
+				height: 100%;
+				padding-top: 1rem;
+				padding-bottom: 1rem;
+			}
+			.swiper-slide {
+				text-align: center;
+				transition: opacity 0.2s;
+				background: #17181C;
+				border-radius: 15px;
+				padding: 4rem;
+			}
+			.swiper-slide:not(.swiper-slide-active) {
+				opacity: 0.4;
+			}
+			@media screen and (max-width: 64em) {
+				.swiper-slide {
+					padding: 2rem 1rem;
+					background: #333;
+				}
+			}
+			/* Icons */
+			.icon.play-fast {
+				mask: url(/img/ico/play-fast.svg) no-repeat center;
+				-webkit-mask: url(/img/ico/play-fast.svg) no-repeat center;
+			}
+			.icon.guam {
+				mask: url(/img/ico/guam.svg) no-repeat center;
+				-webkit-mask: url(/img/ico/guam.svg) no-repeat center;
+			}
+			.icon.network {
+				mask: url(/img/ico/connection2.svg) no-repeat center;
+				-webkit-mask: url(/img/ico/connection2.svg) no-repeat center;
+			}
+			.icon.shield {
+				mask: url(/img/ico/ddos.svg) no-repeat center;
+				-webkit-mask: url(/img/ico/ddos.svg) no-repeat center;
+			}
+			/* Org Type Selector */
+			select#organisation-type {
+				display: inline;
+				width: auto;
+			}
+		</style>
+		<section class="hero">
+			<div class="container">
+				<div class="row middle-xs">
+					<div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
+						{%- if pageSupertitle %}
+						<p class="superheading">{{ pageSupertitle }}</p>
+						{%- endif %}
+						<h1>{{ pageTitle }}<mark class="dot">.</mark></h1>
+						<p class="subheading">{{ pageSubtitle }}</p>
+						<p><a href="/contact/game-industry/" class="m-1 button">Set up a chat</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="text-center pb-8">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<h2>The fastest platform<br class="responsive"> to run your games on<mark class="dot">.</mark></h2>
+						<p class="subheading faded">Built for the game industry from the ground up</p>
+					</div>
+					<div class="col-xs-12 col-md-6 col-md-offset-3">
+						<p>We asked “what would be the best platform for game developers to host their games on?”</p>
+						<p>And then we built it.</p>
+					</div>
+					<div class="col-xs-12 col-md-6 col-md-offset-3 mt-8">
+						<h3>Here you can:</h3>
+						<ul class="ticks">
+							<li>Reach more players in the Asia-Pacific region</li>
+							<li>Get faster CPUs and lower latency</li>
+							<li>Deliver immersive gaming experiences</li>
+							<li>Fit more players on every server</li>
+							<li>Launch next-gen, compute-intensive games</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="text-center mt-8">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<h2>Game hosting that gives your players the red carpet treatment<mark class="dot">.</mark></h2>
+						<p class="subheading faded">We’ll make your infrastructure a talking point for all the right reasons</p>
+					</div>
+				</div>
+			</div>
+			<div class="swiper benefits mt-2 mb-8">
+				<div class="swiper-wrapper">
+					<!-- Start Servers slide -->
+					<div class="swiper-slide col-xs-10 col-md-8 col-lg-6">
+						<div class="icon play-fast"></div>
+						<p class="superheading">Blazing fast game servers</p>
+						<h3 class="mb-0 mt-2">Powerful servers for immersive gaming</h3>
+						<p class="subheading faded">Built with the world’s fastest CPUs</p>
+						<div class="col-xs-12 col-md-8 col-md-offset-2">
+							<p class="mt-2">Let players experience your games the way you meant them to be played. All CPUs run at <span class="nowrap">3.7 GHz</span>+ for smooth, high tickrate gaming.</p>
+						</div>
+						<p class="mt-2"><a href="/cloud/" class="chevron m-1">Cloud platform</a> <br class="mobile-only"><a href="/dedicated-servers/" class="chevron m-1">Dedicated servers</a></p>
+					</div>
+					<!-- End Servers slide -->
+					<!-- Start Network slide -->
+					<div class="swiper-slide col-xs-10 col-md-8 col-lg-6">
+						<div class="icon network"></div>
+						<p class="superheading">Latency-optimised network</p>
+						<h3 class="mb-0 mt-2">Lightning-fast gaming connectivity</h3>
+						<p class="subheading faded">An unmatched, low-latency carrier network</p>
+						<div class="col-xs-12 col-md-8 col-md-offset-2">
+							<p class="mt-2">Your game traffic will take the most direct path to players across a carrier network built for latency, reach and speed.</p>
+						</div>
+						<p class="mt-2"><a href="/network/" class="chevron m-1">Gaming network</a></p>
+					</div>
+					<!-- End Network slide -->
+					<!-- Start APAC Central slide -->
+					<div class="swiper-slide col-xs-10 col-md-8 col-lg-6">
+						<div class="icon guam"></div>
+						<p class="superheading">APAC Central</p>
+						<h3 class="mb-0 mt-2">Unlock groundbreaking cross-regional play</h3>
+						<p class="subheading faded">With Asia-Pacific’s first central gaming hub</p>
+						<div class="col-xs-12 col-md-8 col-md-offset-2">
+							<p class="mt-2">Connect millions of players across the region on a level playing field — whether they’re from Melbourne or Mongolia.</p>
+						</div>
+						<p class="mt-2"><a href="/guam/" class="chevron m-1">APAC Central</a></p>
+					</div>
+					<!-- End APAC Central slide -->
+					<!-- Start DDoS Protection slide -->
+					<div class="swiper-slide col-xs-10 col-md-8 col-lg-6">
+						<div class="icon shield"></div>
+						<p class="superheading">DDoS Protection</p>
+						<h3 class="mb-0 mt-2">Always-on DDoS mitigation</h3>
+						<p class="subheading faded">Keep your players in game, uninterrupted</p>
+						<div class="col-xs-12 col-md-8 col-md-offset-2">
+							<p class="mt-2">Included free of charge, our DDoS appliances keep the network safe — with no impact on latency or performance.</p>
+						</div>
+						<p class="mt-2"><a href="/network/#ddos-protection" class="chevron m-1">DDoS protection</a></p>
+					</div>
+					<!-- End DDoS Protection slide -->
+				</div>
+				<div class="container">
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</section>
+		<section class="text-center my-8">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<h2>Good for players, good for you, good for business<mark class="dot">.</mark></h2>
+						<p class="subheading faded">We help you reach more gamers, deliver incredible experiences, and get more value for money</p>
+					</div>
+					<div class="col-xs-12 col-md-6 col-md-offset-3 mt-4">
+						<p class="subheading">Benefits for: &nbsp;
+							<select id="organisation-type" onchange="orgType()">
+								<option value="studio-benefits">Studios</option>
+								<option value="publisher-benefits">Publishers</option>
+								<option value="player-benefits">Players</option>
+							</select>
+						</p>
+					</div>
+				</div>
+				<!-- Studio -->
+				<div class="row mt-1 interactive" id="studio-benefits">
+					<div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 mb-2">
+						<p>You’ve spent countless hours building your game. Balancing every weapon and strategy. Our infrastructure is easy to integrate and delivers a great experience too.</p>
+					</div>
+					<div class="col-xs-12 col-sm-4 p-1 mb-2">
+						<h3>Further reach</h3>
+						<p class="faded">Leave no player behind with latency-optimised connectivity throughout the Asia-Pacific region.</p>
+					</div>
+					<div class="col-xs-12 col-sm-4 p-1 mb-2">
+						<h3>Shorter queues</h3>
+						<p class="faded">APAC Central provides a consolidated server region that cuts matchmaking and queue times.</p>
+					</div>
+					<div class="col-xs-12 col-sm-4 p-1 mb-2">
+						<h3>Easy integration</h3>
+						<p class="faded">Plug our high performance cloud into your existing workflow via a simple API built on open standards.</p>
+					</div>
+					<div class="col-xs-12 col-sm-4 p-1 mb-2">
+						<h3>Better<br class="responsive"> experience</h3>
+						<p class="faded">Latency-optimised high tickrate servers give gamers the best possible experience.</p>
+					</div>
+					<div class="col-xs-12 col-sm-4 p-1 mb-2">
+						<h3>Hassle-free<br class="responsive"> support</h3>
+						<!-- <p class="faded">Getting tech support shouldn’t feel like herding cats.</p> -->
+						<p class="faded">Expect a support team that understand the tech, speak your language, and get things moving.</p>
+					</div>
+					<div class="col-xs-12 col-sm-4 p-1 mb-2">
+						<h3>Get more from your<br class="responsive"> cloud resources</h3>
+						<p class="faded">Build more computationally-intensive games, or fit more players on every server.</p>
+					</div>
+				</div>
+				<!-- Publisher -->
+				<div class="row mt-1 interactive" id="publisher-benefits" style="display: none;">
+					<div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 mb-2">
+						<p>Having a great player experience is just the beginning. We help you reach a wider audience whilst reducing your overall infrastructure spend.</p>
+					</div>
+					<div class="col-xs-12 col-sm-4 p-1 mb-2">
+						<h3>Reach the world’s largest gaming region</h3>
+						<p class="faded">Our latency-optimised network spans three continents, with private fast lanes to regional internet providers.</p>
+					</div>
+					<div class="col-xs-12 col-sm-4 p-1 mb-2">
+						<h3>Unlock revenue potential</h3>
+						<p class="faded">Unparalleled access to hard-to-reach players across the Asia-Pacific provides new growth opportunities.</p>
+					</div>
+					<div class="col-xs-12 col-sm-4 p-1 mb-2">
+						<h3>Reduce player<br class="responsive"> churn</h3>
+						<p class="faded">A larger pool of accessible players means players spend less time waiting for matches, and more time playing in-game.</p>
+					</div>
+					<div class="row place-content-center">
+						<div class="col-xs-12 col-sm-4 p-1 mb-2">
+							<h3>Optimise costs</h3>
+							<p class="faded">High performance servers fit more players on every server. Pair that with sensible data pricing, and you’ll reduce overall infrastructure costs.</p>
+						</div>
+						<div class="col-xs-12 col-sm-4 p-1 mb-2">
+							<h3>Keep older games alive</h3>
+							<p class="faded">APAC Central servers are ideal for older games in your portfolio. Fewer servers can span the region, maintaining community strength.</p>
+						</div>
+					</div>
+				</div>
+				<!-- Player -->
+				<div class="row mt-1 interactive" id="player-benefits" style="display: none;">
+					<div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 mb-2">
+						<p>With hundreds of games competing for attention — and more launching every day, we give games every reason to stand out from the crowd.</p>
+					</div>
+					<div class="col-xs-12 col-sm-4 p-1 mb-2">
+						<h3>More immersion</h3>
+						<p class="faded">Players experience your games at the highest fidelity, the way its meant to be played — thanks to lightning-fast servers and snappy connectivity.</p>
+					</div>
+					<div class="col-xs-12 col-sm-4 p-1 mb-2">
+						<h3>Wider player pool</h3>
+						<p class="faded">Nothing is more frustrating than booting up a game, and finding no-one to play against. APAC Central connects 3 continents — for better matchmaking.</p>
+					</div>
+					<div class="col-xs-12 col-sm-4 p-1 mb-2">
+						<h3>Better competition</h3>
+						<p class="faded">A bigger player pool connects players to more (and better) competitors, allowing strategies from across the world to collide in new, unexpected ways.</p>
+					</div>
+					<div class="col-xs-12 col-sm-4 p-1 mb-2">
+						<h3>Less waiting</h3>
+						<p class="faded">A larger accessible player pool means less time hanging around in the menus, faster matchmaking, shorter queue times, and more time having fun.</p>
+						<p class="faded"></p>
+					</div>
+					<div class="col-xs-12 col-sm-4 p-1 mb-2">
+						<h3>No hiccups</h3>
+						<p class="faded">Our entire network is DDoS protected as standard. No ifs, no buts, and no extra charges. We ensure a smooth game, so players can focus on improving theirs.</p>
+					</div>
+					<div class="col-xs-12 col-sm-4 p-1 mb-2">
+						<h3>Fewer complaints</h3>
+						<p class="faded">Faster servers, further reach and better lower latency. We’ve built infrastructure so good, nobody talks about it.</p>
+					</div>
+				</div>
+		</section>
+		<section class="black-to-footer pb-8" id="contact">
+			<div class="container">
+				<div class="row middle-md">
+					<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
+						<h2>We should talk<mark class="dot">.</mark></h2>
+						<p class="subheading faded">You build games that bring joy to people around the world. We want to be part of that</p>
+						<p class="mt-2"><a href="/contact/game-industry/" class="button m-1 ml-0">Set up a chat</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script>
+			// The Swiper / Slider
+			var swiper = new Swiper(".benefits", {
+				effect: "coverflow",
+				grabCursor: true,
+				slidesPerView: "auto",
+				centeredSlides: true,
+				centeredSlidesBounds: true,
+				coverflowEffect: {
+					rotate: 50,
+					stretch: 0,
+					depth: 100,
+					modifier: 0.8,
+					slideShadows: true,
+				},
+				loop: true,
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+				keyboard: {
+					enabled: true,
+				},
+			});
+			// Organisation Type Switcher
+			function orgType() {
+				select = document.getElementById("organisation-type").value;
+				// Select all interactive bits and hide them
+				function hideStuff() {
+					const interactive = Array.from(document.getElementsByClassName("interactive"));
+						interactive.forEach(item => {
+							item.style.display = "none";
+						});
+				}
+				switch(select) {
+					case "player-benefits":
+						hideStuff();
+						document.getElementById("player-benefits").style.display = "flex";
+						break;
+					case "studio-benefits":
+						hideStuff();
+						document.getElementById("studio-benefits").style.display = "flex";
+						break;
+					case "publisher-benefits":
+						hideStuff();
+						document.getElementById("publisher-benefits").style.display = "flex";
+						break;
+				}
+			}
+		</script>
+{% include _footer.liquid %}

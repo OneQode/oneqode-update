@@ -2,7 +2,7 @@
 ogImage: og-image.jpg
 ---
 {% include _header.liquid %}
-		<section class="hero">
+		<section class="hero{%- if heroSmall %} condensed{%- endif %}">
 			<div class="container">
 				<div class="row middle-xs">
 					<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
@@ -11,6 +11,9 @@ ogImage: og-image.jpg
 						{%- endif %}
 						<h1>{{ pageTitle }}<mark class="dot">.</mark></h1>
 						<p class="subheading">{{ pageSubtitle }}</p>
+						{%- if cta %}
+						<p><a href="{{ ctaUrl }}" class="m-1 button">{{ ctaText }}</a></p>
+						{%- endif %}
 					</div>
 				</div>
 			</div>

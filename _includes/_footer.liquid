@@ -2,89 +2,56 @@
 	<footer>
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12 col-sm-3 col-md-3 py-1 pb-2 mobile-text-center">
-					<a class="logomark" href="/" title="OneQode • Australia’s 21st Century Telecommunications Provider">
+				<div class="col-xs-12 col-sm-4 col-md-3 py-1 pb-2 mobile-text-center">
+					<a class="logomark" href="/" title="Go to the OneQode homepage">
 						<img src="/img/symbol.svg" alt="OneQode Logomark/Symbol">
 					</a>
 				</div>
-				<div class="col-xs-6 col-sm-3 col-md-3 py-1">
-					<p>Who we help</p>
+				<div class="col-xs-6 col-sm-4 col-md-3 py-1">
+					<p>Our Platform</p>
 					<ul>
-						<li><a href="/" aria-label="OneQode for Gaming" title="Services for Game Developers, Publishers and Server Providers">Game Industry</a></li>
-						<li><a href="/business/" aria-label="OneQode for Business" title="Business internet and connectivity">Businesses</a></li>
-						<li><a href="/wholesale/" aria-label="OneQode for Wholesale" title="Wholesale internet solutions">Network Operators</a></li>
+						<li><a href="/cloud/">High Performance Cloud</a></li>
+						<li><a href="/dedicated-servers/">Dedicated Servers</a></li>
+						<li><a href="/network/">International Network</a></li>
+						<li><a href="/guam/">APAC Central</a></li>
 					</ul>
 				</div>
-				<div class="col-xs-6 col-sm-3 col-md-3 py-1">
+				<div class="col-xs-6 col-sm-4 col-md-3 py-1">
+					<p>Enterprise Services</p>
+					<ul>
+						<li><a href="/ip-transit/">IP Transit</a></li>
+						<li><a href="/backhaul/">Backhaul</a></li>
+						<li><a href="/ethernet/">Ethernet</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-sm-offset-4 col-md-3 col-md-offset-0 py-1">
+					<p>Who we help</p>
+					<ul>
+						<li><a href="/for/business-enterprise/">Business & Enterprise</a></li>
+						<li><a href="/for/game-industry/">Game Industry</a></li>
+						<li><a href="/for/esports/">Esports</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-3 col-md-offset-3 py-1">
 					<p>Help & Support</p>
 					<ul>
-						<li><a href="
-							{%- case section -%}
-								{%- when "home" -%}
-									{{ global.login.business }}
-								{%- when "business" -%}
-									{{ global.login.business }}
-								{%- when "wholesale" -%}
-									{{ global.login.wholesale }}
-								{%- else -%}
-									{{ global.login.business }}
-							{%- endcase -%}
-							" title="
-							{%- case section -%}
-								{%- when "home" -%}
-									Get help and assistance with your OneQode services
-								{%- when "business" -%}
-									Get help and assistance with your OneQode for Business Services
-								{%- when "wholesale" -%}
-									Get help and assistance with your OneQode for Wholesale Services
-								{%- else -%}
-									Get help and assistance with your OneQode services
-							{%- endcase -%}
-							" target="_blank" rel="noopener">
-								{%- case section -%}
-									{%- when "home" -%}
-										Get support
-									{%- when "business" -%}
-										Business support
-									{%- when "wholesale" -%}
-										Wholesale support
-									{%- else -%}
-										Get support
-								{%- endcase -%}
-							</a></li>
-						<li><a href="
-								{%- case section -%}
-									{%- when "home" -%}
-										/contact/
-									{%- when "business" -%}
-										/business/contact/
-									{%- when "wholesale" -%}
-										/wholesale/contact/
-									{%- else -%}
-										/contact/
-								{%- endcase -%}
-							" title="
-								{%- case section -%}
-									{%- when "home" -%}
-										Reach out directly to the OneQode team
-									{%- when "business" -%}
-										Contact the OneQode business team
-									{%- when "wholesale" -%}
-										Contact the OneQode wholesale team
-									{%- else -%}
-										Reach out directly to the OneQode team
-								{%- endcase -%}
-								">Contact us</a></li>
+						<li><a href="/contact/" title="Reach out directly to the OneQode team">Contact us</a></li>
+						<li><a href="{{ global.support }}" title="Get help and assistance with your OneQode services" target="_blank" class="external">Get support</a></li>
+						<li><a href="https://docs.oneqode.com/" target="_blank" title="OneQode Documentation" class="external">Documentation</a></li>
 						<li><a href="/legal/" title="OneQode Terms & Policies">Terms & Policies</a></li>
 					</ul>
 				</div>
-				<div class="col-xs-6 col-sm-3 col-md-3 py-1">
+				<div class="col-xs-6 col-sm-4 col-sm-offset-4 col-md-3 col-md-offset-0 py-1">
 					<p>Company</p>
 					<ul>
 						<li><a href="/about/" title="Learn more about what we do">About OneQode</a></li>
+						<li><a href="/content/" title="The Qode • OneQode’s Blog">The Qode blog</a></li>
 						<li><a href="/careers/" title="See our current vacancies">Careers</a></li>
-						<li><a href="/media/" title="Read our latest updates, and get access to press resources">Media Newsroom</a></li>
+						<li><a href="/media/" title="Read our latest updates, and get access to press resources"> Newsroom</a></li>
 					</ul>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-3 py-1">
+					<!-- Content -->
 				</div>
 			</div>
 			<div class="row">

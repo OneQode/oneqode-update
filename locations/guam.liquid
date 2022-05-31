@@ -1,0 +1,480 @@
+---
+permalink: /guam/
+layout: page.liquid
+metaTitle: APAC Central (Guam)&#58; Asia-Pacific’s Central Server Region
+metaDescription: OneQode™ has built Asia-Pacific’s newest server region in Guam, a central location providing complete reach across the entire region.
+changefreq: monthly
+priority: 0.8
+ogImage: guam.jpg
+pageSupertitle: APAC Central
+pageTitle: Asia-Pacific’s central server region
+pageSubtitle: Complete reach across the world’s<br class="responsive"> largest region of gamers
+---
+{%- comment %}
+<!-- 
+	!TODO:
+	- Links to industry pages?
+	- Non-gaming focus?
+-->
+{%- endcomment %}
+		<!-- Page-Specific Styles -->
+		<style>
+			.hero {
+				background-size: cover !important;
+				background-position: bottom center;
+			}
+			/* Regular Background Image */
+			.no-webp .hero {
+				background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/guam-header.jpg") 60%;
+			}
+			.webp .hero {
+				background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/guam-header.webp") 60%;
+			}
+			/* SVG Styles */
+			#cable-map {
+				position: relative;
+				z-index: 1;
+				width: 100%;
+				overflow: hidden;
+				/*margin: -4rem 0 -16rem 0;*/
+				margin:  0 0 -10rem 0;
+			}
+			#cable-map::after {
+				content: "";
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				background: radial-gradient(closest-side, transparent 60%, #000);
+				top: 0;
+				left: 0;
+				z-index: 2;
+			}			
+			#cable-map picture {
+				display: none;
+			}
+			.cable {
+				fill-rule: evenodd;
+				clip-rule: evenodd;
+				fill: none;
+				stroke: #00B0F0;
+				stroke-width: 4;
+				stroke-dasharray: 15;
+				stroke-dashoffset: 510;
+				animation: lines 2s linear infinite;
+			}
+			@keyframes lines {
+				100% {
+					stroke-dashoffset: 0;
+				}
+			}
+			#guam-island {
+				fill-rule: evenodd;
+				clip-rule: evenodd;
+				fill: #004B66;
+				stroke: #00B0F0;
+			}
+			.connected-country {
+				font-size: 40px;
+				fill: #fff;
+			}
+			.latency-to-guam {
+				font-family: "Work Sans", sans-serif;
+				font-weight: 400;
+				font-size: 30px;
+				fill: #4F94CC;
+			}
+			/* Statistics */
+			#stats .col-xs-12 {
+				margin-top: 4rem;
+				margin-bottom: 4rem;
+			}
+			.stat,
+			.unit,
+			.connected-country,
+			.description {
+				font-family: Poppins, sans-serif;
+				font-weight: 600;
+				line-height: 1;
+			}
+			.stat {
+				font-size: 4rem;
+			}
+			.unit {
+				font-size: 2.5rem;
+			}
+			.description {
+				display: block;
+			}
+			.icon.reach {
+				mask: url(/img/ico/population.svg) no-repeat center;
+				-webkit-mask: url(/img/ico/population.svg) no-repeat center;
+			}
+			.icon.money {
+				mask: url(/img/ico/money.svg) no-repeat center;
+				-webkit-mask: url(/img/ico/money.svg) no-repeat center;
+			}
+			.icon.around-the-world {
+				mask: url(/img/ico/around-the-world.svg) no-repeat center;
+				-webkit-mask: url(/img/ico/around-the-world.svg) no-repeat center;
+			}
+			.icon.latency {
+				mask: url(/img/ico/latency.svg) no-repeat center;
+				-webkit-mask: url(/img/ico/latency.svg) no-repeat center;
+			}
+			/* Kotaku Article Quote */
+			.kotaku-quote blockquote p {
+				font-family: "Poppins", sans-serif;
+				font-weight: 600;
+				font-size: 1.5rem;
+				line-height: 1.3;
+			}
+			a.kotaku-logo {
+				display: block;
+				width: min(20rem, 60%);
+				margin: 0 auto;
+				opacity: 0.8;
+			}
+			a.kotaku-logo:hover,
+			a.kotaku-logo:focus {
+				opacity: 1;
+			}
+			/* Related Media */
+			.callout a {
+				display: grid;
+				grid-template-columns: 1fr min-content;
+				grid-gap: 2rem;
+				align-items: center;
+			}
+			.callout h2 {
+				margin-bottom: 1rem;
+			}
+			.callout .tag {
+				margin-bottom: 1rem;
+			}
+			.callout .tag.case-study {
+				color: #fff;
+				background: #00b0f0;
+			}
+			.callout .tag.blog-post {
+				background: #f1c800;
+			}
+			.callout .outlet {
+				margin-top: 0;
+				font-weight: 700;
+				color: #999;
+				line-height: 1;
+			}
+			.callout .details :last-child {
+				margin-bottom: 0;
+			}
+			/* Tablet and above */
+			@media (min-width: 48em) {
+				#stats .col-xs-12 {
+					display: grid;
+					grid-template-columns: 1fr 3fr;
+					grid-gap: 1rem;
+				}
+				.callout a {
+					grid-gap: 8rem;
+				}
+			}
+			/* Mobile-Specific Styles */
+			@media (max-width: 48em) {
+				.icon {
+					margin-bottom: 1rem;
+				}
+				#cable-map {
+					margin: 0;
+				}
+				#cable-map::after {
+					content: none;
+					display: none;
+				}
+				#cable-map svg {
+					display: none;
+				}
+				#cable-map picture {
+					display: block;
+				}
+				.stat {
+				font-size: 3rem;
+				}
+				.unit {
+					font-size: 2rem;
+				}
+				.kotaku-quote blockquote p {
+					font-size: 1.2rem;
+				}
+				.callout a {
+					grid-template-columns: 1fr;
+    				grid-gap: 1rem;
+    				justify-items: center;
+				}
+				.callout .details {
+					text-align: center;
+					flex-direction: column;
+				}
+			}
+		</style>
+		<section class="black pt-8 pb-4">
+			<div class="container push-forward">
+				<div class="row middle-xs text-center">
+					<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
+						<h2>Get total coverage<br class="responsive"> of the Asia-Pacific<mark class="dot">.</mark></h2>
+						<p class="subheading faded">With a level playing field for 1.45 billion gamers</p>
+					</div>
+					<div class="col-xs-12 col-md-6 col-md-offset-3">
+						<p>In a regional first, we built a central server region for APAC on the island of Guam. The neutral location levels the playing field for gamers across Asia Pacific, whether they're in Melbourne or Mongolia.</p>
+					</div>
+				</div>
+			</div>
+			<div id="cable-map">
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 3840 2160" xml:space="preserve">
+					<path class="cable" d="M1752.6,0c14.2,266.6,117,984.3,117,984.3S1827,248.8,1822.4,0" />
+					<path class="cable" d="M3840,473c-742.3,186.7-1684.3,333.3-1822.4,358.7c-138.1,25.3-148,152.6-148,152.6s-1.1-17.6-13.8-19.1
+				C1843.1,963.7,1035.7,601,0,455.2" />
+					<path class="cable" d="M0,728.6C774.1,778,1843.1,963.3,1855.8,965.1c12.7,1.9,13.8,19.1,13.8,19.1" />
+					<path class="cable" d="M1869.6,985c0,0,0.4-16.7-13.8-19.9c-14.2-3.1-65.2-2.1-60.3,49.5c2.9,30,79.2,258.3,114.6,1145.3" />
+					<path id="guam-island" d="M1873.7,1115.4l8.9-8.9c0,0,0-3.5,1.5-4.5s7.5-4.5,7.5-4.5s2.6-2.2,3-4.5 c0.4-2.2,1.3-2.7,4.5-6c3.2-3.3,4.7-11.6,3-11.9c-1.7-0.3-1.5-10.4-1.5-10.4s-1.5-4.3-6-3c-4.5,1.4,8.1-3.5,7.5-6 c-0.6-2.5-1.5-8.9-1.5-8.9s-3.4-1.6-1.5-3c1.9-1.4,3-8.9,3-8.9s-0.4-4.3,3-7.5c3.4-3.2,3-7.5,3-7.5l1.5-3c0,0,2.1-3,0-3 c-2.1,0-1.7-4.3,4.5-6c6.2-1.7,6,1.5,6,1.5l3-4.5c0,0,7-4.3,8.9-6c2-1.7,8.7-9.2,13.4-10.4c4.7-1.3,15.7-19,22.4-16.4 c2,0.4,3-4.5,3-4.5s-3.8-8.7,13.4-10.4c7.5-1,10.4-13.4,10.4-13.4s3.6-6,3-14.9c4.5-7.5,4.6-0.2,8.9-14.9c-0.1,0.9,6.6-6.9-3-6 c-9.5,0.9-22.6,3.9-26.8-8.9c-4.2-8.3-16.5-18.3-19.4-19.4s-5.2-3.1-10.4,3c-1.9,4.2-5.4,9-7.5,10.4c-2.1,1.5-1.2,11,0,14.9 s1.2,5.2-1.5,8.9s-5,5.9-4.5,6s-4.3,5.7-4.5,6c-0.2,0.3-1.8,5.6-4.5,6c-2.7,0.3-0.7,8-6,8.9c-2.4,1.3,0.2,11.1,1.5,11.9 c0.6,1.1-3.6,10.3-8.9,7.5c-5.4-2.8-12.6,3.1-10.4,6c2.2,2.8,1.9,11.4-6,10.4c-7.9-1-3,0-3,0s-3.2-4.2-7.5,0 c-4.3,4.2-6.9-2.3-7.5-1.5c-0.5,0.8-6.2,3.8-7.5,4.5c-1.3,0.7-11-4.2-13.4,3c-0.9,2.4-1.3,3.4-3,1.5c-1.6-1.9-7.8,0-8.9,1.5 c-1.2,1.5-2.8,0.7-3-1.5c-0.6,0-19.4,0-19.4,0s-7.7,6.3-7.5,7.5c1.5,0.5,5.2-3.3,7.5-4.5c2.3-1.2,14.9-2.2,17.9,1.5 c0.4,1.6-3.6,4-3,4.5c0.6,0.5,3.5,0,6-1.5c2.5-1.5,5.1-1.2,6,1.5s-3.2,6.2-4.5,4.5c-1.2-1.7-6.7,2.4-3,4.5c2.2-0.2,4.2,0.8,3,4.5 c-1.2,3.7-4.8,3.9-6,1.5c-1.2-2.4,1.3-10.6-1.5-10.4c-2.8,0.1-10.4,2-14.9,0c-4.5-2-6.5-4.6-8.9-3c-2.5,1.6-0.3,6.5,4.5,7.5 c3.3,1.6,7.1,3.9,6,8.9c-0.2,4.5,4.5,1.5,4.5,1.5s-0.8,3.9,3,3s7.2,7,6,8.9c-1.2,1.9-4.8,7-6,10.4c-1.2,3.4-2.6,15.2-6,17.9 c-3.4,2.7-2.5,5,3,7.5c2.6,4.5,2.9,6.9,3,7.5c0.1,0.6,1.1,2.4,1.5,3c0.4,0.6,0.6,2.7,0,4.5c-0.6,1.8,1.8,4.9,1.5,7.5 c-0.3,2.6,1.4,7.1,3,8.9s0,7.5,0,7.5s8.3,8.7,10.4,8.9c2.1,0.3,8.7-0.1,10.4,3C1859.1,1117,1873.7,1115.4,1873.7,1115.4z" />
+					<text transform="matrix(1 0 0 1 1873 268)">
+						<tspan x="0" y="0" class="connected-country">Russia</tspan>
+						<tspan x="0" y="36" class="latency-to-guam">65 milliseconds</tspan>
+					</text>
+					<text transform="matrix(1 0 0 1 1878 416)">
+						<tspan x="0" y="0" class="connected-country">South Korea</tspan>
+						<tspan x="0" y="36" class="latency-to-guam">60 milliseconds</tspan>
+					</text>
+					<text transform="matrix(1 0 0 1 1884 564)">
+						<tspan x="0" y="0" class="connected-country">Japan </tspan>
+						<tspan x="0" y="36" class="latency-to-guam">40 milliseconds</tspan>
+					</text>
+					<text transform="matrix(1 0 0 1 1960 1060)">
+						<tspan x="0" y="0" class="connected-country">APAC Central (Guam)</tspan>
+					</text>
+					<text transform="matrix(1 0 0 1 2395 841)">
+						<tspan x="0" y="0" class="connected-country">USA </tspan>
+						<tspan x="0" y="36" class="latency-to-guam">118 milliseconds</tspan>
+					</text>
+					<text transform="matrix(1 0 0 1 1899 1499)">
+						<tspan x="0" y="0" class="connected-country">Australia </tspan>
+						<tspan x="0" y="36" class="latency-to-guam">63 milliseconds</tspan>
+					</text>
+					<text transform="matrix(1 0 0 1 833 916)">
+						<tspan x="0" y="0" class="connected-country">Singapore </tspan>
+						<tspan x="0" y="36" class="latency-to-guam">65 milliseconds</tspan>
+					</text>
+					<text transform="matrix(1 0 0 1 1200 983)">
+						<tspan x="0" y="0" class="connected-country">Philippines </tspan>
+						<tspan x="0" y="36" class="latency-to-guam">60 milliseconds</tspan>
+					</text>
+					<text transform="matrix(1 0 0 1 906 553)">
+						<tspan x="0" y="0" class="connected-country">China </tspan>
+						<tspan x="0" y="36" class="latency-to-guam">50 milliseconds</tspan>
+					</text>
+					<text transform="matrix(1 0 0 1 1269 677)">
+						<tspan x="0" y="0" class="connected-country">Hong Kong </tspan>
+						<tspan x="0" y="36" class="latency-to-guam">40 milliseconds</tspan>
+					</text>
+				</svg>
+				<picture>
+					<source srcset="/img/guam-cables-mobile.webp" type="image/webp">
+					<img src="/img/guam-cables-mobile.jpg" alt="A stylised map showing APAC Central (Guam), with subsea cables and latencies to nearby countries">
+				</picture>
+			</div>
+			<div class="container push-forward pb-8">
+				<div class="row text-center">
+					<div class="col-xs-12 mt-4">
+						<p><a class="button" href="https://oneqode.sfo2.digitaloceanspaces.com/maps/global/oneqode-latency-map.pdf" rel="noopener" target="_blank">Latency Map</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="container mobile-text-center" id="stats">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-5 col-md-offset-1">
+						<div class="icon reach"></div>
+						<div class="stat-holder"><span class="stat">55%</span><span class="description">of the world’s gamers</span></div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-5">
+						<div class="icon money"></div>
+						<div class="stat-holder"><span class="stat">48%</span><span class="description">of the world’s gaming revenue</span></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-5 col-md-offset-1">
+						<div class="icon around-the-world"></div>
+						<div class="stat-holder"><span class="stat">3</span> <span class="unit">continents</span><span class="description">from one server region</span></div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-5">
+						<div class="icon latency"></div>
+						<div class="stat-holder"><span class="stat">53</span> <span class="unit">ms</span><span class="description">average latency to APAC Central</span></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-8">
+			<div class="container">
+				<div class="row middle-xs text-center push-forward">
+					<div class="col-xs-12 col-md-8 col-md-offset-2 kotaku-quote">
+						<blockquote cite="https://www.kotaku.com.au/2021/03/a-brisbane-isp-is-building-guam-into-an-online-gaming-hub/">
+							<p>“...could have massive consequences for an enormous chunk of gaming across the Asia-Pacific”</p>
+						</blockquote>
+						<a class="kotaku-logo" href="https://www.kotaku.com.au/2021/03/a-brisbane-isp-is-building-guam-into-an-online-gaming-hub/" target="_blank" rel="noopener">
+							<svg width="100%" height="100%" viewBox="0 0 960 208" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+								<title>Kotaku Australia</title>
+								<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+									<g id="kot-headerlogo-01" fill="#fff">
+										<g id="au" transform="translate(857.714800, 53.465500)" font-family="Helvetica" font-size="73.4217" font-weight="normal">
+											<text id="A">
+												<tspan x="0" y="72">A</tspan>
+											</text>
+											<text id="U">
+												<tspan x="47.7" y="72">U</tspan>
+											</text>
+										</g>
+										<g id="kotaku">
+											<path d="M733.8,60.4 L739.3,135.4 C740.1,146.1 734,155.1 725.5,155.4 L677.9,157.2 C668.8,157.6 660.9,148.6 660.4,137.3 L657,58.2 L680.9,58.9 L684.6,128 L716,127.4 L711.6,59.8 L733.8,60.4 Z M758.8,62 C758,52.2 751,44 743.2,43.7 L736,43.4 L738.6,79.8 L760.2,80.1 L758.8,62 Z M782.6,62.6 C781.7,52.9 774.9,44.9 767.3,44.6 L760.4,44.3 L763.3,80 L784.1,80.3 L782.6,62.6 Z M562.3,55.6 L563,161.7 L572.3,161.3 C582.6,160.9 590.8,150.9 590.6,139.1 L589.3,56.4 L562.3,55.6 M617.8,121.7 L619.2,121.7 L620.8,121.7 L639.3,162.8 C648.2,183 669.8,185.2 673.7,180.1 L638.8,104.6 C635.3,97.9 631,93.6 621.5,93.6 L592.6,93.5 C592.4,112.3 607.8,121.8 617.8,121.7 M607.8,91.3 L646.4,59.9 C657.4,50.3 657.2,33.1 647.8,22.8 L607.9,55.1 C599.3,62.7 599.6,81 607.8,91.3 M535.1,54.8 L490.1,53.5 C468.7,52.9 463.1,71.9 466.5,84.2 L525.3,84.7 L524.9,130.8 L484.4,131.6 L484.6,123.5 L496.5,123.3 C517.8,123 522.9,105.1 519.4,93 L519.3,93 L519.4,93 L475.1,92.8 C463.6,92.8 453.8,102.8 453.4,115.3 L453.3,119.3 L452.5,142.4 C452,155.3 461.4,165.5 473.2,165 L534.7,162.6 C545.5,162.2 554.2,151.9 554.100854,139.8 L553.9,75.8 C553.8,64.5 545.4,55.1 535.1,54.8 M388.7,144.1 C387.9,157.5 397.7,168.1 410.4,167.6 L421.8,167.2 L425.5,88.8 L392,88.6 L388.7,144.1 Z M438.5,84 C460.9,84.2 466.6,65 463.2,52.8 L387.3,50.7 C363.1,50 358.6,70.2 362,83.3 L438.5,84 Z M333.2,49.1 L262,47.1 C234.3,46.3 225,67.9 228.3,82 L318.1,82.9 L313.5,135 L261.7,136 L267,87.7 L227.1,87.4 L219.5,148.3 C217.7,163 228.8,174.6 244.1,174 L323.1,171 C336.9,170.5 348.8,158.8 349.9,145.1 L355.3,73 C356.1,60.1 346.4,49.5 333.2,49.1 M74.5,41.9 L48.5,181.5 L64.8,180.9 C82.8,180.2 99.3,166.8 101.9,151.2 L120.3,43.2 L74.5,41.9 M152.7,128.2 L155.1,128.2 L157.9,128.2 L179.3,181.9 C189.5,208.4 225.4,210.7 233,204 L192.3,106 C187.9,97.3 181.8,91.8 165.9,91.7 L116.9,91.5 C111.7,116 135.8,128.4 152.7,128.2 M143.2,88.6 L215.3,48.3 C235.7,36.2 236.4,14.2 223.2,0.9 L152.1,41.8 C135.7,51.5 131.8,75.3 143.2,88.6 M59.9,80.5 L67,41.7 L42.2,41 C7.6,40 -2,64.2 0.9,79.9 L59.9,80.5 Z"></path>
+										</g>
+									</g>
+								</g>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-8">
+			<div class="container">
+				<div class="row middle-xs text-center push-forward">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<h2>Harness APAC Central now<mark class="dot">.</mark></h2>
+						<p class="subheading faded">Here’s what’s available today on Guam</p>
+					</div>
+				</div>
+				<div class="row mt-4 icons place-content-center">
+					<div class="col-xs-12 col-sm-6 col-md-4 mb-2 mt-1">
+						<a href="/cloud/" class="box glowing">
+							<img class="mt-2" src="/img/ico/cloud.svg" alt="">
+							<h2 class="mt-2">Cloud platform</h2>
+							<p class="hide-mobile">The high performance cloud</p>
+						</a>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-4 mb-2 mt-1">
+						<a href="/dedicated-servers/" class="box glowing">
+							<img class="mt-2" src="/img/ico/server.svg" alt="">
+							<h2 class="mt-2">Dedicated servers</h2>
+							<p class="hide-mobile">With reach across Asia-Pacific</p>
+						</a>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-4 mb-2 mt-1">
+						<a href="/network/" class="box glowing">
+							<img class="mt-2" src="/img/ico/connection2.svg" alt="">
+							<h2 class="mt-2">Network</h2>
+							<p class="hide-mobile">Low-latency backbone</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		{%- comment %}
+		<section class="py-8">
+			<div class="container">
+				<div class="row middle-xs text-center push-forward">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<h2>Solutions for your business<mark class="dot">.</mark></h2>
+						<p class="subheading faded">Pick your industry to see how you can benefit</p>
+					</div>
+				</div>
+				<div class="row mt-4 place-content-center">
+					<div class="col-xs-12 col-sm-6 col-md-4 mb-2 mt-1">
+						<a href="/for/business-enterprise/" class="box glowing">
+							<h3 class="mt-2 mb-0">Business & Enterprise</h3>
+						</a>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-4 mb-2 mt-1">
+						<a href="/for/game-industry/" class="box glowing">
+							<h3 class="mt-2 mb-0">Game Industry</h3>
+						</a>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-4 mb-2 mt-1">
+						<a href="/for/esports/" class="box glowing">
+							<h3 class="mt-2 mb-0">Esports</h3>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		{%- endcomment %}
+		<section class="black-to-footer py-8" id="related-media">
+			<div class="container">
+				<div class="row middle-xs text-center push-forward">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<h2>Extra, extra, read all about it<mark class="dot">.</mark></h2>
+						<p class="subheading faded">More coverage from and about APAC Central</p>
+					</div>
+				</div>
+				<div class="row my-4">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<div class="callout mt-1">
+							<a href="/case-study/guam-csgo/" class="col-xs-12 p-2">
+								<div class="details">
+									<span class="tag case-study">Case Study</span>
+									<h2>Powering a groundbreaking interregional tournament — CS:GO on APAC Central</h2>
+								</div>
+								<span>
+									Read more
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+										<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+									</svg>
+								</span>
+							</a>
+						</div>
+						<div class="callout mt-1">
+							<a href="/server-pacific-island/" class="col-xs-12 p-2">
+								<div class="details">
+									<span class="tag blog-post">Blog Post</span>
+									<h2>Installing a Game Server on a Pacific island... How hard could it be?</h2>
+									<p class="outlet">The Qode</p>
+								</div>
+								<span>
+									Read more
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+										<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+									</svg>
+								</span>
+							</a>
+						</div>
+						<div class="callout mt-1">
+							<a href="https://www.kotaku.com.au/2021/03/a-brisbane-isp-is-building-guam-into-an-online-gaming-hub/" target="_blank" class="col-xs-12 p-2">
+								<div class="details">
+									<span class="tag">In the media</span>
+									<h2>A Brisbane Telco Is Building Guam Into An Online Gaming Hub</h2>
+									<p class="outlet">Kotaku</p>
+								</div>
+								<span>
+									Read more
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+										<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+									</svg>
+								</span>
+							</a>
+						</div>
+						<div class="callout mt-1">
+							<a href="https://snowballesports.com/2021/06/30/oneqodes-plan-to-connect-oceanic-esports-to-the-world-starts-in-csgo/" target="_blank" class="col-xs-12 p-2">
+								<div class="details">
+									<span class="tag">In the media</span>
+									<h2>OneQode’s plan to connect Oceanic esports to the world starts in CS:GO</h2>
+									<p class="outlet">Snowball Esports</p>
+								</div>
+								<span>
+									Read more
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+										<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+									</svg>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>

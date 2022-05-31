@@ -1,0 +1,537 @@
+---
+layout: page.liquid
+heroSmall: true
+section: gaming
+metaTitle: Pricing • Cloud Platform • OneQode™
+metaDescription: See instance pricing and calculate data transfer and storage costs for OneQode’s high-performance cloud.
+changefreq: monthly
+priority: 0.5
+pageTitle: Cloud <br class="responsive"> platform pricing
+pageSubtitle: Straightforward pricing, next-level performance
+font: hack
+---
+{% comment %}
+<!-- 
+
+	!TODO:
+	* Jump to [cloud instances | storage | data transfer]
+
+ -->
+{% endcomment %}
+		<style>
+			section.hero {
+				background: linear-gradient(to bottom, transparent 50%, #000 100%), radial-gradient(circle at bottom,#002735 0,#000 100%);
+			}
+			.text-small {
+				font-size: 1rem;
+			}
+			.note {
+				font-family: Poppins, sans-serif;
+				font-weight: 600;
+				color: #999;
+				line-height: 1.2;
+			}
+			.input-group {
+				max-width: 100%;
+				display: flex;
+				align-items: center;
+			}
+			.input-group-text {
+				padding-left: 1rem;
+			}
+			@media (min-width: 64em) {
+				.md\:p-1 {
+					padding: 1rem;
+				}
+			}
+			/* Dark Box */
+			.bg-dark {
+				background: #333;
+				border-radius: 15px;
+			}
+			@media (min-width: 48em) {
+				.bg-dark {
+					background: #17181C;
+				}
+				ul.ticks {
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					grid-gap: 1.5rem 2rem;
+				}
+			}
+			@media (min-width: 64em) {
+				ul.ticks {
+					display: grid;
+					grid-template-columns: repeat(3, 1fr);
+					grid-gap: 1.5rem 2rem;
+				}
+			}
+			@media (max-width: 64em) {
+				.xs\:pt-1 {
+					padding-top: 1rem;
+				}
+			}
+			@media (max-width: 48em) {
+				ul.ticks li {
+					margin-bottom: 1rem;
+				}
+			}
+		</style>
+		<aside class="callout">
+			<div class="container">
+				<div class="row md:p-1">
+					<a href="/contact/" class="col-xs-12 p-2">
+						<h2 class="my-0">Need lots of cloud? Volume discounts available.</h2>
+						<span>
+							Contact Us
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+								<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+							</svg>
+						</span>
+					</a>
+				</div>
+			</div>
+		</aside>
+		<section class="pb-8" id="pricing-content">
+			<form class="container" id="form">
+				<div class="row md:p-1">
+					<div class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0 mobile-text-center">
+						<ul class="ticks my-0">
+							<li>Flat pricing</li>
+							<li>Same price in every location</li>
+							<li>Low latency network</li>
+							<li>Fast 1 Gbps port speed</li>
+							<li>10 TB transfer included</li>
+							<li>Affordable data pricing</li>
+							<li>Free always-on DDoS protection</li>
+							<li>Dedicated CPUs @ 3.7 GHz+</li>
+							<li>Support included</li>
+						</ul>
+					</div>
+				</div>
+				<div class="row mt-4">
+					<div class="col-xs-12 md:p-1">
+						<h3 class="mobile-text-center">Cloud Instances</h3>
+						<p class="mobile-text-center">All current instances use Intel® Xeon® processors operating at 3.7 GHz+</p>
+						<div class="responsive-table">
+							<table>
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th class="text-right">vCPUs<mark>*</mark></th>
+										<th class="text-right">RAM</th>
+										<th class="text-right">SSD</th>
+										<th class="text-right">Bandwidth</th>
+										<th class="text-right">Hourly</th>
+										<th class="text-right">Monthly <span class="text-small">(Est.)</span></th>
+									</tr>
+								</thead>
+								<tbody class="monospace">
+									<tr>
+										<td class="nowrap">xe.tiny</td>
+										<td class="text-right">1</td>
+										<td class="text-right nowrap">0.5 <span class="faded">GB</span></td>
+										<td class="text-right nowrap">32 <span class="faded">GB</span></td>
+										<td class="text-right nowrap">1 <span class="faded">Gbps</span></td>
+										<td class="text-right">$0.021</td>
+										<td class="text-right">$15.33</td>
+									</tr>
+									<tr>
+										<td class="nowrap">xe.small</td>
+										<td class="text-right">1</td>
+										<td class="text-right nowrap">1 <span class="faded">GB</span></td>
+										<td class="text-right nowrap">32 <span class="faded">GB</span></td>
+										<td class="text-right nowrap">1 <span class="faded">Gbps</span></td>
+										<td class="text-right">$0.024</td>
+										<td class="text-right">$17.52</td>
+									</tr>
+									<tr>
+										<td class="nowrap">xer.small</td>
+										<td class="text-right">1</td>
+										<td class="text-right nowrap">2 <span class="faded">GB</span></td>
+										<td class="text-right nowrap">32 <span class="faded">GB</span></td>
+										<td class="text-right nowrap">1 <span class="faded">Gbps</span></td>
+										<td class="text-right">$0.028</td>
+										<td class="text-right">$20.44</td>
+									</tr>
+									<tr>
+										<td class="nowrap">xemr.small</td>
+										<td class="text-right">1</td>
+										<td class="text-right nowrap">8 <span class="faded">GB</span></td>
+										<td class="text-right nowrap">128 <span class="faded">GB</span></td>
+										<td class="text-right nowrap">1 <span class="faded">Gbps</span></td>
+										<td class="text-right">$0.068</td>
+										<td class="text-right">$49.64</td>
+									</tr>
+									<tr>
+										<td class="nowrap">xe.medium</td>
+										<td class="text-right">2</td>
+										<td class="text-right nowrap">2 <span class="faded">GB</span></td>
+										<td class="text-right nowrap">64 <span class="faded">GB</span></td>
+										<td class="text-right nowrap">1 <span class="faded">Gbps</span></td>
+										<td class="text-right">$0.038</td>
+										<td class="text-right">$27.74</td>
+									</tr>
+									<tr>
+										<td class="nowrap">xer.medium</td>
+										<td class="text-right">2</td>
+										<td class="text-right nowrap">4 <span class="faded">GB</span></td>
+										<td class="text-right nowrap">76 <span class="faded">GB</span></td>
+										<td class="text-right nowrap">1 <span class="faded">Gbps</span></td>
+										<td class="text-right">$0.054</td>
+										<td class="text-right">$39.42</td>
+									</tr>
+									<tr>
+										<td class="nowrap">xemr.medium</td>
+										<td class="text-right">2</td>
+										<td class="text-right nowrap">16 <span class="faded">GB</span></td>
+										<td class="text-right nowrap">96 <span class="faded">GB</span></td>
+										<td class="text-right nowrap">1 <span class="faded">Gbps</span></td>
+										<td class="text-right">$0.135</td>
+										<td class="text-right">$98.55</td>
+									</tr>
+									<tr>
+										<td class="nowrap">xe.large</td>
+										<td class="text-right">4</td>
+										<td class="text-right nowrap">16 <span class="faded">GB</span></td>
+										<td class="text-right nowrap">128 <span class="faded">GB</span></td>
+										<td class="text-right nowrap">1 <span class="faded">Gbps</span></td>
+										<td class="text-right">$0.181</td>
+										<td class="text-right">$132.13</td>
+									</tr>
+									<tr>
+										<td class="nowrap">xer.large</td>
+										<td class="text-right">4</td>
+										<td class="text-right nowrap">32 <span class="faded">GB</span></td>
+										<td class="text-right nowrap">128 <span class="faded">GB</span></td>
+										<td class="text-right nowrap">1 <span class="faded">Gbps</span></td>
+										<td class="text-right">$0.261</td>
+										<td class="text-right">$190.53</td>
+									</tr>
+									<tr>
+										<td class="nowrap">xe.xlarge</td>
+										<td class="text-right">6</td>
+										<td class="text-right nowrap">24 <span class="faded">GB</span></td>
+										<td class="text-right nowrap">128 <span class="faded">GB</span></td>
+										<td class="text-right nowrap">1 <span class="faded">Gbps</span></td>
+										<td class="text-right">$0.236</td>
+										<td class="text-right">$172.28</td>
+									</tr>
+									<tr>
+										<td class="nowrap">xer.xlarge</td>
+										<td class="text-right">6</td>
+										<td class="text-right nowrap">48 <span class="faded">GB</span></td>
+										<td class="text-right nowrap">128 <span class="faded">GB</span></td>
+										<td class="text-right nowrap">1 <span class="faded">Gbps</span></td>
+										<td class="text-right">$0.355</td>
+										<td class="text-right">$259.15</td>
+									</tr>
+									<tr>
+										<td class="nowrap">xe.2xlarge</td>
+										<td class="text-right">8</td>
+										<td class="text-right nowrap">32 <span class="faded">GB</span></td>
+										<td class="text-right nowrap">256 <span class="faded">GB</span></td>
+										<td class="text-right nowrap">1 <span class="faded">Gbps</span></td>
+										<td class="text-right">$0.387</td>
+										<td class="text-right">$282.51</td>
+									</tr>
+									<tr>
+										<td class="nowrap">xer.2xlarge</td>
+										<td class="text-right">8</td>
+										<td class="text-right nowrap">64 <span class="faded">GB</span></td>
+										<td class="text-right nowrap">256 <span class="faded">GB</span></td>
+										<td class="text-right nowrap">1 <span class="faded">Gbps</span></td>
+										<td class="text-right">$0.520</td>
+										<td class="text-right">$379.60</td>
+									</tr>
+									<tr>
+										<td class="nowrap">xer.3xlarge</td>
+										<td class="text-right">16</td>
+										<td class="text-right nowrap">120 <span class="faded">GB</span></td>
+										<td class="text-right nowrap">512 <span class="faded">GB</span></td>
+										<td class="text-right nowrap">1 <span class="faded">Gbps</span></td>
+										<td class="text-right">$1.095</td>
+										<td class="text-right">$799.35</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<p class="note text-small">Pricing in USD excluding tax</p>
+						<p class="note"><mark>*Each vCPU represents a dedicated physical thread</mark></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 md:p-1">
+						<h3 class="mobile-text-center mt-4 mb-0">Data Transfer</h3>
+					</div>
+					<div class="col-xs-12 col-sm-6 md:p-1">
+						<p class="mobile-text-center mt-0 xs:pt-1">Estimate your monthly data costs:</p>
+						<div class="col-xs-12 p-2 bg-dark">
+							<div class="row middle-xs">
+								<div class="col-xs-5 col-sm-6 col-md-4">
+									<div class="input-group">
+										<input type="number" min="0" name="data-transfer" id="data-transfer" value="10"><span class="input-group-text">TB</span>
+									</div>
+								</div>
+								<div class="col-xs-6 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-7 col-md-offset-1">
+									<p id="data-transfer-result" class="pricing my-0">
+										<span class="price">$1.00</span>
+										<span class="time faded">/mo</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<p class="note text-small">“Data transfer” means ingress and egress combined</p>
+					</div>
+					<div class="col-xs-12 col-sm-6 md:p-1">
+						<p class="mobile-text-center mt-0 xs:pt-1">Data pricing follows a tiered model:</p>
+						<div class="responsive-table">
+							<table>
+								<thead>
+									<tr>
+										<th>Monthly Threshold</th>
+										<th class="text-right">Price per GB</th>
+									</tr>
+								</thead>
+								<tbody class="monospace">
+									<tr>
+										<td>First 10 TB</td>
+										<td class="nowrap text-right">Free</td>
+									</tr>
+									<tr>
+										<td>Next 10 TB</td>
+										<td class="nowrap text-right">$1.00<span class="faded">/TB</span></td>
+									</tr>
+									<tr>
+										<td>Above 20 TB</td>
+										<td class="nowrap text-right">$5.00<span class="faded">/TB</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 md:p-1">
+						<h3 class="mobile-text-center mt-4">Image Storage</h3>
+						<p class="mobile-text-center">Storage for OS images and <a href="https://docs.oneqode.com/snapshots/" target="_blank">instance snapshots</a>.</p>
+						<div class="col-xs-12 p-2 bg-dark">
+							<div class="row middle-xs">
+								<div class="col-xs-5 col-sm-6 col-md-4">
+									<div class="input-group">
+										<input type="number" min="0" name="image-storage" id="image-storage" value="10"><span class="input-group-text">GB</span>
+									</div>
+								</div>
+								<div class="col-xs-6 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-7 col-md-offset-1">
+									<p id="image-storage-result" class="pricing my-0">
+										<span class="price">$1.50</span>
+										<span class="time faded">/mo</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<p class="note text-small">Image storage is charged at $0.15/GB/mo</p>
+					</div>
+					<div class="col-xs-12 col-sm-6 md:p-1">
+						<h3 class="mobile-text-center mt-4">Volume Storage</h3>
+						<p class="mobile-text-center">Block storage you can attach to one or more instances.</p>
+						<div class="col-xs-12 p-2 bg-dark">
+							<div class="row middle-xs">
+								<div class="col-xs-5 col-sm-6 col-md-4">
+									<div class="input-group">
+										<input type="number" min="0" name="volume-storage" id="volume-storage" value="10"><span class="input-group-text">GB</span>
+									</div>
+								</div>
+								<div class="col-xs-6 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-7 col-md-offset-1">
+									<p id="volume-storage-result" class="pricing my-0">
+										<span class="price">$1.00</span>
+										<span class="time faded">/mo</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<p class="note text-small">Volume storage is charged at $0.10/GB/mo</p>
+						<p class="note text-small">All data is replicated 3 times across 3 locations</p>
+					</div>
+					<div class="col-xs-12 col-sm-6 md:p-1">
+						<h3 class="mobile-text-center mt-4">Object Storage</h3>
+						<p class="mobile-text-center">S3-compatible storage ideal for large media.</p>
+						<div class="col-xs-12 p-2 bg-dark">
+							<div class="row middle-xs">
+								<div class="col-xs-5 col-sm-6 col-md-4">
+									<div class="input-group">
+										<input type="number" min="0" name="object-storage" id="object-storage" value="10"><span class="input-group-text">GB</span>
+									</div>
+								</div>
+								<div class="col-xs-6 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-7 col-md-offset-1">
+									<p id="object-storage-result" class="pricing my-0">
+										<span class="price">$5.00</span>
+										<span class="time faded">/mo</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<p class="note text-small">Object storage is charged at $0.025/GB/mo</p>
+					</div>
+					<div class="col-xs-12 col-sm-6 md:p-1">
+						<h3 class="mobile-text-center mt-4">IP Addresses</h3>
+						<div class="responsive-table">
+							<table>
+								<thead>
+									<tr>
+										<th>Type</th>
+										<th class="text-right">Hourly</th>
+										<th class="text-right">Monthly <span class="text-small">(Est)</span></th>
+									</tr>
+								</thead>
+								<tbody class="monospace">
+									<tr>
+										<td>Ephemeral IP address*</td>
+										<td class="text-right">Free</td>
+										<td class="text-right">Free</td>
+									</tr>
+									<tr>
+										<td>Floating IP address</td>
+										<td class="text-right">$0.009</td>
+										<td class="text-right">$6.57</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<p class="note text-small">* Each instance comes with one ephemeral IP address. When you reboot an instance, your IP address may change.</p>
+					</div>
+				</div>
+			</form>
+		</section>
+		<section class="pb-8" id="get-started">
+			<div class="container">
+				<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
+					<h2>Ready to get started?</h2>
+					<p class="subheading">Sign up for a cloud account today</p>
+					<p><a href="/cloud/signup/" class="button mt-2">Get started</a></p>
+				</div>
+			</div>
+		</section>
+		<section id="faqs" class="pb-8">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
+						<h2>Frequently Asked Questions</h2>
+					</div>
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<details>
+							<summary>What currency is OneQode Cloud pricing in?</summary>
+							<p>The pricing on this page is in USD (United States Dollar), exclusive of tax.</p>
+						</details>
+						<details>
+							<summary>How is tax charged?</summary>
+							<p>Tax is charged according to the country the service is delivered in (i.e. where the region the service is located). The tax rate for services delivered in APAC Central (Guam) region is 0%.</p>
+						</details>
+						<details>
+							<summary>Is OneQode Cloud pre-paid or post-paid?</summary>
+							<p>OneQode’s cloud platform is <strong>a pre-paid service</strong> by default — which means you’ll need credit in your account to be able to create cloud instances or resources.</p>
+							<p>Post-paid services are available to select organisations on a case-by-case basis.</p>
+						</details>
+{%- comment %}
+						<!-- <details>
+							<summary>Is a minimum amount of credit required?</summary>
+							<p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that’s what you see at a toy store. And you must think you’re in a toy store, because you’re here shopping for an infant named Jeb.</p>
+						</details> -->
+{%- endcomment %}
+						<details>
+							<summary>How does hourly billing work?</summary>
+							<p>You will be billed for a minimum of 1 hour when you create a service that has hourly pricing (e.g. instance, image, object store). Billing is rounded up to the nearest hour, so if you have a service active for 1 hour and 20 minutes, you’ll be charged for 2 hours.</p>
+						</details>
+						<details>
+							<summary>Am I billed for powered-off instances?</summary>
+							<p>Yes — you will be billed for the image storage for of the powered-off instance. If you delete the powered-off instance, you will no longer be billed.</p>
+						</details>
+						<details>
+							<summary>Can I get port speeds faster than 1 Gbps?</summary>
+							<p>Not at the moment. If this is something you’re interested in, <a href="/contact/?message=Hi%20there%2C%20I%20would%20like%20to%20get%20a%20port%20speed%20faster%20than%201%20Gbps%20on%20OneQode%20Cloud...">contact our team</a>. Alternatively, a <a href="/dedicated-servers/">dedicated server</a> from OneQode may be a better choice, with port speeds of up to 20 Gbps available.</p>
+						</details>
+						<details>
+							<summary>Which payment methods do we accept?</summary>
+							<p>We accept Visa, Mastercard, American Express and Diners Club. More payment methods are coming soon. If you would like us to support a different payment method, <a href="/contact/?message=Hi%20there%2C%20I%27m%20interested%20in%20getting%20an%20alternate%20payment%20method%20added%20to%20OneQode%20Cloud...">contact our team</a> and let us know what you’d like.</p>
+						</details>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="pb-8 black-to-footer">
+			<div class="container">
+				<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
+					<h2>Need a custom solution<br class="responsive"> or a bulk order?</h2>
+					<p class="subheading">Get in touch with our team<br class="responsive"> and let us know your needs</p>
+					<p><a href="/contact/" class="button ghost mt-2">Contact Us</a></p>
+				</div>
+			</div>
+		</section>
+		<script>
+
+			/**
+			*	Pricing Calculators: Cloud
+			*	Takes our pricing and updates when inputs change
+			*/
+
+			// data Object
+			const data = {
+				imageStorageValue: 0.15,
+				volumeStorageValue: 0.1,
+				objectStorageValue: 0.025,
+			};
+
+			// getting from element by id
+			const form = document.getElementById("form");
+
+			// getting result paragraph
+			const dtf = document.getElementById("data-transfer-result");
+			const isr = document.getElementById("image-storage-result");
+			const vsr = document.getElementById("volume-storage-result");
+			const osr = document.getElementById("object-storage-result");
+
+			// adding event listener on form value change
+			form.addEventListener("input", calculate);
+
+			// initial value
+			calculate.call(form);
+
+			function formatHtml(price) {
+				if (!isNaN(price)) {
+					price = "$" + parseFloat(price).toFixed(2);
+				}
+
+				let html = `<span class="price">${price}</span>`;
+
+				if (!isNaN(price.replace("$", ""))) {
+					html += `<span class="time faded">/mo</span>`;
+				}
+				return html;
+			}
+
+			// calculate function
+			function calculate() {
+				// getting form values
+				const {
+					"data-transfer": { value: dataTransferValue },
+					"image-storage": { value: imageStorageValue },
+					"volume-storage": { value: volumeStorageValue },
+					"object-storage": { value: objectStorageValue },
+				} = this;
+
+				let dataTransferResult =
+					dataTransferValue > 10 && dataTransferValue <= 20
+						? (dataTransferValue - 10) * 1
+						: dataTransferValue > 20
+						? (dataTransferValue - 20) * 5 + 10 * 1
+						: dataTransferValue < 1
+						? 0
+						: "Free";
+
+				dtf.innerHTML = formatHtml(dataTransferResult);
+				isr.innerHTML = formatHtml(imageStorageValue * data.imageStorageValue);
+				vsr.innerHTML = formatHtml(volumeStorageValue * data.volumeStorageValue);
+				osr.innerHTML = formatHtml(objectStorageValue * data.objectStorageValue);
+			}
+
+		</script>

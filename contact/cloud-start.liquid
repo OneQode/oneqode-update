@@ -367,17 +367,21 @@ form: true
 									</div>
 									<div class="col-xs-12">
 										<select name="6_company-type" id="company-type" onchange="typeCheck()">
-											<option value="Game studio / developer">Game studio / developer</option>
-											<option value="Server provider">Server provider</option>
-											<option value="Network provider">Network provider</option>
-											<option value="Gaming organisation">Gaming organisation</option>
+											<option value="Business / Enterprise">Business / Enterprise</option>
+											<option value="Game studio / Developer">Game studio / Developer</option>
+											<option value="Esports organisation">Esports organisation</option>
+											<option value="Server reseller">Server reseller</option>
 											<option value="Other">Other</option>
 										</select>
+										{%- comment %}
+										<!--
 										<div id="please-note" class="p-1">
 											<p><strong>👋 Hey! You’ve selected “other”.</strong></p>
 											<p>Normally, we keep our platform exclusive for gaming traffic, but we *can* make exceptions.</p>
 											<p>Let us know below what you’re hoping to do with our platform, and we’ll see if we can make an exception for you.</p>
 										</div>
+										 -->
+										{%- endcomment %}
 									</div>
 								</div>
 								<div class="row mt-2">
@@ -405,7 +409,6 @@ form: true
 											<br>Please do email us instead at:
 											<br>hello <span class="faded">[at]</span> oneqode <span class="faded">[dot]</span> com <span class="faded">[dot]</span> au
 										</p>
-										<p class="faded mt-2 mb-0" style="font-size: 1rem"><strong>Please note:</strong> cloud accounts are only available to businesses and gaming organisations.</p>
 									</div>
 								</div>
 							</div>
@@ -415,6 +418,7 @@ form: true
 			</div>
 		</section>
 		<script>
+			{%- comment %}
 			/**
 			* Show text if non-obvious gaming option selected 
 			*/
@@ -426,6 +430,7 @@ form: true
 					document.getElementById("please-note").style.display = "none";
 				}
 			}
+			{%- endcomment %}
 			/**
 			* Botpoison form validation
 			* Prevents form submissions from bots... I hope

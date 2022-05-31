@@ -1,5 +1,5 @@
 ---
-metaTitle: The Qode • Stories & Resources from OneQode™
+metaTitle: The Qode • Articles & Resources from OneQode™
 metaDescription: Stories, articles and resources from the OneQode team.
 ogImage: qode.jpg
 changefreq: weekly
@@ -58,20 +58,20 @@ pageSubtitle: Stories, articles and resources<br class="responsive"> from the On
 				background-image: url(/img/bg/ben-hero-image.webp);
 				background-size: cover;
 			}
+			.no-webp .tailspin {
+				background-image: url(/img/bg/tailspin.jpg);
+				background-size: cover;
+			}
+			.webp .tailspin {
+				background-image: url(/img/bg/tailspin.webp);
+				background-size: cover;
+			}
 			.no-webp .eric-yip {
 				background-image: url(/img/bg/eric-yip.jpg);
 				background-size: cover;
 			}
 			.webp .eric-yip {
 				background-image: url(/img/bg/eric-yip.webp);
-				background-size: cover;
-			}
-			.no-webp .meet-austin-guidry {
-				background-image: url(/img/bg/meet-austin-guidry.jpg);
-				background-size: cover;
-			}
-			.webp .meet-austin-guidry {
-				background-image: url(/img/bg/meet-austin-guidry.webp);
 				background-size: cover;
 			}
 			.no-webp .story-of-oneqode {
@@ -143,12 +143,25 @@ pageSubtitle: Stories, articles and resources<br class="responsive"> from the On
 		</section>
 		<section id="articles" class="mt-4 text-center">
 			<div class="container">
+				{%- comment %}
+				<div class="row">
+					<div class="col-xs-12 mb-1">
+						<a href="/tailspin/" class="tailspin">
+							<div class="col-xs-12 col-md-8 col-md-offset-2 py-8">
+								<h2>Tailspin: The Kiss of Death for Multiplayer Games</h2>
+								<p class="subheading">The feedback loop that can kill your multiplayer game</p>
+								<p class="author">by Austin Gallagher <span class="date">• 31 May 2022</span></p>
+							</div>
+						</a>
+					</div>
+				</div>
+				{%- endcomment %}
 				<div class="row">
 					<div class="col-xs-12 mb-1">
 						<a href="/meet-ben-cooper/" class="ben-cooper">
 							<div class="col-xs-12 col-md-8 col-md-offset-2 py-8">
 								<h2>Meet Ben Cooper</h2>
-								<p class="subheading">OneQode's Chief Architect on the day-to-day.</p>
+								<p class="subheading">OneQode's Chief Architect on the day-to-day</p>
 								<p class="author">by Austin Gallagher <span class="date">• 27 May 2022</span></p>
 							</div>
 						</a>
@@ -167,21 +180,10 @@ pageSubtitle: Stories, articles and resources<br class="responsive"> from the On
 				</div>
 				<div class="row">
 					<div class="col-xs-12 mb-1">
-						<a href="/meet-austin-guidry/" class="meet-austin-guidry">
-							<div class="col-xs-12 col-md-8 col-md-offset-2 py-8">
-								<h2>Meet Austin Guidry</h2>
-								<p class="subheading">An interview with OneQode's growth officer, retired StarCraft pro, Austin Guidry</p>
-								<p class="author">by Austin Gallagher <span class="date">• 15 Mar 2022</span></p>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12 mb-1">
 						<a href="/story/" class="story-of-oneqode">
 							<div class="col-xs-12 col-md-8 col-md-offset-2 py-8">
 								<h2>The Origin Story of OneQode</h2>
-								<p class="subheading">We started as a last-mile internet provider, then we decided to go upstream.</p>
+								<p class="subheading">We started as a last-mile internet provider, then we decided to go upstream</p>
 								<p class="author">by Austin Gallagher <span class="date">• 22 Feb 2022</span></p>
 							</div>
 						</a>
@@ -192,29 +194,11 @@ pageSubtitle: Stories, articles and resources<br class="responsive"> from the On
 						<a href="/server-pacific-island/" class="server-pacific-island">
 							<div class="col-xs-12 col-md-8 col-md-offset-2 py-8">
 								<h2>Installing a Game Server on a Pacific island... How hard could it be?</h2>
-								<p class="subheading">As it turns out, it’s not easy.</p>
+								<p class="subheading">As it turns out, it’s not easy</p>
 								<p class="author">by Joe Swinn <span class="date">• 22 Nov 2021</span></p>
 							</div>
 						</a>
 					</div>
-				</div>
-				{%- comment %}
-				<div class="row">
-					<div class="col-xs-12 col-md-6 mb-1">
-						<a href="/meet-austin-guidry/" class="meet-austin">
-							<h2>Meet Austin Guidry.</h2>
-							<p class="subheading">An interview with OneQode's growth officer, retired StarCraft pro, Austin Guidry</p>
-							<p class="author">by Austin Gallagher <span class="date">• 15 Feb 2022</span></p>
-						</a>
-					</div>
-					<div class="col-xs-12 col-md-6 mb-1">
-						<a href="#" class="tailspin">
-							<h2>Tailspin: How Multiplayer Game Populations Decline</h2>
-							<p class="subheading">Unpacking the the kiss of death for multiplayer games</p>
-							<p class="author">by Austin Gallagher <span class="date">• 15 Feb 2022</span></p>
-						</a>
-					</div>
-				{%- endcomment %}
 				</div>
 			</div>
 		</section>
