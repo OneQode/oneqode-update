@@ -115,6 +115,91 @@ ctaSubtitle: Gaming infrastructure that reaches more players in Asia-Pacific.
 						<p>No (laughs).</p>
 						<h2 class="mt-4 h3">Where can people hear more from you?</h2>
 						<p>Twitter is my best place to see my rantings <a href="https://twitter.com/benhyperionoq"> @BenHyperionOQ.</a></p>
+
+
+						<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title></title>
+</head>
+<body><p>You want to play soccer.</p>
+<p>You have the players, you have the ball, and you all know the rules.</p>
+<p>But you don&#39;t have a pitch.</p>
+<p>This is like trying to play a multiplayer game without a server.</p>
+<h2 id='so-what-is-a-game-server'>So what is a game server?</h2>
+<p><strong>A game server is a computer that acts as a central authority to define the current state of a multiplayer game. The server sends constant updates to players providing a snapshot of all elements in the game.</strong></p>
+<p>To break that down, the server is where the game is being played <em>and</em> the referee. When you jump, your computer tells that to the server, and the server tells everyone else that you’re in the air.</p>
+<p>Image: Showing the flow of data from one individual to a server, and that server then bouncing that information out to all of the players in a web, showing data is also flowing from other players as well</p>
+<p>Alt text: Information flows from a player to a central server, which then pushes that data out towards the other players in the game</p>
+<p>Caption: An example of how servers pass data to all players in synch</p>
+<p>There are three ways data can be sent to synchronise the game state.</p>
+<p>The first way that the state might be updated is by ‘sending state’.</p>
+<p>This is a high network traffic method of updating the various players of the game state.</p>
+<p>With every player sending constant updates on the entire game state, this design means that these games are more difficult to cheat in.</p>
+<p>The second method for updating the state is less common for dedicated gaming servers and that is ‘sending input’.</p>
+<p>This works by only communicating what each player is attempting to do on their end, keeping file sizes smaller. This is easier to fake on your local computer, so these games are more susceptible to cheating. </p>
+<p>One of the most common networking methods is updated client state. This method rewinds the state that the server snap sent and then creates a difference between the two.</p>
+<p>Updated client state uses delta compression which transmits information by comparing the differences between two files.</p>
+<p>This means you are only sending information regarding the differences, which is less data than the entire game state.</p>
+<h3 id='what-is-a-game-state'>What is a game state?</h3>
+<p>A game state is the true position of every object in the game world.</p>
+<p>In a multiplayer game, desynchronised game states ruin the experience for all players.</p>
+<p>A synchronised game state means that people can land headshots and play as intended, whereas a desynchronised game will have them sending angry emails instead.</p>
+<h3 id='where-are-game-servers'>Where are game servers?</h3>
+<p>A game server can be anywhere, including on your desk, if developers release server binaries.</p>
+<p>A	server binary is an executable software that runs the game server.</p>
+<p>Hosting games with a server binary on a computer in your home turns your computer into the host. This is not peer-to-peer, where the game assigns one player&#39;s computer to also host the match.</p>
+<p>With peer-to-peer, anyone in the match can be chosen to host. While this is cheaper for the developers, it usually is not ideal for players.</p>
+<p>Peer-to-peer hosting requires one of the networked devices to run both the game, and the server. For a lot of people, their computer or internet would become a bottleneck for the other players.</p>
+<p>If a developer does release the server binary, those can then be hosted from the home computer or a data centre, the key technical difference being speed and location.</p>
+<p>Image: a side by side of a data centre and a home desktop computer</p>
+<p>Alt text: A data centre and a computer alike can host a game server</p>
+<p>Caption: No matter the kind of hosting, your server is probably running from one of these</p>
+<p>Both peer-to-peer and hosting from a home computer use one player’s home network. </p>
+<p>If they have poor internet, it’s a bad experience for everyone.</p>
+<p>In peer-to-peer, the networking will attempt the best connection, but the host&#39;s location can skew the ping to advantage certain players.</p>
+<p>Servers that are run from data centres have a lot of benefits over these two kinds of hosting.</p>
+<p>Most importantly: they are designed for and built with hosting multiplayer games in mind. </p>
+<p>The best experience for gamers is either dedicated servers from the developer or hosting their own server in a data centre.</p>
+<h3 id='what-type-of-hardware-is-in-a-game-server'>What type of hardware is in a game server?</h3>
+<p>Physical game servers in data centres are large racks of computer components.</p>
+<p>Unlike servers for less intensive applications, game servers are designed to handle the high workloads of hosting multiplayer with immense amounts of CPU power and RAM.</p>
+<p>So players can join a server they have network switches to connect them to the internet and the players.</p>
+<p>Image: Showing a server rack</p>
+<p>Alt text: Image shows the inside of a server rack and the hardware that goes into running online games.</p>
+<p>Caption: Servers are built to a variety of specifications depending on their needs.</p>
+<p>Host vs. Client</p>
+<p>In networking terminology, game servers are the hosts, with the players connecting being the clients.</p>
+<p>But the connection to these servers isn’t instant. The time between your information being sent to the server, and the server being able to respond is called ping.</p>
+<h3 id='what-is-ping-and-why-is-it-important-for-game-servers'>What is ping, and why is it important for game servers?</h3>
+<p>Ping is the time it takes for data to travel through fibre optic cables between the player and the server. Measured in milliseconds, and often abbreviated to ‘ms’, a low ping is essential to a good gameplay experience.</p>
+<p>Ping can be affected by a lot of elements, but primarily is a result of server location and routing.</p>
+<p>The information travelling from you, and back from the server, is moving at close to the speed of light.</p>
+<p>The hardware that connects players with the server isn‘t perfect, and the light needs to be reflected and repeated as it travels long distances to the server.</p>
+<p>The pathway chosen for the data is called routing. Poor routing will send data along inefficient pathways, increasing the ping. Good routing sends data along the most direct pathway, connecting players and servers more efficiently. </p>
+<p>Image: We have one for routing already that shows how OQ does it vs others, I think we reuse that one here</p>
+<p>alt text: Poor routing is shown alongside a more efficient option, showing how much difference it can make for a player</p>
+<p>Caption: Routing can make or break a player&#39;s ping</p>
+<p>In a nutshell: poor routing and distant servers will cause high pings and unplayable matches.</p>
+<h2 id='what-is-tick-rate-and-how-does-it-affect-game-servers'>What is tick rate and how does it affect game servers?</h2>
+<p>The server acts as both the playing field and the referee, giving players a location to play on and deciding what happens in the game.</p>
+<p>A server‘s tick rate refers to how frequently those decisions are being broadcast back to the players.</p>
+<p>A higher tick rate is more updates per second.</p>
+<p>Not all servers are the same, and not all games require the same kinds of servers.</p>
+<p>Turn-based games, like Hearthstone, don‘t need a high tick rate since the game does not update multiple times a second.</p>
+<p>Real-time games like DOTA, Counter-Strike, or Valorant do need higher tick rates to maintain synchronised game states.</p>
+<p>Games with real-time action will usually require higher tick rates for the best gameplay experience.</p>
+<h2 id='any-other-terms-i-should-know-about-game-servers'>Any other terms I should know about game servers?</h2>
+<p>There is no shortage of server terminology, here are some common words and phrases that will help you understand game servers.</p>
+<h4 id='uptime'>Uptime</h4>
+<p>Uptime is whether or not the server is accessible and connected to the internet. Servers will go ‘down’, generally due to either scheduled maintenance or a denial of service attack (DDoS).</p>
+<p>A server hosted on a home computer will also go down if the computer is turned off.</p>
+<h4 id='denial-of-service-dos-attacks-and-distributed-denial-of-service-ddos-attacks'>Denial of service (DoS) attacks and distributed denial of service (DDoS) attacks</h4>
+<p>Both of these malicious attacks are designed to prevent usage by overwhelming a server with illegitimate requests.</p>
+<p>DoS attacks focus on the endpoints rather than trying to disrupt a whole network, whereas DDoS attacks target the network as a whole.</p>
+</body>
+</html>
 					</div>
 				</div>
 			</div>
