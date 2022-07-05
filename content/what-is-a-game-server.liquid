@@ -37,7 +37,7 @@ ctaSubtitle: Gaming infrastructure that reaches more players in Asia-Pacific.
 					<div class="col-xs-12 col-md-8 col-md-offset-2">
 						<h2>What is a game server?</h2>
 						<p><strong>A game server is a computer that acts as a central authority to define the current state of a multiplayer game.</strong></p>
-						<p>Players send the server updates about what they’re doing in-game — and the server processes all inputs and transmits regular updates to players, providing a snapshot of all elements in the game.</p>
+						<p>Players send the server updates about what they’re doing in-game — and the server processes all inputs and transmits regular updates to players, providing a stream of snapshots of all elements in the game..</p>
 						<img src="/img/content/what-is-a-game-server/game-server-players-hand-drawn-illustration.png" alt="A hand drawn diagram with a game server in the middle, connected to players on the outside, each sending and receiving data to the server" class="my-4">
 						<p>A game server is both the stadium where the game is played — and it’s also the referee.</p>
 						<p>If you’re playing a game, when you jump, your computer tells that to the server, and the server tells everyone else that you’re in the air.</p>
@@ -47,30 +47,58 @@ ctaSubtitle: Gaming infrastructure that reaches more players in Asia-Pacific.
 						<h2 class="mt-4" id="game-state">Game state: the single source of truth</h2>
 						<p><strong>The game state (or “tick”) is a snapshot in time of the properties of every object in the game world.</strong></p>
 						<p>A game server is responsible for processing all inputs from each player, settling inconsistencies and sending out a definitive picture of the conditions in-game. This is called a synchronised game state.</p>
-						<!-- Wide Image — With Caption -->
+						<!-- Wide Image -->
 					</div>
 					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
 						<figure>
 							<picture>
 								<source srcset="/img/content/what-is-a-game-server/game-state.webp" type="image/webp">
-								<img src="/img/content/what-is-a-game-server/game-state.jpg" alt="An isometric illustration of 'game state', a snapshot being taken of a game in progress" class="opaque. Text superimposed with 'game state: player positions, object properties, environment settings, scoreboard'">
+								<img src="/img/content/what-is-a-game-server/game-state.jpg" alt="An isometric illustration of 'game state', a snapshot being taken of a game in progress. Text is superimposed with 'game state: player positions, object properties, environment settings, scoreboard'" class="opaque">
 							</picture>
 						</figure>
 					</div>
 					<div class="col-xs-12 col-md-8 col-md-offset-2">
-						<!-- End Wide Image — With Caption -->
+						<!-- End Wide Image -->
 						<p>With lots of players doing things at the same time, often in close proximity in-game, a server has to keep track of what happens and when — to make sure everyone’s on the same page.</p>
 						<p>When the game state is calculated, the server transmits it to each connected player’s device — after this each player’s game world is refreshed.</p>
 						<p>And this happens multiple times each second.</p>
 						<!-- Tickrate -->
 						<h2 class="mt-4" id="tickrate">Tickrate: the frequency of game state updates</h2>
-						<p><strong>Tickrate is the number of times an updated game state is broadcast to players every second.</strong> </p>
-						<h4>NEED A GRAPHIC</h4>
-						<p>A higher tick rate is more updates per second.</p>
-						<p>Not all servers are the same, and not all games require the same kinds of servers.</p>
-						<p>Turn-based games, like Hearthstone, don’t need a high tick rate since the game does not update multiple times a second.</p>
-						<p>Real-time games like DOTA, Counter-Strike, or Valorant do need higher tick rates to maintain synchronised game states.</p>
-						<p>Games with real-time action will usually require higher tick rates for the best gameplay experience.</p>
+						<p><strong>Tickrate is the number of times an updated game state is calculated and broadcast by a game server to players every second.</strong></p>
+						<p>The higher the tickrate, the more precise a game simulation is.</p>
+						<p>If 64 updates are sent to players each second, it’s referred to as a “64 tick”, or “64 Hz” server (because Hertz, or Hz, is the unit of frequency).</p>
+						<p>Here’s what that looks like in action:</p>
+						<h3 class="mt-4">Visualising a 64 tick server</h3>
+						<!-- Wide Image -->
+					</div>
+					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
+						<figure>
+							<img src="/img/content/what-is-a-game-server/tickrate-example-64-ticks-each-second.png" alt="An isometric timeline covering 1 second, with 64 separate game states being transmitted from a game server - this represents a 64 tick game server" class="opaque">
+							<figcaption>A server with a tickrate of 64 — every second, the server sends 64 state updates</figcaption>
+						</figure>
+					</div>
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<!-- End Wide Image -->
+						<h3 class="mt-4">Visualising a 32 tick server</h3>
+						<p>Compare that with a 32 tick server, which sends updates half as often.</p>
+						<!-- Wide Image -->
+					</div>
+					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
+						<figure>
+							<img src="/img/content/what-is-a-game-server/tickrate-example-32-ticks-each-second.png" alt="An isometric timeline covering 1 second, with 32 separate game states being transmitted from a game server - this represents a 32 tick game server" class="opaque">
+							<figcaption>A server with a tickrate of 32 — every second, the server sends 32 state updates</figcaption>
+						</figure>
+					</div>
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<!-- End Wide Image -->
+						<h3 class="mt-4">What this means in real life</h3>
+						<p>When more game states are calculated every second, more movement and action can be accounted for — so a higher tickrate produces <strong>a more precise, high fidelity gaming experience</strong>.</p>
+						<p>That means split-second actions in the game can be factored in — and it can make the difference between life or death in-game — especially in a first person shooter.</p>
+						<h3 class="mt-4">When does tickrate matter?</h3>
+						<p>Not all games require game servers with a high tickrate.</p>
+						<p>Turn-based games, like Hearthstone, don’t need a high tickrate since the game does not update multiple times a second.</p>
+						<p>Real-time games like DOTA, Counter-Strike, or Valorant do need higher tickrates to maintain synchronised game states.</p>
+						<p>Games with real-time action will usually require higher tickrates for the best gameplay experience.</p>
 						<h2 class="mt-4 fail">STUFF</h2>
 						<p>In a multiplayer game, two players seeing different versions of the game can cause problems.</p>
 						<p class="fail">When you duck behind cover in Counter-Strike or Call of Duty — only to be shot from an angle that is seemingly impossible — that’s the fault of the server desynchronising.</p>
@@ -95,6 +123,8 @@ ctaSubtitle: Gaming infrastructure that reaches more players in Asia-Pacific.
 						<p>Many games that release the binary and server software have long life spans and increased control given to the players. Team Fortress 2, Counter-Strike, and Minecraft are examples of popular games that give more control to players who host their own servers.</p>
 						<p>If a developer does release the server binary, those can then be hosted from the home computer or a data centre, the key technical difference being speed and location.</p>
 						<p>Some people use an old PC to run servers. But not everyone has the processing power or hardware required to run multiplayer computer games.</p>
+						<!-- Wide Image - With Caption -->
+					</div>
 					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
 						<figure>
 							<picture>
@@ -104,6 +134,8 @@ ctaSubtitle: Gaming infrastructure that reaches more players in Asia-Pacific.
 							</picture>
 						</figure>
 					</div>
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<!-- End Wide Image - With Caption -->
 						<p>Another method, that also uses a home computer to run a server is called peer-to-peer. With peer-to-peer, the game assigns one player’s computer to also host the match, and runs the server in the background. Peer-to-peer hosting requires one of the networked devices to run both the video game, and the server.</p>
 						<p>With peer-to-peer, anyone in the match can be chosen to host. While this is cheaper for the developers, it usually is not ideal for players.</p>
 						<p>That’s not exactly a smooth gaming experience, especially on older hardware, as running both the game client and game server can be taxing.</p>
@@ -125,13 +157,19 @@ ctaSubtitle: Gaming infrastructure that reaches more players in Asia-Pacific.
 						<p>Physically game servers are nothing but large racks of computer components.</p>
 						<p>Like all servers, network switches connect them to the internet and the players.</p>
 						<p>Unlike servers for less intensive applications, game servers are designed to handle the high workloads of hosting multiplayer with immense amounts of CPU power and RAM.</p>
-					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
-						<picture>
-							<source srcset="/img/content/what-is-a-game-server/game-server-image-3.webp" type="image/webp">
-							<img class="opaque" src="/img/content/story/game-server-image-3.jpg" alt="Image shows the hardware of a server rack.">
-						</picture>
+						<!-- Wide Image - With Caption -->
 					</div>
-						<p>Caption: Servers are built to a variety of specifications depending on their needs.</p>
+					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
+						<figure>
+							<picture>
+								<source srcset="/img/content/what-is-a-game-server/game-server-image-3.webp" type="image/webp">
+								<img class="opaque" src="/img/content/story/game-server-image-3.jpg" alt="Image shows the hardware of a server rack.">
+							</picture>
+							<figcaption>Servers are built to a variety of specifications depending on their needs</figcaption>
+						</figure>
+					</div>
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<!-- End Wide Image - With Caption -->
 						<p>In networking terminology, game servers are the hosts, with the players connecting being the clients.</p>
 						<p>But the connection to these servers isn’t instant. The time between your information being sent to the server, and the server being able to respond is called ping.</p>
 						<h3 class="mt-4">What is ping, and why is it important for game servers?</h3>
@@ -143,6 +181,7 @@ ctaSubtitle: Gaming infrastructure that reaches more players in Asia-Pacific.
 						<p>Even when it works perfectly, the information needs to be reflected and repeated along the way as it travels long distances to the server. It will take a pathway through other servers, eventually connecting to you.</p>
 						<h4 >What is that pathway called?</h4>
 						<p>The pathway chosen for the data is called routing. Poor routing will send data along inefficient pathways, increasing the ping. Good routing sends data along the most direct pathway, connecting players and servers more efficiently.</p>
+					</div>
 					<div class="col-xs-12 my-4">
 						<figure>
 							<picture>
@@ -151,6 +190,7 @@ ctaSubtitle: Gaming infrastructure that reaches more players in Asia-Pacific.
 							</picture>
 						</figure>
 					</div>
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
 						<p>Routing can make or break a player’s ping</p>
 						<p>In a nutshell: poor routing and distant servers will create high pings and unplayable matches.</p>
 						<h3>What makes gaming servers unique?</h3>
@@ -168,5 +208,7 @@ ctaSubtitle: Gaming infrastructure that reaches more players in Asia-Pacific.
 						<p>DoS attacks focus on the endpoints rather than trying to disrupt a whole network, whereas DDoS attacks target the network as a whole.</p>
 						<h4>Game Client</h4>
 						<p>Game clients is a fancy term for the game itself. If you’ve launched a game on your gaming PC or console, it is running the “game client”.</p>
+					</div>
+				</div>
 			</div>
 		</section>
