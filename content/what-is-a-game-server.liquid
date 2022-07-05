@@ -37,7 +37,7 @@ ctaSubtitle: Gaming infrastructure that reaches more players in Asia-Pacific.
 					<div class="col-xs-12 col-md-8 col-md-offset-2">
 						<h2>What is a game server?</h2>
 						<p><strong>A game server is a computer that acts as a central authority to define the current state of a multiplayer game.</strong></p>
-						<p>Players send the server updates about what they’re doing in-game — and the server processes all inputs and transmits regular updates to players, providing a stream of snapshots of all elements in the game..</p>
+						<p>Players send the server updates about what they’re doing in-game — and the server processes all inputs, settles inconsistencies, and transmits regular updates to players, providing a stream of snapshots of all elements in the game.</p>
 						<img src="/img/content/what-is-a-game-server/game-server-players-hand-drawn-illustration.png" alt="A hand drawn diagram with a game server in the middle, connected to players on the outside, each sending and receiving data to the server" class="my-4">
 						<p>A game server is both the stadium where the game is played — and it’s also the referee.</p>
 						<p>If you’re playing a game, when you jump, your computer tells that to the server, and the server tells everyone else that you’re in the air.</p>
@@ -46,7 +46,6 @@ ctaSubtitle: Gaming infrastructure that reaches more players in Asia-Pacific.
 						<!-- Game State -->
 						<h2 class="mt-4" id="game-state">Game state: the single source of truth</h2>
 						<p><strong>The game state (or “tick”) is a snapshot in time of the properties of every object in the game world.</strong></p>
-						<p>A game server is responsible for processing all inputs from each player, settling inconsistencies and sending out a definitive picture of the conditions in-game. This is called a synchronised game state.</p>
 						<!-- Wide Image -->
 					</div>
 					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
@@ -66,43 +65,45 @@ ctaSubtitle: Gaming infrastructure that reaches more players in Asia-Pacific.
 						<h2 class="mt-4" id="tickrate">Tickrate: the frequency of game state updates</h2>
 						<p><strong>Tickrate is the number of times an updated game state is calculated and broadcast by a game server to players every second.</strong></p>
 						<p>The higher the tickrate, the more precise a game simulation is.</p>
-						<p>If 64 updates are sent to players each second, it’s referred to as a “64 tick”, or “64 Hz” server (because Hertz, or Hz, is the unit of frequency).</p>
+						<p>If 64 updates are sent to players each second, it’s referred to as a “64-tick”, or “64 Hz” server (because Hertz, or Hz, is the unit of frequency).</p>
 						<p>Here’s what that looks like in action:</p>
-						<h3 class="mt-4">Visualising a 64 tick server</h3>
+						<h3 class="mt-4">Visualising a 64-tick server</h3>
 						<!-- Wide Image -->
 					</div>
 					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
 						<figure>
-							<img src="/img/content/what-is-a-game-server/tickrate-example-64-ticks-each-second.png" alt="An isometric timeline covering 1 second, with 64 separate game states being transmitted from a game server - this represents a 64 tick game server" class="opaque">
+							<img src="/img/content/what-is-a-game-server/tickrate-example-64-ticks-each-second.png" alt="An isometric timeline covering 1 second, with 64 separate game states being transmitted from a game server - this represents a 64-tick game server" class="opaque">
 							<figcaption>A server with a tickrate of 64 — every second, the server sends 64 state updates</figcaption>
 						</figure>
 					</div>
 					<div class="col-xs-12 col-md-8 col-md-offset-2">
 						<!-- End Wide Image -->
-						<h3 class="mt-4">Visualising a 32 tick server</h3>
-						<p>Compare that with a 32 tick server, which sends updates half as often.</p>
+						<h3 class="mt-4">Visualising a 32-tick server</h3>
+						<p>Compare that with a 32-tick server, which sends updates half as often.</p>
 						<!-- Wide Image -->
 					</div>
 					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
 						<figure>
-							<img src="/img/content/what-is-a-game-server/tickrate-example-32-ticks-each-second.png" alt="An isometric timeline covering 1 second, with 32 separate game states being transmitted from a game server - this represents a 32 tick game server" class="opaque">
+							<img src="/img/content/what-is-a-game-server/tickrate-example-32-ticks-each-second.png" alt="An isometric timeline covering 1 second, with 32 separate game states being transmitted from a game server - this represents a 32-tick game server" class="opaque">
 							<figcaption>A server with a tickrate of 32 — every second, the server sends 32 state updates</figcaption>
 						</figure>
 					</div>
 					<div class="col-xs-12 col-md-8 col-md-offset-2">
 						<!-- End Wide Image -->
-						<h3 class="mt-4">What this means in real life</h3>
+						<h3 class="mt-4">What tickrate means for gamers</h3>
 						<p>When more game states are calculated every second, more movement and action can be accounted for — so a higher tickrate produces <strong>a more precise, high fidelity gaming experience</strong>.</p>
 						<p>That means split-second actions in the game can be factored in — and it can make the difference between life or death in-game — especially in a first person shooter.</p>
 						<h3 class="mt-4">When does tickrate matter?</h3>
 						<p>Not all games require game servers with a high tickrate.</p>
 						<p>Turn-based games, like Hearthstone, don’t need a high tickrate since the game does not update multiple times a second.</p>
 						<p>Real-time games like DOTA, Counter-Strike, or Valorant do need higher tickrates to maintain synchronised game states.</p>
-						<p>Games with real-time action will usually require higher tickrates for the best gameplay experience.</p>
-						<h2 class="mt-4 fail">STUFF</h2>
-						<p>In a multiplayer game, two players seeing different versions of the game can cause problems.</p>
-						<p class="fail">When you duck behind cover in Counter-Strike or Call of Duty — only to be shot from an angle that is seemingly impossible — that’s the fault of the server desynchronising.</p>
-						<p class="fail">A synchronised game state means that people can land headshots and play as intended, whereas a desynchronised game will have them sending angry emails instead.</p>
+						<p>Games with real-time action usually feature higher-tickrate servers (64 or 128-tick) for the best gameplay experience.</p>
+						<h3 class="mt-4">How does tickrate affect a game server?</h3>
+						<p>As tickrate increases, more processing power and data transmission is required.</p>
+						<p>When you double the tickrate from 32 to 64 ticks, you increase the load on the server, as players send data more frequently, and the server needs to calculate the game state more often.</p>
+						<p>So <strong>if you want to game on a high tick server, you’re going to need a fast server</strong> that can handle it.</p>
+						<h2 class="mt-4">How do players send data to a game server?</h2>
+						<p class="fail">https://gafferongames.com/post/introduction_to_networked_physics/</p>
 						<p>There are three ways data can be sent to synchronise the game state.</p>
 						<p>The first way that the state might be updated is by ‘sending state’.</p>
 						<h3>What is Sending State?</h3>
@@ -116,6 +117,15 @@ ctaSubtitle: Gaming infrastructure that reaches more players in Asia-Pacific.
 						<p>A more common networking method is updated client state. Updated client state only sends information regarding the differences, which is less data than the entire game state.</p>
 						<p>This works by rewinding to the state that the server sent and then tracking the difference between the two.</p>
 						<p>All of these networking options work towards the same goal: ensuring all players have the correct version of the game state.</p>
+						<h2 class="mt-4">How does a game server resolve differences in data?</h2>
+						<p>Let’s say you’re playing a first person shooter. You’re aiming at an enemy, and they’re aiming at you. You both shoot.</p>
+						<p>Both players’ devices send the command to the server — and whoever’s data gets to the server first is likely to be processed first and broadcast to all players.</p>
+						<p>So for a player, your latency to the server can  really can make the difference between life and death.</p>
+						<p>There’s a lot of clever code that happens behind the scenes to process this. To learn more about how multiplayer games sync their state, check out this great <a href="https://medium.com/@qingweilim/how-do-multiplayer-games-sync-their-state-part-1-ab72d6a54043" rel="noopener">series on state synchronisation</a> by Qing Wei Lim.</p>
+						<h2 class="mt-4 fail">STUFF</h2>
+						<p>In a multiplayer game, two players seeing different versions of the game can cause problems.</p>
+						<p class="fail">When you duck behind cover in Counter-Strike or Call of Duty — only to be shot from an angle that is seemingly impossible — that’s the fault of the server desynchronising.</p>
+						<p class="fail">A synchronised game state means that people can land headshots and play as intended, whereas a desynchronised game will have them sending angry emails instead.</p>
 						<h2 class="mt-4">Where are game servers?</h2>
 						<p>A game server can be anywhere, including on your desk, if developers release server binaries.</p>
 						<p>A server binary is an executable software that runs the game server. In essence, the server binary is the program that runs the game world, while your version of the multiplayer game sends information to it.</p>
