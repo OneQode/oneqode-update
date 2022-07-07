@@ -179,7 +179,17 @@ ctaSubtitle: Gaming infrastructure that reaches more players in Asia-Pacific.
 						<p>This is the specialised software that runs the game world, keeps track of in-game actions and object properties, and controls the calculation of the game state in real-time.</p>
 						<p>Players run a separate “client” version of the multiplayer game that sends information to (and receives information from) the game server.</p>
 						<h3 class="mt-4">For many games, the developer organises it</h3>
-						<p>Many of the most popular multiplayer games like <strong>Fortnite, Valorant, Overwatch, and Among Us have servers that are set up by the game developer, and they don’t release the server binary</strong>.</p>
+						<p>Many of the most popular multiplayer games like <strong>Fortnite, Valorant, Overwatch, and Apex Legends have servers that are set up by the game developer — and they don’t release the server binaries</strong>.</p>
+						<!-- Wide Image -->
+					</div>
+					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
+						<picture>
+							<source srcset="/img/content/what-is-a-game-server/games-developers-organise-hosting-for.webp" type="image/webp">
+							<img src="/img/content/what-is-a-game-server/games-developers-organise-hosting-for.jpg" alt="Stylised cover art for some of the games that you can't host your own servers for: Fortnite, Valorant, Overwatch and Apex Legends" loading="lazy">
+						</picture>
+					</div>
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<!-- End Wide Image -->
 						<p>So you can’t host your own game server for games like this.</p>
 						<p>Why don’t they release server binaries? There’s a range of reasons, including:</p>
 						<ol>
@@ -198,23 +208,42 @@ ctaSubtitle: Gaming infrastructure that reaches more players in Asia-Pacific.
 							<li>Valheim</li>
 							<li>ARK: Survival Evolved</li>
 						</ul>
-						<p>To set up a server for a game like this, there are two options:</p>
-						<h4 class="mt-4">Manually setting up your own server</h4>
-						<p><strong>To do this, you’ll need some technical capability</strong>, preferably experience with Linux. And you’ll need access to a server.</p>
+						<!-- Wide Image -->
+					</div>
+					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
+						<picture>
+							<source srcset="/img/content/what-is-a-game-server/games-anyone-can-host-servers-for.webp" type="image/webp">
+							<img src="/img/content/what-is-a-game-server/games-anyone-can-host-servers-for.jpg" alt="Stylised cover art for some of the games that anyone can host their own server for: Minecraft, Team Fortress 2, Counter-Strike: Global Offensive, and Ark: Survival Evolved." loading="lazy">
+						</picture>
+					</div>
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<!-- End Wide Image -->
+						<p>To set up a server, there are two ways to do it:</p>
+						<h4 class="mt-4">Option #1: Manually setting up your own server</h4>
+						<p>To do this, <strong>you’ll need some technical capability</strong>, preferably experience with Linux. And you’ll need access to a server.</p>
 						<p class="faded"><em>(by the way we offer <a href="/cloud/">cloud servers</a> and <a href="/dedicated-servers/">dedicated servers</a>)</em></p>
-						<p>The easiest way to set up a game server is to use a free and open-source tool like <a href="https://linuxgsm.com/" rel="noopener">LinuxGSM</a>, which lets you set up servers for a bunch of games.</p>
-						<p>Other options worth checking out are <a href="https://pterodactyl.io/" rel="noopener">Pterodactyl</a> or <a href="https://developer.valvesoftware.com/wiki/SteamCMD" rel="noopener">SteamCMD</a> (which lets you set up servers for some Steam games).</p>
-						<h4 class="mt-4">Using a game server hosting provider</h4>
-						<p>An easier option (if you don’t want to handle the technical setup) is to purchase preconfigured servers through a game server hosting provider.</p>
-						<p>An example of this is PacificES (who we recently acquired). They offer fast <a href="https://pacifices.cloud/" rel="noopener">128-tick CS:GO servers</a>.</p>
-						<h2 class="mt-4">Well, that’s your introductory guide</h2>
-						<h3>Here’s some further reading</h3>
-						<p>The tech behind the scenes in multiplayer games is nothing short of magic. There’s so much to explore, so here are a couple of great article series’ we absolutely loved.</p>
+						<p>The easiest way to set up a game server is to use a game server management tool like:</p>
 						<ul>
-							<li class="mb-1"><a href="https://gafferongames.com/post/introduction_to_networked_physics/" class="external">Introduction to Networked Physics by Glenn Fiedler</a></li>
-							<li><a href="https://ruoyusun.com/2019/03/28/game-networking-1.html" class="external">Game Networking by Ruoyo Sun</a></li>
+							<li class="mb-1"><a href="https://linuxgsm.com/" target="_blank" class="external">LinuxGSM</a><br>Free, open-source command-line application supporting 125+ games</li>
+							<li class="mb-1"><a href="https://pterodactyl.io/" target="_blank" class="external">Pterodactyl</a><br>Free, open-source server management panel supporting 46+ games.</li>
+							<li class="mb-1"><a href="https://www.tcadmin.com/" target="_blank" class="external">TCAdmin</a><br>Paid server management panel supporting 86+ games</li>
+							<li><a href="https://developer.valvesoftware.com/wiki/SteamCMD" rel="noopener" class="external">SteamCMD</a><br>Command-line application for Steam-based game servers. The above tools use this for Steam games.</li>
 						</ul>
-						<p>Glenn Fiedler is one of the world’s foremost experts on game netcode and networking, </p>
+						<h4 class="mt-4">Option #2: Using a game server hosting provider</h4>
+						<p>If you don’t want to handle the technical setup, you can purchase ready-to-go servers from a game server hosting provider — and there are a lot to choose from.</p>
+						<p>One example of a game hosting provider is PacificES, who we recently acquired. They offer superfast <a href="https://pacifices.cloud/" target="_blank">128-tick CS:GO servers</a> for less than a dollar a day.</p>
+						<h2 class="mt-4">Well, that was an introductory guide.</h2>
+						<h3>Interested to learn more?</h3>
+						<p>There’s some really cool thinking that goes on behind the scenes with multiplayer games.</p>
+						<p>How does a server make sure everyone’s on the same page? How do developers make games feel less laggy?</p>
+						<p>Now we’re in the territory of netcode and game networking.</p>
+						<p>If you’d like to read more about how game developers solve these challenges, check out these two great article series:</p>
+						<ul>
+							<li class="mb-1"><a href="https://gafferongames.com/post/introduction_to_networked_physics/" target="_blank" class="external">Introduction to Networked Physics by Glenn Fiedler</a></li>
+							<li><a href="https://ruoyusun.com/2019/03/28/game-networking-1.html" target="_blank" class="external">Game Networking by Ruoyo Sun</a></li>
+						</ul>
+						<p>Be advised: the rabbit hole is deep.</p>
+						<p>🕳🐇</p>
 						<h2 class="mt-4">How game servers receive data and resolve differences</h2>
 						<h3 class="mt-4">The ways to send data to a server</h3>
 						<p class="fail">https://gafferongames.com/post/introduction_to_networked_physics/</p>
