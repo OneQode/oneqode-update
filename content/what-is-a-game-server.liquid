@@ -52,7 +52,7 @@ ctaSubtitle: Gaming infrastructure that reaches more players in Asia-Pacific.
 						<figure>
 							<picture>
 								<source srcset="/img/content/what-is-a-game-server/game-state.webp" type="image/webp">
-								<img src="/img/content/what-is-a-game-server/game-state.jpg" alt="An isometric illustration of 'game state', a snapshot being taken of a game in progress. Text is superimposed with 'game state: player positions, object properties, environment settings, scoreboard'" class="opaque">
+								<img src="/img/content/what-is-a-game-server/game-state.jpg" alt="An isometric illustration of 'game state', a snapshot being taken of a game in progress. Text is superimposed with 'game state: player positions, object properties, environment settings, scoreboard'" class="opaque" loading="lazy">
 							</picture>
 						</figure>
 					</div>
@@ -72,7 +72,7 @@ ctaSubtitle: Gaming infrastructure that reaches more players in Asia-Pacific.
 					</div>
 					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
 						<figure>
-							<img src="/img/content/what-is-a-game-server/tickrate-example-64-ticks-each-second.png" alt="An isometric timeline covering 1 second, with 64 separate game states being transmitted from a game server - this represents a 64-tick game server" class="opaque">
+							<img src="/img/content/what-is-a-game-server/tickrate-example-64-ticks-each-second.png" alt="An isometric timeline covering 1 second, with 64 separate game states being transmitted from a game server - this represents a 64-tick game server" class="opaque" loading="lazy">
 							<figcaption>A server with a tickrate of 64 — every second, the server sends 64 state updates</figcaption>
 						</figure>
 					</div>
@@ -84,7 +84,7 @@ ctaSubtitle: Gaming infrastructure that reaches more players in Asia-Pacific.
 					</div>
 					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
 						<figure>
-							<img src="/img/content/what-is-a-game-server/tickrate-example-32-ticks-each-second.png" alt="An isometric timeline covering 1 second, with 32 separate game states being transmitted from a game server - this represents a 32-tick game server" class="opaque">
+							<img src="/img/content/what-is-a-game-server/tickrate-example-32-ticks-each-second.png" alt="An isometric timeline covering 1 second, with 32 separate game states being transmitted from a game server - this represents a 32-tick game server" class="opaque" loading="lazy">
 							<figcaption>A server with a tickrate of 32 — every second, the server sends 32 state updates</figcaption>
 						</figure>
 					</div>
@@ -111,7 +111,7 @@ ctaSubtitle: Gaming infrastructure that reaches more players in Asia-Pacific.
 					</div>
 					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
 						<figure>
-							<img src="/img/content/what-is-a-game-server/game-server-hardware-annotated-illustration.png" alt="Annotated isometric illustration of game server hardware with CPU, RAM, fans, network cards, power supply, solid state drives and a motherboard.">
+							<img src="/img/content/what-is-a-game-server/game-server-hardware-annotated-illustration.png" alt="Annotated isometric illustration of game server hardware with CPU, RAM, fans, network cards, power supply, solid state drives and a motherboard." loading="lazy">
 							<figcaption>The standard components in a game server</figcaption>
 						</figure>
 					</div>
@@ -129,7 +129,7 @@ ctaSubtitle: Gaming infrastructure that reaches more players in Asia-Pacific.
 						<figure>
 							<picture>
 								<source srcset="/img/content/what-is-a-game-server/peer-to-peer-game-server-console.webp" type="image/webp">
-								<img src="/img/content/what-is-a-game-server/peer-to-peer-game-server-console.jpg" alt="A mockup of a gaming console, the most common hardware for a peer-to-peer game server">
+								<img src="/img/content/what-is-a-game-server/peer-to-peer-game-server-console.jpg" alt="A mockup of a gaming console, the most common hardware for a peer-to-peer game server" loading="lazy">
 							</picture>
 							<figcaption>Yep — your console can be a game server.</figcaption>
 						</figure>
@@ -138,14 +138,14 @@ ctaSubtitle: Gaming infrastructure that reaches more players in Asia-Pacific.
 						<!-- End Wide Image — With Caption -->
 						<p>While peer-to-peer games are cheaper for the developers (as they don’t have to buy dedicated servers), it usually isn’t great for players.</p>
 						<p><strong>Running both the game client and game server at the same time can be taxing on the device</strong> — and all the players in the game are at the mercy of the “host” player’s internet connection. If the host’s connection is poor, everyone in the game suffers.</p>
-						<p>For games with more than a handful of players, <strong>peer-to-peer game servers aren’t common</strong>, because they can’t dedicate their limited power to hosting the server, and they’re not optimised for handling lots of simultaneous connections.</p>
+						<p><strong>Peer-to-peer game servers can’t handle a large number of players</strong> because they’re limited by the connection quality, not built for handling lots of connections at once, and can’t focus all their power on hosting the game.</p>
 						<!-- Wide Image - With Caption -->
 					</div>
 					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
 						<figure>
 							<picture>
 								<source srcset="/img/content/what-is-a-game-server/vintage-computer-hardware.webp" type="image/webp">
-								<img src="/img/content/story/game-server-image-4.png" alt="An old piece of computer hardware which would be incapable of running a modern day gaming server">
+								<img src="/img/content/story/game-server-image-4.png" alt="An old computer which would be incapable of running a modern day game server" loading="lazy">
 								<figcaption>No matter the kind of server, it probably won’t run on one of these.</figcaption>
 							</picture>
 						</figure>
@@ -154,20 +154,58 @@ ctaSubtitle: Gaming infrastructure that reaches more players in Asia-Pacific.
 						<!-- End Wide Image - With Caption -->
 						<h2 class="mt-4">Where are game servers located?</h2>
 						<h3>Most dedicated servers are in data centres</h3>
-						<p>Because dedicated servers are designed for 24/7 operation, most are located in purpose-built data centres in major cities.</p>
+						<p>Dedicated servers are usually located in <strong>purpose-built data centres</strong> in major cities, designed for 24/7 uptime and operation.</p>
 						<p>Data centres have built in cooling systems (to keep hardware running optimally), insanely-fast internet connectivity, and most have two separate power sources to ensure round-the-clock availability.</p>
+						<p>For gaming, where connection quality is critical, data centres are the best place for game servers.</p>
+						<!-- Wide Image - With Caption -->
+					</div>
+					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
+						<figure>
+							<picture>
+								<source srcset="/img/content/what-is-a-game-server/server-racks-in-a-data-centre.webp" type="image/webp">
+								<img src="/img/content/story/server-racks-in-a-data-centre.jpg" alt="A row of server racks at night in a data centre, lit in a blue colour." loading="lazy">
+							</picture>
+							<figcaption>A row of server racks in a data centre</figcaption>
+						</figure>
+					</div>
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<!-- End Wide Image - With Caption -->
 						<h3 class="mt-4">Other servers are in people’s homes</h3>
-						<p>Some people host their own dedicated game servers servers at home — although this isn’t a recommended approach. People who do this need to organise a good quality internet connection with large upload and download speeds — as well as backup power and cooling.</p>
-						<p>And lastly, peer-to-peer game servers run on players’ game console or device — so these can be anywhere — usually in their house!</p>
-						<p></p>
-						<p class="fail mt-8">Both peer-to-peer and hosting from a home computer use one player’s home network.</p>
-						<p>Which means everyone relies on home internet of the host.</p>
-						<p>In peer-to-peer, the networking will attempt the best connection, but the host’s location can skew the ping to the advantage of certain players.</p>
-						<p>Servers that are run from data centres have a lot of benefits over these two kinds of hosting.</p>
-						<p>Most importantly: they are designed for and built with hosting multiplayer games in mind.</p>
-						<p>The best experience for gamers is either dedicated servers from the developer or hosting their own dedicated server in a data centre. </p>
-						<p>But the connection to these servers isn’t instant. The time between your information being sent to the server, and the server being able to respond is called ping.</p>
-						<h2 class="mt-4 fail">How does game server hosting work?</h2>
+						<p>Some people host their own dedicated game servers servers at home, although this isn’t a recommended approach.</p>
+						<p>People who do this need to organise a good quality internet connection with large upload and download speeds, as well as backup power and cooling.</p>
+						<p>And lastly, peer-to-peer game servers run on players’ game console or device — so these can be anywhere — usually in their house.</p>
+						<h2 class="mt-4">How are game servers set up?</h2>
+						<p>To set up a game server, a server <strong>needs to have the game’s “server binary” installed</strong>.</p>
+						<p>This is the specialised software that runs the game world, keeps track of in-game actions and object properties, and controls the calculation of the game state in real-time.</p>
+						<p>Players run a separate “client” version of the multiplayer game that sends information to (and receives information from) the game server.</p>
+						<h3 class="mt-4">For many games, the developer organises it</h3>
+						<p>Many of the most popular multiplayer games like <strong>Fortnite, Valorant, Overwatch, and Among Us have servers that are set up by the game developer, and they don’t release the server binary</strong>.</p>
+						<p>So you can’t host your own game server for games like this.</p>
+						<p>Why don’t they release server binaries? There’s a range of reasons, including:</p>
+						<ol>
+							<li class="mb-1"><strong>Privacy</strong><br>keeping server binaries private can stop cheating or game modification</li>
+							<li class="mb-1"><strong>Quality control</strong><br>managing servers and server hardware in-house means it’s set up exactly how they want it</li>
+							<li class="mb-1"><strong>Ease of update</strong><br>when the developer updates the server software, they can quickly roll the update out</li>
+						</ol>
+						<p>The downside of this is, if the developer decides to shut down the servers or stop working on the game, the multiplayer community dies with it.</p>
+						<h3 class="mt-4">For some games, you can host your own server</h3>
+						<p>Some developers release the server binary for their games, which often leads to the game having a much longer life-span.</p>
+						<p>Games that let you host your own servers for include:</p>
+						<ul>
+							<li>Minecraft</li>
+							<li>Team Fortress 2</li>
+							<li>Counter-Strike: Global Offensive (CS:GO)</li>
+							<li>Valheim</li>
+							<li>ARK: Survival Evolved</li>
+						</ul>
+						<p>To set up a server for a game like this, there are two options:</p>
+						<h4 class="mt-4">Manually setting up your own server</h4>
+						<p><strong>To do this, you’ll need some technical capability</strong>, preferably experience with Linux. And you’ll need access to a server.</p>
+						<p class="faded">(by the way we offer <a href="/cloud/">cloud servers</a> and <a href="/dedicated-servers/">dedicated servers</a>)</p>
+						<p>The easiest way to set up a game server is to use a free and open-source tool like <a href="https://linuxgsm.com/" rel="noopener">LinuxGSM</a>, which lets you set up servers for a range of games. Alternatively, check our <a href="https://pterodactyl.io/" rel="noopener">Pterodactyl</a> or <a href="https://developer.valvesoftware.com/wiki/SteamCMD" rel="noopener">SteamCMD</a> (which lets you set up servers for a range of Steam games).</p>
+						<h4 class="mt-4">Using a game server hosting provider</h4>
+						<p>An easier option (if you don’t want to handle the technical setup) is to purchase preconfigured servers through a game server hosting provider.</p>
+						<p class="fail mt-8">But the connection to these servers isn’t instant. The time between your information being sent to the server, and the server being able to respond is called ping.</p>
 						<h2 class="mt-4">How game servers receive data and resolve differences</h2>
 						<h3 class="mt-4">The ways to send data to a server</h3>
 						<p class="fail">https://gafferongames.com/post/introduction_to_networked_physics/</p>
@@ -194,13 +232,6 @@ ctaSubtitle: Gaming infrastructure that reaches more players in Asia-Pacific.
 						<p>In a multiplayer game, two players seeing different versions of the game can cause problems.</p>
 						<p class="fail">When you duck behind cover in Counter-Strike or Call of Duty — only to be shot from an angle that is seemingly impossible — that’s the fault of the server desynchronising.</p>
 						<p class="fail">A synchronised game state means that people can land headshots and play as intended, whereas a desynchronised game will have them sending angry emails instead.</p>
-						<h2 class="mt-4">Where are game servers located?</h2>
-						<p>A game server can be anywhere, including on your desk, if developers release server binaries.</p>
-						<p>A server binary is an executable software that runs the game server. In essence, the server binary is the program that runs the game world, while your version of the multiplayer game sends information to it.</p>
-						<p>Hosting games with a server binary on a computer in your home turns your computer into the host. </p>
-						<p>Many games that release the binary and server software have long life spans and increased control given to the players. Team Fortress 2, Counter-Strike, and Minecraft are examples of popular games that give more control to players who host their own servers.</p>
-						<p>If a developer does release the server binary, those can then be hosted from the home computer or a data centre, the key technical difference being speed and location.</p>
-						<p>Some people use an old PC to run servers. But not everyone has the processing power or hardware required to run multiplayer computer games.</p>
 						<h2>What is a private dedicated gaming server?</h2>
 						<p>A private dedicated server is when an individual player sets up, either locally or at a data centre, a private server.</p>
 						<p>While many gamers enjoy playing on public servers, there are several advantages to setting up a private server. Whether it is a local or remote server, running your own game server will have benefits. </p>
