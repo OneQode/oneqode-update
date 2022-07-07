@@ -122,10 +122,10 @@ ctaSubtitle: Gaming infrastructure that reaches more players in Asia-Pacific.
 						<p>While processing data is important, a game server is also <strong>optimised for high-throughput network connectivity</strong>. Because lots of people connect and send data to the server, a game server will typically have a powerful network card (or cards) to support lots of simultaneous connections.</p>
 						<h3 class="mt-4">Peer-to-Peer game servers</h3>
 						<p>Peer-to-peer game servers are less common — and games that use it have fewer concurrent players in a match (e.g. Super Smash Bros. Ultimate).</p>
-						<p>In peer-to-peer games, the <strong>game assigns one player’s device to also host the match</strong>, so that players’ device runs the server in the background, while the player is also playing on the same device.</p>
+						<p>In peer-to-peer games, the <strong>game assigns one player’s device to also host the match</strong>, so that players’ device runs the game server in the background, while the player is also playing on the same device.</p>
 					<!-- Wide Image — With Caption -->
 					</div>
-					<div class="col-xs-12 col-md-10 col-md-offset-1">
+					<div class="col-xs-12 col-md-10 col-md-offset-1 mb-4">
 						<figure>
 							<picture>
 								<source srcset="/img/content/what-is-a-game-server/peer-to-peer-game-server-console.webp" type="image/webp">
@@ -137,8 +137,29 @@ ctaSubtitle: Gaming infrastructure that reaches more players in Asia-Pacific.
 					<div class="col-xs-12 col-md-8 col-md-offset-2">
 						<!-- End Wide Image — With Caption -->
 						<p>While peer-to-peer games are cheaper for the developers (as they don’t have to buy dedicated servers), it usually isn’t great for players.</p>
-						<p>Running both the game client and game server can be taxing — and if the “host” player has a bad internet connection, it can be a bad experience for everyone in the game.</p>
+						<p><strong>Running both the game client and game server at the same time can be taxing on the device</strong> — and all the players in the game are at the mercy of the “host” player’s internet connection. If the host’s connection is poor, everyone in the game suffers.</p>
+						<p>For games with more than a handful of players, <strong>peer-to-peer game servers aren’t common</strong>, because they can’t dedicate their limited power to hosting the server, and they’re not optimised for handling lots of simultaneous connections.</p>
+						<!-- Wide Image - With Caption -->
+					</div>
+					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
+						<figure>
+							<picture>
+								<source srcset="/img/content/what-is-a-game-server/vintage-computer-hardware.webp" type="image/webp">
+								<img src="/img/content/story/game-server-image-4.png" alt="An old piece of computer hardware which would be incapable of running a modern day gaming server">
+								<figcaption>No matter the kind of server, it probably won’t run on one of these.</figcaption>
+							</picture>
+						</figure>
+					</div>
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<!-- End Wide Image - With Caption -->
 						<h2 class="mt-4">Where are game servers located?</h2>
+						<h3>Most dedicated servers are in data centres</h3>
+						<p>Because dedicated servers are designed for 24/7 operation, most are located in purpose-built data centres in major cities.</p>
+						<p>Data centres have built in cooling systems (to keep hardware running optimally), insanely-fast internet connectivity, and most have two separate power sources to ensure round-the-clock availability.</p>
+						<h3 class="mt-4">Other servers are in people’s homes</h3>
+						<p>Some people host their own dedicated game servers servers at home — although this isn’t a recommended approach. People who do this need to organise a good quality internet connection with large upload and download speeds — as well as backup power and cooling.</p>
+						<p>And lastly, peer-to-peer game servers run on players’ game console or device — so these can be anywhere — usually in their house!</p>
+						<p></p>
 						<p class="fail mt-8">Both peer-to-peer and hosting from a home computer use one player’s home network.</p>
 						<p>Which means everyone relies on home internet of the host.</p>
 						<p>In peer-to-peer, the networking will attempt the best connection, but the host’s location can skew the ping to the advantage of certain players.</p>
@@ -146,19 +167,6 @@ ctaSubtitle: Gaming infrastructure that reaches more players in Asia-Pacific.
 						<p>Most importantly: they are designed for and built with hosting multiplayer games in mind.</p>
 						<p>The best experience for gamers is either dedicated servers from the developer or hosting their own dedicated server in a data centre. </p>
 						<p>But the connection to these servers isn’t instant. The time between your information being sent to the server, and the server being able to respond is called ping.</p>
-						<!-- Wide Image - With Caption -->
-					</div>
-					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
-						<figure>
-							<picture>
-								<source srcset="/img/content/what-is-a-game-server/vintage-computer-hardware.webp" type="image/webp">
-								<img class="opaque" src="/img/content/story/game-server-image-4.png" alt="An old piece of computer hardware which would be incapable of running a modern day gaming server">
-								<figcaption>No matter the kind of server, it probably won’t run on one of these.</figcaption>
-							</picture>
-						</figure>
-					</div>
-					<div class="col-xs-12 col-md-8 col-md-offset-2">
-						<!-- End Wide Image - With Caption -->
 						<h2 class="mt-4 fail">How does game server hosting work?</h2>
 						<h2 class="mt-4">How game servers receive data and resolve differences</h2>
 						<h3 class="mt-4">The ways to send data to a server</h3>
