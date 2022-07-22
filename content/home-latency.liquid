@@ -1,0 +1,249 @@
+---
+layout: post.liquid
+section: gaming
+permalink: /what-is-a-game-server/
+metaTitle: What is a Game Server? Everything You Need to Know • OneQode
+metaDescription: In this visual guide, you’ll everything you need to know about game servers - what they are, how they work, and the key concepts behind them.
+ogImage: what-is-a-game-server.jpg
+heroImage: game-servers-in-data-center
+changefreq: never
+priority: 0.4
+title: What is a Game Server<mark class="dot">?</mark><br class="responsive"> Everything you need to know<mark class="dot">.</mark>
+author: Austin Gallagher
+authorRole: Content Lead
+date: 2022-07-18
+tags: ['qode', 'oneqode', 'telecom', 'gaming', 'servers', 'networking']
+cta: true
+ctaTitle: Setting up your servers<mark class="dot">?</mark><br> You’re in the right place<mark class="dot">.</mark>
+ctaSubtitle: Blazing-fast dedicated and cloud servers built for gaming.
+---
+		<style>
+			.no-webp section.hero {
+				background:	linear-gradient(to bottom, rgba(0,0,0,0.2) 80%, #000),
+							url(/img/bg/{{ heroImage }}.jpg) bottom center;
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+			.webp section.hero {
+				background:	linear-gradient(to bottom, rgba(0,0,0,0.2) 80%, #000),
+							url(/img/bg/{{ heroImage }}.webp) bottom center;
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+		</style>
+		<section class="pb-4 push-forward">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<h2>What is a game server?</h2>
+						<p><strong>A game server is a computer that acts as a central authority to define the current state of a multiplayer game.</strong></p>
+						<p>Players send the server updates about what they’re doing in-game — running, jumping, taking or receiving damage, fishing, anything. The server translates those inputs and returns the information back to the players.</p>
+						<p><strong>So how does the server communicate that in-game “reality”?</strong></p>
+						<img src="/img/content/what-is-a-game-server/game-server-players-hand-drawn-illustration.png" alt="A hand drawn diagram with a game server in the middle, connected to players on the outside, each sending and receiving data to the server" class="my-4">
+						<p>The server processes all inputs, settles inconsistencies, and transmits regular updates to players, providing a stream of snapshots of all elements in the game, updating the game state every tick. </p>
+						<p><strong>Sounds complicated?</strong> To explain, we need to cover two key concepts: game state and tickrate.</p>
+						<!-- Game State -->
+						<h2 class="mt-4" id="game-state">Game state: the single source of truth</h2>
+						<p><strong>The game state (or “tick”) is a snapshot in time of the properties of every object in the game world.</strong></p>
+						<!-- Wide Image -->
+					</div>
+					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
+						<figure>
+							<picture>
+								<source srcset="/img/content/what-is-a-game-server/game-state.webp" type="image/webp">
+								<img src="/img/content/what-is-a-game-server/game-state.jpg" alt="An isometric illustration of 'game state', a snapshot being taken of a game in progress. Text is superimposed with 'game state: player positions, object properties, environment settings, scoreboard'" class="opaque" loading="lazy">
+							</picture>
+						</figure>
+					</div>
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<!-- End Wide Image -->
+						<p>With lots of players doing things at the same time, often near to each other in-game, a server has to keep track of what happens and when — to make sure everyone’s on the same page.</p>
+						<p><strong>When the game state is calculated, the server transmits it to each connected player’s device</strong> — after this, each player’s game world is refreshed.</p>
+						<p>And this happens many times each second.</p>
+						<!-- Tickrate -->
+						<h2 class="mt-4" id="tickrate">Tickrate: the frequency of game state updates</h2>
+						<p><strong>Tickrate is the number of times an updated game state is calculated and broadcast by a game server to players every second.</strong></p>
+						<p>The higher the tickrate, the more precise a game simulation is.</p>
+						<p>If a server sends 64 updates to players each second, it’s referred to as a “64-tick”, or “64 Hz” server (because Hertz, or Hz, is the unit of frequency).</p>
+						<p>Here’s what that looks like in action:</p>
+						<h3 class="mt-4">Visualising a 64-tick server</h3>
+						<!-- Wide Image -->
+					</div>
+					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
+						<figure>
+							<img src="/img/content/what-is-a-game-server/tickrate-example-64-ticks-each-second.png" alt="An isometric timeline covering 1 second, with 64 separate game states being transmitted from a game server - this represents a 64-tick game server" class="opaque" loading="lazy">
+							<figcaption>A server with a tickrate of 64 — every second, the server sends 64 state updates</figcaption>
+						</figure>
+					</div>
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<!-- End Wide Image -->
+						<h3 class="mt-4">Visualising a 32-tick server</h3>
+						<p>Compare that with a 32-tick server, which sends updates half as often:</p>
+						<!-- Wide Image -->
+					</div>
+					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
+						<figure>
+							<img src="/img/content/what-is-a-game-server/tickrate-example-32-ticks-each-second.png" alt="An isometric timeline covering 1 second, with 32 separate game states being transmitted from a game server - this represents a 32-tick game server" class="opaque" loading="lazy">
+							<figcaption>A server with a tickrate of 32 — every second, the server sends 32 state updates</figcaption>
+						</figure>
+					</div>
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<!-- End Wide Image -->
+						<h3 class="mt-4">What tickrate means for gamers</h3>
+						<p>When more game states are calculated every second, more movement and action can be accounted for — so a higher tickrate produces <strong>a more precise, high-fidelity gaming experience</strong>.</p>
+						<p>That means split-second actions in the game can be factored in — and it can make the difference between life or death in-game — especially in a first-person shooter.</p>
+						<h3 class="mt-4">When does tickrate matter?</h3>
+						<p>Not all games need game servers with a high tickrate.</p>
+						<p>Turn-based games, like Hearthstone, don’t need a high tickrate since the game does not update multiple times a second.</p>
+						<p>Real-time games like DOTA, Counter-Strike, or Valorant do need higher tickrates to maintain synchronised game states.</p>
+						<p>Games with real-time action usually feature higher-tickrate servers (64 or 128-tick) for the best gameplay experience.</p>
+						<h3 class="mt-4">How does tickrate affect a game server?</h3>
+						<p>As tickrate increases, more processing power and more bandwidth are required.</p>
+						<p>When you double the tickrate from 32 to 64 ticks, you <strong>increase the load</strong> on the server, as players send data more frequently, and the server needs to calculate the game state more often.</p>
+						<p>So <strong>to game on a high tick server, the server needs to be fast</strong> enough to handle the extra workload.</p>
+						<!-- Hardware -->
+						<h2 class="mt-4" id="hardware">What type of hardware is in a game server?</h2>
+						<h3>Dedicated game servers</h3>
+						<p>A dedicated game server is the most common type of game server.</p>
+						<p>Under the hood, a dedicated game server is a powerful computer designed to be run 24/7. Like any other computer, it features a motherboard, CPU (processor), RAM (memory for short-term storage), power supply, fans, and a case.</p>
+						<!-- Wide Image — With Caption -->
+					</div>
+					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
+						<figure>
+							<img src="/img/content/what-is-a-game-server/game-server-hardware-annotated-illustration.png" alt="Annotated isometric illustration of game server hardware with CPU, RAM, fans, network cards, power supply, solid state drives and a motherboard." loading="lazy">
+							<figcaption>The standard components in a game server</figcaption>
+						</figure>
+					</div>
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<!-- End Wide Image — With Caption -->
+						<p>The single <strong>most important component in a game server is the CPU</strong>, which processes all the data in an online game.</p>
+						<p>By having a faster CPU, a game server can run more calculations every second — so it can handle higher tickrate gaming workloads.</p>
+						<p>While processing data is important, a game server is also <strong>optimised for high-throughput network connectivity</strong>. Because lots of people connect and send data to the server, a game server will typically have a powerful network card (or cards) to support lots of simultaneous connections.</p>
+						<p>Generally OneQode has four network cards running at 10 gigabits per second on our servers. For some perspective, your home computer probably has a one gigabit per second network card.</p>
+						<h3 class="mt-4">Peer-to-Peer game servers</h3>
+						<p>Peer-to-peer game servers are less common — and games that use them have fewer concurrent players in a match (e.g. Super Smash Bros. Ultimate).</p>
+						<p>In peer-to-peer games, the <strong>game assigns one player’s device to also host the match</strong>, so that player’s device runs the game server in the background, while the player is also playing on the same device.</p>
+					<!-- Wide Image — With Caption -->
+					</div>
+					<div class="col-xs-12 col-md-10 col-md-offset-1 mb-4">
+						<figure>
+							<picture>
+								<source srcset="/img/content/what-is-a-game-server/peer-to-peer-game-server-console.webp" type="image/webp">
+								<img src="/img/content/what-is-a-game-server/peer-to-peer-game-server-console.jpg" alt="A mockup of a gaming console, the most common hardware for a peer-to-peer game server" loading="lazy">
+							</picture>
+							<figcaption>Yep — your console can be a game server.</figcaption>
+						</figure>
+					</div>
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<!-- End Wide Image — With Caption -->
+						<p>While peer-to-peer games are cheaper for the developers (as they don’t have to buy dedicated servers), it usually isn’t great for players.</p>
+						<p><strong>Running both the game client and game server at the same time can be taxing on the device</strong> — and all the players in the game are at the mercy of the “host” player’s internet connection. If the host’s connection is poor, everyone in the game suffers.</p>
+						<p><strong>Peer-to-peer game servers can’t handle a large number of players</strong> because they’re limited by the connection quality, not built for handling lots of connections at once, and can’t focus all their power on hosting the game.</p>
+						<!-- Wide Image - With Caption -->
+					</div>
+					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
+						<figure>
+							<picture>
+								<source srcset="/img/content/what-is-a-game-server/vintage-computer-hardware.webp" type="image/webp">
+								<img src="/img/content/story/game-server-image-4.png" alt="An old computer which would be incapable of running a modern day game server" loading="lazy">
+								<figcaption>No matter the kind of server, it probably won’t run on one of these.</figcaption>
+							</picture>
+						</figure>
+					</div>
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<!-- End Wide Image - With Caption -->
+						<h2 class="mt-4">Where are game servers located?</h2>
+						<h3>Most dedicated servers are in data centres</h3>
+						<p>Dedicated servers are usually located in <strong>purpose-built data centres</strong> in major cities, designed for 24/7 uptime and operation.</p>
+						<p>Data centres have built-in cooling systems (to keep hardware running optimally), insanely-fast internet connectivity, and most have two separate power sources to ensure round-the-clock availability.</p>
+						<p>For gaming, where connection quality is critical, data centres are the best place for game servers.</p>
+						<!-- Wide Image - With Caption -->
+					</div>
+					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
+						<figure>
+							<picture>
+								<source srcset="/img/content/what-is-a-game-server/server-racks-in-a-data-centre.webp" type="image/webp">
+								<img src="/img/content/story/server-racks-in-a-data-centre.jpg" alt="A row of server racks at night in a data centre, lit in a blue colour." loading="lazy">
+							</picture>
+							<figcaption>A row of server racks in a data centre</figcaption>
+						</figure>
+					</div>
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<!-- End Wide Image - With Caption -->
+						<h3 class="mt-4">Other servers are in people’s homes</h3>
+						<p>Some people host their own dedicated game servers at home, although this isn’t a recommended approach.</p>
+						<p>People who do this need to organise a good quality internet connection with large upload and download speeds, as well as backup power and cooling.</p>
+						<p>And lastly, peer-to-peer game servers run on the hosting player’s game console or device — so these can be anywhere — usually in their house.</p>
+						<h2 class="mt-4">How are game servers set up?</h2>
+						<p>To set up a game server, a server <strong>needs to have the game’s “server binary” installed</strong>.</p>
+						<p>This is the specialised software that runs the game world, keeps track of in-game actions and object properties, and controls the calculation of the game state in real-time.</p>
+						<p>Players run a separate “client” version of the multiplayer game that sends information to (and receives information from) the game server.</p>
+						<h3 class="mt-4">For many games, the developer organise servers</h3>
+						<p>Many of the most popular multiplayer games like <strong>Fortnite, Valorant, Overwatch, and Apex Legends have servers that are set up by the game developer — and they don’t release the server binaries</strong>.</p>
+						<!-- Wide Image -->
+					</div>
+					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
+						<picture>
+							<source srcset="/img/content/what-is-a-game-server/games-developers-organise-hosting-for.webp" type="image/webp">
+							<img src="/img/content/what-is-a-game-server/games-developers-organise-hosting-for.jpg" alt="Stylised cover art for some of the games that you can't host your own servers for: Fortnite, Valorant, Overwatch and Apex Legends" loading="lazy">
+						</picture>
+					</div>
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<!-- End Wide Image -->
+						<p>So you can’t host your own game server for games like this.</p>
+						<p>Why don’t they release server binaries? There are a range of reasons, including:</p>
+						<ol>
+							<li class="mb-1"><strong>Privacy</strong><br>keeping server binaries private can stop cheating or game modification</li>
+							<li class="mb-1"><strong>Quality control</strong><br>managing servers and server hardware in-house means it’s set up exactly how they want it</li>
+							<li class="mb-1"><strong>Ease of update</strong><br>when the developer updates the server software, they can quickly roll the update out</li>
+						</ol>
+						<p>The downside of this is that if the developer decides to shut down the servers or stop working on the game, the multiplayer community dies with it.</p>
+						<h3 class="mt-4">For some games, you can host your own servers</h3>
+						<p>Some developers release the server binary for their games, which often leads to the game having a much longer life span.</p>
+						<p>Games that let you host your own servers include:</p>
+						<ul>
+							<li>Minecraft</li>
+							<li>Team Fortress 2</li>
+							<li>Counter-Strike: Global Offensive (CS:GO)</li>
+							<li>Valheim</li>
+							<li>ARK: Survival Evolved</li>
+						</ul>
+						<!-- Wide Image -->
+					</div>
+					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
+						<picture>
+							<source srcset="/img/content/what-is-a-game-server/games-anyone-can-host-servers-for.webp" type="image/webp">
+							<img src="/img/content/what-is-a-game-server/games-anyone-can-host-servers-for.jpg" alt="Stylised cover art for some of the games that anyone can host their own server for: Minecraft, Team Fortress 2, Counter-Strike: Global Offensive, and Ark: Survival Evolved." loading="lazy">
+						</picture>
+					</div>
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<!-- End Wide Image -->
+						<p>To set up a server, there are two ways to do it:</p>
+						<h4 class="mt-4">Option #1: Manually set up your own server</h4>
+						<p>To do this, <strong>you’ll need some technical capability</strong>, preferably experience with Linux. And you’ll need access to a server.</p>
+						<!-- <p class="faded"><em>(by the way, we offer <a href="/cloud/">cloud servers</a> and <a href="/dedicated-servers/">dedicated servers</a>)</em></p> -->
+						<p>The easiest way to set up a game server is to use a game server management tool like:</p>
+						<ul>
+							<li class="mb-1"><a href="https://linuxgsm.com/" target="_blank" class="external">LinuxGSM</a><br>Free, open-source command-line application supporting 125+ games</li>
+							<li class="mb-1"><a href="https://pterodactyl.io/" target="_blank" class="external">Pterodactyl</a><br>Free, open-source server management panel supporting 46+ games.</li>
+							<li class="mb-1"><a href="https://www.tcadmin.com/" target="_blank" class="external">TCAdmin</a><br>Paid server management panel supporting 86+ games</li>
+							<li><a href="https://developer.valvesoftware.com/wiki/SteamCMD" rel="noopener" class="external">SteamCMD</a><br>Command-line application for Steam-based game servers. The above tools use this for Steam games.</li>
+						</ul>
+						<h4 class="mt-4">Option #2: Using a game server hosting provider</h4>
+						<p>If you don’t want to handle the technical setup, you can purchase ready-to-go servers from a game server hosting provider — and there are loads to choose from.</p>
+						<p>One example of a game hosting provider is PacificES, which we recently acquired. They offer superfast <a href="https://pacifices.cloud/" target="_blank">128-tick CS:GO servers</a> for less than a dollar a day.</p>
+						<h2 class="mt-4">Well, that was an introductory guide.</h2>
+						<h3>Want to learn more?</h3>
+						<p>There’s some brilliant thinking that goes on behind the scenes with multiplayer games.</p>
+						<p>How does a server make sure everyone’s on the same page? How do developers make games feel less laggy?</p>
+						<p>Now we’re in the territory of netcode and game networking.</p>
+						<p>If you’re interested to read more about how game developers solve these challenges, check out these excellent article series:</p>
+						<ul>
+							<li class="mb-1"><a href="https://gafferongames.com/post/introduction_to_networked_physics/" target="_blank" class="external">Introduction to Networked Physics by Glenn Fiedler</a></li>
+							<li><a href="https://ruoyusun.com/2019/03/28/game-networking-1.html" target="_blank" class="external">Game Networking by Ruoyo Sun</a></li>
+						</ul>
+						<p>Be advised: the rabbit hole is deep.</p>
+						<p>🕳🐇</p>
+				</div>
+			</div>
+		</section>
