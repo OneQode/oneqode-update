@@ -35,215 +35,108 @@ ctaSubtitle: Blazing-fast dedicated and cloud servers built for gaming.
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-md-8 col-md-offset-2">
-						<h2>What is a game server?</h2>
-						<p><strong>A game server is a computer that acts as a central authority to define the current state of a multiplayer game.</strong></p>
-						<p>Players send the server updates about what they’re doing in-game — running, jumping, taking or receiving damage, fishing, anything. The server translates those inputs and returns the information back to the players.</p>
-						<p><strong>So how does the server communicate that in-game “reality”?</strong></p>
-						<img src="/img/content/what-is-a-game-server/game-server-players-hand-drawn-illustration.png" alt="A hand drawn diagram with a game server in the middle, connected to players on the outside, each sending and receiving data to the server" class="my-4">
-						<p>The server processes all inputs, settles inconsistencies, and transmits regular updates to players, providing a stream of snapshots of all elements in the game, updating the game state every tick. </p>
-						<p><strong>Sounds complicated?</strong> To explain, we need to cover two key concepts: game state and tickrate.</p>
-						<!-- Game State -->
-						<h2 class="mt-4" id="game-state">Game state: the single source of truth</h2>
-						<p><strong>The game state (or “tick”) is a snapshot in time of the properties of every object in the game world.</strong></p>
-						<!-- Wide Image -->
-					</div>
-					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
-						<figure>
-							<picture>
-								<source srcset="/img/content/what-is-a-game-server/game-state.webp" type="image/webp">
-								<img src="/img/content/what-is-a-game-server/game-state.jpg" alt="An isometric illustration of 'game state', a snapshot being taken of a game in progress. Text is superimposed with 'game state: player positions, object properties, environment settings, scoreboard'" class="opaque" loading="lazy">
-							</picture>
-						</figure>
-					</div>
-					<div class="col-xs-12 col-md-8 col-md-offset-2">
-						<!-- End Wide Image -->
-						<p>With lots of players doing things at the same time, often near to each other in-game, a server has to keep track of what happens and when — to make sure everyone’s on the same page.</p>
-						<p><strong>When the game state is calculated, the server transmits it to each connected player’s device</strong> — after this, each player’s game world is refreshed.</p>
-						<p>And this happens many times each second.</p>
-						<!-- Tickrate -->
-						<h2 class="mt-4" id="tickrate">Tickrate: the frequency of game state updates</h2>
-						<p><strong>Tickrate is the number of times an updated game state is calculated and broadcast by a game server to players every second.</strong></p>
-						<p>The higher the tickrate, the more precise a game simulation is.</p>
-						<p>If a server sends 64 updates to players each second, it’s referred to as a “64-tick”, or “64 Hz” server (because Hertz, or Hz, is the unit of frequency).</p>
-						<p>Here’s what that looks like in action:</p>
-						<h3 class="mt-4">Visualising a 64-tick server</h3>
-						<!-- Wide Image -->
-					</div>
-					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
-						<figure>
-							<img src="/img/content/what-is-a-game-server/tickrate-example-64-ticks-each-second.png" alt="An isometric timeline covering 1 second, with 64 separate game states being transmitted from a game server - this represents a 64-tick game server" class="opaque" loading="lazy">
-							<figcaption>A server with a tickrate of 64 — every second, the server sends 64 state updates</figcaption>
-						</figure>
-					</div>
-					<div class="col-xs-12 col-md-8 col-md-offset-2">
-						<!-- End Wide Image -->
-						<h3 class="mt-4">Visualising a 32-tick server</h3>
-						<p>Compare that with a 32-tick server, which sends updates half as often:</p>
-						<!-- Wide Image -->
-					</div>
-					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
-						<figure>
-							<img src="/img/content/what-is-a-game-server/tickrate-example-32-ticks-each-second.png" alt="An isometric timeline covering 1 second, with 32 separate game states being transmitted from a game server - this represents a 32-tick game server" class="opaque" loading="lazy">
-							<figcaption>A server with a tickrate of 32 — every second, the server sends 32 state updates</figcaption>
-						</figure>
-					</div>
-					<div class="col-xs-12 col-md-8 col-md-offset-2">
-						<!-- End Wide Image -->
-						<h3 class="mt-4">What tickrate means for gamers</h3>
-						<p>When more game states are calculated every second, more movement and action can be accounted for — so a higher tickrate produces <strong>a more precise, high-fidelity gaming experience</strong>.</p>
-						<p>That means split-second actions in the game can be factored in — and it can make the difference between life or death in-game — especially in a first-person shooter.</p>
-						<h3 class="mt-4">When does tickrate matter?</h3>
-						<p>Not all games need game servers with a high tickrate.</p>
-						<p>Turn-based games, like Hearthstone, don’t need a high tickrate since the game does not update multiple times a second.</p>
-						<p>Real-time games like DOTA, Counter-Strike, or Valorant do need higher tickrates to maintain synchronised game states.</p>
-						<p>Games with real-time action usually feature higher-tickrate servers (64 or 128-tick) for the best gameplay experience.</p>
-						<h3 class="mt-4">How does tickrate affect a game server?</h3>
-						<p>As tickrate increases, more processing power and more bandwidth are required.</p>
-						<p>When you double the tickrate from 32 to 64 ticks, you <strong>increase the load</strong> on the server, as players send data more frequently, and the server needs to calculate the game state more often.</p>
-						<p>So <strong>to game on a high tick server, the server needs to be fast</strong> enough to handle the extra workload.</p>
-						<!-- Hardware -->
-						<h2 class="mt-4" id="hardware">What type of hardware is in a game server?</h2>
-						<h3>Dedicated game servers</h3>
-						<p>A dedicated game server is the most common type of game server.</p>
-						<p>Under the hood, a dedicated game server is a powerful computer designed to be run 24/7. Like any other computer, it features a motherboard, CPU (processor), RAM (memory for short-term storage), power supply, fans, and a case.</p>
-						<!-- Wide Image — With Caption -->
-					</div>
-					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
-						<figure>
-							<img src="/img/content/what-is-a-game-server/game-server-hardware-annotated-illustration.png" alt="Annotated isometric illustration of game server hardware with CPU, RAM, fans, network cards, power supply, solid state drives and a motherboard." loading="lazy">
-							<figcaption>The standard components in a game server</figcaption>
-						</figure>
-					</div>
-					<div class="col-xs-12 col-md-8 col-md-offset-2">
-						<!-- End Wide Image — With Caption -->
-						<p>The single <strong>most important component in a game server is the CPU</strong>, which processes all the data in an online game.</p>
-						<p>By having a faster CPU, a game server can run more calculations every second — so it can handle higher tickrate gaming workloads.</p>
-						<p>While processing data is important, a game server is also <strong>optimised for high-throughput network connectivity</strong>. Because lots of people connect and send data to the server, a game server will typically have a powerful network card (or cards) to support lots of simultaneous connections.</p>
-						<p>Generally OneQode has four network cards running at 10 gigabits per second on our servers. For some perspective, your home computer probably has a one gigabit per second network card.</p>
-						<h3 class="mt-4">Peer-to-Peer game servers</h3>
-						<p>Peer-to-peer game servers are less common — and games that use them have fewer concurrent players in a match (e.g. Super Smash Bros. Ultimate).</p>
-						<p>In peer-to-peer games, the <strong>game assigns one player’s device to also host the match</strong>, so that player’s device runs the game server in the background, while the player is also playing on the same device.</p>
-					<!-- Wide Image — With Caption -->
-					</div>
-					<div class="col-xs-12 col-md-10 col-md-offset-1 mb-4">
-						<figure>
-							<picture>
-								<source srcset="/img/content/what-is-a-game-server/peer-to-peer-game-server-console.webp" type="image/webp">
-								<img src="/img/content/what-is-a-game-server/peer-to-peer-game-server-console.jpg" alt="A mockup of a gaming console, the most common hardware for a peer-to-peer game server" loading="lazy">
-							</picture>
-							<figcaption>Yep — your console can be a game server.</figcaption>
-						</figure>
-					</div>
-					<div class="col-xs-12 col-md-8 col-md-offset-2">
-						<!-- End Wide Image — With Caption -->
-						<p>While peer-to-peer games are cheaper for the developers (as they don’t have to buy dedicated servers), it usually isn’t great for players.</p>
-						<p><strong>Running both the game client and game server at the same time can be taxing on the device</strong> — and all the players in the game are at the mercy of the “host” player’s internet connection. If the host’s connection is poor, everyone in the game suffers.</p>
-						<p><strong>Peer-to-peer game servers can’t handle a large number of players</strong> because they’re limited by the connection quality, not built for handling lots of connections at once, and can’t focus all their power on hosting the game.</p>
-						<!-- Wide Image - With Caption -->
-					</div>
-					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
-						<figure>
-							<picture>
-								<source srcset="/img/content/what-is-a-game-server/vintage-computer-hardware.webp" type="image/webp">
-								<img src="/img/content/story/game-server-image-4.png" alt="An old computer which would be incapable of running a modern day game server" loading="lazy">
-								<figcaption>No matter the kind of server, it probably won’t run on one of these.</figcaption>
-							</picture>
-						</figure>
-					</div>
-					<div class="col-xs-12 col-md-8 col-md-offset-2">
-						<!-- End Wide Image - With Caption -->
-						<h2 class="mt-4">Where are game servers located?</h2>
-						<h3>Most dedicated servers are in data centres</h3>
-						<p>Dedicated servers are usually located in <strong>purpose-built data centres</strong> in major cities, designed for 24/7 uptime and operation.</p>
-						<p>Data centres have built-in cooling systems (to keep hardware running optimally), insanely-fast internet connectivity, and most have two separate power sources to ensure round-the-clock availability.</p>
-						<p>For gaming, where connection quality is critical, data centres are the best place for game servers.</p>
-						<!-- Wide Image - With Caption -->
-					</div>
-					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
-						<figure>
-							<picture>
-								<source srcset="/img/content/what-is-a-game-server/server-racks-in-a-data-centre.webp" type="image/webp">
-								<img src="/img/content/story/server-racks-in-a-data-centre.jpg" alt="A row of server racks at night in a data centre, lit in a blue colour." loading="lazy">
-							</picture>
-							<figcaption>A row of server racks in a data centre</figcaption>
-						</figure>
-					</div>
-					<div class="col-xs-12 col-md-8 col-md-offset-2">
-						<!-- End Wide Image - With Caption -->
-						<h3 class="mt-4">Other servers are in people’s homes</h3>
-						<p>Some people host their own dedicated game servers at home, although this isn’t a recommended approach.</p>
-						<p>People who do this need to organise a good quality internet connection with large upload and download speeds, as well as backup power and cooling.</p>
-						<p>And lastly, peer-to-peer game servers run on the hosting player’s game console or device — so these can be anywhere — usually in their house.</p>
-						<h2 class="mt-4">How are game servers set up?</h2>
-						<p>To set up a game server, a server <strong>needs to have the game’s “server binary” installed</strong>.</p>
-						<p>This is the specialised software that runs the game world, keeps track of in-game actions and object properties, and controls the calculation of the game state in real-time.</p>
-						<p>Players run a separate “client” version of the multiplayer game that sends information to (and receives information from) the game server.</p>
-						<h3 class="mt-4">For many games, the developer organise servers</h3>
-						<p>Many of the most popular multiplayer games like <strong>Fortnite, Valorant, Overwatch, and Apex Legends have servers that are set up by the game developer — and they don’t release the server binaries</strong>.</p>
-						<!-- Wide Image -->
-					</div>
-					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
-						<picture>
-							<source srcset="/img/content/what-is-a-game-server/games-developers-organise-hosting-for.webp" type="image/webp">
-							<img src="/img/content/what-is-a-game-server/games-developers-organise-hosting-for.jpg" alt="Stylised cover art for some of the games that you can't host your own servers for: Fortnite, Valorant, Overwatch and Apex Legends" loading="lazy">
-						</picture>
-					</div>
-					<div class="col-xs-12 col-md-8 col-md-offset-2">
-						<!-- End Wide Image -->
-						<p>So you can’t host your own game server for games like this.</p>
-						<p>Why don’t they release server binaries? There are a range of reasons, including:</p>
-						<ol>
-							<li class="mb-1"><strong>Privacy</strong><br>keeping server binaries private can stop cheating or game modification</li>
-							<li class="mb-1"><strong>Quality control</strong><br>managing servers and server hardware in-house means it’s set up exactly how they want it</li>
-							<li class="mb-1"><strong>Ease of update</strong><br>when the developer updates the server software, they can quickly roll the update out</li>
-						</ol>
-						<p>The downside of this is that if the developer decides to shut down the servers or stop working on the game, the multiplayer community dies with it.</p>
-						<h3 class="mt-4">For some games, you can host your own servers</h3>
-						<p>Some developers release the server binary for their games, which often leads to the game having a much longer life span.</p>
-						<p>Games that let you host your own servers include:</p>
-						<ul>
-							<li>Minecraft</li>
-							<li>Team Fortress 2</li>
-							<li>Counter-Strike: Global Offensive (CS:GO)</li>
-							<li>Valheim</li>
-							<li>ARK: Survival Evolved</li>
-						</ul>
-						<!-- Wide Image -->
-					</div>
-					<div class="col-xs-12 col-md-10 col-md-offset-1 my-4">
-						<picture>
-							<source srcset="/img/content/what-is-a-game-server/games-anyone-can-host-servers-for.webp" type="image/webp">
-							<img src="/img/content/what-is-a-game-server/games-anyone-can-host-servers-for.jpg" alt="Stylised cover art for some of the games that anyone can host their own server for: Minecraft, Team Fortress 2, Counter-Strike: Global Offensive, and Ark: Survival Evolved." loading="lazy">
-						</picture>
-					</div>
-					<div class="col-xs-12 col-md-8 col-md-offset-2">
-						<!-- End Wide Image -->
-						<p>To set up a server, there are two ways to do it:</p>
-						<h4 class="mt-4">Option #1: Manually set up your own server</h4>
-						<p>To do this, <strong>you’ll need some technical capability</strong>, preferably experience with Linux. And you’ll need access to a server.</p>
-						<!-- <p class="faded"><em>(by the way, we offer <a href="/cloud/">cloud servers</a> and <a href="/dedicated-servers/">dedicated servers</a>)</em></p> -->
-						<p>The easiest way to set up a game server is to use a game server management tool like:</p>
-						<ul>
-							<li class="mb-1"><a href="https://linuxgsm.com/" target="_blank" class="external">LinuxGSM</a><br>Free, open-source command-line application supporting 125+ games</li>
-							<li class="mb-1"><a href="https://pterodactyl.io/" target="_blank" class="external">Pterodactyl</a><br>Free, open-source server management panel supporting 46+ games.</li>
-							<li class="mb-1"><a href="https://www.tcadmin.com/" target="_blank" class="external">TCAdmin</a><br>Paid server management panel supporting 86+ games</li>
-							<li><a href="https://developer.valvesoftware.com/wiki/SteamCMD" rel="noopener" class="external">SteamCMD</a><br>Command-line application for Steam-based game servers. The above tools use this for Steam games.</li>
-						</ul>
-						<h4 class="mt-4">Option #2: Using a game server hosting provider</h4>
-						<p>If you don’t want to handle the technical setup, you can purchase ready-to-go servers from a game server hosting provider — and there are loads to choose from.</p>
-						<p>One example of a game hosting provider is PacificES, which we recently acquired. They offer superfast <a href="https://pacifices.cloud/" target="_blank">128-tick CS:GO servers</a> for less than a dollar a day.</p>
-						<h2 class="mt-4">Well, that was an introductory guide.</h2>
-						<h3>Want to learn more?</h3>
-						<p>There’s some brilliant thinking that goes on behind the scenes with multiplayer games.</p>
-						<p>How does a server make sure everyone’s on the same page? How do developers make games feel less laggy?</p>
-						<p>Now we’re in the territory of netcode and game networking.</p>
-						<p>If you’re interested to read more about how game developers solve these challenges, check out these excellent article series:</p>
-						<ul>
-							<li class="mb-1"><a href="https://gafferongames.com/post/introduction_to_networked_physics/" target="_blank" class="external">Introduction to Networked Physics by Glenn Fiedler</a></li>
-							<li><a href="https://ruoyusun.com/2019/03/28/game-networking-1.html" target="_blank" class="external">Game Networking by Ruoyo Sun</a></li>
-						</ul>
-						<p>Be advised: the rabbit hole is deep.</p>
-						<p>🕳🐇</p>
+						<p>Are your teammates tired of you blaming it on the lag?</p>
+						<p>You miss at the pivotal moment, and your team is wiped out, defeated, and sent back to the lobby with nothing but bruised egos.</p>
+							<blockquote><p>Gif of someone dying in Apex</p>
+							</blockquote>
+						<p><strong>But you didn&#39;t choke. Your internet did.</strong></p>
+						<p>&quot;Sure,&quot; they all say. But you can hear the doubt creeping into their voice.</p>
+						<p>If only you could fix it.</p>
+						<p>But that&#39;s something for your provider to deal with, there&#39;s nothing you can do, right?</p>
+						<p>Wrong.</p>
+						<p>There&#39;s plenty that can be done to improve your connection and your game.</p>
+						<p>The first step is to get the best connection to your console or PC.</p>
+						<h2>Get off Wi-Fi and reach for the ethernet cable</h2>
+						<p>You&#39;ve heard this one before.</p>
+						<p>Wired connections offer faster and more stable connections than wireless.</p>
+						<p><strong>ROUTER MEME</strong></p>
+						<p>Your Wi-Fi might be fine for browsing YouTube &amp; Netflix, but when it comes time to boot up your favourite game, consider plugging in the ethernet cable.</p>
+						<p>Wi-Fi can be interfered with or disrupted by other electronics, metal, or even just small barriers.</p>
+						<p>A hardwired ethernet cable, particularly one of high quality, will have an almost lossless and instant connection.</p>
+						<p>There are countless guides online that will explain why ethernet cables are a better option than wireless. </p>
+						<p>To put it simply? </p>
+						<p><strong>All that interference from other networks, and other devices, won&#39;t affect the hard-wired ethernet connection.</strong></p>
+						<blockquote><p>Busy spectrum, lots of neighbours etc. the amount of wireless interference is higher than ever</p>
+						</blockquote>
+						<p>The distance between your computer or console and the internet is fully within your control, so you might as well take advantage of the best possible connection.</p>
+						<p>It isn&#39;t the most exciting option, <strong>but the ethernet cable is a ubiquitous suggestion because it is the best solution.</strong></p>
+						<h3>But my router is in another room!</h3>
+						<p>The first and easiest suggestion is to just buy a long ethernet cable and some cable organisation.</p>
+						<p>It isn&#39;t necessarily the best-looking option, and if your doors don&#39;t have a lot of clearance around the frame you may run into some issues. </p>
+						<h3>You can&#39;t run a cable down every hallway?</h3>
+						<p>You don&#39;t want to run a cable through the entire house.</p>
+						<p>You&#39;ve got a dog, a cat, a kid, or a housemate who would take issue with that.</p>
+						<p>Luckily, we&#39;ve got <strong>three options</strong> for you to not become the most hated housemate.</p>
+						<p><strong>Powerline products are one option.</strong> They use the existing wiring without your house to transmit data, and by simply buying and installing an outlet extension, you can connect an ethernet cable to the port.</p>
+						<blockquote><p>Caption: A TP-Link Powerline adaptor</p>
+						</blockquote>
+						<blockquote><p>Alt-text: An image of two powerline adaptors side by side, with power passthrough and ethernet ports</p>
+						</blockquote>
+						<p><strong>A powerline solution&#39;s effectiveness will differ based on the wiring in your home.</strong></p>
+						<p>Newer homes with high-quality wiring will allow powerline connections to offer lower latency, higher stability, and higher throughput than Wi-Fi.</p>
+						<p>Older homes with poor existing circuitry may have a worse overall connection through powerline than Wi-Fi.</p>
+						<p><strong>The best way to check? Keep the receipts.</strong></p>
+						<p>Unless you have far more tools or have wiring diagrams for your property, it is hard to gauge if a powerline connection will solve your networking issues.</p>
+						<p>Mitigate your risk and make sure there is a return policy just in case!</p>
+						<p>Hot tip: <strong>if you can afford to not penny-pinch with these, don&#39;t</strong>. Either they work and you&#39;ve got a great one, or you return them.</p>
+						<h2>Repurpose your TV Connection</h2>
+						<p>An alternative to powerline is MoCA.</p>
+						<p>MoCA stands for Multimedia over Coax Alliance, which was created to stream video.</p>
+						<p>These lines used to be connected to most people&#39;s televisions, but these days it&#39;s likely you have never connected one if you opt for streaming services.</p>
+						<p>Coax works similarly to Powerline, plugging into existing outlets within your home. </p>
+						<blockquote><p>Image of a coax outlet</p>
+						</blockquote>
+						<blockquote><p>Caption: If you have these in multiple rooms, you can use them to extend your ethernet - photo of the wall port</p>
+						</blockquote>
+						<p><strong>Many homes already have Coax installed, and this existing connection can be repurposed to lower your latency.</strong></p>
+						<p>Unlike power cables, Coax was designed with data transmission in mind.</p>
+						<p>Coax will still introduce a small amount of latency to your connection over Ethernet, but MoCA is a great option if the cabling is already installed.</p>
+						<p>Keep in mind that both Powerline and MoCA require some investment, and quality may vary. So if you go with either be prepared that it might not improve the connection.</p>
+						<p>Neither of these working out? Well if you&#39;ve got the cash you could...</p>
+						<h3>Get an electrician to run an ethernet cable through the walls</h3>
+						<p>If your wiring isn&#39;t doing the job and your house doesn&#39;t have the necessary coax cables to get MoCA working, you could always install a permanent ethernet cable.</p>
+						<p>If your landlord will allow it, you can have an electrician run an ethernet cable from room to room alongside your electrical wiring.</p>
+						<p>No matter what room your router is in, you can get the best possible connection closer to your computer or console, without running an ethernet cable down the hallway.</p>
+						<p>It&#39;ll cost you a few hundred dollars, but will still be cheaper than a lot of the &#39;gaming routers&#39; that won&#39;t offer a connection that is nearly as fast or secure.</p>
+						<p>Now that you&#39;ve gotten yourself on a wired connection (hopefully), there are a few other tips and tricks to optimise your set-up.</p>
+						<h2>WTFast - the Gamers Private Network</h2>
+						<p>We&#39;ve all heard the advertisements for VPNs to keep your browsing secure. </p>
+						<p>What is less common, but much more useful for our aims, is a GPN.</p>
+						<p>WTFast operates a latency-optimised Gamers Private Network that reduces latency and gives you deep analytics for how your packets are being sent to the game server.</p>
+						<p>For transparency, WTFast is a OneQode partner, and they use our high-end designed for gaming connectivity across Asia-Pacific.</p>
+						<p>We trust them, and so do a lot of your favourite games. Whether you&#39;re playing Siege, League of Legends, or Final Fantasy - WTFast will be able to help curtail that ping.</p>
+						<h2>Another kind of latency to fix</h2>
+						<p>This suggestion is slightly niche.</p>
+						<p>If you&#39;re a PC gamer, and one with the Nvidia graphics card, you can take advantage of Nvidia reflex.</p>
+						<p>This is the only suggestion on this list that isn&#39;t reliant on your internet connection but is limited by your platform and GPU.</p>
+						<p><strong>SYSTEM LATENCY</strong></p>
+						<p>They&#39;ve built an SDK for developers that reduces system latency, hopefully improving your mechanical skill in game.</p>
+						<p>If you&#39;ve got an Nvidia card, and you&#39;re playing games that are taking advantage of the SDK, you can hopefully shave a few milliseconds off your internal latency.</p>
+						<p><a href='https://www.nvidia.com/en-au/geforce/guides/system-latency-optimization-guide/' target='_blank' class='url'>https://www.nvidia.com/en-au/geforce/guides/system-latency-optimization-guide/</a></p>
+						<p>But if you&#39;ve already optimised your hardware as best you can, and you&#39;re still struggling against a poor network, here are some options to improve your set-up.</p>
+						<h2>Hey big spender / alt: Move.</h2>
+						<p>If all else fails, there&#39;s one thing to keep in mind.</p>
+						<p>You could move house.</p>
+						<p>This is obviously not a <em>reason</em> to move, but internet connectivity is something to keep in mind if your lease is up and you&#39;re looking for a new place. </p>
+						<p>If you live in Australia you might remember our ill-fated NBN program, and that the rollout has been a disaster over the last few years. Some locations are <em>actually</em> connected to the fibre cables to the premises.</p>
+						<p>We don&#39;t recommend you move house to improve your gameplay... <em>but if you&#39;re already moving.</em></p>
+						<p><strong>NBN VIDEO</strong></p>
+						<p><a href='https://www.finder.com.au/nbn-tracker/map'>Here</a> is somewhere you can check to see if places you&#39;re looking at are going to offer you the best connection possible for your online play.</p>
+						<p>Hybrid Fibre Coaxial is a medium option. Fibre to the curb or the building is better. Your ideal option? Fibre to the premises.</p>
+						<p>Is there anything to avoid?</p>
+						<p>If you see fibre to the node, &quot;run away screaming&quot; according to our engineers. This connection is still bottlenecked by the old copper wiring that made up connections before fibre was the new standard.</p>
+						<p>Basically, that option is likely to cause you more headaches than anything going forward, so avoid it if possible.</p>
+						<h2>The final option</h2>
+						<p>You&#39;ve moved house to fibre to the premises NBN connection Your computer is directly connected via ethernet. System latency is as low as possible.</p>
+						<p>But you&#39;re still dying. You&#39;re still letting the team down.</p>
+						<p>There&#39;s one more option we can recommend. It won&#39;t be easy, but if you&#39;ve tried every other step along the way, this might be the only thing you can do.</p>
+						<p>You could try <em>getting better at the game.</em></p>
+						<p><strong>GET GOOD IMAGE</strong></p>
+						<p>If that doesn&#39;t work, don&#39;t tell your friends how hard you worked to get your internet to work, and keep blaming it on the lag.</p>
+						<p>&nbsp;</p>
+
+
+
 				</div>
 			</div>
 		</section>
