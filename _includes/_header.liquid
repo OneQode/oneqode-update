@@ -85,13 +85,16 @@
 {%- if slider or form %}
 	<link rel="preconnect" href="https://unpkg.com">
 {%- endif %}
-{%- if font == "hack" %}
+{%- if font == "hack" or 3dhover %}
 	<link rel="preconnect" href="https://cdn.jsdelivr.net">
 {%- endif %}
 	<!-- Styles -->
 	<link rel="stylesheet" href="/css/production.min.css">
 {%- if slider %}
 	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+{%- endif %}
+{%- if 3dhover %}
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/atropos@1.0.2/atropos.min.css" />
 {%- endif %}
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Work+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -116,6 +119,9 @@
 	<script src="/js/production.js"></script>
 {%- if slider %}
 	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+{%- endif %}
+{%- if 3dhover %}
+	<script src="https://cdn.jsdelivr.net/npm/atropos@1.0.2/atropos.js"></script>
 {%- endif %}
 {%- if form %}
 	<!-- Spam Protection -->
