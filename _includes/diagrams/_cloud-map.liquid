@@ -161,10 +161,13 @@
 			</div>
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2480" aria-labelledby="maptitle mapdescription" role="img">
 				<title id="maptitle">OneQode Cloud Regions</title>
-				<desc id="mapdescription">A world map centred on Asia-Pacific showing OneQode Cloud Regions live in APAC Central (Guam), and coming soon to Sydney, Brisbane, Sunshine Coast, Tokyo, Hong Kong, Seattle & Los Angeles</desc>
+				<desc id="mapdescription">A world map centred on Asia-Pacific showing OneQode Cloud Regions live in Guam (APAC Central), and coming soon to Sydney, Brisbane, Sunshine Coast, Tokyo, Hong Kong, Seattle & Los Angeles</desc>
 				<g id="cables">
 					<g class="transit" id="sunshine_coast_guam">
 						<path d="M1725.1,1926.5s38.4-3.4,48.4,0" />
+					</g>
+					<g class="transit" id="brisbane_sydney">
+						<path d="M1722.6,1943.7c0,0-27.7,44.4-25.5,118.9"/>
 					</g>
 					<g class="transit" id="melbourne_syd">
 						<path d="M1616.5,2132.7a46.9,46.9,0,0,1,2.1-4.5" />
@@ -204,6 +207,11 @@
 						<path d="M1389.9,1692.2c31.7,41.7,134.3,191.7,127.9,376.8" />
 						<path d="M1517.6,2073.9c-.1,1.7-.2,3.3-.2,5" />
 					</g>
+					<g class="transit" id="chennai_singapore">
+						<path d="M590.3,1235.5l4.2,2.7" />
+						<path d="M603.1,1243.6c42.3,26.5,179.1,108.9,251.2,114.8,38.4,2,53.1,78.3,90.7,76.5" />
+						<path d="M950.1,1434.2a35.9,35.9,0,0,0,4.8-1.4l3,4" />
+					</g>
 					<g class="transit" id="singapore_hong_kong">
 						<path d="M1135.1,1062.5s-.3,1.7-1.1,4.9" />
 						<path d="M1131.6,1077c-12.3,47.8-59.3,205.8-170.5,348" />
@@ -211,6 +219,11 @@
 					</g>
 					<g class="transit" id="hong_kong_tokyo">
 						<path d="M1538.3,826.9s-9.7,317.6-403.2,235.6" />
+					</g>
+					<g class="transit" id="seoul_busan_osaka_tokyo">
+						<path d="M1538.3,826.9a48.6,48.6,0,0,1-3.9,3.1" />
+						<path d="M1525.8,835.3a99,99,0,0,1-55.8,12.4c-40.9-3.1-62.8,22.1-95.4-5-16.6-13.8-22.1-24-23.6-30.7" />
+						<path d="M1350.6,807a9.3,9.3,0,0,1,1.4-4.7" />
 					</g>
 					<g class="transit" id="vladivostok_tokyo">
 						<path d="M1437.3,697.4l4.2,2.6" />
@@ -225,28 +238,13 @@
 						<path d="M1146.7,1071.7c36.3,26.9,162.4,105.9,436.5,150.1" />
 						<path d="M1588.1,1222.5l4.9.8" />
 					</g>
-					<g class="transit" id="chennai_singapore">
-						<path d="M590.3,1235.5l4.2,2.7" />
-						<path d="M603.1,1243.6c42.3,26.5,179.1,108.9,251.2,114.8,38.4,2,53.1,78.3,90.7,76.5" />
-						<path d="M950.1,1434.2a35.9,35.9,0,0,0,4.8-1.4l3,4" />
-					</g>
 					<g class="transit" id="philippines_guam">
 						<path d="M1294.2,1335.4l5,.4" />
 						<path d="M1309.5,1336.3c43.9,1,173.7-5.3,276.4-105.8" />
 						<path d="M1589.5,1226.9l3.5-3.6" />
 					</g>
-					<g class="transit" id="singapore_guam">
-						<path d="M954.9,1432.8s.9-1.4,2.9-4" />
-						<path d="M964,1420.9c41.9-51.2,230.2-247.7,619.1-198.9" />
-						<path d="M1588.1,1222.7l4.9.6" />
-					</g>
 					<g class="transit" id="guam_los_angeles">
 						<path d="M1593,1223.3s681.8-313.7,1445.4-370.2" />
-					</g>
-					<g class="transit" id="seattle_portland_bay_area_la">
-						<path d="M3038.4,853.1c0,0-1.7-0.2-4.8-1.3"/>
-						<path d="M3024.8,847.8c-12.5-6.7-32.4-21.9-55.1-55.8c-31.3-49.3-42.5-100.3-45.8-119.5c-2.1-12-6.5-27-9.4-36.5"/>
-						<path d="M2912.9,631.5c-1-3-1.6-4.7-1.6-4.7"/>
 					</g>
 					<g class="transit" id="guam_hawaii">
 						<path d="M1593,1223.3l4.9-1.1" />
@@ -263,8 +261,20 @@
 						<path d="M2492.5,1103.5c24.6-46.7,134.8-200.6,536-249.2" />
 						<path d="M3033.4,853.7l5-.6" />
 					</g>
-					<g class="transit">
-						<path id="perth_sydney" class="cls-33" d="M1175.7,2040.9s-28.3-4.3-25,48.3c7.2,115.3,486.6,128.7,546.4,43.9,28.9-40.9,0-71.8,0-71.8" />
+					<g class="transit" id="seattle_portland_bay_area_la">
+						<path d="M3038.4,853.1c0,0-1.7-0.2-4.8-1.3"/>
+						<path d="M3024.8,847.8c-12.5-6.7-32.4-21.9-55.1-55.8c-31.3-49.3-42.5-100.3-45.8-119.5c-2.1-12-6.5-27-9.4-36.5"/>
+						<path d="M2912.9,631.5c-1-3-1.6-4.7-1.6-4.7"/>
+					</g>
+					<g class="transit" id="perth_sydney">
+						<path class="cls-33" d="M1175.7,2040.9s-28.3-4.3-25,48.3c7.2,115.3,486.6,128.7,546.4,43.9,28.9-40.9,0-71.8,0-71.8" />
+					</g>
+					<g class="transit" id="davao_manado">
+						<path d="M1283.85,1437.05s14.05-27.39,10-101.99" />
+					</g>
+					<g class="transit" id="singapore-guam-igg">
+						<path d="M1283.85,1437.05s-69.89-27.23-85.9,0c-17.44,29.67-20.56,129.68-50.81,120.34" />
+						<path d="M954.48,1432.41s74.63,89.74,192.65,124.98" />
 					</g>
 				</g>
 				<g id="labels">
@@ -273,7 +283,7 @@
 					<text class="coming-soon" transform="translate(1789 1965)">Brisbane</text>
 					<text class="coming-soon" transform="translate(1721 2103)">Sydney</text>
 					<text class="coming-soon" transform="translate(965 1018)">Hong Kong</text>
-					<text class="active" transform="translate(1642 1255)">APAC Central (Guam)</text>
+					<text class="active" transform="translate(1642 1255)">Guam (APAC Central)</text>
 					<text class="coming-soon" transform="translate(2875 919)">Los Angeles</text><text class="coming-soon" transform="translate(2747 642)">Seattle</text>
 					<text class="coming-soon" transform="translate(1572 859)">Tokyo</text>
 					<text class="coming-soon" transform="translate(1400 2180)">Melbourne</text>
