@@ -82,7 +82,7 @@
 	<!-- Performance -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-{%- if slider or form %}
+{%- if slider or form or phone or jquery %}
 	<link rel="preconnect" href="https://unpkg.com">
 {%- endif %}
 {%- if font == "hack" %}
@@ -92,6 +92,9 @@
 	<link rel="stylesheet" href="/css/production.min.css">
 {%- if slider %}
 	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+{%- endif %}
+{%- if phone %}
+	<link rel="stylesheet" href="https://unpkg.com/intl-tel-input@17.0.16/build/css/intlTelInput.min.css">
 {%- endif %}
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Mulish:ital,wght@0,300;0,800;1,300&display=swap" rel="stylesheet">
@@ -116,6 +119,12 @@
 	<script src="/js/production.js"></script>
 {%- if slider %}
 	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+{%- endif %}
+{%- if phone %}
+	<script src="https://unpkg.com/intl-tel-input@17.0.16/build/js/intlTelInput.min.js"></script>
+{%- endif %}
+{%- if jquery %}
+	<script src="https://www.unpkg.com/jquery@3.6.0/dist/jquery.min.js"></script>
 {%- endif %}
 {%- if form %}
 	<!-- Spam Protection -->
@@ -181,7 +190,7 @@
 										</svg>
 										<div class="content">
 											International Network
-											<span>Latency-optimised network that <br>reaches 1.45 billion people</span>
+											<span>Latency-optimised network that <br>reaches 4.98 billion people</span>
 										</div>
 									</a>
 								</li>
