@@ -4,53 +4,66 @@ metaDescription: Asia-Pacific’s low latency infrastructure provider offering h
 changefreq: monthly
 priority: 1
 ogImage: oneqode-homepage.jpg
-pageTitle: Built for gaming<mark class="dot">.</mark><br class="responsive"> Ready for anything
+pageSupertitle: Infrastructure as a Service
+pageTitle: The faster cloud
+fittext: true
 ---
 {% include _header.liquid %}
 		<!-- Page-Specific Styles -->
 		<style>
-			/* Hero */
-			.no-webp .hero {
-				background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/star-header.jpg") no-repeat center center;
-				background-size: cover;
+			.no-webp body {
+				background: url("/img/bg/stars-background.jpg") repeat-x, #000;
+				background-size: 90%;
+				animation: stars 20s linear infinite;
 			}
-			.webp .hero {
-				background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/star-header.webp") no-repeat center center;
-				background-size: cover;
+			.webp body {
+				background: url("/img/bg/stars-background.webp") repeat-x, #000;
+				background-size: 90%;
+				animation: stars 20s linear infinite;
+			}
+			@keyframes stars {
+				100% {
+					background-position: 100% 0; /* Performance note - apparently TranslateY is better */
+				}
+			}
+			/* Hero */
+			.hero {
+				background: none !important;
 			}
 			section.hero {
 				padding-top: 6rem !important;
 				min-height: 75vh;
-				height: 100%;
 			}
-			/* Particles JS */
-			canvas {
-				position: absolute;
-				z-index: 0;
-				height:  75vh !important;
+			.globe {
+				margin-top: -16rem;
 			}
-			section.hero::after {
+			.globe img {
+				mix-blend-mode: lighten;
+			}
+			.globe picture {
+				position: relative;
+			}
+			/* This stops the globe having stars on top (because of its mix blend mode) */
+			.globe picture:after {
 				position: absolute;
-				width: 100%;
-				height: 75vh;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 72.5%;
+				height: 72.5%;
+				border-radius: 50%;
 				content: " ";
-				background: linear-gradient(to bottom, transparent 70%, #000);
+				background: #000;
+				z-index: -1;
 			}
-			/* Network & Servers */
-			.no-webp #network {
-				background: url(/img/glowing-oneqode-network-globe.jpg) no-repeat 130% 50%;
-				background-size: contain;
-			}
-			.webp #network {
-				background: url(/img/glowing-oneqode-network-globe.webp) no-repeat 130% 50%;
-				background-size: contain;
-			}
+			/* Servers */
 			#servers {
 				position: relative;
 				overflow: hidden;
 			}
 			@media (max-width: 64em) {
-				#servers img, #cloud img {
+				#servers img,
+				#cloud img {
 					margin-top: 4rem;
 				}
 				/* Hide Guam background */
@@ -119,18 +132,26 @@ pageTitle: Built for gaming<mark class="dot">.</mark><br class="responsive"> Rea
 				stroke: #00B0F0;
 			}
 		</style>
-		<section class="hero" id="stars">
+		<section class="hero">
 			<div class="container push-forward">
 				<div class="row middle-xs">
 					<div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
-						<h1>{{ pageTitle }}<mark class="dot">.</mark></h1>
-						<p class="subheading">The high-performance cloud and network for Asia-Pacific</p>
-						<p class="faded">Reach more people across Asia-Pacific at low latency with OneQode. <br class="responsive"> Performance cloud, strategic locations, DDoS-protected.</p>
-						<p class="mt-2"><a href="/about/" class="button">Learn more</a></p>
+						<p class="superheading">{{ pageSupertitle }}</p>
+						<h1 id="bigass" class="mb-1">{{ pageTitle }}<mark class="dot">.</mark></h1>
+						<p class="subheading">Less lag, more power, further reach</p>
+						<p class="mt-4 m-1"><a href="/cloud/signup/" class="button">Get started</a> <a href="/about/" class="chevron m-1 ml-2">Learn more</a></p>
 						{%- comment %}
 						{%- endcomment %}
 					</div>
 				</div> 
+			</div>
+		</section>
+		<section class="globe">
+			<div class="container">
+				<picture>
+					<source srcset="/img/homepage-globe.webp" type="image/webp">
+					<img src="/img/homepage-globe.jpg" class="opaque" alt="Globe">
+				</picture>
 			</div>
 		</section>
 		{%- comment %}
@@ -261,37 +282,12 @@ pageTitle: Built for gaming<mark class="dot">.</mark><br class="responsive"> Rea
 				</div>
 			</div>
 		</section>
-		<!--
-			Particles JS
-			Credit: Vincent Garreau
-			https://vincentgarreau.com/particles.js/
-			License: MIT
-		-->
-		<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 		<script>
-		particlesJS("stars", {
-			"particles": {
-				number: { value: 160, density: { enable: true, value_area: 800 } },
-				color: {value: "#ffffff"},
-				shape: { type: "circle", stroke: { width: 0, color: "#000000" }, polygon: { nb_sides: 5 }, image: { src: "img/github.svg", width: 100, height: 100 } },
-				opacity: { value: 0.6, random: true, anim: { enable: true, speed: 1, opacity_min: 0, sync: false } },
-				size: { value: 1, random: false, anim: { enable: false, speed: 4, size_min: 0.3, sync: false } },
-				line_linked: { enable: false, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
-				move: { enable: true, speed: 1, direction: "none", random: true, straight: false, out_mode: "out", bounce: false, attract: { enable: false, rotateX: 600, rotateY: 600 }
-				}
-			},
-			interactivity: {
-				detect_on: "canvas",
-				events: { onhover: { enable: true, mode: "bubble" }, onclick: { enable: false, mode: "repulse"}, resize: true },
-				modes: {
-					grab: { distance: 100, line_linked: { opacity: 0 } },
-					bubble: { distance: 73.08694910712106, size: 2, duration: 2, opacity: 0, speed: 3 },
-					repulse: { distance: 87.91208791208791, duration: 0.4 },
-					push: { particles_nb: 4 },
-					remove: { particles_nb: 2 }
-				}
-			},
-			retina_detect: true,
-		});
+			/**
+			* FitText.js — https://github.com/adactio/FitText.js
+			* A vanilla js script to inflate web type
+			* Used under WTFPL license 💪
+			*/
+			window.fitText( document.getElementById("bigass") );
 		</script>
 {% include _footer.liquid %}
