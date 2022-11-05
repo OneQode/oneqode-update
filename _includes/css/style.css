@@ -85,6 +85,9 @@ main {
 .m-1 {
 	margin: 1rem;
 }
+.mt-a {
+	margin-top: auto;
+}
 .mt-0 {
 	margin-top: 0;
 }
@@ -707,13 +710,13 @@ a.external::after {
 }
 .button.ghost {
 	background: none;
-	color: #00b0f0;
-	border-color: #00b0f0;
+	color: #999999;
+	border-color: #999999;
 }
 .button.ghost:hover,
 .button.ghost:focus {
 	color: #fff;
-	background: rgba(0,89,127,0.5);
+	border-color: #fff;
 }
 .callout a {
 	color: #fff;
@@ -1310,6 +1313,51 @@ abbr[title] {
 #key-takeaways :last-child,
 #key-takeaways li:last-child {
 	margin-bottom: 0;
+}
+/* Logo Grid */
+.logo-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	grid-gap: 1rem;
+}
+@media (min-width: 48em) {
+	.logo-grid {
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		grid-gap: 1rem;
+	}
+}
+@media (max-width: 340px) {
+	.logo-grid {
+		grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+		grid-gap: 0.2rem;
+	}
+}
+.logo-grid > div {
+	padding: 1rem;
+	display: grid;
+	place-items: center;
+}
+.logo-grid > div::before {
+	content: "";
+	display: block;
+	padding-bottom: 100%;
+	grid-area: 1/1/2/2;
+}
+.logo-grid > div img {
+	width: 100%;
+	grid-area: 1/1/2/2;
+	filter: brightness(0) invert(1);
+	opacity: 0.3;
+	transition: opacity 0.2s;
+}
+.logo-grid > div:hover img {
+	opacity: 0.8;
+}
+.logo-grid > div img.w50 {
+	width: 50%;
+}
+.logo-grid > div img.w80 {
+	width: 80%;
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - -
 RESPONSIVE OVERRIDES

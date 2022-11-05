@@ -5,8 +5,9 @@ changefreq: monthly
 priority: 1
 ogImage: oneqode-homepage.jpg
 pageSupertitle: Infrastructure as a Service
-pageTitle: The faster cloud
+pageTitle: The performance cloud
 fittext: true
+slider: true
 ---
 {% include _header.liquid %}
 		<!-- Page-Specific Styles -->
@@ -214,35 +215,67 @@ fittext: true
 					margin-top: -10rem;
 				}
 			}
-			/* Servers */
-			#servers {
-				position: relative;
-				overflow: hidden;
+			/*#overview .col-xs-12 {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
 			}
-			@media (max-width: 64em) {
-				#servers img,
-				#cloud img {
-					margin-top: 4rem;
+			@media (max-width: 48em) {
+				#overview .col-xs-12 {
+					align-items: center;
 				}
-				/* Hide Guam background */
-				#cable-map,
-				#cable-map::after {
-					display: none !important;
-				}
-				#guam {
-					min-height: 0 !important;
+			}*/
+			/* Overriding default logo-grid styling */
+			.logo-grid > div::before {
+				padding-bottom: 60%;
+			}
+			.logo-grid > div:hover img {
+				opacity: 0.3;
+			}
+			/* Swiper */
+			:root {
+				--swiper-theme-color: #00b0f0;
+				--swiper-pagination-bullet-inactive-color: #999;
+				--swiper-navigation-size: 32px;
+			}
+			.swiper {
+				width: 100%;
+				height: 100%;
+				padding-top: 1rem;
+				padding-bottom: 1rem;
+			}
+			.swiper-slide {
+				text-align: center;
+				transition: opacity 0.2s;
+				background: #17181C;
+				border-radius: 15px;
+				padding: 4rem;
+			}
+			.swiper-slide:not(.swiper-slide-active) {
+				opacity: 0.4;
+			}
+			@media screen and (max-width: 64em) {
+				.swiper-slide {
+					padding: 2rem 1rem;
+					background: #333;
 				}
 			}
-			@media (min-width: 64em) {
-				#servers img {
-					position: absolute;
-					height: 400px;
-					margin-top: -50px;
-				}
+			/* Icons */
+			.icon.play-fast {
+				mask: url(/img/ico/play-fast.svg) no-repeat center;
+				-webkit-mask: url(/img/ico/play-fast.svg) no-repeat center;
 			}
-			#cloud img {
-				box-shadow: 0px 0px 120px -20px #00b0f0;
-				border-radius: 10px;
+			.icon.guam {
+				mask: url(/img/ico/guam.svg) no-repeat center;
+				-webkit-mask: url(/img/ico/guam.svg) no-repeat center;
+			}
+			.icon.support {
+				mask: url(/img/ico/support.svg) no-repeat center;
+				-webkit-mask: url(/img/ico/support.svg) no-repeat center;
+			}
+			.icon.ddos {
+				mask: url(/img/ico/ddos.svg) no-repeat center;
+				-webkit-mask: url(/img/ico/ddos.svg) no-repeat center;
 			}
 			/* Guam Map BG */
 			#guam {
@@ -295,11 +328,9 @@ fittext: true
 				<div class="row middle-xs">
 					<div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
 						<p class="superheading">{{ pageSupertitle }}</p>
-						<h1 id="bigass" class="mb-1">{{ pageTitle }}<mark class="dot">.</mark></h1>
-						<p class="subheading">Less lag, more power, further reach</p>
-						<p class="mt-4 m-1"><a href="/cloud/signup/" class="button">Get started</a> <a href="/about/" class="chevron m-1 ml-2">About OneQode</a></p>
-						{%- comment %}
-						{%- endcomment %}
+						<h1 id="fittext" class="mb-1">{{ pageTitle }}<mark class="dot">.</mark></h1>
+						<p class="subheading">More power, less lag, further reach</p>
+						<p class="mt-4 m-1"><a href="/cloud/signup/" class="button">Get started</a> <a href="/contact/" class="chevron m-1 ml-2">Contact Sales</a></p>
 					</div>
 				</div> 
 			</div>
@@ -342,95 +373,101 @@ fittext: true
 			</div>
 			<div class="stars2"></div>
 		</section>
-		{%- comment %}
-		<section id="overview" class="pt-4 pb-8">
+		<section id="overview">
+			<div class="container mobile-text-center py-0">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-4 p-2 my-1">
+						<h3 class="mb-0">Cloud platform</h3>
+						<p class="faded">Blazing-fast cloud instances operating at <span class="nowrap">3.7 GHz+</span></p>
+						<a href="/cloud/" class="button ghost mt-a">Cloud</a>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-4 p-2 my-1">
+						<h3 class="mb-0">Dedicated servers</h3>
+						<p class="faded">Built-to-order dedicated servers designed for 24/7/365 performance</p>
+						<a href="/dedicated-servers/" class="button ghost mt-a">Servers</a>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-4 p-2 my-1">
+						<h3 class="mb-0">Carrier network</h3>
+						<p class="faded">Latency-optimised network built for gaming and real-time applications</p>
+						<a href="/network/" class="button ghost mt-a">Network</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="customers" class="py-8">
+			<div class="container text-center">
+				<div class="row">
+					<div class="col-xs-12">
+						<figcaption>Trusted by brands that put performance first</figcaption>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-md-10 col-md-offset-1 logo-grid">
+						<div><img src="/img/partners/edgeix.png" alt="EdgeIX"></div>
+						<div><img src="/img/partners/china-telecom.png" alt="China Telecom"></div>
+						<div><img src="/img/partners/spectrum.svg" alt="Spectrum"></div>
+						<div><img src="/img/partners/telia.svg" alt="Telia"></div>
+						<div><img src="/img/partners/tencent.svg" alt="Tencent"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="benefits" class="text-center">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-12 col-sm-10 col-sm-offset-1 text-center">
-						<h2><mark>High-performance</mark> infrastructure <br class="responsive">to build your game on<mark class="dot">.</mark></h2>
-					</div>
-					<div class="col-xs-12 col-sm-8 col-sm-offset-2 text-center">
-						<p>We operate a latency-optimised platform designed for the demands of competitive gaming. You’ll reach more players at lower latency, whilst reducing infrastructure costs.</p>
+					<div class="col-xs-12 col-sm-10 col-sm-offset-1">
+						<h2 class="mb-1">Reach users<br class="responsive"> in milliseconds</h2>
+						<p class="subheading faded">Deliver performance-sensitive<br class="responsive"> apps at lightning speed</p>
 					</div>
 				</div>
 			</div>
-		</section>
-		{%- endcomment %}
-		<section id="network" class="py-8">
-			<div class="container mobile-text-center">
-				<div class="row">
-					<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-5 col-md-offset-0">
-						<h3 class="mb-1">Low-latency network</h3>
-						<p class="subheading faded">Designed for competitive gaming</p>
-						<p>An international carrier network built from the ground-up to eliminate lag.</p>
-						<a href="/network/" class="button mt-2">Our network</a>
+			<div class="swiper benefits mt-2 mb-8">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide col-xs-10 col-md-8 col-lg-6">
+						<div class="icon guam"></div>
+						<p class="superheading">APAC Central</p>
+						<h3 class="mb-0 mt-2">Unlock truly cross-regional events</h3>
+						<p class="subheading faded">With Asia-Pacific’s central gaming hub</p>
+						<div class="col-xs-12 col-md-8 col-md-offset-2">
+							<p class="mt-2">Access <strong>the world’s newest server region</strong>, a central location that reaches gamers in three continents with a single server.</p>
+						</div>
+						<p class="mt-2"><a href="/guam/" class="chevron m-1">APAC Central</a></p>
+					</div>
+					<div class="swiper-slide col-xs-10 col-md-8 col-lg-6">
+						<div class="icon play-fast"></div>
+						<p class="superheading">Elite Esports Servers</p>
+						<h3 class="mb-0 mt-2">Silky-smooth gaming</h3>
+						<p class="subheading faded">On the world’s fastest game servers</p>
+						<div class="col-xs-12 col-md-8 col-md-offset-2">
+							<p class="mt-2">Take the world’s fastest processors, put them in a kickass server, and connect via our hyperfast network. A true-to-life experience.</p>
+						</div>
+						<p class="mt-2"><a href="/cloud/" class="chevron m-1">Cloud</a> <br class="mobile-only"><a href="/dedicated-servers/" class="chevron m-1">Servers</a> <br class="mobile-only"><a href="/network/" class="chevron m-1">Network</a></p>
+					</div>
+					<div class="swiper-slide col-xs-10 col-md-8 col-lg-6">
+						<div class="icon support"></div>
+						<p class="superheading">Live event support</p>
+						<h3 class="mb-0 mt-2">Get backup when it really matters</h3>
+						<p class="subheading faded">Live tech support for big events</p>
+						<div class="col-xs-12 col-md-8 col-md-offset-2">
+							<p class="mt-2">Achieve <strong>stress level zero</strong> and book us in for live technical support during critical tournaments and events — so you can stay focused.</p>
+						</div>
+						<p class="mt-2"><a href="/contact/esports/?message=Hey%20there%2C%20I%20have%20an%20event%20coming%20up%20in..." class="chevron m-1">Plan an event</a></p>
+					</div>
+					<div class="swiper-slide col-xs-10 col-md-8 col-lg-6">
+						<div class="icon ddos"></div>
+						<p class="superheading">DDoS protected</p>
+						<h3 class="mb-0 mt-2">Get backup when it really matters</h3>
+						<p class="subheading faded">Live tech support for big events</p>
+						<div class="col-xs-12 col-md-8 col-md-offset-2">
+							<p class="mt-2">Achieve <strong>stress level zero</strong> and book us in for live technical support during critical tournaments and events — so you can stay focused.</p>
+						</div>
+						<p class="mt-2"><a href="/contact/esports/?message=Hey%20there%2C%20I%20have%20an%20event%20coming%20up%20in..." class="chevron m-1">Plan an event</a></p>
 					</div>
 				</div>
-				<div class="row mt-8 pt-2">
-					<div class="col-xs-12 col-sm-6 col-md-4 pt-2">
-						<h4>A highway for your traffic</h4>
-						<p class="faded">Bypass incumbents and deliver data as close to players as possible.</p>
-					</div>
-					<div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-2 pt-2">
-						<h4>Unrivalled latency</h4>
-						<p class="faded">Route traffic over the shortest path, eliminating latency at every turn.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section id="cloud" class="py-8">
-			<div class="container mobile-text-center">
-				<div class="row middle-md">
-					<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-5 col-md-offset-0">
-						<h3 class="mb-1">On-demand cloud</h3>
-						<p class="subheading faded">Compute without compromise</p>
-						<p>Blazing-fast processing power, available at a moment’s notice.</p>
-						<a href="/cloud/" class="button mt-2">Cloud Platform</a>
-					</div>
-					<div class="col-xs-12 col-md-6 col-md-offset-1">
-						<picture>
-							<source srcset="/img/cloud-platform-screenshot.webp" type="image/webp">
-							<img src="/img/cloud-platform-screenshot.jpg" class="opaque" alt="Screenshot of the OneQode Cloud Platform">
-						</picture>
-					</div>
-				</div>
-				<div class="row mt-8 pt-2">
-					<div class="col-xs-12 col-sm-6 col-md-4 pt-2">
-						<h4>Kubernetes or cloud compute</h4>
-						<p class="faded">Supports containerised or virtualised server workloads.</p>
-					</div>
-					<div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-2 pt-2">
-						<h4>API accessible</h4>
-						<p class="faded">Automation-friendly. Plays nice with your existing infrastructure.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section id="servers" class="py-8">
-			<div class="container mobile-text-center">
-				<div class="row">
-					<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-5 col-md-offset-0">
-						<h3 class="mb-1">High-performance servers</h3>
-						<p class="subheading faded">Raw power, built for speed</p>
-						<p>High clockrate custom servers optimised for high tickrate game workloads.</p>
-						<a href="/dedicated-servers/" class="button mt-2">Servers</a>
-					</div>
-					<div class="col-xs-12 col-md-6 col-md-offset-1">
-						<picture>
-							<source srcset="/img/server-illustration-600h.webp" type="image/webp">
-							<img src="/img/server-illustration-600h.jpg" class="opaque" alt="An illustration of a OneQode game server">
-						</picture>
-					</div>
-				</div>
-				<div class="row mt-8 pt-2">
-					<div class="col-xs-12 col-sm-6 col-md-4 pt-2">
-						<h4>Better experience</h4>
-						<p class="faded">Each processor is 3.7 GHz+, supporting the most demanding applications.</p>
-					</div>
-					<div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-2 pt-2">
-						<h4>DDoS protected</h4>
-						<p class="faded">Network-wide protection keeps servers online and unharmed.</p>
-					</div>
+				<div class="container">
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-pagination"></div>
 				</div>
 			</div>
 		</section>
@@ -439,10 +476,10 @@ fittext: true
 				<div class="row">
 					<div class="col-xs-12 col-sm-10 col-sm-offset-1">
 						<p class="superheading">APAC Central</p>
-						<h2>Reach <mark>billions</mark> with Asia-Pacific’s<br class="responsive"> central server region<mark class="dot">.</mark></h2>
+						<h2>Meet Asia-Pacific’s<br class="responsive"> central server region<mark class="dot">.</mark></h2>
 					</div>
 					<div class="col-xs-12 col-sm-6 col-sm-offset-3">
-						<p class="mt-0">Our exclusive Guam gaming hub connects players from across Asia-Pacific on a level playing field, unlocking a new world of cross-regional gaming.</p>
+						<p class="mt-0">Our exclusive Guam hub connects users from across Asia-Pacific on a level playing field, unlocking a new world of cross-regional gaming and experiences.</p>
 						<a href="/guam/" class="button mt-2">APAC Central</a>
 					</div>
 				</div>
@@ -458,8 +495,7 @@ fittext: true
 				</svg>
 			</div>
 		</section>
-{% include parts/case-study-oceanic.liquid %}
-		<section class="black-to-footer pb-8">
+		<section class="black-to-footer py-8">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
@@ -476,6 +512,33 @@ fittext: true
 			* A vanilla js script to inflate web type
 			* Used under WTFPL license 💪
 			*/
-			window.fitText( document.getElementById("bigass") );
+			window.fitText( document.getElementById("fittext"), 1.4 );
+			// The Swiper / Slider
+			var swiper = new Swiper(".benefits", {
+				effect: "coverflow",
+				grabCursor: true,
+				slidesPerView: "auto",
+				centeredSlides: true,
+				centeredSlidesBounds: true,
+				coverflowEffect: {
+					rotate: 50,
+					stretch: 0,
+					depth: 100,
+					modifier: 0.8,
+					slideShadows: true,
+				},
+				loop: true,
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+				keyboard: {
+					enabled: true,
+				},
+			});
 		</script>
 {% include _footer.liquid %}
