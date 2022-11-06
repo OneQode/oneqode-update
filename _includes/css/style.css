@@ -644,15 +644,16 @@ a {
 }
 a:hover,
 a:focus {
-	color: #00597f;
+	color: #fff;
 }
 a.chevron {
 	white-space: nowrap;
 	text-decoration-color: transparent;
+	text-underline-offset: 0.2rem;
 }
 a.chevron:hover,
 a.chevron:focus {
-	text-decoration-color: #004460;
+	text-decoration-color: #ffffff;
 }
 a.chevron::after {
 	width: 1.2rem;
@@ -1008,7 +1009,7 @@ CONTENT
 	align-items: center;
 	height: 100%;
 	opacity: 0.9;
-	background: rgba(0, 39, 53, 0.2);
+	background: #000;
 }
 .box.glowing,
 .box.glowing p,
@@ -1026,8 +1027,9 @@ CONTENT
 	font-size: 1.5rem;
 	color: #999;
 }
-.box.glowing:hover, .box.glowing:focus {
-	background: rgba(0, 39, 53, 0.6);
+.box.glowing:hover,
+.box.glowing:focus {
+	background: #1c1d22;
 	border: 1px solid #666;
 	opacity: 1;
 }
