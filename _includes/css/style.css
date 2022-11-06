@@ -1023,8 +1023,7 @@ CONTENT
 	margin-bottom: 0;
 }
 .box.glowing h3 {
-	text-transform: uppercase;
-	font-size: 1.25rem;
+	font-size: 1.5rem;
 	color: #999;
 }
 .box.glowing:hover, .box.glowing:focus {

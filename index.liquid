@@ -277,6 +277,83 @@ slider: true
 				mask: url(/img/ico/ddos.svg) no-repeat center;
 				-webkit-mask: url(/img/ico/ddos.svg) no-repeat center;
 			}
+			#solutions .box.glowing {
+				text-align: left;
+				align-items: flex-start;
+				justify-content: flex-start;
+				padding: 2rem;
+				box-sizing: border-box;
+			}
+			/* Mobile Globe Overrides */
+			@media (max-width: 64em) {
+				#solutions .box.glowing {
+					padding: 1rem;
+				}
+			}
+			/* Case Studies */
+			#case-studies .swiper-slide {
+				text-align: left;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				border: 1px solid #666;
+			}
+			#case-studies .col-xs-12.col-md-8 {
+				flex-shrink: 1;
+			}
+			#case-studies .swiper-slide .mt-a {
+				flex-basis: auto;
+			}
+			#case-studies .swiper-slide img {
+				margin-left: 0;
+				max-width: 12rem;
+			}
+			#case-studies .swiper-slide img.size-lg {
+				max-width: 10rem;
+			}
+			#case-studies .swiper-slide img.size-xl {
+				max-width: 8rem;
+			}
+			.webp .cs-oceanic {
+				background:	linear-gradient(to right, #000 0%, rgba(0,0,0,0.4) 100%),
+							url(/img/bg/case-study-oceanic-esports.webp);
+				background-size: cover;
+			}
+			.no-webp .cs-oceanic {
+				background:	linear-gradient(to right, #000 0%, rgba(0,0,0,0.4) 100%),
+							url(/img/bg/case-study-oceanic-esports.jpg);
+				background-size: cover;
+			}
+			.webp .cs-prosimcentre {
+				background:	linear-gradient(to right, #000 0%, rgba(0,0,0,0.4) 100%),
+							url(/img/bg/case-study-prosimcentre.webp);
+				background-size: cover;
+			}
+			.no-webp .cs-prosimcentre {
+				background:	linear-gradient(to right, #000 0%, rgba(0,0,0,0.4) 100%),
+							url(/img/bg/case-study-prosimcentre.jpg);
+				background-size: cover;
+			}
+			.webp .cs-quakecon {
+				background:	linear-gradient(to right, #000 0%, rgba(0,0,0,0.4) 100%),
+							url(/img/bg/case-study-quakecon.webp);
+				background-size: cover;
+			}
+			.no-webp .cs-quakecon {
+				background:	linear-gradient(to right, #000 0%, rgba(0,0,0,0.4) 100%),
+							url(/img/bg/case-study-quakecon.jpg);
+				background-size: cover;
+			}
+			.webp .cs-wtfast {
+				background:	linear-gradient(to right, #000 0%, rgba(0,0,0,0.4) 100%),
+							url(/img/bg/case-study-wtfast.webp);
+				background-size: cover;
+			}
+			.no-webp .cs-wtfast {
+				background:	linear-gradient(to right, #000 10%, transparent),
+							url(/img/bg/case-study-wtfast.jpg);
+				background-size: cover;
+			}
 			/* Guam Map BG */
 			#guam {
 				position: relative;
@@ -416,12 +493,12 @@ slider: true
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-sm-10 col-sm-offset-1">
-						<h2 class="mb-1">Reach users<br class="responsive"> in milliseconds</h2>
+						<h2 class="mb-1">Reach users<br class="responsive"> in milliseconds<mark class="dot">.</mark></h2>
 						<p class="subheading faded">Deliver performance-sensitive<br class="responsive"> apps at lightning speed</p>
 					</div>
 				</div>
 			</div>
-			<div class="swiper benefits mt-2 mb-8">
+			<div class="swiper benefits my-2">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide col-xs-10 col-md-8 col-lg-6">
 						<div class="icon guam"></div>
@@ -462,6 +539,114 @@ slider: true
 							<p class="mt-2">Achieve <strong>stress level zero</strong> and book us in for live technical support during critical tournaments and events — so you can stay focused.</p>
 						</div>
 						<p class="mt-2"><a href="/contact/esports/?message=Hey%20there%2C%20I%20have%20an%20event%20coming%20up%20in..." class="chevron m-1">Plan an event</a></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</section>
+		<section class="py-8" id="solutions">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-xs-12 col-md-8 col-md-offset-2 mb-0">
+						<h2 class="mb-1">Solutions by industry<mark class="dot">.</mark></h2>
+						<p class="subheading faded">Solving challenges for performance-thirsty organisations.</p>
+					</div>
+				</div>
+				<div class="row mt-4 place-content-center">
+					<div class="col-xs-6 col-sm-6 col-md-4 mb-1">
+						<a href="/for/game-industry/" class="box glowing">
+							<h3 class="mb-1">Game developers</h3>
+							<p class="faded my-0">Blazing-fast cloud instances with dedicated CPU threads operating at 3.7 GHz+</p>
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-6 col-md-4 mb-1">
+						<a href="/for/esports/" class="box glowing">
+							<h3 class="mb-1">Esports</h3>
+							<p class="faded my-0">Blazing-fast cloud instances with dedicated CPU threads operating at 3.7 GHz+</p>
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-6 col-md-4 mb-1">
+						<a href="#" class="box glowing">
+							<h3 class="mb-1">App developers</h3>
+							<p class="faded my-0">Blazing-fast cloud instances with dedicated CPU threads operating at 3.7 GHz+</p>
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-6 col-md-4 mb-1">
+						<a href="#" class="box glowing">
+							<h3 class="mb-1">Business & enterprise</h3>
+							<p class="faded my-0">Blazing-fast cloud instances with dedicated CPU threads operating at 3.7 GHz+</p>
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-6 col-md-4 mb-1">
+						<a href="#" class="box glowing">
+							<h3 class="mb-1">Telco & carrier</h3>
+							<p class="faded my-0">Blazing-fast cloud instances with dedicated CPU threads operating at 3.7 GHz+</p>
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-6 col-md-4 mb-1">
+						<a href="#" class="box glowing">
+							<h3 class="mb-1">Web hosts</h3>
+							<p class="faded my-0">Blazing-fast cloud instances with dedicated CPU threads operating at 3.7 GHz+</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="pb-8" id="case-studies">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-xs-12 col-md-8 col-md-offset-2 mb-0">
+						<h2 class="mb-1">OneQode in action<mark class="dot">.</mark></h2>
+						<p class="subheading faded">Blagblasldalksdja skldja lsdkjas dlkjas ldkjas dlkj</p>
+					</div>
+				</div>
+			</div>
+			<div class="swiper case-studies my-2">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide col-xs-10 col-md-8 col-lg-6 cs-oceanic">
+						<div class="col-xs-12 col-md-8">
+							<h3 class="mb-0">Powering a groundbreaking $17,000 CS:GO tournament</h3>
+							<p><strong>OneQode’s gaming infrastructure fuelled a world first event for Oceanic Esports</strong></p>
+							<p>OneQode facilitated the first cross-regional, Asia-Pacific online CS:GO tournament.</p>
+							<p class="mt-2 mb-4"><a href="/case-study/guam-csgo/" class="chevron">Case Study</a></p>
+						</div>
+						<div class="col-xs-12 col-md-8 mt-a">
+							<img src="/img/customers/oceanic-esports.png" alt="Oceanic Esports Logo" class="size-xl">
+						</div>
+					</div>
+					<div class="swiper-slide col-xs-10 col-md-8 col-lg-6 cs-prosimcentre">
+						<div class="col-xs-12 col-md-8">
+							<h3 class="mb-0">Unleashing immersive sim racing experiences</h3>
+							<p><strong>OneQode’s gaming infrastructure fuelled a world first event for Oceanic Esports</strong></p>
+							<p>OneQode facilitated the first cross-regional, Asia-Pacific online CS:GO tournament.</p>
+						</div>
+						<div class="col-xs-12 col-md-8 mt-a">
+							<img src="/img/customers/prosimcentre.png" alt="PROSIMCENTRE Logo">
+						</div>
+					</div>
+					<div class="swiper-slide col-xs-10 col-md-8 col-lg-6 cs-quakecon">
+						<div class="col-xs-12 col-md-8">
+							<h3 class="mb-0">Hosting the Quakeworld Grand Final 2021</h3>
+							<p><strong>OneQode’s gaming infrastructure fuelled a world first event for Oceanic Esports</strong></p>
+							<p>OneQode facilitated the first cross-regional, Asia-Pacific online CS:GO tournament.</p>
+						</div>
+						<div class="col-xs-12 col-md-8 mt-a">
+							<img src="/img/customers/quakecon.png" alt="Quakecon Logo">
+						</div>
+					</div>
+					<div class="swiper-slide col-xs-10 col-md-8 col-lg-6 cs-wtfast">
+						<div class="col-xs-12 col-md-8">
+							<h3 class="mb-0">Delivering low-latency gaming routes</h3>
+							<p><strong>OneQode’s gaming infrastructure fuelled a world first event for Oceanic Esports</strong></p>
+							<p>OneQode facilitated the first cross-regional, Asia-Pacific online CS:GO tournament.</p>
+						</div>
+						<div class="col-xs-12 col-md-8 mt-a">
+							<img src="/img/customers/wtfast.png" alt="WTFast Logo" class="size-lg">
+						</div>
 					</div>
 				</div>
 				<div class="container">
@@ -513,7 +698,11 @@ slider: true
 			* Used under WTFPL license 💪
 			*/
 			window.fitText( document.getElementById("fittext"), 1.4 );
-			// The Swiper / Slider
+			/**
+			* Swiper — https://swiperjs.com/
+			* A modern touch slider
+			* Used under MIT license 🎓
+			*/
 			var swiper = new Swiper(".benefits", {
 				effect: "coverflow",
 				grabCursor: true,
@@ -525,6 +714,32 @@ slider: true
 					stretch: 0,
 					depth: 100,
 					modifier: 0.8,
+					slideShadows: true,
+				},
+				loop: true,
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+				keyboard: {
+					enabled: true,
+				},
+			});
+			var swiper = new Swiper(".case-studies", {
+				effect: "coverflow",
+				grabCursor: true,
+				slidesPerView: "auto",
+				centeredSlides: true,
+				centeredSlidesBounds: true,
+				coverflowEffect: {
+					rotate: 50,
+					stretch: 0,
+					depth: 100,
+					modifier: 0.9,
 					slideShadows: true,
 				},
 				loop: true,
