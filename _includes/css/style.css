@@ -1357,6 +1357,9 @@ abbr[title] {
 .logo-grid > div img.w50 {
 	width: 50%;
 }
+.logo-grid > div img.w70 {
+	width: 70%;
+}
 .logo-grid > div img.w80 {
 	width: 80%;
 }

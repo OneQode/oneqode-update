@@ -240,9 +240,19 @@ slider: true
 			.logo-grid > div:hover img {
 				opacity: 0.5;
 			}
-			@media screen and (max-width:  64em) {
+			.logo-grid {
+				grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
+			}
+			@media (min-width: 48em) {
+				.logo-grid {
+					grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+					grid-gap: 1rem;
+				}
+			}
+			@media (max-width: 340px) {
 				.logo-grid {
 					grid-template-columns:  repeat(auto-fit,minmax(110px,1fr));
+					grid-gap: 0.2rem;
 				}
 			}
 			/* Swiper */
@@ -448,12 +458,13 @@ slider: true
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-xs-12 col-md-10 col-md-offset-1 logo-grid">
-						<div><img src="/img/partners/edgeix.png" alt="EdgeIX"></div>
-						<div><img src="/img/partners/china-telecom.png" alt="China Telecom"></div>
-						<div><img src="/img/partners/spectrum.svg" alt="Spectrum"></div>
-						<div><img src="/img/partners/telia.svg" alt="Telia"></div>
-						<div><img src="/img/partners/tencent.svg" alt="Tencent"></div>
+					<div class="col-xs-12 logo-grid">
+						<div><img src="/img/customers/esl.svg" alt="ESL" class="w70"></div>
+						<div><img src="/img/customers/wtfast.png" alt="WTFast" class="w70"></div>
+						<div><img src="/img/customers/prosimcentre.png" alt="PROSIMCENTRE"></div>
+						<div><img src="/img/customers/network-next.png" alt="Network Next"></div>
+						<div><img src="/img/customers/quakecon.png" alt="Quakecon"></div>
+						<div><img src="/img/partners/oracle.svg" alt="Oracle"></div>
 					</div>
 				</div>
 			</div>
