@@ -28,7 +28,12 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="{{ global.url }}{{ page.url }}" />
 	<meta property="og:site_name" content="OneQode" />
+{%- unless ogExternal %}
 	<meta property="og:image" content="{{ global.url }}/img/og/{{ ogImage }}"/>
+{%- endunless %}
+{%- if ogExternal %}
+	<meta property="og:image" content="{{ ogExternal }}"/>
+{%- endif %}
 	<meta property="article:publisher" content="https://www.facebook.com/oneqode" />
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:description" content="{{ metaDescription }}">
