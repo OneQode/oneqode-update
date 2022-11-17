@@ -82,6 +82,11 @@
 	<!-- Performance -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{%- if preconnect %}
+	{%- for item in preconnect %}
+	<link rel="preconnect" href="{{ item }}">
+	{%- endfor %}
+{%- endif %}
 {%- if slider or form or phone or jquery %}
 	<link rel="preconnect" href="https://unpkg.com">
 {%- endif %}
