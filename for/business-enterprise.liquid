@@ -234,17 +234,9 @@ slider: true
 						<h2>It checks all the boxes<mark class="dot">.</mark></h2>
 						<p class="subheading faded">We help you deliver applications faster, reach more users, and get more value from your IT spend</p>
 					</div>
-					<div class="col-xs-12 col-md-6 col-md-offset-3 mt-4">
-						<p class="subheading">Benefits for: &nbsp;
-							<select id="organisation-type" onchange="orgType()">
-								<option value="business-benefits">Business & Enterprise</option>
-								<option value="telecoms-benefits">Telecommunications</option>
-							</select>
-						</p>
-					</div>
 				</div>
 				<!-- Business -->
-				<div class="row mt-1 interactive" id="business-benefits">
+				<div class="row mt-1" id="business-benefits">
 					<div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 mb-2">
 						<p>21st century businesses can’t afford to keep users waiting. Our low-latency infrastructure accelerates your ability to scale, delights users, and is easy to integrate.</p>
 					</div>
@@ -271,34 +263,6 @@ slider: true
 					<div class="col-xs-12 col-sm-4 p-1 mb-2">
 						<h3>Get more from your<br class="responsive"> IT spend</h3>
 						<p class="faded">Fit more users on every server, and support high-intensity workloads with ease.</p>
-					</div>
-				</div>
-				<!-- Telco -->
-				<div class="row mt-1 interactive" id="telecoms-benefits" style="display: none;">
-					<div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 mb-2">
-						<p>Give your users the absolute best, with network connectivity optimised for latency and performance. That means better performance and fewer complaints.</p>
-					</div>
-					<div class="col-xs-12 col-sm-4 p-1 mb-2">
-						<h3>Reach across the world’s largest region</h3>
-						<p class="faded">Extend your reach across three continents at low latency, with private fast lanes to regional internet providers.</p>
-					</div>
-					<div class="col-xs-12 col-sm-4 p-1 mb-2">
-						<h3>Improve real-time performance</h3>
-						<p class="faded">Our network was built for gaming, which ensures you can deliver low-latency real-time performance to your users.</p>
-					</div>
-					<div class="col-xs-12 col-sm-4 p-1 mb-2">
-						<h3>Strengthen network resilience</h3>
-						<p class="faded">We operate on multiple routes across the region, with automatic failover mechanisms in place to ensure stability.</p>
-					</div>
-					<div class="row place-content-center">
-						<div class="col-xs-12 col-sm-4 p-1 mb-2">
-							<h3>Optimise costs</h3>
-							<p class="faded">Achieve a solid balance of performance and cost, with premium regional connectivity without the exorbitant price tag.</p>
-						</div>
-						<div class="col-xs-12 col-sm-4 p-1 mb-2">
-							<h3>Faster connectivity</h3>
-							<p class="faded">We use Arista switches — the world’s fastest, and operate on the shortest submarine cable routes across the Asia-Pacific region.</p>
-						</div>
 					</div>
 				</div>
 		</section>
@@ -346,26 +310,5 @@ slider: true
 				},
 				touchEventsTarget: 'container',
 			});
-			// Organisation Type Switcher
-			function orgType() {
-				select = document.getElementById("organisation-type").value;
-				// Select all interactive bits and hide them
-				function hideStuff() {
-					const interactive = Array.from(document.getElementsByClassName("interactive"));
-						interactive.forEach(item => {
-							item.style.display = "none";
-						});
-				}
-				switch(select) {
-					case "business-benefits":
-						hideStuff();
-						document.getElementById("business-benefits").style.display = "flex";
-						break;
-					case "telecoms-benefits":
-						hideStuff();
-						document.getElementById("telecoms-benefits").style.display = "flex";
-						break;
-				}
-			}
 		</script>
 {% include _footer.liquid %}
