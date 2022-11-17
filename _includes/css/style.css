@@ -650,6 +650,7 @@ a.chevron {
 	white-space: nowrap;
 	text-decoration-color: transparent;
 	text-underline-offset: 0.2rem;
+	display: inline-block;
 }
 a.chevron:hover,
 a.chevron:focus {
