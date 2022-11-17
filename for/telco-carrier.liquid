@@ -13,14 +13,7 @@ slider: true
 		<style>
 			section.hero {
 				min-height: 85vh;
-			}
-			.no-webp .hero {
-				background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/business-header.jpg") no-repeat center center;
-				background-size: cover;
-			}
-			.webp .hero {
-				background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/business-header.webp") no-repeat center center;
-				background-size: cover;
+				background: none;
 			}
 			/* Swiper */
 			:root {
@@ -45,6 +38,14 @@ slider: true
 				opacity: 0.4;
 			}
 			@media screen and (max-width: 64em) {
+				section.hero {
+					background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/thumb-planet-bg.jpg") no-repeat center center;
+					background-size: cover;
+				}
+				.bg-video,
+				.bg-video-overlay {
+					display: none;
+				}
 				.swiper-slide {
 					padding: 2rem 1rem;
 					background: #333;
@@ -93,6 +94,12 @@ slider: true
 						<p><a href="/contact/business-enterprise/" class="m-1 button">Set up a chat</a></p>
 					</div>
 				</div>
+			</div>
+			<div class="bg-video">
+				<div class="overlay"></div>
+				<video autoplay loop muted poster="/img/bg/thumb-planet-bg.jpg">
+					<source src="https://oneqode.sfo2.digitaloceanspaces.com/videos/planet-bg.mp4" type="video/mp4">
+				</video>				
 			</div>
 		</section>
 		<section class="text-center pb-8">
