@@ -13,10 +13,8 @@ slider: true
 		<!-- Page-Specific Styles -->
 		<style>
 			/* Hero */
-			.hero {
-				background: none !important;
-			}
 			section.hero {
+				background: none;
 				padding-top: 6rem !important;
 				min-height: 75vh;
 			}
@@ -146,6 +144,7 @@ slider: true
 			.cloud-locations .label span {
 				position: absolute;
 				transform: translateX(-50%);
+				text-shadow: 1px 1px 1px #000000;
 			}
 			.label.guam {
 				left: 59.3%;
@@ -281,7 +280,6 @@ slider: true
 			@media screen and (max-width: 64em) {
 				.swiper-slide {
 					padding: 2rem 1rem;
-					background: #333;
 				}
 			}
 			/* Icons */
@@ -526,8 +524,6 @@ slider: true
 					<!-- End Slide -->
 				</div>
 				<div class="container">
-					<div class="swiper-button-next"></div>
-					<div class="swiper-button-prev"></div>
 					<div class="swiper-pagination"></div>
 				</div>
 			</div>
@@ -634,8 +630,6 @@ slider: true
 					</div>
 				</div>
 				<div class="container">
-					<div class="swiper-button-next"></div>
-					<div class="swiper-button-prev"></div>
 					<div class="swiper-pagination"></div>
 				</div>
 			</div>
@@ -681,10 +675,6 @@ slider: true
 					el: ".swiper-pagination",
 					clickable: true,
 				},
-				navigation: {
-					nextEl: ".swiper-button-next",
-					prevEl: ".swiper-button-prev",
-				},
 				keyboard: {
 					enabled: true,
 				},
@@ -707,10 +697,6 @@ slider: true
 				pagination: {
 					el: ".swiper-pagination",
 					clickable: true,
-				},
-				navigation: {
-					nextEl: ".swiper-button-next",
-					prevEl: ".swiper-button-prev",
 				},
 				keyboard: {
 					enabled: true,
