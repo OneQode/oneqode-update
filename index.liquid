@@ -133,35 +133,48 @@ slider: true
 				left: 58.7%;
 				top: 42.7%;
 			}
-			.cloud-locations .label {
+			.globe-locations .label {
 				position: absolute;
 				text-align: center;
 				font-family: Poppins, sans-serif;
 				font-weight: 600;
-				color: #fff;
 				white-space: nowrap;
-			}
-			.cloud-locations .label span {
-				position: absolute;
-				transform: translateX(-50%);
 				text-shadow: 1px 1px 1px #000000;
 			}
-			.label.guam {
-				left: 59.3%;
-				top: 49.7%;
+			.globe-locations .label.cloud {
+				z-index: 2;
+				color: #fff;
 			}
-			.label.singapore {
-				left: 34.7%;
-				top: 48%;
+			.globe-locations .label:not(.cloud) {
+				z-index: 1;
+				color: #9baab5;
+				font-size: 60%;
 			}
-			.label.hong-kong {
-				left: 43.5%;
-				top: 41%;
+			.globe-locations .label span {
+				position: absolute;
+				transform: translateX(-50%);
 			}
-			.label.tokyo {
-				left: 58.7%;
-				top: 38.7%;
-			}
+			.label.guam 		{	left: 59.3%;	top: 49.7%;	}
+			.label.singapore 	{	left: 34.7%;	top: 48%;	}
+			.label.hong-kong 	{	left: 43.5%;	top: 41%;	}
+			.label.tokyo 		{	left: 58.7%;	top: 38.7%;	}
+			.label.sydney 		{	left: 56.7%;	top: 75.4%;	}
+			.label.melbourne	{	left: 47.8%;	top: 75.9%;	}
+			.label.brisbane		{	left: 59.9%;	top: 72.2%;	}
+			.label.los-angeles	{	left: 87.4%;	top: 42.6%;	}
+			.label.seattle		{	left: 86.5%;	top: 37.5%;	}
+			.label.vancouver	{	left: 85.6%;	top: 35.4%;	}
+			.label.chennai		{	left: 26.6%;	top: 40.1%;	}
+			.label.muscat		{	left: 19.6%;	top: 32.5%;	}
+			.label.hawaii		{	left: 77.9%;	top: 49.5%;	}
+			.label.vladivostok	{	left: 50.9%;	top: 34.2%;	}
+			.label.seoul		{	left: 48.5%;	top: 39.3%;	}
+			.label.manila		{	left: 41.4%;	top: 48.9%;	}
+			.label.davao		{	left: 46.2%;	top: 54.1%;	}
+			.label.jakarta		{	left: 29.0%;	top: 55.4%;	}
+			.label.surabaya		{	left: 34.0%;	top: 59.0%;	}
+			.label.darwin		{	left: 45.5%;	top: 64.6%;	}
+			.label.perth		{	left: 32.0%;	top: 68.8%;	}
 			.globe svg {
 				position: absolute;
 				z-index: 0;
@@ -203,8 +216,11 @@ slider: true
 			}
 			/* Mobile Globe Overrides */
 			@media (max-width: 64em) {
-				.cloud-locations .label span {
+				.globe-locations .label span {
 					transform: translateX(-50%) translateY(-50%);
+				}
+				.globe-locations .label:not(.cloud) {
+					font-size: 46%;
 				}
 				span.pulse {
 					height: 0.5rem;
@@ -214,21 +230,14 @@ slider: true
 					margin-top: -10rem;
 				}
 				.globe svg path {
-					stroke-width: 4;
+					/*stroke-width: 4;
 					stroke-dasharray: 20;
-					stroke-dashoffset: 400;
+					stroke-dashoffset: 400;*/
+					stroke-width: 2;
+					stroke-dasharray: 15;
+					stroke-dashoffset: 390;
 				}
 			}
-			/*#overview .col-xs-12 {
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-			}
-			@media (max-width: 48em) {
-				#overview .col-xs-12 {
-					align-items: center;
-				}
-			}*/
 			/* Overriding default logo-grid styling */
 			.logo-grid > div::before {
 				padding-bottom: 60%;
@@ -258,7 +267,6 @@ slider: true
 			:root {
 				--swiper-theme-color: #00b0f0;
 				--swiper-pagination-bullet-inactive-color: #999;
-				--swiper-navigation-size: 32px;
 			}
 			.swiper {
 				width: 100%;
@@ -392,15 +400,33 @@ slider: true
 		</section>
 		<section class="globe">
 			<div class="container">
-				<div class="cloud-locations">
-					<span class="label guam"><span>Guam</span></span>
+				<div class="globe-locations">
+					<span class="label guam cloud"><span>Guam</span></span>
 					<span class="pulse guam"></span>
-					<span class="label singapore"><span>Singapore</span></span>
+					<span class="label singapore cloud"><span>Singapore</span></span>
 					<span class="pulse singapore"></span>
-					<span class="label hong-kong"><span>Hong Kong</span></span>
+					<span class="label hong-kong cloud"><span>Hong Kong</span></span>
 					<span class="pulse hong-kong"></span>
-					<span class="label tokyo"><span>Tokyo</span></span>
+					<span class="label tokyo cloud"><span>Tokyo</span></span>
 					<span class="pulse tokyo"></span>
+					<span class="label sydney">Sydney</span>
+					<span class="label melbourne">Melbourne</span>
+					<span class="label brisbane">Brisbane</span>
+					<span class="label los-angeles hide-mobile">Los Angeles</span>
+					<span class="label los-angeles mobile-only">LA</span>
+					<span class="label seattle">Seattle</span>
+					<span class="label vancouver">Vancouver</span>
+					<span class="label chennai">Chennai</span>
+					<span class="label muscat">Muscat</span>
+					<span class="label hawaii">Hawaii</span>
+					<span class="label vladivostok">Vladivostok</span>
+					<span class="label seoul">Seoul</span>
+					<span class="label manila">Manila</span>
+					<span class="label davao">Davao</span>
+					<span class="label jakarta">Jakarta</span>
+					<span class="label surabaya">Surabaya</span>
+					<span class="label darwin">Darwin</span>
+					<span class="label perth">Perth</span>
 				</div>
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1781 1792" aria-labelledby="maptitle mapdescription" role="img">
 					<title id="maptitle">OneQode Cloud Map</title>
