@@ -314,7 +314,7 @@ nav a {
 	font-weight: 600;
 	font-size: 1.2rem;
 	text-decoration: none;
-	transition: all 0.2s;
+	transition: all 0.1s;
 }
 
 /* Main Menu */
@@ -350,7 +350,7 @@ li.has-submenu > a:focus svg {
 }
 li.has-submenu > a svg {
 	margin-left: 0.1rem;
-	transition: all 0.2s;
+	transition: all 0.1s;
 }
 li.has-submenu.open > a svg {
 	transform: rotateX(180deg);
@@ -358,14 +358,14 @@ li.has-submenu.open > a svg {
 li.has-submenu.open .submenu {
 	visibility: visible;
 	opacity: 1;
-	animation: moveup 0.2s ease-out forwards;
+	animation: moveup 0.1s ease-out forwards;
 }
 li.has-submenu .submenu li a {
 	opacity: 0;
 	visibility: hidden;
 }
 li.has-submenu.open .submenu li a {
-	animation: moveup 0.2s ease-out forwards;
+	animation: moveup 0.1s ease-out forwards;
 	animation-delay: calc(0.075s * var(--order));
 }
 @keyframes moveup {
@@ -384,7 +384,7 @@ li.has-submenu.open .submenu li a {
 	display: grid;
 	visibility: hidden;
 	opacity: 0;
-	transition: all 0.2s;
+	transition: all 0.1s;
 }
 .submenu li {
 	font-size: 1rem;
@@ -404,7 +404,7 @@ li.has-submenu.open .submenu li a {
 	display: block;
 	color: #cecece;
 	font-size: 0.8rem;
-	transition: all 0.2s;
+	transition: all 0.1s;
 }
 .submenu li a:hover span,
 .submenu li a:focus span {
@@ -425,12 +425,12 @@ li.has-submenu.open .submenu li a {
 	/* Menu: Tablet and Above */
 	@media (min-width: 48em) {
 		.submenu {
-			background: rgba(0,0,0,0.9);
+			background: #000;
 			border: 1px solid #333;
 			margin-top: 1rem;
 			border-radius: 10px;
 			position: absolute;
-			padding: 1.5rem;
+			padding: 1rem 1.5rem;
 			overflow: hidden;
 		}
 		.mobile-only {
@@ -628,6 +628,10 @@ p.superheading {
 	text-transform: uppercase;
 	letter-spacing: 0.12rem;
 	margin-bottom: 1rem;
+	font-weight: 600;
+    background: linear-gradient(90deg, #00b0f0, #2a6378);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 /* Highlight */
 mark {
@@ -659,7 +663,7 @@ LINKS AND BUTTONS
  - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 a {
 	color: #00b0f0;
-	transition: all 0.2s;
+	transition: all 0.1s;
 }
 a:hover,
 a:focus {
@@ -688,7 +692,7 @@ a.chevron::after {
 	-webkit-mask: url(/img/ico/chevron.svg) no-repeat center;
 	-webkit-mask-size: cover;
 	mask-size: cover;
-	transition: background 0.2s;
+	transition: background 0.1s;
 }
 a.chevron:hover::after,
 a.chevron:focus::after,
@@ -708,7 +712,7 @@ a.external::after {
 	-webkit-mask: url(/img/ico/external.svg) no-repeat center;
 	-webkit-mask-size: cover;
 	mask-size: cover;
-	transition: background 0.2s;
+	transition: background 0.1s;
 }
 .button {
 	background: #00b0f0;
@@ -722,7 +726,7 @@ a.external::after {
 	letter-spacing: 0.25rem;
 	text-decoration: none;
 	text-transform: uppercase;
-	transition: all 0.2s;
+	transition: all 0.1s;
 }
 .button:hover,
 .button:focus {
@@ -833,12 +837,12 @@ textarea {
 	color: #fff;
 	border: 2px solid #999;
 	border-radius: 10px;
-	transition: all 0.2s;
+	transition: all 0.1s;
 }
 input::placeholder,
 textarea::placeholder {
 	color: #999;
-	transition:  all 0.2s;
+	transition:  all 0.1s;
 }
 select {
 	color: #999;
@@ -988,7 +992,7 @@ CONTENT
 	text-decoration: none;
 }
 .linked * {
-	transition: all 0.2s;
+	transition: all 0.1s;
 }
 .linked h3 {
 	font-size: 2.5rem;
@@ -1036,7 +1040,7 @@ CONTENT
 .box.glowing h2,
 .box.glowing h3,
 .box.glowing img {
-	transition: all 0.2s;
+	transition: all 0.1s;
 }
 .box.glowing h2 {
 	font-size: 2rem;
@@ -1126,7 +1130,7 @@ summary {
 	margin-top: 2rem;
 	color: #fff;
 	padding: 0.5rem;
-	transition: color 0.2s;
+	transition: color 0.1s;
 }
 summary::-webkit-details-marker {
 	display: none;
@@ -1248,7 +1252,7 @@ ul.no-style {
 .profile h3 {
 	margin: 1.5rem 0 0.5rem 0;
 	font-size: 1.25rem;
-	transition: all 0.2s;
+	transition: all 0.1s;
 }
 .profile a:hover h3,
 .profile a:focus h3 {
@@ -1369,7 +1373,7 @@ abbr[title] {
 	grid-area: 1/1/2/2;
 	filter: brightness(0) invert(1);
 	opacity: 0.3;
-	transition: opacity 0.2s;
+	transition: opacity 0.1s;
 }
 .logo-grid > div:hover img {
 	opacity: 0.8;
@@ -1393,7 +1397,7 @@ RESPONSIVE OVERRIDES
 	}
 	picture img {
 		opacity: 0.75;
-		transition: opacity 0.2s;
+		transition: opacity 0.1s;
 	}
 	picture:hover img,
 	picture:focus img {
