@@ -9,6 +9,7 @@ changefreq: monthly
 priority: 0.8
 pageSupertitle: Network Performance
 pageTitle: Inter-region<br class="responsive"> latency statistics
+pageSubtitle: PoP to PoP round trip time for the OneQode network
 font: hack
 ---
 		<style>
@@ -21,201 +22,164 @@ font: hack
 				font-weight: 600;
 			}
 			.hovered {
-				background-color: #1c1d22;
+				background: #1c1d22;
 			}
 			tbody tr:hover {
-				background-color: #1c1d22;	
+				background: #1c1d22;	
 			}
-			tbody td:not(.green):hover {
-				color: #00b0f0;
+			tbody td:hover {
+				background: #666;
 			}
 			.green {
 				color: #00ff00;
 			}
 		</style>
-		<div class="col-xs-12 col-md-10 col-md-offset-1">
-			<div class="responsive-table">
-				<table id="myTable">
-					<col />
-					<col />
-					<col />
-					<col />
-					<col />
-					<col />
-					<col />
-					<col />
-					<col />
-					<col />
-					<thead>
-						<tr class="text-right">
-							<th>&nbsp;</th>
-							<th>Guam</th>
-							<th>Sydney</th>
-							<th>Brisbane</th>
-							<th>Tokyo</th>
-							<th class="nowrap">Hong Kong<mark>*</mark></th>
-							<th class="nowrap">Los Angeles</th>
-							<th>Melbourne</th>
-							<th>Singapore</th>
-							<th class="nowrap">Bay Area</th>
-						</tr>
-					</thead>
-					<tbody class="monospace text-right">
-						<tr>
-							<th>Guam</th>
-							<td class="green">0.0</td>
-							<td>70.2</td>
-							<td>65.0</td>
-							<td>28.7</td>
-							<td>72.2</td>
-							<td>108.7</td>
-							<td>81.8</td>
-							<td>64.7</td>
-							<td>117.1</td>
-						</tr>
-						<tr>
-							<th>Sydney</th>
-							<td>70.2</td>
-							<td class="green">0.0</td>
-							<td>11.8</td>
-							<td>98.8</td>
-							<td>142.3</td>
-							<td>178.8</td>
-							<td>11.7</td>
-							<td>134.8</td>
-							<td>187.2</td>
-						</tr>
-						<tr>
-							<th>Brisbane</th>
-							<td>65.0</td>
-							<td>11.8</td>
-							<td class="green">0.0</td>
-							<td>93.6</td>
-							<td>137.1</td>
-							<td>173.6</td>
-							<td>23.4</td>
-							<td>129.6</td>
-							<td>182.0</td>
-						</tr>
-						<tr>
-							<th>Tokyo</th>
-							<td>28.7</td>
-							<td>98.8</td>
-							<td>93.6</td>
-							<td class="green">0.0</td>
-							<td>100.7</td>
-							<td>137.2</td>
-							<td>110.4</td>
-							<td>93.3</td>
-							<td>145.7</td>
-						</tr>
-						<tr>
-							<th class="nowrap">Hong Kong<mark>*</mark></th>
-							<td>72.2</td>
-							<td>142.3</td>
-							<td>137.1</td>
-							<td>100.7</td>
-							<td class="green">0.0</td>
-							<td>180.7</td>
-							<td>153.8</td>
-							<td>136.7</td>
-							<td>189.1</td>
-						</tr>
-						<tr>
-							<th class="nowrap">Los Angeles</th>
-							<td>108.0</td>
-							<td>178.8</td>
-							<td>173.6</td>
-							<td>137.2</td>
-							<td>180.7</td>
-							<td class="green">0.0</td>
-							<td>190.4</td>
-							<td>173.2</td>
-							<td>8.5</td>
-						</tr>
-						<tr>
-							<th>Melbourne</th>
-							<td>81.8</td>
-							<td>11.7</td>
-							<td>23.4</td>
-							<td>110.4</td>
-							<td>153.8</td>
-							<td>190.4</td>
-							<td class="green">0.0</td>
-							<td>146.4</td>
-							<td>198.8</td>
-						</tr>
-						<tr>
-							<th>Singapore</th>
-							<td>64.7</td>
-							<td>134.8</td>
-							<td>129.6</td>
-							<td>93.3</td>
-							<td>136.7</td>
-							<td>173.2</td>
-							<td>146.4</td>
-							<td class="green">0.0</td>
-							<td>181.6</td>
-						</tr>
-						<tr>
-							<th class="nowrap">Bay Area</th>
-							<td>117.0</td>
-							<td>187.2</td>
-							<td>182.0</td>
-							<td>145.6</td>
-							<td>189.1</td>
-							<td>8.5</td>
-							<td>198.8</td>
-							<td>181.6</td>
-							<td class="green">0.0</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-		<div id="services" class="py-8">
-			<div class="container">
-				<div class="row text-center">
-					<div class="col-xs-12"><h2>Go faster with OneQode<mark class="dot">.</mark></h2></div>
-				</div>
-				<div class="row icons mobile-flex">
-					<div class="col-xs-6 col-md-4 mb-2 mt-1">
-						<a href="/cloud/" class="box glowing">
-							<img class="mt-2" src="/img/ico/cloud.svg" alt="">
-							<h2 class="mt-2">Cloud Platform</h2>
-							<p class="hide-mobile">The high performance cloud</p>
-						</a>
-					</div>
-					<div class="col-xs-6 col-md-4 mb-2 mt-1">
-						<a href="/dedicated-servers/" class="box glowing">
-							<img class="mt-2" src="/img/ico/server.svg" alt="">
-							<h2 class="mt-2">Dedicated Servers</h2>
-							<p class="hide-mobile">Compute, storage and colocation</p>
-						</a>
-					</div>
-					<div class="col-xs-6 col-md-4 mb-2 mt-1">
-						<a href="/ip-transit/" class="box glowing">
-							<img class="mt-2" src="/img/ico/connection2.svg" alt="">
-							<h2 class="mt-2">IP Transit</h2>
-							<p class="hide-mobile">Internet access for enterprise</p>
-						</a>
-					</div>
+		<div class="black-to-footer pb-8">
+			<div class="col-xs-12 col-md-10 col-md-offset-1">
+				<div class="responsive-table">
+					<table id="pingTable">
+						<col />
+						<col />
+						<col />
+						<col />
+						<col />
+						<col />
+						<col />
+						<col />
+						<col />
+						<col />
+						<thead>
+							<tr class="text-right">
+								<th>&nbsp;</th>
+								<th>Guam</th>
+								<th>Sydney</th>
+								<th>Brisbane</th>
+								<th>Tokyo</th>
+								<th class="nowrap">Hong Kong<mark>*</mark></th>
+								<th class="nowrap">Los Angeles</th>
+								<th>Melbourne</th>
+								<th>Singapore</th>
+								<th class="nowrap">Bay Area</th>
+							</tr>
+						</thead>
+						<tbody class="monospace text-right">
+							<tr>
+								<th>Guam</th>
+								<td class="green">0.0</td>
+								<td>70.2</td>
+								<td>65.0</td>
+								<td>28.7</td>
+								<td>72.2</td>
+								<td>108.7</td>
+								<td>81.8</td>
+								<td>64.7</td>
+								<td>117.1</td>
+							</tr>
+							<tr>
+								<th>Sydney</th>
+								<td>70.2</td>
+								<td class="green">0.0</td>
+								<td>11.8</td>
+								<td>98.8</td>
+								<td>142.3</td>
+								<td>178.8</td>
+								<td>11.7</td>
+								<td>134.8</td>
+								<td>187.2</td>
+							</tr>
+							<tr>
+								<th>Brisbane</th>
+								<td>65.0</td>
+								<td>11.8</td>
+								<td class="green">0.0</td>
+								<td>93.6</td>
+								<td>137.1</td>
+								<td>173.6</td>
+								<td>23.4</td>
+								<td>129.6</td>
+								<td>182.0</td>
+							</tr>
+							<tr>
+								<th>Tokyo</th>
+								<td>28.7</td>
+								<td>98.8</td>
+								<td>93.6</td>
+								<td class="green">0.0</td>
+								<td>100.7</td>
+								<td>137.2</td>
+								<td>110.4</td>
+								<td>93.3</td>
+								<td>145.7</td>
+							</tr>
+							<tr>
+								<th class="nowrap">Hong Kong<mark>*</mark></th>
+								<td>72.2</td>
+								<td>142.3</td>
+								<td>137.1</td>
+								<td>100.7</td>
+								<td class="green">0.0</td>
+								<td>180.7</td>
+								<td>153.8</td>
+								<td>136.7</td>
+								<td>189.1</td>
+							</tr>
+							<tr>
+								<th class="nowrap">Los Angeles</th>
+								<td>108.0</td>
+								<td>178.8</td>
+								<td>173.6</td>
+								<td>137.2</td>
+								<td>180.7</td>
+								<td class="green">0.0</td>
+								<td>190.4</td>
+								<td>173.2</td>
+								<td>8.5</td>
+							</tr>
+							<tr>
+								<th>Melbourne</th>
+								<td>81.8</td>
+								<td>11.7</td>
+								<td>23.4</td>
+								<td>110.4</td>
+								<td>153.8</td>
+								<td>190.4</td>
+								<td class="green">0.0</td>
+								<td>146.4</td>
+								<td>198.8</td>
+							</tr>
+							<tr>
+								<th>Singapore</th>
+								<td>64.7</td>
+								<td>134.8</td>
+								<td>129.6</td>
+								<td>93.3</td>
+								<td>136.7</td>
+								<td>173.2</td>
+								<td>146.4</td>
+								<td class="green">0.0</td>
+								<td>181.6</td>
+							</tr>
+							<tr>
+								<th class="nowrap">Bay Area</th>
+								<td>117.0</td>
+								<td>187.2</td>
+								<td>182.0</td>
+								<td>145.6</td>
+								<td>189.1</td>
+								<td>8.5</td>
+								<td>198.8</td>
+								<td>181.6</td>
+								<td class="green">0.0</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</div>
-		<section class="pb-8 black-to-footer">
-			<div class="container">
-				<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
-					<h2>Start a conversation today<mark class="dot">.</mark></h2>
-					<p class="subheading">Get in touch with our team to discuss your toughest infrastructure challenges.</p>
-					<p><a href="/contact/" class="button ghost mt-2">Contact Us</a></p>
-				</div>
-			</div>
-		</section>
 		<script>
 			(() => {
-				const myTable = document.getElementById("myTable");
-				const cols = myTable.querySelectorAll("col");
+				const pingTable = document.getElementById("pingTable");
+				const cols = pingTable.querySelectorAll("col");
 				const events = {
 					mouseover: e => {
 						const t = e.target.closest("td");
@@ -234,7 +198,7 @@ font: hack
 					}
 				};
 				for (let event in events) {
-					myTable.addEventListener(event, events[event]);
+					pingTable.addEventListener(event, events[event]);
 				}
 			})();
 		</script>
