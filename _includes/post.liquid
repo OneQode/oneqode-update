@@ -1,7 +1,6 @@
 ---
 title: This is the title
 author: Author McAuthorface
-authorRole: Genius
 ctaTitle: That’s it<mark class="dot">.</mark> That’s the article
 ctaSubtitle: Thinking of taking on the world? We’d love to help.
 contentRSS: true
@@ -12,7 +11,7 @@ contentRSS: true
 				<div class="row middle-xs">
 					<div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
 						<h1>{{ title }}</h1>
-						<p><span class="faded">by</span> {{ author }}, {{ authorRole }} <span class="faded">• {{ date | readableDate }}</span></p>
+						<p><span class="faded">by</span> {{ author }}{%- if authorRole -%}, {{ authorRole }}{%- endif %} <span class="faded">• {{ date | readableDate }}</span></p>
 					</div>
 				</div>
 			</div>
