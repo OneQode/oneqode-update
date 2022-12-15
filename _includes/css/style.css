@@ -638,7 +638,7 @@ a {
 }
 a:hover,
 a:focus {
-	color: #00597f;
+	color: #fff;
 }
 a.chevron {
 	white-space: nowrap;
@@ -646,7 +646,7 @@ a.chevron {
 }
 a.chevron:hover,
 a.chevron:focus {
-	text-decoration-color: #004460;
+	text-decoration-color: #fff;
 }
 a.chevron::after {
 	width: 1.2rem;
