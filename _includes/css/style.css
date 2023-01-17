@@ -677,7 +677,7 @@ a.chevron {
 }
 a.chevron:hover,
 a.chevron:focus {
-	text-decoration-color: #ffffff;
+	text-decoration-color: #fff;
 }
 a.chevron::after {
 	width: 1.2rem;
