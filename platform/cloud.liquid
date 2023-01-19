@@ -14,7 +14,7 @@ font: hack
 {% include _header.liquid %}
 		<style>
 			section.hero {
-				min-height: 85vh;
+				min-height: 100vh;
 				background: none;
 			}
 			@media screen and (max-width: 64em) {
@@ -131,6 +131,9 @@ font: hack
 				width: 42%;
 			}
 			/* Globe Positioning */
+			.z-2 {
+				z-index: 2;
+			}
 			.globe.container {
 				margin-top: -16rem;
 				margin-bottom: -16rem;
@@ -377,7 +380,7 @@ font: hack
 			</div>
 		</section>
 		<section class="pt-4 pb-8" id="network">
-			<div class="container">
+			<div class="container z-2">
 				<div class="row text-center">
 					<div class="col-xs-12 col-md-8 col-md-offset-2 mb-0">
 						<h2 class="mb-1">Delivered to your users<br> at low latency<mark class="dot">.</mark></h2>
@@ -386,7 +389,7 @@ font: hack
 				</div>
 			</div>
 			{% include parts/_globe.liquid %}
-			<div class="container">
+			<div class="container z-2">
 				<div class="row mobile-text-center">
 					<div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-0 my-2">
 						<h4 class="mb-0">Latency optimized</h4>
