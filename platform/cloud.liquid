@@ -152,6 +152,34 @@ font: hack
 				height: 300px;
 				overflow-y: scroll;
 			}
+			/* Guam Cable Map Customisations */
+			.overflow-x-clip {
+				overflow-x: clip;
+			}
+			@media (max-width: 48em) {
+				#guam-cable-map {
+					margin-left: -2rem;
+					margin-right: -2rem;
+					margin-top: -8rem;
+					width: calc(100% + 4rem) !important;
+				}
+			}
+			@media (min-width: 48em) {
+				#guam-cable-map {
+					margin-top: -4rem;
+					margin-bottom: 0rem;
+					transform: scale(1.5);
+					z-index: -2 !important;
+				}
+			}
+			@media (min-width: 64em) {
+				#guam-cable-map {
+					margin-top: 4rem;
+					margin-bottom: -8rem;
+					transform: scale(3) translateX(10%);
+					z-index: -2 !important;
+				}
+			}
 			/*
 			Scrollbars credit:
 			https://codepen.io/devstreak/pen/dMYgeO?editors=0100
@@ -408,17 +436,17 @@ font: hack
 				</div>
 			</div>
 		</section>
-		<section class="pb-8 mobile-text-center">
+		<section class="pb-8 mobile-text-center overflow-x-clip">
 			<div class="container">
-				<div class="row middle-md pb-8" id="guam">
+				<div class="row middle-md pb-8 last-xs first-md" id="guam">
 					<div class="col-xs-12 col-md-5">
 						<h3 class="mb-1">Exclusive APAC Central region<mark class="dot">.</mark></h3>
 						<p class="subheading faded">Reach billions from one location</p>
 						<p>Our flagship cloud location is located in the heart of the Pacific on the island of Guam, giving you low latency reach across the region.</p>
 						<p class="mb-0"><a class="chevron" href="/guam/">APAC Central</a></p>
 					</div>
-					<div class="col-xs-12 col-md-5 col-md-offset-1">
-						<!-- Graphic goes here! -->
+					<div class="col-xs-12 col-md-5 col-md-offset-1 first-xs last-md">
+{% include parts/_guam-cable-map.liquid %}
 					</div>
 				</div>
 				<div class="row middle-md py-8" id="ddos-protection">
