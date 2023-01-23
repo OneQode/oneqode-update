@@ -296,6 +296,9 @@ font: hack
 				}
 			}
 			@media (max-width: 64em) {
+				#storage div:nth-child(2) {
+					margin-top: 4rem;
+				}
 				#ddos-protection div:first-child, #api img {
 					margin-bottom: 4rem;
 				}
@@ -518,7 +521,7 @@ font: hack
 						<a href="/network/#ddos-protection" class="chevron">Complete DDoS protection</a>
 					</div>
 				</div>
-				<div class="row middle-md pt-8" id="api">
+				<div class="row middle-md py-8" id="api">
 					<div class="col-xs-12 col-md-5">
 						<h3 class="mb-1">API accessible<mark class="dot">.</mark></h3>
 						<p class="subheading faded">Built for power-users</p>
@@ -532,12 +535,30 @@ font: hack
 						</figure>
 					</div>
 				</div>
+				<div class="row middle-md pt-8" id="storage">
+					<div class="col-xs-12 col-md-5">
+						<img src="/img/storage-illustration.svg" alt="Abstract concept of a storage cluster in the OneQode cloud platform">
+					</div>
+					<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-offset-0 col-md-5 col-md-offset-1">
+						<h3 class="mb-1">Storage for all the things<mark class="dot">.</mark></h3>
+						<p class="subheading faded">Fast SSD-based cloud storage</p>
+						<p><strong>Image storage</strong><br>For boot images and snapshot backups of your cloud instances.</p>
+						<p><strong>Volume storage</strong><br>Block storage that can be shared across multiple cloud instances.</p>
+						<p class="mb-0"><strong>Object storage</strong><br>S3-compatible object storage, perfect for large files and media.</p>
+					</div>
+				</div>
 			</div>
 		</section>
 		<section id="integrations">
 			<div class="container">
 				<div class="row middle-xs">
-					<div class="col-xs-12 col-md-5 pb-2 logo-grid">
+					<div class="col-xs-12 col-md-5 mobile-text-center">
+						<h3 class="mb-1">Plays nice with your tech stack<mark class="dot">.</mark></h3>
+						<p class="subheading faded">No lock-in, no problem</p>
+						<p>Our cloud platform is built on OpenStack, the open source cloud infrastructure platform.</p>
+						<p>Use Terraform? Too easy. Love Ansible? No problem. We’re not reinventing the wheel, and our open platform works with whatever DevOps toolkit you’re using.</p>
+					</div>
+					<div class="col-xs-12 col-md-5 col-md-offset-1 pb-2 logo-grid">
 						<div><img src="/img/integrations/agones.svg" alt="Agones logo"></div>
 						<div><img src="/img/integrations/ansible.svg" alt="Ansible logo"></div>
 						<div><img src="/img/integrations/chef.svg" alt="Chef logo"></div>
@@ -547,12 +568,6 @@ font: hack
 						<div><img src="/img/integrations/pulumi.svg" alt="Pulumi logo"></div>
 						<div><img src="/img/integrations/saltstack.svg" alt="Saltstack logo"></div>
 						<div><img src="/img/integrations/terraform.svg" alt="Terraform logo"></div>
-					</div>
-					<div class="col-xs-12 col-md-5 col-md-offset-1 mobile-text-center">
-						<h3 class="mb-1">Plays nice with your tech stack<mark class="dot">.</mark></h3>
-						<p class="subheading faded">No lock-in, no problem</p>
-						<p>Our cloud platform is built on OpenStack, the open source cloud infrastructure platform.</p>
-						<p>Use Terraform? Too easy. Love Ansible? No problem. We’re not reinventing the wheel, and our open platform works with whatever DevOps toolkit you’re using.</p>
 					</div>
 				</div>
 			</div>
