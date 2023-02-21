@@ -30,7 +30,7 @@ font: hack
 			#benefits {
 				margin-top: -8rem;
 			}
-			ul.ticks {
+			#benefits ul.ticks {
 				display: grid;
 				grid-gap: 1.5rem 2rem;
 				justify-items: center;
@@ -281,6 +281,9 @@ font: hack
 			.logo-grid > div:hover img {
 				opacity: 0.8;
 			}
+			#features ul li {
+				margin: 1rem 0;
+			}
 			/* ↓ Responsive Styles ↓ */
 			@media (min-width: 75em) {
 				h1 {
@@ -291,7 +294,7 @@ font: hack
 				h1 {
 					font-size: 3rem;
 				}
-				ul.ticks {
+				#benefits ul.ticks {
 					grid-template-columns: repeat(4, 1fr);
 				}
 			}
@@ -307,15 +310,15 @@ font: hack
 				h1 {
 					font-size: 2.5rem;
 				}
-				ul.ticks {
+				#benefits ul.ticks {
 					grid-template-columns: repeat(2, 1fr);
 				}
 			}
 			@media (max-width: 48em) {
-				ul.ticks {
+				#benefits ul.ticks {
 					display: inline-block;
 				}
-				ul.ticks li {
+				#benefits ul.ticks li {
 					margin-bottom: 1rem;
 				}
 			}
@@ -568,6 +571,45 @@ font: hack
 						<div><img src="/img/integrations/pulumi.svg" alt="Pulumi logo"></div>
 						<div><img src="/img/integrations/saltstack.svg" alt="Saltstack logo"></div>
 						<div><img src="/img/integrations/terraform.svg" alt="Terraform logo"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="features" class="mt-4">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-xs-12 col-md-8 col-md-offset-2 mb-0">
+						<h3 class="mb-1">All the features you’d expect<mark class="dot">.</mark></h2>
+						<p class="subheading faded">Everything a cloud needs; nothing it doesn’t</p>
+					</div>
+				</div>
+				<div class="row mt-2">
+					<div class="col-xs-12 col-sm-4 p-1 mp-2">
+						<h4>Cloud compute</h4>
+						<ul class="ticks my-0">
+							<li>CPU-optimized instances</li>
+							<li>Image creation & management</li>
+							<li>SSH key management</li>
+							<li>Cloud-init support</li>
+						</ul>
+					</div>
+					<div class="col-xs-12 col-sm-4 p-1 mp-2">
+						<h4>Cloud storage</h4>
+						<ul class="ticks my-0">
+							<li>Block volume storage</li>
+							<li>Object storage (S3-compatible)</li>
+							<li>Image storage</li>
+							<li>Backups and snapshots</li>
+						</ul>
+					</div>
+					<div class="col-xs-12 col-sm-4 p-1 mp-2">
+						<h4>Cloud networking</h4>
+						<ul class="ticks my-0">
+							<li>Cloud networks</li>
+							<li>Cloud routers</li>
+							<li>Cloud firewalls</li>
+							<li>Floating IPs</li>
+						</ul>
 					</div>
 				</div>
 			</div>
