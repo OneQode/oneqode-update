@@ -75,30 +75,33 @@ slider: true
 					margin-top: -10rem;
 				}
 			}
-			/* Overriding default logo-grid styling */
-			.logo-grid > div::before {
-				padding-bottom: 60%;
+			/* Logo Flex */
+			.logo-flex {
+				gap: 1rem;
 			}
-			.logo-grid > div img {
-				opacity: 0.5;
+			.logo-flex div {
+				display: flex;
+				align-items: center;
 			}
-			.logo-grid > div:hover img {
-				opacity: 0.5;
+			.logo-flex div img {
+				filter: brightness(0) invert(1);
+				opacity: 0.3;
+				transition: opacity 0.1s;
 			}
-			.logo-grid {
-				grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
+			.logo-flex div:hover img {
+				opacity: 0.8;
 			}
-			@media (min-width: 48em) {
-				.logo-grid {
-					grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-					grid-gap: 1rem;
-				}
+			.logo-flex img.w50 {
+				width: 50%;
 			}
-			@media (max-width: 340px) {
-				.logo-grid {
-					grid-template-columns:  repeat(auto-fit,minmax(110px,1fr));
-					grid-gap: 0.2rem;
-				}
+			.logo-flex img.w60 {
+				width: 50%;
+			}
+			.logo-flex img.w70 {
+				width: 70%;
+			}
+			.logo-flex img.w80 {
+				width: 80%;
 			}
 			/* Swiper */
 			:root {
@@ -229,7 +232,7 @@ slider: true
 						<p class="superheading">{{ pageSupertitle }}</p>
 						<h1 id="fittext" class="mb-1">{{ pageTitle }}<mark class="dot">.</mark></h1>
 						<p class="subheading">More power, less lag, further reach</p>
-						<p class="mt-4 m-1"><a href="/cloud/" class="button">Learn more</a> <a href="/contact/" class="chevron m-1 ml-2">Contact us</a></p>
+						<p class="mt-4 m-1"><a href="/cloud/" class="button">Our Cloud</a> <a href="/contact/" class="chevron m-1 ml-2">Contact us</a></p>
 					</div>
 				</div> 
 			</div>
@@ -267,14 +270,21 @@ slider: true
 						<figcaption>Trusted by brands that put performance first</figcaption>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-xs-12 logo-grid">
-						<div><img src="/img/customers/esl.svg" alt="ESL" class="w70"></div>
-						<div><img src="/img/customers/wtfast.png" alt="WTFast" class="w70"></div>
-						<div><img src="/img/partners/pldt.svg" alt="PLDT" class="w70"></div>
-						<div><img src="/img/customers/network-next.png" alt="Network Next"></div>
-						<div><img src="/img/partners/telin.png" alt="Telin" class="w50"></div>
-						<div><img src="/img/partners/oracle.svg" alt="Oracle"></div>
+				<div class="row place-content-center mt-2 logo-flex">					
+					<div class="col-xs-3 col-md-2">
+						<img src="/img/customers/esl.svg" alt="ESL" class="w70">
+					</div>
+					<div class="col-xs-3 col-md-2">
+						<img src="/img/customers/wtfast.png" alt="WTFast" class="w70">
+					</div>
+					<div class="col-xs-3 col-md-2">
+						<img src="/img/partners/oracle.svg" alt="Oracle" class="w80">
+					</div>
+					<div class="col-xs-3 col-md-2">
+						<img src="/img/partners/pldt.svg" alt="PLDT" class="w70">
+					</div>
+					<div class="col-xs-3 col-md-2">
+						<img src="/img/partners/telin.png" alt="Telin" class="w60">
 					</div>
 				</div>
 			</div>
