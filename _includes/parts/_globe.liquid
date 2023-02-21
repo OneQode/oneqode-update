@@ -46,6 +46,11 @@
 						box-shadow: 0 0 0 0 rgba(0, 176, 240, 0);
 					}
 				}
+				.pulse.guam {
+					left: 59.3%;
+					top: 53.7%;
+				}
+				{%- comment %}
 				.pulse.singapore {
 					left: 34.7%;
 					top: 52%;
@@ -54,14 +59,11 @@
 					left: 43.5%;
 					top: 45%;
 				}
-				.pulse.guam {
-					left: 59.3%;
-					top: 53.7%;
-				}
 				.pulse.tokyo {
 					left: 58.7%;
 					top: 42.7%;
 				}
+				{%- endcomment %}
 				.globe-locations .label {
 					position: absolute;
 					text-align: center;
@@ -71,6 +73,20 @@
 				}
 				.globe-locations .label.cloud {
 					z-index: 2;
+					color: #fff;
+				}
+				.globe-locations .label.cloud a span {
+					background: #1c1d22;
+					padding: 0.1rem 0.5rem;
+					border-radius: 5px;
+					border: 1px solid #999;
+					color: #fff;
+					transition: all 0.1s;
+				}
+				.globe-locations .label.cloud a:hover span,
+				.globe-locations .label.cloud a:focus span {
+					background: #333;
+					border: 1px solid #fff;
 					color: #fff;
 				}
 				.globe-locations .label:not(.cloud) {
@@ -83,8 +99,8 @@
 					transform: translateX(-50%);
 				}
 				.label.guam 		{	left: 59.3%;	top: 49.7%;	}
-				.label.singapore 	{	left: 34.7%;	top: 48%;	}
-				.label.hong-kong 	{	left: 43.5%;	top: 41%;	}
+				.label.singapore 	{	left: 34.7%;	top: 51%;	}
+				.label.hong-kong 	{	left: 43.5%;	top: 45%;	}
 				.label.tokyo 		{	left: 58.7%;	top: 38.7%;	}
 				.label.sydney 		{	left: 56.7%;	top: 75.4%;	}
 				.label.melbourne	{	left: 47.8%;	top: 75.9%;	}
@@ -166,14 +182,20 @@
 			</style>
 			<div class="globe container">
 				<div class="globe-locations">
-					<span class="label guam cloud"><span>Guam</span></span>
+					<span class="label guam cloud"><a href="/guam/"><span>Guam</span></a></span>
 					<span class="pulse guam"></span>
-					<span class="label singapore cloud"><span>Singapore</span></span>
+					<span class="label singapore"><span>Singapore</span></span>
+					{%- comment %}
 					<span class="pulse singapore"></span>
-					<span class="label hong-kong cloud"><span>Hong Kong</span></span>
+					{%- endcomment %}
+					<span class="label hong-kong"><span>Hong Kong</span></span>
+					{%- comment %}
 					<span class="pulse hong-kong"></span>
-					<span class="label tokyo cloud"><span>Tokyo</span></span>
+					{%- endcomment %}
+					<span class="label tokyo"><span>Tokyo</span></span>
+					{%- comment %}
 					<span class="pulse tokyo"></span>
+					{%- endcomment %}
 					<span class="label sydney">Sydney</span>
 					<span class="label melbourne">Melbourne</span>
 					<span class="label brisbane">Brisbane</span>
