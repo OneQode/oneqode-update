@@ -8,6 +8,7 @@ pageSupertitle: Business & Enterprise
 pageTitle: Elevate your experience
 pageSubtitle: Transform your enterprise with Asia-Pacific’s<br class="responsive"> lightning-fast infrastructure provider
 slider: true
+preconnect: ["https://oneqode.sfo2.digitaloceanspaces.com"]
 ---
 {% comment %}
 <!-- 
@@ -30,14 +31,7 @@ slider: true
 		<style>
 			section.hero {
 				min-height: 85vh;
-			}
-			.no-webp .hero {
-				background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/business-header.jpg") no-repeat center center;
-				background-size: cover;
-			}
-			.webp .hero {
-				background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/business-header.webp") no-repeat center center;
-				background-size: cover;
+				background: none;
 			}
 			/* Swiper */
 			:root {
@@ -61,6 +55,10 @@ slider: true
 				opacity: 0.4;
 			}
 			@media screen and (max-width: 64em) {
+				section.hero {
+					background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/thumb-business-bg.jpg") no-repeat center center;
+					background-size: cover;
+				}
 				.swiper-slide {
 					padding: 2rem 1rem;
 				}
@@ -112,6 +110,12 @@ slider: true
 						<p><a href="/contact/business-enterprise/" class="m-1 button">Get in contact</a></p>
 					</div>
 				</div>
+			</div>
+			<div class="bg-video">
+				<div class="overlay"></div>
+				<video autoplay loop muted poster="/img/bg/thumb-business-bg.jpg">
+					<source src="https://oneqode.sfo2.digitaloceanspaces.com/videos/business-bg.mp4" type="video/mp4">
+				</video>
 			</div>
 		</section>
 		<section class="text-center pb-8">
@@ -254,7 +258,7 @@ slider: true
 					</div>
 					<div class="col-xs-12 col-sm-4 p-1 mb-2">
 						<h3>Further reach</h3>
-						<p class="faded">Leave no player behind with latency-optimised connectivity throughout the Asia-Pacific region.</p>
+						<p class="faded">Leave no-one behind with latency-optimised connectivity throughout the Asia-Pacific region.</p>
 					</div>
 					<div class="col-xs-12 col-sm-4 p-1 mb-2">
 						<h3>Better performance</h3>
