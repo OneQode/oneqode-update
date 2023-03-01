@@ -24,17 +24,14 @@ font: hack
 			.hovered {
 				background: #1c1d22;
 			}
-			tbody tr:hover {
+			#pingTable tbody tr:hover {
 				background: #1c1d22;	
 			}
-			tbody td:hover {
+			#pingTable tbody td:hover {
 				background: #666;
 			}
 			.green {
 				color: #0f0;
-			}
-			.red {
-				color: #f00;
 			}
 			.note {
 				font-family: Poppins, sans-serif;
@@ -48,10 +45,40 @@ font: hack
 		</style>
 		<div class="black-to-footer pb-8">
 			<div class="col-xs-12 col-md-10 col-md-offset-1">
+				<h2 class="h3">APAC Central <span class="faded">Latency Table</span></h2>
+				<div class="responsive-table">
+					<table>
+						<thead>
+							<tr class="text-right">
+								<th>&nbsp;</th>
+								<th>Sydney</th>
+								<th>Brisbane</th>
+								<th>Tokyo</th>
+								<th class="nowrap">Hong Kong<mark>*</mark></th>
+								<th>Melbourne</th>
+								<th>Singapore</th>
+								<th class="nowrap">Los Angeles</th>
+								<th class="nowrap">Bay Area</th>
+							</tr>
+						</thead>
+						<tbody class="monospace text-right">
+							<tr>
+								<th>Guam</th>
+								<td>70.2</td>
+								<td>65.0</td>
+								<td>28.7</td>
+								<td>40.0</td>
+								<td>81.8</td>
+								<td>64.7</td>
+								<td>108.7</td>
+								<td>117.1</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<h2 class="h3 mt-4">Asia-Pacific <span class="faded">Latency Table</span></h2>
 				<div class="responsive-table">
 					<table id="pingTable">
-						<col />
-						<col />
 						<col />
 						<col />
 						<col />
@@ -68,10 +95,8 @@ font: hack
 								<th>Brisbane</th>
 								<th>Tokyo</th>
 								<th class="nowrap">Hong Kong<mark>*</mark></th>
-								<th class="nowrap">Los Angeles</th>
 								<th>Melbourne</th>
 								<th>Singapore</th>
-								<th class="nowrap">Bay Area</th>
 							</tr>
 						</thead>
 						<tbody class="monospace text-right">
@@ -81,11 +106,9 @@ font: hack
 								<td>70.2</td>
 								<td>65.0</td>
 								<td>28.7</td>
-								<td class="red">72.2</td>
-								<td>108.7</td>
+								<td>40.0</td>
 								<td>81.8</td>
 								<td>64.7</td>
-								<td>117.1</td>
 							</tr>
 							<tr>
 								<th>Sydney</th>
@@ -93,11 +116,9 @@ font: hack
 								<td class="green">0.0</td>
 								<td>11.8</td>
 								<td>98.8</td>
-								<td class="red">142.3</td>
-								<td>178.8</td>
+								<td>110.2</td>
 								<td>11.7</td>
 								<td>134.8</td>
-								<td>187.2</td>
 							</tr>
 							<tr>
 								<th>Brisbane</th>
@@ -105,11 +126,9 @@ font: hack
 								<td>11.8</td>
 								<td class="green">0.0</td>
 								<td>93.6</td>
-								<td class="red">137.1</td>
-								<td>173.6</td>
+								<td>105.0</td>
 								<td>23.4</td>
 								<td>129.6</td>
-								<td>182.0</td>
 							</tr>
 							<tr>
 								<th>Tokyo</th>
@@ -117,35 +136,19 @@ font: hack
 								<td>98.8</td>
 								<td>93.6</td>
 								<td class="green">0.0</td>
-								<td class="red">100.7</td>
-								<td>137.2</td>
+								<td>47.1</td>
 								<td>110.4</td>
 								<td>93.3</td>
-								<td>145.7</td>
 							</tr>
 							<tr>
 								<th class="nowrap">Hong Kong<mark>*</mark></th>
-								<td class="red">72.2</td>
-								<td class="red">142.3</td>
-								<td class="red">137.1</td>
-								<td class="red">100.7</td>
+								<td>40.0</td>
+								<td>110.2</td>
+								<td>105.0</td>
+								<td>47.1</td>
 								<td class="green">0.0</td>
-								<td class="red">180.7</td>
-								<td class="red">153.8</td>
-								<td class="red">136.7</td>
-								<td class="red">189.1</td>
-							</tr>
-							<tr>
-								<th class="nowrap">Los Angeles</th>
-								<td>108.0</td>
-								<td>178.8</td>
-								<td>173.6</td>
-								<td>137.2</td>
-								<td class="red">180.7</td>
-								<td class="green">0.0</td>
-								<td>190.4</td>
-								<td>173.2</td>
-								<td>8.5</td>
+								<td>121.8</td>
+								<td class="faded">Nil</td>
 							</tr>
 							<tr>
 								<th>Melbourne</th>
@@ -153,11 +156,9 @@ font: hack
 								<td>11.7</td>
 								<td>23.4</td>
 								<td>110.4</td>
-								<td class="red">153.8</td>
-								<td>190.4</td>
+								<td>121.8</td>
 								<td class="green">0.0</td>
 								<td>146.4</td>
-								<td>198.8</td>
 							</tr>
 							<tr>
 								<th>Singapore</th>
@@ -165,29 +166,69 @@ font: hack
 								<td>134.8</td>
 								<td>129.6</td>
 								<td>93.3</td>
-								<td class="red">136.7</td>
-								<td>173.2</td>
+								<td class="faded">Nil</td>
 								<td>146.4</td>
-								<td class="green">0.0</td>
-								<td>181.6</td>
-							</tr>
-							<tr>
-								<th class="nowrap">Bay Area</th>
-								<td>117.0</td>
-								<td>187.2</td>
-								<td>182.0</td>
-								<td>145.6</td>
-								<td class="red">189.1</td>
-								<td>8.5</td>
-								<td>198.8</td>
-								<td>181.6</td>
 								<td class="green">0.0</td>
 							</tr>
 						</tbody>
 					</table>
-					<p class="note text-small"><mark>* AAG cable under repair at time of measurement — HK routes affected</mark></p>
-					<p class="text-right"><strong>Measured November 23 2022</strong><br>Contact <a href="mailto:joe@oneqode.com" class="external">joe@oneqode.com</a> to request updated figures</p>
 				</div>
+				<h2 class="h3 mt-4">US ↔ APAC <span class="faded">Latency Table</span></h2>
+				<div class="responsive-table">
+					<table id="pingTable2">
+						<col />
+						<col />
+						<col />
+						<col />
+						<col />
+						<col />
+						<col />
+						<col />
+						<col />
+						<col />
+						<thead>
+							<tr class="text-right">
+								<th>&nbsp;</th>
+								<th class="nowrap">Los Angeles</th>
+								<th class="nowrap">Bay Area</th>
+								<th>Guam</th>
+								<th>Sydney</th>
+								<th>Brisbane</th>
+								<th>Tokyo</th>
+								<th class="nowrap">Hong Kong<mark>*</mark></th>
+								<th>Melbourne</th>
+								<th>Singapore</th>
+							</tr>
+						</thead>
+						<tbody class="monospace text-right">
+							<tr>
+								<th class="nowrap">Los Angeles</th>
+								<td class="green">0.0</td>
+								<td>8.5</td>
+								<td>108.0</td>
+								<td>178.8</td>
+								<td>173.6</td>
+								<td>137.2</td>
+								<td>148.0</td>
+								<td>190.4</td>
+								<td>173.2</td>
+							</tr>
+							<tr>
+								<th class="nowrap">Bay Area</th>
+								<td>8.5</td>
+								<td class="green">0.0</td>
+								<td>117.0</td>
+								<td>187.2</td>
+								<td>182.0</td>
+								<td>145.6</td>
+								<td>157.0</td>
+								<td>198.8</td>
+								<td>181.6</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<p class="note text-small mt-2"><mark>* Asterisked latency figures are estimates. AAG & SJC cables under repair at time of measurement • GU ↔ HK and HK ↔ TK routes affected</mark></p>
 			</div>
 		</div>
 		<script>
