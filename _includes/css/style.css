@@ -334,8 +334,14 @@ footer ul a:hover,
 footer ul a:focus {
 	color: #00b0f0;
 }
-nav.main > ul > li:last-of-type a {
+nav.main > ul > li:last-of-type a:not(.button) {
 	padding-right: 0;
+}
+nav.main a.button {
+	padding: 0.3rem 0.6rem;
+	font-size: 0.8rem;
+	border-radius: 0.4rem;
+	margin-left: 1rem;
 }
 li.has-submenu > a {
 	padding-right: 0.8rem;
