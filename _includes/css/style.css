@@ -318,30 +318,27 @@ nav a {
 }
 
 /* Main Menu */
-nav.main > ul > li {
+header nav > ul > li {
 	display: inline-block;
 }
-nav.main a {
+header nav a {
 	padding: 1.5rem;
 }
-nav.main a.login {
-	color: #999;
-}
-nav.main a:hover,
-nav.main a:focus,
-nav.main .submenu a:focus,
+header nav a:hover,
+header nav a:focus,
+header nav .submenu a:focus,
 footer ul a:hover,
 footer ul a:focus {
 	color: #00b0f0;
 }
-nav.main > ul > li:last-of-type a:not(.button) {
+nav.alt > ul > li:last-of-type a:not(.button) {
 	padding-right: 0;
 }
-nav.main a.button {
-	padding: 0.3rem 0.6rem;
-	font-size: 0.8rem;
-	border-radius: 0.4rem;
-	margin-left: 1rem;
+nav.alt a.button {
+	padding: 0.3rem 0.8rem;
+	font-size: 1rem;
+	border-radius: 0.3rem;
+	margin-bottom: -0.2rem
 }
 li.has-submenu > a {
 	padding-right: 0.8rem;
@@ -1438,9 +1435,20 @@ RESPONSIVE OVERRIDES
 	.sm-mt-4 {
 		margin-top: 4rem;
 	}
-	nav.main a {
+	#header .container {
+		flex-wrap: wrap;
+	}
+	header nav a {
 		padding: 0.5rem;
 		font-size: 1rem;
+	}
+	nav.alt {
+		display: flex;
+		flex-basis: 100%;
+		justify-content: end;
+	}
+	nav.alt a.button {
+		font-size: 0.8rem;
 	}
 	.bg-video,
 	.bg-video-overlay {

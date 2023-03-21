@@ -255,13 +255,19 @@
 					</li>
 					<li><a href="/pricing/" style="--index: 3;">Pricing</a></li>
 					<li><a href="/about/" style="--index: 4;">About</a></li>
-					<li><a href="{{ global.login }}" class="faded" rel="noopener" style="--index: 5;">Login</a></li>
-					<li><a href="/cloud/signup/" class="button">Sign Up</a></li>
+					<li class="mobile-only"><a href="{{ global.login }}" class="faded" rel="noopener" style="--index: 5;">Login</a></li>
+					<li class="mobile-only"><a href="/cloud/signup/" style="--index: 6;">Sign Up</a></li>
 				</ul>
 				<div class="nav-close" onclick="toggleNav()">
 					<img src="/img/ico/close.svg" alt="" aria-hidden="true">
 					&nbsp;Close
 				</div>
+			</nav>
+			<nav class="alt hide-mobile" aria-label="Account Actions">
+				<ul>
+					<li><a href="{{ global.login }}" class="faded" rel="noopener">Log In</a></li>
+					<li><a href="/cloud/signup/" class="button">Sign Up</a></li>
+				</ul>
 			</nav>
 		</div>
 	</header>
