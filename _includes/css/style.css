@@ -331,6 +331,9 @@ footer ul a:hover,
 footer ul a:focus {
 	color: #00b0f0;
 }
+nav.alt > ul > li:first-of-type {
+	margin-left: -1.5rem;
+}
 nav.alt > ul > li:last-of-type a:not(.button) {
 	padding-right: 0;
 }
