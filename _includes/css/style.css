@@ -634,7 +634,7 @@ p.superheading {
 	text-transform: uppercase;
 	letter-spacing: 0.12rem;
 	margin-bottom: 1rem;
-	font-weight: 600;
+	font-weight: 800;
 	background: linear-gradient(90deg, #00b0f0, #2a6378);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -814,7 +814,7 @@ table th:last-child {
 	padding-right: 0;
 }
 table thead {
-	font-weight: 600;
+	font-weight: 800;
 	text-align: left;
 }
 .nowrap {
@@ -1009,7 +1009,7 @@ CONTENT
 	color: #666;
 }
 .linked p:first-of-type {
-	font-weight: 600;
+	font-weight: 800;
 }
 .linked p:last-of-type {
 	font-size: 1rem;
