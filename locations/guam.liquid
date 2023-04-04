@@ -9,6 +9,8 @@ ogImage: guam.jpg
 pageSupertitle: APAC Central
 pageTitle: Asia-Pacific’s central server region
 pageSubtitle: Complete reach across the world’s<br class="responsive"> largest region of gamers
+slider: true
+font: hack
 ---
 {%- comment %}
 <!-- 
@@ -177,6 +179,132 @@ pageSubtitle: Complete reach across the world’s<br class="responsive"> largest
 					</div>
 				</div>
 			</div>
+		</section>
+		<section>
+			<style>
+				/* Swiper */
+				:root {
+					--swiper-theme-color: #00b0f0;
+					--swiper-pagination-bullet-inactive-color: #999;
+				}
+				.swiper {
+					width: 100%;
+					height: 100%;
+					padding-top: 1rem;
+					padding-bottom: 1rem;
+				}
+				.swiper-slide {
+					padding: 0 0.5rem;
+					height: auto;
+					transition: opacity 0.2s;
+				}
+				.swiper-slide:not(.swiper-slide-prev):not(.swiper-slide-active):not(.swiper-slide-next) {
+					opacity: 0.4;
+				}
+				.swiper-slide div {
+					text-align: left;
+					transition: opacity 0.1s;
+					background: #17181C;
+					border: 1px solid #666;
+					border-radius: 15px;
+					padding: 2rem;
+				}
+				.swiper-slide p {
+					font-family: Poppins, sans-serif;
+					font-weight: 600;
+					text-transform: uppercase;
+					letter-spacing: 0.1rem;
+					line-height: 1.3;
+					margin: 0;
+				}
+				.swiper-slide p:nth-child(1) {
+					color: #999;
+				}
+				.swiper-slide p:nth-child(2) {
+					margin-top: 1rem;
+				}
+				.swiper-slide .stat {
+					text-align: left;
+					font-family: Hack, monospace;
+					font-weight: normal;
+					font-size: 5rem;
+				}
+				.swiper-slide .stat span {
+					display: inline-block;
+					font-size: 80%;
+					text-transform: initial;
+					margin-left: 0.4rem;
+				}
+			</style>
+			<div class="swiper latency my-2">
+				<div class="swiper-wrapper">
+					<!-- Start Slide -->
+					<div class="swiper-slide col-xs-6 col-md-4 col-lg-3">
+						<div>
+							<p>To</p>
+							<p>Tokyo</p>
+							<p class="stat">29<span>ms</span></p>
+						</div>
+					</div>
+					<!-- End Slide -->
+					<!-- Start Slide -->
+					<div class="swiper-slide col-xs-6 col-md-4 col-lg-3">
+						<div>
+							<p>To</p>
+							<p>Hong Kong</p>
+							<p class="stat">40<span>ms</span></p>
+						</div>
+					</div>
+					<!-- End Slide -->
+					<!-- Start Slide -->
+					<div class="swiper-slide col-xs-6 col-md-4 col-lg-3">
+						<div>
+							<p>To</p>
+							<p>Brisbane</p>
+							<p class="stat">65<span>ms</span></p>
+						</div>
+					</div>
+					<!-- End Slide -->
+					<!-- Start Slide -->
+					<div class="swiper-slide col-xs-6 col-md-4 col-lg-3">
+						<div>
+							<p>To</p>
+							<p>Singapore</p>
+							<p class="stat">65<span>ms</span></p>
+						</div>
+					</div>
+					<!-- End Slide -->
+					<!-- Start Slide -->
+					<div class="swiper-slide col-xs-6 col-md-4 col-lg-3">
+						<div>
+							<p>To</p>
+							<p>United States</p>
+							<p class="stat">118<span>ms</span></p>
+						</div>
+					</div>
+					<!-- End Slide -->
+					<!-- Start Slide -->
+					<div class="swiper-slide col-xs-6 col-md-4 col-lg-3">
+						<div>
+							<p>To</p>
+							<p>Philippines</p>
+							<p class="stat">60<span>ms</span></p>
+						</div>
+					</div>
+					<!-- End Slide -->
+					<!-- Start Slide -->
+					<div class="swiper-slide col-xs-6 col-md-4 col-lg-3">
+						<div>
+							<p>To</p>
+							<p>Sydney</p>
+							<p class="stat">70<span>ms</span></p>
+						</div>
+					</div>
+					<!-- End Slide -->
+				</div>
+			</div>
+		</section>
+		<section>
 			<div class="container mobile-text-center" id="stats">
 				<div class="row">
 					<div class="col-xs-12 col-sm-6 col-md-5 col-md-offset-1">
@@ -366,3 +494,25 @@ pageSubtitle: Complete reach across the world’s<br class="responsive"> largest
 				</div>
 			</div>
 		</section>
+		<script>
+			/**
+			* Swiper — https://swiperjs.com/
+			* A modern touch slider
+			* Used under MIT license 🎓
+			*/
+			var swiper = new Swiper(".latency", {
+				grabCursor: true,
+				slidesPerView: "4",
+				spaceBetween: 0,
+				centeredSlides: true,
+				loop: true,
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+				keyboard: {
+					enabled: true,
+				},
+				touchEventsTarget: 'container',
+			});
+		</script>
