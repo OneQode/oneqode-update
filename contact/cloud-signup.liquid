@@ -91,6 +91,9 @@ phone: true
 										<input type="email" name="3_email" placeholder="Work Email" required>
 									</div>
 									<div class="col-xs-12 col-sm-6 mb-1">
+										<!-- Country Code -->
+										<input type="hidden" name="4_phonecountrycode" id="phonecountrycode">
+										<!-- Phone Number -->
 										<input type="tel" name="4_phonenumber" id="phone" required>
 									</div>
 								</div>
@@ -368,24 +371,10 @@ phone: true
 								</div>
 								<div class="row mt-2">
 									<div class="col-xs-12">
-										<h3>Company type:</h3>
-									</div>
-									<div class="col-xs-12">
-										<select name="6_company-type" id="company-type">
-											<option value="Business / Enterprise">Business / Enterprise</option>
-											<option value="Game studio / Developer">Game studio / Developer</option>
-											<option value="Esports organisation">Esports organisation</option>
-											<option value="Server reseller">Server reseller</option>
-											<option value="Other">Other</option>
-										</select>
-									</div>
-								</div>
-								<div class="row mt-2">
-									<div class="col-xs-12">
-										<h3>Anything else?</h3>
+										<h3>Your use-case <span class="faded">(optional)</span></h3>
 									</div>
 									<div class="col-xs-12 mb-1">
-										<textarea name="7_message" placeholder="Tell us what you’re hoping to use our platform for so we can tailor your experience." autocapitalize="sentences" rows="4"></textarea>
+										<textarea name="7_message" placeholder="Tell us what you’re using us for so we can improve our service." autocapitalize="sentences" rows="3"></textarea>
 									</div>
 									<div class="col-xs-12 my-1">
 										<div class="checkbox">
@@ -436,20 +425,19 @@ phone: true
 				separateDialCode: true,
 				utilsScript: "https://unpkg.com/intl-tel-input@17.0.16/build/js/utils.js",
 			});
-			{%- comment %}
-			/**
-			* Show text if non-obvious gaming option selected 
-			*/
-			function typeCheck() {
-				select = document.getElementById("company-type").value;
-				if (select == "Other") {
-					document.getElementById("please-note").style.display = "block";
-				} else {
-					document.getElementById("please-note").style.display = "none";
+			/* Submit country code in hidden field */
+				// Get the instance of the IntlTelInput
+				var iti = window.intlTelInputGlobals.getInstance(input);
+				// Function to update the hidden input value with the selected country code
+				function updateCountryCode() {
+					var countryCode = iti.getSelectedCountryData().dialCode;
+					document.getElementById("phonecountrycode").value = countryCode;
 				}
-			}
-			{%- endcomment %}
-			/**
+				// Listen to the countrychange event on the phone input
+				input.addEventListener("countrychange", updateCountryCode);
+				// Update the country code initially in case the user doesn't change the country
+				updateCountryCode()
+;			/**
 			* Botpoison form validation
 			* Prevents form submissions from bots... I hope
 			*/
