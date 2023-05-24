@@ -1027,7 +1027,7 @@ CONTENT
 .box {
 	border-radius: 10px;
 }
-.box.glowing {
+.box {
 	text-decoration: none;
 	color: #fff;
 	padding: 1rem;
@@ -1041,41 +1041,49 @@ CONTENT
 	opacity: 0.9;
 	background: #000;
 }
-.box.glowing,
-.box.glowing p,
-.box.glowing h2,
-.box.glowing h3,
-.box.glowing img {
+.box,
+.box p,
+.box h2,
+.box h3,
+.box img {
 	transition: all 0.1s;
 }
-.box.glowing h2 {
+.box h2 {
 	font-size: 2rem;
 	color: #999;
 	margin-bottom: 0;
 }
-.box.glowing h3 {
+.box h3 {
 	font-size: 1.5rem;
 	color: #999;
 }
-.box.glowing:hover,
-.box.glowing:focus {
+.box:hover,
+.box:focus {
 	background: #1c1d22;
 	border: 1px solid #666;
 	opacity: 1;
 }
-.box.glowing:hover img,
-.box.glowing:focus img {
+.box:hover img,
+.box:focus img {
 	opacity: 1;
 }
-.box.glowing:hover h2,
-.box.glowing:focus h2,
-.box.glowing:hover h3,
-.box.glowing:focus h3 {
+.box:hover h2,
+.box:focus h2,
+.box:hover h3,
+.box:focus h3 {
 	color: #fff;
 }
-.box.glowing:hover p,
-.box.glowing:focus p {
+.box:hover p,
+.box:focus p {
 	color: #fff;
+}
+/* The Left Aligned Linked Box */
+.box.left {
+	text-align: left;
+	align-items: flex-start;
+	justify-content: flex-start;
+	padding: 2rem;
+	box-sizing: border-box;
 }
 /* Row with icons */
 .icons img {
@@ -1457,6 +1465,9 @@ RESPONSIVE OVERRIDES
 	.bg-video-overlay {
 		display: none;
 	}
+	.box.left {
+		padding: 1rem;
+	}
 }
 
 /* Mobile */
@@ -1671,15 +1682,15 @@ RESPONSIVE OVERRIDES
 		stroke-width: 6;
 	}
 	/* Glowing boxes */
-	.box.glowing img {
+	.box img {
 		opacity: 1 !important;
 		max-width: 3rem;
 	}
-	.box.glowing h2,
-	.box.glowing h3 {
+	.box h2,
+	.box h3 {
 		color: #fff;
 	}
-	.box.glowing h2 {
+	.box h2 {
 		font-size: 1.3rem;
 		margin-bottom: 2rem;
 	}
