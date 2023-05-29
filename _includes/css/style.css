@@ -1030,32 +1030,30 @@ CONTENT
 .box {
 	text-decoration: none;
 	color: #fff;
-	padding: 1rem;
+	padding: 2rem;
 	text-align: center;
 	border: 1px solid #333;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	height: 100%;
+	flex-grow: 1;
 	opacity: 0.9;
+	height: 100%;
 	background: #000;
+	box-sizing: border-box;
 }
 .box,
-.box p,
-.box h2,
-.box h3,
-.box img {
+.box * {
 	transition: all 0.1s;
+	color: #999;
 }
 .box h2 {
 	font-size: 2rem;
-	color: #999;
 	margin-bottom: 0;
 }
 .box h3 {
 	font-size: 1.5rem;
-	color: #999;
 }
 .box:hover,
 .box:focus {
@@ -1067,14 +1065,8 @@ CONTENT
 .box:focus img {
 	opacity: 1;
 }
-.box:hover h2,
-.box:focus h2,
-.box:hover h3,
-.box:focus h3 {
-	color: #fff;
-}
-.box:hover p,
-.box:focus p {
+.box:hover *,
+.box:focus * {
 	color: #fff;
 }
 /* The Left Aligned Linked Box */
@@ -1082,8 +1074,6 @@ CONTENT
 	text-align: left;
 	align-items: flex-start;
 	justify-content: flex-start;
-	padding: 2rem;
-	box-sizing: border-box;
 }
 /* Row with icons */
 .icons img {

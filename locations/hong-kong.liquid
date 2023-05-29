@@ -32,29 +32,48 @@ pageSubtitle: High performance cloud servers in HK
 					grid-gap: 1.5rem 2rem;
 				}
 			}
+			.location-services .box {
+				height: auto;
+				flex-grow: 1;
+			}
+			.location-services .col-xs-12 {
+				display: flex;
+				flex-direction: column;
+				gap: 1rem;
+			}
+			.icon.lightning {
+				mask: url(/img/ico/lightning.svg) no-repeat center;
+				-webkit-mask: url(/img/ico/lightning.svg) no-repeat center;
+			}
+			.icon.cpu {
+				mask: url(/img/ico/cpu2.svg) no-repeat center;
+				-webkit-mask: url(/img/ico/cpu2.svg) no-repeat center;
+			}
+			.icon.network {
+				mask: url(/img/ico/connection2.svg) no-repeat center;
+				-webkit-mask: url(/img/ico/connection2.svg) no-repeat center;
+			}
+			@media (min-width: 64em) {
+				.no-webp .location-bg {
+					background: url("/img/bg/location-map-hong-kong.jpg") no-repeat center right;
+					background-size: contain;
+				}
+				.webp .location-bg {
+					background: url("/img/bg/location-map-hong-kong.webp") no-repeat center right;
+					background-size: contain;
+				}
+			}
+			/* Device styles */
+			@media (max-width: 64em) {
+				.location-bg .devices-only {
+					margin-top: -8rem;
+				}
+			}
+			/* Mobile-Specific Styles */
 			@media (max-width: 48em) {
 				ul.ticks li {
 					margin-bottom: 1rem;
 				}
-			}
-			.icon.reach {
-				mask: url(/img/ico/population.svg) no-repeat center;
-				-webkit-mask: url(/img/ico/population.svg) no-repeat center;
-			}
-			.icon.money {
-				mask: url(/img/ico/money.svg) no-repeat center;
-				-webkit-mask: url(/img/ico/money.svg) no-repeat center;
-			}
-			.icon.around-the-world {
-				mask: url(/img/ico/around-the-world.svg) no-repeat center;
-				-webkit-mask: url(/img/ico/around-the-world.svg) no-repeat center;
-			}
-			.icon.latency {
-				mask: url(/img/ico/latency.svg) no-repeat center;
-				-webkit-mask: url(/img/ico/latency.svg) no-repeat center;
-			}
-			/* Mobile-Specific Styles */
-			@media (max-width: 48em) {
 				.icon {
 					margin-bottom: 1rem;
 				}
@@ -80,45 +99,42 @@ pageSubtitle: High performance cloud servers in HK
 				</div>
 			</div>
 		</section>
-		<section class="pb-4">
+		<section>
 			<div class="container">
-				<div class="row middle-xs">
+				<div class="row">
 					<div class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0 mobile-text-center">
-						<h2>OneQode Hong Kong Services</h2>
+						<h2>OneQode Hong Kong services</h2>
 					</div>
 					<div class="col-xs-12">
-						<div class="row">
-							<div class="col-xs-12 col-md-4 mb-1">
+						<div class="row location-services">
+							<div class="col-xs-12 col-sm col-md-4 mb-1">
 								<a href="#" class="box left">
 									<h3 class="mb-1">High performance cloud</h3>
 									<p class="faded my-0">The world's fastest cloud servers featuring:</p>
 									<ul>
-										<li>dedicated CPUs @ 3.6 GHz+</li>
-										<li>cloud storage</li>
-										<li>cloud firewall</li>
-										<li>cloud load balancers</li>
+										<li>Dedicated CPUs @ 3.6 GHz+</li>
+										<li>Volume & object storage</li>
+										<li>Cloud firewall</li>
+										<li>Cloud load balancers</li>
+										<li>OpenStack API</li>
 									</ul>
 								</a>
 							</div>
-							<div class="col-xs-12 col-md-4 mb-1">
+							<div class="col-xs-12 col-sm col-md-4 mb-1">
 								<a href="#" class="box left">
 									<h3 class="mb-1">Dedicated servers</h3>
 									<p class="faded my-0">Built to order custom dedicated servers, available within 3 weeks</p>
 								</a>
-							</div>
-							<div class="col-xs-12 col-md-4 mb-1">
 								<a href="#" class="box left">
 									<h3 class="mb-1">Colocation</h3>
 									<p class="faded my-0">Rack space in our Hong Kong locations</p>
 								</a>
 							</div>
-							<div class="col-xs-12 col-md-4 mb-1">
+							<div class="col-xs-12 col-sm col-md-4 mb-1">
 								<a href="#" class="box left">
 									<h3 class="mb-1">Enterprise Ethernet</h3>
-									<p class="faded my-0">Secure, private, latency-optimized connectivity from Hong Kong to the world</p>
+									<p class="faded my-0">Secure, private, latency-optimized international connectivity</p>
 								</a>
-							</div>
-							<div class="col-xs-12 col-md-4 mb-1">
 								<a href="#" class="box left">
 									<h3 class="mb-1">IP Transit</h3>
 									<p class="faded my-0">High quality commercial internet services</p>
@@ -129,35 +145,111 @@ pageSubtitle: High performance cloud servers in HK
 				</div>
 			</div>
 		</section>
-		<section class="black-to-footer py-8">
+		<section class="py-4 text-center">
+			<div class="container">
+				<div class="row mobile-flex icons">
+					<div class="col-xs-10 col-xs-offset-1 col-sm col-sm-offset-0 p-2 mb-1">
+						<div class="icon lightning"></div>
+						<h4 class="mt-2">Less lag</h4>
+						<p class="faded">A latency-optimized network that delivers your traffic faster</p>
+					</div>
+					<div class="col-xs-10 col-xs-offset-1 col-sm col-sm-offset-0 p-2 mb-1">
+						<div class="icon cpu"></div>
+						<h4 class="mt-2">More performance</h4>
+						<p class="faded">Faster CPUs support the most demanding computational workloads</p>
+					</div>
+					<div class="col-xs-10 col-xs-offset-1 col-sm col-sm-offset-0 p-2 mb-1">
+						<div class="icon network"></div>
+						<h4 class="mt-2">Further reach</h4>
+						<p class="faded">Private fast-lanes to the major internet providers and services</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="pb-4">
 			<div class="container">
 				<div class="row middle-xs text-center push-forward">
 					<div class="col-xs-12 col-md-8 col-md-offset-2">
-						<h2>Harness APAC Central now<mark class="dot">.</mark></h2>
-						<p class="subheading faded">Here’s what’s available today on Guam</p>
+						<p class="superheading">Low latency</p>
+						<h2>A next-gen network that delivers <br class="responsive">your traffic in milliseconds<mark class="dot">.</mark></h2>
+					</div>
+					<div class="col-xs-12 col-md-6 col-md-offset-3">
+						<p class="mt-0">From Hong Kong to mainland China or the world, our network sends your packets at lightning-speed.</p>
+						<p><a href="/network/" class="chevron">Global network</a></p>
 					</div>
 				</div>
-				<div class="row mt-4 icons place-content-center">
-					<div class="col-xs-12 col-sm-6 col-md-4 mb-2 mt-1">
-						<a href="/cloud/" class="box">
-							<img class="mt-2" src="/img/ico/cloud.svg" alt="">
-							<h2 class="mt-2">Cloud platform</h2>
-							<p class="hide-mobile">The high performance cloud</p>
-						</a>
+				<div class="row mt-4">
+					<div class="col-xs-12 col-md-10 col-md-offset-1 logo-grid">
+						<div><img src="/img/partners/aapt.svg" alt="AAPT"></div>
+						<div><img src="/img/partners/ams-ix.svg" alt="Amsterdam Internet Exchange"></div>
+						<div><img src="/img/partners/any2exchange.png" alt="Any2 Exchange"></div>
+						<div><img src="/img/partners/att.svg" alt="ATT"></div>
+						<div><img src="/img/partners/bbix.png" alt="BBIX"></div>
+						<div><img src="/img/partners/cmi.png" alt="Chnia Mobile International"></div>
+						<div><img src="/img/partners/china-telecom.png" alt="China Telecom"></div>
+						<div><img src="/img/partners/console-connect.png" alt="Console Connect"></div>
+						<div><img src="/img/partners/edgeix.png" alt="EdgeIX"></div>
+						<div><img src="/img/partners/hkix.svg" alt="Hong Kong Internet Exchange"></div>
+						<div><img src="/img/partners/iaa-internet-association-of-australia.svg" alt="Internet Association of Australia"></div>
+						<div><img src="/img/partners/ite-guam.svg" alt="IT&E Guam" class="w80"></div>
+						<div><img src="/img/partners/jpix.png" alt="Japan Internet Exchange Co"></div>
+						<div><img src="/img/partners/jpnap.svg" alt="JPNAP"></div>
+						<div><img src="/img/partners/lbnco.png" alt="LBNCO"></div>
+						<div><img src="/img/partners/megaport.svg" alt="Megaport"></div>
+						<div><img src="/img/partners/ntt.svg" alt="NTT"></div>
+						<div><img src="/img/partners/ntt-docomo.svg" alt="NTT"></div>
 					</div>
-					<div class="col-xs-12 col-sm-6 col-md-4 mb-2 mt-1">
-						<a href="/dedicated-servers/" class="box">
-							<img class="mt-2" src="/img/ico/server.svg" alt="">
-							<h2 class="mt-2">Dedicated servers</h2>
-							<p class="hide-mobile">With reach across Asia-Pacific</p>
-						</a>
+					<div class="col-xs-12"><figcaption>Direct interconnections with the major cloud, communications and last-mile internet providers</figcaption></div>
+				</div>
+			</div>
+		</section>
+		<section class="location-bg py-4 mobile-text-center">
+			<div class="container push-forward">
+				<div class="row middle-md py-8">
+					<div class="col-xs-12 col-md-5">
+						<h2 class="mb-1">The fastest digital infrastructure in HK<mark class="dot">.</mark></h3>
+						<p><strong>Host the most performance-intensive applications at our Hong Kong locations and deliver services at low latency via our global network.</strong></p>
+						<p class="mb-0">OneQode operate compute and network services from two datacenters in Hong Kong: Global Switch, and iAdvantage MEGA-i.</p>
+						<p class="mb-0"><a class="chevron" href="/about/">About OneQode</a></p>
 					</div>
-					<div class="col-xs-12 col-sm-6 col-md-4 mb-2 mt-1">
-						<a href="/network/" class="box">
-							<img class="mt-2" src="/img/ico/connection2.svg" alt="">
-							<h2 class="mt-2">Network</h2>
-							<p class="hide-mobile">Low-latency backbone</p>
-						</a>
+				</div>
+			</div>
+			<div class="devices-only">
+				<picture>
+					<source srcset="/img/bg/location-map-hong-kong-mobile.webp" type="image/webp">
+					<img src="/img/bg/location-map-hong-kong-mobile.jpg" alt="A map illustrating our Hong Kong network and international connectivity to Mainland China, Guam, Tokyo and Singapore" class="opaque">
+				</picture>
+			</div>
+		</section>
+		<section class="py-4">
+			<div class="container">
+				<div class="row middle-xs text-center push-forward">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<h3>Test your connection to <br class="responsive">our Hong Kong infrastructure<mark class="dot">.</mark></h3>
+					</div>
+					<div class="col-xs-12 col-md-6 col-md-offset-3">
+						<p class="mt-0">Use the test IP address below or our looking glass to check routing, latency and performance.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-md-6 col-md-offset-3">
+						<p class="mt-0">TEST IP</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-md-6 col-md-offset-3">
+						<p class="mt-0">Having trouble?</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="black-to-footer pt-4 pb-8">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
+						<h2>Get started with a <br class="responsive">cloud account today<mark class="dot">.</mark></h2>
+						<p class="subheading faded">Sign up for a cloud account, or contact our team</p>
+						<p class="mt-2"><a href="/cloud/signup/" class="button m-1">Sign up</a> <a href="/contact/" class="button ghost m-1">Contact us</a></p>
 					</div>
 				</div>
 			</div>
