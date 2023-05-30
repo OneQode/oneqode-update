@@ -8,6 +8,7 @@ ogImage: og-image.jpg
 pageSupertitle: Locations • Hong Kong
 pageTitle: Low latency Hong Kong cloud services
 pageSubtitle: High performance cloud servers in HK
+font: hack
 ---
 {% include _header.liquid %}
 		<!-- Page-Specific Styles -->
@@ -32,6 +33,7 @@ pageSubtitle: High performance cloud servers in HK
 					grid-gap: 1.5rem 2rem;
 				}
 			}
+			/* Location services */
 			.location-services .box {
 				height: auto;
 				flex-grow: 1;
@@ -41,6 +43,7 @@ pageSubtitle: High performance cloud servers in HK
 				flex-direction: column;
 				gap: 1rem;
 			}
+			/* Icons */
 			.icon.lightning {
 				mask: url(/img/ico/lightning.svg) no-repeat center;
 				-webkit-mask: url(/img/ico/lightning.svg) no-repeat center;
@@ -53,6 +56,7 @@ pageSubtitle: High performance cloud servers in HK
 				mask: url(/img/ico/connection2.svg) no-repeat center;
 				-webkit-mask: url(/img/ico/connection2.svg) no-repeat center;
 			}
+			/* Pulsing latency SVG */
 			#network .svg-holder {
 				position: relative;
 				overflow: visible;
@@ -63,6 +67,56 @@ pageSubtitle: High performance cloud servers in HK
 				transform: translateY(-50%);
 				z-index: -1;
 			}
+			/* Test IP address */
+			#test-ip {
+				background: radial-gradient(ellipse closest-side at center, #1C1919, transparent);
+			}
+			.ping-command {
+				font-size: 2rem;
+			}
+			.ping-command code {
+				line-height: 2.5; /* fixes mobile issues if breaking to two lines */
+			}
+			.ping-command code::before {
+				content: "$ ";
+				color: #666;
+			}
+			.ping-command strong {
+				padding: 1rem;
+				border: 2px solid #999;
+				border-radius: 10px;
+			}
+			.ping-command strong::after {
+				content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23999' viewBox='0 0 16 16'%3E%3Cpath d='M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z'/%3E%3Cpath d='M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z'/%3E%3C/svg%3E");
+				display: inline-block;
+				width: 1.5rem;
+				height: 1.5rem;
+				margin-left: 1.5rem;
+			}
+			.ping-command strong:hover {
+				border: 2px solid #fff;
+				color: #fff;
+				outline: none;
+			}
+			.ping-command strong:hover::after {
+				content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath d='M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z'/%3E%3Cpath d='M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z'/%3E%3C/svg%3E");
+			}
+			.ping-command strong.copied,
+			.ping-command strong.copied:hover,
+			.ping-command strong.copied:focus,
+			.ping-command strong.copied:focus-within {
+				border: 2px solid #00b0f0;
+				color: #00b0f0;
+				outline: none;
+			}
+			.ping-command strong.copied::after {
+				content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2300b0f0' viewBox='0 0 16 16'%3E%3Cpath d='M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z'/%3E%3Cpath d='M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z'/%3E%3C/svg%3E");
+				display: inline-block;
+				width: 1.5rem;
+				height: 1.5rem;
+				margin-left: 1.5rem;
+			}
+			/* Desktop styles */
 			@media (min-width: 64em) {
 				.no-webp .location-bg {
 					background: url("/img/bg/location-map-hong-kong.jpg") no-repeat center right;
@@ -203,24 +257,24 @@ pageSubtitle: High performance cloud servers in HK
 							</radialGradient>
 						</defs>
 						<g>
-							<circle id="Ellipse_517" cx="681.5" cy="681.5" r="681.5" transform="translate(1 1)" fill="url(#radial-gradient)">
-								<animate dur="2s" attributeName="r" values="671.5;681.5;671.5" keyTimes="0;0.8;1" repeatCount="indefinite" />
+							<circle cx="681.5" cy="681.5" r="681.5" transform="translate(1 1)" fill="url(#radial-gradient)">
+								<animate begin="0.3s" dur="2s" attributeName="r" values="671.5;681.5;671.5" keyTimes="0;0.8;1" repeatCount="indefinite" />
 							</circle>
-							<circle id="Ellipse_516" cx="480.5" cy="480.5" r="480.5" transform="translate(202 202)" fill="url(#radial-gradient)">
-								<animate dur="2s" attributeName="r" values="470.5;480.5;470.5" keyTimes="0;0.7;1" repeatCount="indefinite" />
+							<circle cx="480.5" cy="480.5" r="480.5" transform="translate(202 202)" fill="url(#radial-gradient)">
+								<animate begin="0.2s" dur="2s" attributeName="r" values="470.5;480.5;470.5" keyTimes="0;0.7;1" repeatCount="indefinite" />
 							</circle>
-							<circle id="Ellipse_515" cx="270.5" cy="270.5" r="270.5" transform="translate(412 412)" fill="url(#radial-gradient)">
-								<animate dur="2s" attributeName="r" values="260.5;270.5;260.5" keyTimes="0;0.6;1" repeatCount="indefinite" />
+							<circle cx="270.5" cy="270.5" r="270.5" transform="translate(412 412)" fill="url(#radial-gradient)">
+								<animate begin="0.1s" dur="2s" attributeName="r" values="260.5;270.5;260.5" keyTimes="0;0.6;1" repeatCount="indefinite" />
 							</circle>
 						</g>
 						<rect width="1364" height="682" fill="url(#linear-gradient)"/>
 						<g id="pulse" transform="translate(-278 -2113)">
-							<circle id="Ellipse_505" cx="62" cy="62" r="62" transform="translate(898 2733)" fill="#00b0f0">
+							<circle cx="62" cy="62" r="62" transform="translate(898 2733)" fill="#00b0f0">
 								<animate dur="2s" attributeName="r" values="0;62;0" keyTimes="0;0.7;1" repeatCount="indefinite" />
 								<animate dur="2s" attributeName="opacity" values="1;0;0" keyTimes="0;0.7;1" repeatCount="indefinite" />
 							</circle>
 							<g transform="matrix(1, 0, 0, 1, 278, 2113)">
-								<circle id="Ellipse_504-2" cx="24" cy="24" r="24" transform="translate(658 658)" fill="#00b0f0">
+								<circle cx="24" cy="24" r="24" transform="translate(658 658)" fill="#00b0f0">
 									<animate dur="2s" attributeName="r" values="24;26;24" keyTimes="0;0.7;1" repeatCount="indefinite" />
 								</circle>
 							</g>
@@ -258,7 +312,7 @@ pageSubtitle: High performance cloud servers in HK
 					<div class="col-xs-12 col-md-5">
 						<h2 class="mb-1">The fastest digital infrastructure in HK<mark class="dot">.</mark></h3>
 						<p><strong>Host the most performance-intensive applications at our Hong Kong locations and deliver services at low latency via our global network.</strong></p>
-						<p class="mb-0">OneQode operate compute and network services from two datacenters in Hong Kong: Global Switch, and iAdvantage MEGA-i.</p>
+						<p class="mb-0">OneQode operate compute and network services from three datacenters in Hong Kong: Global Switch, iAdvantage MEGA-i, and Equinix HK.</p>
 						<p class="mb-0"><a class="chevron" href="/about/">About OneQode</a></p>
 					</div>
 				</div>
@@ -270,9 +324,9 @@ pageSubtitle: High performance cloud servers in HK
 				</picture>
 			</div>
 		</section>
-		<section class="py-4">
+		<section id="test-ip" class="py-4 text-center">
 			<div class="container">
-				<div class="row middle-xs text-center push-forward">
+				<div class="row middle-xs push-forward">
 					<div class="col-xs-12 col-md-8 col-md-offset-2">
 						<h3>Test your connection to <br class="responsive">our Hong Kong infrastructure<mark class="dot">.</mark></h3>
 					</div>
@@ -280,12 +334,36 @@ pageSubtitle: High performance cloud servers in HK
 						<p class="mt-0">Use the test IP address below or our looking glass to check routing, latency and performance.</p>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-xs-12 col-md-6 col-md-offset-3">
-						<p class="mt-0">TEST IP</p>
+				<div class="row mt-2">
+					<div class="col-xs-12 col-md-6 col-md-offset-3 ping-command">
+						<code><span class="faded">ping </span><strong class="nowrap" title="Copy to clipboard">103.151.65.12</strong></code>
+						<script>
+						document.addEventListener('DOMContentLoaded', function() {
+							var testIp = document.querySelector('.ping-command strong');
+							var originalTitle = testIp.title;
+
+							testIp.addEventListener('click', function() {
+								var textToCopy = this.textContent;
+
+								navigator.clipboard.writeText(textToCopy).then(function() {
+									// On success:
+									testIp.classList.add('copied');
+									testIp.title = 'Copied to clipboard';
+
+									setTimeout(function() {
+										testIp.classList.remove('copied');
+										testIp.title = originalTitle;
+									}, 1500);
+								}, function(err) {
+									// On error:
+									console.error('Could not copy text: ', err);
+								});
+							});
+						});
+						</script>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row mt-4">
 					<div class="col-xs-12 col-md-6 col-md-offset-3">
 						<p class="mt-0">Having trouble?</p>
 					</div>

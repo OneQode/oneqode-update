@@ -587,6 +587,7 @@ body {
 strong {
 	font-weight: 800;
 }
+code,
 .monospace {
 	font-family: Hack, monospace;
 }
