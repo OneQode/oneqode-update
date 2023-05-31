@@ -591,6 +591,11 @@ code,
 .monospace {
 	font-family: Hack, monospace;
 }
+.poppins {
+	font-family: Poppins, sans-serif;
+	font-weight: 600;
+	letter-spacing: -0.02em;
+}
 /* Headings */
 h1,
 h2,
@@ -647,6 +652,20 @@ mark {
 }
 .faded, figcaption {
 	color: #999;
+}
+.shine {
+	color: rgba(255,255,255,0.6);
+	background: linear-gradient(90deg, transparent, #fff, transparent) no-repeat center/80%;
+	animation: shine 3s linear infinite;
+	-webkit-background-clip: text;
+}
+@keyframes shine {
+	0% {
+		background-position: -500%;
+	}
+	100% {
+		background-position: 500%;
+	}
 }
 /* Blue Dot */
 mark.dot {
@@ -949,7 +968,7 @@ section.full-height {
 	min-height: 100vh !important;
 }
 section.hero {
-	background: radial-gradient(circle at bottom,#002735 0%,#000000 100%);
+	background: linear-gradient(to bottom,#002735,#000);
 	text-align: left;
 	min-height: 80vh;
 }
@@ -963,23 +982,8 @@ section.hero.condensed {
 }
 
 /* Background colours*/
-.black {
-	background: #000;
-}
-.black-to-mid {
-	background: linear-gradient(to bottom, #000, #1c1d22);
-}
 .black-to-footer {
 	background: linear-gradient(to bottom, #000, #0c0c0c);
-}
-.mid-to-black {
-	background: linear-gradient(to bottom, #1c1d22, #000);
-}
-.mid-to-footer {
-	background: linear-gradient(to bottom, #1c1d22, #0c0c0c);
-}
-.mid {
-	background: #1c1d22;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - -
