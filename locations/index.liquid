@@ -1,0 +1,76 @@
+---
+layout: page.liquid
+heroSmall: true
+metaTitle: Global Network Locations • OneQode
+metaDescription: See instance pricing and calculate data transfer and storage costs for OneQode’s high-performance cloud.
+changefreq: monthly
+priority: 0.5
+pageTitle: Global network locations
+pageSubtitle: Our points of presence across Asia-Pacific and beyond
+hideLivePops: true
+---
+		<style>
+			.map {
+				margin-top: -100rem;
+				z-index: -4;
+				opacity: 0.25;
+			}
+		</style>
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<div class="row">
+							<div class="col-xs-12 text-center mb-4">
+								<h2>Cloud regions</h2>
+								<p class="subheading faded">Full region: cloud, network, servers and colocation</p>
+							</div>
+							<div class="col-xs-6 mb-1">
+								<a href="/locations/guam/" class="box left">
+									<h3 class="mb-0">Guam (APAC Central)</h3>
+								</a>
+							</div>
+							<div class="col-xs-6 mb-1">
+								<a href="/locations/hong-kong/" class="box left">
+									<h3 class="mb-0">Hong Kong</h3>
+								</a>
+							</div>
+							<div class="col-xs-6 mb-1">
+								<a href="/locations/singapore/" class="box left">
+									<h3 class="mb-0">Singapore</h3>
+								</a>
+							</div>
+							<div class="col-xs-6 mb-1">
+								<a href="/locations/tokyo/" class="box left">
+									<h3 class="mb-0">Tokyo</h3>
+								</a>
+							</div>
+							<div class="col-xs-12 text-center mt-8 mb-4">
+								<h2>All points of presence</h2>
+								<p class="subheading faded">Network, servers and colocation services</p>
+								<p>We deliver network (ethernet, IP transit, backhaul), dedicated servers and colocation services in the following facilities:</p>
+							</div>
+							<div class="col-xs-12">
+								{% include parts/_pops.liquid %}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="network">
+{% include diagrams/_network-map.liquid %}
+			<figcaption class="mt-0">Global network rollout map <span style="color: #949494">// <a href="https://oneqode2.sgp1.cdn.digitaloceanspaces.com/maps/global/oneqode-world-map.pdf" rel="noopener" target="_blank">Full map PDF</a></figcaption>
+		</section>
+		<section class="black-to-footer py-8 mobile-text-center">
+			<div class="container">
+				<div class="row place-content-center">
+					<div class="col-xs-12 col-md-5">
+						<h3 class="faded">Reach more users</h3>
+						<h3>Strategic footprint</h3>
+						<p>With a game-changing Guam (APAC Central) facility at the core, and a presence in Asia-Pacific’s major population centres, you’ll reach hundreds of millions of people across the region with ultra low-latency connectivity.</p>
+						<a href="/guam/" class="chevron">Learn more about APAC Central</a>
+					</div>
+				</div>
+			</div>
+		</section>

@@ -50,7 +50,6 @@
 					left: 59.3%;
 					top: 53.7%;
 				}
-				{%- comment %}
 				.pulse.singapore {
 					left: 34.7%;
 					top: 52%;
@@ -63,13 +62,13 @@
 					left: 58.7%;
 					top: 42.7%;
 				}
-				{%- endcomment %}
 				.globe-locations .label {
 					position: absolute;
 					text-align: center;
 					font-family: Poppins, sans-serif;
 					font-weight: 600;
 					white-space: nowrap;
+					font-size: 1.1rem;
 				}
 				.globe-locations .label.cloud {
 					z-index: 2;
@@ -95,13 +94,16 @@
 					color: #617483;
 					font-size: 60%;
 				}
+				.globe-locations .label.active {
+					color: #a5c3d9;
+				}
 				.globe-locations .label span {
 					position: absolute;
 					transform: translateX(-50%);
 				}
 				.label.guam 		{	left: 59.3%;	top: 49.7%;	}
-				.label.singapore 	{	left: 34.7%;	top: 51%;	}
-				.label.hong-kong 	{	left: 43.5%;	top: 45%;	}
+				.label.singapore 	{	left: 34.7%;	top: 48%;	}
+				.label.hong-kong 	{	left: 43.5%;	top: 41%;	}
 				.label.tokyo 		{	left: 58.7%;	top: 38.7%;	}
 				.label.sydney 		{	left: 56.7%;	top: 75.4%;	}
 				.label.melbourne	{	left: 47.8%;	top: 75.9%;	}
@@ -163,6 +165,7 @@
 				@media (max-width: 64em) {
 					.globe-locations .label span {
 						transform: translateX(-50%) translateY(-50%);
+						font-size: 80%;
 					}
 					.globe-locations .label:not(.cloud) {
 						font-size: 46%;
@@ -185,23 +188,17 @@
 				<div class="globe-locations">
 					<span class="label guam cloud"><a href="/guam/"><span>Guam</span></a></span>
 					<span class="pulse guam"></span>
-					<span class="label singapore"><span>Singapore</span></span>
-					{%- comment %}
+					<span class="label singapore cloud"><a href="/locations/singapore/"><span>Singapore</span></a></span>
 					<span class="pulse singapore"></span>
-					{%- endcomment %}
-					<span class="label hong-kong"><span>Hong Kong</span></span>
-					{%- comment %}
+					<span class="label hong-kong cloud"><a href="/locations/hong-kong/"><span>Hong Kong</span></a></span>
 					<span class="pulse hong-kong"></span>
-					{%- endcomment %}
-					<span class="label tokyo"><span>Tokyo</span></span>
-					{%- comment %}
+					<span class="label tokyo cloud"><a href="/locations/tokyo/"><span>Tokyo</span></a></span>
 					<span class="pulse tokyo"></span>
-					{%- endcomment %}
-					<span class="label sydney">Sydney</span>
-					<span class="label melbourne">Melbourne</span>
-					<span class="label brisbane">Brisbane</span>
-					<span class="label los-angeles hide-mobile">Los Angeles</span>
-					<span class="label los-angeles mobile-only">LA</span>
+					<span class="label sydney active">Sydney</span>
+					<span class="label melbourne active">Melbourne</span>
+					<span class="label brisbane active">Brisbane</span>
+					<span class="label los-angeles active hide-mobile">Los Angeles</span>
+					<span class="label los-angeles active mobile-only">LA</span>
 					<span class="label seattle">Seattle</span>
 					<span class="label vancouver">Vancouver</span>
 					<span class="label chennai">Chennai</span>
@@ -209,7 +206,7 @@
 					<span class="label hawaii">Hawaii</span>
 					<span class="label vladivostok">Vladivostok</span>
 					<span class="label seoul">Seoul</span>
-					<span class="label manila">Manila</span>
+					<span class="label manila active">Manila</span>
 					<span class="label davao">Davao</span>
 					<span class="label jakarta">Jakarta</span>
 					<span class="label surabaya">Surabaya</span>
