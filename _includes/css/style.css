@@ -1435,6 +1435,34 @@ abbr[title] {
 .logo-grid > div img.w80 {
 	width: 80%;
 }
+/* Logo Flex */
+.logo-flex {
+	gap: 2rem 0;
+}
+.logo-flex div {
+	display: flex;
+	align-items: center;
+}
+.logo-flex div img {
+	filter: brightness(0) invert(1);
+	opacity: 0.5;
+	transition: opacity 0.1s;
+}
+.logo-flex div:hover img {
+	opacity: 0.8;
+}
+.logo-flex img.w50 {
+	width: 50%;
+}
+.logo-flex img.w60 {
+	width: 50%;
+}
+.logo-flex img.w70 {
+	width: 70%;
+}
+.logo-flex img.w80 {
+	width: 80%;
+}
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - -
 RESPONSIVE OVERRIDES
  - - - - - - - - - - - - - - - - - - - - - - - - - - - */
