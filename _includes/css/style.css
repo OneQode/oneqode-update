@@ -1437,7 +1437,7 @@ abbr[title] {
 }
 /* Logo Flex */
 .logo-flex {
-	gap: 2rem 0;
+	gap: 3rem 0;
 }
 .logo-flex div {
 	display: flex;
