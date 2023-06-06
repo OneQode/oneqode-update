@@ -1,11 +1,32 @@
 ---
 ogImage: og-image.jpg
 font: hack
+fileNamePrefix: hong-kong
 ---
 {% include _header.liquid %}
 		<style>
 			section.hero {
 				min-height: 90vh;
+			}
+			/* Background Image */
+			.no-webp .hero {
+				background: linear-gradient(to bottom, transparent 80%, #000), url("/img/bg/location-{{ fileNamePrefix }}.jpg") no-repeat bottom center;
+				background-size: cover;
+			}
+			.webp .hero {
+				background: linear-gradient(to bottom, transparent 80%, #000), url("/img/bg/location-{{ fileNamePrefix }}.webp") no-repeat bottom center;
+				background-size: cover;
+			}
+			/* Desktop styles */
+			@media (min-width: 64em) {
+				.no-webp .location-bg {
+					background: url("/img/bg/location-map-{{ fileNamePrefix }}.jpg") no-repeat center right;
+					background-size: contain;
+				}
+				.webp .location-bg {
+					background: url("/img/bg/location-map-{{ fileNamePrefix }}.webp") no-repeat center right;
+					background-size: contain;
+				}
 			}
 			@media (min-width: 48em) {
 				ul.ticks {
