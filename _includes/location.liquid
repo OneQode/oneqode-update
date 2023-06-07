@@ -1,7 +1,10 @@
 ---
 ogImage: og-image.jpg
 font: hack
+breadcrumb: Hong Kong
+shortName: HK
 fileNamePrefix: hong-kong
+mapAlign: left
 ---
 {% include _header.liquid %}
 		<style>
@@ -20,11 +23,11 @@ fileNamePrefix: hong-kong
 			/* Desktop styles */
 			@media (min-width: 64em) {
 				.no-webp .location-bg {
-					background: url("/img/bg/location-map-{{ fileNamePrefix }}.jpg") no-repeat center right;
+					background: url("/img/bg/location-map-{{ fileNamePrefix }}.jpg") no-repeat center {{ mapAlign }};
 					background-size: contain;
 				}
 				.webp .location-bg {
-					background: url("/img/bg/location-map-{{ fileNamePrefix }}.webp") no-repeat center right;
+					background: url("/img/bg/location-map-{{ fileNamePrefix }}.webp") no-repeat center {{ mapAlign }};
 					background-size: contain;
 				}
 			}
@@ -69,6 +72,25 @@ fileNamePrefix: hong-kong
 				width: 100%;
 				transform: translateY(-50%);
 				z-index: -1;
+			}
+			/* Map Credit */
+			.location-bg {
+				position: relative;
+			}
+			.credit {
+				position: absolute;
+				transform: rotate(-90deg);
+				right: 0;
+				top: 0;
+				padding: 0.3rem 0.5rem;
+				border-radius: 0.3rem .3rem 0 0;
+				font-size: 0.8rem;
+				transform-origin: right bottom;
+				border: 1px solid #333;
+				color: #ccc;
+			}
+			.credit a {
+				font-size: unset;
 			}
 			/* Test IP address */
 			#test-ip {
@@ -123,6 +145,10 @@ fileNamePrefix: hong-kong
 			@media (max-width: 64em) {
 				.location-bg .devices-only {
 					margin-top: -8rem;
+				}
+				.credit {
+					top: 75%;
+					transform: rotate(-90deg) scale(0.8);
 				}
 			}
 			/* Mobile-Specific Styles */

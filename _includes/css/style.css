@@ -1451,6 +1451,12 @@ abbr[title] {
 .logo-flex div:hover img {
 	opacity: 0.8;
 }
+.logo-flex img.w30 {
+	width: 30%;
+}
+.logo-flex img.w40 {
+	width: 40%;
+}
 .logo-flex img.w50 {
 	width: 50%;
 }
@@ -1462,6 +1468,9 @@ abbr[title] {
 }
 .logo-flex img.w80 {
 	width: 80%;
+}
+.logo-flex img.w90 {
+	width: 90%;
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - -
 RESPONSIVE OVERRIDES
