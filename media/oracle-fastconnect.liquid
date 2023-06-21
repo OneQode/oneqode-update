@@ -11,6 +11,7 @@ postType: Press Release
 postTitle: OneQode Announces Access to Oracle Cloud Infrastructure via FastConnect
 date: 2023-06-23
 mediaContact: Joe Swinn, Chief Marketing Officer
+lazyLoadVideo: true
 ---
 <style>
 	.hero {
@@ -22,6 +23,10 @@ mediaContact: Joe Swinn, Chief Marketing Officer
 	}
 	.webp .hero {
 		background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/oracle.webp");
+	}
+	/* Video styling */
+	video {
+		height: auto;
 	}
 </style>
 <p><strong>Sydney, {{ date | readableDate }}</strong> • OneQode, a leading digital infrastructure platform designed for the demands of real-time apps and competitive gaming, and member of Oracle PartnerNetwork (OPN), today announced it will offer connectivity to Oracle Cloud through <a href="https://cloud.oracle.com/networking" target="_blank">Oracle Cloud Infrastructure (OCI) FastConnect</a>.</p>
@@ -42,6 +47,21 @@ mediaContact: Joe Swinn, Chief Marketing Officer
 <p>This announcement follows OneQode’s recent <a href="/media/oracle-partnership/">collaboration with Oracle</a>, unveiled in December. This collaboration sees both parties providing enhanced offerings to enterprise customers in the Asia Pacific region, particularly to those requiring performance solutions, low-latency networking or whole-of-region reach.</p>
 <p>With OCI, customers benefit from best-in-class security, consistent high performance, simple predictable pricing, and the tools and expertise needed to bring enterprise workloads to cloud quickly and efficiently.</p>
 <p>With access to Oracle Cloud through OCI FastConnect, OneQode and Oracle customers will benefit from enhanced connectivity and access to resources across Asia Pacific, improving performance for enterprise applications. OneQode and Oracle will also collaborate on regional digital transformation solutions in the coming months.</p>
+<figure>
+	<video
+		class="lazy"
+		poster="/img/media/oracle-fastconnect-video-thumbnail.jpg"
+		aria-label="OneQode Oracle FastConnect"
+		width="1920"
+		height="1080"
+		autoplay muted loop playsinline disableRemotePlayback
+	>
+		<source
+			data-src="https://oneqode2.sgp1.cdn.digitaloceanspaces.com/videos/oracle-fastconnect-video-thumbnail-hd.mp4"
+			type="video/mp4"
+		>
+	</video>
+</figure>
 <p>“We’re thrilled to further our relationship with Oracle and unlock even more value for our respective customers through OCI FastConnect,” said Matt Shearing, CEO of OneQode. “Asia Pacific is particularly underserved and OneQode and Oracle both have a shared commitment to solving these regional challenges. There’s huge potential for the joint solutions we’ll now be able to offer.”</p>
 <p>Oracle and OneQode will now work to implement joint solutions for enterprise customers across the Asia Pacific region, including those in underserved locations like the Philippines, Indonesia and the Pacific Islands.</p>
 <h2 class="mt-4">About Oracle PartnerNetwork</h2>
