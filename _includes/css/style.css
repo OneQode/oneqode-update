@@ -1322,7 +1322,7 @@ ul.no-style {
 	width: 100%;
 }
 .map text {
-	font-size: 31px;
+	font-size: 27px;
 	font-family: Poppins, sans-serif;
 	font-weight: 600;
 }
@@ -1340,9 +1340,9 @@ ul.no-style {
 }
 .map .active path,
 .map #legend line.active {
-	stroke: #00b0f0;
+	stroke: #29ade3;
 	stroke-width: 4;
-	stroke-dasharray: 15;
+	stroke-dasharray: 20;
 	stroke-dashoffset: 510;
 	animation: maplines 2s linear infinite;
 }
@@ -1355,8 +1355,8 @@ ul.no-style {
 .map #legend line.coming-soon,
 .map .transit path,
 .map #legend line.transit {
-	stroke: #00597f;
-	stroke-dasharray: 10 10;
+	stroke: #07699c;
+	stroke-dasharray: 20 20;
 }
 .map .transit path,
 .map #legend line.transit {
@@ -1364,8 +1364,7 @@ ul.no-style {
 	animation: maplines 2s linear infinite;
 }
 .map #legend rect {
-	fill: #4f94cc;
-	opacity: 0.2;
+	fill: #0e1010;
 }
 /* Abbreviations */
 abbr[title] {
