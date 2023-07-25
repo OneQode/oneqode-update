@@ -8,7 +8,7 @@ priority: 0.8
 ogImage: guam.jpg
 pageSupertitle: Guam (APAC Central)
 pageTitle: Asia-Pacific’s central server region
-pageSubtitle: Complete reach across the world’s<br class="responsive"> largest region of gamers
+pageSubtitle: Complete reach across the world’s<br class="responsive"> most populous region
 ---
 {%- comment %}
 <!-- 
@@ -118,6 +118,15 @@ pageSubtitle: Complete reach across the world’s<br class="responsive"> largest
 			.callout .details :last-child {
 				margin-bottom: 0;
 			}
+			.location-services .box {
+				height: auto;
+				flex-grow: 1;
+			}
+			.location-services .col-xs-12 {
+				display: flex;
+				flex-direction: column;
+				gap: 1rem;
+			}
 			/* Tablet and above */
 			@media (min-width: 48em) {
 				#stats .col-xs-12 {
@@ -165,7 +174,7 @@ pageSubtitle: Complete reach across the world’s<br class="responsive"> largest
 						<p class="subheading faded">With a level playing field for 1.45 billion gamers</p>
 					</div>
 					<div class="col-xs-12 col-md-6 col-md-offset-3">
-						<p>In a regional first, we built a central server region for APAC on the island of Guam. The neutral location levels the playing field for gamers across Asia Pacific, whether they're in Melbourne or Mongolia.</p>
+						<p>In a regional first, we built a central server region for APAC on the island of Guam. The neutral location levels the playing field for games and real-time apps across Asia Pacific, whether your users are in Melbourne or Mongolia.</p>
 					</div>
 				</div>
 			</div>
@@ -239,27 +248,43 @@ pageSubtitle: Complete reach across the world’s<br class="responsive"> largest
 						<p class="subheading faded">Here’s what’s available today on Guam</p>
 					</div>
 				</div>
-				<div class="row mt-4 icons place-content-center">
-					<div class="col-xs-12 col-sm-6 col-md-4 mb-1">
-						<a href="/cloud/" class="box">
-							<img class="mt-2" src="/img/ico/cloud.svg" alt="">
-							<h2 class="mt-2">Cloud platform</h2>
-							<p class="hide-mobile">The high performance cloud</p>
-						</a>
-					</div>
-					<div class="col-xs-12 col-sm-6 col-md-4 mb-1">
-						<a href="/dedicated-servers/" class="box">
-							<img class="mt-2" src="/img/ico/server.svg" alt="">
-							<h2 class="mt-2">Dedicated servers</h2>
-							<p class="hide-mobile">With reach across Asia-Pacific</p>
-						</a>
-					</div>
-					<div class="col-xs-12 col-sm-6 col-md-4 mb-1">
-						<a href="/network/" class="box">
-							<img class="mt-2" src="/img/ico/connection2.svg" alt="">
-							<h2 class="mt-2">Network</h2>
-							<p class="hide-mobile">Low-latency backbone</p>
-						</a>
+				<div class="row mt-4">
+					<div class="col-xs-12">
+						<div class="row location-services">
+							<div class="col-xs-12 col-sm col-md-4 mb-1">
+								<a href="/cloud/" class="box left">
+									<h3 class="mb-1">High performance cloud</h3>
+									<p class="faded my-0">The world's fastest cloud servers featuring:</p>
+									<ul>
+										<li>Dedicated CPUs @ 3.7 GHz+</li>
+										<li>Volume & object storage</li>
+										<li>Cloud firewall</li>
+										<li>Cloud load balancers</li>
+										<li>OpenStack API</li>
+									</ul>
+								</a>
+							</div>
+							<div class="col-xs-12 col-sm col-md-4 mb-1">
+								<a href="/dedicated-servers/" class="box left">
+									<h3 class="mb-1">Dedicated servers</h3>
+									<p class="faded my-0">Built to order custom dedicated servers, available within 4 weeks</p>
+								</a>
+								<a href="/colocation/" class="box left">
+									<h3 class="mb-1">Colocation</h3>
+									<p class="faded my-0">Rack space in our Guam (APAC Central) locations</p>
+								</a>
+							</div>
+							<div class="col-xs-12 col-sm col-md-4 mb-1">
+								<a href="/ethernet/" class="box left">
+									<h3 class="mb-1">Enterprise Ethernet</h3>
+									<p class="faded my-0">Secure, private, latency-optimized international connectivity</p>
+								</a>
+								<a href="/ip-transit/" class="box left">
+									<h3 class="mb-1">IP Transit</h3>
+									<p class="faded my-0">High quality commercial internet services</p>
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

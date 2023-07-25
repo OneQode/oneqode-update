@@ -1341,9 +1341,9 @@ ul.no-style {
 .map .active path,
 .map #legend line.active {
 	stroke: #29ade3;
-	stroke-width: 4;
+	stroke-width: 3;
 	stroke-dasharray: 20;
-	stroke-dashoffset: 510;
+	stroke-dashoffset: 440;
 	animation: maplines 2s linear infinite;
 }
 @keyframes maplines {
@@ -1362,6 +1362,11 @@ ul.no-style {
 .map #legend line.transit {
 	stroke-dashoffset: 400;
 	animation: maplines 2s linear infinite;
+}
+.map circle {
+	fill: #000;
+	stroke: #29ade3;
+	stroke-width: 3;
 }
 .map #legend rect {
 	fill: #0e1010;
@@ -1749,7 +1754,11 @@ RESPONSIVE OVERRIDES
 	.map .coming-soon path,
 	.map #legend line.active {
 		animation: none;
-		stroke-width: 6;
+		stroke-width: 3;
+	}
+	.map .active path,
+	.map #legend line.active {
+		stroke-dasharray: 0;
 	}
 	/* Glowing boxes */
 	.box img {

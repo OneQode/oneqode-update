@@ -46,22 +46,10 @@
 						box-shadow: 0 0 0 0 rgba(0, 176, 240, 0);
 					}
 				}
-				.pulse.guam {
-					left: 59.3%;
-					top: 53.7%;
-				}
-				.pulse.singapore {
-					left: 34.7%;
-					top: 52%;
-				}
-				.pulse.hong-kong {
-					left: 43.5%;
-					top: 45%;
-				}
-				.pulse.tokyo {
-					left: 58.7%;
-					top: 42.7%;
-				}
+				.pulse.guam 		{	left: 59.5%;	top: 53.6%;	}
+				.pulse.singapore 	{	left: 34.9%;	top: 51.7%;	}
+				.pulse.hong-kong	{	left: 43.7%;	top: 45%;	}
+				.pulse.tokyo		{	left: 58.9%;	top: 42.7%;	}
 				.globe-locations .label {
 					position: absolute;
 					text-align: center;
@@ -102,7 +90,7 @@
 					transform: translateX(-50%);
 				}
 				.label.guam 		{	left: 59.3%;	top: 49.7%;	}
-				.label.singapore 	{	left: 34.7%;	top: 48%;	}
+				.label.singapore 	{	left: 34.7%;	top: 47.6%;	}
 				.label.hong-kong 	{	left: 43.5%;	top: 41%;	}
 				.label.tokyo 		{	left: 58.7%;	top: 38.7%;	}
 				.label.sydney 		{	left: 56.7%;	top: 75.4%;	}
@@ -115,9 +103,9 @@
 				.label.muscat		{	left: 19.6%;	top: 32.5%;	}
 				.label.hawaii		{	left: 77.9%;	top: 49.5%;	}
 				.label.vladivostok	{	left: 50.9%;	top: 34.2%;	}
-				.label.seoul		{	left: 48.5%;	top: 39.3%;	}
+				.label.seoul		{	left: 49.1%;	top: 39.7%;	}
 				.label.manila		{	left: 41.4%;	top: 48.9%;	}
-				.label.davao		{	left: 46.2%;	top: 54.1%;	}
+				.label.davao		{	left: 48.2%;	top: 54.5%;	}
 				.label.jakarta		{	left: 29.0%;	top: 55.4%;	}
 				.label.surabaya		{	left: 34.0%;	top: 59.0%;	}
 				.label.darwin		{	left: 45.5%;	top: 64.6%;	}
@@ -165,7 +153,7 @@
 				@media (max-width: 64em) {
 					.globe-locations .label span {
 						transform: translateX(-50%) translateY(-50%);
-						font-size: 80%;
+						font-size: 65%;
 					}
 					.globe-locations .label:not(.cloud) {
 						font-size: 46%;
@@ -186,14 +174,14 @@
 			</style>
 			<div class="globe container">
 				<div class="globe-locations">
-					<span class="label guam cloud"><a href="/locations/guam/"><span>Guam</span></a></span>
-					<span class="pulse guam"></span>
 					<span class="label singapore cloud"><a href="/locations/singapore/"><span>Singapore</span></a></span>
 					<span class="pulse singapore"></span>
 					<span class="label hong-kong cloud"><a href="/locations/hong-kong/"><span>Hong Kong</span></a></span>
 					<span class="pulse hong-kong"></span>
 					<span class="label tokyo cloud"><a href="/locations/tokyo/"><span>Tokyo</span></a></span>
 					<span class="pulse tokyo"></span>
+					<span class="label guam cloud"><a href="/locations/guam/"><span>Guam</span></a></span>
+					<span class="pulse guam"></span>
 					<span class="label sydney active">Sydney</span>
 					<span class="label melbourne active">Melbourne</span>
 					<span class="label brisbane active">Brisbane</span>
@@ -217,9 +205,9 @@
 					<title id="maptitle">OneQode Cloud Map</title>
 					<desc id="mapdescription">A dark globe centred on Asia-Pacific showing OneQode cloud locations in Guam, Singapore, Hong Kong, and Tokyo</desc>
 					<g id="network">
-						<path id="Guam_Singapore" d="M1059.4,960.4c-112.8-5.6-226.4,8.7-232.6,50.5-.1,.8-1.1,1.1-1.6,.5-11.5-13.2-35.4-28.4-51.9-19.5-21.4,11.5-18.7,47.6-58.1,47.6-53-.1-80.8-91-94.5-113" />
-						<path id="Guam_HongKong" d="M779,807.2c53.7,62.5,197.1,132.4,280.4,153.3" />
-						<path id="Guam_Tokyo" d="M1048,765.2c27,69.8,26.1,131.1,11.4,195.2" />
+						<path id="guam-singapore" d="M1059.4,960.4c-112.8-5.6-226.4,8.7-232.6,50.5-.1,.8-1.1,1.1-1.6,.5-11.5-13.2-35.4-28.4-51.9-19.5-21.4,11.5-18.7,47.6-58.1,47.6-53-.1-80.8-91-94.5-113" />
+						<path id="guam-hong-kong" d="M779,807.2c53.7,62.5,197.1,132.4,280.4,153.3" />
+						<path id="guam-tokyo" d="M1048,765.2c27,69.8,26.1,131.1,11.4,195.2" />
 						<path id="muscat-perth" d="M667.7,1237.3s-87.9,.9-168-62.6c-230.1-182.6-54.6-501.9-151-563.6-10.3-6.6-19.4-5.7-19.4-5.7" />
 						<path id="singapore-chennai" d="M455.3,736.4c22.1,8.5,72.2,46.5,122.6,152.1,18.1,37.9,42.9,38,42.9,38" />
 						<path id="perth-sydney" d="M667.7,1237.3c-17.2-1.1-30.3,9.7-30.3,26.1,0,38.8,119.1,75.3,256.4,96.4,98.3,15.1,96.2-13.7,96.2-13.7" />
@@ -228,24 +216,24 @@
 						<path id="guam-sydney" d="M1059.4,960.4c45.7,67.8,59.9,161.5,39.3,248.7-17.1,72.4-77.7,136.9-108.7,136.9" />
 						<path id="tokyo-seattle" d="M1048,765.2c116.2-91.9,305.2-131.6,441.6-99.1" />
 						<path id="perth-singapore" d="M634.5,954.8c11.2,22.9-13.7,40.6-19.4,43.5-82.1,41.2-59.7,160.3,52.6,239" />
-						<path id="hongkong-singapore" d="M620.7,926.5c70.3-5.2,140.8-33.9,158.3-119.3" />
+						<path id="hong-kong-singapore" d="M620.7,926.5c70.3-5.2,140.8-33.9,158.3-119.3" />
+						<path id="hong-kong-tokyo" d="M779.01,807.18c52.72,52.72,137.73,55.64,268.95-41.97" />
 						<path id="tokyo-seoul" d="M933.6,716.4c1.3,21.3,16.7,43.1,49.1,48.8,39.3,6.9,65.2,0,65.2,0" />
 						<path id="tokyo-vladivostok" d="M999.4,681.2c17.4,17.4,48.6,57.9,48.6,84" />
-						<path id="guam-manilia" d="M824.7,885.4c-8-8-9.4-13.1-6.8-20.8s13.1-12.9,23.4-4.9c35.4,27.4,120.8,81.4,217.4,100.7" />
-						<path id="guam-losangeles" d="M1059.4,960.4c68.6-68.6,191.3-231.4,456-204.9" />
+						<path id="guam-manila" d="M824.7,885.4c-8-8-9.4-13.1-6.8-20.8s13.1-12.9,23.4-4.9c35.4,27.4,120.8,81.4,217.4,100.7" />
+						<path id="manila-hong-kong" d="M824.65,885.43s-45.64-22.63-45.64-78.25" />
+						<path id="guam-los-angeles" d="M1059.4,960.4c68.6-68.6,191.3-231.4,456-204.9" />
 						<path id="davao" d="M847,971.8c5.7,5.7,11.1,8.9,16.2,6.8" />
 						<path id="seattle-vancouver" d="M1481.9,645.7s7.7,5.7,7.7,20.5" />
 						<path id="brisbane-sunshine-coast" d="M1048,1288.2c8.4,0,14.2,.1,21-10.2" />
 						<path id="sydney-melbourne" d="M946.5,1355.5c17.2-15.2,43.5-9.5,43.5-9.5" />
 						<path id="jakarta-singapore" d="M622.4,1004.7s31,.6,28.1-18.1" />
 						<path id="surabaya-singapore" d="M677.5,1036.1c5.3-9-1.9-15.4-1.9-15.4" />
-						<path id="darwin-surabaya" d="M693.8,1034.2s47.1,25.5,108.2,30.9c56.1,5,63.9,78.2,63.9,78.2" />
-						<path id="darwin-davao" d="M857.7,1112.2c-8.5-23.2-23.4-58.6-16.4-99.5,2-11.6,8.3-30,24.7-35.1" />
 						<path id="darwin-sydney" d="M865.9,1143.3c142.2,50.2,124,202.7,124,202.7" />
 						<path id="darwin-melbourne" d="M865.9,1143.3c86.3,54.1,80.5,212.2,80.5,212.2" />
 						<path id="darwin-brisbane" d="M865.9,1143.3c163.5,42,182,144.8,182,144.8" />
-						<path id="hawaii-la" d="M1515.3,755.5c0,89.9-25.8,120.8-25.8,120.8" />
-						<path id="la-seattle" d="M1489.5,666.2s25.8,36.1,25.8,89.3" />
+						<path id="hawaii-los-angeles" d="M1515.3,755.5c0,89.9-25.8,120.8-25.8,120.8" />
+						<path id="los-angeles-seattle" d="M1489.5,666.2s25.8,36.1,25.8,89.3" />
 					</g>
 				</svg>
 				<picture>
