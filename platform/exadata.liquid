@@ -1,0 +1,628 @@
+---
+permalink: /exadata/
+metaTitle: Oracle Exadata in Manila, Philippines • OneQode
+metaDescription: The high performance cloud platform for the Asia-Pacific. Faster CPUs, better performance, unique regions, lower latency.
+changefreq: monthly
+priority: 0.9
+pageSupertitle: Oracle Exadata in Manila
+pageTitle: The power of Oracle Exadata is coming to the Philippines
+pageSubtitle: A sovereign deployment of Exadata<br class="responsive"> for high performance enterprise
+ogImage: og-image.jpg
+preconnect: ["https://oneqode2.sgp1.cdn.digitaloceanspaces.com"]
+font: hack
+---
+{% include _header.liquid %}
+		<style>
+			section.hero {
+				min-height: 100vh;
+				background: none;
+			}
+			@media screen and (max-width: 64em) {
+				.no-webp section.hero {
+					background: linear-gradient(to bottom, transparent 80%, #000), url("/img/bg/light-speed-mobile.jpg") no-repeat 50% 50%;
+					background-size: cover;
+				}
+				.webp section.hero {
+					background: linear-gradient(to bottom, transparent 80%, #000), url("/img/bg/light-speed-mobile.webp") no-repeat 50% 50%;
+					background-size: cover;
+				}
+			}
+			#benefits {
+				margin-top: -8rem;
+			}
+			#benefits ul.ticks {
+				display: grid;
+				grid-gap: 1.5rem 2rem;
+				justify-items: center;
+			}
+			/* Benchmarks Chart */
+			#chart {
+				display: flex;
+				flex-direction: column;
+				gap: 1rem;
+				font-family: Poppins, sans-serif;
+				font-weight: 600;
+				letter-spacing: -0.02em;
+			}
+			.bar {
+				border-radius: 10px 0 0 10px;
+				padding: 1rem 5rem 1rem 1rem;
+				display: grid;
+				grid-template-columns: 160px 1fr 1fr;
+				grid-gap: 0.5rem;
+				align-items: center;
+				clip-path: polygon(0 0, 100% 0, calc(100% - 5rem) 100%, 0% 100%);
+				box-sizing: border-box;
+				animation: 1s normal barload ease-in-out;
+			}
+			@keyframes barload {
+				0% {
+					clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+				}
+				100% {
+					clip-path: polygon(0 0, 100% 0, calc(100% - 5rem) 100%, 0% 100%);
+				}
+			}
+			.bar:not(.bar.oneqode) {
+				background: linear-gradient(to right, #1c1d22, #333);
+			}
+			.bar.oneqode {
+				background: linear-gradient(to right, #00597f, #00b0f0);
+			}
+			.bar img {
+				margin-left: 0;
+				max-height: 2rem;
+				max-width: 7.2rem;
+			}
+			.bar.azure img {
+				max-width: 5.6rem;
+			}
+			.bar img:not(.bar.oneqode img) {
+				filter: brightness(0) invert(1);
+				opacity: 0.6;
+			}
+			.bar .data {
+				text-align: right;
+			}
+			.bar .instance {
+				font-size: 0.8rem;
+				color: #999;
+			}
+			.bar.oneqode .instance {
+				color: #fff;
+			}
+			@media screen and (max-width: 64em) {
+				.bar {
+					grid-template-columns: 1fr;
+					grid-template-rows: 1fr 1fr;
+					grid-gap: 0.3rem;
+					clip-path: polygon(0 0, 100% 0, calc(100% - 4rem) 100%, 0% 100%);
+					padding: 0.6rem 3rem 0.6rem 0.6rem;
+				}
+				.bar img {
+					max-height: 1.2rem;
+					max-width: 5rem;
+				}
+				.bar .data {
+					text-align: left;
+					font-size: 0.8rem;
+				}
+				.bar:not(.oneqode) .data {
+					color: #999;
+				}
+				.bar:not(.bar.oneqode) {
+					background: linear-gradient(to right, #1c1d22, #555);
+				}
+				.bar .instance {
+					display: none;
+				}
+			}
+			/* Bar Sizes */
+			.bar.aws {
+				width: 57.9%;
+			}
+			.bar.alicloud {
+				width: 50.5%;
+			}
+			.bar.digitalocean {
+				width: 50.1%;
+			}
+			.bar.azure {
+				width: 47.7%;
+			}
+			/* Globe Positioning */
+			.z-2 {
+				z-index: 2;
+			}
+			.globe.container {
+				margin-top: -16rem;
+				margin-bottom: -16rem;
+			}
+			@media (max-width: 64em) {
+				.globe.container {
+					margin-top: -10rem;
+					margin-bottom: -8rem;
+				}
+			}
+			.code-container {
+				background: #0c0c0c;
+				box-shadow: 20px -19px 300px #00bbffd1, 0 0 30px #00d8ff54;
+				padding: 1rem;
+				border-radius: 10px;
+				height: 300px;
+				overflow-y: scroll;
+			}
+			/* Guam Cable Map Customisations */
+			.overflow-x-clip {
+				overflow-x: clip;
+			}
+			@media (max-width: 48em) {
+				#guam-cable-map {
+					margin-left: -2rem;
+					margin-right: -2rem;
+					margin-top: -8rem;
+					width: calc(100% + 4rem) !important;
+				}
+			}
+			@media (min-width: 48em) {
+				#guam-cable-map {
+					margin-top: -4rem;
+					margin-bottom: 0rem;
+					transform: scale(1.5);
+					z-index: -2 !important;
+				}
+			}
+			@media (min-width: 64em) {
+				#guam-cable-map {
+					margin-top: 4rem;
+					margin-bottom: -8rem;
+					transform: scale(3) translateX(10%);
+					z-index: -2 !important;
+				}
+			}
+			/*
+			Scrollbars credit:
+			https://codepen.io/devstreak/pen/dMYgeO?editors=0100
+			*/
+			.code-container::-webkit-scrollbar-track {
+				-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+				border-radius: 10px;
+				background-color: none;
+			}
+			.code-container::-webkit-scrollbar {
+				width: 12px;
+				background-color: none;
+			}
+			.code-container::-webkit-scrollbar-thumb {
+				border-radius: 10px;
+				-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+				background-color: #555;
+			}
+			#api pre {
+				display: grid;
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+			#api code {
+				font-family: Hack, monospace;
+				font-size: 0.75rem;
+				margin-bottom: 0.5rem;
+				margin-top: 0;
+			}
+			#api code:last-of-type {
+				margin-bottom: 0;
+			}
+			.bold {
+				 font-weight: bold;
+			}
+			.italic {
+				font-style: italic;
+			}
+			.code1 {
+				color: #ababab;
+			}
+			.code2 {
+				color: #00b0f0;
+			}
+			.code3 {
+				color: #ff8c8c;
+			}
+			.code4 {
+				color: #999;
+			}
+			.code5 {
+				color: #ff7100;
+			}
+			.code6 {
+				color: #ffb9b9;
+			}
+			.code7 {
+				color: #35ff7c;
+			}
+			.code8 {
+				color: #BB6688;
+			}
+			/*  Logo Grid  */
+			.logo-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+				grid-gap: 1rem;
+			}
+			@media (min-width: 48em) {
+				.logo-grid {
+					grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+					grid-gap: 1rem;
+				}
+			}
+			@media (max-width: 340px) {
+				.logo-grid {
+					grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+					grid-gap: 0.2rem;
+				}
+			}
+			.logo-grid > div {
+				padding: 1rem;
+				display: grid;
+				place-items: center;
+			}
+			.logo-grid > div::before {
+				content: "";
+				display: block;
+				padding-bottom: 75%;
+				grid-area: 1/1/2/2;
+			}
+			.logo-grid > div img {
+				width: 100%;
+				grid-area: 1/1/2/2;
+				filter: brightness(0) invert(1);
+				opacity: 0.3;
+				transition: opacity 0.1s;
+			}
+			.logo-grid > div:hover img {
+				opacity: 0.8;
+			}
+			#features ul li {
+				margin: 1rem 0;
+			}
+			/* ↓ Responsive Styles ↓ */
+			@media (min-width: 75em) {
+				h1 {
+					font-size: 3.5rem !important;
+				}
+			}
+			@media (min-width: 64em) {
+				h1 {
+					font-size: 3rem;
+				}
+				#benefits ul.ticks {
+					grid-template-columns: repeat(4, 1fr);
+				}
+			}
+			@media (max-width: 64em) {
+				#storage div:nth-child(2) {
+					margin-top: 4rem;
+				}
+				#ddos-protection div:first-child, #api img {
+					margin-bottom: 4rem;
+				}
+			}
+			@media (min-width: 48em) and (max-width: 64em) {
+				h1 {
+					font-size: 2.5rem;
+				}
+				#benefits ul.ticks {
+					grid-template-columns: repeat(2, 1fr);
+				}
+			}
+			@media (max-width: 48em) {
+				#benefits ul.ticks {
+					display: inline-block;
+				}
+				#benefits ul.ticks li {
+					margin-bottom: 1rem;
+				}
+			}
+		</style>
+		<section class="hero">
+			<div class="container">
+				<div class="row middle-xs">
+					<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+						{%- if pageSupertitle %}
+						<p class="superheading">{{ pageSupertitle }}</p>
+						{%- endif %}
+						<h1>{{ pageTitle }}<mark class="dot">.</mark></h1>
+						<p class="subheading">{{ pageSubtitle }}</p>
+						<p class="mt-2"><a href="/cloud/signup/" class="button">Sign Up</a> <a href="/pricing/cloud/" class="chevron m-1 ml-2">View pricing</a></p>
+					</div>
+				</div>
+				<div class="bg-video">
+					<div class="overlay"></div>
+					<video autoplay loop muted poster="/img/bg/cloud-background-neon-data-thumb.jpg">
+						<source src="https://oneqode2.sgp1.cdn.digitaloceanspaces.com/videos/cloud-background-neon-data.mp4" type="video/mp4">
+					</video>				
+				</div>
+			</div>
+		</section>
+		<section id="benefits" class="push-forward">
+			<div class="container">
+				<div class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0 mobile-text-center">
+					<ul class="ticks">
+						<li>3.7 GHz+ CPUs</li>
+						<li>Latency optimized</li>
+						<li>API accessible</li>
+						<li>DDoS protected</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="pt-8" id="cloud-instances">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-xs-12 col-md-8 col-md-offset-2 mb-0">
+						<h2 class="mb-1">Lightning fast cloud servers<mark class="dot">.</mark></h2>
+						<p class="subheading faded">Perfect for gaming, transcoding and real-time apps</p>
+					</div>
+				</div>
+				<div class="row mt-4" id="benchmarks">
+					<div class="col-xs-12">
+						<figure>
+							<div id="chart">
+								<div class="bar oneqode">
+									<span class="provider"><img src="/img/logo.svg" alt="OneQode"></span>
+									<span class="instance">xer.medium</span>
+									<span class="data">2,373</span>
+								</div>
+								<div class="bar aws">
+									<span class="provider"><img src="/img/competitors/aws-amazon-web-services.svg" alt="AWS"></span>
+									<span class="instance">c6i.large</span>
+									<span class="data">1,375</span>
+								</div>
+								<div class="bar alicloud">
+									<span class="provider"><img src="/img/competitors/alibaba-cloud.svg" alt="Alibaba Cloud"></span>
+									<span class="instance">ecs.hfc7.large</span>
+									<span class="data">1,198</span>
+								</div>
+								<div class="bar digitalocean">
+									<span class="provider"><img src="/img/competitors/digitalocean.svg" alt="DigitalOcean"></span>
+									<span class="instance">c-2</span>
+									<span class="data">1,189</span>
+								</div>
+								<div class="bar azure">
+									<span class="provider"><img src="/img/competitors/microsoft-azure.svg" alt="Azure"></span>
+									<span class="instance">Standard_F2s_v2</span>
+									<span class="data">1,132</span>
+								</div>
+							</div>
+							<figcaption class="text-left"><strong>Geekbench 5 multi-core performance comparison</strong><br>Comparing instances with 2 vCPUs and 4GB RAM. Tested on Feb 22 2022</figcaption>
+						</figure>
+					</div>
+				</div>
+				<div class="row mt-8 mobile-text-center">
+					<div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-0 my-2">
+						<h4 class="mb-0">3.7 GHz+ processors</h4>
+						<p class="faded mt-1">High clock speeds give you the power to operate compute-intensive workloads, high tickrate game servers, and real-time applications.</p>
+					</div>
+					<div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-0 my-2">
+						<h4 class="mb-0">Zero overprovisioning</h4>
+						<p class="faded mt-1">You’ll get better performance from dedicated CPU threads with no overprovisioning. Have it all to yourself, with no-one sharing your resources.</p>
+					</div>
+					<div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-0 my-2">
+						<h4 class="mb-0">OpenStack powered</h4>
+						<p class="faded mt-1">Built on an open-source foundation, the platform has an OpenStack-compatible API, with resources from a vast developer community.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="pt-4 pb-8" id="network">
+			<div class="container z-2">
+				<div class="row text-center">
+					<div class="col-xs-12 col-md-8 col-md-offset-2 mb-0">
+						<h2 class="mb-1">Delivered to your users<br> at low latency<mark class="dot">.</mark></h2>
+						<p class="subheading faded">Over a network built for gaming & real-time</p>
+					</div>
+				</div>
+			</div>
+			{% include parts/_globe.liquid %}
+			<div class="container z-2">
+				<div class="row mobile-text-center">
+					<div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-0 my-2">
+						<h4 class="mb-0">Latency optimized</h4>
+						<p class="faded mt-1">Get lightning-fast network performance with our global network that was built for gaming and real-time services.</p>
+						<p><a href="/network/" class="chevron">Global network</a></p>
+					</div>
+					<div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-0 my-2">
+						<h4 class="mb-0">No hidden egress fees</h4>
+						<p class="faded mt-1">Data ingress and egress are treated the same under our transparent pricing model, making it easy to calculate costs.</p>
+					</div>
+					<div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-0 my-2">
+						<h4 class="mb-0">First 10TB per month free</h4>
+						<p class="faded mt-1">Each month you’ll get 10TB of account-wide data transfer in our free tier, maximising your savings.</p>
+						<p><a href="/pricing/cloud/#data-transfer" class="chevron">Data pricing</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="pb-8 mobile-text-center overflow-x-clip">
+			<div class="container">
+				<div class="row middle-md pb-8 last-xs first-md" id="guam">
+					<div class="col-xs-12 col-md-5">
+						<h3 class="mb-1">Exclusive APAC Central region<mark class="dot">.</mark></h3>
+						<p class="subheading faded">Reach billions from one location</p>
+						<p>Our flagship cloud location is located in the heart of the Pacific on the island of Guam, giving you low latency reach across the region.</p>
+						<p class="mb-0"><a class="chevron" href="/guam/">APAC Central</a></p>
+					</div>
+					<div class="col-xs-12 col-md-5 col-md-offset-1 first-xs last-md">
+{% include parts/_guam-cable-map.liquid %}
+					</div>
+				</div>
+				<div class="row middle-md py-8" id="ddos-protection">
+					<div class="col-xs-12 col-md-5">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 704.8 380.9" aria-labelledby="ddostitle ddosdescription" role="img">
+							<title id="ddostitle">DDoS analytics chart</title>
+							<desc id="ddosdescription">An illustrative analytics chart showing DDoS attacks being mitigated in real time by our DDoS protection infrastructure.</desc>
+							<defs>
+								<linearGradient id="linear-gradient" x1="387.9" y1="29.9" x2="387.9" y2="325.3" gradientUnits="userSpaceOnUse">
+									<stop offset="0" stop-color="#c42d2d" stop-opacity=".4" />
+									<stop offset=".2" stop-color="#c42d2d" stop-opacity=".4" />
+									<stop offset=".5" stop-color="#c42d2d" stop-opacity=".3" />
+									<stop offset=".8" stop-color="#c42d2d" stop-opacity=".1" />
+									<stop offset="1" stop-color="#c42d2d" stop-opacity="0" />
+								</linearGradient>
+								<style type="text/css">
+									.st1,
+									.st3 {
+										fill: none;
+										stroke: #27ade4;
+										stroke-width: .2px;
+										stroke-miterlimit: 10;
+									}
+									.st3 {
+										stroke-dasharray: 0 0 12.2 12.2;
+									}
+									text {
+										fill: #F9F9FA;
+										font-size: 16px;
+										font-family: "Poppins", sans-serif;
+										font-weight: 600;
+									}
+								</style>
+							</defs>
+							<g id="ddos-chart">
+								<path class="st1" d="M705.4 256.8h-6" />
+								<path class="st3" d="M687.2 256.8H84.8" />
+								<path class="st1" d="M78.7 256.8h-6M72.7 175.1h6" />
+								<path class="st3" d="M90.9 175.1h602.4" />
+								<path class="st1" d="M699.4 175.1h6M705.4 93.3h-6" />
+								<path class="st3" d="M687.2 93.3H84.8" />
+								<path class="st1" d="M78.7 93.3h-6M72.7 11.5h6" />
+								<path class="st3" d="M90.9 11.5h602.4" />
+								<path class="st1" d="M699.4 11.5h6" />
+								<path style="stroke:#c42d2d;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none" d="m72.3 248.1 40.6-40.6 38.2 23.4 38.2-15.8 41.2 2.1 39.5-28.4 40.4 12.1 37.7-64.4 40.8-106.6 40.7 157.3 36.4 17.6 40.6-16.3 40.8-80.7 75.5 91.2 44.9 13 37.2-13.5" />
+								<path style="fill:url(#linear-gradient)" d="M705.4 198.5 668.2 212l-44.8-13-75.5-91.2-40.8 80.7-40.7 16.3-36.4-17.6-40.7-157.3-40.7 106.6-37.8 64.4-40.3-12.1-39.6 28.4-41.1-2.1-38.3 15.8-38.2-23.4-40.6 40.6v77.2h632.7V198.5z" />
+								<text transform="translate(4.8 259.1)">1 Gbps</text>
+								<text transform="translate(1.4 177)">2 Gbps</text>
+								<text transform="translate(1 95.4)">3 Gbps</text>
+								<text transform="translate(0 13.6)">4 Gbps</text>
+								<text transform="translate(91.9 371.5)">16:50</text>
+								<text transform="translate(171.1 371.2)">16:52</text>
+								<text transform="translate(250.7 371.2)">16:54</text>
+								<text transform="translate(328.7 371.2)">16:56</text>
+								<text transform="translate(407.8 371.2)">16:58</text>
+								<text transform="translate(487.9 371.2)">17:00</text>
+								<text transform="translate(568.1 371.2)">17:02</text>
+								<text transform="translate(646.1 371.2)">17:04</text>
+								<path class="st1" d="M112.3 338.6v7.2M191.3 338.6v7.2M270.4 338.6v7.2M349.5 338.6v7.2M428.6 338.6v7.2M507.7 338.6v7.2M586.8 338.6v7.2M665.9 338.6v7.2" />
+								<path style="stroke:#333333;stroke-width:.5px;stroke-miterlimit:10;fill:none" d="M72.7 338.6h632.7" />
+							</g>
+						</svg>
+					</div>
+					<div class="col-xs-12 col-md-5 col-md-offset-1">
+						<h3 class="mb-1">Always on DDoS protection<mark class="dot">.</mark></h3>
+						<p class="subheading faded">TL;DR it’s great and free</p>
+						<p>Every network entrance is guarded by industry-leading Corero DDoS mitigation appliances that keep you online, uninterrupted.</p>
+						<p>Traffic is scrubbed and filtered in real-time. It’s always-on, and included for free.</p>
+						<a href="/network/#ddos-protection" class="chevron">DDoS protection</a>
+					</div>
+				</div>
+				<div class="row middle-md py-8" id="api">
+					<div class="col-xs-12 col-md-5">
+						<h3 class="mb-1">API accessible<mark class="dot">.</mark></h3>
+						<p class="subheading faded">Built for power-users</p>
+						<p>Launch and manage your cloud environment programmatically through a friendly RESTful API — or via the command line.</p>
+						<p class="mb-0">You’ll have complete control, and a powerful automation layer to manage your infrastructure.</p>
+						<p class="mb-0"><a class="external" href="https://docs.oneqode.com/api/api-overview" target="_blank">API Documentation</a></p>
+					</div>
+					<div class="col-xs-12 col-md-5 col-md-offset-1">
+						<figure class="code-container hide-mobile">
+{% include parts/api-example.liquid %}
+						</figure>
+					</div>
+				</div>
+				<div class="row middle-md pt-8" id="storage">
+					<div class="col-xs-12 col-md-5">
+						<img src="/img/storage-illustration.svg" alt="Abstract concept of a storage cluster in the OneQode cloud platform">
+					</div>
+					<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-offset-0 col-md-5 col-md-offset-1">
+						<h3 class="mb-1">Storage for all the things<mark class="dot">.</mark></h3>
+						<p class="subheading faded">Fast SSD-based cloud storage</p>
+						<p><strong>Image storage</strong><br>For boot images and snapshot backups of your cloud instances.</p>
+						<p><strong>Volume storage</strong><br>Block storage that can be shared across multiple cloud instances.</p>
+						<p class="mb-0"><strong>Object storage</strong><br>S3-compatible object storage, perfect for large files and media.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="integrations">
+			<div class="container">
+				<div class="row middle-xs">
+					<div class="col-xs-12 col-md-5 mobile-text-center">
+						<h3 class="mb-1">Plays nice with your tech stack<mark class="dot">.</mark></h3>
+						<p class="subheading faded">No lock-in, no problem</p>
+						<p>Our cloud platform is built on OpenStack, the open source cloud infrastructure platform.</p>
+						<p>Use Terraform? Too easy. Love Ansible? No problem. We’re not reinventing the wheel, and our open platform works with whatever DevOps toolkit you’re using.</p>
+					</div>
+					<div class="col-xs-12 col-md-5 col-md-offset-1 pb-2 logo-grid">
+						<div><img src="/img/integrations/agones.svg" alt="Agones logo"></div>
+						<div><img src="/img/integrations/ansible.svg" alt="Ansible logo"></div>
+						<div><img src="/img/integrations/chef.svg" alt="Chef logo"></div>
+						<div><img src="/img/integrations/jenkins.svg" alt="Jenkins logo"></div>
+						<div><img src="/img/integrations/kubernetes.svg" alt="Kubernetes logo"></div>
+						<div><img src="/img/integrations/rancher.svg" alt="Rancher logo"></div>
+						<div><img src="/img/integrations/pulumi.svg" alt="Pulumi logo"></div>
+						<div><img src="/img/integrations/saltstack.svg" alt="Saltstack logo"></div>
+						<div><img src="/img/integrations/terraform.svg" alt="Terraform logo"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="features" class="mt-4">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-xs-12 col-md-8 col-md-offset-2 mb-0">
+						<h3 class="mb-1">All the features you’d expect<mark class="dot">.</mark></h2>
+						<p class="subheading faded">Everything a cloud needs; nothing it doesn’t</p>
+					</div>
+				</div>
+				<div class="row mt-2">
+					<div class="col-xs-12 col-sm-4 p-1 mp-2">
+						<h4>Cloud compute</h4>
+						<ul class="ticks my-0">
+							<li>CPU-optimized instances</li>
+							<li>Image creation & management</li>
+							<li>SSH key management</li>
+							<li>Cloud-init support</li>
+						</ul>
+					</div>
+					<div class="col-xs-12 col-sm-4 p-1 mp-2">
+						<h4>Cloud storage</h4>
+						<ul class="ticks my-0">
+							<li>Block volume storage</li>
+							<li>Object storage (S3-compatible)</li>
+							<li>Image storage</li>
+							<li>Backups and snapshots</li>
+						</ul>
+					</div>
+					<div class="col-xs-12 col-sm-4 p-1 mp-2">
+						<h4>Cloud networking</h4>
+						<ul class="ticks my-0">
+							<li>Cloud networks</li>
+							<li>Cloud routers</li>
+							<li>Cloud firewalls</li>
+							<li>Floating IPs</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-8 black-to-footer">
+			<div class="container">
+				<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
+					<h2>Get started today<mark class="dot">.</mark></h2>
+					<p class="subheading">Register for your OneQode Cloud account</p>
+					<p class="mt-2">
+						<a href="/cloud/signup/" class="button m-1">Sign up</a> <a href="/pricing/cloud/" class="button ghost m-1">View Pricing</a>
+					</p>
+				</div>
+			</div>
+		</section>
+{% include _footer.liquid %}

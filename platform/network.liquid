@@ -1,6 +1,5 @@
 ---
 permalink: /network/
-layout: page.liquid
 metaTitle: Asia-Pacific’s Low Latency Network • OneQode
 metaDescription: Traffic moves faster on our low-latency network. Built for gaming and real-time applications, our network has private fast-lanes to Asia-Pacific’s last-mile ISPs.
 changefreq: monthly
@@ -8,10 +7,21 @@ priority: 0.8
 pageSupertitle: Our Network
 pageTitle: Low-latency<br class="responsive"> global network
 pageSubtitle: The network purpose-built for real-time
+preconnect: ["https://oneqode2.sgp1.cdn.digitaloceanspaces.com"]
 ---
+{% include _header.liquid %}
 		<style>
-			.hero {
-				background: #000 !important;
+			section.hero {
+				background: none;
+			}
+			@media screen and (max-width: 64em) {
+				section.hero {
+					background: linear-gradient(to bottom, transparent 70%, #000), url("/img/bg/thumb-network-bg.jpg") no-repeat center center;
+					background-size: cover;
+				}
+				.swiper-slide {
+					padding: 2rem 1rem;
+				}
 			}
 			/* How our DDoS compares to alternatives */
 			#compare {
@@ -134,7 +144,29 @@ pageSubtitle: The network purpose-built for real-time
 				stroke-dashoffset: 200;
 				animation: lines 1s linear infinite;
 			}
-		</style>	
+		</style>
+		<section class="hero">
+			<div class="container">
+				<div class="row middle-xs">
+					<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+						{%- if pageSupertitle %}
+						<p class="superheading">{{ pageSupertitle }}</p>
+						{%- endif %}
+						<h1>{{ pageTitle }}<mark class="dot">.</mark></h1>
+						<p class="subheading">{{ pageSubtitle }}</p>
+						{%- if cta %}
+						<p><a href="{{ ctaUrl }}" class="m-1 button">{{ ctaText }}</a></p>
+						{%- endif %}
+					</div>
+				</div>
+			</div>
+			<div class="bg-video">
+				<div class="overlay"></div>
+				<video autoplay loop muted poster="/img/bg/thumb-network-bg.jpg">
+					<source src="https://oneqode2.sgp1.cdn.digitaloceanspaces.com/videos/network-neon-glowing.mp4" type="video/mp4">
+				</video>
+			</div>
+		</section>
 		<section class="push-forward mobile-text-center">
 			<div class="container">
 				<div class="row place-content-center">
@@ -525,3 +557,4 @@ pageSubtitle: The network purpose-built for real-time
 				</div>
 			</div>
 		</section>
+{% include _footer.liquid %}
