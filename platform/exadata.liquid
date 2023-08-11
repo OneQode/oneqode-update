@@ -25,6 +25,17 @@ font: hack
 			section.hero {
 				min-height: 100vh;
 			}
+			.exadata-image {
+				position: relative;
+			}
+			.exadata-image img {
+				mix-blend-mode: lighten;
+				mask-image: linear-gradient(to bottom, black 60%, transparent);
+				-webkit-mask-image: linear-gradient(to bottom, black 60%, transparent);
+			}
+			.oracle-partner {
+				max-height: 4rem;
+			}
 			#overview {
 				position: relative;
 				min-height: 100vh;
@@ -37,14 +48,6 @@ font: hack
 					background: linear-gradient(to bottom, #000, transparent 30%, transparent 70%, #000), url("/img/bg/thumb-oracle-exadata-embers.jpg") no-repeat center center;
 					background-size: cover;
 				}
-			}*/
-			.exadata-image {
-				position: relative;
-			}
-			.exadata-image img {
-				mix-blend-mode: lighten;
-				mask-image: linear-gradient(to bottom, black 60%, transparent);
-				-webkit-mask-image: linear-gradient(to bottom, black 60%, transparent);
 			}
 			/* ↓ Responsive Styles ↓ */
 			@media (min-width: 75em) {
@@ -67,6 +70,9 @@ font: hack
 					display: grid;
 					grid-template-columns: repeat(2, 1fr);
 					grid-gap: 1.5rem 2rem;
+				}
+				.oracle-partner {
+					margin-left: 0;
 				}
 			}
 			@media (min-width: 48em) and (max-width: 64em) {
@@ -96,6 +102,7 @@ font: hack
 							<li>Improved disaster recovery</li>
 						</ul>
 						<p class="mt-2 mb-0"><a href="#" class="button">Book a meeting</a></p>
+						<img class="oracle-partner mt-2" src="/img/partners/oracle-partner.svg" alt="Oracle Partner">
 					</div>
 					<div class="col-xs-12 col-md-4 exadata-image pt-4">
 						<picture>
