@@ -82,6 +82,30 @@ font: hack
 				opacity: 1;
 				z-index: -1;
 			}
+			/* User Type Selector */
+			select#user-type {
+				display: inline;
+				width: auto;
+			}
+			/* Map Credit */
+			.location-bg {
+				position: relative;
+			}
+			.credit {
+				position: absolute;
+				transform: rotate(-90deg);
+				right: 0;
+				top: 0;
+				padding: 0.3rem 0.5rem;
+				border-radius: 0.3rem .3rem 0 0;
+				font-size: 0.8rem;
+				transform-origin: right bottom;
+				border: 1px solid #333;
+				color: #ccc;
+			}
+			.credit a {
+				font-size: unset;
+			}
 			/* ↓ Responsive Styles ↓ */
 			@media (min-width: 75em) {
 				h1 {
@@ -98,6 +122,14 @@ font: hack
 				}
 				.stat {
 					text-align: left;
+				}
+				.no-webp .location-bg {
+					background: url("/img/bg/location-map-manila.jpg") no-repeat center right;
+					background-size: contain;
+				}
+				.webp .location-bg {
+					background: url("/img/bg/location-map-manila.webp") no-repeat center right;
+					background-size: contain;
 				}
 			}
 			@media (min-width: 48em) {
@@ -119,6 +151,13 @@ font: hack
 			@media (max-width: 64em) {
 				section.hero {
 					margin-top: 4rem;
+				}
+				.location-bg .devices-only {
+					margin-top: -8rem;
+				}
+				.credit {
+					top: 75%;
+					transform: rotate(-90deg) scale(0.8);
 				}
 			}
 			@media (max-width: 48em) {
@@ -146,7 +185,7 @@ font: hack
 							<li>Located in the Philippines</li>
 							<li>Next-gen DB performance</li>
 							<li>Low latency connectivity</li>
-							<li>Improved disaster recovery</li>
+							<li>Local support included</li>
 						</ul>
 						<p class="mt-2 mb-0"><a href="#" class="button">Book a meeting</a></p>
 						<img class="oracle-partner mt-2" src="/img/partners/oracle-partner.svg" alt="Oracle Partner">
@@ -171,7 +210,7 @@ font: hack
 				<div class="row">
 					<div class="col-xs-12 col-md-5">
 						<p><strong>OneQode, Asia-Pacific’s fastest digital infrastructure provider, is bringing Oracle Exadata, the leading database platform, to the Philippines.</strong></p>
-						<p>We’re putting Exadata X10M hardware — the newest and fastest ever — in our Manila datacenter facility, connected to Oracle Cloud Infrastructure via our low-latency global network and delivered directly in the Philippines.</p>
+						<p>We’re putting Exadata X10M hardware — the newest and fastest ever — in our Manila datacenter facility, connected to Oracle Cloud Infrastructure via our low-latency global network.</p>
 						<p>Now available for order, ambitious enterprises can secure long-term pricing by speaking to our solutions team today.</p>
 					</div>
 					<div class="col-xs-10 col-xs-offset-1 col-md-offset-3 col-md-4 mt-1 xs:mt-4">
@@ -219,6 +258,85 @@ font: hack
 				</div>
 			</div>
 		</section>
+		<section id="benefits">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-xs-12 col-md-6 col-md-offset-3 mb-2">
+						<p class="subheading">Benefits for: &nbsp;
+							<select id="user-type" onchange="userType()">
+								<option value="business-users-benefits">Business users</option>
+								<option value="database-expert-benefits">Database experts</option>
+								<option value="it-team-leaders">IT team leaders</option>
+							</select>
+						</p>
+					</div>
+				</div>
+				<!-- Business users -->
+				<div class="row mt-1 interactive" id="business-users-benefits">
+					<div class="col-xs-12 col-sm-4 p-1 mb-2">
+						<h3>Faster transactions, reporting & analytics</h3>
+						<p class="faded">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+					</div>
+					<div class="col-xs-12 col-sm-4 p-1 mb-2">
+						<h3>Real-time transactional data analysis</h3>
+						<p class="faded">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+					</div>
+					<div class="col-xs-12 col-sm-4 p-1 mb-2">
+						<h3>Deliver projects and services faster</h3>
+						<p class="faded">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+					</div>
+				</div>
+				<!-- Database experts -->
+				<div class="row mt-1 interactive" id="database-expert-benefits" style="display: none;">
+					<div class="col-xs-12 col-sm-4 p-1 mb-2">
+						<h3>Effortlessly manage all data types, workloads and styles</h3>
+						<p class="faded">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+					</div>
+					<div class="col-xs-12 col-sm-4 p-1 mb-2">
+						<h3>Rapidly build, test and deploy services</h3>
+						<p class="faded">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+					</div>
+					<div class="col-xs-12 col-sm-4 p-1 mb-2">
+						<h3>Complete compatibility with Oracle Cloud</h3>
+						<p class="faded">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+					</div>
+				</div>
+				<!-- IT team leaders -->
+				<div class="row mt-1 interactive" id="it-team-leaders" style="display: none;">
+					<div class="col-xs-12 col-sm-4 p-1 mb-2">
+						<h3>Free up time through smart automation</h3>
+						<p class="faded">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+					</div>
+					<div class="col-xs-12 col-sm-4 p-1 mb-2">
+						<h3>Mission-critical cloud databases made easy</h3>
+						<p class="faded">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+					</div>
+					<div class="col-xs-12 col-sm-4 p-1 mb-2">
+						<h3>Reduce database and infrastructure costs</h3>
+						<p class="faded">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="location-bg py-4 mobile-text-center">
+			<div class="container push-forward">
+				<div class="row middle-md py-8">
+					<div class="col-xs-12 col-md-5">
+						<h2 class="mb-1">Hosted in Manila, connected to the world<mark class="dot">.</mark></h2>
+						<p><strong>Host the most performance-intensive applications at our Hong Kong locations and deliver services at low latency via our global network.</strong></p>
+						<p class="mb-0">PLDT, Globe, ConvergeICT, Source Telecom & Eastern Communications.</p>
+						<p class="mb-0"><a class="chevron" href="/about/">About OneQode</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="devices-only">
+				<picture>
+					<source srcset="/img/bg/location-map-manila-mobile.webp" type="image/webp">
+					<img src="/img/bg/location-map-manila-mobile.jpg" alt="A map illustrating our Hong Kong data centers (Mega-I, Global Switch and Equinix HK1) and international connectivity to Mainland China, Guam, Tokyo and Singapore" class="opaque">
+				</picture>
+			</div>
+			<div class="credit">© <a href="https://www.openstreetmap.org/copyright" rel="nofollow" target="_blank">OpenStreetMap</a> contributors</div>
+		</section>
 		<section class="py-8 black-to-footer">
 			<div class="container">
 				<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
@@ -230,4 +348,31 @@ font: hack
 				</div>
 			</div>
 		</section>
+		<script>
+			// Organisation Type Switcher
+			function userType() {
+				select = document.getElementById("user-type").value;
+				// Select all interactive bits and hide them
+				function hideStuff() {
+					const interactive = Array.from(document.getElementsByClassName("interactive"));
+						interactive.forEach(item => {
+							item.style.display = "none";
+						});
+				}
+				switch(select) {
+					case "it-team-leaders":
+						hideStuff();
+						document.getElementById("it-team-leaders").style.display = "flex";
+						break;
+					case "business-users-benefits":
+						hideStuff();
+						document.getElementById("business-users-benefits").style.display = "flex";
+						break;
+					case "database-expert-benefits":
+						hideStuff();
+						document.getElementById("database-expert-benefits").style.display = "flex";
+						break;
+				}
+			}
+		</script>
 {% include _footer.liquid %}
