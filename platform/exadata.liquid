@@ -50,6 +50,38 @@ font: hack
 					background-size: cover;
 				}
 			}
+			/* Stats */
+			.stat {
+				background: -webkit-linear-gradient(258deg, #fff, #999);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+			.stat span {
+				font-size: 2.5rem;
+			}
+			span.unit {
+				font-size: 1.8rem;
+				display: inline-block;
+			}
+			#impact {
+				position: relative;
+				z-index: 1;
+				background: linear-gradient(135deg, #141419 0%, #141419 5%,transparent 5%, transparent 10%, #141419 10%, #141419 15%,transparent 15%,transparent 20%, #141419 20%, #141419 25%,transparent 25%,transparent 30%, #141419 30%, #141419 35%,transparent 35%,transparent 40%, #141419 40%, #141419 45%,transparent 45%,transparent 50%, #141419 50%, #141419 55%,transparent 55%,transparent 60%, #141419 60%, #141419 65%,transparent 65%,transparent 70%, #141419 70%, #141419 75%,transparent 70%,transparent 80%, #141419 80%, #141419 85%,transparent 85%,transparent 90%, #141419 90%, #141419 95%,transparent 95%);
+				background-size: 2em 2em;
+				background-color: #000000;
+			}
+			#impact::after {
+				display: block;
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(to bottom, #000, transparent 30%, transparent 70%, #000);
+				opacity: 1;
+				z-index: -1;
+			}
 			/* ↓ Responsive Styles ↓ */
 			@media (min-width: 75em) {
 				h1 {
@@ -63,6 +95,9 @@ font: hack
 				.exadata-image img {
 					position: absolute;
 					max-width: 640px;
+				}
+				.stat {
+					text-align: left;
 				}
 			}
 			@media (min-width: 48em) {
@@ -84,6 +119,17 @@ font: hack
 			@media (max-width: 64em) {
 				section.hero {
 					margin-top: 4rem;
+				}
+			}
+			@media (max-width: 48em) {
+				.xs\:mt-4 {
+					padding-top: 4rem;
+				}
+				.xs\:pt-0 {
+					padding-top: 0rem;
+				}
+				.xs\:mb-2 {
+					margin-bottom: 2rem;
 				}
 			}
 		</style>
@@ -114,12 +160,26 @@ font: hack
 				</div>
 			</div>
 		</section>
-		<section id="overview" class="py-8">
+		<section id="overview" class="py-4">
 			<div class="container">
-				<div class="row text-center">
-					<div class="col-xs-12 col-md-10 col-md-offset-1">
-						<h2>The world's fastest database machine, <br class="responsive">right here in the heart of Manila</h2>
-						<p class="subheading faded">Accelerate business performance with Oracle's leading database platform, now locally available</p>
+				<div class="row">
+					<div class="col-xs-12 col-md-7">
+						<h2 class="mb-0">The world’s fastest database machine, right here in the heart of Manila</h2>
+						<p class="subheading faded">Exclusively available for the first time with OneQode</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-md-5">
+						<p><strong>OneQode, Asia-Pacific’s fastest digital infrastructure provider, is bringing Oracle Exadata, the leading database platform, to the Philippines.</strong></p>
+						<p>We’re putting Exadata X10M hardware — the newest and fastest ever — in our Manila datacenter facility, connected to Oracle Cloud Infrastructure via our low-latency global network and delivered directly in the Philippines.</p>
+						<p>Now available for order, ambitious enterprises can secure long-term pricing by speaking to our solutions team today.</p>
+					</div>
+					<div class="col-xs-10 col-xs-offset-1 col-md-offset-3 col-md-4 mt-1 xs:mt-4">
+						<div class="stat"><span>3x <span class="unit">faster</span></span> transaction throughput</div>
+						<div class="stat"><span>3.6x <span class="unit">faster</span></span> database queries</div>
+						<div class="stat"><span>2.6x <span class="unit">faster</span></span> storage server queries</div>
+						<div class="stat"><span>2.6x <span class="unit">faster</span></span> in-memory analytics scans</div>
+						<figcaption class="text-left mobile-text-center">Oracle Exadata X10M database machine compared against competitor products</figcaption>
 					</div>
 				</div>
 			</div>
@@ -130,25 +190,31 @@ font: hack
 				</video>
 			</div>
 		</section>
-		<section id="integrations">
+		<section id="impact" class="py-4 xs:pt-0">
 			<div class="container">
-				<div class="row middle-xs">
-					<div class="col-xs-12 col-md-5 mobile-text-center">
-						<h3 class="mb-1">Plays nice with your tech stack<mark class="dot">.</mark></h3>
-						<p class="subheading faded">No lock-in, no problem</p>
-						<p>Our cloud platform is built on OpenStack, the open source cloud infrastructure platform.</p>
-						<p>Use Terraform? Too easy. Love Ansible? No problem. We’re not reinventing the wheel, and our open platform works with whatever DevOps toolkit you’re using.</p>
+				<div class="row">
+					<div class="col-xs-12 col-md-7 mb-4 xs:mb-2">
+						<h2 class="mb-0">The platform that powers 75% of the Fortune Global 100</h2>
+						<p class="subheading faded">Thousands of the world's top enterprises move faster with Oracle Exadata</p>
+						<p>Exadata supports the largest data warehouses and the most critical deployments around the world, from financial data processing, to retail, ecommerce, and process manufacturing.</p>
 					</div>
-					<div class="col-xs-12 col-md-5 col-md-offset-1 pb-2 logo-grid">
-						<div><img src="/img/integrations/agones.svg" alt="Agones logo"></div>
-						<div><img src="/img/integrations/ansible.svg" alt="Ansible logo"></div>
-						<div><img src="/img/integrations/chef.svg" alt="Chef logo"></div>
-						<div><img src="/img/integrations/jenkins.svg" alt="Jenkins logo"></div>
-						<div><img src="/img/integrations/kubernetes.svg" alt="Kubernetes logo"></div>
-						<div><img src="/img/integrations/rancher.svg" alt="Rancher logo"></div>
-						<div><img src="/img/integrations/pulumi.svg" alt="Pulumi logo"></div>
-						<div><img src="/img/integrations/saltstack.svg" alt="Saltstack logo"></div>
-						<div><img src="/img/integrations/terraform.svg" alt="Terraform logo"></div>
+				</div>
+				<div class="row">
+					<div class="col-xs-10 col-md-5 my-2">
+						<h3>Next-level customer experiences</h3>
+						<p>Exadata accelerates data processing across your business, speeding up online transaction processing, boosting application performance and enhancing analytics capabilities to enable faster, better business.</p>
+					</div>
+					<div class="col-xs-10 col-md-5 col-md-offset-1 my-2">
+						<h3>Peak data performance</h3>
+						<p>World-leading database performance unleashes the full potential of your enterprise applications with lightning-fast processing, real-time analytics, faster reporting, and faster decision-making.</p>
+					</div>
+					<div class="col-xs-10 col-md-5 my-2">
+						<h3>Supercharged efficiency</h3>
+						<p>Automated tuning, market-leading database consolidation, powerful development tools and flexible consumption give you massive efficiency, as well as the capability to rapidly build apps that harness your data.</p>
+					</div>
+					<div class="col-xs-10 col-md-5 col-md-offset-1 my-2">
+						<h3>Phenomenal cost savings</h3>
+						<p>Massive improvements to infrastructure performance, automation and efficiency bring extreme value, lowering your overall costs, whilst giving you unprecedented power and capability to deliver incredible results.</p>
 					</div>
 				</div>
 			</div>
