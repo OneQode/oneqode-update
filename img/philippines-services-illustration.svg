@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 812 560">
+	<style>
+		.background {
+			fill:#0a0a0a;
+			stroke:#534f4f;
+			stroke-width:1;
+		}
+		.layer-1 {
+			fill: #272727;
+		}
+		.layer-2 {
+			fill: #3e3e3e;
+			stroke: #4f4949;
+			stroke-width: 1;
+		}
+		.section-heading,
+		.service {
+			font-family:Mulish;
+		}
+		.section-heading {
+			fill:#999;
+			font-size:17px;
+			font-weight:800;
+			letter-spacing:0.1em;
+		}
+		.service {
+			fill: #999;
+			font-size: 16px;
+			font-weight: 300;
+			letter-spacing: -0.02em;
+		}
+	</style>
+	<g transform="translate(-968 -9320)">
+		<g transform="translate(968 9320)" class="background">
+			<rect width="812" height="560" rx="8" stroke="none"/>
+			<rect x="0.5" y="0.5" width="811" height="559" rx="7.5" fill="none"/>
+		</g>
+		<g>
+				<rect width="382" height="256" rx="7" transform="translate(984 9336)" class="layer-1"/>
+				<text transform="translate(1175 9378)" class="section-heading"><tspan x="-161.083" y="0">HARDWARE &amp; INFRASTRUCTURE</tspan></text>
+			<g>
+				<g>
+					<g transform="translate(1167 9477) rotate(180)" class="layer-2">
+						<rect width="167" height="69" rx="5" stroke="none"/>
+						<rect x="0.5" y="0.5" width="166" height="68" rx="4.5" fill="none"/>
+					</g>
+					<text transform="translate(1084 9439)" class="service"><tspan x="-20.432" y="0">Cloud</tspan><tspan x="-30.016" y="20">Platform</tspan></text>
+				</g>
+				<g transform="translate(0 85)">
+					<g transform="translate(1167 9477) rotate(180)" class="layer-2">
+						<rect width="167" height="69" rx="5" stroke="none"/>
+						<rect x="0.5" y="0.5" width="166" height="68" rx="4.5" fill="none"/>
+					</g>
+					<text transform="translate(1084 9439)" class="service"><tspan x="-35.88" y="0">Dedicated</tspan><tspan x="-26.52" y="20">Servers</tspan></text>
+				</g>
+				<g transform="translate(183)">
+					<g transform="translate(1167 9477) rotate(180)" class="layer-2">
+						<rect width="167" height="69" rx="5" stroke="none"/>
+						<rect x="0.5" y="0.5" width="166" height="68" rx="4.5" fill="none"/>
+					</g>
+					<text transform="translate(1084 9439)" class="service"><tspan x="-39.24" y="0">Datacenter</tspan><tspan x="-36.824" y="20">Colocation</tspan></text>
+				</g>
+				<g transform="translate(183 85)">
+					<g transform="translate(1167 9477) rotate(180)" class="layer-2">
+						<rect width="167" height="69" rx="5" stroke="none"/>
+						<rect x="0.5" y="0.5" width="166" height="68" rx="4.5" fill="none"/>
+					</g>
+					<text transform="translate(1084 9439)" class="service"><tspan x="-27.152" y="0">Custom</tspan><tspan x="-32.088" y="20">Solutions</tspan></text>
+				</g>
+			</g>
+		</g>
+		<g>
+				<rect width="382" height="256" rx="7" transform="translate(1382 9336)" class="layer-1"/>
+				<text transform="translate(1573 9378)" class="section-heading"><tspan x="-137.335" y="0">NETWORK &amp; CONNECTIVITY</tspan></text>
+			<g>
+				<g transform="translate(398)">
+					<g transform="translate(1167 9477) rotate(180)" class="layer-2">
+						<rect width="167" height="69" rx="5" stroke="none"/>
+						<rect x="0.5" y="0.5" width="166" height="68" rx="4.5" fill="none"/>
+					</g>
+					<text transform="translate(1084 9439)" class="service"><tspan x="-35.296" y="0">Enterprise</tspan><tspan x="-42.936" y="20">Connectivity</tspan></text>
+				</g>
+				<g transform="translate(398 85)">
+					<g transform="translate(1167 9477) rotate(180)" class="layer-2">
+						<rect width="167" height="69" rx="5" stroke="none"/>
+						<rect x="0.5" y="0.5" width="166" height="68" rx="4.5" fill="none"/>
+					</g>
+					<text transform="translate(1084 9449)" class="service"><tspan x="-32.472" y="0">IP Transit</tspan></text>
+				</g>
+				<g transform="translate(581)">
+					<g transform="translate(1167 9477) rotate(180)" class="layer-2">
+						<rect width="167" height="69" rx="5" stroke="none"/>
+						<rect x="0.5" y="0.5" width="166" height="68" rx="4.5" fill="none"/>
+					</g>
+					<text transform="translate(1084 9439)" class="service"><tspan x="-35.296" y="0">Enterprise</tspan><tspan x="-29.64" y="20">Ethernet</tspan></text>
+				</g>
+				<g transform="translate(581 85)">
+					<g transform="translate(1167 9477) rotate(180)" class="layer-2">
+						<rect width="167" height="69" rx="5" stroke="none"/>
+						<rect x="0.5" y="0.5" width="166" height="68" rx="4.5" fill="none"/>
+					</g>
+					<text transform="translate(1084 9449)" class="service"><tspan x="-51.096" y="0">Cloud Connect</tspan></text>
+				</g>
+			</g>
+		</g>
+		<g>
+				<rect width="780" height="256" rx="7" transform="translate(984 9608)" class="layer-1"/>
+				<text transform="translate(1374 9650)" class="section-heading"><tspan x="-133.697" y="0">SOLUTIONS DEVELOPMENT</tspan></text>
+			<g>
+				<g transform="translate(0 272)">
+					<g transform="translate(1175 9477) rotate(180)" class="layer-2">
+						<rect width="175" height="69" rx="5" stroke="none"/>
+						<rect x="0.5" y="0.5" width="174" height="68" rx="4.5" fill="none"/>
+					</g>
+					<text transform="translate(1088 9439)" class="service"><tspan x="-43.608" y="0">Enterprise IT</tspan><tspan x="-42.448" y="20">Architecture</tspan></text>
+				</g>
+				<g transform="translate(0 357)">
+					<g transform="translate(1175 9477) rotate(180)" class="layer-2">
+						<rect width="175" height="69" rx="5" stroke="none"/>
+						<rect x="0.5" y="0.5" width="174" height="68" rx="4.5" fill="none"/>
+					</g>
+					<text transform="translate(1088 9439)" class="service"><tspan x="-33.552" y="0">Backup &amp;</tspan><tspan x="-63.392" y="20">Disaster Recovery</tspan></text>
+				</g>
+				<g transform="translate(191 272)">
+					<g transform="translate(1175 9477) rotate(180)" class="layer-2">
+						<rect width="175" height="69" rx="5" stroke="none"/>
+						<rect x="0.5" y="0.5" width="174" height="68" rx="4.5" fill="none"/>
+					</g>
+					<text transform="translate(1088 9439)" class="service"><tspan x="-39.24" y="0">Datacenter</tspan><tspan x="-31.04" y="20">Planning</tspan></text>
+				</g>
+				<g transform="translate(191 357)">
+					<g transform="translate(1175 9477) rotate(180)" class="layer-2">
+						<rect width="175" height="69" rx="5" stroke="none"/>
+						<rect x="0.5" y="0.5" width="174" height="68" rx="4.5" fill="none"/>
+					</g>
+					<text transform="translate(1088 9439)" class="service"><tspan x="-56.768" y="0">High Availability</tspan><tspan x="-24.624" y="20">Design</tspan></text>
+				</g>
+				<g transform="translate(382 272)">
+					<g transform="translate(1175 9477) rotate(180)" class="layer-2">
+						<rect width="175" height="69" rx="5" stroke="none"/>
+						<rect x="0.5" y="0.5" width="174" height="68" rx="4.5" fill="none"/>
+					</g>
+					<text transform="translate(1088 9439)" class="service"><tspan x="-30.2" y="0">Network</tspan><tspan x="-42.448" y="20">Architecture</tspan></text>
+				</g>
+				<g transform="translate(382 357)">
+					<g transform="translate(1175 9477) rotate(180)" class="layer-2">
+						<rect width="175" height="69" rx="5" stroke="none"/>
+						<rect x="0.5" y="0.5" width="174" height="68" rx="4.5" fill="none"/>
+					</g>
+					<text transform="translate(1088 9439)" class="service"><tspan x="-54.608" y="0">Enterprise Data</tspan><tspan x="-53.224" y="20">Transformation</tspan></text>
+				</g>
+				<g transform="translate(573 272)">
+					<g transform="translate(1175 9477) rotate(180)" class="layer-2">
+						<rect width="175" height="69" rx="5" stroke="none"/>
+						<rect x="0.5" y="0.5" width="174" height="68" rx="4.5" fill="none"/>
+					</g>
+					<text transform="translate(1088 9439)" class="service"><tspan x="-29.832" y="0">Systems</tspan><tspan x="-42.448" y="20">Architecture</tspan></text>
+				</g>
+				<g transform="translate(573 357)">
+					<g transform="translate(1175 9477) rotate(180)" class="layer-2">
+						<rect width="175" height="69" rx="5" stroke="none"/>
+						<rect x="0.5" y="0.5" width="174" height="68" rx="4.5" fill="none"/>
+					</g>
+					<text transform="translate(1088 9439)" class="service"><tspan x="-35.296" y="0">Enterprise</tspan><tspan x="-52.56" y="20">Data Migration</tspan></text>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
