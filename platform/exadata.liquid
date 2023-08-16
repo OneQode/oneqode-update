@@ -38,18 +38,6 @@ font: hack
 			.oracle-partner {
 				max-height: 4rem;
 			}
-			#overview {
-				position: relative;
-			}
-			#overview .bg-video .overlay {
-				background: linear-gradient(to bottom, #000, transparent 20%, transparent 80%, #000);
-			}
-			@media screen and (max-width: 64em) {
-				#overview {
-					background: linear-gradient(to bottom, #000, transparent 30%, transparent 70%, #000), url("/img/bg/thumb-oracle-exadata-embers.jpg") no-repeat center center;
-					background-size: cover;
-				}
-			}
 			/* Stats */
 			.stat {
 				background: -webkit-linear-gradient(258deg, #fff, #999);
@@ -63,14 +51,27 @@ font: hack
 				font-size: 1.8rem;
 				display: inline-block;
 			}
+			/* Impact */
 			#impact {
+				position: relative;
+			}
+			#impact .bg-video .overlay {
+				background: linear-gradient(to bottom, #000, transparent 20%, transparent 80%, #000);
+			}
+			@media screen and (max-width: 64em) {
+				#impact {
+					background: linear-gradient(to bottom, #000, transparent 30%, transparent 70%, #000), url("/img/bg/thumb-oracle-exadata-embers.jpg") no-repeat center center;
+					background-size: cover;
+				}
+			}
+			#benefits {
 				position: relative;
 				z-index: 1;
 				background: linear-gradient(135deg, #141419 0%, #141419 5%,transparent 5%, transparent 10%, #141419 10%, #141419 15%,transparent 15%,transparent 20%, #141419 20%, #141419 25%,transparent 25%,transparent 30%, #141419 30%, #141419 35%,transparent 35%,transparent 40%, #141419 40%, #141419 45%,transparent 45%,transparent 50%, #141419 50%, #141419 55%,transparent 55%,transparent 60%, #141419 60%, #141419 65%,transparent 65%,transparent 70%, #141419 70%, #141419 75%,transparent 70%,transparent 80%, #141419 80%, #141419 85%,transparent 85%,transparent 90%, #141419 90%, #141419 95%,transparent 95%);
 				background-size: 2em 2em;
 				background-color: #000000;
 			}
-			#impact::after {
+			#benefits::after {
 				display: block;
 				content: "";
 				position: absolute;
@@ -119,6 +120,9 @@ font: hack
 				.exadata-image img {
 					position: absolute;
 					max-width: 640px;
+				}
+				#overview h2 {
+					text-shadow: 4px 2px 10px #000;
 				}
 				.stat {
 					text-align: left;
@@ -199,7 +203,7 @@ font: hack
 				</div>
 			</div>
 		</section>
-		<section id="overview" class="py-4">
+		<section id="overview" class="location-bg py-4">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-md-7">
@@ -211,22 +215,37 @@ font: hack
 					<div class="col-xs-12 col-md-5">
 						<p><strong>OneQode, Asia-Pacific’s fastest digital infrastructure provider, is bringing Oracle Exadata, the leading database platform, to the Philippines.</strong></p>
 						<p>We’re putting Exadata X10M hardware — the newest and fastest ever — in our Manila datacenter facility, connected to Oracle Cloud Infrastructure via our low-latency global network.</p>
-						<p>Now available for order, ambitious enterprises can secure long-term pricing by speaking to our solutions team today.</p>
-					</div>
-					<div class="col-xs-10 col-xs-offset-1 col-md-offset-3 col-md-4 mt-1 xs:mt-4">
-						<div class="stat"><span>3x <span class="unit">faster</span></span> transaction throughput</div>
-						<div class="stat"><span>3.6x <span class="unit">faster</span></span> database queries</div>
-						<div class="stat"><span>2.6x <span class="unit">faster</span></span> storage server queries</div>
-						<div class="stat"><span>2.6x <span class="unit">faster</span></span> in-memory analytics scans</div>
-						<figcaption class="text-left mobile-text-center">Oracle Exadata X10M database machine compared against competitor products</figcaption>
+						<p>Now available for order, ambitious enterprises can secure long-term pricing by speaking to a solutions specialist today.</p>
 					</div>
 				</div>
+				<div class="devices-only">
+					<picture>
+						<source srcset="/img/bg/location-map-manila-mobile.webp" type="image/webp">
+						<img src="/img/bg/location-map-manila-mobile.jpg" alt="A map illustrating our Hong Kong data centers (Mega-I, Global Switch and Equinix HK1) and international connectivity to Mainland China, Guam, Tokyo and Singapore" class="opaque">
+					</picture>
+				</div>
+				<div class="credit">© <a href="https://www.openstreetmap.org/copyright" rel="nofollow" target="_blank">OpenStreetMap</a> contributors</div>
 			</div>
-			<div class="bg-video">
-				<div class="overlay"></div>
-				<video autoplay loop muted poster="/img/bg/thumb-oracle-exadata-embers.jpg">
-					<source src="https://oneqode2.sgp1.cdn.digitaloceanspaces.com/videos/oracle-exadata-glowing-embers.mp4" type="video/mp4">
-				</video>
+		</section>
+		<section id="stats">
+			<div class="container">
+				<div class="row">
+						<div class="col-xs-6 col-md-3">
+							<div class="stat"><span>3x <span class="unit">faster</span></span> transaction throughput</div>
+						</div>
+						<div class="col-xs-6 col-md-3">
+							<div class="stat"><span>3.6x <span class="unit">faster</span></span> database queries</div>
+						</div>
+						<div class="col-xs-6 col-md-3">
+							<div class="stat"><span>2.6x <span class="unit">faster</span></span> storage server queries</div>
+						</div>
+						<div class="col-xs-6 col-md-3">
+							<div class="stat"><span>2.6x <span class="unit">faster</span></span> in-memory analytics scans</div>
+						</div>
+					<div class="col-xs-12 text-center">
+						<figcaption class="mt-0">Oracle Exadata X10M database machine compared against competitor products</figcaption>
+					</div>
+				</div>
 			</div>
 		</section>
 		<section id="impact" class="py-4 xs:pt-0">
@@ -256,6 +275,12 @@ font: hack
 						<p>Massive improvements to infrastructure performance, automation and efficiency bring extreme value, lowering your overall costs, whilst giving you unprecedented power and capability to deliver incredible results.</p>
 					</div>
 				</div>
+			</div>
+			<div class="bg-video">
+				<div class="overlay"></div>
+				<video autoplay loop muted poster="/img/bg/thumb-oracle-exadata-embers.jpg">
+					<source src="https://oneqode2.sgp1.cdn.digitaloceanspaces.com/videos/oracle-exadata-glowing-embers.mp4" type="video/mp4">
+				</video>
 			</div>
 		</section>
 		<section id="benefits">
@@ -318,7 +343,7 @@ font: hack
 				</div>
 			</div>
 		</section>
-		<section class="location-bg py-4 mobile-text-center">
+		<section class="py-4">
 			<div class="container push-forward">
 				<div class="row middle-md py-8">
 					<div class="col-xs-12 col-md-5">
@@ -329,13 +354,6 @@ font: hack
 					</div>
 				</div>
 			</div>
-			<div class="devices-only">
-				<picture>
-					<source srcset="/img/bg/location-map-manila-mobile.webp" type="image/webp">
-					<img src="/img/bg/location-map-manila-mobile.jpg" alt="A map illustrating our Hong Kong data centers (Mega-I, Global Switch and Equinix HK1) and international connectivity to Mainland China, Guam, Tokyo and Singapore" class="opaque">
-				</picture>
-			</div>
-			<div class="credit">© <a href="https://www.openstreetmap.org/copyright" rel="nofollow" target="_blank">OpenStreetMap</a> contributors</div>
 		</section>
 		<section class="py-4 black-to-footer">
 			<div class="container">
