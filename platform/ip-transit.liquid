@@ -12,6 +12,7 @@ cta: true
 ctaText: Get a quote
 ctaUrl: "#quote"
 form: true
+font: hack
 ---
 	<style>
 		.no-webp .hero {
@@ -30,10 +31,8 @@ form: true
 			background: linear-gradient(to bottom, #000 0%, rgba(0,0,0,0.4) 50%, #0c0c0c 100%), url("/img/bg/oneqode-network-map.webp") no-repeat bottom center;
 			background-size: cover;
 		}
-		.edgeix {
-			background: #00b0f0;
-			color: #000;
-			border-radius: 10px;
+		td.bgp {
+			padding: 1rem !important;
 		}
 	</style>
 	<section class="black">
@@ -88,11 +87,11 @@ form: true
 					<table>
 						<tr>
 							<th class="nowrap">Speeds</th>
-							<td>From Mbps to Gbps</td>
+							<td colspan="2">From Mbps to Gbps</td>
 						</tr>
 						<tr>
 							<th class="nowrap">Burst Speeds</th>
-							<td>
+							<td colspan="2">
 								<ul class="no-style">
 									<li>95th Percentile Bursting</li>
 									<li>1:2 ratio only</li>
@@ -101,11 +100,11 @@ form: true
 						</tr>
 						<tr>
 							<th class="nowrap">Redundancy</th>
-							<td><a href="/contact/telco-carrier/">Contact Sales</a></td>
+							<td colspan="2"><a href="/contact/telco-carrier/">Contact Sales</a></td>
 						</tr>
 						<tr>
 							<th class="nowrap">Port Speeds</th>
-							<td>
+							<td colspan="2">
 								<ul class="no-style">
 									<li>1G-LX</li>
 									<li>10G-LR</li>
@@ -116,11 +115,11 @@ form: true
 						</tr>
 						<tr>
 							<th class="nowrap"><abbr title="Link Aggregation Control Protocol">LACP</abbr></th>
-							<td>Supported</td>
+							<td colspan="2">Supported</td>
 						</tr>
 						<tr>
 							<th class="nowrap">Service Handoff</th>
-							<td>
+							<td colspan="2">
 								<ul class="no-style">
 									<li>Single mode fibre (data centre cross-connect)</li>
 									<li><abbr title="Network Termination Unit">NTU</abbr> (Multi-Service Accesss)</li>
@@ -130,7 +129,7 @@ form: true
 						</tr>
 						<tr>
 							<th class="nowrap">IP Addressing</th>
-							<td>
+							<td colspan="2">
 								<ul class="no-style">
 									<li>Customer supplied IP addresses</li>
 									<li>Static or BGP Routing</li>
@@ -139,11 +138,11 @@ form: true
 						</tr>
 						<tr>
 							<th class="nowrap">IPv6</th>
-							<td>Supported</td>
+							<td colspan="2">Supported</td>
 						</tr>
 						<tr>
 							<th class="nowrap">BGP Support</th>
-							<td>
+							<td colspan="2">
 								<ul class="no-style">
 									<li>Default route</li>
 									<li>Full table</li>
@@ -151,8 +150,53 @@ form: true
 							</td>
 						</tr>
 						<tr>
+							<th rowspan="11" class="nowrap">BGP Communities</th>
+							<th>Policy Name</th>
+							<th>Community</th>
+						</tr>
+						<tr>
+							<td class="nowrap bgp">Do not export to upstream networks</td>
+							<td class="monospace">65535:1</td>
+						</tr>
+						<tr>
+							<td class="nowrap bgp">Do not export to peers</td>
+							<td class="monospace">65535:2</td>
+						</tr>
+						<tr>
+							<td class="nowrap bgp">Do not export route in Australia</td>
+							<td class="monospace">65535:4100</td>
+						</tr>
+						<tr>
+							<td class="nowrap bgp">Do not export route in the USA</td>
+							<td class="monospace">65535:4200</td>
+						</tr>
+						<tr>
+							<td class="nowrap bgp">Do not export route in Hong Kong, SAR</td>
+							<td class="monospace">65535:4300</td>
+						</tr>
+						<tr>
+							<td class="nowrap bgp">Do not export route in Japan</td>
+							<td class="monospace">65535:4400</td>
+						</tr>
+						<tr>
+							<td class="nowrap bgp">Do not export route in Guam</td>
+							<td class="monospace">65535:4500</td>
+						</tr>
+						<tr>
+							<td class="nowrap bgp">Do not export route in Singapore</td>
+							<td class="monospace">65535:4600</td>
+						</tr>
+						<tr>
+							<td class="nowrap bgp">Do not export route in Philippines</td>
+							<td class="monospace">65535:4700</td>
+						</tr>
+						<tr>
+							<td class="nowrap bgp">Do not export route to China</td>
+							<td class="monospace">65535:23</td>
+						</tr>
+						<tr>
 							<th class="nowrap">DDoS Protection</th>
-							<td>
+							<td colspan="2">
 								<ul class="no-style">
 									<li>Best-effort service</li>
 									<li>Platinum DDoS protection — <a href="/contact/telco-carrier/">Contact Sales</a></li>
