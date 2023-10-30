@@ -11,7 +11,8 @@
 	"signup": "/cloud/signup/",
 	"support": "https://billing.oneqode.com",
 	"lg": "https://lg.oneqode.com",
-	"countries-in-reach": "30+",
+	"cloud-regions": "2",
 	"points-of-presence": "18",
-	"staff": "24"
+	"countries-in-reach": "30+",
+	"staff": "33"
 }

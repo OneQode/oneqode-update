@@ -1,12 +1,12 @@
 ---
 layout: page.liquid
 heroSmall: true
-metaTitle: Global Network Locations • OneQode
-metaDescription: See all OneQode Cloud regions and network points of presence in Asia-Pacific and beyond.
+metaTitle: Global Network & Cloud Locations • OneQode
+metaDescription: See all OneQode Cloud regions and network points of presence in Asia-Pacific and North America.
 changefreq: monthly
 priority: 0.5
-pageTitle: Global network locations
-pageSubtitle: Our points of presence across Asia-Pacific and beyond
+pageTitle: Global locations
+pageSubtitle: OneQode network points of presence
 ---
 		<style>
 			section.hero {
@@ -29,7 +29,23 @@ pageSubtitle: Our points of presence across Asia-Pacific and beyond
 		</style>
 		<section class="network">
 {% include diagrams/_network-map.liquid %}
-			<figcaption class="mt-0">Global network rollout map <span style="color: #949494">// <a href="https://oneqode2.sgp1.cdn.digitaloceanspaces.com/maps/global/oneqode-world-map.pdf" class="external faded" rel="noopener" target="_blank">Full map PDF</a></figcaption>
+			<figcaption class="mt-0">Global network rollout map // <a href="https://oneqode2.sgp1.cdn.digitaloceanspaces.com/maps/global/oneqode-world-map.pdf" class="external faded" rel="noopener" target="_blank" title="Download map in PDF format">PDF</a> // <a href="https://oneqode2.sgp1.cdn.digitaloceanspaces.com/maps/global/oneqode-world-map.pdf" class="external faded"
+				rel="noopener" target="_blank" title="View map as PNG image">PNG</a></figcaption>
+		</section>
+		<section id="stats">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-4 py-1">
+						<div class="stat"><span>{{ global.points-of-presence }}</span> points of presence</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 py-1">
+						<div class="stat"><span>{{ global.cloud-regions }}</span> public cloud regions</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 py-1">
+						<div class="stat"><span>{{ global.countries-in-reach }}</span> countries in reach</div>
+					</div>
+				</div>
+			</div>
 		</section>
 		<section class="mt-4">
 			<div class="container">
