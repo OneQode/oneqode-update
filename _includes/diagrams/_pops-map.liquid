@@ -1,156 +1,76 @@
-		<style>
-			/*
-				Pulses
-				Credit to Florin Pop - https://www.florin-pop.com/blog/2019/03/css-pulse-effect/
-			*/
-			span.pulse {
-				border-radius: 50%;
-				height: 0.75rem;
-				width: 0.75rem;
-				background: rgba(0, 176, 240, 1);
-				box-shadow: 0 0 0 0 rgba(0, 176, 240, 1);
-				animation: pulse 2s infinite;
-				display: inline-block;
-				position: absolute;
-				z-index: 3;
-			}
-			@keyframes pulse {
-				0% {
-					transform:
-						scale(0.95)
-						translate(-50%, -50%);
-					box-shadow: 0 0 0 0 rgba(0, 176, 240, 0.7);
-				}
-				70% {
-					transform:
-						scale(1)
-						translate(-50%, -50%);
-					box-shadow: 0 0 0 10px rgba(0, 176, 240, 0);
-				}
-				
-				100% {
-					transform:
-						scale(0.95)
-						translate(-50%, -50%);
-					box-shadow: 0 0 0 0 rgba(0, 176, 240, 0);
-				}
-			}
-			span.pulse.sunshine-coast {
-				left: 40.3%;
-				top: 73.7%;
-			}
-			span.pulse.brisbane {
-				left: 40.4%;
-				top: 75.2%;
-			}
-			span.pulse.sydney {
-				left: 39.6%;
-				top: 80.1%;
-			}
-			span.pulse.melbourne {
-				left: 37.2%;
-				top: 83.9%;
-			}
-			span.pulse.apac-central {
-				left: 37%;
-				top: 45.2%;
-			}
-			span.pulse.tokyo {
-				left: 35.2%;
-				top: 28%;
-			}
-			span.pulse.hong-kong {
-				left: 24.6%;
-				top: 38.3%;
-			}
-			span.pulse.singapore {
-				left: 20.2%;
-				top: 54%;
-			}
-			span.pulse.manila {
-				left: 27.1%;
-				top: 44.2%;
-			}
-			span.pulse.los-angeles {
-				left: 76.7%;
-				top: 29.1%;
-			}
-			#pops-map text {
-				font-size: 38px;
-			}
-			/* Mobile Overrides */
-			@media screen and (max-width: 64em) {
-				#pops-map text {
-					display: none;
-				}
-				span.pulse {
-					height: 0.75rem;
-					width: 0.75rem;
-				}
-			}
-		</style>
 		<div id="pops-map" class="map">
-			<div id="pops">
-				<span class="pulse sunshine-coast"></span>
-				<span class="pulse brisbane"></span>
-				<span class="pulse sydney"></span>
-				<span class="pulse melbourne"></span>
-				<span class="pulse apac-central"></span>
-				<span class="pulse tokyo"></span>
-				<span class="pulse hong-kong"></span>
-				<span class="pulse singapore"></span>
-				<span class="pulse manila"></span>
-				<span class="pulse los-angeles"></span>
-			</div>
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4096 2305.35" aria-labelledby="maptitle mapdescription" role="img">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2820" aria-labelledby="maptitle mapdescription" role="img">
 				<title id="maptitle">OneQode Global Points of Presence</title>
-				<desc id="mapdescription">A world map centred on Asia-Pacific showing the OneQode Points of Presence in Sydney, Brisbane, Sunshine Coast, Guam (APAC Central), Tokyo, Hong Kong & Los Angeles</desc>
-					<g class="transit">
-						<path id="perth-sydney" d="M1623.13,1844.82c0,91.31-27.09,134.52-273.35,134.52s-373.24-28.75-368.42-100.3c2.31-34.22,46.96-54.21,46.96-54.21" />
-						<path id="melbourne-sydney" d="M1623.13,1844.82c-47.42,6.12-88.6,40.17-97.45,80.34" />
-						<path id="adelaide-sydney" d="M1623.13,1844.82c-52.9-12.88-140.58-17-211.4,21.34" />
-						<path id="darwin-sydney" d="M1287.81,1471.07c152.88,63.75,308.04,285.3,335.31,373.74" />
-						<path id="darwin-adelaide" d="M1287.81,1471.07c99.26,95.5,123.92,217.97,123.92,395.09" />
-						<path id="darwin-brisbane" d="M1287.81,1471.07c123.92,21.44,278.32,118.59,367.63,262.59" />
-						<path id="sydney-hawaii" d="M1623.13,1844.82c629.12,0,880.63-463.99,880.63-927.71" />
-						<path id="guam-hawaii" d="M2503.76,917.11c-779.38,0-987.48,122.43-987.48,122.43" />
-						<path id="guam-sydney" d="M1623.13,1844.82c98.85-98.85,117.64-329.81,43.54-501.63-52.62-122.02-150.38-142.01-150.38-303.65" />
-						<path id="sunshine-coast-guam" d="M1650.08,1701.92c24.3-9.29,45.59,3.79,45.59,3.79" />
-						<path id="sunshine-coast-brisbane" d="M1655.45,1733.67c0-20.63-5.37-31.74-5.37-31.74" />
-						<path id="hong-kong-guam" d="M1007.92,879.5c111.37,94.05,334.3,31.22,508.36,160.04" />
-						<path id="singapore-perth" d="M829.13,1240.91c45.51,9.16,58.72,40.04,54.41,71.07-6.3,45.46-61.11,80.57-80.31,153.12-22.32,84.33,6.22,276.12,225.09,359.73" />
-						<path id="chennai-singapore" d="M427.74,1052.39c8.05,78.23,116.29,131.04,228.63,103.34,57.66-14.22,86.32,9.44,116.3,51.79,23.27,32.87,35.67,33.39,56.45,33.39" />
-						<path id="hong-kong-tokyo" d="M1007.92,879.5c203.08,75.44,431.3-94.89,431.3-234.96" />
-						<path id="tokyo-guam" d="M1439.22,644.53c54.86,53.74,77.07,179.78,77.07,395" />
-						<path id="vladivostok-tokyo" d="M1302.18,498.31c63.94,34.01,116.76,101.13,137.04,146.22" />
-						<path id="osaka-tokyo" d="M1439.22,644.53c-21.89,20.51-78.76,19.1-78.76,19.1" />
-						<path id="busan-osaka" d="M1360.46,663.64c-21.52,0-35.66,9.85-65.54,9.85-17.19,0-39.17-7.05-52.19-15.68" />
-						<path id="seoul-busan" d="M1216.6,608.56c0,27.45,15.36,42.19,26.13,49.25" />
-						<path id="guam-davao-one" d="M1516.28,1039.53c-24.58,24.58-91.75,148.99-279.19,148.99" />
-						<path id="guam-davao-two" d="M1237.09,1188.52c-35.01,0-45.46-23.66-45.46-43.96" />
-						<path id="guam-manado" d="M1233.03,1188.52c-37.22-.75-48.46,29.16-48.46,53.07" />
-						<path id="singapore-manado" d="M1184.57,1241.59s-16.95-17.28-34.44-21.16c-81.5-18.05-52.81,127.3-140.41,127.3-105.83,0-97.21-117.46-180.59-106.83" />
-						<path id="singapore-hong-kong" d="M829.13,1240.91c127.77-100.93,178.79-197.37,178.79-361.41" />
-						<path id="perth-sydney-2" d="M1028.31,1824.83c203.23-78.28,402.13-64.38,594.81,19.99" />
-						<path id="brisbane-sydney" d="M1655.45,1733.67s14.09,64.74-32.32,111.15" />
-						<path id="guam-manila" d="M1120.76,1018.94c-39.18-25.7-39.53-65.62-8.91-74.49,66.9-19.36,268.18,95.08,404.43,95.08" />
-						<path id="hong-kong-manila" d="M1007.92,879.5c11.84,36.29,41.57,132.82,112.84,139.45" />
-						<path id="guam-los-angeles" d="M1516.28,1039.53c359.81-359.81,818-371.15,1626.65-371.15" />
-						<path id="hawaii-los-angeles" d="M2503.76,917.11c462.06,0,599.06-109.49,639.17-248.72" />
-						<path id="bay-area-los-angeles" d="M3073.29,601.96c11.38,19.57,47.36,51.87,69.64,66.43" />
-						<path id="seattle-bay-area" d="M3079.12,406.93c-12.12,39.84-8.88,166.43-5.83,195.03" />
-					</g>
+				<desc id="mapdescription">A world map centred on Asia-Pacific showing the OneQode Points of Presence in Sydney,
+					Brisbane, Sunshine Coast, Guam (APAC Central), Tokyo, Hong Kong & Los Angeles</desc>
+				<g class="transit">
+					<path id="perth-sydney"
+						d="m1516.04,2352.24c0,86.43-25.64,127.34-258.75,127.34s-353.3-27.22-348.74-94.94c2.18-32.39,44.45-51.32,44.45-51.32" />
+					<path id="melbourne-sydney" d="m1516.04,2352.24c-44.89,5.79-83.87,38.02-92.24,76.05" />
+					<path id="adelaide-sydney" d="m1516.04,2352.24c-50.08-12.19-133.07-16.09-200.1,20.2" />
+					<path id="darwin-sydney" d="m1198.63,1998.46c144.71,60.34,291.58,270.06,317.4,353.78" />
+					<path id="darwin-adelaide" d="m1198.63,1998.46c93.96,90.4,117.3,206.33,117.3,373.98" />
+					<path id="darwin-brisbane" d="m1198.63,1998.46c117.3,20.3,263.46,112.26,348,248.57" />
+					<path id="sydney-hawaii" d="m1516.04,2352.24c595.52,0,833.6-439.21,833.6-878.16" />
+					<path id="guam-hawaii" d="m2349.63,1474.08c-737.75,0-934.73,115.89-934.73,115.89" />
+					<path id="guam-sydney"
+						d="m1516.04,2352.24c93.57-93.57,111.35-312.19,41.22-474.84-49.81-115.5-142.35-134.42-142.35-287.44" />
+					<path id="sunshine-coast-guam" d="m1541.55,2216.98c23-8.8,43.15,3.58,43.15,3.58" />
+					<path id="sunshine-coast-brisbane" d="m1546.63,2247.03c0-19.53-5.08-30.05-5.08-30.05" />
+					<path id="hong-kong-guam" d="m933.69,1438.48c105.42,89.03,316.44,29.55,481.21,151.49" />
+					<path id="singapore-perth"
+						d="m764.45,1780.59c43.08,8.67,55.58,37.9,51.51,67.27-5.97,43.03-57.84,76.27-76.02,144.94-21.13,79.82,5.88,261.37,213.06,340.51" />
+					<path id="chennai-singapore"
+						d="m384.5,1602.14c7.62,74.05,110.08,124.04,216.42,97.82,54.58-13.46,81.71,8.94,110.09,49.03,22.03,31.11,33.77,31.6,53.44,31.6" />
+					<path id="hong-kong-tokyo" d="m933.69,1438.48c192.23,71.41,408.26-89.82,408.26-222.41" />
+					<path id="tokyo-guam" d="m1341.95,1216.07c51.93,50.87,72.95,170.18,72.95,373.9" />
+					<path id="vladivostok-tokyo" d="m1212.23,1077.66c60.52,32.19,110.52,95.73,129.72,138.41" />
+					<path id="osaka-tokyo" d="m1341.95,1216.07c-20.72,19.42-74.55,18.08-74.55,18.08" />
+					<path id="busan-osaka" d="m1267.4,1234.15c-20.37,0-33.76,9.32-62.04,9.32-16.28,0-37.07-6.68-49.4-14.84" />
+					<path id="seoul-busan" d="m1131.22,1182.02c0,25.99,14.54,39.94,24.73,46.62" />
+					<path id="guam-davao-one" d="m1414.9,1589.97c-23.26,23.26-86.85,141.03-264.28,141.03" />
+					<path id="guam-davao-two" d="m1150.62,1731c-33.14,0-43.03-22.4-43.03-41.61" />
+					<path id="guam-manado" d="m1146.78,1731c-35.23-.71-45.88,27.6-45.88,50.24" />
+					<path id="singapore-manado"
+						d="m1100.9,1781.24s-16.05-16.36-32.6-20.03c-77.14-17.08-49.99,120.5-132.91,120.5-100.18,0-92.02-111.19-170.95-101.12" />
+					<path id="singapore-hong-kong" d="m764.45,1780.59c120.95-95.54,169.24-186.83,169.24-342.11" />
+					<path id="perth-sydney-2" d="m952.99,2333.32c192.37-74.1,380.65-60.94,563.04,18.92" />
+					<path id="brisbane-sydney" d="m1546.63,2247.03s13.34,61.28-30.59,105.22" />
+					<path id="guam-manila"
+						d="m1040.51,1570.48c-37.09-24.33-37.41-62.12-8.43-70.51,63.32-18.33,253.85,90,382.83,90" />
+					<path id="hong-kong-manila" d="m933.69,1438.48c11.21,34.35,39.35,125.72,106.82,132" />
+					<path id="guam-los-angeles" d="m1414.9,1589.97c340.59-340.59,774.31-351.32,1539.76-351.32" />
+					<path id="hawaii-los-angeles" d="m2349.63,1474.08c437.38,0,567.06-103.64,605.03-235.44" />
+					<path id="bay-area-los-angeles" d="m2888.75,1175.77c10.77,18.53,44.83,49.1,65.92,62.88" />
+					<path id="seattle-bay-area" d="m2894.27,991.16c-11.47,37.71-8.41,157.54-5.52,184.61" />
+				</g>
+				<g id="pops">
+					<circle id="sydney" cx="1516.04" cy="2352.24" r="10" />
+					<circle id="melbourne" cx="1423.79" cy="2428.29" r="10" />
+					<circle id="manila" cx="1039.9" cy="1570.52" r="10" />
+					<circle id="hong-kong" cx="933.69" cy="1438.48" r="10" />
+					<circle id="los-angeles" cx="2954.66" cy="1238.65" r="10" />
+					<circle id="bay-area" cx="2888.75" cy="1175.77" r="10" />
+					<circle id="seattle" cx="2894.27" cy="991.16" r="10" />
+					<circle id="tokyo" cx="1341.95" cy="1216.07" r="10" />
+					<circle id="guam" cx="1414.9" cy="1589.97" r="10" />
+					<circle id="singapore" cx="764.45" cy="1780.59" r="10" />
+					<circle id="brisbane" cx="1546.63" cy="2247.03" r="10" />
+					<circle id="sunshine-coast" cx="1541.55" cy="2216.98" r="10" />
+				</g>
 				<g id="labels">
-					<text class="active" transform="translate(1469.27 656.77)">Tokyo</text>
-					<text class="active" transform="translate(3167.05 702.88)">Los Angeles</text>
-					<text class="active" transform="translate(833.62 856.57)">Hong Kong</text>
-					<text class="active" transform="translate(668 1298)">Singapore</text>
-					<text class="active" transform="translate(1540.26 1071.63)">Guam (APAC Central)</text>
-					<text class="active" transform="translate(1002 1080)">Manila</text>
-					<text class="active" transform="translate(1711.93 1697.87)">Sunshine Coast</text>
-					<text class="active" transform="translate(1693.44 1757.06)">Brisbane</text>
-					<text class="active" transform="translate(1640.93 1884.57)">Sydney</text>
-					<text class="active" transform="translate(1351 1984)">Melbourne</text>
+					<text class="active" transform="translate(1370.4 1227.65)">Tokyo</text>
+					<text class="active" transform="translate(2918.61 986.06)">Seattle</text>
+					<text class="active" transform="translate(2915.87 1156.38)">Bay Area</text>
+					<text class="active" transform="translate(2977.5 1271.3)">Los Angeles</text>
+					<text class="active" transform="translate(768.7 1416.79)">Hong Kong</text>
+					<text class="active" transform="translate(621.58 1813.74)">Singapore</text>
+					<text class="active" transform="translate(1437.59 1620.36)">Guam (APAC Central)</text>
+					<text class="active" transform="translate(929.81 1594.26)">Manila</text>
+					<text class="active" transform="translate(1600.1 2213.15)">Sunshine Coast</text>
+					<text class="active" transform="translate(1582.6 2269.17)">Brisbane</text>
+					<text class="active" transform="translate(1532.89 2389.88)">Sydney</text>
+					<text class="active" transform="translate(1258.5 2437.02)">Melbourne</text>
 				</g>
 			</svg>
 			<picture>

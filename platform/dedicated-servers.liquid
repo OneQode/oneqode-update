@@ -31,19 +31,10 @@ ogImage: og-image.jpg
 				mask: url(/img/ico/cpu-secure.svg) no-repeat center;
 				-webkit-mask: url(/img/ico/cpu-secure.svg) no-repeat center;
 			}
-			/* Products boxes */
-			.products h4 {
-				border-top: 6px solid #1C1D22;
-				padding-top: 2rem;
-			}
 			/* Extras */
 			#extras {
 				background: #333;
 				border-radius: 15px;
-			}
-			/* Server Spacing  */
-			.win-win > .container {
-				padding-bottom: 8rem;
 			}
 			@media screen and (min-width: 64em) {
 				/* Extras  */
@@ -62,9 +53,6 @@ ogImage: og-image.jpg
 								url("/img/server-illustration.svg") 150% 50% repeat-y,
 								url("/img/server-illustration.svg") -50% 50% repeat-y;
 					background-size: 50%;
-				}
-				.win-win > .container {
-					padding-bottom: 40rem;
 				}
 				.pull-top {
 					margin-top: -24rem;
@@ -94,31 +82,17 @@ ogImage: og-image.jpg
 				<div class="container">
 					<div class="row place-content-center">
 						<div class="col-xs-12 col-md-5">
-							<h2>Win<mark class="dot">.</mark> Win<mark class="dot">.</mark></h2>
-							<p>Latency. Performance. You’ll get it all.</p>
-							<p>Our servers boast superior clock speeds, unique locations, unparalleled reach, and easy customisation.</p>
-							<p>Oh, and they’re affordable, too.</p>
-							<p>To deliver the ultimate experience, choose a server from OneQode.</p>
+							<h2 class="faded">There are servers.</h2>
+							<h2>Then there are servers on the OneQode network<mark class="dot">.</mark></h2>
+							<p>We custom-build insanely performant servers and fuse them to a low-latency network that was built for gaming and real-time apps.</p>
+							<p>With lightning-fast reach to billions of people across Asia-Pacific, our network lets you extract the full potential of every server.</p>
 						</div>
 					</div>
 				</div>
 			</section>
 		</div>
-		<section class="pb-8 pull-top pull-bottom mobile-text-center">
-			<div class="container">
-				<div class="row place-content-center">
-					<div class="col-xs-12 col-md-5">
-						<h3 class="faded">There are servers.</h3>
-						<h3>Then there are servers on the OneQode network<mark class="dot">.</mark></h3>
-						<p>We build insanely performant servers and fuse them to a network that was built for gaming.</p>
-						<p>With ultra low-latency reach to millions of people across Asia-Pacific, our network lets you extract the full potential of every server.</p>
-						<p class="mt-2"><a href="/network/" class="chevron">Learn about our network</a></p>
-					</div>
-				</div>
-			</div>
-		</section>
 {% include diagrams/_pops-map.liquid %}
-		<section class="py-8 mobile-text-center">
+		<section class="pb-8 mobile-text-center">
 			<div class="container">
 				<div class="row text-center">
 					<div class="col-xs-12 col-md-8 col-md-offset-2 mb-0">
@@ -129,26 +103,19 @@ ogImage: og-image.jpg
 					</div>
 				</div>
 				<div class="row mt-4 products">
-					<div class="col-xs-12 col-md-5 col-md-offset-1 p-2">
-						<h4>Dedicated servers</h4>
-						<p>Incredible servers crafted for pure, unbridled performance.</p>
-						<a href="/pricing/dedicated-servers/" class="chevron">See pricing</a>
+					<div class="col-xs-12 col-md-4 p-2">
+						<h4>Custom dedicated servers</h4>
+						<p>Incredible servers crafted for pure, unbridled performance</p>
+						<a href="/contact/business-enterprise/?message=I%27d%20like%20to%20order%20some%20dedicated%20servers%20with%20OneQode.%20I%27m%20looking%20for%20the%20following%20specifications%3A%20..." class="chevron">Contact for quote</a>
 					</div>
-					<div class="col-xs-12 col-md-5 p-2">
-						<h4>Cloud platform</h4>
-						<p>Power on demand. Designed for flexibility and scale.</p>
+					<div class="col-xs-12 col-md-4 p-2">
+						<h4>Cloud servers</h4>
+						<p>Power on demand. Designed for performance, flexibility and scale</p>
 						<a href="/cloud/" class="chevron">Cloud platform</a>
 					</div>
-				</div>
-				<div class="row products">
-					<div class="col-xs-12 col-md-5 col-md-offset-1 p-2">
-						<h4>Custom builds</h4>
-						<p>Built to your exact requirements, served over the OneQode network.</p>
-						<a href="/pricing/dedicated-servers/" class="chevron">Custom servers</a>
-					</div>
-					<div class="col-xs-12 col-md-5 p-2">
+					<div class="col-xs-12 col-md-4 p-2">
 						<h4>Colocation</h4>
-						<p>Put your hardware in our data centres and take full advantage of our network.</p>
+						<p>Your hardware, our data centres and low-latency network</p>
 						<a href="/colocation/" class="chevron">Datacenter solutions</a>
 					</div>
 				</div>
@@ -162,7 +129,7 @@ ogImage: og-image.jpg
 						<p class="subheading faded">The ultimate in dedicated server performance</p>
 					</div>
 					<div class="col-xs-12 col-md-6 col-md-offset-3">
-						<p>We use the latest AMD Ryzen™, Intel<sup>®</sup> Core™ and Intel<sup>®</sup> Xeon™ processors on top of multi-gigabit server motherboards for peak performance.</p>
+						<p>We use the latest AMD Ryzen™, AMD EPYC™, Intel<sup>®</sup> Core™ and Intel<sup>®</sup> Xeon™ processors on top of multi-gigabit server motherboards for peak performance.</p>
 						<p>You’ll support higher workloads, fit more users on every server and achieve incredibly low latency.</p>
 					</div>
 				</div>
@@ -190,89 +157,6 @@ ogImage: og-image.jpg
 						<p class="faded">Get complete control with remote system access for out-of-band management and monitoring.</p>
 					</div>
 				</div>
-{%- comment %}
-				<div class="row mt-8 pt-8">
-					<div class="col-xs-12 col-md-10 col-md-offset-1">
-						<figure>
-							<style>
-								#comparison-diagram text {
-									font-family: Poppins;
-									font-weight: 600;
-								}
-								#comparison-diagram text.facet {
-									fill: #fff;
-									font-size: 20;
-								}
-								#comparison-diagram text.label {
-									font-size:  14px;
-								}
-							</style>
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1296 341" id="comparison-diagram">
-								<g transform="translate(-182 -4674)">
-									<text transform="translate(218 4984)" class="facet"><tspan x="-20.43" y="0">CPU</tspan><tspan x="-35.56" y="24">SPEEDS</tspan></text>
-									<text transform="translate(510 4984)" class="facet"><tspan x="-50.13" y="0">PERSONAL</tspan><tspan x="-39.88" y="24">SERVICE</tspan></text>
-									<text transform="translate(1142 4984)" class="facet"><tspan x="-28.33" y="0">DDOS</tspan><tspan x="-61.92" y="24">PROTECTION</tspan></text>
-									<text transform="translate(841 4984)" class="facet"><tspan x="-48.88" y="0">NETWORK</tspan><tspan x="-72.84" y="24">PERFORMANCE</tspan></text>
-									<text transform="translate(1396 4984)" class="facet"><tspan x="-40.08" y="0">PRICING</tspan><tspan x="-74.44" y="24">AFFORDABILITY</tspan></text>
-									<g>
-										<text transform="translate(947 4712)" fill="#00b0f0" class="label"><tspan x="-34.111" y="0">ONEQODE</tspan></text>
-										<path d="M1912-6636H3097.6" transform="translate(-1694 11322)" fill="none" stroke="#00b0f0" stroke-width="2"/>
-										<g>
-											<g transform="translate(206 4674)" stroke="#00b0f0" stroke-width="2">
-												<circle cx="12" cy="12" r="12" stroke="none"/>
-												<circle cx="12" cy="12" r="11" fill="none"/>
-											</g>
-											<g transform="translate(498 4674)" stroke="#00b0f0" stroke-width="2">
-												<circle cx="12" cy="12" r="12" stroke="none"/>
-												<circle cx="12" cy="12" r="11" fill="none"/>
-											</g>
-											<g transform="translate(1130 4674)" stroke="#00b0f0" stroke-width="2">
-												<circle cx="12" cy="12" r="12" stroke="none"/>
-												<circle cx="12" cy="12" r="11" fill="none"/>
-											</g>
-											<g transform="translate(829 4674)" stroke="#00b0f0" stroke-width="2">
-												<circle cx="12" cy="12" r="12" stroke="none"/>
-												<circle cx="12" cy="12" r="11" fill="none"/>
-											</g>
-											<g transform="translate(1385 4674)" stroke="#00b0f0" stroke-width="2">
-												<circle cx="12" cy="12" r="12" stroke="none"/>
-												<circle cx="12" cy="12" r="11" fill="none"/>
-											</g>
-										</g>
-									</g>
-									<g>
-										<text transform="translate(977 4816)" fill="#f90" class="label"><tspan x="-63.539" y="0">CLOUD PROVIDERS</tspan></text>
-										<g>
-											<path d="M1912-6504s132.114,114.977,291.823,108.936c161.852.065,145.153-121.715,331.471-132.512H2836c134.882-11.3,105.677-74.417,261.36-83.538" transform="translate(-1694 11322)" fill="none" stroke="#f90" stroke-width="2"/>
-											<g transform="translate(206 4806)" stroke="#f90" stroke-width="2">
-												<circle cx="12" cy="12" r="12" stroke="none"/>
-												<circle cx="12" cy="12" r="11" fill="none"/>
-											</g>
-											<g transform="translate(498 4914)" stroke="#f90" stroke-width="2">
-												<circle cx="12" cy="12" r="12" stroke="none"/>
-												<circle cx="12" cy="12" r="11" fill="none"/>
-											</g>
-											<g transform="translate(829 4782)" stroke="#f90" stroke-width="2">
-												<circle cx="12" cy="12" r="12" stroke="none"/>
-												<circle cx="12" cy="12" r="11" fill="none"/>
-											</g>
-											<g transform="translate(1130 4782)" stroke="#f90" stroke-width="2">
-												<circle cx="12" cy="12" r="12" stroke="none"/>
-												<circle cx="12" cy="12" r="11" fill="none"/>
-											</g>
-											<g transform="translate(1385 4699)" stroke="#f90" stroke-width="2">
-												<circle cx="12" cy="12" r="12" stroke="none"/>
-												<circle cx="12" cy="12" r="11" fill="none"/>
-											</g>
-										</g>
-									</g>
-								</g>
-							</svg>
-							<figcaption>How we stack up against the cloud providers</figcaption>
-						</figure>
-					</div>
-				</div>
-{%- endcomment %}
 			</div>
 		</section>
 		<section class="mt-8">
@@ -286,9 +170,9 @@ ogImage: og-image.jpg
 				<div class="row mb-8 mobile-text-center">
 					<div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-1 mt-8 pt-2">
 						<h3>Tailored service & support</h3>
-						<p>With onboarding and support staff on hand in both Australia and the United States, we’re here to see you succeed.</p>
+						<p>With onboarding and support staff on hand in Australia, Asia and the United States, we’re here to help you win.</p>
 						<h3 class="mt-4">Surprisingly affordable</h3>
-						<p>Not only are our servers better, <a href="/pricing/dedicated-servers/">our pricing</a> is in line with — if not more affordable than — the major cloud providers.</p>
+						<p>Not only are our servers better, our pricing is in line with — if not more affordable than — the major providers. Contact for details.</p>
 						<h3 class="mt-4">Flexible billing & usage</h3>
 						<p>With hourly billing for cloud and zero month contracts available for dedicated servers, it’s easy to scale your games & applications with us.</p>
 					</div>
@@ -297,11 +181,11 @@ ogImage: og-image.jpg
 						<p><strong>Volume discounts</strong></p>
 						<p>If you’re buying more stuff, you should pay less money. So we make sure you’re looked after.</p>
 						<p><strong>24/7 monitoring</strong></p>
-						<p>We keep an eye on the network at all times to make sure things are running at peak performance.</p>
-						<p><strong>99.95% SLA</strong></p>
-						<p>We offer 99.95% availability, and have a credit scheme in place in the event of an ongoing outage</p>
+						<p>We keep an eye on our network at all times to keep services operating at peak performance.</p>
+						<p><strong>Expert support</strong></p>
+						<p>Direct access to a team of experts who’ll do what it takes for you to succeed.</p>
 						<p><strong>IP Addresses</strong></p>
-						<p class="mb-0">Need more? We’ve got you covered. Reach out for more information.</p>
+						<p class="mb-0">Need more or something custom? We’ve got you covered. Reach out for more information.</p>
 					</div>
 				</div>
 			</div>
@@ -312,7 +196,7 @@ ogImage: og-image.jpg
 					<h2>Let’s talk<mark class="dot">.</mark></h2>
 					<p class="subheading">Thinking about deploying a next-gen server fleet?<br class="responsive"> Start a conversation today</p>
 					<p>
-						<a href="/contact/" class="button ghost m-1 mt-2">Get in touch</a>
+						<a href="/contact/business-enterprise/?message=I%27d%20like%20to%20order%20some%20dedicated%20servers%20with%20OneQode.%20I%27m%20looking%20for%20the%20following%20specifications%3A%20..." class="button ghost m-1 mt-2">Get in touch</a>
 					</p>
 				</div>
 			</div>

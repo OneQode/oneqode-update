@@ -34,25 +34,28 @@ document.addEventListener('keydown', function (event) {
 		closeDropdown();
 	}
 });
-window.addEventListener('load', function() {
-	
+window.addEventListener('load', function () {
+
 	// Menu Dropdowns
 	var menuItems = document.querySelectorAll('li.has-submenu');
 	var timer;
-	Array.prototype.forEach.call(menuItems, function(el, i){
-		// // Mouse
-		// el.addEventListener("mouseover", function(event){
-		// 	this.className = "has-submenu open";
-		// 	clearTimeout(timer);
-		// });
-		// el.addEventListener("mouseout", function(event){
-		// 	timer = setTimeout(function(event){
-		// 		document.querySelector(".has-submenu.open").className = "has-submenu";
-		// 	}, 250);
-		// });
+
+	Array.prototype.forEach.call(menuItems, function (el, i) {
+		// Mouse
+		el.addEventListener("mouseover", function (event) {
+			closeDropdown(); // close any open dropdowns before opening a new one
+			this.className = "has-submenu open";
+			clearTimeout(timer);
+		});
+		el.addEventListener("mouseout", function (event) {
+			var currentEl = this; // to keep reference to current element
+			timer = setTimeout(function () {
+				currentEl.className = "has-submenu";
+			}, 250);
+		});
 
 		// Keyboard
-		el.querySelector('a').addEventListener("click",  function(event){
+		el.querySelector('a').addEventListener("click", function (event) {
 			if (this.parentNode.className == "has-submenu") {
 				closeDropdown();
 				this.parentNode.className = "has-submenu open";
