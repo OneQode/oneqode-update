@@ -39,6 +39,9 @@ preconnect: ["https://oneqode2.sgp1.cdn.digitaloceanspaces.com"]
 				max-width: 200px;
 				opacity: 0.6;
 			}
+			.ocs-logo {
+				max-width: 300px !important;
+			}
 			#latency .box:focus img,
 			#latency .box:hover img,
 			#servers .box:focus img,
@@ -105,7 +108,7 @@ preconnect: ["https://oneqode2.sgp1.cdn.digitaloceanspaces.com"]
 						<a href="https://www.exitlag.com/" rel="noopener" class="box glowing">
 							<img src="/img/customers/exitlag.svg" alt="Exitlag">
 						</a>
-						<blockquote>
+						<blockquote class="mt-2">
 							<p><em>“I have tried ExitLag and it works WONDERS. 50ms games make me feel like Thanos after he put the Mind Stone into the gauntlet”</em></p>
 							<p class="faded">— <cite>Kevin M.</cite></p>
 						</blockquote>
@@ -114,7 +117,7 @@ preconnect: ["https://oneqode2.sgp1.cdn.digitaloceanspaces.com"]
 						<a href="https://www.wtfast.com/" rel="noopener" class="box glowing">
 							<img src="/img/customers/wtfast.svg" alt="WTFast">
 						</a>
-						<blockquote>
+						<blockquote class="mt-2">
 							<p><em>“I’ve been using WTFast and I went from averaging 200 ping to now 40-50. Thank you so
 									much!”</em></p>
 							<p class="faded">— <cite>Chris B.</cite></p>
@@ -131,136 +134,21 @@ preconnect: ["https://oneqode2.sgp1.cdn.digitaloceanspaces.com"]
 						<h2>Access next-level game servers<mark class="dot">.</mark></h2>
 					</div>
 					<div class="col-xs-12 col-md-6 col-md-offset-3">
-						<p style="color: #f00">You can route your game traffic via the OneQode network thanks to ExitLag and WTFast. Both have nodes
-							on the OneQode network, taking your data via the fastest possible route to your game server.</p>
-						<p>Both have free trials — check them out!</p>
+						<p>With CPUs running at 3.7GHz or greater, you can run high-tick games, and play the game as it’s meant to be played. Immersive, epic gaming sessions await.</p>
 					</div>
 				</div>
 				<div class="row mt-4">
-					<div class="col-xs-12 col-sm-6">
+					<div class="col-xs-12 col-sm-6 mt-1">
 						<a href="https://www.pacifices.net/" rel="noopener" class="box glowing">
 							<img src="/img/customers/pacifices.svg" alt="PacificES">
-							<p class="mb-0">Peak performance preconfigured game servers</p>
+							<p class="mb-0">Peak performance game servers</p>
 						</a>
 					</div>
-					<div class="col-xs-12 col-sm-6">
+					<div class="col-xs-12 col-sm-6 mt-1">
 						<a href="/cloud/" class="box glowing">
-							<img src="/img/oneqode-cloud-logo-negative.svg" alt="OneQode Cloud">
-							<p class="mb-0">Cloud servers for gamers with Linux expertise</p>
+							<img src="/img/oneqode-cloud-logo-negative.svg" alt="OneQode Cloud" class="ocs-logo">
+							<p class="mb-0">Lightning-fast cloud for Linux admins</p>
 						</a>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="text-center mt-8">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12 col-md-8 col-md-offset-2">
-						<h2>Go where other<br class="responsive"> organisations can’t<mark class="dot">.</mark></h2>
-						<p class="subheading faded">Blazing-fast game servers and network<br class="responsive"> infrastructure
-							for pro esports</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="text-center mt-8">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12 col-md-8 col-md-offset-2">
-						<h2>Your dreams<mark class="dot">:</mark> our priorities<mark class="dot">.</mark></h2>
-						<p class="subheading faded">Our team of gamers, ex-esports pros, and<br class="responsive"> technology
-							lovers are here for you</p>
-					</div>
-					<div class="col-xs-12 col-md-6 col-md-offset-3 mt-4">
-						<p class="subheading">I am a: &nbsp;
-							<select id="organisation-type" onchange="orgType()">
-								<option value="tournament-organiser">Tournament Organiser</option>
-								<option value="esports-dev-publisher">Esports Dev / Publisher</option>
-								<option value="college-esports">College Esports Rep</option>
-								<option value="player">Player</option>
-							</select>
-						</p>
-					</div>
-				</div>
-				<!-- Tournament Organiser Content -->
-				<div class="row mt-1 interactive" id="tournament-organiser">
-					<div class="col-xs-12 col-md-8 col-md-offset-2 mb-2">
-						<p>You’re busy. Sponsors, players, casters, you have a lot on your plate. You need a provider who speaks
-							your language.</p>
-					</div>
-					<div class="col-xs-12 col-sm-4 p-1 mb-2">
-						<h3>Build a global league</h3>
-						<p class="faded">The region has never been as closely connected, with the OneQode network, a truly
-							global league is within reach. Someone just has to build it...</p>
-					</div>
-					<div class="col-xs-12 col-sm-4 p-1 mb-2">
-						<h3>Hassle free tournaments</h3>
-						<p class="faded">You’ve spent months putting together an event. Let us take care of the network, so you
-							can keep your focus on the game.</p>
-					</div>
-					<div class="col-xs-12 col-sm-4 p-1 mb-2">
-						<h3>Look good</h3>
-						<p class="faded">Pioneers. Trailblazers. Groundbreakers. Make your mark on the industry and host the
-							tournaments of tomorrow, today.</p>
-					</div>
-				</div>
-				<!-- Esports Developer / Publisher Content -->
-				<div class="row mt-1 interactive" id="esports-dev-publisher" style="display: none;">
-					<div class="col-xs-12 col-md-8 col-md-offset-2 mb-2">
-						<p>You’ve made a killer game, don’t let ping stand in your way. Get it in front of the masses.</p>
-					</div>
-					<div class="col-xs-12 col-sm-4 p-1 mb-2">
-						<h3>Build a competitive scene</h3>
-						<p class="faded">Crafting a competitive title is hard enough without having to worry about reaching the
-							Asia-Pacific. We can help.</p>
-					</div>
-					<div class="col-xs-12 col-sm-4 p-1 mb-2">
-						<h3>Reach a wide playerbase</h3>
-						<p class="faded">Our network puts you in reach of millions of potential gamers, all connecting to a
-							network designed for latency.</p>
-					</div>
-					<div class="col-xs-12 col-sm-4 p-1 mb-2">
-						<h3>Matches when your players want them</h3>
-						<p class="faded">A cross regional server means queue times always stay short. More time playing, less
-							time waiting.</p>
-					</div>
-				</div>
-				<!-- College Esports Content -->
-				<div class="row mt-1 interactive" id="college-esports" style="display: none;">
-					<div class="col-xs-12 col-md-8 col-md-offset-2 mb-2">
-						<p>Stand out from the crowd. Build a name on the new frontier of intercollegiate competition.</p>
-					</div>
-					<div class="col-xs-12 col-sm-4 p-1 mb-2">
-						<h3>Boost your profile across the region</h3>
-						<p class="faded">Become a name across the region for esports hopefuls, and bring them to your school</p>
-					</div>
-					<div class="col-xs-12 col-sm-4 p-1 mb-2">
-						<h3>Connect with schools abroad</h3>
-						<p class="faded">Build relationships beyond borders with schools across the wider Asia-Pacific region
-						</p>
-					</div>
-					<div class="col-xs-12 col-sm-4 p-1 mb-2">
-						<h3>Nurture the next generation of talent</h3>
-						<p class="faded">Support a growing industry and foster new students’ interests</p>
-					</div>
-				</div>
-				<!-- Player Content -->
-				<div class="row mt-1 interactive" id="player" style="display: none;">
-					<div class="col-xs-12 col-md-8 col-md-offset-2 mb-2">
-						<p>To be the best you have to play the best. Hone your skills in the crucible of competition and
-							skirmish against a wider range of players than ever before.</p>
-					</div>
-					<div class="col-xs-12 col-sm-4 p-1 mb-2">
-						<h3>Train against new opponents</h3>
-						<p class="faded">No matter the game, a wide range of opponents is the best way to improve.</p>
-					</div>
-					<div class="col-xs-12 col-sm-4 p-1 mb-2">
-						<h3>Enjoy an even playing field</h3>
-						<p class="faded">Improve your skills without testing your patience.</p>
-					</div>
-					<div class="col-xs-12 col-sm-4 p-1 mb-2">
-						<h3>Prioritised traffic for your game</h3>
-						<p class="faded">Peace of mind that your game is just as important to your provider as it is to you</p>
 					</div>
 				</div>
 			</div>
@@ -270,43 +158,11 @@ preconnect: ["https://oneqode2.sgp1.cdn.digitaloceanspaces.com"]
 			<div class="container">
 				<div class="row middle-md">
 					<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
-						<h2>Want to partner<mark>?</mark></h2>
-						<p class="subheading faded">If you’re an esports org with a dream, <br class="responsive"> we’d love to
-							talk</p>
-						<p class="mt-2"><a href="/contact/esports/" class="button m-1 ml-0">Set up a chat</a>
+						<h2>Have feedback<mark>?</mark></h2>
+						<p class="subheading faded">If you’re experiencing high latency with OneQode, send your network feedback here:</p>
+						<p class="mt-2"><a href="/contact/network-feedback/" class="button m-1 ml-0">Report issues</a> <a href="/lower-your-ping/" class="chevron">How to lower your ping</a></p>
 					</div>
 				</div>
 			</div>
 		</section>
-		<script>
-			// Organisation Type Switcher
-			function orgType() {
-				select = document.getElementById("organisation-type").value;
-				// Select all interactive bits and hide them
-				function hideStuff() {
-					const interactive = Array.from(document.getElementsByClassName("interactive"));
-						interactive.forEach(item => {
-							item.style.display = "none";
-						});
-				}
-				switch(select) {
-					case "tournament-organiser":
-						hideStuff();
-						document.getElementById("tournament-organiser").style.display = "flex";
-						break;
-					case "esports-dev-publisher":
-						hideStuff();
-						document.getElementById("esports-dev-publisher").style.display = "flex";
-						break;
-					case "college-esports":
-						hideStuff();
-						document.getElementById("college-esports").style.display = "flex";
-						break;
-					case "player":
-						hideStuff();
-						document.getElementById("player").style.display = "flex";
-						break;
-				}
-			}
-		</script>
 {% include _footer.liquid %}
