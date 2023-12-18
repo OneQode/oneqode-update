@@ -66,14 +66,18 @@ phone: true
 		</style>
 		<section class="black-to-footer pb-8">
 			<div class="container">
-				<form action="https://submit-form.com/eAtKm1Rd" data-botpoison-public-key="pk_11d034c7-a37c-4479-a7fc-eabfb1185635" id="cloud-signup">
+				<form id="cloud-signup" onsubmit="createCloudUser(event)">
 					<div class="col-xs-12 col-md-10 col-md-offset-1">
 						<div class="row">
 							<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 mobile-text-center">
 								<div class="row">
-									<aside class="col-xs-12 p-2 mb-2 text-left">
+									{% comment %} <aside class="col-xs-12 p-2 mb-2 text-left">
 										<h4>⚠ Account Approvals</h4>
 										<p>It may take up to 2 business days to activate your account. You will receive an email when your account is ready.</p>
+									</aside> {% endcomment %}
+									<aside id="cloud-sign-up-error" class="col-xs-12 p-2 mb-2 text-left" style="display: none;">
+										<h4>⚠ Sign-up Failed</h4>
+										<p id="cloud-sign-up-error-message"></p>
 									</aside>
 									<div class="col-xs-12">
 										<h3>Your details:</h3>
@@ -84,20 +88,23 @@ phone: true
 									<div class="col-xs-12 col-sm-6 mb-1">
 										<input type="text" name="2_last_name" placeholder="Last Name" autocapitalize="words" required>
 									</div>
-									<div class="col-xs-12 col-sm-6 mb-1">
+									{% comment %} <div class="col-xs-12 col-sm-6 mb-1">
 										<input type="text" name="4_company" placeholder="Company" autocapitalize="words" required>
+									</div> {% endcomment %}
+									<div class="col-xs-12 col-sm-6 mb-1">
+										<input type="email" name="3_email" placeholder="Email" required>
 									</div>
 									<div class="col-xs-12 col-sm-6 mb-1">
-										<input type="email" name="3_email" placeholder="Work Email" required>
+										<input type="password" name="4_password" placeholder="Password" required>
 									</div>
-									<div class="col-xs-12 col-sm-6 mb-1">
+									{% comment %} <div class="col-xs-12 col-sm-6 mb-1">
 										<!-- Country Code -->
 										<input type="hidden" name="4_phonecountrycode" id="phonecountrycode">
 										<!-- Phone Number -->
 										<input type="tel" name="4_phonenumber" id="phone" required>
-									</div>
+									</div> {% endcomment %}
 								</div>
-								<div class="row mt-2">
+								{% comment %} <div class="row mt-2">
 									<div class="col-xs-12">
 										<h3>Billing address:</h3>
 									</div>
@@ -368,14 +375,14 @@ phone: true
 											<option value="Zimbabwe">Zimbabwe</option>
 										</select>
 									</div>
-								</div>
+								</div> {% endcomment %}
 								<div class="row mt-2">
-									<div class="col-xs-12">
+									{% comment %} <div class="col-xs-12">
 										<h3>Your use-case <span class="faded">(optional)</span></h3>
 									</div>
 									<div class="col-xs-12 mb-1">
 										<textarea name="7_message" placeholder="Tell us what you’re using us for so we can improve our service." autocapitalize="sentences" rows="3"></textarea>
-									</div>
+									</div> {% endcomment %}
 									<div class="col-xs-12 my-1">
 										<div class="checkbox">
 											<input type="checkbox" name="8_accepted-terms" id="legal-terms" required />
@@ -391,7 +398,8 @@ phone: true
 										<input type="hidden" name="_redirect" value="https://www.oneqode.com/cloud/thanks/"/>
 										<input type="hidden" name="_error" value="https://www.oneqode.com/error/"/>
 										<input type="hidden" name="_append" value="false" />
-										<button type="submit" class="button mt-1" id="button">Let’s go</button>
+										<div class="cf-turnstile" data-sitekey="0x4AAAAAAAOd2Bs5YLeH7xga"></div>
+										<button type="submit" class="button mt-1" id="cloud-sign-up-form-submit">Let’s go</button>
 										<p id="sending">Please wait...</p>
 										<p id="failmsg">
 											<strong>Anti-spam failed :(</strong>
@@ -413,7 +421,8 @@ phone: true
 			* Validates international phone numbers
 			* https://github.com/jackocnr/intl-tel-input
 			*/
-			var input = document.querySelector("#phone");
+
+			{% comment %} var input = document.querySelector("#phone");
 			window.intlTelInput(input, {
 				geoIpLookup: function(callback) {
 					$.get('https://ipinfo.io?token=9a0c888a083a9e', function() {}, "jsonp").always(function(resp) {
@@ -425,29 +434,42 @@ phone: true
 				initialCountry: 'auto',
 				separateDialCode: true,
 				utilsScript: "https://unpkg.com/intl-tel-input@17.0.16/build/js/utils.js",
-			});
+			}); {% endcomment %}
+
 			/* Submit country code in hidden field */
 				// Get the instance of the IntlTelInput
-				var iti = window.intlTelInputGlobals.getInstance(input);
+
+				{% comment %} var iti = window.intlTelInputGlobals.getInstance(input); {% endcomment %}
+
 				// Function to update the hidden input value with the selected country code
-				function updateCountryCode() {
+
+				{% comment %} function updateCountryCode() {
 					var countryCode = iti.getSelectedCountryData().dialCode;
 					document.getElementById("phonecountrycode").value = countryCode;
-				}
+				} {% endcomment %}
+
 				// Listen to the countrychange event on the phone input
-				input.addEventListener("countrychange", updateCountryCode);
+
+				{% comment %} input.addEventListener("countrychange", updateCountryCode); {% endcomment %}
+
 				// Update the country code initially in case the user doesn't change the country
-				updateCountryCode()
-;			/**
+
+				{% comment %} updateCountryCode(); {% endcomment %}
+			/**
 			* Botpoison form validation
 			* Prevents form submissions from bots... I hope
 			*/
 
-			var form = document.getElementById("cloud-signup");
+			{% comment %} var form = document.getElementById("cloud-signup");
 			var button = document.getElementById("button");
 			var sending = document.getElementById("sending");
-			var failmsg = document.getElementById("failmsg");
-			form.addEventListener("botpoison-challenge-start", function () {
+			var failmsg = document.getElementById("failmsg"); {% endcomment %}
+
+			{% comment %} form.addEventListener("submit", function (e) {
+				e.preventDefault()
+				console.log({e})
+			}); {% endcomment %}
+			{% comment %} form.addEventListener("botpoison-challenge-start", function () {
 				button.setAttribute("disabled", "disabled");
 				sending.classList.add("in-progress");
 			});
@@ -461,5 +483,5 @@ phone: true
 				button.classList.add("fail");
 				sending.classList.remove("in-progress");
 				failmsg.classList.add("block");
-			});
+			}); {% endcomment %}
 		</script>
