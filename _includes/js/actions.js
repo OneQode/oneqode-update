@@ -23,7 +23,7 @@ function createCloudUser(event) {
         turnstileResponse: formObj['cf-turnstile-response']
     }
 
-    const serverUrl = 'http://localhost/whmcs/cloudsignup.php';
+    const serverUrl = 'http://staging.billing.as140627.net/cloudsignup.php';
 
     submitButton.disabled = true
     submitButton.innerHTML = "Submitting..."
