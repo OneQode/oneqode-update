@@ -37,25 +37,15 @@ function createCloudUser(event) {
         return res.json()
     }).then(res => {
         const { data } = res
-        console.log({ res, data })
-        if(data?.result == 'success') {
+        if(data?.result == 'success' && data?.redirect_url) {
             submitButton.innerHTML = "Success!"
+            window.location.replace(data.redirect_url);
         }else if(data?.result == 'error') {
             submitButton.disabled = false
             submitButton.innerHTML = "Let’s go"
             errorElement.style.display = "block"
             errorMessageElement.innerHTML = data.message
         }
-
-        // if(data?.result == 'success' && data?.redirect_url) {
-        //     submitButton.innerHTML = "Success!"
-        //     window.location.replace(data.redirect_url);
-        // }else if(data?.result == 'error') {
-        //     submitButton.disabled = false
-        //     submitButton.innerHTML = "Let’s go"
-        //     errorElement.style.display = "block"
-        //     errorMessageElement.innerHTML = data.message
-        // }
     }).catch(error => {
          submitButton.disabled = false
          console.error(error) 
