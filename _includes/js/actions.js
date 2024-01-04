@@ -27,6 +27,7 @@ function createCloudUser(event) {
 
     submitButton.disabled = true
     submitButton.innerHTML = "Submitting..."
+    const widgetId = '#cloud-signup-cf-widget'
     fetch(serverUrl, {
         method: 'POST',
         body: JSON.stringify(parameters),
@@ -45,11 +46,11 @@ function createCloudUser(event) {
             submitButton.innerHTML = "Let’s go"
             errorElement.style.display = "block"
             errorMessageElement.innerHTML = data.message
+            turnstile.reset(widgetId)
         }
     }).catch(error => {
          submitButton.disabled = false
-         console.error(error) 
-    }).finally(() => {
-        turnstile.reset("#cloud-signup-cf-widget")
+         console.error(error)
+         turnstile.reset(widgetId)
     })
 }
