@@ -49,5 +49,7 @@ function createCloudUser(event) {
     }).catch(error => {
          submitButton.disabled = false
          console.error(error) 
+    }).finally(() => {
+        turnstile.reset('cloud-signup-turnstile')
     })
 }
