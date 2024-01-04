@@ -50,15 +50,6 @@ function createCloudUser(event) {
          submitButton.disabled = false
          console.error(error) 
     }).finally(() => {
-        const  turnstileContainer = document.querySelector('.cf-turnstile');
-        if (turnstileContainer) {
-            turnstileContainer.parentNode.removeChild(turnstileContainer);
-        }
-        const newContainer = document.createElement('div');
-        newContainer.className = 'cf-turnstile';
-        newContainer.setAttribute('data-sitekey', '0x4AAAAAAAOd2Bs5YLeH7xga');
-        const form = document.querySelector('form');
-        form.appendChild(newContainer);
-        console.log({form, newContainer})
+        turnstile.reset("#cloud-signup-cf-widget")
     })
 }
