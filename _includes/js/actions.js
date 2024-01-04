@@ -57,7 +57,8 @@ function createCloudUser(event) {
         const newContainer = document.createElement('div');
         newContainer.className = 'cf-turnstile';
         newContainer.setAttribute('data-sitekey', '0x4AAAAAAAOd2Bs5YLeH7xga');
-        const form = document.getElementById('cloud-signup');
+        const form = document.querySelector('form');
         form.appendChild(newContainer);
+        console.log({form, newContainer})
     })
 }
