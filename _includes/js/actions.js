@@ -26,6 +26,7 @@ function createCloudUser(event) {
     const serverUrl = 'https://staging.billing.as140627.net/cloudsignup.php';
 
     submitButton.disabled = true
+    submitButton.classList.add('btn-primary-loading')
     submitButton.innerHTML = "Submitting..."
     const widgetId = '#cloud-signup-cf-widget'
     fetch(serverUrl, {
@@ -43,6 +44,7 @@ function createCloudUser(event) {
             window.location.replace(data.redirect_url);
         }else if(data?.result == 'error') {
             submitButton.disabled = false
+            submitButton.classList.remove('btn-primary-loading')
             submitButton.innerHTML = "Let’s go"
             errorElement.style.display = "block"
             errorMessageElement.innerHTML = data.message
@@ -50,6 +52,7 @@ function createCloudUser(event) {
         }
     }).catch(error => {
          submitButton.disabled = false
+         submitButton.classList.remove('btn-primary-loading')
          console.error(error)
          turnstile.reset(widgetId)
     })
