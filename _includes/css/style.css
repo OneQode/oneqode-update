@@ -905,6 +905,7 @@ button[type=submit]:disabled {
 }
 .btn-primary-loading {
 	background-color: #00b0f0 !important;
+	border-color: #00b0f0 !important;
 	display: inline-block;
 	position: relative;
 	overflow: hidden;
