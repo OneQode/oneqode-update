@@ -65,7 +65,7 @@ function createCloudUser(event) {
 document.addEventListener('DOMContentLoaded', function() {
     // document.querySelector('.cf-turnstile').setAttribute('data-callback', 'handleTurnstileToken');
 
-    const form = document.querySelector('.cf-turnstile'); // Select the form by class name
+    const form = document.querySelector('.turnstile-form'); // Select the form by class name
     const widgetId = '#cf-widget'
 
     if (form) {
