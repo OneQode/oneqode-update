@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (form) {
         form.onsubmit = function(event) {
+            event.preventDefault()
             turnstile.reset(widgetId)
         };
     }
