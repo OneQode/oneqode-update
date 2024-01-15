@@ -28,7 +28,7 @@ function createCloudUser(event) {
     submitButton.disabled = true
     submitButton.classList.add('btn-primary-loading')
     submitButton.innerHTML = "Submitting..."
-    const widgetId = '#cloud-signup-cf-widget'
+    // const widgetId = '#cf-widget'
     fetch(serverUrl, {
         method: 'POST',
         body: JSON.stringify(parameters),
@@ -48,12 +48,29 @@ function createCloudUser(event) {
             submitButton.innerHTML = "Let’s go"
             errorElement.style.display = "block"
             errorMessageElement.innerHTML = data.message
-            turnstile.reset(widgetId)
+            // turnstile.reset(widgetId)
         }
     }).catch(error => {
          submitButton.disabled = false
          submitButton.classList.remove('btn-primary-loading')
          console.error(error)
-         turnstile.reset(widgetId)
+        //  turnstile.reset(widgetId)
     })
 }
+
+// function handleTurnstileToken(token) {
+//     document.getElementById('cf-turnstile-response').value = token;
+// }
+
+document.addEventListener('DOMContentLoaded', function() {
+    // document.querySelector('.cf-turnstile').setAttribute('data-callback', 'handleTurnstileToken');
+
+    const form = document.querySelector('.cf-turnstile'); // Select the form by class name
+    const widgetId = '#cf-widget'
+
+    if (form) {
+        form.onsubmit = function(event) {
+            turnstile.reset(widgetId)
+        };
+    }
+});
