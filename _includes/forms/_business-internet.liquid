@@ -1,4 +1,5 @@
-<form action="https://submit-form.com/rLbMqqw4" data-botpoison-public-key="pk_11d034c7-a37c-4479-a7fc-eabfb1185635" id="form-business-internet">
+{% comment %} <form action="https://submit-form.com/rLbMqqw4" data-botpoison-public-key="pk_11d034c7-a37c-4479-a7fc-eabfb1185635" id="form-business-internet"> {% endcomment %}
+<form action="https://submit-form.com/rLbMqqw4" id="form-business-internet">
 	<div class="row mobile-flex">
 		<div class="col-xs-12 col-sm-6 mb-1">
 			<input type="text" name="first_name" placeholder="First Name" autocapitalize="words" required>
@@ -22,8 +23,9 @@
 			<input type="hidden" name="form" value="Enterprise - Internet" />
 			<input type="hidden" name="_redirect" value="https://www.oneqode.com/thanks/"/>
 			<input type="hidden" name="_error" value="https://www.oneqode.com/error/"/>
+			<div class="cf-turnstile" data-sitekey="0x4AAAAAAAOd2Bs5YLeH7xga"></div>
 			<button type="submit" class="button mt-1" id="button">Submit</button>
-			<p id="failmsg">
+			{% comment %} <p id="failmsg">
 				<strong>Anti-spam failed :(</strong>
 				<br>Our spam detection thinks you’re a bot. If you’re reading this, we’re really sorry.
 				<br>Please do email us instead at:
@@ -45,7 +47,7 @@
 					button.classList.add("fail");
 					failmsg.classList.add("block");
 				});
-			</script>
+			</script> {% endcomment %}
 		</div>
 	</div>
 </form>

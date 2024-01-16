@@ -93,7 +93,8 @@ form: true
 		</aside>
 		<section class="pb-8">
 			<div class="container">
-				<form action="https://submit-form.com/gbT479Nu" data-botpoison-public-key="pk_11d034c7-a37c-4479-a7fc-eabfb1185635" id="pricing-dedicated-servers">
+				{% comment %} <form action="https://submit-form.com/gbT479Nu" data-botpoison-public-key="pk_11d034c7-a37c-4479-a7fc-eabfb1185635" id="pricing-dedicated-servers"> {% endcomment %}
+				<form action="https://submit-form.com/gbT479Nu" id="pricing-dedicated-servers">
 					<div class="row mb-8 mobile-text-center">
 						<div class="col-xs-12 col-md-7 py-2">
 							<h3>Location</h3>
@@ -295,14 +296,15 @@ form: true
 									<input type="hidden" name="form" value="Pricing - Dedicated Servers" />
 									<input type="hidden" name="_redirect" value="https://www.oneqode.com/pricing/thanks/"/>
 									<input type="hidden" name="_error" value="https://www.oneqode.com/error/"/>
+									<div class="cf-turnstile" data-sitekey="0x4AAAAAAAOd2Bs5YLeH7xga"></div>
 									<button type="submit" class="button mt-1" id="button">Submit</button>
-									<p id="sending">Please wait...</p>
+									{% comment %} <p id="sending">Please wait...</p>
 									<p id="failmsg">
 										<strong>Anti-spam failed :(</strong>
 										<br>Our spam detection thinks you’re a bot. If you’re reading this, we’re really sorry.
 										<br>Please do email us instead at:
 										<br>hello <span class="faded">[at]</span> oneqode <span class="faded">[dot]</span> com <span class="faded">[dot]</span> au
-									</p>
+									</p> {% endcomment %}
 								</div>
 							</div>
 						</div>
@@ -597,7 +599,7 @@ form: true
 			* Prevents form submissions from bots... I hope
 			*/
 
-			var form = document.getElementById("pricing-dedicated-servers");
+			{% comment %} var form = document.getElementById("pricing-dedicated-servers");
 			var button = document.getElementById("button");
 			var sending = document.getElementById("sending");
 			var failmsg = document.getElementById("failmsg");
@@ -615,6 +617,6 @@ form: true
 				button.classList.add("fail");
 				sending.classList.remove("in-progress");
 				failmsg.classList.add("block");
-			});
+			}); {% endcomment %}
 
 		</script>
