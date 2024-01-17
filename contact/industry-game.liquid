@@ -31,7 +31,6 @@ form: true
 		</style>
 		<section class="black-to-footer pb-8">
 			<div class="container">
-				{% comment %} <form action="https://submit-form.com/9RDPxwcd" data-botpoison-public-key="pk_11d034c7-a37c-4479-a7fc-eabfb1185635" id="game-industry-contact"> {% endcomment %}
 				<form action="https://submit-form.com/9RDPxwcd" id="game-industry-contact">
 					<div class="col-xs-12 col-md-10 col-md-offset-1">
 						<div class="row">
@@ -128,13 +127,6 @@ form: true
 										<input type="hidden" name="_error" value="https://www.oneqode.com/error/"/>
 										<div class="cf-turnstile" data-sitekey="0x4AAAAAAAOd2Bs5YLeH7xga"></div>
 										<button type="submit" class="button mt-1" id="button">Let’s go</button>
-										{% comment %} <p id="sending">Please wait...</p>
-										<p id="failmsg">
-											<strong>Anti-spam failed :(</strong>
-											<br>Our spam detection thinks you’re a bot. If you’re reading this, we’re really sorry.
-											<br>Please do email us instead at:
-											<br>hello <span class="faded">[at]</span> oneqode <span class="faded">[dot]</span> com <span class="faded">[dot]</span> au
-										</p> {% endcomment %}
 									</div>
 								</div>
 							</div>
@@ -143,29 +135,3 @@ form: true
 				</form>
 			</div>
 		</section>
-		<script>
-			/**
-			* Botpoison form validation
-			* Prevents form submissions from bots... I hope
-			*/
-
-			{% comment %} var form = document.getElementById("game-industry-contact");
-			var button = document.getElementById("button");
-			var sending = document.getElementById("sending");
-			var failmsg = document.getElementById("failmsg");
-			form.addEventListener("botpoison-challenge-start", function () {
-				button.setAttribute("disabled", "disabled");
-				sending.classList.add("in-progress");
-			});
-			form.addEventListener("botpoison-challenge-success", function () {
-				button.removeAttribute("disabled");
-				sending.classList.remove("in-progress");
-				button.classList.add("success");
-			});
-			form.addEventListener("botpoison-challenge-error", function () {
-				button.removeAttribute("disabled");
-				button.classList.add("fail");
-				sending.classList.remove("in-progress");
-				failmsg.classList.add("block");
-			}); {% endcomment %}
-		</script>

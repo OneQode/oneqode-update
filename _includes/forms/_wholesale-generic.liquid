@@ -1,4 +1,3 @@
-{% comment %} <form action="https://submit-form.com/FQvlFo5i" data-botpoison-public-key="pk_11d034c7-a37c-4479-a7fc-eabfb1185635" id="form-wholesale-contact"> {% endcomment %}
 <form action="https://submit-form.com/FQvlFo5i" id="form-wholesale-contact">
 	<div class="row mobile-flex">
 		<div class="col-xs-12 col-sm-6 mb-1">
@@ -25,29 +24,6 @@
 			<input type="hidden" name="_error" value="https://www.oneqode.com/error/"/>
 			<div class="cf-turnstile" data-sitekey="0x4AAAAAAAOd2Bs5YLeH7xga"></div>
 			<button type="submit" class="button mt-1" id="button">Submit</button>
-			{% comment %} <p id="failmsg">
-				<strong>Anti-spam failed :(</strong>
-				<br>Our spam detection thinks you’re a bot. If you’re reading this, we’re really sorry.
-				<br>Please do email us instead at:
-				<br>hello <span class="faded">[at]</span> oneqode <span class="faded">[dot]</span> com <span class="faded">[dot]</span> au
-			</p>
-			<script>
-				var form = document.getElementById("form-wholesale-contact");
-				var button = document.getElementById("button");
-				var failmsg = document.getElementById("failmsg");
-				form.addEventListener("botpoison-challenge-start", function () {
-					button.setAttribute("disabled", "disabled");
-				});
-				form.addEventListener("botpoison-challenge-success", function () {
-					button.removeAttribute("disabled");
-					button.classList.add("success");
-				});
-				form.addEventListener("botpoison-challenge-error", function () {
-					button.removeAttribute("disabled");
-					button.classList.add("fail");
-					failmsg.classList.add("block");
-				});
-			</script> {% endcomment %}
 		</div>
 	</div>
 </form>
