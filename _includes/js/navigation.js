@@ -66,3 +66,19 @@ window.addEventListener('load', function() {
 		});
 	});
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+	var forms = document.getElementsByTagName('form');
+	var button = document.getElementById("button");
+	button.removeAttribute("disabled");
+    button.classList.remove('btn-primary-loading');
+	button.innerHTML = "Submit";
+
+	for (var i = 0; i < forms.length; i++) {
+		forms[i].addEventListener('submit', function() {
+			button.setAttribute("disabled", "disabled");
+			button.innerHTML = "Submitting...";
+			button.classList.add('btn-primary-loading');
+		});
+	}	
+});
