@@ -1,183 +1,261 @@
 ---
 permalink: /ip-transit/
-layout: page.liquid
 metaTitle: Low Latency Global IP Transit • OneQode
 metaDescription: Get gaming-optimized low-latency global IP Transit from OneQode. Wholesale internet transit in Asia-Pacific built for real-time applications.
 changefreq: monthly
 ogImage: ip-transit.jpg
 priority: 0.5
 pageTitle: Low-latency<br class="responsive"> global IP Transit
-pageSubtitle: Seamless low-latency connectivity with<br class="responsive"> Asia-Pacific’s premium transit provider
-cta: true
-ctaText: Get a quote
-ctaUrl: "#quote"
+pageSubtitle: Asia-Pacific's low latency transit provider
 form: true
+font: hack
 ---
-	<style>
-		.no-webp .hero {
-			background: linear-gradient(to bottom, rgba(0,0,0,0.2) 50%, #000), url("/img/bg/earth.jpg") no-repeat bottom center;
-			background-size: cover;
-		}
-		.webp .hero {
-			background: linear-gradient(to bottom, rgba(0,0,0,0.2) 50%, #000), url("/img/bg/earth.webp") no-repeat bottom center;
-			background-size: cover;
-		}
-		.no-webp .why-us {
-			background: linear-gradient(to bottom, #000 0%, rgba(0,0,0,0.4) 50%, #0c0c0c 100%), url("/img/bg/oneqode-network-map.jpg") no-repeat bottom center;
-			background-size: cover;
-		}
-		.webp .why-us {
-			background: linear-gradient(to bottom, #000 0%, rgba(0,0,0,0.4) 50%, #0c0c0c 100%), url("/img/bg/oneqode-network-map.webp") no-repeat bottom center;
-			background-size: cover;
-		}
-	</style>
-	<section>
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
-					<h2>Why OneQode<br class="responsive"> for IP transit<mark >?</mark></h2>
-				</div>
-				<div class="col-xs-12 col-md-6 col-md-offset-3">
-					<ul class="ticks large">
-						<li>Built for real-time applications</li>
-						<li>Optimized for gaming</li>
-						<li>Full and domestic routing table</li>
-						<li>Dual-stack IPv4 / IPv6</li>
-						<li>24/7 network monitoring</li>
-						<li>DDoS-protected network</li>
-					</ul>
+{% include _header.liquid %}
+		<style>
+			.no-webp .hero {
+				background: linear-gradient(to bottom, rgba(0,0,0,0.2) 50%, #000), url("/img/bg/earth.jpg") no-repeat bottom center;
+				background-size: cover;
+			}
+			.webp .hero {
+				background: linear-gradient(to bottom, rgba(0,0,0,0.2) 50%, #000), url("/img/bg/earth.webp") no-repeat bottom center;
+				background-size: cover;
+			}
+			.no-webp .why-us {
+				background: linear-gradient(to bottom, #000 0%, rgba(0,0,0,0.4) 50%, #0c0c0c 100%), url("/img/bg/oneqode-network-map.jpg") no-repeat bottom center;
+				background-size: cover;
+			}
+			.webp .why-us {
+				background: linear-gradient(to bottom, #000 0%, rgba(0,0,0,0.4) 50%, #0c0c0c 100%), url("/img/bg/oneqode-network-map.webp") no-repeat bottom center;
+				background-size: cover;
+			}
+			td.bgp {
+				padding: 1rem !important;
+			}
+			.transit-links {
+				display: grid;
+				gap: 2rem;
+				grid-template-columns: repeat(3, max-content);
+			}
+			@media (max-width: 48em) {
+				.transit-links {
+					grid-template-columns: initial;
+				}
+			}
+		</style>
+		<section class="hero{%- if heroSmall %} condensed{%- endif %}">
+			<div class="container">
+				<div class="row middle-xs">
+					<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+						{%- if pageSupertitle %}
+						<p class="superheading">{{ pageSupertitle }}</p>
+						{%- endif %}
+						<h1>{{ pageTitle }}<mark class="dot">.</mark></h1>
+						<p class="subheading">{{ pageSubtitle }}</p>
+						<p><a href="#quote" class="m-1 button">Get a quote</a> <a href="/contact/telco-carrier/" class="chevron m-1 ml-2">Contact sales</a></p>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-	<section class="py-4" id="on-net-facilities">
-		<div class="container">
-			<div class="row">
+		</section>
+		<section class="black">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+						<h2>Why OneQode<br class="responsive"> for IP transit<mark >?</mark></h2>
+					</div>
+					<div class="col-xs-12 col-md-6 col-md-offset-3 text-center">
+						<ul class="ticks large">
+							<li>Built for real-time connectivity</li>
+							<li>Optimized for gaming</li>
+							<li>Full and domestic routing table</li>
+							<li>Dual-stack IPv4 / IPv6</li>
+							<li>24/7 network monitoring</li>
+							<li>DDoS-protected network</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-4" id="on-net-facilities">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<h2 class="text-center">Transit delivery facilities</h2>
+						{% include parts/_pops.liquid %}
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-4">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-5 col-md-offset-1 my-1 p-2">
+						<h4>Overview</h4>
+						<p><strong>Our IP Transit service connects you to the internet via the  hyperfast OneQode network.</strong></p>
+						<p>You’ll get a 21st century IP transit experience, delivered across our blazing fast Arista-powered network.</p>
+					</div>
+					<div class="col-xs-12 col-md-5 my-1 p-2">
+						<h4>Upstream Providers</h4>
+						<p>We have direct partnerships in place with the world’s leading transit providers: Telstra, NTT, TPG, AT&T, China Mobile International, GTA, and Voxility.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-md-10 col-md-offset-1 p-2 transit-links">
+						<a href="/network/#network-map" class="chevron">Network map</a>
+						<a href="https://lg.oneqode.com/" target="_blank" class="external">Looking glass</a>
+						<a href="https://www.peeringdb.com/net/23196" target="_blank" class="external">PeeringDB</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="text-center py-8" id="specifications">
+			<div class="container">
 				<div class="col-xs-12 col-md-8 col-md-offset-2">
-					<h2 class="text-center">Transit delivery facilities</h2>
-					{% include parts/_pops.liquid %}
+					<h2>IP Transit specifications<mark class="dot">.</mark></h2>
+					<div class="responsive-table text-left mt-4">
+						<table>
+							<tr>
+								<th class="nowrap">Speeds</th>
+								<td colspan="2">From Mbps to Gbps</td>
+							</tr>
+							<tr>
+								<th class="nowrap">Burst Speeds</th>
+								<td colspan="2">
+									<ul class="no-style">
+										<li>95th Percentile Bursting</li>
+										<li>1:2 ratio only</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th class="nowrap">Redundancy</th>
+								<td colspan="2"><a href="/contact/telco-carrier/">Contact Sales</a></td>
+							</tr>
+							<tr>
+								<th class="nowrap">Port Speeds</th>
+								<td colspan="2">
+									<ul class="no-style">
+										<li>1G-LX</li>
+										<li>10G-LR</li>
+										<li>40G-LR4</li>
+										<li>100G-LR4</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th class="nowrap"><abbr title="Link Aggregation Control Protocol">LACP</abbr></th>
+								<td colspan="2">Supported</td>
+							</tr>
+							<tr>
+								<th class="nowrap">Service Handoff</th>
+								<td colspan="2">
+									<ul class="no-style">
+										<li>Single mode fibre (data centre cross-connect)</li>
+										<li><abbr title="Network Termination Unit">NTU</abbr> (Multi-Service Accesss)</li>
+										<li>Megaport VXC / ConsoleConnect / IX Australia</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th class="nowrap">IP Addressing</th>
+								<td colspan="2">
+									<ul class="no-style">
+										<li>Customer supplied IP addresses</li>
+										<li>Static or BGP Routing</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th class="nowrap">IPv6</th>
+								<td colspan="2">Supported</td>
+							</tr>
+							<tr>
+								<th class="nowrap">BGP Support</th>
+								<td colspan="2">
+									<ul class="no-style">
+										<li>Default route</li>
+										<li>Full table</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th rowspan="11" class="nowrap">BGP Communities<br> <a href="https://docs.oneqode.com/network/bgp-communities" target="_blank" class="external" style="font-weight: initial;">View docs</a></th>
+								<th>Policy Name</th>
+								<th>Community</th>
+							</tr>
+							<tr>
+								<td class="nowrap bgp">Do not export to upstream networks</td>
+								<td class="monospace">65535:1</td>
+							</tr>
+							<tr>
+								<td class="nowrap bgp">Do not export to peers</td>
+								<td class="monospace">65535:2</td>
+							</tr>
+							<tr>
+								<td class="nowrap bgp">Do not export route in Australia</td>
+								<td class="monospace">65535:4100</td>
+							</tr>
+							<tr>
+								<td class="nowrap bgp">Do not export route in the USA</td>
+								<td class="monospace">65535:4200</td>
+							</tr>
+							<tr>
+								<td class="nowrap bgp">Do not export route in Hong Kong, SAR</td>
+								<td class="monospace">65535:4300</td>
+							</tr>
+							<tr>
+								<td class="nowrap bgp">Do not export route in Japan</td>
+								<td class="monospace">65535:4400</td>
+							</tr>
+							<tr>
+								<td class="nowrap bgp">Do not export route in Guam</td>
+								<td class="monospace">65535:4500</td>
+							</tr>
+							<tr>
+								<td class="nowrap bgp">Do not export route in Singapore</td>
+								<td class="monospace">65535:4600</td>
+							</tr>
+							<tr>
+								<td class="nowrap bgp">Do not export route in Philippines</td>
+								<td class="monospace">65535:4700</td>
+							</tr>
+							<tr>
+								<td class="nowrap bgp">Do not export route to China</td>
+								<td class="monospace">65535:23</td>
+							</tr>
+							<tr>
+								<th class="nowrap">DDoS Protection</th>
+								<td colspan="2">
+									<ul class="no-style">
+										<li>Best-effort service</li>
+										<li>Platinum DDoS protection — <a href="/contact/telco-carrier/">Contact Sales</a></li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-	<section class="py-4">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-md-5 col-md-offset-1 my-1 p-2">
-					<h4>Overview</h4>
-					<p><strong>Our IP Transit service connects you to the internet via the  hyperfast OneQode network.</strong></p>
-					<p>You’ll get a 21st century IP transit experience, delivered across our blazing fast Arista-powered network.</p>
+		</section>
+		<section class="pt-4" id="quote">
+			<div class="container">
+				<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
+					<h2>Get a transit quote<mark class="dot">:</mark></h2>
+					<p>Enter your details below to get started with IP Transit from OneQode.</p>
 				</div>
-				<div class="col-xs-12 col-md-5 my-1 p-2">
-					<h4>Upstream Providers</h4>
-					<p>We have direct partnerships in place with the world’s leading transit providers: Telstra, NTT, TPG, AT&T, China Mobile International, GTA, and Voxility.</p>
+				<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
+					{% include forms/_wholesale-ip-transit.liquid %}
 				</div>
 			</div>
-		</div>
-	</section>
-	<section class="text-center py-8" id="specifications">
-		<div class="container">
-			<div class="col-xs-12 col-md-8 col-md-offset-2">
-				<h2>IP Transit specifications<mark class="dot">.</mark></h2>
-				<div class="responsive-table text-left mt-4">
-					<table>
-						<tr>
-							<th class="nowrap">Speeds</th>
-							<td>From Mbps to Gbps</td>
-						</tr>
-						<tr>
-							<th class="nowrap">Burst Speeds</th>
-							<td>
-								<ul class="no-style">
-									<li>95th Percentile Bursting</li>
-									<li>1:2 ratio only</li>
-								</ul>
-							</td>
-						</tr>
-						<tr>
-							<th class="nowrap">Redundancy</th>
-							<td><a href="/contact/telco-carrier/">Contact Sales</a></td>
-						</tr>
-						<tr>
-							<th class="nowrap">Port Speeds</th>
-							<td>
-								<ul class="no-style">
-									<li>1G-LX</li>
-									<li>10G-LR</li>
-									<li>40G-LR4</li>
-									<li>100G-LR4</li>
-								</ul>
-							</td>
-						</tr>
-						<tr>
-							<th class="nowrap"><abbr title="Link Aggregation Control Protocol">LACP</abbr></th>
-							<td>Supported</td>
-						</tr>
-						<tr>
-							<th class="nowrap">Service Handoff</th>
-							<td>
-								<ul class="no-style">
-									<li>Single mode fibre (data centre cross-connect)</li>
-									<li><abbr title="Network Termination Unit">NTU</abbr> (Multi-Service Accesss)</li>
-									<li>Megaport VXC / ConsoleConnect / IX Australia</li>
-								</ul>
-							</td>
-						</tr>
-						<tr>
-							<th class="nowrap">IP Addressing</th>
-							<td>
-								<ul class="no-style">
-									<li>Customer supplied IP addresses</li>
-									<li>Static or BGP Routing</li>
-								</ul>
-							</td>
-						</tr>
-						<tr>
-							<th class="nowrap">IPv6</th>
-							<td>Supported</td>
-						</tr>
-						<tr>
-							<th class="nowrap">BGP Support</th>
-							<td>
-								<ul class="no-style">
-									<li>Default route</li>
-									<li>Full table</li>
-								</ul>
-							</td>
-						</tr>
-						<tr>
-							<th class="nowrap">DDoS Protection</th>
-							<td>
-								<ul class="no-style">
-									<li>Best-effort service</li>
-									<li>Platinum DDoS protection — <a href="/contact/telco-carrier/">Contact Sales</a></li>
-								</ul>
-							</td>
-						</tr>
-					</table>
+		</section>
+		<section class="full-height pb-8 why-us">
+			<div class="container">
+				<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+					<p class="superheading">Why OneQode?</p>
+					<h2>Intercontinental reach<mark class="dot">,</mark><br class="responsive"> uncompromising speed<mark class="dot">.</mark></h2>
+					<p class="subheading">As the world moves forward,<br class="responsive"> you won’t be held back</p>
+					<p>OneQode provide access to international data capacity to locations around the globe. With a range of point-to-point and point-to-multipoint services available, we provide high capacity, easy to deploy solutions.</p>
+					<p><a href="/about/" class="button m-1 mt-2">Learn More</a><a href="#quote" class="button ghost m-1 mt-2">Get started</a></p>
 				</div>
 			</div>
-		</div>
-	</section>
-	<section class="pt-4" id="quote">
-		<div class="container">
-			<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
-				<h2>Get a transit quote<mark class="dot">:</mark></h2>
-				<p>Enter your details below to get started with IP Transit from OneQode.</p>
-			</div>
-			<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
-				{% include forms/_wholesale-ip-transit.liquid %}
-			</div>
-		</div>
-	</section>
-	<section class="full-height pb-8 why-us">
-		<div class="container">
-			<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
-				<p class="superheading">Why OneQode?</p>
-				<h2>Intercontinental reach<mark class="dot">,</mark><br class="responsive"> uncompromising speed<mark class="dot">.</mark></h2>
-				<p class="subheading">As the world moves forward,<br class="responsive"> you won’t be held back</p>
-				<p>OneQode provide access to international data capacity to locations around the globe. With a range of point-to-point and point-to-multipoint services available, we provide high capacity, easy to deploy solutions.</p>
-				<p><a href="/about/" class="button m-1 mt-2">Learn More</a><a href="#quote" class="button ghost m-1 mt-2">Get started</a></p>
-			</div>
-		</div>
-	</section>
+		</section>
+{% include _footer.liquid %}
