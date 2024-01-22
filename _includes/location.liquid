@@ -161,7 +161,7 @@ mapAlign: left
 				}
 			}
 		</style>
-		<section class="hero">
+		<section class="hero location">
 			<div class="container">
 				<div class="row middle-xs">
 					<div class="col-xs-12 col-md-8 text-left mobile-text-center">
@@ -180,6 +180,7 @@ mapAlign: left
 						<!-- Breadcrumb end -->
 						<h1>{{ pageTitle }}<mark class="dot">.</mark></h1>
 						<p class="subheading">{{ pageSubtitle }}</p>
+						{%- if cloudLocation %}
 						<ul class="ticks mt-2">
 							<li>High performance only</li>
 							<li>Latency optimized</li>
@@ -187,6 +188,15 @@ mapAlign: left
 							<li>DDoS protected</li>
 						</ul>
 						<p class="mb-0"><a href="/cloud/signup/" class="m-1 button">Get started</a> <span class="shine poppins ml-1">$20 free credit</span></p>
+						{%- else %}
+						<ul class="ticks mt-2">
+							<li>Latency optimized network</li>
+							<li>Build a custom solution</li>
+							<li>Advanced networking</li>
+							<li>Flexible to your needs</li>
+						</ul>
+						<p class="mb-0"><a href="/contact/business-enterprise/" class="button mt-1">Contact sales</a></p>
+						{%- endif %}
 					</div>
 				</div>
 			</div>

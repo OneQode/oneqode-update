@@ -656,7 +656,8 @@ h1 {
 }
 h2,
 .media h1,
-.career h1 {
+.career h1,
+.location h1 {
 	font-size: 3rem;
 }
 h3,
@@ -1716,7 +1717,8 @@ RESPONSIVE OVERRIDES
 	}
 	h2,
 	.media h1,
-	.career h1 {
+	.career h1,
+	.location h1 {
 		font-size: 1.6rem;
 	}
 	h3,

@@ -58,11 +58,11 @@
 					white-space: nowrap;
 					font-size: 1.1rem;
 				}
-				.globe-locations .label.cloud {
+				.globe-locations .label.standout {
 					z-index: 2;
 					color: #fff;
 				}
-				.globe-locations .label.cloud a span {
+				.globe-locations .label.standout a span {
 					background: #1c1d22;
 					padding: 0.1rem 0.5rem;
 					border-radius: 5px;
@@ -70,13 +70,13 @@
 					color: #fff;
 					transition: all 0.1s;
 				}
-				.globe-locations .label.cloud a:hover span,
-				.globe-locations .label.cloud a:focus span {
+				.globe-locations .label.standout a:hover span,
+				.globe-locations .label.standout a:focus span {
 					background: #333;
 					border: 1px solid #fff;
 					color: #fff;
 				}
-				.globe-locations .label:not(.cloud) {
+				.globe-locations .label:not(.standout) {
 					z-index: 1;
 					/*color: #9baab5;*/
 					color: #617483;
@@ -155,7 +155,7 @@
 						transform: translateX(-50%) translateY(-50%);
 						font-size: 65%;
 					}
-					.globe-locations .label:not(.cloud) {
+					.globe-locations .label:not(.standout) {
 						font-size: 46%;
 					}
 					span.pulse {
@@ -174,19 +174,29 @@
 			</style>
 			<div class="globe container">
 				<div class="globe-locations">
-					<span class="label singapore cloud"><a href="/locations/singapore/"><span>Singapore</span></a></span>
+					{%- if cloudOnly %}
+					<span class="label singapore active" title="Active point of presence">Singapore</span>
+					<style>.label.singapore 	{	left: 35.2%;	top: 52%;	}</style>
+					{%- else %}
+					<span class="label singapore standout"><a href="/locations/singapore/"><span>Singapore</span></a></span>
 					<span class="pulse singapore"></span>
-					<span class="label hong-kong cloud"><a href="/locations/hong-kong/"><span>Hong Kong</span></a></span>
+					{%- endif %}
+					<span class="label hong-kong standout"><a href="/locations/hong-kong/"><span>Hong Kong</span></a></span>
 					<span class="pulse hong-kong"></span>
-					<span class="label tokyo cloud"><a href="/locations/tokyo/"><span>Tokyo</span></a></span>
+					{%- if cloudOnly %}
+					<span class="label tokyo active" title="Active point of presence">Tokyo</span>
+					<style>.label.tokyo 		{	left: 60%;	top: 42.8%;	}</style>
+					{%- else %}
+					<span class="label tokyo standout"><a href="/locations/tokyo/"><span>Tokyo</span></a></span>
 					<span class="pulse tokyo"></span>
-					<span class="label guam cloud"><a href="/locations/guam/"><span>Guam</span></a></span>
+					{%- endif %}
+					<span class="label guam standout"><a href="/locations/guam/"><span>Guam</span></a></span>
 					<span class="pulse guam"></span>
-					<span class="label sydney active">Sydney</span>
-					<span class="label melbourne active">Melbourne</span>
-					<span class="label brisbane active">Brisbane</span>
-					<span class="label los-angeles active hide-mobile">Los Angeles</span>
-					<span class="label los-angeles active mobile-only">LA</span>
+					<span class="label sydney active" title="Active point of presence">Sydney</span>
+					<span class="label melbourne active" title="Active point of presence">Melbourne</span>
+					<span class="label brisbane active" title="Active point of presence">Brisbane</span>
+					<span class="label los-angeles active hide-mobile" title="Active point of presence">Los Angeles</span>
+					<span class="label los-angeles active mobile-only" title="Active point of presence">LA</span>
 					<span class="label seattle">Seattle</span>
 					<span class="label vancouver">Vancouver</span>
 					<span class="label chennai">Chennai</span>
@@ -194,7 +204,7 @@
 					<span class="label hawaii">Hawaii</span>
 					<span class="label vladivostok">Vladivostok</span>
 					<span class="label seoul">Seoul</span>
-					<span class="label manila active">Manila</span>
+					<span class="label manila active" title="Active point of presence">Manila</span>
 					<span class="label davao">Davao</span>
 					<span class="label jakarta">Jakarta</span>
 					<span class="label surabaya">Surabaya</span>
@@ -202,8 +212,8 @@
 					<span class="label perth">Perth</span>
 				</div>
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1781 1792" aria-labelledby="maptitle mapdescription" role="img">
-					<title id="maptitle">OneQode Cloud Map</title>
-					<desc id="mapdescription">A dark globe centred on Asia-Pacific showing OneQode cloud locations in Guam, Singapore, Hong Kong, and Tokyo</desc>
+					<title id="maptitle">OneQode Globe</title>
+					<desc id="mapdescription">A dark globe centred on Asia-Pacific highlighting OneQode locations in Guam, Singapore, Hong Kong, and Tokyo, connected via a low-latency subsea cable network</desc>
 					<g id="network">
 						<path id="guam-singapore" d="M1059.4,960.4c-112.8-5.6-226.4,8.7-232.6,50.5-.1,.8-1.1,1.1-1.6,.5-11.5-13.2-35.4-28.4-51.9-19.5-21.4,11.5-18.7,47.6-58.1,47.6-53-.1-80.8-91-94.5-113" />
 						<path id="guam-hong-kong" d="M779,807.2c53.7,62.5,197.1,132.4,280.4,153.3" />
