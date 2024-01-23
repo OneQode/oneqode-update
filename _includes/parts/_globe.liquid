@@ -50,6 +50,7 @@
 				.pulse.singapore 	{	left: 34.9%;	top: 51.7%;	}
 				.pulse.hong-kong	{	left: 43.7%;	top: 45%;	}
 				.pulse.tokyo		{	left: 58.9%;	top: 42.7%;	}
+				.pulse.manila		{	left: 46.4%;	top: 49.6%;	}
 				.globe-locations .label {
 					position: absolute;
 					text-align: center;
@@ -104,7 +105,7 @@
 				.label.hawaii		{	left: 77.9%;	top: 49.5%;	}
 				.label.vladivostok	{	left: 50.9%;	top: 34.2%;	}
 				.label.seoul		{	left: 49.1%;	top: 39.7%;	}
-				.label.manila		{	left: 41.4%;	top: 48.9%;	}
+				.label.manila		{	left: 46.4%;	top: 50.9%; }
 				.label.davao		{	left: 48.2%;	top: 54.5%;	}
 				.label.jakarta		{	left: 29.0%;	top: 55.4%;	}
 				.label.surabaya		{	left: 34.0%;	top: 59.0%;	}
@@ -155,6 +156,10 @@
 						transform: translateX(-50%) translateY(-50%);
 						font-size: 65%;
 					}
+					/* Moves label downwards (if label is below the pulse e.g. Manila) */
+					.globe-locations .label.altdir span {
+						transform: translateX(-50%) translateY(50%);
+					}
 					.globe-locations .label:not(.standout) {
 						font-size: 46%;
 					}
@@ -192,6 +197,13 @@
 					{%- endif %}
 					<span class="label guam standout"><a href="/locations/guam/"><span>Guam</span></a></span>
 					<span class="pulse guam"></span>
+					{%- if cloudOnly %}
+					<span class="label manila active" title="Active point of presence">Manila</span>
+					<style>.label.manila { left: 41.4%; top: 48.9%; }</style>
+					{%- else %}
+					<span class="label manila standout altdir"><a href="/locations/manila/"><span>Manila</span></a></span>
+					<span class="pulse manila"></span>
+					{%- endif %}
 					<span class="label sydney active" title="Active point of presence">Sydney</span>
 					<span class="label melbourne active" title="Active point of presence">Melbourne</span>
 					<span class="label brisbane active" title="Active point of presence">Brisbane</span>
@@ -204,7 +216,6 @@
 					<span class="label hawaii">Hawaii</span>
 					<span class="label vladivostok">Vladivostok</span>
 					<span class="label seoul">Seoul</span>
-					<span class="label manila active" title="Active point of presence">Manila</span>
 					<span class="label davao">Davao</span>
 					<span class="label jakarta">Jakarta</span>
 					<span class="label surabaya">Surabaya</span>
