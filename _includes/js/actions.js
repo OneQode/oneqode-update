@@ -25,23 +25,7 @@ async function createCloudUser(event) {
   try {
     const ipInfo = await fetch("https://ipinfo.io/json");
     const ipInfoJson = await ipInfo.json();
-    console.log({ ipInfoJson });
-
-  for (const [fieldName] of formData) {
-    const fieldValue = formData.getAll(fieldName);
-    formObj[fieldName] = fieldValue.length == 1 ? fieldValue.toString() : fieldValue;
-  }
-
-  const serverUrl = "https://staging.billing.as140627.net/cloudsignup.php";
-
-  submitButton.disabled = true;
-  submitButton.classList.add("btn-primary-loading");
-  submitButton.innerHTML = "Submitting...";
-  const widgetId = "#cf-widget";
-
-  try {
-    const ipInfo = await (await fetch("https://ipinfo.io/json")).json();
-    console.log({ ipInfo });
+    console.log({ ipInfo, ipInfoJson });
     const parameters = {
       firstname: formObj["1_first_name"],
       lastname: formObj["2_last_name"],
@@ -82,6 +66,6 @@ async function createCloudUser(event) {
         turnstile.reset(widgetId);
       });
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 }
