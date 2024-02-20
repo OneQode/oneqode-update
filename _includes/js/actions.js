@@ -23,9 +23,9 @@ async function createCloudUser(event) {
   const widgetId = "#cf-widget";
 
   try {
-    const ipInfo = await fetch("https://ipinfo.io/json");
+    const ipInfo = await fetch(`https://ipinfo.io/json?token=9a0c888a083a9e`);
     const ipInfoJson = await ipInfo.json();
-    console.log({ ipInfo, ipInfoJson });
+
     const parameters = {
       firstname: formObj["1_first_name"],
       lastname: formObj["2_last_name"],
@@ -67,5 +67,7 @@ async function createCloudUser(event) {
       });
   } catch (error) {
     console.error(error);
+    submitButton.disabled = false;
+    submitButton.classList.remove("btn-primary-loading");
   }
 }
