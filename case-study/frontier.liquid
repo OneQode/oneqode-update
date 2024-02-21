@@ -5,7 +5,7 @@ changefreq: monthly
 priority: 0.4
 pageSupertitle: Case Study
 pageTitle: Powering a groundbreaking<br class="responsive"> interregional tournament
-pageSubtitle: A whole-of-Asia-Pacific esports league for CS2
+pageSubtitle: The league that connects 3 continents
 ogImage: og-image.jpg
 ---
 {% include _header.liquid %}
@@ -13,12 +13,15 @@ ogImage: og-image.jpg
 	<style>
 		/* Regular Background Image */
 		.no-webp .hero {
-			background: linear-gradient(to bottom, transparent 70%, #000), url("/img/case-study/oceanic-guam-tournament-header-bg.jpg");
+			background: linear-gradient(to bottom, #1b36ff, #000);
 			background-size: cover;
 		}
 		.webp .hero {
-			background: linear-gradient(to bottom, transparent 70%, #000), url("/img/case-study/oceanic-guam-tournament-header-bg.webp");
+			background: linear-gradient(to bottom, #1b36ff, #000);
 			background-size: cover;
+		}
+		.frontier-logo {
+			height: 10rem;
 		}
 	</style>
 		<section class="hero">
@@ -29,22 +32,7 @@ ogImage: og-image.jpg
 						<p class="superheading">{{ pageSupertitle }}</p>
 						{%- endif %}
 						<img src="/img/frontier-logo.svg" alt="OneQode Frontier, Presented by LetsPlay.Live" class="frontier-logo mb-2">
-						<h1>{{ pageTitle }}<mark class="dot">.</mark></h1>
 						<p class="subheading">{{ pageSubtitle }}</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="text-center">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12 col-md-10 col-md-offset-1">
-						<h2><mark>Asia vs Oceania</mark> was unplayable<mark class="dot">.</mark><br class="responsive"> Then OneQode launched APAC Central<mark class="dot">.</mark></h2>
-					</div>
-					<div class="col-xs-12 col-md-6 col-md-offset-3">
-						<p>OneQode provided the infrastructure backbone for the first genuinely cross-regional Asia-Pacific CS:GO tournament.</p>
-						<p>For the first time in history, gamers from as far afield as Mongolia and Australia were able to compete online with under 100 milliseconds of latency thanks to our unique Guam gaming hub, APAC Central.</p>
-						<p class="mt-2"><a href="/locations/guam/" class="chevron">APAC Central</a></p>
 					</div>
 				</div>
 			</div>
@@ -53,19 +41,47 @@ ogImage: og-image.jpg
 			<div class="container">
 				<div class="row place-content-center">
 					<div class="col-xs-6 col-md py-4">
-						<div class="stat"><span>$17k</span> prize pool</div>
+						<div class="stat"><span>320</span> players</div>
 					</div>
 					<div class="col-xs-6 col-md py-4">
-						<div class="stat"><span>96</span> players</div>
+						<div class="stat"><span>64</span> teams</div>
 					</div>
 					<div class="col-xs-6 col-md py-4">
-						<div class="stat"><span>16</span> teams</div>
+						<div class="stat"><span>15</span> time zones</div>
 					</div>
 					<div class="col-xs-6 col-md py-4">
-						<div class="stat"><span>9</span> countries</div>
+						<div class="stat"><span>3</span> continents</div>
 					</div>
-					<div class="col-xs-6 col-md py-4">
-						<div class="stat"><span>5</span> days</div>
+				</div>
+			</div>
+		</section>
+		<section class="text-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-10 col-md-offset-1">
+						<h2>Our Guam <mark>(APAC Central)</mark> hub <br class="responsive">connected Asia-Pacific in an instant</h2>
+					</div>
+				</div>
+				<div class="row mt-8">
+					<div class="col-xs-12 col-md-4">
+						<img src="https://placehold.co/640x640" alt="A map showing Mongolia and Melbourne, Australia connecting to Guam">
+						<p>Mongolia to Melbourne</p>
+					</div>
+					<div class="col-xs-12 col-md-4">
+						<img src="https://placehold.co/640x640"
+							alt="A map showing Los Angeles, USA and New Delhi, India connecting to Guam">
+						<p>Los Angeles to New Delhi</p>
+					</div>
+					<div class="col-xs-12 col-md-4">
+						<img src="https://placehold.co/640x640"
+							alt="A map showing Auckland, New Zealand and  Vladivostok, Russia connecting to Guam">
+						<p>Auckland to Vladivostok</p>
+					</div>
+				</div>
+				<div class="row mt-8">
+					<div class="col-xs-12 col-md-10 col-md-offset-1">
+						<h3>Never before have so many players from so many regions been able to cross paths, clashing strategies, tactics and
+						styles.</h3>
 					</div>
 				</div>
 			</div>
@@ -76,6 +92,20 @@ ogImage: og-image.jpg
 					<div class="col-xs-12 col-md-6 col-md-offset-3 text-center">
 						<p>In partnership with <a href="https://oceanicesports.com.au/" rel="noopener">Oceanic Esports</a>, an Australian tournament organiser with a history in competitive DOTA, we hosted a CS:GO tournament over 5 days.</p>
 						<p>As the first test of our APAC Central hub, we worked around the clock to collect data, optimising the network and servers in real time.</p>
+					</div>
+				</div>
+				<div class="row mt-8 mobile-text-center">
+					<div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-0 my-2">
+						<h4 class="mb-0">Stable global latency</h4>
+						<p class="faded mt-1">Quality is as important as quantity. Our network is fine-tuned for latency and stability. Zero packet loss and zero jitter ensures people can connect from around the world, at the highest possible quality.</p>
+					</div>
+					<div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-0 my-2">
+						<h4 class="mb-0">Where milliseconds matter</h4>
+						<p class="faded mt-1">Our network is as precise and time-focussed as a Swiss watch. We send traffic via the most direct path, with minimal hops, connecting as close as possible to each user</p>
+					</div>
+					<div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-0 my-2">
+						<h4 class="mb-0">High performance everywhere</h4>
+						<p class="faded mt-1">Insanely-fast CPUs handle the most action-filled games. Paired with our network, games are more intense, immersive and far-reaching.</p>
 					</div>
 				</div>
 			</div>
