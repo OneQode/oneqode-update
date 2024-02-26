@@ -13,12 +13,21 @@ ogImage: og-image.jpg
 	<style>
 		/* Regular Background Image */
 		.no-webp .hero {
-			background: linear-gradient(to bottom, #1b36ff, #000);
+			background: linear-gradient(to bottom, transparent 40%, #000),
+						url("/img/bg/frontier-cs2.png") center center;
 			background-size: cover;
 		}
 		.webp .hero {
-			background: linear-gradient(to bottom, #1b36ff, #000);
+			background: linear-gradient(to bottom, transparent 40%, #000),
+						url("/img/bg/frontier-cs2.webp") center center;
 			background-size: cover;
+		}
+		/* Overwrite hero superheading style for accessibility */
+		.hero p.superheading {
+			color: #fff;
+			background: linear-gradient(90deg,#ffffff,#74b5cd);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
 		}
 		.frontier-logo {
 			height: 10rem;
@@ -106,15 +115,14 @@ ogImage: og-image.jpg
 		<section class="frontier-map">
 			<picture>
 				<source srcset="/img/case-study/frontier-countries-map-time-zones-player-locations-latencies.webp" type="image/webp">
-				<img class="opaque" src="/img/case-study/frontier-countries-map-time-zones-player-locations-latencies.png" alt="A map showing Mongolia and Melbourne, Australia connecting to Guam">
+				<img class="opaque" src="/img/case-study/frontier-countries-map-time-zones-player-locations-latencies.png" alt="A map showing the OneQode network map, overlaid with the countries that players joined the league from: India, Thailand, Singapore, Mongolia, China, South Korea, Philippines, Indonesia, Australia, New Zealand, Japan, Russia and Los Angeles">
 			</picture>
 		</section>
 		<section>
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-md-6 col-md-offset-3 text-center">
-						<p>In partnership with <a href="https://letsplay.live/" rel="noopener">LetsPlay.Live</a>, an Australian tournament organiser with a history in competitive DOTA, we hosted a CS:GO tournament over 5 days.</p>
-						<p>As the first test of our APAC Central hub, we worked around the clock to collect data, optimising the network and servers in real time.</p>
+						<p>OneQode Frontier is a Counter-Strike 2 (CS2) league <a href="/media/letsplay-live/" rel="noopener">developed with LetsPlay.Live</a> that gives grassroots teams the opportunity to compete with teams all across the Asia-Pacific region.</p>
 					</div>
 				</div>
 			</div>
@@ -131,19 +139,6 @@ ogImage: og-image.jpg
 						<p>Connecting players from 9 countries as far apart as New Zealand and Thailand would normally be unthinkable. Without a central location, one side would be heavily disadvantaged, limiting competitive opportunities.</p>
 						<p>With APAC Central, players from 9 countries connected to a central location, bringing the region closer than ever with a level playing field for gaming.</p>
 					</div>
-				</div>
-			</div>
-		</section>
-		<section>
-			<div class="container">
-				<div class="col-xs-12">
-					<figure>
-						<picture>
-							<source srcset="/img/case-study/guam-csgo-tournament-countries-map.webp" type="image/webp">
-							<img src="/img/case-study/guam-csgo-tournament-countries-map.jpg" class="opaque" alt="Map highlighting countries where players connected from to play Counter-Strike: Global Offensive">
-						</picture>
-						<figcaption>Tournament players connected from Australia, New Zealand, China, Singapore, Mongolia, Thailand, Indonesia, South Korea & Brunei.</figcaption>
-					</figure>
 				</div>
 			</div>
 		</section>
