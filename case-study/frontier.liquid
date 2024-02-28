@@ -14,13 +14,21 @@ ogImage: og-image.jpg
 		/* Regular Background Image */
 		.no-webp .hero {
 			background: linear-gradient(to bottom, transparent 40%, #000),
-						url("/img/bg/frontier-cs2.png") center center;
-			background-size: cover;
+						url("/img/bg/frontier-counter-strike-cs2-soldiers.png") bottom right,
+						url("/img/bg/oneqode-frontier-pattern.png")
+						#1b36ff;
+			background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+			background-attachment: scroll, scroll, fixed, scroll;
+			background-size: auto, contain, auto, auto;
 		}
 		.webp .hero {
 			background: linear-gradient(to bottom, transparent 40%, #000),
-						url("/img/bg/frontier-cs2.webp") center center;
-			background-size: cover;
+						url("/img/bg/frontier-counter-strike-cs2-soldiers.webp") bottom right,
+						url("/img/bg/oneqode-frontier-pattern.webp")
+						#1b36ff;
+			background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+			background-attachment: scroll, scroll, fixed, scroll;
+			background-size: auto, contain, auto, auto;
 		}
 		/* Overwrite hero superheading style for accessibility */
 		.hero p.superheading {
@@ -34,6 +42,19 @@ ogImage: og-image.jpg
 		}
 		.frontier-map {
 			margin-top: -4rem;
+		}
+		/* Icons */
+		.icon.global {
+			mask: url(/img/ico/connection2.svg) no-repeat center;
+			-webkit-mask: url(/img/ico/connection2.svg) no-repeat center;
+		}
+		.icon.latency {
+			mask: url(/img/ico/latency2.svg) no-repeat center;
+			-webkit-mask: url(/img/ico/latency2.svg) no-repeat center;
+		}
+		.icon.performance {
+			mask: url(/img/ico/cpu2.svg) no-repeat center;
+			-webkit-mask: url(/img/ico/cpu2.svg) no-repeat center;
 		}
 	</style>
 		<section class="hero">
@@ -82,7 +103,7 @@ ogImage: og-image.jpg
 								<source srcset="/img/case-study/frontier-mongolia-melbourne-guam.webp" type="image/webp">
 								<img class="opaque" src="/img/case-study/frontier-mongolia-melbourne-guam.png" alt="A map showing Mongolia and Melbourne, Australia connecting to Guam">
 							</picture>
-							<figcaption>Mongolia to Melbourne</figcaption>
+							<p class="poppins faded">Mongolia to Melbourne</p>
 						</figure>
 					</div>
 					<div class="col-xs-12 col-sm-4 mb-2">
@@ -91,7 +112,7 @@ ogImage: og-image.jpg
 								<source srcset="/img/case-study/frontier-new-delhi-los-angeles-guam.webp" type="image/webp">
 								<img class="opaque" src="/img/case-study/frontier-new-delhi-los-angeles-guam.png" alt="A map showing Los Angeles, USA and New Delhi, India connecting to Guam">
 							</picture>
-							<figcaption>Los Angeles to New Delhi</figcaption>
+							<p class="poppins faded">Los Angeles to New Delhi</p>
 						</figure>
 					</div>
 					<div class="col-xs-12 col-sm-4 mb-2">
@@ -100,7 +121,7 @@ ogImage: og-image.jpg
 								<source srcset="/img/case-study/frontier-vladivostok-auckland-guam.webp" type="image/webp">
 								<img class="opaque" src="/img/case-study/frontier-vladivostok-auckland-guam.png" alt="A map showing Auckland, New Zealand and  Vladivostok, Russia connecting to Guam">
 							</picture>
-							<figcaption>Auckland to Vladivostok</figcaption>
+							<p class="poppins faded">Auckland to Vladivostok</p>
 						</figure>
 					</div>
 				</div>
@@ -123,36 +144,15 @@ ogImage: og-image.jpg
 				<div class="row">
 					<div class="col-xs-12 col-md-6 col-md-offset-3 text-center">
 						<p>OneQode Frontier is a Counter-Strike 2 (CS2) league <a href="/media/letsplay-live/" rel="noopener">developed with LetsPlay.Live</a> that gives grassroots teams the opportunity to compete with teams all across the Asia-Pacific region.</p>
+						<p>Matches were primarily hosted on servers in our Guam hub for optimal intercontinental latency — and our Hong Kong, Tokyo and Sydney locations were used for local games.</p>
 					</div>
-				</div>
-			</div>
-		</section>
-		<section class="mt-4">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
-						<p class="superheading">The Challenge</p>
-						<h2>Connecting gamers<br class="responsive"> across two continents<mark class="dot">.</mark></h2>
-						<p class="subheading">A unique server location to unlock regional gameplay</p>
-					</div>
-					<div class="col-xs-12 col-md-6 col-md-offset-3 text-center">
-						<p>Connecting players from 9 countries as far apart as New Zealand and Thailand would normally be unthinkable. Without a central location, one side would be heavily disadvantaged, limiting competitive opportunities.</p>
-						<p>With APAC Central, players from 9 countries connected to a central location, bringing the region closer than ever with a level playing field for gaming.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="my-4 full-height text-center">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12 col-md-10 col-md-offset-1">
-						<p class="superheading">The Outcome</p>
-						<h2>Bringing Asia-Pacific closer<br class="responsive"> together through gaming<mark class="dot">.</mark></h2>
-						<p class="subheading">A unique server location to unlock regional gameplay</p>
-					</div>
-					<div class="col-xs-12 col-md-6 col-md-offset-3">
-						<p>In spite of the distance, APAC Central crossed borders and barriers to connect gamers from Asia and Oceania, allowing players to find new rivals overseas, developing skills and learning new strategies from opponents.</p>
-						<p><strong>For game developers there’s a simple takeaway:</strong> you can connect more players from more countries via a single location — and if it works for Counter-Strike, it can work for your game, too.</p>
+					<div class="col-xs-12 col-md-10 col-md-offset-1 mt-8">
+						<div class="wrapper">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/0bb-xzbNilY"
+								title="YouTube video player" frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen></iframe>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -161,29 +161,29 @@ ogImage: og-image.jpg
 			<div class="container">
 				<div class="row mobile-flex icons">
 					<div class="col-xs-12 col-sm col-md-4 mb-1 p-1">
-						<div class="icon path"></div>
+						<div class="icon global"></div>
 						<h4 class="mt-2">Stable global latency</h4>
 						<p class="faded">Quality is as important as quantity. Our network is fine-tuned for latency and stability. Zero packet loss and zero jitter ensures people can connect from around the world, at the highest possible quality.</p>
 					</div>
 					<div class="col-xs-12 col-sm col-md-4 mb-1 p-1">
-						<div class="icon asia"></div>
+						<div class="icon latency"></div>
 						<h4 class="mt-2">Where milliseconds matter</h4>
-						<p class="faded">Our network is as precise and time-focussed as a Swiss watch. We send traffic via the most direct path, with minimal hops, connecting as close as possible to each user</p>
+						<p class="faded">Our network is as precise and time-focussed as a Swiss watch. We send traffic via the most direct path, with minimal hops, connecting as close as possible to each player.</p>
 					</div>
 					<div class="col-xs-12 col-sm col-md-4 mb-1 p-1">
-						<div class="icon gauge"></div>
+						<div class="icon performance"></div>
 						<h4 class="mt-2">High performance everywhere</h4>
-						<p class="faded">Insanely-fast CPUs handle the most action-filled games. Paired with our network, games are more intense, immersive and far-reaching.</p>
+						<p class="faded">Our servers feature insanely-fast CPUs to handle the most action-filled games in high fidelity. Paired with our network, games are more intense, immersive and far-reaching.</p>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="black-to-footer py-8">
+		<section class="black-to-footer pt-4 pb-8">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
-						<h2>Want to be our next <br class="responsive">success story<mark >?</mark></h2>
-						<p>Contact our team to talk about how our network and servers can support your success</p>
+						<h2>It works for Counter-Strike, <br class="responsive">so it can work for anything.</h2>
+						<p>We help game publishers, studios, and businesses deliver real-time services across the Asia-Pacific region. Contact us today to start a conversation.</p>
 						<p><a href="/contact/" class="button ghost m-1 mt-2">Contact us</a></p>
 					</div>
 				</div>
