@@ -5,37 +5,42 @@ changefreq: monthly
 priority: 0.4
 pageSupertitle: Case Study
 pageTitle: Powering a groundbreaking<br class="responsive"> interregional tournament
-pageSubtitle: The league that unified over half the world’s<br class="responsive"> gamers using our APAC Central hub
+pageSubtitle: The league that unified Asia-Pacific<br class="responsive"> using our central server hub
 ogImage: og-image.jpg
 ---
 {% include _header.liquid %}
 	<!-- Page-Specific Styles -->
 	<style>
+		section.hero {
+			background: none;
+		}
 		/* Regular Background Image */
-		.no-webp .hero {
-			background: linear-gradient(to bottom, transparent 40%, #000),
-						url("/img/bg/frontier-counter-strike-cs2-soldiers.png") bottom right,
-						url("/img/bg/oneqode-frontier-pattern.png")
-						#1b36ff;
-			background-repeat: no-repeat, no-repeat, repeat, no-repeat;
-			background-attachment: scroll, scroll, fixed, scroll;
-			background-size: auto, contain, auto, auto;
-		}
-		.webp .hero {
-			background: linear-gradient(to bottom, transparent 40%, #000),
-						url("/img/bg/frontier-counter-strike-cs2-soldiers.webp") bottom right,
-						url("/img/bg/oneqode-frontier-pattern.webp")
-						#1b36ff;
-			background-repeat: no-repeat, no-repeat, repeat, no-repeat;
-			background-attachment: scroll, scroll, fixed, scroll;
-			background-size: auto, contain, auto, auto;
-		}
-		/* Overwrite hero superheading style for accessibility */
-		.hero p.superheading {
-			color: #fff;
-			background: linear-gradient(90deg,#ffffff,#74b5cd);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
+		@media screen and (max-width: 64em) {
+			.no-webp .hero {
+				background: linear-gradient(to bottom, transparent 40%, #000),
+							url("/img/bg/frontier-counter-strike-cs2-soldiers.png") bottom right,
+							url("/img/bg/oneqode-frontier-pattern.png")
+							#1b36ff;
+				background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+				background-attachment: scroll, scroll, fixed, scroll;
+				background-size: auto, contain, auto, auto;
+			}
+			.webp .hero {
+				background: linear-gradient(to bottom, transparent 40%, #000),
+							url("/img/bg/frontier-counter-strike-cs2-soldiers.webp") bottom right,
+							url("/img/bg/oneqode-frontier-pattern.webp")
+							#1b36ff;
+				background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+				background-attachment: scroll, scroll, fixed, scroll;
+				background-size: auto, contain, auto, auto;
+			}
+			/* Overwrite hero superheading style for accessibility */
+			.hero p.superheading {
+				color: #fff;
+				background: linear-gradient(90deg,#ffffff,#74b5cd);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
 		}
 		.frontier-logo {
 			height: 10rem;
@@ -68,6 +73,12 @@ ogImage: og-image.jpg
 						<p class="subheading">{{ pageSubtitle }}</p>
 					</div>
 				</div>
+			</div>
+			<div class="bg-video">
+				<div class="overlay"></div>
+				<video autoplay loop muted poster="/img/bg/thumb-frontier.jpg">
+					<source src="https://oneqode2.sgp1.cdn.digitaloceanspaces.com/videos/frontier-page-header2.mp4" type="video/mp4">
+				</video>
 			</div>
 		</section>
 		<section>
@@ -148,6 +159,16 @@ ogImage: og-image.jpg
 					<div class="col-xs-12 col-md-6 col-md-offset-3 text-center">
 						<p>OneQode Frontier is a Counter-Strike 2 (CS2) league <a href="/media/letsplay-live/" rel="noopener">developed with LetsPlay.Live</a> that gives grassroots teams the opportunity to compete with teams all across the Asia-Pacific region.</p>
 						<p>Matches were primarily hosted on servers in our Guam hub for optimal intercontinental latency — and our Hong Kong, Tokyo and Sydney locations were used for local games.</p>
+						<p>Player feedback was phenomenal; many couldn't believe how smooth gameplay felt, in spite of distance.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 mt-4">
+						<blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">Very excited for the future potential for tournaments like this held using Guam servers. The servers were definitely playable and felt pretty smooth overall. <br>🇲🇳💙🇦🇺<br><br>Awesome feeling getting to play some great teams from overseas... GGs to Eruption. They play some solid cs! 🧙‍♂️🧙 <a href="https://t.co/i81qMd6xJI">https://t.co/i81qMd6xJI</a></p>&mdash; Roflko (@Roflko) <a href="https://twitter.com/Roflko/status/1729328487620849741?ref_src=twsrc%5Etfw">November 28, 2023</a>
+						</blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+					</div>
+					<div class="col-xs-12 col-sm-6 mt-4">
+						<blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">Played our first game vs Eruption (Mongolia) in Frontier<br><br>13-7 (L)<br><br>GG to the teams <a href="https://twitter.com/OneQode?ref_src=twsrc%5Etfw">@OneQode</a> your servers are amazing what a great start to the Tournament!! <a href="https://t.co/Z02cGdsiQ0">pic.twitter.com/Z02cGdsiQ0</a></p>&mdash; DXA (@DXAEsports) <a href="https://twitter.com/DXAEsports/status/1729109218006118751?ref_src=twsrc%5Etfw">November 27, 2023</a></blockquote>
 					</div>
 					<div class="col-xs-12 col-md-10 col-md-offset-1 mt-8">
 						<div class="wrapper">
