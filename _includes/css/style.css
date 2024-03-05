@@ -1177,6 +1177,7 @@ CONTENT
 .applicant-info {
 	background: rgba(0,0,0,0.2);
 	border: 1px solid #142a31;
+	border-radius: 10px;
 	word-break: break-word;
 }
 .press-info h2,
