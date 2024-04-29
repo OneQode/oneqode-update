@@ -71,7 +71,7 @@ async function createCloudUser(event) {
       if (data?.result == "success" && data?.redirect_url) {
         // Handle sucesssful registration (redirects us to redirect_url provided by the endpint response)
         submitButton.innerHTML = "Success!";
-        // window.location.replace(data.redirect_url);
+        window.location.replace(data.redirect_url);
       } else if (data?.result == "error") {
         // Reset UI states for a failed registration response due to registration errors
         submitButton.disabled = false;
