@@ -68,21 +68,24 @@ async function createCloudUser(event) {
     .then((res) => {
       const { data } = res;
 
-      if (data?.result == "success" && data?.redirect_url) {
-        // Handle sucesssful registration (redirects us to redirect_url provided by the endpint response)
-        submitButton.innerHTML = "Success!";
-        window.location.replace(data.redirect_url);
-      } else if (data?.result == "error") {
-        // Reset UI states for a failed registration response due to registration errors
-        submitButton.disabled = false;
-        submitButton.classList.remove("btn-primary-loading");
-        submitButton.innerHTML = "Let’s go";
-        errorElement.style.display = "block";
-        errorMessageElement.innerHTML = data.message;
+      submitButton.innerHTML = "Success!";
+      submitButton.classList.remove("btn-primary-loading");
 
-        // Resets the turnstile widget. We need to generate a new `cf-turnstile-response, as we can only use it once in the server.
-        turnstile.reset(widgetId);
-      }
+      // if (data?.result == "success" && data?.redirect_url) {
+      //   // Handle sucesssful registration (redirects us to redirect_url provided by the endpint response)
+      //   submitButton.innerHTML = "Success!";
+      //   window.location.replace(data.redirect_url);
+      // } else if (data?.result == "error") {
+      //   // Reset UI states for a failed registration response due to registration errors
+      //   submitButton.disabled = false;
+      //   submitButton.classList.remove("btn-primary-loading");
+      //   submitButton.innerHTML = "Let’s go";
+      //   errorElement.style.display = "block";
+      //   errorMessageElement.innerHTML = data.message;
+
+      //   // Resets the turnstile widget. We need to generate a new `cf-turnstile-response, as we can only use it once in the server.
+      //   turnstile.reset(widgetId);
+      // }
     })
     .catch((error) => {
       // Reset UI states for a failed registration response due to unknown errors
