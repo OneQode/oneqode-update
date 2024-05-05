@@ -69,16 +69,20 @@ phone: true
 				<form id="cloud-signup" onsubmit="createCloudUser(event)" class="turnstile-form">
 					<div class="col-xs-12 col-md-10 col-md-offset-1">
 						<div class="row">
-							<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 mobile-text-center">
+							<aside id="cloud-sign-up-error" class="col-xs-12 p-2 mb-2 text-left" style="display: none;">
+								<h4>⚠ Sign-up Failed</h4>
+								<p id="cloud-sign-up-error-message"></p>
+							</aside>
+							<aside id="cloud-sign-up-success" class="col-xs-12 p-2 mb-2 text-left" style="display: none;">
+								<h4>Sign-up Success</h4>
+								<p id="cloud-sign-up-success-message"></p>
+							</aside>
+							<div id="cloud-signup-content" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 mobile-text-center">
 								<div class="row">
 									{% comment %} <aside class="col-xs-12 p-2 mb-2 text-left">
 										<h4>⚠ Account Approvals</h4>
 										<p>It may take up to 2 business days to activate your account. You will receive an email when your account is ready.</p>
 									</aside> {% endcomment %}
-									<aside id="cloud-sign-up-error" class="col-xs-12 p-2 mb-2 text-left" style="display: none;">
-										<h4>⚠ Sign-up Failed</h4>
-										<p id="cloud-sign-up-error-message"></p>
-									</aside>
 									<div class="col-xs-12">
 										<h3>Your details:</h3>
 									</div>
@@ -92,7 +96,8 @@ phone: true
 										<input type="text" name="4_company" placeholder="Company" autocapitalize="words" required>
 									</div> {% endcomment %}
 									<div class="col-xs-12 col-sm-6 mb-1">
-										<input type="email" name="3_email" placeholder="Company Email" required>
+										<input id="cloud-signup-email" type="email" name="3_email" placeholder="Company Email" required>
+										<small id="mailboxValidationResult" class="invalid"></small>
 									</div>
 									<div class="col-xs-12 col-sm-6 mb-1">
 										<input type="password" name="4_password" placeholder="Password" required>
@@ -484,4 +489,34 @@ phone: true
 				sending.classList.remove("in-progress");
 				failmsg.classList.add("block");
 			}); {% endcomment %}
+
+			var emailInput = document.getElementById("cloud-signup-email")
+
+			emailInput.addEventListener("input", function () {
+				clearTimeout(this.delay);
+				this.delay = setTimeout(function (){
+				verifyEmail(this.value)};
+				}, 2000);
+			});
+			
+
+			function verifyEmail(email) {
+			const apiKey = "RMT2UUD6C20KI91LI9R3";
+			const url = `https://api.mailboxvalidator.com/v1/validation/single?key=${apiKey}&email=${email}`;
+
+			fetch(url)
+				.then((response) => response.json())
+				.then((data) => {
+				if (data.is_verified === "True") {
+					document.getElementById("emailResult").innerText =
+					"Valid email address.";
+				} else {
+					document.getElementById("emailResult").innerText =
+					"Invalid email address.";
+				}
+				})
+				.catch((error) => {
+				console.error("Error:", error);
+				});
+			}
 		</script>

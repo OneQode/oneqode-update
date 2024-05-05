@@ -1,13 +1,49 @@
+// document
+//   .getElementById("cloud-signup-email")
+//   .addEventListener("input", function () {
+//     clearTimeout(this.delay);
+//     this.delay = setTimeout(() => {
+//       verifyEmail(this.value);
+//     }, 2000);
+//   });
+
+// function verifyEmail(email) {
+//   const apiKey = "RMT2UUD6C20KI91LI9R3";
+//   const url = `https://api.mailboxvalidator.com/v1/validation/single?key=${apiKey}&email=${email}`;
+
+//   fetch(url)
+//     .then((response) => response.json())
+//     .then((data) => {
+//       if (data.is_verified === "True") {
+//         document.getElementById("emailResult").innerText =
+//           "Valid email address.";
+//       } else {
+//         document.getElementById("emailResult").innerText =
+//           "Invalid email address.";
+//       }
+//     })
+//     .catch((error) => {
+//       console.error("Error:", error);
+//     });
+// }
+
 async function createCloudUser(event) {
   event.preventDefault();
 
   // Get and update some HTML Elements
+
+  const formContent = document.getElementById("cloud-signup-content");
   const submitButton = document.getElementById("cloud-sign-up-form-submit");
   const errorElement = document.getElementById("cloud-sign-up-error");
   const errorMessageElement = document.getElementById(
     "cloud-sign-up-error-message"
   );
+  const successElement = document.getElementById("cloud-sign-up-success");
+  const successMessageElement = document.getElementById(
+    "cloud-sign-up-success-message"
+  );
   errorElement.style.display = "none";
+  successElement.style.display = "none";
 
   // Prepare form values and use as an object
   const formData = new FormData(event.target);
@@ -26,20 +62,6 @@ async function createCloudUser(event) {
   submitButton.classList.add("btn-primary-loading");
   submitButton.innerHTML = "Submitting...";
 
-  // Get user's ip data using IPinfo
-  let country;
-  try {
-    const ipInfo = await fetch(`https://ipinfo.io/json?token=9a0c888a083a9e`);
-    const ipInfoJson = await ipInfo.json();
-
-    // We only utilize country for our ipinfo data
-    country = ipInfoJson.country || "AF";
-  } catch (error) {
-    console.error(error);
-    // Defaults to Afghanistan if ipinfo fails to get the data. Usually its because of adblockers
-    country = "AF";
-  }
-
   // Prepare post data parameters
   // Note: cf-turnstile-response field will be available when you installed turnstile on client side properly (https://developers.cloudflare.com/turnstile/get-started/)
   const parameters = {
@@ -48,7 +70,6 @@ async function createCloudUser(event) {
     email: formObj["3_email"],
     password2: formObj["4_password"],
     turnstileResponse: formObj["cf-turnstile-response"],
-    country: country,
   };
 
   // Get our turnstile widget ID
@@ -68,10 +89,11 @@ async function createCloudUser(event) {
     .then((res) => {
       const { data } = res;
 
-      if (data?.result == "success" && data?.redirect_url) {
-        // Handle sucesssful registration (redirects us to redirect_url provided by the endpint response)
-        submitButton.innerHTML = "Success!";
-        window.location.replace(data.redirect_url);
+      if (data?.result == "success") {
+        // Handle sucesssful registration
+        formContent.style.display = "none";
+        successElement.style.display = "block";
+        successMessageElement.innerHTML = `We've sent you a link to verify your email address. Once verified, your OneQode Cloud service will activate. Please check your inbox at ${formObj["3_email"]}`;
       } else if (data?.result == "error") {
         // Reset UI states for a failed registration response due to registration errors
         submitButton.disabled = false;
