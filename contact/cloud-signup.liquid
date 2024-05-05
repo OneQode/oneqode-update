@@ -69,14 +69,16 @@ phone: true
 				<form id="cloud-signup" onsubmit="createCloudUser(event)" class="turnstile-form">
 					<div class="col-xs-12 col-md-10 col-md-offset-1">
 						<div class="row">
-							<aside id="cloud-sign-up-error" class="col-xs-12 p-2 mb-2 text-left" style="display: none;">
-								<h4>⚠ Sign-up Failed</h4>
-								<p id="cloud-sign-up-error-message"></p>
-							</aside>
-							<aside id="cloud-sign-up-success" class="col-xs-12 p-2 mb-2 text-left" style="display: none;">
-								<h4>Sign-up Success</h4>
-								<p id="cloud-sign-up-success-message"></p>
-							</aside>
+							<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 mobile-text-center">
+								<aside id="cloud-sign-up-error" class="col-xs-12 p-2 mb-2 text-left" style="display: none;">
+									<h4>⚠ Sign-up Failed</h4>
+									<p id="cloud-sign-up-error-message"></p>
+								</aside>
+								<aside id="cloud-sign-up-success" class="col-xs-12 p-2 mb-2 text-left" style="display: none;">
+									<h4>Sign-up Success</h4>
+									<p id="cloud-sign-up-success-message"></p>
+								</aside>
+							</div>
 							<div id="cloud-signup-content" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 mobile-text-center">
 								<div class="row">
 									{% comment %} <aside class="col-xs-12 p-2 mb-2 text-left">
