@@ -1,37 +1,7 @@
-// document
-//   .getElementById("cloud-signup-email")
-//   .addEventListener("input", function () {
-//     clearTimeout(this.delay);
-//     this.delay = setTimeout(() => {
-//       verifyEmail(this.value);
-//     }, 2000);
-//   });
-
-// function verifyEmail(email) {
-//   const apiKey = "RMT2UUD6C20KI91LI9R3";
-//   const url = `https://api.mailboxvalidator.com/v1/validation/single?key=${apiKey}&email=${email}`;
-
-//   fetch(url)
-//     .then((response) => response.json())
-//     .then((data) => {
-//       if (data.is_verified === "True") {
-//         document.getElementById("emailResult").innerText =
-//           "Valid email address.";
-//       } else {
-//         document.getElementById("emailResult").innerText =
-//           "Invalid email address.";
-//       }
-//     })
-//     .catch((error) => {
-//       console.error("Error:", error);
-//     });
-// }
-
 async function createCloudUser(event) {
   event.preventDefault();
 
   // Get and update some HTML Elements
-
   const formContent = document.getElementById("cloud-signup-content");
   const submitButton = document.getElementById("cloud-sign-up-form-submit");
   const errorElement = document.getElementById("cloud-sign-up-error");
@@ -55,7 +25,9 @@ async function createCloudUser(event) {
   }
 
   // Our form's submission endpoint
-  const serverUrl = "https://staging.billing.as140627.net/cloudsignup.php";
+  // const serverUrl = "https://staging.billing.as140627.net/cloudsignup.php";
+  const serverUrl =
+    "https://staging.billing.as140627.net/verifyphonenumber.php";
 
   // Display loading buttton as process of form submission is starting
   submitButton.disabled = true;
@@ -70,6 +42,7 @@ async function createCloudUser(event) {
     email: formObj["3_email"],
     password2: formObj["4_password"],
     turnstileResponse: formObj["cf-turnstile-response"],
+    phonenumber: "639495945171",
   };
 
   // Get our turnstile widget ID
