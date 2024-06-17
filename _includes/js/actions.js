@@ -25,9 +25,9 @@ async function createCloudUser(event) {
   }
 
   // Our form's submission endpoint
-  // const serverUrl = "https://staging.billing.as140627.net/cloudsignup.php";
-  const serverUrl =
-    "https://staging.billing.as140627.net/verifyphonenumber.php";
+  const serverUrl = "https://staging.billing.as140627.net/cloudsignup.php";
+  // const serverUrl =
+  //   "https://staging.billing.as140627.net/verifyphonenumber.php";
 
   // Display loading buttton as process of form submission is starting
   submitButton.disabled = true;
