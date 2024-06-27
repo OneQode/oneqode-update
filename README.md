@@ -1,6 +1,8 @@
 # OneQode Website
 
-The OneQode website is built in the [Eleventy](https://www.11ty.dev/) static site generator and hosted with [Netlify](https://www.netlify.com/).
+This is the previous version of the OneQode website, built in the [Eleventy](https://www.11ty.dev/) static site generator and hosted with [Netlify](https://www.netlify.com/).
+
+![Screenshot of OneQode Website](https://gu.api.ocs.oneqode.com:6780/swift/v1/AUTH_0f61efa50b30415cad2fe1a17d003a06/OneQode/oq-2023-website.jpg)
 
 To get started,
 
@@ -23,6 +25,6 @@ Any questions, ask me (Joe).
 ```nano ~/.bashrc```
 
 ```
-alias 11ty='npx @11ty/eleventy'
-alias 11tyserve='npx @11ty/eleventy --serve --quiet'
+alias 11ty='npx @11ty/eleventy --serve --quiet'
+alias 11tyb='npx @11ty/eleventy'
 ```
